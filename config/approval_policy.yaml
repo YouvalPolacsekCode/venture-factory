@@ -1,0 +1,144 @@
+schema_version: 1
+
+# What the factory may do without asking. Anything not on this list and not
+# on `requires_approval` is implicitly denied and must be escalated.
+auto_allowed:
+  - action_type: read_public_web
+    description: Fetch publicly accessible URLs, respecting robots.txt and rate limits.
+  - action_type: write_repo_file
+    description: Create or edit files inside the repo (excluding .git, secrets/, and approval_queue/).
+  - action_type: query_sqlite
+    description: Read or write the local SQLite databases under data/.
+  - action_type: draft_content
+    description: Generate text, copy, code, or designs that stay in the repo and are not published.
+  - action_type: score_opportunity
+    description: Run the scoring model over a candidate opportunity.
+  - action_type: simulate_cost_gain
+    description: Run the cost/gain model over an experiment without changing its state.
+  - action_type: propose_experiment
+    description: Add a new folder under experiments/ in `discovery` stage.
+  - action_type: schedule_internal_job
+    description: Enqueue an agent run on the internal scheduler.
+  - action_type: generate_log_entry
+    description: Append a structured event to logs/.
+
+# What requires the operator's explicit go-ahead via approve.py.
+# Every requires_approval action becomes a file in approval_queue/.
+requires_approval:
+  - action_type: publish_landing_page
+    why: Public-facing artifact that may include claims about a service that does not yet exist.
+    default_expiry_hours: 36
+    default_max_cost_usd: 0
+  - action_type: send_outreach_email
+    why: Touches real humans; affects sender reputation and the factory's outreach allowlist standing.
+    default_expiry_hours: 24
+    default_max_cost_usd: 1
+  - action_type: send_outreach_sms
+    why: Higher-friction channel; potential carrier and regulatory exposure.
+    default_expiry_hours: 24
+    default_max_cost_usd: 2
+  - action_type: send_outreach_dm
+    why: Platform ToS surface; account suspension risk if abused.
+    default_expiry_hours: 24
+    default_max_cost_usd: 0
+  - action_type: create_payment_link
+    why: Stripe artifact tied to a real product offer; commits us to deliver.
+    default_expiry_hours: 48
+    default_max_cost_usd: 0
+  - action_type: charge_customer
+    why: Moves real money. Always operator-confirmed unless explicitly pre-authorized.
+    default_expiry_hours: 12
+    default_max_cost_usd: 0
+  - action_type: refund_customer
+    why: Moves real money out; affects Stripe dispute ratio.
+    default_expiry_hours: 24
+    default_max_cost_usd: 0
+  - action_type: deploy_public_domain
+    why: Cloudflare Pages or DNS change visible to the world.
+    default_expiry_hours: 48
+    default_max_cost_usd: 0
+  - action_type: send_customer_message
+    why: Outbound to a paying or trialing customer; tone and accuracy matter.
+    default_expiry_hours: 12
+    default_max_cost_usd: 0
+  - action_type: register_external_account
+    why: Creates a new SaaS or platform account in the operator's name; auth and billing implications.
+    default_expiry_hours: 72
+    default_max_cost_usd: 0
+  - action_type: delete_repo_file
+    why: Destructive; deletion bypasses normal undo flow.
+    default_expiry_hours: 24
+    default_max_cost_usd: 0
+  - action_type: spend_above_daily_cap
+    why: Override of the global caps; must justify per request.
+    default_expiry_hours: 12
+    default_max_cost_usd: 10
+  - action_type: call_paid_api_above_cap
+    why: Single API call whose marginal cost exceeds the per-action ceiling.
+    default_expiry_hours: 12
+    default_max_cost_usd: 10
+
+# Global guardrails. Enforced by the runtime before any agent action.
+caps:
+  per_day_external_api_usd: 25
+  per_day_outreach_sends: 50
+  per_day_paid_marketing_usd: 0   # off by default; flip via spend_above_daily_cap approval
+  per_action_usd_hard_ceiling: 10
+
+# Read-only window. All requires_approval actions are blocked during this window;
+# new items are not added to the queue. Wall-clock based, IDT.
+shabbat_window:
+  start: "Fri 18:00"
+  end: "Sat 20:00"
+  timezone: "Asia/Jerusalem"
+  blocks: requires_approval   # auto_allowed reads/writes continue
+
+# Which agents may request which action_types. Auto_allowed items are not listed
+# here -- every agent may request any auto_allowed action by default.
+# An agent omitted from a requires_approval entry is denied that action_type.
+roles:
+  ceo_chief_of_staff:
+    - spend_above_daily_cap
+    - call_paid_api_above_cap
+    - deploy_public_domain
+    - register_external_account
+    - delete_repo_file
+  market_radar:
+    - call_paid_api_above_cap
+  pain_validation:
+    - send_outreach_dm
+    - call_paid_api_above_cap
+  lead_research:
+    - register_external_account
+    - call_paid_api_above_cap
+  responsiveness_test:
+    - send_outreach_email
+    - send_outreach_dm
+  opportunity_scoring: []
+  cost_gain: []
+  build_decisions:
+    - delete_repo_file
+  service_builder:
+    - register_external_account
+    - deploy_public_domain
+  product_design:
+    - publish_landing_page
+    - deploy_public_domain
+  outreach:
+    - send_outreach_email
+    - send_outreach_sms
+    - send_outreach_dm
+  support:
+    - send_customer_message
+    - refund_customer
+  payment_ops:
+    - create_payment_link
+    - charge_customer
+    - refund_customer
+  customer_delivery:
+    - send_customer_message
+  qa: []
+  analytics: []
+  security_guardrails:
+    - delete_repo_file
+  daily_summary: []

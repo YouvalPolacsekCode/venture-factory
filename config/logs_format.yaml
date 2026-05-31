@@ -1,0 +1,119 @@
+schema_version: 1
+
+# Agent log schema. The runtime enforces this; agents that emit malformed events
+# are halted by `security_guardrails` until fixed.
+
+format: jsonl
+one_event_per_line: true
+path_template: "logs/<YYYY-MM-DD>/<agent>.jsonl"
+encoding: utf-8
+timezone_for_path: "Asia/Jerusalem"
+
+# Every event must include all of these fields. Missing-field events are
+# rejected at write time.
+required_fields:
+  - name: schema_version
+    type: integer
+    notes: Must equal this file's schema_version at write time.
+  - name: event_id
+    type: string
+    notes: ULID. Globally unique. Sortable by time.
+  - name: agent
+    type: string
+    notes: One of the 18 agent names defined in docs/ARCHITECTURE.md.
+  - name: action_type
+    type: string
+    notes: Must match an entry in config/approval_policy.yaml (auto_allowed or requires_approval).
+  - name: status
+    type: enum
+    values: [started, succeeded, failed, awaiting_approval]
+  - name: started_at
+    type: string
+    notes: ISO 8601 with offset, e.g. "2026-06-12T08:31:04+03:00".
+  - name: finished_at
+    type: string
+    notes: ISO 8601 with offset. Equal to started_at for status=started events.
+  - name: duration_ms
+    type: integer
+    notes: 0 for status=started; real wall-clock duration for terminal states.
+  - name: inputs_summary
+    type: string
+    notes: One-line human-readable description of what went in. Redacted per rules below.
+  - name: outputs_summary
+    type: string
+    notes: One-line human-readable description of what came out. Redacted per rules below.
+  - name: cost_usd_estimate
+    type: number
+    notes: Best-effort estimate at write time. 0.0 if zero-cost.
+  - name: tool_calls
+    type: array
+    item_shape:
+      name: string
+      args_redacted: object
+      ok: boolean
+  - name: errors
+    type: array
+    item_shape:
+      code: string
+      message: string
+  - name: correlation_id
+    type: string
+    notes: ULID shared across all events that belong to the same logical workflow (e.g. one outreach send across multiple agents).
+  - name: parent_event_id
+    type: [string, "null"]
+    notes: ULID of the event that triggered this one, or null if root.
+  - name: approval_queue_ref
+    type: [string, "null"]
+    notes: ULID of the matching approval_queue/ file when status=awaiting_approval; null otherwise.
+
+optional_fields:
+  - name: tags
+    type: array
+    notes: 'Free-form short strings for filtering. Example: ["experiment:example-invoice-chaser", "retry"].'
+  - name: notes
+    type: string
+    notes: Free-form. Keep under 500 chars.
+
+# Inline example: a successful market_radar sweep.
+example_event:
+  schema_version: 1
+  event_id: "01JXAQ8K2N3M4P5R6S7T8V9W0X"
+  agent: "market_radar"
+  action_type: "read_public_web"
+  status: "succeeded"
+  started_at: "2026-06-12T08:31:04+03:00"
+  finished_at: "2026-06-12T08:31:47+03:00"
+  duration_ms: 43012
+  inputs_summary: "sweep 3 subreddits for B2B SaaS pain signals"
+  outputs_summary: "14 candidate posts surfaced; 3 scored above 5.5 threshold"
+  cost_usd_estimate: 0.12
+  tool_calls:
+    - name: "http_get"
+      args_redacted: { url: "https://www.reddit.com/r/<redacted>/new.json" }
+      ok: true
+    - name: "claude_chat"
+      args_redacted: { model: "claude-opus-4-7", messages: "<14 items>" }
+      ok: true
+  errors: []
+  correlation_id: "01JXAQ8K2N3M4P5R6S7T8V9W00"
+  parent_event_id: null
+  approval_queue_ref: null
+  tags: ["sweep:daily", "source:reddit"]
+
+# Fields that must be redacted before write. The runtime strips these from
+# inputs_summary, outputs_summary, and tool_calls.args_redacted, and routes the
+# unredacted payload to access-controlled files under secrets/ or data/private/.
+redaction_rules:
+  always_redact:
+    - api_keys                  # any token, secret, bearer header
+    - lead_emails               # email addresses of leads (prospects who have not paid)
+    - lead_phone_numbers
+    - customer_full_names       # paying or trialing customer names
+    - customer_payment_details  # last4, BIN, anything Stripe-adjacent
+    - stripe_customer_ids
+    - operator_personal_pii     # Youval's personal info if it slips into a payload
+  redaction_placeholder: "<redacted>"
+  unredacted_storage:
+    leads: "data/private/leads.sqlite"
+    customers: "data/private/customers.sqlite"
+    secrets: "secrets/"          # gitignored, file-level encrypted at rest

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://venture-factory.local/schemas/lead_source.schema.json",
+  "title": "LeadSource",
+  "description": "A channel through which reachable prospects for a given Opportunity can be sourced. The Outreach agent uses LeadSource records to build per-cohort lead lists. Sample leads MUST be stored as hashes only; raw PII is never persisted in this record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "opportunity_id",
+    "channel",
+    "access_method",
+    "estimated_audience_size",
+    "quality",
+    "cost_per_lead_usd",
+    "compliance_notes",
+    "discovered_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Crockford-base32 ULID (26 chars).",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "opportunity_id": {
+      "type": "string",
+      "description": "ULID of the Opportunity this lead source serves.",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "linkedin",
+        "email",
+        "reddit",
+        "twitter",
+        "hn",
+        "cold_call",
+        "partner",
+        "other"
+      ]
+    },
+    "access_method": {
+      "type": "string",
+      "enum": [
+        "scrape_public",
+        "api",
+        "manual",
+        "paid_provider"
+      ],
+      "description": "How leads are retrieved from this channel. scrape_public must respect robots.txt and platform ToS; if violation, use api or paid_provider."
+    },
+    "estimated_audience_size": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Realistically reachable audience for this query, not the platform's total user count."
+    },
+    "quality": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "1 = noisy / cold; 5 = warm, well-qualified, high reply-rate expected."
+    },
+    "cost_per_lead_usd": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Fully-loaded cost per qualified lead in USD: tool subscription / leads-per-month + compute + any human enrichment time at operator's hourly rate."
+    },
+    "compliance_notes": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "description": "Per-channel compliance considerations: lawful basis under GDPR for EU prospects, prior-consent rules under Israeli Communications Law amendment 40 for IL prospects, CAN-SPAM for US, platform-specific ToS restrictions, suppression list reference."
+    },
+    "discovered_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "ISO 8601 with timezone offset. IDT (+03:00) preferred for Israel-sourced channels."
+    },
+    "provider": {
+      "type": "string",
+      "description": "Name of the paid provider if access_method is paid_provider (e.g., Apollo, Clay, Hunter). Otherwise omit.",
+      "maxLength": 200
+    },
+    "query_template": {
+      "type": "string",
+      "description": "Parameterised search query used to pull leads from this channel. Use {placeholders} for variables. Must not include any private credentials.",
+      "maxLength": 2000
+    },
+    "sample_leads_redacted": {
+      "type": "array",
+      "description": "Hashed samples ONLY — never raw PII. Used for dedup checks and audit. Each entry holds a SHA-256 of the lead's primary identifier (e.g., email lowercased + trimmed).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["hash"],
+        "properties": {
+          "hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 hex digest of the lead's primary identifier."
+          },
+          "hash_input_kind": {
+            "type": "string",
+            "enum": ["email", "linkedin_url", "twitter_handle", "phone_e164", "other"],
+            "description": "What kind of identifier was hashed. Required to make dedup checks meaningful across sources."
+          },
+          "captured_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+          }
+        }
+      },
+      "maxItems": 100
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form operator or agent notes.",
+      "maxLength": 5000
+    }
+  }
+}

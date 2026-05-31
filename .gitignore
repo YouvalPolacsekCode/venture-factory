@@ -1,0 +1,42 @@
+# Logs & runtime
+logs/*.jsonl
+logs/*.log
+*.log
+
+# Approval queue contents (audit trail handled per-item)
+approval_queue/*.json
+!approval_queue/.gitkeep
+
+# Secrets & env
+.env
+.env.*
+!.env.example
+**/secrets.yaml
+**/credentials.json
+security/keys/
+
+# Local state
+.DS_Store
+.idea/
+.vscode/
+*.swp
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+dist/
+build/
+
+# Experiment/service runtime artifacts
+experiments/**/runtime/
+services/**/runtime/
+customers/**/private/
+payments/**/raw/
+
+# Reports auto-generated
+reports/auto/
+
+# Dashboards built assets
+dashboards/build/

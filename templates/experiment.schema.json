@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://venture-factory.local/schemas/experiment.schema.json",
+  "title": "Experiment",
+  "description": "A running service experiment in the AI Venture Factory. Created when an Opportunity is promoted to building. Owns the per-service folder under services/<slug>/. Update this record whenever stage, cost/gain, or last_signal changes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "slug",
+    "opportunity_id",
+    "created_at",
+    "current_stage",
+    "owner_agent",
+    "build_decision",
+    "cost_gain",
+    "last_signal",
+    "kill_threshold_breached",
+    "next_review_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Crockford-base32 ULID (26 chars).",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "slug": {
+      "type": "string",
+      "description": "Kebab-case identifier used as the services/<slug>/ folder name. Lowercase letters, digits, hyphens. 3-50 chars. Must start with a letter.",
+      "pattern": "^[a-z][a-z0-9-]{1,48}[a-z0-9]$"
+    },
+    "opportunity_id": {
+      "type": "string",
+      "description": "ULID of the Opportunity this experiment was promoted from.",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "ISO 8601 with timezone offset. IDT (+03:00) preferred."
+    },
+    "current_stage": {
+      "type": "string",
+      "enum": [
+        "validating",
+        "building",
+        "launched",
+        "scaling",
+        "killed",
+        "paused"
+      ],
+      "description": "Mirrors status.md current_stage. Single source of truth lives here; status.md is the human-readable view."
+    },
+    "owner_agent": {
+      "type": "string",
+      "description": "Name of the agent currently responsible for moving this experiment forward (e.g., 'Builder agent', 'Delivery agent', 'Outreach agent').",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "build_decision": {
+      "type": "object",
+      "description": "Snapshot of the decision that promoted this Opportunity to an Experiment.",
+      "additionalProperties": false,
+      "required": ["decided_at", "decided_by_agent", "model_used", "rationale_summary"],
+      "properties": {
+        "decided_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "decided_by_agent": {
+          "type": "string",
+          "description": "Agent that recommended the build (operator approval still required per approval_policy.yaml).",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "model_used": {
+          "type": "string",
+          "description": "Exact model ID used to generate the rationale (e.g., claude-opus-4-7).",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "rationale_summary": {
+          "type": "string",
+          "minLength": 30,
+          "maxLength": 2000,
+          "description": "Short summary of why this passed the Build Decision gate. Full rationale lives in the experiment folder."
+        },
+        "operator_approved_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "description": "Set when the operator clicks approve. Until set, the experiment is provisional."
+        }
+      }
+    },
+    "cost_gain": {
+      "type": "object",
+      "description": "Latest cost/gain snapshot driving kill/continue/scale decisions. Recomputed by the Reporting agent at least daily.",
+      "additionalProperties": false,
+      "required": ["cost_estimate_usd", "gain_estimate_usd", "ratio", "computed_at"],
+      "properties": {
+        "cost_estimate_usd": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Cumulative cost to date in USD: compute + tools + leads + operator hours costed at the operator's rate."
+        },
+        "gain_estimate_usd": {
+          "type": "number",
+          "description": "Cumulative gross revenue minus refunds in USD. May be 0 pre-launch; may be negative if refunds > revenue."
+        },
+        "ratio": {
+          "type": "number",
+          "description": "gain_estimate_usd / cost_estimate_usd. Convention: if cost is 0, set ratio to null. Compare against thresholds in config/cost_gain_model.yaml."
+        },
+        "computed_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        }
+      }
+    },
+    "last_signal": {
+      "type": "object",
+      "description": "Most recent material event observed for this experiment. Anything that should bubble into the daily summary.",
+      "additionalProperties": false,
+      "required": ["kind", "value", "observed_at"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Short label of the signal type, e.g., 'cohort_sent', 'first_reply', 'first_paid', 'refund_issued', 'qa_failed', 'sla_breach'.",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "value": {
+          "description": "Signal payload. Free-form: number, string, or small object. Keep under ~1 KB serialised.",
+          "anyOf": [
+            { "type": "string", "maxLength": 1000 },
+            { "type": "number" },
+            { "type": "boolean" },
+            { "type": "object" }
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$"
+        }
+      }
+    },
+    "kill_threshold_breached": {
+      "type": "boolean",
+      "description": "True when any kill condition in config/cost_gain_model.yaml is met. Reporting agent sets this; operator decision required to actually move stage to 'killed'."
+    },
+    "next_review_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "description": "When the next kill/continue/scale review is due (IDT preferred). Reporting agent surfaces overdue reviews in the daily summary."
+    },
+    "parent_experiment_id": {
+      "type": "string",
+      "description": "If this is a spinoff or pivoted version of an earlier experiment, the parent's ULID.",
+      "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Free-form tags. Lowercase, kebab-case.",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]{0,49}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 30
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form operator notes.",
+      "maxLength": 5000
+    }
+  }
+}

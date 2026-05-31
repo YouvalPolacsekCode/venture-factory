@@ -1,0 +1,52 @@
+schema_version: 1
+
+# Weighted-sum opportunity scoring. Every dimension is scored 0-10 by the
+# `opportunity_scoring` agent based on evidence collected by upstream agents.
+# Total = sum(dimension_score * weight) + sum(applicable_penalties).
+# Weights sum to 1.0.
+
+dimensions:
+  pain_severity:
+    weight: 0.20
+    description: How painful is the problem for the target user? 10 = blocks work, costs real money daily.
+  pain_frequency:
+    weight: 0.10
+    description: How often does the pain occur? 10 = daily or continuous; 1 = once a year.
+  willingness_to_pay:
+    weight: 0.20
+    description: Evidence that the segment pays for adjacent or substitute solutions today.
+  lead_reachability:
+    weight: 0.15
+    description: Can we find and contact 100+ qualified leads in under a week through allowed channels?
+  responsiveness_signal:
+    weight: 0.15
+    description: Reply rate, click rate, or DM engagement from initial probes. 10 = >15% qualified reply.
+  buildability_with_ai:
+    weight: 0.10
+    description: How well does Claude + standard tooling cover the service? 10 = end-to-end automatable.
+  defensibility:
+    weight: 0.05
+    description: Workflow stickiness, data moat, or distribution edge over a 6-month horizon.
+  founder_fit:
+    weight: 0.05
+    description: Youval's domain, language (Hebrew/English), and timezone advantage for this market.
+
+# Stage gates. The factory advances an experiment only when total crosses these.
+thresholds:
+  min_total_to_validate: 5.5
+  min_total_to_build: 6.5
+  min_total_to_scale: 7.5
+
+# When two opportunities are within 0.3 of each other on total, break ties by
+# checking these dimensions in order; the higher one wins.
+tie_breakers:
+  - responsiveness_signal
+  - willingness_to_pay
+  - buildability_with_ai
+
+# Additive adjustments to the total. Applied after weighted sum.
+# Negative values lower the score (make it harder to advance).
+penalties:
+  regulated_industry: -1.5         # healthcare, finance, legal-with-licensure, etc.
+  requires_physical_logistics: -1.0 # shipping, warehousing, in-person service
+  b2c_at_scale_needed: -1.0         # business model needs >1000 paying consumers to work

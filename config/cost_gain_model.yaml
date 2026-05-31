@@ -1,0 +1,37 @@
+schema_version: 1
+
+# Cost/gain parameters consumed by the `cost_gain` agent.
+# All currency values in USD. All time values in days unless suffixed.
+# The agent computes a cost_to_gain_ratio per experiment per week:
+#   ratio = projected_total_cost_next_4w / projected_gain_next_4w
+# and compares against `thresholds` below.
+
+costs:
+  hours_to_build_estimate_default: 12
+  operator_hourly_value_usd: 80
+  external_api_cost_per_experiment_per_week_usd: 8
+  landing_page_hosting_usd: 0
+  outreach_provider_cost_per_send_usd: 0.001
+  payment_provider_pct: 0.029
+  payment_provider_flat_usd: 0.30
+
+gain:
+  target_first_paid_customer_within_days: 14
+  target_arpu_usd_monthly: 49
+  target_gross_margin_pct: 0.75
+  target_first_5_customers_within_days: 30
+
+thresholds:
+  kill_if_no_responsiveness_signal_days: 7
+  kill_if_cost_to_gain_ratio_above: 0.6
+  scale_if_cost_to_gain_ratio_below: 0.25
+  scale_if_first_paid_customer_in_pipeline: true
+
+# Evaluation order. The `cost_gain` agent applies these rules in sequence each
+# Sunday during the weekly rollup; the first matching rule sets the recommendation.
+weekly_evaluation:
+  rule_set:
+    - kill_no_signal           # responsiveness silent past kill_if_no_responsiveness_signal_days
+    - kill_cost_ratio          # ratio above kill_if_cost_to_gain_ratio_above
+    - scale_paid_pipeline      # paid customer in pipeline AND ratio below scale threshold
+    - continue_default         # otherwise hold

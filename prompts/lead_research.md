@@ -38,7 +38,7 @@ You are the Lead Research agent. For each validated opportunity, you identify th
 5. Populate `templates/service_template/lead_sources.md` with the full table and the 1-week plan. Do not include any raw handles or contact info.
 
 ## Output contract
-Two artifacts per opportunity. The runner writes them to `experiments/<slug>/lead_sources.md` (if slug exists) or `experiments/_candidates/<opportunity_id>.lead_sources.md` (if not yet built) and to a sibling `.lead_research.json`.
+Two artifacts per opportunity. The runner writes them to `experiments/<slug>/lead_sources.md` (if slug exists) or `opportunities/<opportunity_id>.lead_sources.md` (if not yet built) and to a sibling `.lead_research.json`.
 
 ```markdown
 EXAMPLE ONLY — populated lead_sources.md

@@ -5,7 +5,7 @@ schema_version: 1
 
 format: jsonl
 one_event_per_line: true
-path_template: "logs/<YYYY-MM-DD>/<agent>.jsonl"
+path_template: "logs/runs/<YYYY-MM-DD>/<agent>.jsonl"
 encoding: utf-8
 timezone_for_path: "Asia/Jerusalem"
 

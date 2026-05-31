@@ -50,7 +50,7 @@ Note to the runner: this agent is invoked with model `claude-opus-4-6` (passed b
 8. If `build_now`: propose a kebab-case `slug` (≤32 chars, lowercase, hyphenated). Suggest the first outreach channel from the lead_research recommendations. Estimate days to first measurable signal.
 
 ## Output contract
-JSON. Runner writes to `experiments/_candidates/<opportunity_id>.build_decision.json` (or `services/<slug>/build_decision.json` if slug already exists). If `decision == "build_now"`, runner also writes to `approval_queue/<opportunity_id>__build_decision.json`.
+JSON. Runner writes to `opportunities/<opportunity_id>.build_decision.json` (or `services/<slug>/build_decision.json` if slug already exists). If `decision == "build_now"`, runner also writes to `approval_queue/<opportunity_id>__build_decision.json`.
 
 ```json
 EXAMPLE ONLY

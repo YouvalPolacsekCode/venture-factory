@@ -1,3 +1,18 @@
+---
+inputs:
+  - config/market_radar_sources.yaml
+  - config/scoring_model.yaml
+  - templates/opportunity.schema.json
+outputs:
+  - opportunities/*.json
+  - reports/daily/*.market_radar.md
+schedule: "06:00 IDT"
+permissions:
+  - read_public_web
+  - write_repo_file
+  - query_sqlite
+---
+
 # Market Radar
 
 **Slug:** market_radar
@@ -12,12 +27,12 @@ Continuously scans public signal sources for unmet needs, complaints, and emergi
 - `config/signal_sources.yaml` (subreddits, HN queries, Indie Hackers tags, podcast feeds, App Store category IDs, niche forums)
 - `config/scoring_model.yaml` (only the raw-signal weights; full scoring lives in Opportunity Scoring)
 - `templates/opportunity.schema.json` (output shape)
-- `experiments/_candidates/_seen.jsonl` (dedupe ledger of source URLs already processed)
+- `opportunities/_seen.jsonl` (dedupe ledger of source URLs already processed)
 
 ## Outputs
-- `experiments/_candidates/<ulid>.opportunity.json` per candidate, matching `templates/opportunity.schema.json`
+- `opportunities/<ulid>.opportunity.json` per candidate, matching `templates/opportunity.schema.json`
 - Daily digest `reports/daily/<YYYY-MM-DD>.market_radar.md`
-- Appended entries to `experiments/_candidates/_seen.jsonl`
+- Appended entries to `opportunities/_seen.jsonl`
 - Per-source health row written to `factory.db` table `source_health`
 
 ## Tools
@@ -38,7 +53,7 @@ Continuously scans public signal sources for unmet needs, complaints, and emergi
 - Fetch and parse all sources in `config/signal_sources.yaml`.
 - Dedupe against `_seen.jsonl` by source URL and content hash.
 - Extract candidate opportunities, fill in `templates/opportunity.schema.json` fields (problem, audience, signal_strength_raw, source_urls, language).
-- Write one JSON file per candidate to `experiments/_candidates/`.
+- Write one JSON file per candidate to `opportunities/`.
 - Write daily digest summarizing how many signals came in per source and the top 10 candidates.
 
 ## What requires approval
@@ -53,10 +68,8 @@ Continuously scans public signal sources for unmet needs, complaints, and emergi
 - Source returns 429/5xx -> exponential backoff, max 3 retries per source per cycle, then mark source unhealthy in `factory.db.source_health` and continue.
 - Source schema changed (parser error) -> emit failure log with raw payload sample, skip source, surface in tomorrow's digest.
 - Claude API rate-limited -> queue items and retry next cycle; do not partially write candidate files.
-- `_seen.jsonl` corrupted -> rebuild from `experiments/_candidates/*.opportunity.json` URLs; log full rebuild.
+- `_seen.jsonl` corrupted -> rebuild from `opportunities/*.opportunity.json` URLs; log full rebuild.
 - Disk full -> abort cycle, emit failure log, alert via approval_queue.
 
 ## Notes
-- This agent is read-only on the external internet. No writes, no logins, no scraping behind auth without operator sign-off.
-- Hebrew-language sources are first-class; do not down-weight them.
-- `signal_strength_raw` is a heuristic 0-10; the real score is computed later by Opportunity Scoring.
+- This agen

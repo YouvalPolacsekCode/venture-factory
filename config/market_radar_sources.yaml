@@ -1,0 +1,44 @@
+schema_version: 1
+
+# Signal sources for Market Radar. Add/remove via spend_above_daily_cap approval.
+sources:
+  - id: hn_whoishiring
+    type: hn
+    description: 'Hacker News "Ask HN: Who is hiring?" monthly thread'
+    url_template: "https://hn.algolia.com/api/v1/search?query=Ask+HN+Who+is+hiring&tags=story"
+    enabled: true
+    rate_limit_rpm: 10
+
+  - id: reddit_sideproject
+    type: reddit
+    description: "r/SideProject — indie hackers sharing and asking for feedback"
+    url_template: "https://www.reddit.com/r/SideProject/new.json?limit=50"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: reddit_entrepreneur
+    type: reddit
+    description: "r/Entrepreneur — small business pain signals"
+    url_template: "https://www.reddit.com/r/Entrepreneur/new.json?limit=50"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: reddit_smallbusiness
+    type: reddit
+    description: "r/smallbusiness — operational friction threads"
+    url_template: "https://www.reddit.com/r/smallbusiness/new.json?limit=50"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: ph_launches
+    type: ph
+    description: "Product Hunt recent launches — surface whitespace where winners exist"
+    url_template: "https://api.producthunt.com/v2/api/graphql"
+    enabled: false
+    notes: "Requires PH API key. Enable via register_external_account approval."
+
+# Dedupe ledger — path written by market_radar, read at startup for dedup
+seen_ledger: "opportunities/_seen.jsonl"
+
+# Candidate output directory
+candidate_output_dir: "opportunities"

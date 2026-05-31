@@ -9,13 +9,13 @@
 Applies the canonical scoring model in `config/scoring_model.yaml` to every candidate opportunity and to every active experiment, producing a single comparable score. This is what makes the daily ranking deterministic and auditable instead of a vibe. The business outcome is a defensible top-5 list each morning: the operator sees the same numbers the agents see, with the inputs traceable.
 
 ## Inputs
-- All `experiments/_candidates/<ulid>.opportunity.json`
+- All `opportunities/<ulid>.opportunity.json`
 - All active `experiments/<slug>/state.json` and `experiments/<slug>/market_evidence.md`
 - `config/scoring_model.yaml` (weights, normalization, must-pass gates)
 - `factory.db` table `historical_scores` (for drift detection)
 
 ## Outputs
-- `experiments/_candidates/<ulid>.score.json` per candidate
+- `opportunities/<ulid>.score.json` per candidate
 - `experiments/<slug>/score.json` per active experiment (replaced each run, prior versions kept in `experiments/<slug>/.score_history/`)
 - Ranked list embedded in `reports/daily/<YYYY-MM-DD>.md`
 - Rows in `factory.db` table `scores`

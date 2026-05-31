@@ -16,6 +16,9 @@ approval_queue/*.json
 security/keys/
 
 # Local state
+factory/state.db
+factory/state.db-wal
+factory/state.db-shm
 .DS_Store
 .idea/
 .vscode/

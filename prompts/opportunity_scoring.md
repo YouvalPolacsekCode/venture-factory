@@ -45,7 +45,7 @@ You are the Opportunity Scoring agent. You take a validated opportunity and conv
 7. Write a 2–3 sentence `rationale` naming the strongest dimension, the weakest dimension, and the deciding factor.
 
 ## Output contract
-JSON written by the runner to `experiments/_candidates/<opportunity_id>.scoring.json` (or `services/<slug>/scoring.json` if a slug exists).
+JSON written by the runner to `opportunities/<opportunity_id>.scoring.json` (or `services/<slug>/scoring.json` if a slug exists).
 
 ```json
 EXAMPLE ONLY

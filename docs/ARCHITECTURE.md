@@ -509,40 +509,36 @@ venture-factory/
 
 ### Opportunity (`templates/opportunity.schema.json`)
 
+The schema file on disk is the source of truth. Summary below mirrors it.
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Opportunity",
   "type": "object",
-  "required": ["ulid", "title", "source", "status", "created_at"],
+  "additionalProperties": false,
+  "required": [
+    "id", "discovered_at", "source", "problem_statement",
+    "target_segment", "geo", "signal_strength", "keywords", "notes"
+  ],
   "properties": {
-    "ulid": {"type": "string"},
-    "title": {"type": "string", "maxLength": 140},
-    "summary": {"type": "string"},
-    "source": {"type": "object", "required": ["type", "url"], "properties": {
-      "type": {"enum": ["hn", "reddit", "ph", "newsletter", "x", "trends", "other"]},
-      "url": {"type": "string", "format": "uri"},
-      "captured_at": {"type": "string", "format": "date-time"}
-    }},
-    "tags": {"type": "array", "items": {"type": "string"}},
-    "pain_score": {"type": "integer", "minimum": 0, "maximum": 100},
-    "evidence": {"type": "array", "items": {"type": "object", "required": ["url", "quote"], "properties": {
-      "url": {"type": "string", "format": "uri"},
-      "quote": {"type": "string"}
-    }}},
-    "willingness_to_pay_signal": {"enum": ["yes", "maybe", "no", "unknown"]},
-    "score": {"type": "number"},
-    "cost_estimate_usd": {"type": "number"},
-    "gain_estimate_usd_30d": {"type": "number"},
-    "gain_estimate_usd_90d": {"type": "number"},
-    "cg_ratio": {"type": "number"},
-    "status": {"enum": ["candidate", "validated", "rejected", "scored", "go", "hold", "kill", "building", "live", "archived"]},
-    "decision_log": {"type": "array", "items": {"type": "object"}},
-    "created_at": {"type": "string", "format": "date-time"},
-    "updated_at": {"type": "string", "format": "date-time"}
+    "id":                    {"type": "string", "pattern": "^[0-9A-HJKMNP-TV-Z]{26}$"},
+    "discovered_at":         {"type": "string", "format": "date-time"},
+    "source":                {"type": "object", "required": ["type", "url", "snippet"]},
+    "problem_statement":     {"type": "string", "minLength": 30, "maxLength": 500},
+    "target_segment":        {"type": "string"},
+    "geo":                   {"type": "string", "pattern": "^([A-Z]{2}|GLOBAL)$"},
+    "signal_strength":       {"type": "integer", "minimum": 1, "maximum": 5},
+    "keywords":              {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "notes":                 {"type": "string"},
+    "related_opportunities": {"type": "array", "items": {"type": "string"}},
+    "score":                 {"type": "object", "required": ["total", "per_dimension", "scored_at"]},
+    "status":                {"enum": ["candidate", "validated", "building", "live", "killed"]}
   }
 }
 ```
+
+Field naming convention: `id` (not `ulid`), `discovered_at` (not `created_at`), `problem_statement` (not `title`). The runtime validator uses the schema file; any drift between the snippet above and the file is doc lag, not behavior.
 
 ### LeadSource (`templates/lead_source.schema.json`)
 

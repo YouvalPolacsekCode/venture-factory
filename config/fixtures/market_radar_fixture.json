@@ -1,0 +1,23 @@
+{
+  "description": "Fixture for market_radar smoke test. Simulates a daily source sweep.",
+  "sources": [
+    {
+      "type": "hn",
+      "url": "https://news.ycombinator.com/item?id=40123456",
+      "title": "Ask HN: Anyone else spending hours on freelance invoice reconciliation?",
+      "content": "I spend 2-3 hours every month trying to match my invoices with bank transactions. My accountant charges extra for the cleanup. Looking for a tool that can do this automatically without importing everything into QuickBooks.",
+      "captured_at": "2026-05-31T03:00:00+00:00",
+      "upvotes": 87,
+      "comments": 34
+    },
+    {
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/smallbusiness/comments/abc123/tired_of_manual_payroll_csv_exports/",
+      "title": "Tired of manual payroll CSV exports every month",
+      "content": "Every month I export payroll from Gusto, then manually copy numbers into our accounting spreadsheet. There has to be a better way. We are a 12-person company.",
+      "captured_at": "2026-05-31T02:30:00+00:00",
+      "upvotes": 42,
+      "comments": 18
+    }
+  ]
+}

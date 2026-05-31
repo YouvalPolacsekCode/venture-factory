@@ -9,15 +9,15 @@
 Takes the top candidate opportunities from Market Radar and stress-tests whether a real, frequent, paid-for pain exists. Produces structured `market_evidence.md` files that either justify advancing an opportunity to Lead Research or recommend killing it. The business outcome is fewer wasted build cycles: only opportunities with documented pain and at least one credible willingness-to-pay signal proceed.
 
 ## Inputs
-- Top-N candidates from `experiments/_candidates/<ulid>.opportunity.json` (N from `config/orchestration.yaml`, default 5/day)
-- `experiments/_candidates/<ulid>.score.json` if Opportunity Scoring has already run
+- Top-N candidates from `opportunities/<ulid>.opportunity.json` (N from `config/orchestration.yaml`, default 5/day)
+- `opportunities/<ulid>.score.json` if Opportunity Scoring has already run
 - `templates/market_evidence.md` (output skeleton)
 - `config/pain_validation.yaml` (evidence thresholds, must-have vs nice-to-have checks)
 
 ## Outputs
 - `experiments/<slug>/market_evidence.md` (one per promoted candidate)
 - `experiments/<slug>/state.json` with `pain_validation: pass|fail|inconclusive`
-- Promoted candidates moved from `experiments/_candidates/` into `experiments/<slug>/` (slug = human-readable, derived from problem statement)
+- Promoted candidates moved from `opportunities/` into `experiments/<slug>/` (slug = human-readable, derived from problem statement)
 - Approval items for any outreach proposals
 
 ## Tools

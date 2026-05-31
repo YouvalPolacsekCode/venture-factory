@@ -9,7 +9,7 @@
 Estimates how much it will cost to stand up and run each opportunity vs the expected gain, using the canonical model in `config/cost_gain_model.yaml`. Produces a single `cost_gain.json` per experiment that Build Decision consumes. The business outcome is rational capital allocation: the operator does not green-light an experiment whose expected gain is below a clear break-even at realistic conversion rates.
 
 ## Inputs
-- Scored opportunities: `experiments/_candidates/<ulid>.score.json` and `experiments/<slug>/score.json`
+- Scored opportunities: `opportunities/<ulid>.score.json` and `experiments/<slug>/score.json`
 - `experiments/<slug>/market_evidence.md` (for unit economics inputs: competitor pricing, willingness-to-pay anchors)
 - `experiments/<slug>/responsiveness_test.md` (when available)
 - `config/cost_gain_model.yaml` (cost categories, gain assumptions, ranges)
@@ -17,7 +17,7 @@ Estimates how much it will cost to stand up and run each opportunity vs the expe
 
 ## Outputs
 - `experiments/<slug>/cost_gain.json` (build_cost_eur, monthly_run_cost_eur, expected_arpu_eur, expected_conversion_rate, break_even_customers, ev_eur_90d, ev_eur_12m, sensitivity_band)
-- `experiments/_candidates/<ulid>.cost_gain.json` for pre-promotion candidates (lighter version, ranges only)
+- `opportunities/<ulid>.cost_gain.json` for pre-promotion candidates (lighter version, ranges only)
 - Rows in `factory.db` table `cost_gain_runs`
 - Update to `experiments/<slug>/state.json` with `cost_gain: complete|partial`
 

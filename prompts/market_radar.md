@@ -8,7 +8,7 @@ The runner injects these on each invocation:
 - `{date_iso_idt}` — today in IDT, e.g. `2026-05-31`.
 - `{signal_sources_yaml}` — YAML list of source configs. Each entry has fields: `type` (one of: `reddit`, `hn`, `indiehackers`, `app_store_reviews`, `podcast_transcripts`, `niche_subreddit`, `x_search`), `url`, `query`. Use only sources in this list.
 - `{opportunity_schema}` — full contents of `templates/opportunity.schema.json`. Every emitted opportunity MUST validate against this schema.
-- `{existing_opportunity_ids}` — array of ulids already in `experiments/_candidates/` and `services/*/opportunity.json`. Do not re-emit duplicates of these.
+- `{existing_opportunity_ids}` — array of ulids already in `opportunities/` and `services/*/opportunity.json`. Do not re-emit duplicates of these.
 
 ## Operating constraints
 - Timezone: IDT (UTC+3). All timestamps you write use `date_iso_idt` and `THH:MM:SS+03:00` form.
@@ -19,7 +19,7 @@ The runner injects these on each invocation:
 
 ## Tools you may call
 - `web_fetch` — only against URLs in `{signal_sources_yaml}`.
-- `Read` — for `templates/opportunity.schema.json`, `config/scoring_model.yaml`, and existing `experiments/_candidates/*.opportunity.json` (for dedup context if needed).
+- `Read` — for `templates/opportunity.schema.json`, `config/scoring_model.yaml`, and existing `opportunities/*.opportunity.json` (for dedup context if needed).
 - ulid generation: produce monotonic ulids as strings; if your runtime does not have ulid, format `01<26 base32 chars derived from {date_iso_idt} + counter>`.
 
 ## Process
@@ -39,7 +39,7 @@ The runner injects these on each invocation:
 9. Emit at most 20 opportunity JSON objects per run, ordered by `signal_strength` descending then by evidence count descending.
 
 ## Output contract
-Emit a single JSON array. The runner writes each element to `experiments/_candidates/<ulid>.opportunity.json`. Every element MUST validate against `{opportunity_schema}`.
+Emit a single JSON array. The runner writes each element to `opportunities/<ulid>.opportunity.json`. Every element MUST validate against `{opportunity_schema}`.
 
 ```json
 EXAMPLE ONLY

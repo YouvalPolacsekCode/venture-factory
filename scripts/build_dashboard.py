@@ -44,6 +44,8 @@ OUT_FILE = OUT_DIR / "data.json"
 UTC = timezone.utc
 IDT = timezone(timedelta(hours=3))
 
+MIN_DISPLAY_SCORE = 4.0  # hide ideas scoring below this on the dashboard
+
 STAGE_WORDS = {"validating", "building", "launched", "scaling", "killed", "paused"}
 LAUNCHED_STAGES = {"launched", "scaling"}
 
@@ -201,6 +203,8 @@ def _top_opportunities(rows, limit=25):
         except (TypeError, ValueError):
             return 0.0
 
+    # Hide low-signal noise: only surface ideas scoring at or above the floor.
+    scored = [r for r in scored if total_of(r) >= MIN_DISPLAY_SCORE]
     scored.sort(key=total_of, reverse=True)
     # Surface the dimensions the operator cares about most, in plain-language keys.
     DIM_LABELS = {
@@ -221,6 +225,7 @@ def _top_opportunities(rows, limit=25):
             if isinstance(per_dim.get(key), (int, float)):
                 scores[label] = per_dim[key]
         out.append({
+            "topics": [str(k)[:24] for k in (opp.get("keywords") or [])[:3] if str(k).strip()],
             "id": opp.get("id", r["base"]),
             # Full problem text — the schema caps it at 500 chars, so show it all.
             "problem_statement": _trunc(opp.get("problem_statement"), 520),

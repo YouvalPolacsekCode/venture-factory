@@ -65,6 +65,8 @@
   .opp-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
   .opp-score { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .opp-stageplain { color: var(--muted); font-size: 13px; }
+  .opp-topics { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px; }
+  .topic { font-size: 11.5px; color: #aeb6c2; background: #1b1f28; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
   .opp-problem { margin: 4px 0 10px; font-size: 15px; line-height: 1.55; }
   .opp-who { margin: 0 0 10px; font-size: 14px; color: #cdd3dd; }
   .opp .lbl { color: var(--muted); }
@@ -273,7 +275,7 @@ function renderOpps(d) {
   const el = $("opps");
   if (!rows.length) { el.innerHTML = '<div class="empty">No scored opportunities yet.</div>'; return; }
 
-  el.innerHTML = '<div class="opp-hint">Sorted by score (0–10). Each card explains the problem, who would pay, and whether it can run on its own — no clicking needed.</div>'
+  el.innerHTML = '<div class="opp-hint">Sorted by score (0–10); ideas below 4 are hidden. Each card explains the problem, who would pay, and whether it can run on its own — no clicking needed.</div>'
     + rows.map(o => {
     const stage = o.recommended_stage || "";
     const stagePlain = STAGE_PLAIN[stage] || stage;
@@ -300,6 +302,7 @@ function renderOpps(d) {
         ${verdict ? `<span class="chip ${esc(verdict)}">${esc(verdict)}</span>` : ""}
         ${realistic}
       </div>
+      ${(o.topics && o.topics.length) ? `<div class="opp-topics">${o.topics.map(t => `<span class="topic">${esc(t)}</span>`).join("")}</div>` : ""}
       <p class="opp-problem">${esc(o.problem_statement)}</p>
       <p class="opp-who"><span class="lbl">Who would pay:</span> ${esc(o.target_segment || "unclear")}</p>
       ${scoreChips ? `<div class="opp-metrics">${scoreChips}</div>` : ""}

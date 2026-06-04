@@ -342,22 +342,33 @@ def _prefetch_market_radar(fixture_path: Path | None) -> tuple[list[dict], list[
         tags.append(f"fixture:{len(items)}")
     else:
         from factory import sources as _sources
-        items = []
+        per_source: list[list[dict]] = []
         for src in _load_sources():
             if not src.get("enabled", False):
                 continue
             stats: dict = {}
             try:
-                items.extend(_sources.fetch(src, stats))
+                fetched_items = _sources.fetch(src, stats)
             except NotImplementedError as exc:
                 print(f"WARN: source {src.get('id')} not implemented: {exc}", file=sys.stderr)
                 continue
             except Exception as exc:
                 print(f"WARN: source {src.get('id')} fetch failed: {exc}", file=sys.stderr)
                 continue
+            per_source.append(fetched_items)
             sid = src.get("id", src.get("type", "src"))
             tags.append(f"{sid}:fetched={stats.get('fetched', 0)},"
                         f"dropped={stats.get('dropped_by_rule', 0)},kept={stats.get('kept', 0)}")
+        # Round-robin interleave so the MAX_PREFETCH_ITEMS budget is shared
+        # fairly across sources rather than consumed by whichever is listed
+        # first (otherwise one prolific source crowds the others out).
+        items = []
+        for rank in range(max((len(lst) for lst in per_source), default=0)):
+            for lst in per_source:
+                if rank < len(lst):
+                    items.append(lst[rank])
+        items = items[:MAX_PREFETCH_ITEMS]
+        return items, tags
     items = items[:MAX_PREFETCH_ITEMS]
     return items, tags
 

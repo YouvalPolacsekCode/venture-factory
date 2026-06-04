@@ -80,6 +80,18 @@ def fetch(source_config: dict, stats: dict | None = None) -> list[dict]:
     if stype == "reddit":
         from . import reddit
         return reddit.fetch(source_config, stats)
+    if stype == "lobsters":
+        from . import lobsters
+        return lobsters.fetch(source_config, stats)
+    if stype == "stackexchange":
+        from . import stackexchange
+        return stackexchange.fetch(source_config, stats)
+    if stype == "devto":
+        from . import devto
+        return devto.fetch(source_config, stats)
+    if stype == "github":
+        from . import github
+        return github.fetch(source_config, stats)
     if stype == "ph":
         from . import ph
         return ph.fetch(source_config)

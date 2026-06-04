@@ -115,3 +115,18 @@ The runner fails closed and enforces spend caps before any paid call.
 - **Fail-closed startup.** Missing/empty `ANTHROPIC_API_KEY` → exit 1 ("ANTHROPIC_API_KEY required; see .env.example"). Missing/unparseable `config/approval_policy.yaml` → `run_daily_loop.py` exits 1 ("fail-closed: approval policy unreadable"). The key is never logged.
 - **Shabbat read-only window** (Fri 18:00 → Sat 20:00 IDT). `run_daily_loop.py` sets `RUN_MODE=read_only` and skips any agent holding a blocked action type (`send_outreach_email`, `send_outreach_sms`, `create_payment_link`, `charge_customer`, `deploy_public_domain`, `send_customer_message`) — logged as `shabbat_read_only`. `market_radar`, `opportunity_scoring`, `pain_validation`, `cost_gain`, `daily_summary` still run.
 - **Safety suite.** `uv run safety` runs `scripts/test_safety.py` (missing-key, spend-cap, Shabbat block, policy-unreadable). No live API calls — all guards short-circuit first.
+
+## Schedule operations (macOS / launchd)
+
+The daily loop runs under a launchd LaunchAgent (macOS replacement for the Windows Task Scheduler entry noted above).
+
+- **Install / re-install:** `bash scripts/install_schedule.sh`. Idempotent — resolves the absolute `uv` path, translates 06:00 Asia/Jerusalem to the local clock, fills `scripts/com.youval.venturefactory.daily.plist`, copies it to `~/Library/LaunchAgents/`, and reloads it. Logs go to `logs/launchd/daily.{out,err}.log`.
+- **Check status / next fire:** `launchctl list | grep venturefactory`.
+- **Disable:** `launchctl unload ~/Library/LaunchAgents/com.youval.venturefactory.daily.plist`.
+- **Re-enable:** `launchctl load -w ~/Library/LaunchAgents/com.youval.venturefactory.daily.plist` (or re-run the installer).
+- **Run once now (manual):** `uv run daily-loop`.
+
+### Operator daily UX
+
+- **Morning brief (~08:30 IDT):** `bash scripts/morning_brief.sh` (or `uv run brief`) — opens today's `reports/daily/<date>.md` (falls back to yesterday's) and lists approvals expiring within 6h.
+- **Approvals inbox:** `uv run inbox` (or `uv run python scripts/approvals_inbox.py`). Flags: `--expiring` (within 6h), `--bulk-approve '<action_glob>'`, `--bulk-reject '<action_glob>' --reason "..."`.

@@ -16,6 +16,9 @@ dependencies = [
 smoke = "scripts.smoke_test:main"
 cost-report = "scripts.cost_report:main"
 safety = "scripts.test_safety:_run"
+daily-loop = "scripts.run_daily_loop:main"
+inbox = "scripts.approvals_inbox:main"
+brief = "scripts.brief:main"
 
 [dependency-groups]
 dev = ["pytest>=8.0"]

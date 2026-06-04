@@ -826,11 +826,35 @@ def _parse_action_write_blocks(text: str) -> tuple[list[dict], list[tuple[str, s
 # Spend
 # ---------------------------------------------------------------------------
 
-def _check_spend(policy: dict, conn) -> bool:
-    cap = policy.get("caps", {}).get("per_day_external_api_usd", 25.0)
+def _today_spend(conn) -> float:
     row = conn.execute("SELECT COALESCE(SUM(cost_usd), 0.0) FROM spend_ledger WHERE date=?",
                        (_idt_date(),)).fetchone()
-    return float(row[0]) < cap
+    return float(row[0])
+
+
+def _projected_cost(model: str, max_tokens: int) -> float:
+    """Conservative pre-call cost estimate: assume max tokens for BOTH input and
+    output (P3 requires conservative estimation — never under-estimate)."""
+    pin, pout = MODEL_PRICES.get(model, _DEFAULT_PRICE)
+    return max_tokens * (pin + pout) / 1_000_000
+
+
+def _queue_spend_approval(agent: str, action_type: str, current_spend: float,
+                          projected: float, cap: float) -> str:
+    """Write a spend approval request and return its ULID."""
+    limit_label = "per-action ceiling" if action_type == "call_paid_api_above_cap" else "per-day cap"
+    action = {
+        "action_type": action_type,
+        "summary": f"{agent}: projected API call ${projected:.4f} would exceed {limit_label} ${cap:.2f}",
+        "payload": {
+            "current_spend_usd": round(current_spend, 4),
+            "projected_call_usd": round(projected, 4),
+            "requested_overage_usd": round(max(0.0, current_spend + projected - cap), 4),
+        },
+        "risk": "high",
+        "expires_at": (_idt_now() + timedelta(hours=24)).isoformat(),
+    }
+    return write_approval_request(action, agent)
 
 
 def _usage_tokens(usage) -> tuple[int, int, int, int]:
@@ -972,11 +996,39 @@ def main() -> int:
         else:
             api_key = os.environ.get("ANTHROPIC_API_KEY", "")
             if not api_key:
-                print("ERROR: ANTHROPIC_API_KEY not set in environment / .env", file=sys.stderr)
+                print("ERROR: ANTHROPIC_API_KEY required; see .env.example", file=sys.stderr)
                 conn.close()
                 return 1
 
             model, max_tokens = model_for(agent)
+            caps = policy.get("caps", {})
+            ceiling = float(caps.get("per_action_usd_hard_ceiling", 10.0))
+            daily_cap = float(caps.get("per_day_external_api_usd", 25.0))
+            projected = _projected_cost(model, max_tokens)
+
+            # Per-action hard ceiling — emit-and-stop before any call.
+            if projected > ceiling:
+                req = _queue_spend_approval(agent, "call_paid_api_above_cap",
+                                            _today_spend(conn), projected, ceiling)
+                approval_requests.append(req)
+                print(f"[awaiting_approval] {agent}: projected ${projected:.4f} exceeds "
+                      f"per-action ceiling ${ceiling:.2f}; queued {req}")
+                _finalize(run_id, agent, started_at, "awaiting_approval", 0, 0, 0.0,
+                          [], approval_requests, [], conn)
+                return 0
+
+            # Per-day cap — checked BEFORE building inputs (so no network either).
+            today = _today_spend(conn)
+            if today + projected > daily_cap:
+                req = _queue_spend_approval(agent, "spend_above_daily_cap",
+                                            today, projected, daily_cap)
+                approval_requests.append(req)
+                print(f"[awaiting_approval] {agent}: ${today:.4f}+${projected:.4f} exceeds "
+                      f"per-day cap ${daily_cap:.2f}; queued {req}")
+                _finalize(run_id, agent, started_at, "awaiting_approval", 0, 0, 0.0,
+                          [], approval_requests, [], conn)
+                return 0
+
             system_blocks = build_system_blocks(agent, body)
             user_messages, log_tags = build_user_messages(agent, frontmatter, fixture_path)
 
@@ -989,11 +1041,13 @@ def main() -> int:
             import anthropic
             client = anthropic.Anthropic(api_key=api_key)
             for um in user_messages:
-                if not _check_spend(policy, conn):
-                    err = "Per-day external API spend cap reached"
-                    errors.append({"code": "SPEND_CAP_EXCEEDED", "message": err})
-                    status = "failed"
-                    print(f"ERROR: {err}", file=sys.stderr)
+                today = _today_spend(conn)
+                if today + projected > daily_cap:
+                    req = _queue_spend_approval(agent, "spend_above_daily_cap",
+                                                today, projected, daily_cap)
+                    approval_requests.append(req)
+                    status = "awaiting_approval"
+                    print(f"[awaiting_approval] {agent}: per-day cap reached mid-run; queued {req}")
                     break
                 resp = client.messages.create(
                     model=model, max_tokens=max_tokens,

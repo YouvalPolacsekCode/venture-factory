@@ -106,3 +106,12 @@ python scripts/unfreeze.py
 ```
 
 The daily loop is also wired to a Windows Task Scheduler entry that fires at 07:00 IDT. If your machine is asleep, the loop runs on next wake — no catch-up logic, it just runs once.
+
+## Safety & guardrails (Phase 3)
+
+The runner fails closed and enforces spend caps before any paid call.
+
+- **Budget caps** (`config/approval_policy.yaml` → `caps`). Before each Anthropic call the runner makes a *conservative* cost estimate (assumes max tokens in and out). If the projected call would push the day over `per_day_external_api_usd`, or a single call would exceed `per_action_usd_hard_ceiling`, no call is made: it writes an approval to `approval_queue/<ulid>.json` (`action_type` = `spend_above_daily_cap` or `call_paid_api_above_cap`, with `current_spend_usd` / `projected_call_usd` / `requested_overage_usd`, `expires_at` = +24h) and logs `status=awaiting_approval`. Approve with `python scripts/approve.py <ulid>` after raising the cap, or let it expire.
+- **Fail-closed startup.** Missing/empty `ANTHROPIC_API_KEY` → exit 1 ("ANTHROPIC_API_KEY required; see .env.example"). Missing/unparseable `config/approval_policy.yaml` → `run_daily_loop.py` exits 1 ("fail-closed: approval policy unreadable"). The key is never logged.
+- **Shabbat read-only window** (Fri 18:00 → Sat 20:00 IDT). `run_daily_loop.py` sets `RUN_MODE=read_only` and skips any agent holding a blocked action type (`send_outreach_email`, `send_outreach_sms`, `create_payment_link`, `charge_customer`, `deploy_public_domain`, `send_customer_message`) — logged as `shabbat_read_only`. `market_radar`, `opportunity_scoring`, `pain_validation`, `cost_gain`, `daily_summary` still run.
+- **Safety suite.** `uv run safety` runs `scripts/test_safety.py` (missing-key, spend-cap, Shabbat block, policy-unreadable). No live API calls — all guards short-circuit first.

@@ -769,6 +769,127 @@ def _process_opportunity_scoring(text: str, model: str, errors: list[dict]) -> l
     return written
 
 
+COST_GAIN_MODEL_VERSION = "cost_gain_model.yaml@v1"
+
+
+def _clamp(x: float, lo: float, hi: float) -> float:
+    return max(lo, min(hi, x))
+
+
+def _compute_cost_gain(opp_id: str, scoring: dict, cfg: dict) -> dict:
+    """Deterministic cost/gain estimate (USD) from config/cost_gain_model.yaml +
+    the opportunity's scoring dimensions. No LLM call — all math in code, every
+    figure surfaced in `assumptions`. See docs/DATA_MODEL.md §3."""
+    costs = cfg.get("costs", {}) or {}
+    gain = cfg.get("gain", {}) or {}
+    pd = scoring.get("per_dimension", {}) or {}
+
+    def dim(name, default=5.0):
+        v = pd.get(name)
+        return float(v) if isinstance(v, (int, float)) else float(default)
+
+    buildability = dim("buildability_with_ai")
+    wtp = dim("willingness_to_pay")
+    buyer = dim("buyer_clarity")
+
+    hourly = float(costs.get("operator_hourly_value_usd", 80))
+    default_hours = float(costs.get("hours_to_build_estimate_default", 12))
+    api_week = float(costs.get("external_api_cost_per_experiment_per_week_usd", 8))
+    hosting = float(costs.get("landing_page_hosting_usd", 0))
+    per_send = float(costs.get("outreach_provider_cost_per_send_usd", 0.001))
+    margin = float(gain.get("target_gross_margin_pct", 0.75))
+    target_arpu = float(gain.get("target_arpu_usd_monthly", 49))
+
+    # More buildable -> fewer operator hours (clamped 0.6x..2.0x of default).
+    build_hours = round(default_hours * _clamp((11 - buildability) / 5, 0.6, 2.0), 1)
+    build_cost_usd = round(build_hours * hourly, 2)
+    monthly_run_cost_usd = round(api_week * 4 + hosting, 2)
+
+    # WTP scales ARPU (0.4x..1.0x); buyer_clarity scales cold-outreach conversion.
+    expected_arpu_usd = round(target_arpu * _clamp(0.4 + 0.06 * wtp, 0.4, 1.0), 2)
+    conv = round(_clamp(0.005 + 0.004 * buyer, 0.005, 0.05), 4)
+    gp_per_customer = expected_arpu_usd * margin
+    break_even_customers = int(-(-build_cost_usd // gp_per_customer)) if gp_per_customer > 0 else None
+
+    sends_for_first = int(-(-1 // conv)) if conv > 0 else 0  # ceil(1/conv)
+    cost_to_first_paid_usd = round(build_cost_usd + sends_for_first * per_send, 2)
+
+    def gain_over(sends, months):
+        customers = sends * conv
+        revenue = customers * expected_arpu_usd * months
+        return revenue * margin
+
+    # Conservative reachable volume under per_day_outreach_sends (50/day) given
+    # approval-gated batches: ~200 sends in 30d, ~600 in 90d.
+    sends_30d, sends_90d = 200, 600
+    expected_gain_30d_usd = round(gain_over(sends_30d, 1) - monthly_run_cost_usd, 2)
+    expected_gain_90d_usd = round(gain_over(sends_90d, 2) - 3 * monthly_run_cost_usd - build_cost_usd, 2)
+
+    # 4-week ratio = projected cost / projected gross profit (lower is better).
+    cost_4w = build_cost_usd + monthly_run_cost_usd + sends_30d * per_send
+    gross_4w = gain_over(sends_30d, 1)
+    ratio = round(cost_4w / gross_4w, 3) if gross_4w > 0 else 999.0
+
+    def ratio_at(conv_mult):
+        c = _clamp(conv * conv_mult, 0.0005, 0.2)
+        g = sends_30d * c * expected_arpu_usd * margin
+        return round(cost_4w / g, 3) if g > 0 else 999.0
+
+    return {
+        "opportunity_id": opp_id,
+        "computed_at": _idt_now().isoformat(timespec="seconds"),
+        "model_version": COST_GAIN_MODEL_VERSION,
+        "build_cost_usd": build_cost_usd,
+        "monthly_run_cost_usd": monthly_run_cost_usd,
+        "expected_arpu_usd": expected_arpu_usd,
+        "expected_conversion_rate": conv,
+        "break_even_customers": break_even_customers,
+        "cost_to_first_paid_usd": cost_to_first_paid_usd,
+        "expected_gain_30d_usd": expected_gain_30d_usd,
+        "expected_gain_90d_usd": expected_gain_90d_usd,
+        "cost_to_gain_ratio": ratio,
+        "sensitivity": {
+            "pessimistic": ratio_at(0.5),
+            "base": ratio,
+            "optimistic": ratio_at(2.0),
+        },
+        "assumptions": [
+            f"build_hours={build_hours} (buildability_with_ai={buildability}) @ ${hourly}/h => build_cost=${build_cost_usd}",
+            f"monthly_run_cost=${monthly_run_cost_usd} (api ${api_week}/wk*4 + hosting ${hosting})",
+            f"expected_arpu=${expected_arpu_usd} (target ${target_arpu} scaled by willingness_to_pay={wtp})",
+            f"conversion={conv} (from buyer_clarity={buyer}); gross_margin={margin}",
+            f"reachable sends: 30d={sends_30d}, 90d={sends_90d} (under per_day_outreach_sends cap, approval-gated)",
+            f"cost_to_gain_ratio={ratio} = 4wk cost ${round(cost_4w,2)} / 4wk gross ${round(gross_4w,2)}",
+        ],
+    }
+
+
+def _process_cost_gain(errors: list[dict]) -> list[str]:
+    """For each validated opportunity lacking a sibling .cost_gain.json, compute
+    and write it. Deterministic; never calls the API."""
+    opp_dir = REPO_ROOT / "opportunities"
+    cfg = _load_yaml("config/cost_gain_model.yaml")
+    written: list[str] = []
+    for vf in sorted(opp_dir.glob("*.verdict.json")):
+        base = vf.name[: -len(".verdict.json")]
+        if (opp_dir / f"{base}.cost_gain.json").exists():
+            continue
+        try:
+            if json.loads(vf.read_text()).get("status") != "validated":
+                continue
+            scoring = json.loads((opp_dir / f"{base}.scoring.json").read_text())
+        except Exception:
+            continue
+        try:
+            cg = _compute_cost_gain(base, scoring, cfg)
+            rel = f"opportunities/{base}.cost_gain.json"
+            (opp_dir / f"{base}.cost_gain.json").write_text(json.dumps(cg, indent=2), encoding="utf-8")
+            written.append(rel)
+        except Exception as exc:
+            errors.append({"code": "COST_GAIN_ERROR", "message": f"{base}: {exc}"})
+    return written
+
+
 def _process_pain_validation(text: str, errors: list[dict]) -> list[str]:
     payload = _parse_json_payload(text)
     if isinstance(payload, dict):
@@ -1017,6 +1138,15 @@ def main() -> int:
         _finalize(run_id, agent, started_at, "no_op", 0, 0, 0.0, [], [],
                   [], conn, tags=[reason])
         return 0
+
+    # cost_gain is deterministic (no LLM): compute in code and finalize.
+    if agent == "cost_gain":
+        outs = _process_cost_gain(errors)
+        for o in outs:
+            print(f"Wrote: {o}")
+        st = "succeeded" if not errors else "failed"
+        _finalize(run_id, agent, started_at, st, 0, 0, 0.0, outs, [], errors, conn)
+        return 0 if st == "succeeded" else 1
 
     try:
         model = "dry-run"

@@ -37,8 +37,8 @@ DAILY_SEQUENCE = [
     ("22:00", "daily_summary",       False),
 ]
 
-# Agents not yet implemented for Phase 1 — logged as NOT_IMPLEMENTED, no API call.
-STUB_AGENTS = {"cost_gain", "build_decisions"}
+# Agents not yet implemented — logged as NOT_IMPLEMENTED, no API call.
+STUB_AGENTS = {"build_decisions"}
 
 OPP_DIR = REPO_ROOT / "opportunities"
 
@@ -79,10 +79,24 @@ def _pain_validation_has_work() -> bool:
     return False
 
 
+def _cost_gain_has_work() -> bool:
+    for vf in OPP_DIR.glob("*.verdict.json"):
+        base = vf.name[: -len(".verdict.json")]
+        if (OPP_DIR / f"{base}.cost_gain.json").exists():
+            continue
+        try:
+            if json.loads(vf.read_text()).get("status") == "validated":
+                return True
+        except Exception:
+            continue
+    return False
+
+
 PRECONDITIONS = {
     "market_radar": lambda: True,
     "pain_validation": _pain_validation_has_work,
     "opportunity_scoring": _opportunity_scoring_has_work,
+    "cost_gain": _cost_gain_has_work,
     "daily_summary": lambda: True,
 }
 

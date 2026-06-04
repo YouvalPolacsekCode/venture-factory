@@ -1,0 +1,24 @@
+{
+  "id": "01KT9RZ06JCMJMH66GRJVB1RCZ",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=41400732",
+    "snippet": "I wish there was a tool for exporting all of my Google Takeout stuff - or at least the photos - without needing to download eight separate tarfiles. (As well as de-duplicating photos - right now, my Takeout is significantly larger than it needs to be due to the same photo in different albums being stored multiple times in the dump.)"
+  },
+  "problem_statement": "Users who export their data via Google Takeout must manually download and reassemble many split archive files, then deal with significant photo duplication across albums, making migration or backup impractical without a dedicated tool.",
+  "target_segment": "General consumers and power users migrating away from Google Photos or backing up their Google data",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-takeout",
+    "data-export",
+    "photo-deduplication",
+    "google-photos",
+    "data-portability",
+    "migration-tool",
+    "consumer-tool"
+  ],
+  "notes": "Recurring pain point across multiple HN threads over years. A GUI or CLI tool that handles multi-part Takeout downloads, deduplication, and metadata repair has clear demand. Show HN post for Porte validates the niche.",
+  "status": "candidate"
+}

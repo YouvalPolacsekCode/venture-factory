@@ -1,0 +1,23 @@
+{
+  "id": "01KT9RZ07EWEHND6M7JR37BFW0",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182405/some-emails-in-gmail-are-auto-deleted-but-there-is-no-filter",
+    "snippet": "Sometimes an email sent to me from a known source goes to delete folder. If I recover it from deleted folder in time and respond to that email, my reply now goes to delete folder as well. There is no filter causing this."
+  },
+  "problem_statement": "Gmail users experience unexplained automatic deletion of legitimate emails and replies with no identifiable filter rule, leaving them unable to diagnose or fix the issue through standard Gmail tooling.",
+  "target_segment": "Business professionals and power users relying on Gmail for critical communications",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "gmail",
+    "email-management",
+    "email-debugging",
+    "filter-audit",
+    "inbox-reliability",
+    "productivity"
+  ],
+  "notes": "Signals demand for a Gmail audit/diagnostic tool that surfaces hidden or conflicting rules, label behaviors, and routing anomalies beyond what Gmail's native UI exposes. Could be a Chrome extension or OAuth-based web app.",
+  "status": "candidate"
+}

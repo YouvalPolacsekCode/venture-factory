@@ -1,0 +1,25 @@
+{
+  "id": "01KT9RZ078RVZP2FXDT05WMF2W",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/ollama/ollama/issues/16515",
+    "snippet": "Ollama currently does not support or expose some of the more advanced and highly necessary features of llama.cpp. Specifically, the system still rejects or fails to process tensor override commands and cannot handle split/sharded models. For users who need to perform granular control over how models are loaded across hardware..."
+  },
+  "problem_statement": "Power users running large local LLMs via Ollama cannot access advanced llama.cpp features like tensor overrides and sharded model loading, forcing them to use raw llama.cpp directly and losing Ollama's convenience layer.",
+  "target_segment": "ML engineers and enthusiasts running large local models on multi-GPU or heterogeneous hardware setups",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ollama",
+    "llama-cpp",
+    "local-llm",
+    "model-sharding",
+    "tensor-override",
+    "multi-gpu",
+    "ml-infra",
+    "open-source-ai"
+  ],
+  "notes": "Gap between Ollama's ease-of-use and llama.cpp's raw power. Opportunity for a thin configuration/wrapper tool or Ollama-compatible server that exposes advanced llama.cpp flags without sacrificing the API compatibility layer.",
+  "status": "candidate"
+}

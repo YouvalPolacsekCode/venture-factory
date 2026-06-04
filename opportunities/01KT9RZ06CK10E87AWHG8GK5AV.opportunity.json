@@ -1,0 +1,24 @@
+{
+  "id": "01KT9RZ06CK10E87AWHG8GK5AV",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95419/searching-for-a-rust-rest-server-generator-to-replace-openapi-generator-one-that",
+    "snippet": "I'm in search of a Rust sources generator for Open API yaml spec files, to generate models and the Rust server structure, if possible. Until today, I used the OpenAPI generator. But even its latest version 7.22.0 faces troubles, either with its rust_server or rest-axum generator, producing models whose structs or collections sometimes doesn't comply to a trait that a validator will refer later to."
+  },
+  "problem_statement": "Rust developers using OpenAPI spec files cannot reliably generate correct, trait-compliant server code; the dominant tool (OpenAPI Generator) produces broken Rust output with known unresolved issues, leaving teams with no production-ready alternative.",
+  "target_segment": "Rust backend developers building REST APIs from OpenAPI specs, in small-to-mid-size engineering teams",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "rust",
+    "openapi",
+    "code-generation",
+    "rest-api",
+    "developer-tooling",
+    "axum",
+    "api-first"
+  ],
+  "notes": "Known open bug in a widely-used generator with no clear fix. A dedicated, well-maintained Rust OpenAPI server codegen tool (especially axum-focused) could capture this demand.",
+  "status": "candidate"
+}

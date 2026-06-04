@@ -1,0 +1,25 @@
+{
+  "id": "01KT9RZ06QWYQE71QARQEYBMRT",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95409/enterprise-level-free-password-manager-solution",
+    "snippet": "Can anyone recommend a good password manager solution for teams/organisations that is: Free or affordable, Preferably self-hosted, Secure enterprise-friendly. I've been looking into Vaultwarden and Passbolt, but I'm still researching how secure and production-ready they are as open-source platforms."
+  },
+  "problem_statement": "Small IT teams managing Microsoft-centric environments need a self-hosted, enterprise-grade password manager that is affordable and demonstrably production-ready, but lack clear guidance on security maturity of available open-source options like Vaultwarden and Passbolt.",
+  "target_segment": "IT administrators and small-to-mid-size businesses managing shared credentials, particularly in Microsoft ecosystems",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "password-manager",
+    "self-hosted",
+    "enterprise-security",
+    "vaultwarden",
+    "passbolt",
+    "credentials-management",
+    "it-ops",
+    "smb"
+  ],
+  "notes": "Recurring question pattern across IT forums. Gap is not the software itself but a trusted, opinionated deployment guide or managed hosting layer on top of open-source tools. Potential SaaS or productized setup service.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01KT9RZ073K8W8W5PB5XW3KX20",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
+    "snippet": "I work in a small company as CTO. I have been informed that I must conduct a job interview the very next day (the meeting is already setup). We have no clear definition of what is the role we want for fill and what kind person we are looking for. We even have no budget for what we can spend on hiring a new person."
+  },
+  "problem_statement": "CTOs and managers at small companies are regularly thrown into unplanned interviews with no defined role, no job spec, and no structured process \u2014 leading to poor hiring decisions and wasted time for both sides.",
+  "target_segment": "First-time or non-HR hiring managers at startups and small companies (1\u201350 employees)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "hiring",
+    "interviewing",
+    "startup-ops",
+    "hr-tooling",
+    "job-spec",
+    "structured-interviews",
+    "small-business"
+  ],
+  "notes": "Signals a broader gap: lightweight hiring-process tooling for non-HR founders and CTOs. Could be an interview kit generator, role-definition wizard, or AI-assisted scorecard builder.",
+  "status": "candidate"
+}

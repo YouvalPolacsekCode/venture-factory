@@ -1,0 +1,24 @@
+{
+  "id": "01KT9RZ06XEDHDXX2FV43G35W5",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=40237443",
+    "snippet": "I tend to nuke my entire db, recreate it and reload some data into it. I wish there was a tool that ran in watch mode and patched the db based schema edits."
+  },
+  "problem_statement": "Developers iterating rapidly on SQLite schemas during early-stage development have no watch-mode tool that automatically detects schema file changes and applies non-destructive migrations, forcing them to manually nuke and recreate the database on each iteration.",
+  "target_segment": "Solo developers and small teams using SQLite for local development or prototyping, particularly in Python, Rust, or JS stacks",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "sqlite",
+    "schema-migration",
+    "developer-tooling",
+    "watch-mode",
+    "local-dev",
+    "database",
+    "rapid-prototyping"
+  ],
+  "notes": "Lightweight, well-scoped tool opportunity. Could be a small CLI or VS Code extension. Analogous to how css/js watchers work but for SQLite DDL. Likely quick to build and validate.",
+  "status": "candidate"
+}

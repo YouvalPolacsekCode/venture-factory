@@ -1,0 +1,24 @@
+{
+  "id": "01KT9RZ065WMS0EYH4CMC7PNQ7",
+  "discovered_at": "2026-06-04T19:55:15+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=46366838",
+    "snippet": "I wish there was a tool that also displayed current and accumulated transfer rate per socket/process. I use jnettop for this purpose, but I'm unhappy with its user interface."
+  },
+  "problem_statement": "Developers monitoring network activity lack a single tool that combines per-socket/process transfer rate (current and accumulated) with a modern, usable terminal UI \u2014 existing tools like jnettop are functionally adequate but have poor UX.",
+  "target_segment": "Linux/macOS developers and sysadmins doing network diagnostics on the command line",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "network-monitoring",
+    "cli-tool",
+    "tui",
+    "sysadmin",
+    "netstat",
+    "per-process-bandwidth",
+    "developer-tooling"
+  ],
+  "notes": "Single HN comment but reflects a gap that tools like nethogs/jnettop partially fill without satisfying users. Opportunity is a polished TUI network monitor with per-socket bandwidth accounting.",
+  "status": "candidate"
+}

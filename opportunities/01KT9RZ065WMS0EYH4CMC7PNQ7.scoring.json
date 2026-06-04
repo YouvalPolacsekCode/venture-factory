@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KT9RZ065WMS0EYH4CMC7PNQ7",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 6,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyers here are individual developers and sysadmins \u2014 a segment that overwhelmingly expects CLI tools to be free and open-source; there is essentially zero willingness-to-pay signal for a TUI network monitor. Operational autonomy is very low because the product is a downloadable tool, not a service Claude can deliver and bill automatically. Even if built and polished, monetisation requires a large free-user funnel that a solo non-technical operator cannot realistically sustain.",
+  "solution_plan": "Not recommended for build. This is a developer utility that lives and dies by GitHub stars and open-source adoption. A solo non-technical operator using a Claude factory cannot realistically build a native TUI application (it requires systems-level Rust/C code, OS-level socket APIs, testing on multiple Linux distros) nor monetise it \u2014 the market expects this kind of tool to be free. Attempting to sell it as a paid SaaS or paid download would face immediate rejection from the target segment.",
+  "notes": "buyer_clarity below build_gate floor (5 < 6); willingness_to_pay below build_gate floor (2 < 5); operational_autonomy below build_gate floor (3 < 7); buildability_with_ai below build_gate floor (4 < 6). Total below validate threshold.",
+  "scored_at": "2026-06-04T19:57:29+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

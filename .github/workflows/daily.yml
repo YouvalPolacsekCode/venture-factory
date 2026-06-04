@@ -66,6 +66,11 @@ jobs:
           echo "loop_exit=$code" >> "$GITHUB_OUTPUT"
           echo "Daily loop exited with code $code"
 
+      - name: Build dashboard export
+        # Regenerate the sanitized dashboard/data.json (+ keep index.html versioned).
+        # Read-only over the repo + state.db; hard-fails if it would emit a secret/PII.
+        run: uv run build-dashboard
+
       - name: Commit results back
         run: |
           git config user.name  "venture-factory-bot"
@@ -79,7 +84,7 @@ jobs:
           git add -f factory/state.db || true
 
           # Explicit paths only — NEVER `git add -A` (keeps .env out of the commit).
-          git add opportunities/ reports/ logs/runs/ opportunities/_seen.jsonl || true
+          git add opportunities/ reports/ logs/runs/ opportunities/_seen.jsonl dashboard/ || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit — skipping (no empty commits)."

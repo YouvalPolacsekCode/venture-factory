@@ -142,3 +142,15 @@ The daily loop's **primary** scheduler is now GitHub Actions, so it runs 24/7 in
 - **Pause:** Actions tab → daily-loop → top-right **⋯** → **Disable workflow**. Scheduled and manual runs both stop. **Resume:** same menu → **Enable workflow**.
 - **Results auto-commit back:** each run pushes a `chore(factory): daily run <UTC date>` commit (opportunities/, reports/, logs/runs/, `opportunities/_seen.jsonl`, and force-added `factory/state.db`). On the Mac just `git pull` to see them. If a run produced no changes, no commit is made.
 - **Failure visibility:** GitHub emails the repo owner automatically when a scheduled run fails; the run log also carries a one-line `::error::` summary. `.env` is never staged or committed (gitignored + explicit `git add` paths, never `git add -A`).
+
+## Dashboard (GitHub Pages)
+
+A static, glanceable status page published to the web, fed by a sanitized export the daily run regenerates. No server, no build step, read-only.
+
+- **What it is:** `scripts/build_dashboard.py` (`uv run build-dashboard`) aggregates the repo + `factory/state.db` into `dashboard/data.json`; `dashboard/index.html` (one self-contained file, Chart.js via CDN) renders it client-side: pipeline funnel, **Action needed** (pending approvals), sortable top-opportunities table, active services, spend cards + 7-day bar chart, a 7-day activity heatmap, and the latest daily-report excerpt.
+- **Sanitization guarantees:** the exporter is read-only and never reads `.env`, `customers/`, `payments/`, `security/`, or `leads/*.jsonl`. Free text is email-redacted (`email#<sha256[:12]>`), and a leak self-check aborts the build (non-zero) if the output contains any secret-shaped token (API-key prefixes, env-var names/assignments) or a raw email. It writes only inside `dashboard/`.
+- **Refresh cadence:** the daily Action runs `uv run build-dashboard` right after `uv run daily-loop` and commits `dashboard/` back, so the page refreshes once per day.
+- **Force a refresh now:** `uv run build-dashboard` then commit/push `dashboard/` (re-publishes via the path-filtered `pages` workflow), or just re-run the publish workflow (Actions → **pages** → Run workflow).
+- **URL — pick one publish path:**
+  - **Default (GitHub Pages from Actions):** `.github/workflows/pages.yml` uploads `dashboard/` and deploys on every push to `main` (and `workflow_dispatch`). URL: `https://<you>.github.io/venture-factory/`. **Requires** Pages enabled (Settings → Pages → Source: **GitHub Actions**); on a **private** repo this needs GitHub Pro/Team.
+  - **Free fallback (public mirror):** `scripts/publish_dashboard_public.sh <you>/venture-factory-dashboard` pushes only `index.html` + `data.json` (already sanitized — no source) to a separate public repo whose Pages is free. URL: `https://<you>.github.io/venture-factory-dashboard/`.

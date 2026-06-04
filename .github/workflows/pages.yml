@@ -1,0 +1,53 @@
+name: pages
+
+# Publishes the static dashboard/ folder (index.html + sanitized data.json) to
+# GitHub Pages. Runs after each push to main (the daily run commits a fresh
+# dashboard/) and can be triggered manually.
+#
+# REQUIRES: GitHub Pages enabled for this repo with source = "GitHub Actions"
+#   (repo Settings -> Pages -> Build and deployment -> Source: GitHub Actions).
+# NOTE: on a PRIVATE repo, GitHub Pages requires a paid plan (GitHub Pro / Team /
+#   Enterprise). On a free private repo this workflow will fail at deploy time —
+#   use the free public-mirror fallback (scripts/publish_dashboard_public.sh).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dashboard/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+# Least-privilege tokens required by the Pages deploy actions.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one Pages deploy at a time; don't cancel an in-flight publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Publish ONLY the sanitized dashboard folder — never the repo source.
+          path: dashboard
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

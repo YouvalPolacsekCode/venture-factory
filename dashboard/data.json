@@ -1,0 +1,217 @@
+{
+  "generated_at": {
+    "utc": "2026-06-04T12:19:58+00:00",
+    "idt": "2026-06-04T15:19:58+03:00"
+  },
+  "funnel": {
+    "candidates": 11,
+    "scored": 11,
+    "validated": 0,
+    "build_decisions": {},
+    "build_now": 0,
+    "services_scaffolded": 0,
+    "services_launched": 0
+  },
+  "top_opportunities": [
+    {
+      "id": "01KT919Y5J27MX5415HFQH6H6Z",
+      "problem_statement": "Indie game developers need consistent, themed game art assets on demand without artistic skill; AI image generators produce inconsistent or visually glitched results that are harder to fix than drawi…",
+      "target_segment": "Solo indie game developers and small game studios building 2D games who lack dedicated artists.",
+      "total": 5.6,
+      "recommended_stage": "validate",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=41912784",
+      "discovered_at": "2026-06-04T13:01:48+03:00"
+    },
+    {
+      "id": "01KT919Y5QF59QYTDNP3DRE0Q3",
+      "problem_statement": "AI coding assistants promise to empower non-engineers to build software but in practice fail to deliver meaningful productivity gains for non-technical users such as PMs and designers, leaving a real…",
+      "target_segment": "Product managers, designers, and domain experts at software companies who want to build or modify internal tools withou…",
+      "total": 5.5,
+      "recommended_stage": "validate",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=47294229",
+      "discovered_at": "2026-06-04T13:01:48+03:00"
+    },
+    {
+      "id": "01KT919Y5DBYDYG96S6QG1SVAW",
+      "problem_statement": "macOS and other OS power management is opaque — users cannot easily diagnose why a device failed to sleep or which process drained battery over a recent session, leading to repeated frustration and w…",
+      "target_segment": "MacBook and laptop power users, developers, and IT administrators who need actionable power-drain diagnostics.",
+      "total": 4.9,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=44751318",
+      "discovered_at": "2026-06-04T13:01:48+03:00"
+    },
+    {
+      "id": "01KT989GR3579J7BE6QSNA1VGM",
+      "problem_statement": "Complex developer tools (profilers, tracers, observability suites) suffer from poor onboarding: documentation is either too shallow or too exhaustive, leaving developers unable to quickly grasp pract…",
+      "target_segment": "Software engineers and SREs evaluating or adopting complex open-source developer tools (profilers, tracers, debuggers).",
+      "total": 4.9,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=45776213",
+      "discovered_at": "2026-06-04T15:03:54+03:00"
+    },
+    {
+      "id": "01KT919Y5TK4K1CCX0ZZ145340",
+      "problem_statement": "Early-stage founders cannot afford paid acquisition and struggle to find structured, low-cost co-promotion partnerships with complementary startups, forcing them to rely on ad-hoc cold outreach with…",
+      "target_segment": "Pre-seed and seed-stage startup founders seeking user traction without paid advertising budgets.",
+      "total": 4.8,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=43316294",
+      "discovered_at": "2026-06-04T13:01:48+03:00"
+    },
+    {
+      "id": "01KT989GR03P6N2K4KPXBJGBMH",
+      "problem_statement": "There is no standard protocol for tools to report structured progress and status information to CI/CD environments, forcing developers to rely on fragile, platform-specific workarounds like GitHub Ac…",
+      "target_segment": "Software engineers and DevOps engineers using CI/CD pipelines (GitHub Actions, GitLab CI, etc.) at small-to-mid-size en…",
+      "total": 4.4,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=43621006",
+      "discovered_at": "2026-06-04T15:03:54+03:00"
+    },
+    {
+      "id": "01KT919Y5G7HK2EJ1KJ9626D0Y",
+      "problem_statement": "Combining local motion-detection software (e.g. Motion) with AI object-detection models (e.g. YOLO) requires DIY Python glue code; no well-packaged, Unix-philosophy CLI tool exists in standard packag…",
+      "target_segment": "Self-hosting hobbyists, home-lab enthusiasts, and small businesses running local security cameras who want AI-powered d…",
+      "total": 4.2,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=44795879",
+      "discovered_at": "2026-06-04T13:01:48+03:00"
+    },
+    {
+      "id": "01KT9968399H6R2B0CW40GE96J",
+      "problem_statement": "Users and developers have no easy way to audit the root certificate authorities installed on their devices or evaluate the reputation, ownership, and trustworthiness of those CAs — leaving them blind…",
+      "target_segment": "Security-conscious developers, IT administrators, and privacy-aware consumers using Android or other consumer devices;…",
+      "total": 4.0,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=5193802",
+      "discovered_at": "2026-06-04T15:19:36+03:00"
+    },
+    {
+      "id": "01KT989GR6HVA38WHNCGK143J9",
+      "problem_statement": "Developers and sysadmins monitoring network activity on Linux lack a modern, ergonomic tool that shows real-time and cumulative transfer rates broken down by socket and process with a clean UI.",
+      "target_segment": "Linux developers, sysadmins, and DevOps engineers doing network diagnostics and performance monitoring.",
+      "total": 3.9,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=46366838",
+      "discovered_at": "2026-06-04T15:03:54+03:00"
+    },
+    {
+      "id": "01KT989GR9QB15BM78TD567V69",
+      "problem_statement": "The modern Linux CLI tool ecosystem is fragmented — many individual rewrites exist (exa, bat, ripgrep, etc.) but no cohesive suite shares consistent UX conventions, color schemes, output formats, or…",
+      "target_segment": "Linux power users, software engineers, and sysadmins who rely heavily on the command line for day-to-day work.",
+      "total": 3.8,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=45569201",
+      "discovered_at": "2026-06-04T15:03:54+03:00"
+    },
+    {
+      "id": "01KT919Y5NBVRN7ZT7WATT28D1",
+      "problem_statement": "Google Takeout photo exports are split across many large archive files and contain significant duplicate photos (same photo in multiple albums), making it painful and time-consuming for users to migr…",
+      "target_segment": "Google Photos users migrating to self-hosted or alternative photo storage, typically privacy-conscious individuals and…",
+      "total": 2.7,
+      "recommended_stage": "drop",
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=41400732",
+      "discovered_at": "2026-06-04T13:01:48+03:00"
+    }
+  ],
+  "approvals": [],
+  "services": [],
+  "spend": {
+    "today_usd": 0.4676,
+    "last_7_days_usd": 0.4676,
+    "all_time_usd": 0.4676,
+    "by_day": [
+      {
+        "date": "2026-06-04",
+        "usd": 0.4676
+      }
+    ],
+    "by_agent": [
+      {
+        "agent": "market_radar",
+        "usd": 0.2306
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.2163
+      },
+      {
+        "agent": "daily_summary",
+        "usd": 0.0207
+      }
+    ]
+  },
+  "activity": [
+    {
+      "date": "2026-05-29",
+      "agents": {}
+    },
+    {
+      "date": "2026-05-30",
+      "agents": {}
+    },
+    {
+      "date": "2026-05-31",
+      "agents": {
+        "market_radar": {
+          "succeeded": 3
+        }
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "agents": {}
+    },
+    {
+      "date": "2026-06-02",
+      "agents": {}
+    },
+    {
+      "date": "2026-06-03",
+      "agents": {}
+    },
+    {
+      "date": "2026-06-04",
+      "agents": {
+        "daily_summary": {
+          "succeeded": 6
+        },
+        "market_radar": {
+          "succeeded": 9,
+          "awaiting_approval": 2
+        },
+        "opportunity_scoring": {
+          "succeeded": 6
+        }
+      }
+    }
+  ],
+  "latest_report_excerpt": {
+    "file": "reports/daily/2026-06-04_rerun_1519.md",
+    "date": "2026-06-04",
+    "text": "# Daily Summary — 2026-06-04 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 11 |\n| Opportunities validated past threshold | 0 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\nNo active experiments yet. Factory is in discovery phase; `market_radar` and `opportunity_scoring` are generating the candidate pool for the first validation cycle.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | nominal | 1 transient error (recovered); 11 successful runs |\n\nAll other agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping B2B pain signals across platforms.\n2. `opportunity_scoring` evaluates new candidate batch for threshold passage.\n3. `daily_summary` produces the next report at 10:00 IDT.\n\n## Operator action items\n\nNone — monitor candidate pool growth. When 3+ opportunities cross the validation threshold, `pain_validation` will be auto-activated for the first experiment cycle.",
+    "truncated": false
+  },
+  "analytics": null
+}

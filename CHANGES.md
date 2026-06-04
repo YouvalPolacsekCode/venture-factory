@@ -1,5 +1,13 @@
 # CHANGES
 
+## P4.0 — reconcile data model; canonical paths + configs (2026-06-04)
+
+Resolved the three-way drift (implemented code vs `prompts/*.md` vs aspirational `AGENT.md`). Wrote **[docs/DATA_MODEL.md](docs/DATA_MODEL.md)** as the authoritative model and aligned code/config to it:
+- **Canonical paths:** discovery→decision lives as `opportunities/<id>.{opportunity,scoring,verdict,cost_gain,build_decision}.json`; a built service lives at `services/<slug>/` (the 17-file template + runtime). **No `experiments/` tree** — in-flight test artifacts (lead_research, responsiveness_test, outreach drafts/sent, site) live under `services/<slug>/` (justified in DATA_MODEL §6). **`factory/state.db`** everywhere (never `factory.db`). USD, not EUR. Decision values `build_now|defer_1_week|kill`.
+- **Naming fix:** build decision file is `<id>.build_decision.json` (was `<id>.decision.json` in `should_run`); fixed the precondition in `scripts/run_agent.py`.
+- **Config (only what code will consume):** added `build_gates.required_gates` to `config/scoring_model.yaml`; added action_types `promote_to_build`, `design_review`, `implementation_review` to `config/approval_policy.yaml` (requires_approval, max_cost 0) + roles. `config/product_design.yaml` and `config/hosting.yaml` are created later in the phases that read them. Dropped all the nonexistent `*_policy.yaml` AGENT.md references (folded into existing configs/code).
+- **AGENT.md reconciliation:** added a prominent CANONICAL OVERRIDE block to `cost_gain` and `build_decisions` AGENT.md (canonical paths, USD, factory/state.db, no experiments/, scoring-v2 build gate, 24/7 — ignore the obsolete Shabbat lines). Other agents' AGENT.md are reconciled in their implementation phase.
+
 ## 24/7, cross-domain sources, solution plans, refresh + legend (2026-06-04)
 
 Batch of operator-requested changes:

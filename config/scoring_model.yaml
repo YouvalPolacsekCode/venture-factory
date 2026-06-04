@@ -103,6 +103,13 @@ build_gates:
   buildability_with_ai_min: 6
   buyer_clarity_min: 6
   willingness_to_pay_min: 5
+  # Every dimension listed here must meet its `<dim>_min` floor before an
+  # opportunity may be promoted to build_now (enforced in code by build_decisions).
+  required_gates:
+    - operational_autonomy
+    - buildability_with_ai
+    - buyer_clarity
+    - willingness_to_pay
 
 # When two opportunities are within 0.3 on total, break ties in this order.
 tie_breakers:

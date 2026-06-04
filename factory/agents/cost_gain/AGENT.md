@@ -3,7 +3,17 @@
 **Slug:** cost_gain
 **Owner:** factory
 **Status:** active
-**Schema version:** 1
+**Schema version:** 2
+
+> **CANONICAL OVERRIDE (see docs/DATA_MODEL.md — authoritative).** Implemented
+> as a **deterministic, code-only** step (no LLM call) per ARCHITECTURE "all
+> math in code". For each `opportunities/<id>.verdict.json` with
+> `status == validated` lacking a sibling `<id>.cost_gain.json`, it computes —
+> from `config/cost_gain_model.yaml` + `<id>.scoring.json` — and writes
+> `opportunities/<id>.cost_gain.json` (fields in DATA_MODEL §3). Currency is
+> **USD** (not EUR). State DB is **factory/state.db** (never factory.db). There
+> is **no `experiments/` tree** and no `.score.json` (it's `.scoring.json`).
+> 24/7 — ignore any "Shabbat" rule below.
 
 ## Purpose
 Estimates how much it will cost to stand up and run each opportunity vs the expected gain, using the canonical model in `config/cost_gain_model.yaml`. Produces a single `cost_gain.json` per experiment that Build Decision consumes. The business outcome is rational capital allocation: the operator does not green-light an experiment whose expected gain is below a clear break-even at realistic conversion rates.

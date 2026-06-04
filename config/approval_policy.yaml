@@ -69,6 +69,18 @@ requires_approval:
     why: Destructive; deletion bypasses normal undo flow.
     default_expiry_hours: 24
     default_max_cost_usd: 0
+  - action_type: promote_to_build
+    why: Commits ~a week of operator time to building a service. Gated by scoring-v2 build_gates; operator signs off before any service folder is created.
+    default_expiry_hours: 72
+    default_max_cost_usd: 0
+  - action_type: design_review
+    why: Checkpoint 1 — operator reviews offer, price, and landing hook before any lead research / outreach / build proceeds.
+    default_expiry_hours: 72
+    default_max_cost_usd: 0
+  - action_type: implementation_review
+    why: Checkpoint 2 — operator reviews the actually-built landing page + a sample deliverable before it goes public.
+    default_expiry_hours: 72
+    default_max_cost_usd: 0
   - action_type: spend_above_daily_cap
     why: Override of the global caps; must justify per request.
     default_expiry_hours: 12
@@ -112,12 +124,15 @@ roles:
   cost_gain: []
   build_decisions:
     - delete_repo_file
+    - promote_to_build
   service_builder:
     - register_external_account
     - deploy_public_domain
   product_design:
     - publish_landing_page
     - deploy_public_domain
+    - design_review
+    - implementation_review
   outreach:
     - send_outreach_email
     - send_outreach_sms

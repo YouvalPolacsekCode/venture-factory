@@ -3,7 +3,23 @@
 **Slug:** build_decisions
 **Owner:** factory
 **Status:** active
-**Schema version:** 1
+**Schema version:** 2
+
+> **CANONICAL OVERRIDE (see docs/DATA_MODEL.md — authoritative).** This agent
+> reads `opportunities/<id>.scoring.json` + `<id>.cost_gain.json` (+ verdict)
+> and writes `opportunities/<id>.build_decision.json`. Decision ∈
+> `{build_now, defer_1_week, kill}` (NOT build/defer). Currency is **USD**.
+> State DB is **factory/state.db** (never factory.db). There is **no
+> `experiments/` tree** and **no `config/build_decision_policy.yaml`** — the
+> build bar reuses `config/scoring_model.yaml` (`build_gates` +
+> `thresholds.min_total_to_build`) and `config/cost_gain_model.yaml`.
+> **`build_now` is only legal if scoring clears every `build_gates.required_gates`
+> floor AND total ≥ min_total_to_build AND recommended_stage ∈ {build,scale}**;
+> otherwise the max decision is `defer_1_week`. On `build_now` the runner writes
+> an `approval_queue/<ulid>.json` with `action_type: promote_to_build`;
+> service_builder runs only after the operator approves it. The factory runs
+> **24/7 — ignore any "Shabbat" rule below.** The runner appends an authoritative
+> RUNTIME CONTRACT that overrides any conflicting field shapes here.
 
 ## Purpose
 The go/no-go gate. For each scored, cost-gained opportunity, decides build, defer, or kill, with explicit reasoning. This is the single point where the factory commits resources to a new service. The business outcome is disciplined portfolio shape: by end of June 2026, exactly 3 services are live, and every other candidate has a logged decision explaining why it was not chosen.

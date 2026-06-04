@@ -300,7 +300,7 @@ def should_run(agent: str) -> tuple[bool, str]:
     if agent == "build_decisions":
         for cf in opp.glob("*.cost_gain.json"):
             base = cf.name[: -len(".cost_gain.json")]
-            if not (opp / f"{base}.decision.json").exists():
+            if not (opp / f"{base}.build_decision.json").exists():
                 return True, ""
         return False, "no cost/gain'd opportunities awaiting decision"
 

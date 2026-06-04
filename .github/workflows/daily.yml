@@ -1,0 +1,106 @@
+name: daily-loop
+
+# Primary cloud scheduler for the Venture Factory daily loop.
+# Runs in GitHub Actions (free tier, ubuntu-latest) so the loop fires 24/7
+# without the operator's Mac being awake. The launchd LaunchAgent
+# (scripts/install_schedule.sh) remains in place as an optional local fallback.
+
+on:
+  schedule:
+    # GitHub cron is UTC and has NO timezone / DST handling.
+    # 03:00 UTC == 06:00 Asia/Jerusalem during IDT (summer, UTC+3).
+    # In winter (IST, UTC+2) this same line lands at 05:00 local — acceptable;
+    # we deliberately do NOT try to handle DST in cron.
+    - cron: "0 3 * * *"
+  # Manual trigger from the Actions tab (Run workflow button).
+  workflow_dispatch:
+
+# Needed so the job can commit results back to the repo with GITHUB_TOKEN.
+permissions:
+  contents: write
+
+# Never let two daily runs overlap (state.db is a single-writer SQLite file).
+# Do not cancel an in-flight run; queue behind it instead.
+concurrency:
+  group: daily-loop
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        # Default GITHUB_TOKEN has push rights here thanks to the permissions block above.
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        # Pin to a major version of the official Astral action.
+        uses: astral-sh/setup-uv@v5
+
+      - name: Sync dependencies
+        # uv resolves Python 3.11 (per .python-version) and installs from uv.lock.
+        run: uv sync --frozen
+
+      - name: Write .env from secrets
+        # NEVER echo the key. printf writes it directly; chmod locks it down.
+        # .env is gitignored and is never staged in the commit-back step below.
+        # Commented lines are ready for the secrets that prompt C will add.
+        run: |
+          printf 'ANTHROPIC_API_KEY=%s\n' "${{ secrets.ANTHROPIC_API_KEY }}" > .env
+          # printf 'RESEND_API_KEY=%s\n'       "${{ secrets.RESEND_API_KEY }}"       >> .env
+          # printf 'STRIPE_API_KEY=%s\n'       "${{ secrets.STRIPE_API_KEY }}"       >> .env
+          # printf 'CLOUDFLARE_API_TOKEN=%s\n' "${{ secrets.CLOUDFLARE_API_TOKEN }}" >> .env
+          chmod 600 .env
+
+      - name: Run daily loop
+        id: loop
+        # Capture the exit code without hard-failing the job, so partial results
+        # still get committed back below. The code is surfaced at the very end.
+        # The Shabbat read-only window is enforced INSIDE run_daily_loop.py; the
+        # cron can fire normally on Fri/Sat and the loop self-limits.
+        run: |
+          set +e
+          uv run daily-loop
+          code=$?
+          set -e
+          echo "loop_exit=$code" >> "$GITHUB_OUTPUT"
+          echo "Daily loop exited with code $code"
+
+      - name: Commit results back
+        run: |
+          git config user.name  "venture-factory-bot"
+          git config user.email "actions@github.com"
+
+          # State persistence (critical): the runner is wiped after each run, but
+          # factory/state.db holds the spend ledger and rate-limit timestamps.
+          # It is gitignored (.gitignore line 19), so force-add it to carry
+          # within-day accounting + dedup state across runs. Per-day spend caps
+          # still reset daily by design — this only preserves intra-day state.
+          git add -f factory/state.db || true
+
+          # Explicit paths only — NEVER `git add -A` (keeps .env out of the commit).
+          git add opportunities/ reports/ logs/runs/ opportunities/_seen.jsonl || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit — skipping (no empty commits)."
+          else
+            git commit -m "chore(factory): daily run $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Surface loop exit code
+        # Fail the job (for visibility / email) if the loop itself failed,
+        # but only after results were committed back above.
+        run: |
+          code="${{ steps.loop.outputs.loop_exit }}"
+          if [ "$code" != "0" ]; then
+            echo "::error::daily-loop exited non-zero (code $code) — partial results were still committed."
+            exit "$code"
+          fi
+          echo "daily-loop completed cleanly."
+
+      - name: Failure summary
+        if: failure()
+        # GitHub emails the repo owner automatically when a scheduled workflow
+        # fails; this just drops a one-line breadcrumb into the run log.
+        run: echo "::error::Venture Factory daily-loop run FAILED — open this run's logs (Actions → daily-loop) to see which step broke."

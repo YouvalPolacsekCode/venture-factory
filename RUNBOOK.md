@@ -130,3 +130,15 @@ The daily loop runs under a launchd LaunchAgent (macOS replacement for the Windo
 
 - **Morning brief (~08:30 IDT):** `bash scripts/morning_brief.sh` (or `uv run brief`) — opens today's `reports/daily/<date>.md` (falls back to yesterday's) and lists approvals expiring within 6h.
 - **Approvals inbox:** `uv run inbox` (or `uv run python scripts/approvals_inbox.py`). Flags: `--expiring` (within 6h), `--bulk-approve '<action_glob>'`, `--bulk-reject '<action_glob>' --reason "..."`.
+
+## Cloud schedule (GitHub Actions — primary)
+
+The daily loop's **primary** scheduler is now GitHub Actions, so it runs 24/7 in the cloud without the Mac being awake. launchd (`scripts/install_schedule.sh`) is now an optional local fallback, not the primary path.
+
+- **Where it lives:** `.github/workflows/daily.yml`. It runs on `ubuntu-latest`, installs `uv`, `uv sync`s, writes `.env` from repo secrets at runtime, runs `uv run daily-loop`, then commits results back to `main`.
+- **When it fires:** cron `0 3 * * *` (UTC). GitHub cron has no timezone/DST handling: 03:00 UTC = **06:00 Asia/Jerusalem in summer (IDT)**, and **05:00 local in winter (IST)** — accepted, not corrected. The Shabbat read-only window is enforced inside `run_daily_loop.py`, so the cron fires normally Fri/Sat and the loop self-limits.
+- **Manual run:** GitHub repo → **Actions** tab → **daily-loop** (left sidebar) → **Run workflow** button (uses `workflow_dispatch`). Good for proving the pipeline end-to-end.
+- **Read run logs:** Actions tab → daily-loop → click the run → expand the **Run daily loop** step (per-agent `[RUN]/[SKIP]/[WARN]` lines) and **Commit results back** step.
+- **Pause:** Actions tab → daily-loop → top-right **⋯** → **Disable workflow**. Scheduled and manual runs both stop. **Resume:** same menu → **Enable workflow**.
+- **Results auto-commit back:** each run pushes a `chore(factory): daily run <UTC date>` commit (opportunities/, reports/, logs/runs/, `opportunities/_seen.jsonl`, and force-added `factory/state.db`). On the Mac just `git pull` to see them. If a run produced no changes, no commit is made.
+- **Failure visibility:** GitHub emails the repo owner automatically when a scheduled run fails; the run log also carries a one-line `::error::` summary. `.env` is never staged or committed (gitignored + explicit `git add` paths, never `git add -A`).

@@ -28,6 +28,10 @@ concurrency:
 jobs:
   daily:
     runs-on: ubuntu-latest
+    # Job-level boolean (NOT the token value) so the publish step can gate on it:
+    # the `secrets` context isn't available in a step-level `if`, but `env` is.
+    env:
+      HAS_DASHBOARD_TOKEN: ${{ secrets.DASHBOARD_DEPLOY_TOKEN != '' }}
     steps:
       - name: Checkout
         # Default GITHUB_TOKEN has push rights here thanks to the permissions block above.
@@ -91,6 +95,37 @@ jobs:
           else
             git commit -m "chore(factory): daily run $(date -u +%Y-%m-%d)"
             git push
+          fi
+
+      - name: Publish dashboard to public mirror
+        # Cross-repo publish: push the sanitized dashboard (index.html + data.json)
+        # to the PUBLIC Pages mirror so the live site refreshes daily. The default
+        # GITHUB_TOKEN can't push to another repo, so this uses a fine-grained PAT
+        # (Contents: write on the mirror only) stored as DASHBOARD_DEPLOY_TOKEN.
+        # Skipped automatically if that secret is not set. Runs BEFORE the exit-code
+        # surfacing so partial-but-clean results still publish even if the loop
+        # exited non-zero. (If the export tripped its leak self-check, the earlier
+        # build step already failed the job and we never get here.)
+        if: env.HAS_DASHBOARD_TOKEN == 'true'
+        env:
+          # Actions masks secret values in logs; the token is never echoed.
+          DASHBOARD_DEPLOY_TOKEN: ${{ secrets.DASHBOARD_DEPLOY_TOKEN }}
+          MIRROR: YouvalPolacsekCode/venture-factory-dashboard
+        run: |
+          tmp="$(mktemp -d)"
+          git clone --depth 1 \
+            "https://x-access-token:${DASHBOARD_DEPLOY_TOKEN}@github.com/${MIRROR}.git" "$tmp/mirror"
+          cp dashboard/index.html "$tmp/mirror/index.html"
+          cp dashboard/data.json  "$tmp/mirror/data.json"
+          touch "$tmp/mirror/.nojekyll"   # serve files verbatim (no Jekyll build)
+          git -C "$tmp/mirror" add index.html data.json .nojekyll
+          if git -C "$tmp/mirror" diff --cached --quiet; then
+            echo "Mirror unchanged — nothing to publish."
+          else
+            git -C "$tmp/mirror" \
+              -c user.name="venture-factory-bot" -c user.email="actions@github.com" \
+              commit -m "dashboard: publish $(date -u +%Y-%m-%dT%H:%MZ)"
+            git -C "$tmp/mirror" push origin HEAD:main
           fi
 
       - name: Surface loop exit code

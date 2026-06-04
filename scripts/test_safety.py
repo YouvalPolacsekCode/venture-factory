@@ -106,6 +106,55 @@ def test_runs_24_7_no_shabbat_window():
     assert not hasattr(loop, "SHABBAT_BLOCKED_ACTIONS")
 
 
+def test_build_now_requires_scoring_gate():
+    """build_decisions may NOT promote an idea to build_now if it fails the
+    scoring-v2 build_gates — the runner downgrades to defer_1_week in code and
+    queues NO promote_to_build approval, even when the LLM said build_now."""
+    import run_agent as R
+
+    opp = REPO_ROOT / "opportunities"
+    pid = "01TESTSAFEPASS000000000000"
+    fid = "01TESTSAFEFAIL000000000000"
+    (opp / f"{pid}.scoring.json").write_text(json.dumps({
+        "opportunity_id": pid, "total": 7.0, "recommended_stage": "build",
+        "per_dimension": {"operational_autonomy": 8, "buildability_with_ai": 7,
+                          "buyer_clarity": 7, "willingness_to_pay": 6}}))
+    (opp / f"{fid}.scoring.json").write_text(json.dumps({
+        "opportunity_id": fid, "total": 7.0, "recommended_stage": "build",
+        "per_dimension": {"operational_autonomy": 5, "buildability_with_ai": 7,
+                          "buyer_clarity": 7, "willingness_to_pay": 6}}))
+    arr = [
+        {"opportunity_id": pid, "decision": "build_now", "confidence_pct": 80,
+         "proposed_slug": "safe-pass", "why_now_memo": "x"},
+        {"opportunity_id": fid, "decision": "build_now", "confidence_pct": 80,
+         "proposed_slug": "safe-fail", "why_now_memo": "x"},
+    ]
+    text = "```json\n" + json.dumps(arr) + "\n```"
+    appr: list = []
+    created = []
+    try:
+        R._process_build_decisions(text, [], appr)
+        pdec = json.loads((opp / f"{pid}.build_decision.json").read_text())
+        fdec = json.loads((opp / f"{fid}.build_decision.json").read_text())
+        assert pdec["decision"] == "build_now", "idea clearing gates may build_now"
+        assert fdec["decision"] == "defer_1_week", "idea failing a gate MUST be downgraded"
+        # Exactly one promote_to_build approval, for the passing idea only.
+        promos = []
+        for a in appr:
+            p = APPROVAL_DIR / f"{a}.json"
+            created.append(p)
+            obj = json.loads(p.read_text())
+            if obj.get("action_type") == "promote_to_build":
+                promos.append(obj["payload"]["opportunity_id"])
+        assert promos == [pid], f"only the gate-passing idea queues promote_to_build, got {promos}"
+    finally:
+        for x in (pid, fid):
+            (opp / f"{x}.scoring.json").unlink(missing_ok=True)
+            (opp / f"{x}.build_decision.json").unlink(missing_ok=True)
+        for p in created:
+            p.unlink(missing_ok=True)
+
+
 def test_policy_unreadable():
     """Missing approval_policy.yaml -> run_daily_loop.py fails closed (exit 1)."""
     backup = POLICY.with_name("approval_policy.yaml.bak")

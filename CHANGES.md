@@ -1,5 +1,15 @@
 # CHANGES
 
+## P4.1 — cost_gain agent live (2026-06-04)
+
+Un-stubbed `cost_gain` as a **deterministic, code-only** step in `scripts/run_agent.py` (no LLM, matching ARCHITECTURE "all math in code"). For each `opportunities/<id>.verdict.json` with `status==validated` lacking a sibling `.cost_gain.json`, `_compute_cost_gain` derives — from `config/cost_gain_model.yaml` + the opportunity's scoring dims — build cost (scaled by `buildability_with_ai`), monthly run cost, ARPU (scaled by `willingness_to_pay`), conversion (from `buyer_clarity`), cost-to-first-paid, 30/90-day gain, the `cost_to_gain_ratio` and a sensitivity band; every figure is listed in `assumptions[]`. Writes `opportunities/<id>.cost_gain.json`. Removed `cost_gain` from `STUB_AGENTS`; added skip-no-work preconditions in both the runner (`should_run`) and the loop (`_cost_gain_has_work`).
+
+## P4.2 — build_decisions live (scoring-v2 gated, build_now needs approval) (2026-06-04)
+
+Un-stubbed `build_decisions` (LLM, `claude-opus-4-6`). The runner injects `scoring_model.yaml` + `cost_gain_model.yaml` into the cacheable system prompt and a RUNTIME CONTRACT; `build_user_messages` feeds one opportunity per call (opportunity + scoring + cost_gain + live `services/` portfolio + operator capacity), capped at the **daily decision cap (5)** remaining. Writes `opportunities/<id>.build_decision.json` with decision ∈ {build_now, defer_1_week, kill}, confidence (≤95), gates_checked, why_now_memo, proposed_slug.
+
+**The solo-viability gate is enforced in CODE, never trusted to the LLM** (`_scoring_gate_pass` + `_process_build_decisions`): a `build_now` is downgraded to `defer_1_week` unless `recommended_stage` ∈ {build,scale} AND `total ≥ min_total_to_build` (6.5) AND every `build_gates.required_gates` dimension meets its floor; `recommended_stage==drop` forces `kill`; and the portfolio cap (≥3 active builds) also downgrades. Only a surviving `build_now` writes an `approval_queue/<ulid>.json` with the new `promote_to_build` action_type — **service_builder will not run until the operator approves it**. New safety test `test_build_now_requires_scoring_gate` proves a gate-failing idea is downgraded and queues no approval even when the LLM says build_now. Removed `build_decisions` from `STUB_AGENTS`; precondition `_build_decisions_has_work`.
+
 ## P4.0 — reconcile data model; canonical paths + configs (2026-06-04)
 
 Resolved the three-way drift (implemented code vs `prompts/*.md` vs aspirational `AGENT.md`). Wrote **[docs/DATA_MODEL.md](docs/DATA_MODEL.md)** as the authoritative model and aligned code/config to it:

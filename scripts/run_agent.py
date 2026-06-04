@@ -44,6 +44,8 @@ load_dotenv(REPO_ROOT / ".env")
 STRUCTURED_AGENTS = {"market_radar", "opportunity_scoring", "pain_validation", "daily_summary"}
 
 MAX_PREFETCH_ITEMS = 24  # shared round-robin across ~10 sources for domain breadth
+BUILD_DECISIONS_DAILY_CAP = 5   # max build decisions per day
+ACTIVE_BUILDS_MAX = 3           # portfolio cap on simultaneously-building services
 
 # Per-million-token prices (USD). // update from anthropic pricing page
 MODEL_PRICES = {
@@ -458,6 +460,43 @@ JSON array inside one ```json fenced block. Each element MUST contain:
 - "market_evidence_md": a Markdown string following the template's section structure.
 
 Output ONLY the JSON array."""
+    if agent == "build_decisions":
+        return """
+
+---
+## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
+
+You decide go/no-go for ONE opportunity per call. You are given `opportunity`,
+`scoring_result`, `cost_gain_result`, `current_portfolio`, and
+`operator_capacity` in the user message; `scoring_model.yaml` and
+`cost_gain_model.yaml` are in the system prompt. Bias toward `kill` /
+`defer_1_week` — a wrong `build_now` costs a week of the operator's time.
+
+Emit a SINGLE JSON object inside one ```json fenced block, with EXACTLY:
+- "opportunity_id": the opportunity's "id".
+- "decision": one of "build_now", "defer_1_week", "kill".
+- "confidence_pct": integer 0-95 (never 100).
+- "model_used": "claude-opus-4-6".
+- "gates_checked": object — for each scoring_model build_gates.required_gates
+  dimension, its score and whether it meets the floor; plus total vs
+  thresholds.min_total_to_build and the recommended_stage.
+- "reasoning_summary": 2-4 sentences.
+- "why_now_memo": present ONLY if decision=="build_now"; <=120 words; covers the
+  pain in one line, strongest evidence, cheapest path to first paid customer,
+  biggest risk, why now.
+- "proposed_slug": kebab-case <=32 chars (required if build_now).
+- "estimated_first_signal_days": integer.
+- "suggested_first_outreach_channel": short string.
+
+HARD RULE (the runner ENFORCES this in code regardless of what you output):
+`build_now` is ONLY permitted when scoring_result.recommended_stage is "build"
+or "scale" AND scoring_result.total >= scoring_model.thresholds.min_total_to_build
+AND every build_gates.required_gates dimension meets its "<dim>_min" floor. If any
+of these fail, the maximum decision is "defer_1_week" (or "kill"). If
+scoring_result.recommended_stage == "drop", decide "kill". Do not propose
+build_now for an idea that fails the solo-viability gates.
+
+Output ONLY the JSON object."""
     if agent == "daily_summary":
         return """
 
@@ -491,6 +530,13 @@ def _stable_extra_blocks(agent: str) -> list[str]:
     if agent == "daily_summary":
         p = REPO_ROOT / "templates" / "daily_summary.md"
         return ["## daily_summary template\n```markdown\n" + (p.read_text() if p.exists() else "") + "\n```"]
+    if agent == "build_decisions":
+        return [
+            "## scoring_model.yaml (build_gates + thresholds are authoritative)\n```yaml\n"
+            + (REPO_ROOT / "config" / "scoring_model.yaml").read_text() + "\n```",
+            "## cost_gain_model.yaml\n```yaml\n"
+            + (REPO_ROOT / "config" / "cost_gain_model.yaml").read_text() + "\n```",
+        ]
     return []
 
 
@@ -520,6 +566,39 @@ def build_user_messages(agent: str, frontmatter: dict, fixture_path: Path | None
             _section("existing_opportunity_ids", f"```json\n{json.dumps(_existing_opportunity_ids())}\n```"),
         ])
         return [um], tags
+
+    if agent == "build_decisions":
+        opp_dir = REPO_ROOT / "opportunities"
+        portfolio = _active_builds_portfolio()
+        active_builds = sum(1 for p in portfolio
+                            if p.get("stage") in ("building", "launched", "scaling"))
+        decisions_today = _build_decisions_made_today()
+        remaining = max(0, BUILD_DECISIONS_DAILY_CAP - decisions_today)
+        capacity = {"new_builds_per_week_max": 1, "active_builds_max": ACTIVE_BUILDS_MAX,
+                    "active_builds_now": active_builds}
+        msgs: list[str] = []
+        for cf in sorted(opp_dir.glob("*.cost_gain.json")):
+            if len(msgs) >= remaining:
+                break
+            base = cf.name[: -len(".cost_gain.json")]
+            if (opp_dir / f"{base}.build_decision.json").exists():
+                continue
+            try:
+                opp = json.loads((opp_dir / f"{base}.opportunity.json").read_text())
+                scoring = json.loads((opp_dir / f"{base}.scoring.json").read_text())
+                cg = json.loads(cf.read_text())
+            except Exception:
+                continue
+            msgs.append("\n\n".join([
+                _section("date_iso_idt", _idt_date()),
+                _section("opportunity", f"```json\n{json.dumps(opp, indent=2)}\n```"),
+                _section("scoring_result", f"```json\n{json.dumps(scoring, indent=2)}\n```"),
+                _section("cost_gain_result", f"```json\n{json.dumps(cg, indent=2)}\n```"),
+                _section("current_portfolio", f"```json\n{json.dumps(portfolio, indent=2)}\n```"),
+                _section("operator_capacity", f"```json\n{json.dumps(capacity, indent=2)}\n```"),
+            ]))
+        return msgs, [f"pending:{len(msgs)}", f"decisions_today:{decisions_today}",
+                      f"active_builds:{active_builds}"]
 
     if agent == "opportunity_scoring":
         opp_dir = REPO_ROOT / "opportunities"
@@ -890,6 +969,167 @@ def _process_cost_gain(errors: list[dict]) -> list[str]:
     return written
 
 
+# ---------------------------------------------------------------------------
+# build_decisions (P4.2) — LLM proposes, code ENFORCES the scoring-v2 build gate
+# ---------------------------------------------------------------------------
+
+def _service_stage(slug_dir: Path) -> str:
+    """Read the live stage from services/<slug>/status.md; a scaffolded service
+    with no explicit stage counts as 'building'."""
+    import re
+    sm = slug_dir / "status.md"
+    if sm.exists():
+        m = re.search(r"Current stage:\s*`?([A-Za-z]+)`?", sm.read_text(encoding="utf-8"))
+        if m and m.group(1).lower() in ("validating", "building", "launched", "scaling", "killed", "paused"):
+            return m.group(1).lower()
+    return "building"
+
+
+def _active_builds_portfolio() -> list[dict]:
+    out: list[dict] = []
+    sd = REPO_ROOT / "services"
+    if sd.exists():
+        for d in sorted(sd.iterdir()):
+            if d.is_dir() and ((d / "_scaffold.json").exists() or (d / "service.yaml").exists()):
+                out.append({"slug": d.name, "stage": _service_stage(d)})
+    return out
+
+
+def _build_decisions_made_today() -> int:
+    opp = REPO_ROOT / "opportunities"
+    today = _idt_date()
+    n = 0
+    for bf in opp.glob("*.build_decision.json"):
+        try:
+            if (json.loads(bf.read_text()).get("decided_at") or "")[:10] == today:
+                n += 1
+        except Exception:
+            pass
+    return n
+
+
+def _scoring_gate_pass(scoring: dict, model_cfg: dict) -> tuple[bool, list[str]]:
+    """The solo-viability bar: recommended_stage in {build,scale} AND total >=
+    min_total_to_build AND every required_gates dimension >= its floor."""
+    th = model_cfg.get("thresholds", {}) or {}
+    bg = model_cfg.get("build_gates", {}) or {}
+    fails: list[str] = []
+    stage = scoring.get("recommended_stage")
+    if stage not in ("build", "scale"):
+        fails.append(f"recommended_stage={stage}")
+    try:
+        total = float(scoring.get("total", 0))
+    except (TypeError, ValueError):
+        total = 0.0
+    min_build = float(th.get("min_total_to_build", 6.5))
+    if total < min_build:
+        fails.append(f"total {total} < min_total_to_build {min_build}")
+    pd = scoring.get("per_dimension", {}) or {}
+    for dim in (bg.get("required_gates") or []):
+        floor = bg.get(f"{dim}_min")
+        if floor is None:
+            continue
+        v = pd.get(dim)
+        if not isinstance(v, (int, float)) or v < floor:
+            fails.append(f"{dim}={v} < {floor}")
+    return (len(fails) == 0, fails)
+
+
+def _process_build_decisions(text: str, errors: list[dict],
+                             approval_requests: list[str]) -> list[str]:
+    payload = _parse_json_payload(text)
+    if isinstance(payload, dict):
+        payload = [payload]
+    if not isinstance(payload, list):
+        errors.append({"code": "BAD_OUTPUT", "message": "build_decisions output was not JSON"})
+        return []
+    opp_dir = REPO_ROOT / "opportunities"
+    model_cfg = _load_yaml("config/scoring_model.yaml")
+    portfolio = _active_builds_portfolio()
+    active_builds = sum(1 for p in portfolio
+                        if p.get("stage") in ("building", "launched", "scaling"))
+    written: list[str] = []
+    for d in payload:
+        if not isinstance(d, dict) or not d.get("opportunity_id"):
+            continue
+        oid = d["opportunity_id"]
+        sf = opp_dir / f"{oid}.scoring.json"
+        if not sf.exists():
+            errors.append({"code": "MISSING_SCORING", "message": oid})
+            continue
+        try:
+            scoring = json.loads(sf.read_text())
+        except Exception:
+            errors.append({"code": "BAD_SCORING", "message": oid})
+            continue
+
+        decision = d.get("decision", "defer_1_week")
+        if decision not in ("build_now", "defer_1_week", "kill"):
+            decision = "defer_1_week"
+        gate_pass, fails = _scoring_gate_pass(scoring, model_cfg)
+        enforced: list[str] = []
+
+        # CODE-ENFORCED gate (never trust the LLM to self-limit).
+        if scoring.get("recommended_stage") == "drop" and decision != "kill":
+            decision = "kill"
+            enforced.append("scoring recommended_stage=drop -> kill")
+        if decision == "build_now" and not gate_pass:
+            decision = "defer_1_week"
+            enforced.append("build_gates unmet: " + "; ".join(fails))
+        if decision == "build_now" and active_builds >= ACTIVE_BUILDS_MAX:
+            decision = "defer_1_week"
+            enforced.append(f"portfolio full ({active_builds}/{ACTIVE_BUILDS_MAX} active builds)")
+
+        try:
+            conf = int(d.get("confidence_pct", 50))
+        except (TypeError, ValueError):
+            conf = 50
+        conf = max(0, min(95, conf))
+
+        record = {
+            "opportunity_id": oid,
+            "decided_at": _idt_now().isoformat(timespec="seconds"),
+            "decision": decision,
+            "confidence_pct": conf,
+            "model_used": d.get("model_used", "claude-opus-4-6"),
+            "gates_checked": d.get("gates_checked", {}),
+            "gate_pass": gate_pass,
+            "gate_failures": fails,
+            "enforcement_applied": enforced,
+            "reasoning_summary": d.get("reasoning_summary", ""),
+            "proposed_slug": d.get("proposed_slug"),
+            "estimated_first_signal_days": d.get("estimated_first_signal_days"),
+            "suggested_first_outreach_channel": d.get("suggested_first_outreach_channel"),
+        }
+        if decision == "build_now":
+            record["why_now_memo"] = d.get("why_now_memo", "")
+            record["approval_required"] = True
+
+        rel = f"opportunities/{oid}.build_decision.json"
+        (opp_dir / f"{oid}.build_decision.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
+        written.append(rel)
+
+        # build_now is a resource commitment — queue for operator approval BEFORE
+        # any service folder is created. service_builder only runs post-approval.
+        if decision == "build_now":
+            slug = (record.get("proposed_slug") or oid).strip().lower()
+            action = {
+                "action_type": "promote_to_build",
+                "summary": f"Promote opportunity {oid} to build as service '{slug}' (confidence {conf}%)",
+                "payload": {
+                    "opportunity_id": oid,
+                    "proposed_slug": slug,
+                    "why_now_memo": record.get("why_now_memo", ""),
+                    "confidence_pct": conf,
+                },
+                "cost_estimate_usd": 0.0,
+                "risk": "high",
+                "expires_at": (_idt_now() + timedelta(hours=72)).isoformat(),
+            }
+            approval_requests.append(write_approval_request(action, "build_decisions"))
+    return written
+
+
 def _process_pain_validation(text: str, errors: list[dict]) -> list[str]:
     payload = _parse_json_payload(text)
     if isinstance(payload, dict):
@@ -935,6 +1175,8 @@ def _process(agent: str, text: str, model: str, errors: list[dict],
         return _process_opportunity_scoring(text, model, errors)
     if agent == "pain_validation":
         return _process_pain_validation(text, errors)
+    if agent == "build_decisions":
+        return _process_build_decisions(text, errors, approval_requests)
     if agent == "daily_summary":
         return _process_daily_summary(text, errors)
 

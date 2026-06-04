@@ -38,7 +38,7 @@ DAILY_SEQUENCE = [
 ]
 
 # Agents not yet implemented — logged as NOT_IMPLEMENTED, no API call.
-STUB_AGENTS = {"build_decisions"}
+STUB_AGENTS: set[str] = set()
 
 OPP_DIR = REPO_ROOT / "opportunities"
 
@@ -92,11 +92,20 @@ def _cost_gain_has_work() -> bool:
     return False
 
 
+def _build_decisions_has_work() -> bool:
+    for cf in OPP_DIR.glob("*.cost_gain.json"):
+        base = cf.name[: -len(".cost_gain.json")]
+        if not (OPP_DIR / f"{base}.build_decision.json").exists():
+            return True
+    return False
+
+
 PRECONDITIONS = {
     "market_radar": lambda: True,
     "pain_validation": _pain_validation_has_work,
     "opportunity_scoring": _opportunity_scoring_has_work,
     "cost_gain": _cost_gain_has_work,
+    "build_decisions": _build_decisions_has_work,
     "daily_summary": lambda: True,
 }
 

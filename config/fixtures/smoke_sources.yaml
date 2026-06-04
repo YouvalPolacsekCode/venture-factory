@@ -1,0 +1,15 @@
+schema_version: 1
+
+# Single constrained source for the LIVE smoke test (scripts/smoke_test.py sets
+# MARKET_RADAR_SOURCES to this file). HN Algolia comment search for explicit
+# unmet-need language — reliable pain signal, no auth, free.
+sources:
+  - id: hn_smoke
+    type: hn
+    description: "HN comments expressing an unmet need — live smoke source"
+    url_template: "https://hn.algolia.com/api/v1/search?query=I%20wish%20there%20was%20a%20tool&tags=comment&hitsPerPage=20"
+    enabled: true
+    rate_limit_rpm: 1
+
+seen_ledger: "opportunities/_seen.jsonl"
+candidate_output_dir: "opportunities"

@@ -1,22 +1,32 @@
 #!/usr/bin/env python3
 """
-Smoke test for the Venture Factory agent runner.
+LIVE end-to-end smoke test for the Venture Factory (Phase 1).
 
-Runs market_radar in dry-run mode against the fixture, then asserts:
-1. At least one opportunities/<ulid>.json was written.
-2. That file validates against templates/opportunity.schema.json.
-3. At least one log line exists in logs/runs/<date>/market_radar.jsonl.
+Runs the discovery+scoring core against ONE constrained HN source and the real
+Anthropic API:
 
-Exit 0 on pass, non-zero on any failure.
+    market_radar -> opportunity_scoring -> daily_summary
+
+Asserts:
+1. >=1 opportunities/<id>.opportunity.json written and schema-valid.
+2. >=1 opportunities/<id>.scoring.json written.
+3. >=1 reports/daily/<today>.md written.
+4. This run's spend (delta in spend_ledger) < $0.20.
+
+Exit 0 on pass, non-zero on any failure. Requires ANTHROPIC_API_KEY in .env.
 """
 import json
+import os
+import sqlite3
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent.resolve()
-FIXTURE = "config/fixtures/market_radar_fixture.json"
+DB_PATH = REPO_ROOT / "factory" / "state.db"
+SMOKE_SOURCES = "config/fixtures/smoke_sources.yaml"
+SPEND_BUDGET_USD = 0.20
 
 
 def _idt_date() -> str:
@@ -28,79 +38,91 @@ def _fail(msg: str) -> None:
     sys.exit(1)
 
 
-def main() -> int:
-    print("=== Venture Factory smoke test ===")
+def _today_spend() -> float:
+    if not DB_PATH.exists():
+        return 0.0
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        row = conn.execute(
+            "SELECT COALESCE(SUM(cost_usd), 0.0) FROM spend_ledger WHERE date=?",
+            (_idt_date(),),
+        ).fetchone()
+        return float(row[0])
+    finally:
+        conn.close()
 
-    # 1. Invoke the runner
-    cmd = [
-        sys.executable,
-        str(REPO_ROOT / "scripts" / "run_agent.py"),
-        "--agent", "market_radar",
-        "--input", FIXTURE,
-        "--dry-run",
-    ]
-    print(f"Running: {' '.join(cmd)}")
-    result = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True)
+
+def _run(agent: str, env: dict) -> None:
+    print(f"--- running {agent} (live) ---")
+    result = subprocess.run(
+        [sys.executable, str(REPO_ROOT / "scripts" / "run_agent.py"), "--agent", agent],
+        cwd=REPO_ROOT, env=env, capture_output=True, text=True,
+    )
     if result.stdout:
         print(result.stdout, end="")
     if result.stderr:
         print(result.stderr, end="", file=sys.stderr)
-
     if result.returncode != 0:
-        _fail(f"run_agent.py exited with code {result.returncode}")
+        _fail(f"{agent} exited with code {result.returncode}")
 
-    # 2. Assert opportunity files
+
+def main() -> int:
+    print("=== Venture Factory LIVE smoke test ===")
+
+    if not os.environ.get("ANTHROPIC_API_KEY") and not (REPO_ROOT / ".env").exists():
+        _fail("ANTHROPIC_API_KEY required; see .env.example")
+
+    env = os.environ.copy()
+    env["MARKET_RADAR_SOURCES"] = SMOKE_SOURCES
+
+    spend_before = _today_spend()
+
+    _run("market_radar", env)
+    _run("opportunity_scoring", env)
+    _run("daily_summary", env)
+
+    # 1. Opportunity files + schema validation.
     opp_dir = REPO_ROOT / "opportunities"
-    opportunities = sorted(opp_dir.glob("*.json")) if opp_dir.exists() else []
+    opportunities = sorted(opp_dir.glob("*.opportunity.json"))
     if not opportunities:
-        _fail("No *.json files found in opportunities/")
-
-    # 3. Validate against schema
-    schema_path = REPO_ROOT / "templates" / "opportunity.schema.json"
-    if not schema_path.exists():
-        _fail(f"Schema not found: {schema_path}")
+        _fail("No *.opportunity.json files written by market_radar")
 
     try:
         import jsonschema
     except ImportError:
         _fail("jsonschema not installed — run `uv sync` first")
-
-    schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    schema = json.loads((REPO_ROOT / "templates" / "opportunity.schema.json").read_text())
     for opp_file in opportunities:
         try:
-            opp = json.loads(opp_file.read_text(encoding="utf-8"))
+            opp = json.loads(opp_file.read_text())
         except json.JSONDecodeError as exc:
             _fail(f"{opp_file.name} is not valid JSON: {exc}")
-
         try:
             jsonschema.validate(instance=opp, schema=schema)
         except jsonschema.ValidationError as exc:
             _fail(f"{opp_file.name} failed schema validation: {exc.message}")
+    print(f"  OK: {len(opportunities)} opportunity file(s) schema-valid")
 
-        print(f"  OK: {opp_file.name} passes schema validation")
+    # 2. Scoring files.
+    scoring = sorted(opp_dir.glob("*.scoring.json"))
+    if not scoring:
+        _fail("No *.scoring.json files written by opportunity_scoring")
+    print(f"  OK: {len(scoring)} scoring file(s)")
 
-    # 4. Assert log line
-    log_file = REPO_ROOT / "logs" / "runs" / _idt_date() / "market_radar.jsonl"
-    if not log_file.exists():
-        _fail(f"Log file not found: {log_file.relative_to(REPO_ROOT)}")
+    # 3. Daily report.
+    reports = list((REPO_ROOT / "reports" / "daily").glob(f"{_idt_date()}*.md"))
+    if not reports:
+        _fail(f"No reports/daily/{_idt_date()}*.md written by daily_summary")
+    print(f"  OK: {len(reports)} daily report(s)")
 
-    lines = [ln for ln in log_file.read_text(encoding="utf-8").splitlines() if ln.strip()]
-    if not lines:
-        _fail("Log file exists but contains no lines")
+    # 4. Spend budget (delta for this run).
+    spend_delta = _today_spend() - spend_before
+    if spend_delta >= SPEND_BUDGET_USD:
+        _fail(f"This run spent ${spend_delta:.4f} >= ${SPEND_BUDGET_USD} budget")
+    print(f"  OK: run spend ${spend_delta:.4f} < ${SPEND_BUDGET_USD}")
 
-    # Verify the log line is valid JSON with required fields
-    try:
-        log_entry = json.loads(lines[-1])
-    except json.JSONDecodeError as exc:
-        _fail(f"Last log line is not valid JSON: {exc}")
-
-    for field in ("schema_version", "event_id", "agent", "status"):
-        if field not in log_entry:
-            _fail(f"Log entry missing required field '{field}'")
-
-    print(f"  OK: {len(lines)} log line(s) in {log_file.relative_to(REPO_ROOT)}")
-    print(f"\nPASS: {len(opportunities)} opportunity file(s) written and validated, "
-          f"{len(lines)} log line(s) found.")
+    print(f"\nPASS: {len(opportunities)} opportunity, {len(scoring)} scoring, "
+          f"{len(reports)} report; spend ${spend_delta:.4f}.")
     return 0
 
 

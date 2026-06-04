@@ -5,13 +5,22 @@ Venture Factory agent runner.
 Usage:
   run_agent.py --agent <slug> [--input <path>] [--dry-run]
 
-Loads factory/agents/<slug>/AGENT.md as the system prompt, calls the
-Anthropic API (model per config/agent_models.yaml), and processes the
-output. Four agents have structured output handlers (market_radar,
-opportunity_scoring, pain_validation, daily_summary); every other agent
-uses the generic action/write-block protocol from Phase 0.
+Loads factory/agents/<slug>/AGENT.md as the system prompt, calls the Anthropic
+API (model per config/agent_models.yaml), and processes the output.
 
---dry-run is opt-in; default behavior is a real Anthropic API call.
+Phase 1.5 cost levers baked in here:
+- Prompt caching: the stable system prompt (AGENT.md body + protocol + runtime
+  contract + injected schema/config/template) is sent as cache_control blocks;
+  variable per-call inputs stay in the (uncached) user message.
+- Batching: opportunity_scoring / pain_validation process work in batches
+  (config: batch_size) so the cached system prompt amortizes across calls.
+- Skip-when-no-work: should_run() short-circuits agents with nothing to do
+  (status=no_op, zero spend, no API call).
+- spend_ledger records standard vs cache-write vs cache-read input tokens.
+
+Four agents have structured output handlers (market_radar, opportunity_scoring,
+pain_validation, daily_summary); every other agent uses the generic
+action/write-block protocol from Phase 0. --dry-run is opt-in.
 """
 import argparse
 import glob as glob_module
@@ -32,14 +41,9 @@ sys.path.insert(0, str(REPO_ROOT))  # so `factory.sources` is importable
 
 load_dotenv(REPO_ROOT / ".env")
 
-# Agents whose I/O the runner handles directly (structured), bypassing the
-# generic action/write-block protocol.
 STRUCTURED_AGENTS = {"market_radar", "opportunity_scoring", "pain_validation", "daily_summary"}
 
-# Bound market_radar input size to keep per-run cost predictable. Real
-# source-level prefiltering arrives in Phase 1.5.
 MAX_PREFETCH_ITEMS = 15
-PREFETCH_BODY_TRUNC = 1500
 
 # Per-million-token prices (USD). // update from anthropic pricing page
 MODEL_PRICES = {
@@ -49,6 +53,8 @@ MODEL_PRICES = {
     "claude-haiku-4-5-20251001": (1.0, 5.0),
 }
 _DEFAULT_PRICE = (3.0, 15.0)
+_CACHE_WRITE_MULT = 1.25
+_CACHE_READ_MULT = 0.10
 
 _PROTOCOL = """
 
@@ -132,6 +138,23 @@ def model_for(agent: str) -> tuple[str, int]:
     return entry.get("model", default_model), int(entry.get("max_tokens", default_max))
 
 
+def batch_for(agent: str) -> int:
+    """Batch size for batched agents. SMOKE_FORCE_BATCH_SIZE overrides (used by
+    the smoke test to force multiple batches and exercise the cache)."""
+    env = os.environ.get("SMOKE_FORCE_BATCH_SIZE")
+    if env:
+        try:
+            return max(1, int(env))
+        except ValueError:
+            pass
+    cfg = _load_yaml("config/agent_models.yaml")
+    entry = (cfg.get("agents") or {}).get(agent, {})
+    bs = entry.get("batch_size")
+    if bs:
+        return int(bs)
+    return {"opportunity_scoring": 15, "pain_validation": 10}.get(agent, 1)
+
+
 # ---------------------------------------------------------------------------
 # Small utilities
 # ---------------------------------------------------------------------------
@@ -160,9 +183,12 @@ def validate_repo_path(p: Path) -> bool:
         return False
 
 
+def _chunk(items: list, size: int) -> list[list]:
+    size = max(1, size)
+    return [items[i:i + size] for i in range(0, len(items), size)]
+
+
 def _parse_json_payload(text: str):
-    """Extract a JSON value from model output: prefer a ```json fence, else the
-    first balanced [..]/{..}. Returns the parsed object or None."""
     candidates: list[str] = []
     m = re.search(r"```json\s*\n(.*?)\n```", text, re.DOTALL)
     if m:
@@ -190,13 +216,17 @@ def _opportunity_schema() -> dict:
 
 def _existing_opportunity_ids() -> list[str]:
     ids = []
-    opp_dir = REPO_ROOT / "opportunities"
-    for f in sorted(opp_dir.glob("*.opportunity.json")):
+    for f in sorted((REPO_ROOT / "opportunities").glob("*.opportunity.json")):
         try:
             ids.append(json.loads(f.read_text()).get("id"))
         except Exception:
             continue
     return [i for i in ids if i]
+
+
+def _scoring_threshold() -> float:
+    sm = _load_yaml("config/scoring_model.yaml")
+    return float((sm.get("thresholds", {}) or {}).get("min_total_to_validate", 5.5))
 
 
 def emit_log(entry: dict, agent: str) -> None:
@@ -228,12 +258,60 @@ def write_approval_request(action: dict, agent: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Skip-when-no-work
+# ---------------------------------------------------------------------------
+
+def should_run(agent: str) -> tuple[bool, str]:
+    opp = REPO_ROOT / "opportunities"
+
+    if agent == "opportunity_scoring":
+        for f in opp.glob("*.opportunity.json"):
+            base = f.name[: -len(".opportunity.json")]
+            if not (opp / f"{base}.scoring.json").exists():
+                return True, ""
+        return False, "no opportunities awaiting scoring"
+
+    if agent == "pain_validation":
+        threshold = _scoring_threshold()
+        for sf in opp.glob("*.scoring.json"):
+            base = sf.name[: -len(".scoring.json")]
+            if (opp / f"{base}.verdict.json").exists():
+                continue
+            try:
+                total = float(json.loads(sf.read_text()).get("total", 0))
+            except Exception:
+                continue
+            if total >= threshold and (opp / f"{base}.opportunity.json").exists():
+                return True, ""
+        return False, "no scored opportunities awaiting validation"
+
+    if agent == "cost_gain":
+        for vf in opp.glob("*.verdict.json"):
+            base = vf.name[: -len(".verdict.json")]
+            try:
+                if json.loads(vf.read_text()).get("status") != "validated":
+                    continue
+            except Exception:
+                continue
+            if not (opp / f"{base}.cost_gain.json").exists():
+                return True, ""
+        return False, "no validated opportunities awaiting cost/gain"
+
+    if agent == "build_decisions":
+        for cf in opp.glob("*.cost_gain.json"):
+            base = cf.name[: -len(".cost_gain.json")]
+            if not (opp / f"{base}.decision.json").exists():
+                return True, ""
+        return False, "no cost/gain'd opportunities awaiting decision"
+
+    return True, ""
+
+
+# ---------------------------------------------------------------------------
 # Source prefetch (market_radar)
 # ---------------------------------------------------------------------------
 
 def _load_sources() -> list[dict]:
-    """Source configs for market_radar. Honors MARKET_RADAR_SOURCES override
-    (used by the smoke test to constrain to a single source)."""
     rel = os.environ.get("MARKET_RADAR_SOURCES", "config/market_radar_sources.yaml")
     cfg = _load_yaml(rel)
     return cfg.get("sources", []) if isinstance(cfg, dict) else []
@@ -256,27 +334,32 @@ def _prefetch_items_from_fixture(fixture_path: Path) -> list[dict]:
     return items
 
 
-def _prefetch_market_radar(fixture_path: Path | None) -> list[dict]:
+def _prefetch_market_radar(fixture_path: Path | None) -> tuple[list[dict], list[str]]:
+    """Returns (items, log_tags). log_tags carry per-source fetched/dropped/kept."""
+    tags: list[str] = []
     if fixture_path and fixture_path.exists():
         items = _prefetch_items_from_fixture(fixture_path)
+        tags.append(f"fixture:{len(items)}")
     else:
         from factory import sources as _sources
         items = []
         for src in _load_sources():
             if not src.get("enabled", False):
                 continue
+            stats: dict = {}
             try:
-                items.extend(_sources.fetch(src))
+                items.extend(_sources.fetch(src, stats))
             except NotImplementedError as exc:
                 print(f"WARN: source {src.get('id')} not implemented: {exc}", file=sys.stderr)
+                continue
             except Exception as exc:
                 print(f"WARN: source {src.get('id')} fetch failed: {exc}", file=sys.stderr)
-    # Bound size for predictable cost.
+                continue
+            sid = src.get("id", src.get("type", "src"))
+            tags.append(f"{sid}:fetched={stats.get('fetched', 0)},"
+                        f"dropped={stats.get('dropped_by_rule', 0)},kept={stats.get('kept', 0)}")
     items = items[:MAX_PREFETCH_ITEMS]
-    for it in items:
-        if isinstance(it.get("body_text"), str):
-            it["body_text"] = it["body_text"][:PREFETCH_BODY_TRUNC]
-    return items
+    return items, tags
 
 
 # ---------------------------------------------------------------------------
@@ -312,11 +395,12 @@ Emit `[]` if there is no real, concrete, repeated pain. Output ONLY the JSON arr
 ---
 ## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
 
-You are given `opportunities` (array) and `scoring_model_yaml`. Score EVERY opportunity.
-Emit a SINGLE JSON array inside one ```json fenced block. Each element MUST contain:
+You are given `opportunities` (array) and the scoring model (in the system prompt).
+Score EVERY opportunity. Emit a SINGLE JSON array inside one ```json fenced block.
+Each element MUST contain:
 
 - "opportunity_id": the opportunity's "id".
-- "per_dimension": object mapping each dimension name in scoring_model_yaml to an integer 0-10.
+- "per_dimension": object mapping each dimension name in the scoring model to an integer 0-10.
 - "weighted_total": number (sum of dimension*weight, 0-10 scale), 1 decimal.
 - "penalties_applied": array of {"name","deduction","reason"} (may be []).
 - "total": number = weighted_total minus sum of deductions (0-10 scale), 1 decimal.
@@ -331,9 +415,9 @@ Output ONLY the JSON array."""
 ---
 ## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
 
-You are given `candidates` (array of {opportunity, scoring}) and `market_evidence_template`.
-For EACH candidate emit one object. Emit a SINGLE JSON array inside one ```json fenced block.
-Each element MUST contain:
+You are given `candidates` (array of {opportunity, scoring}); the market_evidence
+template is in the system prompt. For EACH candidate emit one object. Emit a SINGLE
+JSON array inside one ```json fenced block. Each element MUST contain:
 
 - "opportunity_id": the opportunity's "id".
 - "status": "validated" or "rejected".
@@ -350,33 +434,62 @@ Output ONLY the JSON array."""
 ---
 ## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
 
-You are given today's aggregated factory state and `daily_summary_template`. Produce the
-report as Markdown ONLY (no JSON, no fences), following the template's headings exactly.
-The runner writes your entire output to reports/daily/<date>.md. Tag any illustrative
-values that leak from the template as "EXAMPLE ONLY"; real numbers from today are untagged."""
+You are given today's aggregated factory state (in the user message); the report
+template is in the system prompt. Produce the report as Markdown ONLY (no JSON, no
+fences), following the template's headings exactly. The runner writes your entire
+output to reports/daily/<date>.md. Tag illustrative values that leak from the
+template as "EXAMPLE ONLY"; real numbers from today are untagged."""
     return ""
 
 
 # ---------------------------------------------------------------------------
-# Per-agent input construction
+# System prompt assembly (cacheable)
+# ---------------------------------------------------------------------------
+
+def _stable_extra_blocks(agent: str) -> list[str]:
+    """Stable, cacheable content injected into the system prompt per agent
+    (schema / config / template that does not vary call-to-call)."""
+    if agent == "market_radar":
+        return ["## Opportunity JSON Schema (authoritative)\n```json\n"
+                + json.dumps(_opportunity_schema(), indent=2) + "\n```"]
+    if agent == "opportunity_scoring":
+        return ["## scoring_model.yaml\n```yaml\n"
+                + (REPO_ROOT / "config" / "scoring_model.yaml").read_text() + "\n```"]
+    if agent == "pain_validation":
+        p = REPO_ROOT / "templates" / "service_template" / "market_evidence.md"
+        return ["## market_evidence template\n```markdown\n" + (p.read_text() if p.exists() else "") + "\n```"]
+    if agent == "daily_summary":
+        p = REPO_ROOT / "templates" / "daily_summary.md"
+        return ["## daily_summary template\n```markdown\n" + (p.read_text() if p.exists() else "") + "\n```"]
+    return []
+
+
+def build_system_blocks(agent: str, body: str) -> list[dict]:
+    """System as a list of blocks. cache_control on the last block caches the
+    whole stable prefix (AGENT.md body + protocol + contract + extras)."""
+    texts = [body + _PROTOCOL + _runtime_contract(agent)] + _stable_extra_blocks(agent)
+    blocks = [{"type": "text", "text": t} for t in texts]
+    blocks[-1]["cache_control"] = {"type": "ephemeral"}
+    return blocks
+
+
+# ---------------------------------------------------------------------------
+# Per-agent user messages (variable, uncached). Returns (messages, log_tags).
 # ---------------------------------------------------------------------------
 
 def _section(title: str, body: str) -> str:
     return f"### {title}\n{body}"
 
 
-def build_inputs(agent: str, frontmatter: dict, fixture_path: Path | None) -> str:
+def build_user_messages(agent: str, frontmatter: dict, fixture_path: Path | None) -> tuple[list[str], list[str]]:
     if agent == "market_radar":
-        items = _prefetch_market_radar(fixture_path)
-        parts = [
+        items, tags = _prefetch_market_radar(fixture_path)
+        um = "\n\n".join([
             _section("date_iso_idt", _idt_date()),
             _section("pre_fetched_items", f"```json\n{json.dumps(items, indent=2)}\n```"),
-            _section("opportunity_schema",
-                     f"```json\n{json.dumps(_opportunity_schema(), indent=2)}\n```"),
-            _section("existing_opportunity_ids",
-                     f"```json\n{json.dumps(_existing_opportunity_ids())}\n```"),
-        ]
-        return "\n\n".join(parts)
+            _section("existing_opportunity_ids", f"```json\n{json.dumps(_existing_opportunity_ids())}\n```"),
+        ])
+        return [um], tags
 
     if agent == "opportunity_scoring":
         opp_dir = REPO_ROOT / "opportunities"
@@ -390,18 +503,17 @@ def build_inputs(agent: str, frontmatter: dict, fixture_path: Path | None) -> st
             except Exception:
                 continue
         unscored = unscored[:25]
-        parts = [
-            _section("date_iso_idt", _idt_date()),
-            _section("opportunities", f"```json\n{json.dumps(unscored, indent=2)}\n```"),
-            _section("scoring_model_yaml",
-                     f"```yaml\n{(REPO_ROOT / 'config' / 'scoring_model.yaml').read_text()}\n```"),
-        ]
-        return "\n\n".join(parts)
+        msgs = []
+        for chunk in _chunk(unscored, batch_for(agent)):
+            msgs.append("\n\n".join([
+                _section("date_iso_idt", _idt_date()),
+                _section("opportunities", f"```json\n{json.dumps(chunk, indent=2)}\n```"),
+            ]))
+        return msgs, [f"batches:{len(msgs)}"]
 
     if agent == "pain_validation":
         opp_dir = REPO_ROOT / "opportunities"
-        sm = _load_yaml("config/scoring_model.yaml")
-        threshold = (sm.get("thresholds", {}) or {}).get("min_total_to_validate", 5.5)
+        threshold = _scoring_threshold()
         candidates = []
         for sf in sorted(opp_dir.glob("*.scoring.json")):
             base = sf.name[: -len(".scoring.json")]
@@ -411,31 +523,24 @@ def build_inputs(agent: str, frontmatter: dict, fixture_path: Path | None) -> st
                 scoring = json.loads(sf.read_text())
             except Exception:
                 continue
-            if float(scoring.get("total", 0)) < float(threshold):
+            if float(scoring.get("total", 0)) < threshold:
                 continue
             opp_file = opp_dir / f"{base}.opportunity.json"
             if not opp_file.exists():
                 continue
             try:
-                opp = json.loads(opp_file.read_text())
+                candidates.append({"opportunity": json.loads(opp_file.read_text()), "scoring": scoring})
             except Exception:
                 continue
-            candidates.append({"opportunity": opp, "scoring": scoring})
-        candidates = candidates[:10]
-        tmpl_path = REPO_ROOT / "templates" / "service_template" / "market_evidence.md"
-        tmpl = tmpl_path.read_text() if tmpl_path.exists() else ""
-        parts = [
-            _section("date_iso_idt", _idt_date()),
-            _section("candidates", f"```json\n{json.dumps(candidates, indent=2)}\n```"),
-            _section("market_evidence_template", f"```markdown\n{tmpl}\n```"),
-        ]
-        return "\n\n".join(parts)
+        msgs = []
+        for chunk in _chunk(candidates, batch_for(agent)):
+            msgs.append(_section("candidates", f"```json\n{json.dumps(chunk, indent=2)}\n```"))
+        return msgs, [f"batches:{len(msgs)}"]
 
     if agent == "daily_summary":
-        return _build_daily_summary_inputs()
+        return [_build_daily_summary_inputs()], []
 
-    # Generic: inject declared inputs / fixture (Phase-0 behavior).
-    return _build_generic_inputs(frontmatter, fixture_path)
+    return [_build_generic_inputs(frontmatter, fixture_path)], []
 
 
 def _build_daily_summary_inputs() -> str:
@@ -468,8 +573,6 @@ def _build_daily_summary_inputs() -> str:
         except Exception:
             st = "unparseable"
         opp_counts[st] = opp_counts.get(st, 0) + 1
-    scoring_count = len(list(opp_dir.glob("*.scoring.json")))
-    verdict_count = len(list(opp_dir.glob("*.verdict.json")))
 
     now = _idt_now()
     approvals = []
@@ -482,80 +585,66 @@ def _build_daily_summary_inputs() -> str:
                 obj = json.loads(qf.read_text())
             except Exception:
                 continue
-            created = obj.get("created_at", "")
             age_h = None
             try:
-                age_h = round((now - datetime.fromisoformat(created)).total_seconds() / 3600, 1)
+                age_h = round((now - datetime.fromisoformat(obj.get("created_at", ""))).total_seconds() / 3600, 1)
             except Exception:
                 pass
-            approvals.append({
-                "ulid": obj.get("ulid"), "action_type": obj.get("action_type"),
-                "summary": obj.get("summary", "")[:80], "age_hours": age_h,
-                "expires_at": obj.get("expires_at"),
-            })
+            approvals.append({"ulid": obj.get("ulid"), "action_type": obj.get("action_type"),
+                              "summary": obj.get("summary", "")[:80], "age_hours": age_h,
+                              "expires_at": obj.get("expires_at")})
 
     services = []
     svc_dir = REPO_ROOT / "services"
     if svc_dir.exists():
         for status_md in svc_dir.glob("*/status.md"):
-            services.append({"slug": status_md.parent.name,
-                             "status_excerpt": status_md.read_text()[:400]})
-
-    tmpl_path = REPO_ROOT / "templates" / "daily_summary.md"
-    tmpl = tmpl_path.read_text() if tmpl_path.exists() else ""
+            services.append({"slug": status_md.parent.name, "status_excerpt": status_md.read_text()[:400]})
 
     aggregate = {
         "agent_activity": agent_activity,
         "opportunity_counts_by_status": opp_counts,
-        "scoring_files": scoring_count,
-        "verdict_files": verdict_count,
+        "scoring_files": len(list(opp_dir.glob("*.scoring.json"))),
+        "verdict_files": len(list(opp_dir.glob("*.verdict.json"))),
         "approval_queue": approvals,
         "services": services,
     }
     return "\n\n".join([
         _section("date_iso_idt", today),
         _section("aggregated_state", f"```json\n{json.dumps(aggregate, indent=2)}\n```"),
-        _section("daily_summary_template", f"```markdown\n{tmpl}\n```"),
     ])
 
 
 def _build_generic_inputs(frontmatter: dict, fixture_path: Path | None) -> str:
     parts: list[str] = []
     if fixture_path and fixture_path.exists():
-        content = fixture_path.read_text(encoding="utf-8")
-        parts.append(f"**Input file: {fixture_path.name}**\n```json\n{content}\n```")
+        parts.append(f"**Input file: {fixture_path.name}**\n```json\n{fixture_path.read_text()}\n```")
     else:
         for pattern in frontmatter.get("inputs", []):
             for match in glob_module.glob(str(REPO_ROOT / pattern)):
                 mp = Path(match)
                 if mp.is_file():
-                    rel = mp.relative_to(REPO_ROOT)
-                    body = mp.read_text(encoding="utf-8")[:4000]
-                    parts.append(f"**Input: {rel}**\n```\n{body}\n```")
+                    parts.append(f"**Input: {mp.relative_to(REPO_ROOT)}**\n```\n{mp.read_text()[:4000]}\n```")
     if not parts:
         parts.append("No input files found. Proceed based on your agent instructions.")
     return "\n\n".join(parts)
 
 
 # ---------------------------------------------------------------------------
-# Dry-run synthetic output (still supported for offline runs)
+# Dry-run synthetic output
 # ---------------------------------------------------------------------------
 
 def _dry_run_output(agent: str, fixture_path: Path | None) -> str:
     if agent == "market_radar":
-        items = _prefetch_market_radar(fixture_path)
-        first = items[0] if items else {"url": "https://example.com/dry-run", "title": "",
-                                        "body_text": "Dry-run signal."}
+        items, _ = _prefetch_market_radar(fixture_path)
+        first = items[0] if items else {"url": "https://example.com/dry-run", "body_text": "Dry-run signal."}
         opp = {
             "source": {"type": "hn", "url": first.get("url", "https://example.com/dry-run"),
                        "snippet": (first.get("body_text") or "Dry-run signal.")[:2000]},
             "problem_statement": ("Freelancers spend hours each month reconciling invoices "
                                   "with bank transactions by hand, paying accountants for cleanup."),
             "target_segment": "Freelancers and small businesses with 20-200 monthly transactions",
-            "geo": "GLOBAL",
-            "signal_strength": 3,
-            "keywords": ["invoicing", "reconciliation", "bookkeeping"],
-            "notes": "Dry-run synthetic opportunity.",
+            "geo": "GLOBAL", "signal_strength": 3,
+            "keywords": ["invoicing", "reconciliation", "bookkeeping"], "notes": "Dry-run synthetic.",
         }
         return f"```json\n{json.dumps([opp])}\n```"
 
@@ -570,11 +659,9 @@ def _dry_run_output(agent: str, fixture_path: Path | None) -> str:
                 oid = json.loads(f.read_text()).get("id")
             except Exception:
                 continue
-            out.append({"opportunity_id": oid,
-                        "per_dimension": {"pain_severity": 6}, "weighted_total": 6.0,
-                        "penalties_applied": [], "total": 6.0,
-                        "recommended_stage": "validate",
-                        "rationale": "Dry-run synthetic score.", "notes": ""})
+            out.append({"opportunity_id": oid, "per_dimension": {"pain_severity": 6},
+                        "weighted_total": 6.0, "penalties_applied": [], "total": 6.0,
+                        "recommended_stage": "validate", "rationale": "Dry-run synthetic.", "notes": ""})
         return f"```json\n{json.dumps(out)}\n```"
 
     if agent == "daily_summary":
@@ -589,12 +676,11 @@ def _dry_run_output(agent: str, fixture_path: Path | None) -> str:
 
 def _process_market_radar(text: str, errors: list[dict]) -> list[str]:
     payload = _parse_json_payload(text)
-    if isinstance(payload, dict):  # e.g. shabbat_readonly status object
+    if isinstance(payload, dict):
         return []
     if not isinstance(payload, list):
         errors.append({"code": "BAD_OUTPUT", "message": "market_radar output was not a JSON array"})
         return []
-
     import jsonschema
     schema = _opportunity_schema()
     opp_dir = REPO_ROOT / "opportunities"
@@ -643,14 +729,11 @@ def _process_opportunity_scoring(text: str, model: str, errors: list[dict]) -> l
     opp_dir = REPO_ROOT / "opportunities"
     written = []
     for s in payload:
-        if not isinstance(s, dict):
-            continue
-        oid = s.get("opportunity_id")
-        if not oid:
+        if not isinstance(s, dict) or not s.get("opportunity_id"):
             continue
         s.setdefault("scored_at", _idt_now().isoformat(timespec="seconds"))
         s.setdefault("model_version", model)
-        rel = f"opportunities/{oid}.scoring.json"
+        rel = f"opportunities/{s['opportunity_id']}.scoring.json"
         (REPO_ROOT / rel).write_text(json.dumps(s, indent=2), encoding="utf-8")
         written.append(rel)
     return written
@@ -666,11 +749,9 @@ def _process_pain_validation(text: str, errors: list[dict]) -> list[str]:
     opp_dir = REPO_ROOT / "opportunities"
     written = []
     for v in payload:
-        if not isinstance(v, dict):
+        if not isinstance(v, dict) or not v.get("opportunity_id"):
             continue
-        oid = v.get("opportunity_id")
-        if not oid:
-            continue
+        oid = v["opportunity_id"]
         evidence_md = v.pop("market_evidence_md", "")
         v.setdefault("evaluated_at", _idt_now().isoformat(timespec="seconds"))
         verdict_rel = f"opportunities/{oid}.verdict.json"
@@ -685,17 +766,60 @@ def _process_pain_validation(text: str, errors: list[dict]) -> list[str]:
 
 def _process_daily_summary(text: str, errors: list[dict]) -> list[str]:
     m = re.search(r"```(?:markdown)?\s*\n(.*?)\n```", text, re.DOTALL)
-    md = m.group(1) if m else text
-    md = md.strip() + "\n"
+    md = (m.group(1) if m else text).strip() + "\n"
     out_dir = REPO_ROOT / "reports" / "daily"
     out_dir.mkdir(parents=True, exist_ok=True)
     rel = f"reports/daily/{_idt_date()}.md"
-    target = REPO_ROOT / rel
-    if target.exists():
+    if (REPO_ROOT / rel).exists():
         rel = f"reports/daily/{_idt_date()}_rerun_{_idt_now().strftime('%H%M')}.md"
-        target = REPO_ROOT / rel
-    target.write_text(md, encoding="utf-8")
+    (REPO_ROOT / rel).write_text(md, encoding="utf-8")
     return [rel]
+
+
+def _process(agent: str, text: str, model: str, errors: list[dict],
+             approval_requests: list[str]) -> list[str]:
+    if agent == "market_radar":
+        return _process_market_radar(text, errors)
+    if agent == "opportunity_scoring":
+        return _process_opportunity_scoring(text, model, errors)
+    if agent == "pain_validation":
+        return _process_pain_validation(text, errors)
+    if agent == "daily_summary":
+        return _process_daily_summary(text, errors)
+
+    # Generic action/write-block protocol.
+    outputs: list[str] = []
+    action_blocks, file_writes = _parse_action_write_blocks(text)
+    for action in action_blocks:
+        approval_requests.append(write_approval_request(action, agent))
+    for rel_path, content in file_writes:
+        abs_path = (REPO_ROOT / rel_path).resolve()
+        if not validate_repo_path(abs_path):
+            errors.append({"code": "PATH_OUTSIDE_REPO", "message": f"Rejected write outside repo: {rel_path}"})
+            continue
+        abs_path.parent.mkdir(parents=True, exist_ok=True)
+        abs_path.write_text(content, encoding="utf-8")
+        outputs.append(rel_path)
+    return outputs
+
+
+def _parse_action_write_blocks(text: str) -> tuple[list[dict], list[tuple[str, str]]]:
+    actions: list[dict] = []
+    writes: list[tuple[str, str]] = []
+    for m in re.finditer(r"```action\s*\n(.*?)\n```", text, re.DOTALL):
+        raw = m.group(1).strip()
+        try:
+            obj = json.loads(raw)
+        except json.JSONDecodeError:
+            try:
+                obj = yaml.safe_load(raw)
+            except Exception:
+                obj = {"raw": raw}
+        if isinstance(obj, dict):
+            actions.append(obj)
+    for m in re.finditer(r"```write:([^\n]+)\n(.*?)\n```", text, re.DOTALL):
+        writes.append((m.group(1).strip(), m.group(2)))
+    return actions, writes
 
 
 # ---------------------------------------------------------------------------
@@ -704,26 +828,37 @@ def _process_daily_summary(text: str, errors: list[dict]) -> list[str]:
 
 def _check_spend(policy: dict, conn) -> bool:
     cap = policy.get("caps", {}).get("per_day_external_api_usd", 25.0)
-    row = conn.execute(
-        "SELECT COALESCE(SUM(cost_usd), 0.0) FROM spend_ledger WHERE date=?",
-        (_idt_date(),),
-    ).fetchone()
+    row = conn.execute("SELECT COALESCE(SUM(cost_usd), 0.0) FROM spend_ledger WHERE date=?",
+                       (_idt_date(),)).fetchone()
     return float(row[0]) < cap
 
 
-def _record_spend(agent: str, model: str, tin: int, tout: int, cost: float, run_id: str, conn) -> None:
+def _usage_tokens(usage) -> tuple[int, int, int, int]:
+    return (
+        getattr(usage, "input_tokens", 0) or 0,
+        getattr(usage, "output_tokens", 0) or 0,
+        getattr(usage, "cache_creation_input_tokens", 0) or 0,
+        getattr(usage, "cache_read_input_tokens", 0) or 0,
+    )
+
+
+def _cost_usd(model: str, reg_in: int, out: int, cache_create: int, cache_read: int) -> float:
+    pin, pout = MODEL_PRICES.get(model, _DEFAULT_PRICE)
+    return (reg_in * pin
+            + cache_create * pin * _CACHE_WRITE_MULT
+            + cache_read * pin * _CACHE_READ_MULT
+            + out * pout) / 1_000_000
+
+
+def _record_spend(agent, model, reg_in, out, cache_create, cache_read, cost, run_id, conn) -> None:
     conn.execute(
-        "INSERT INTO spend_ledger (id, agent, date, cost_usd, run_id, created_at, model, tokens_in, tokens_out) "
-        "VALUES (?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO spend_ledger (id, agent, date, cost_usd, run_id, created_at, model, "
+        "tokens_in, tokens_out, cache_creation_input_tokens, cache_read_input_tokens) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?)",
         (_ulid(), agent, _idt_date(), cost, run_id, datetime.now(timezone.utc).isoformat(),
-         model, tin, tout),
+         model, reg_in, out, cache_create, cache_read),
     )
     conn.commit()
-
-
-def _cost_usd(model: str, tin: int, tout: int) -> float:
-    pin, pout = MODEL_PRICES.get(model, _DEFAULT_PRICE)
-    return (tin * pin + tout * pout) / 1_000_000
 
 
 # ---------------------------------------------------------------------------
@@ -731,7 +866,7 @@ def _cost_usd(model: str, tin: int, tout: int) -> float:
 # ---------------------------------------------------------------------------
 
 def _finalize(run_id, agent, started_at, status, tokens_in, tokens_out, cost_usd,
-              outputs, approval_requests, errors, conn) -> None:
+              outputs, approval_requests, errors, conn, tags=None, cache_tokens=(0, 0)) -> None:
     ended_at = datetime.now(timezone.utc)
     duration_ms = int((ended_at - started_at).total_seconds() * 1000)
     conn.execute(
@@ -763,9 +898,13 @@ def _finalize(run_id, agent, started_at, status, tokens_in, tokens_out, cost_usd
         "run_id": run_id,
         "tokens_in": tokens_in,
         "tokens_out": tokens_out,
+        "cache_creation_input_tokens": cache_tokens[0],
+        "cache_read_input_tokens": cache_tokens[1],
         "outputs": outputs,
         "approval_requests": approval_requests,
     }
+    if tags:
+        log_entry["tags"] = tags
     emit_log(log_entry, agent)
 
 
@@ -790,7 +929,6 @@ def main() -> int:
         return 1
 
     frontmatter, body = parse_frontmatter(agent_md_path.read_text(encoding="utf-8"))
-    system_prompt = body + _PROTOCOL + _runtime_contract(agent)
 
     import db as _db
     _db.apply_migrations()
@@ -805,9 +943,10 @@ def main() -> int:
     outputs: list[str] = []
     approval_requests: list[str] = []
     errors: list[dict] = []
-    tokens_in = tokens_out = 0
+    tokens_in = tokens_out = cache_create_total = cache_read_total = 0
     cost_usd = 0.0
     status = "succeeded"
+    log_tags: list[str] = []
 
     fixture_path: Path | None = None
     if args.input_path:
@@ -817,70 +956,65 @@ def main() -> int:
             conn.close()
             return 1
 
+    # Skip-when-no-work (before any API call).
+    ok, reason = should_run(agent)
+    if not ok:
+        print(f"[no_op] {agent}: {reason}")
+        _finalize(run_id, agent, started_at, "no_op", 0, 0, 0.0, [], [],
+                  [], conn, tags=[reason])
+        return 0
+
     try:
+        model = "dry-run"
         if dry_run:
-            model_output = _dry_run_output(agent, fixture_path)
-            model = "dry-run"
-            print(f"[dry-run] Generated synthetic output for agent '{agent}'")
+            outputs += _process(agent, _dry_run_output(agent, fixture_path), model, errors, approval_requests)
+            print(f"[dry-run] Processed synthetic output for agent '{agent}'")
         else:
             api_key = os.environ.get("ANTHROPIC_API_KEY", "")
             if not api_key:
                 print("ERROR: ANTHROPIC_API_KEY not set in environment / .env", file=sys.stderr)
                 conn.close()
                 return 1
-            if not _check_spend(policy, conn):
-                err = "Per-day external API spend cap reached"
-                errors.append({"code": "SPEND_CAP_EXCEEDED", "message": err})
-                _finalize(run_id, agent, started_at, "failed", tokens_in, tokens_out,
-                          cost_usd, outputs, approval_requests, errors, conn)
-                print(f"ERROR: {err}", file=sys.stderr)
-                return 1
 
             model, max_tokens = model_for(agent)
-            user_msg = build_inputs(agent, frontmatter, fixture_path)
+            system_blocks = build_system_blocks(agent, body)
+            user_messages, log_tags = build_user_messages(agent, frontmatter, fixture_path)
+
+            if not user_messages:
+                _finalize(run_id, agent, started_at, "no_op", 0, 0, 0.0, [], [],
+                          [], conn, tags=["no work after planning"])
+                print(f"[no_op] {agent}: no work after planning")
+                return 0
 
             import anthropic
             client = anthropic.Anthropic(api_key=api_key)
-            resp = client.messages.create(
-                model=model,
-                max_tokens=max_tokens,
-                system=system_prompt,
-                messages=[{"role": "user", "content": user_msg}],
-            )
-            model_output = resp.content[0].text if resp.content else ""
-            tokens_in = resp.usage.input_tokens
-            tokens_out = resp.usage.output_tokens
-            cost_usd = _cost_usd(model, tokens_in, tokens_out)
-            _record_spend(agent, model, tokens_in, tokens_out, cost_usd, run_id, conn)
-
-        # Process output.
-        if agent == "market_radar":
-            outputs += _process_market_radar(model_output, errors)
-        elif agent == "opportunity_scoring":
-            outputs += _process_opportunity_scoring(model_output, model, errors)
-        elif agent == "pain_validation":
-            outputs += _process_pain_validation(model_output, errors)
-        elif agent == "daily_summary":
-            outputs += _process_daily_summary(model_output, errors)
-        else:
-            action_blocks, file_writes = _parse_action_write_blocks(model_output)
-            for action in action_blocks:
-                req_id = write_approval_request(action, agent)
-                approval_requests.append(req_id)
-                print(f"Queued for approval: {req_id}")
-            for rel_path, content in file_writes:
-                abs_path = (REPO_ROOT / rel_path).resolve()
-                if not validate_repo_path(abs_path):
-                    msg = f"Rejected write outside repo: {rel_path}"
-                    print(f"WARN: {msg}", file=sys.stderr)
-                    errors.append({"code": "PATH_OUTSIDE_REPO", "message": msg})
-                    continue
-                abs_path.parent.mkdir(parents=True, exist_ok=True)
-                abs_path.write_text(content, encoding="utf-8")
-                outputs.append(rel_path)
+            for um in user_messages:
+                if not _check_spend(policy, conn):
+                    err = "Per-day external API spend cap reached"
+                    errors.append({"code": "SPEND_CAP_EXCEEDED", "message": err})
+                    status = "failed"
+                    print(f"ERROR: {err}", file=sys.stderr)
+                    break
+                resp = client.messages.create(
+                    model=model, max_tokens=max_tokens,
+                    system=system_blocks,
+                    messages=[{"role": "user", "content": um}],
+                )
+                text = resp.content[0].text if resp.content else ""
+                reg_in, out, cc, cr = _usage_tokens(resp.usage)
+                call_cost = _cost_usd(model, reg_in, out, cc, cr)
+                _record_spend(agent, model, reg_in, out, cc, cr, call_cost, run_id, conn)
+                tokens_in += reg_in
+                tokens_out += out
+                cache_create_total += cc
+                cache_read_total += cr
+                cost_usd += call_cost
+                outputs += _process(agent, text, model, errors, approval_requests)
 
         for o in outputs:
             print(f"Wrote: {o}")
+        for r in approval_requests:
+            print(f"Queued for approval: {r}")
 
     except Exception as exc:
         errors.append({"code": "RUNTIME_ERROR", "message": str(exc)})
@@ -888,31 +1022,13 @@ def main() -> int:
         print(f"ERROR: {exc}", file=sys.stderr)
         traceback.print_exc(file=sys.stderr)
 
-    if errors and status == "succeeded" and not outputs:
+    if errors and status == "succeeded" and not outputs and not approval_requests:
         status = "failed"
 
-    _finalize(run_id, agent, started_at, status, tokens_in, tokens_out,
-              cost_usd, outputs, approval_requests, errors, conn)
+    _finalize(run_id, agent, started_at, status, tokens_in, tokens_out, cost_usd,
+              outputs, approval_requests, errors, conn,
+              tags=log_tags or None, cache_tokens=(cache_create_total, cache_read_total))
     return 0 if status == "succeeded" else 1
-
-
-def _parse_action_write_blocks(text: str) -> tuple[list[dict], list[tuple[str, str]]]:
-    actions: list[dict] = []
-    writes: list[tuple[str, str]] = []
-    for m in re.finditer(r"```action\s*\n(.*?)\n```", text, re.DOTALL):
-        raw = m.group(1).strip()
-        try:
-            obj = json.loads(raw)
-        except json.JSONDecodeError:
-            try:
-                obj = yaml.safe_load(raw)
-            except Exception:
-                obj = {"raw": raw}
-        if isinstance(obj, dict):
-            actions.append(obj)
-    for m in re.finditer(r"```write:([^\n]+)\n(.*?)\n```", text, re.DOTALL):
-        writes.append((m.group(1).strip(), m.group(2)))
-    return actions, writes
 
 
 if __name__ == "__main__":

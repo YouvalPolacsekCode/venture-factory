@@ -61,10 +61,11 @@ def _respect_rate_limit(source_id: str, rate_limit_rpm: float | int | None) -> N
         conn.close()
 
 
-def fetch(source_config: dict) -> list[dict]:
+def fetch(source_config: dict, stats: dict | None = None) -> list[dict]:
     """Fetch raw signal items for one source config entry.
 
-    Returns [] for disabled sources (except `ph`, which signals explicitly)."""
+    When `stats` is a dict, the fetcher fills it with fetched/dropped_by_rule/kept
+    counts. Returns [] for disabled sources (except `ph`, which signals explicitly)."""
     stype = (source_config or {}).get("type", "")
     source_id = source_config.get("id", stype or "unknown")
 
@@ -75,10 +76,10 @@ def fetch(source_config: dict) -> list[dict]:
 
     if stype == "hn":
         from . import hn
-        return hn.fetch(source_config)
+        return hn.fetch(source_config, stats)
     if stype == "reddit":
         from . import reddit
-        return reddit.fetch(source_config)
+        return reddit.fetch(source_config, stats)
     if stype == "ph":
         from . import ph
         return ph.fetch(source_config)

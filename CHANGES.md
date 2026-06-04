@@ -1,10 +1,33 @@
 # CHANGES
 
-## Phase 0 — Agent Runner MVP (2026-05-31)
+## Phase 1.5 — Cost optimization (2026-06-04)
 
-_Note: This Phase 1 work was rebuilt on the Mac (2026-06-04). The original P1 commit made on Windows never transferred — only Phase 0 commits arrived in the repo (no `factory/sources/`, no `config/agent_models.yaml`, no `.env.example`; `smoke_test.py` was still the dry-run version). Rebuilt from the verbatim P1 prompt in `docs/HANDOVER.md`._
+Five cost levers, no new pip deps, no capability/contract changes. (1) **Prompt caching**: `scripts/run_agent.py` now sends `system` as a list of `cache_control: ephemeral` blocks (AGENT.md body + protocol + runtime contract + injected schema/config/template); variable per-call inputs stay in the uncached user message. `spend_ledger` records `cache_creation_input_tokens` / `cache_read_input_tokens` separately (migration `003`), priced at base×1.25 (write) and base×0.10 (read). (2) **Batching**: `opportunity_scoring` (batch_size 15) and `pain_validation` (batch_size 10) process work in batches so the cached system prompt amortizes across calls within a run. (3) **Source prefilter** in `factory/sources/hn.py`/`reddit.py` (+ shared `_filters.py`): drops `[deleted]`/`[removed]`, known-bot authors, low-engagement items (HN points≥3 where present, Reddit score≥2), and URLs already in `opportunities/_seen.jsonl`; truncates `body_text` to 500 chars; per-source `fetched/dropped/kept` counts surface as `tags` on the market_radar log. (4) **Model routing**: `config/agent_models.yaml` shipped populated with per-agent model + max_tokens + batch_size. (5) **Skip-when-no-work**: `should_run(agent)` short-circuits scoring/validation/cost_gain/build_decisions when there is nothing to do (logs `status=no_op`, zero spend, no API call). New `scripts/cost_report.py` (`uv run cost-report`, `--since`) breaks spend down by agent and cache class. The smoke test forces `batch_size=1` to exercise the cache and now asserts a cache hit + a persisted cost baseline (`smoke_baseline`).
+
+**Deviations:** (a) The cost baseline is recorded on the first P1.5 smoke run (the original P1 smoke never persisted one), so it guards against future regressions rather than proving the P1→P1.5 delta numerically; the caching/batching reduction is demonstrated by the cache-hit assertion (system prompt written once, read across the remaining batches). (b) HN comment searches return `points: null`; the points threshold is applied only when points is present, so comment-based sources are not dropped wholesale.
+
+### Phase 1.5 baseline
+
+`uv run cost-report` after a clean live smoke (5 fresh opportunities, scoring forced to `batch_size=1`):
+
+```
+=== Cost report (2026-06-04, IDT) ===
+agent                  calls    std_in  cache_wr  cache_rd      out       USD
+-----------------------------------------------------------------------------
+opportunity_scoring        6      7021      2022      8088     4750    0.1023
+market_radar               2     10005      3056         0     3845    0.0992
+daily_summary              2      5473         0         0      548    0.0082
+-----------------------------------------------------------------------------
+TOTAL                     10     22499      5078      8088     9143    0.2097
+
+Today: $0.2097 spent of $25.00 per-day cap (0.8%).
+```
+
+Caching evidence: `opportunity_scoring` wrote 2022 cache tokens once and read 8088 (≈2022×4) across the remaining batches — the system prompt is paid for once per run, not per batch. (Today's total spans both the P1 and P1.5 live smoke runs; the P1.5 run alone was $0.1008.)
 
 ## Phase 1 — Live API + real sources + scoring chain (2026-06-04, rebuilt on Mac)
+
+_Note: This Phase 1 work was rebuilt on the Mac (2026-06-04). The original P1 commit made on Windows never transferred — only Phase 0 commits arrived in the repo (no `factory/sources/`, no `config/agent_models.yaml`, no `.env.example`; `smoke_test.py` was still the dry-run version). Rebuilt from the verbatim P1 prompt in `docs/HANDOVER.md`._
 
 Took the factory live. Added real source fetchers under `factory/sources/` (`__init__.py` dispatch on `source.type` with persisted per-source rate limiting in `state.db` table `source_rate_limit`; `hn.py` Algolia search; `reddit.py` listing JSON with 429 exponential backoff; `ph.py` placeholder that raises `NotImplementedError` unless enabled). Rewrote `scripts/run_agent.py`: `--dry-run` is now opt-in (default = real Anthropic API); fails with a clear message if `ANTHROPIC_API_KEY` is missing; model routing via new `config/agent_models.yaml` (default `claude-sonnet-4-6`, `build_decisions`→`claude-opus-4-6`, `daily_summary`→`claude-haiku-4-5`); per-call `model`/`tokens_in`/`tokens_out` recorded in `spend_ledger` (migration `002`) with a per-model price table. market_radar now pre-fetches enabled sources via `factory.sources.fetch` and injects `{pre_fetched_items}`. Wired the scoring chain as structured-output runner branches: `opportunity_scoring` scans `*.opportunity.json` lacking a sibling `.scoring.json` and writes `<id>.scoring.json` (with a top-level `total`); `pain_validation` scans qualifying `.scoring.json` lacking `.verdict.json` and writes `<id>.market_evidence.md` + `<id>.verdict.json`. `daily_summary` aggregates today's logs, opportunity counts, approval-queue ages, and `services/*/status.md` into `reports/daily/<date>.md`. Updated `scripts/run_daily_loop.py` to the sequence market_radar → pain_validation → opportunity_scoring → cost_gain (stub, logs NOT_IMPLEMENTED) → build_decisions (stub) → daily_summary, each in its own try/except with file-based preconditions. New LIVE `scripts/smoke_test.py` runs market_radar→opportunity_scoring→daily_summary against one constrained HN source (`config/fixtures/smoke_sources.yaml`, `rate_limit_rpm=1`) and asserts ≥1 opportunity (schema-valid), ≥1 scoring file, ≥1 daily report, and run spend < $0.20.
 

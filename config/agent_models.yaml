@@ -1,9 +1,9 @@
 schema_version: 1
 
-# Per-agent model routing. The runner (scripts/run_agent.py) reads this at
-# startup. An agent's model + max_tokens come from `agents.<slug>` if present,
-# otherwise from `defaults`. If this file is missing or unparseable, the runner
-# falls back to `defaults` below and logs a warning.
+# Per-agent model routing + batch sizes. The runner (scripts/run_agent.py)
+# reads this at startup. An agent's model / max_tokens / batch_size come from
+# `agents.<slug>` if present, otherwise from `defaults`. If this file is
+# missing or unparseable, the runner falls back to `defaults` and logs a warning.
 
 defaults:
   model: claude-sonnet-4-6
@@ -11,8 +11,12 @@ defaults:
 
 agents:
   market_radar:        { model: claude-sonnet-4-6, max_tokens: 4096 }
-  pain_validation:     { model: claude-sonnet-4-6, max_tokens: 3072 }
-  opportunity_scoring: { model: claude-sonnet-4-6, max_tokens: 4096 }
+  pain_validation:     { model: claude-sonnet-4-6, max_tokens: 3072, batch_size: 10 }
+  opportunity_scoring: { model: claude-sonnet-4-6, max_tokens: 4096, batch_size: 15 }
   cost_gain:           { model: claude-sonnet-4-6, max_tokens: 1024 }
   build_decisions:     { model: claude-opus-4-6,   max_tokens: 2048 }
+  service_builder:     { model: claude-sonnet-4-6, max_tokens: 4096 }
+  product_design:      { model: claude-sonnet-4-6, max_tokens: 3072 }
+  outreach:            { model: claude-sonnet-4-6, max_tokens: 1024 }
+  support:             { model: claude-sonnet-4-6, max_tokens: 1024 }
   daily_summary:       { model: claude-haiku-4-5-20251001, max_tokens: 2048 }

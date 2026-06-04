@@ -47,7 +47,7 @@ You are the Opportunity Scoring agent. You take a validated opportunity and conv
 7. Write a 2–3 sentence `rationale` naming the strongest dimension, the weakest dimension, and the deciding factor.
 
 ## Output contract
-JSON written by the runner to `opportunities/<opportunity_id>.scoring.json` (or `services/<slug>/scoring.json` if a slug exists).
+Emit a JSON **array** with one scoring object per input opportunity (each carrying its `opportunity_id` and a top-level `total`, per the RUNTIME CONTRACT). The runner writes each element to `opportunities/<opportunity_id>.scoring.json`. The single-object example below shows one element's shape.
 
 ```json
 EXAMPLE ONLY

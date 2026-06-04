@@ -59,6 +59,22 @@
   .chip.drop, .chip.rejected, .chip.killed { color: var(--bad); border-color: #5e2424; }
   .chip.build, .chip.scale, .chip.launched { color: var(--accent); border-color: #25406e; }
 
+  /* opportunity cards — readable, no clicking needed */
+  .opp-hint { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+  .opp { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .opp-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .opp-score { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .opp-stageplain { color: var(--muted); font-size: 13px; }
+  .opp-problem { margin: 4px 0 10px; font-size: 15px; line-height: 1.55; }
+  .opp-who { margin: 0 0 10px; font-size: 14px; color: #cdd3dd; }
+  .opp .lbl { color: var(--muted); }
+  .opp-metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .metric { display: inline-flex; align-items: baseline; gap: 6px; background: var(--chip); border: 1px solid var(--line); border-radius: 8px; padding: 3px 9px; font-size: 12.5px; }
+  .metric .ml { color: var(--muted); }
+  .metric .mv { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .opp-why { margin: 0 0 8px; font-size: 13.5px; line-height: 1.55; color: #c2c9d4; }
+  .opp-foot { font-size: 12px; color: var(--muted); }
+  .opp-foot .src { margin-left: 8px; }
   .cards { display: flex; flex-wrap: wrap; gap: 14px; }
   .card { flex: 1 1 110px; background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
   .card .v { font-size: 22px; font-weight: 700; }
@@ -198,53 +214,43 @@ function renderApprovals(d) {
   });
 }
 
-let oppState = { col: "total", dir: -1 };
+const STAGE_PLAIN = {
+  build: "strong enough to build",
+  scale: "strong — candidate to scale",
+  validate: "promising — needs validation",
+  drop: "not worth pursuing",
+};
 function renderOpps(d) {
-  const rows = d.top_opportunities || [];
+  const rows = (d.top_opportunities || []).slice()
+    .sort((a, b) => (b.total ?? -Infinity) - (a.total ?? -Infinity));
   const el = $("opps");
   if (!rows.length) { el.innerHTML = '<div class="empty">No scored opportunities yet.</div>'; return; }
-  const cols = [
-    ["problem_statement", "Problem", false],
-    ["target_segment", "Segment", false],
-    ["total", "Score", true],
-    ["recommended_stage", "Stage", false],
-    ["verdict", "Verdict", false],
-  ];
-  const sorted = rows.slice().sort((a, b) => {
-    let x = a[oppState.col], y = b[oppState.col];
-    if (x == null) x = oppState.col === "total" ? -Infinity : "";
-    if (y == null) y = oppState.col === "total" ? -Infinity : "";
-    if (typeof x === "number" && typeof y === "number") return (x - y) * oppState.dir;
-    return String(x).localeCompare(String(y)) * oppState.dir;
-  });
-  let html = "<table><thead><tr>";
-  cols.forEach(c => {
-    const ind = oppState.col === c[0] ? (oppState.dir < 0 ? " ▼" : " ▲") : "";
-    html += `<th class="${c[2] ? "num" : ""}" data-col="${c[0]}">${esc(c[1])}<span class="ind">${ind}</span></th>`;
-  });
-  html += "</tr></thead><tbody>";
-  sorted.forEach(o => {
+
+  el.innerHTML = '<div class="opp-hint">Sorted by score (0–10). Each card explains the problem, who would pay, and whether it can run on its own — no clicking needed.</div>'
+    + rows.map(o => {
     const stage = o.recommended_stage || "";
+    const stagePlain = STAGE_PLAIN[stage] || stage;
     const verdict = o.verdict || "";
-    const prob = o.source_url
-      ? `<a href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">${esc(o.problem_statement)}</a>`
-      : esc(o.problem_statement);
-    html += "<tr>"
-      + `<td>${prob}</td>`
-      + `<td>${esc(o.target_segment)}</td>`
-      + `<td class="num">${o.total == null ? "—" : Number(o.total).toFixed(1)}</td>`
-      + `<td>${stage ? `<span class="chip ${esc(stage)}">${esc(stage)}</span>` : "—"}</td>`
-      + `<td>${verdict ? `<span class="chip ${esc(verdict)}">${esc(verdict)}</span>` : "—"}</td>`
-      + "</tr>";
-  });
-  html += "</tbody></table>";
-  el.innerHTML = html;
-  el.querySelectorAll("th").forEach(th => th.addEventListener("click", () => {
-    const col = th.getAttribute("data-col");
-    if (oppState.col === col) oppState.dir *= -1;
-    else { oppState.col = col; oppState.dir = (col === "total") ? -1 : 1; }
-    renderOpps(d);
-  }));
+    // Friendly scores row: "Who pays 8/10 · Runs alone 7/10 · …"
+    const scoreChips = Object.entries(o.scores || {}).map(([label, v]) =>
+      `<span class="metric"><span class="ml">${esc(label)}</span><span class="mv">${esc(v)}/10</span></span>`
+    ).join("");
+    const link = o.source_url
+      ? ` <a class="src" href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">source ↗</a>` : "";
+    return `<article class="opp">
+      <div class="opp-head">
+        <span class="opp-score">${o.total == null ? "—" : Number(o.total).toFixed(1)}</span>
+        ${stage ? `<span class="chip ${esc(stage)}">${esc(stage)}</span>` : ""}
+        <span class="opp-stageplain">${esc(stagePlain)}</span>
+        ${verdict ? `<span class="chip ${esc(verdict)}">${esc(verdict)}</span>` : ""}
+      </div>
+      <p class="opp-problem">${esc(o.problem_statement)}</p>
+      <p class="opp-who"><span class="lbl">Who would pay:</span> ${esc(o.target_segment || "unclear")}</p>
+      ${scoreChips ? `<div class="opp-metrics">${scoreChips}</div>` : ""}
+      ${o.rationale ? `<p class="opp-why"><span class="lbl">Why this score:</span> ${esc(o.rationale)}</p>` : ""}
+      <div class="opp-foot">${esc(o.source_type || "")}${link}</div>
+    </article>`;
+  }).join("");
 }
 
 function renderServices(d) {

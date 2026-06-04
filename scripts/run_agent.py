@@ -411,13 +411,23 @@ Score EVERY opportunity. Emit a SINGLE JSON array inside one ```json fenced bloc
 Each element MUST contain:
 
 - "opportunity_id": the opportunity's "id".
-- "per_dimension": object mapping each dimension name in the scoring model to an integer 0-10.
+- "per_dimension": object mapping EVERY dimension name in the scoring model to an integer 0-10
+  (this includes `buyer_clarity` and `operational_autonomy` — do not skip them).
 - "weighted_total": number (sum of dimension*weight, 0-10 scale), 1 decimal.
-- "penalties_applied": array of {"name","deduction","reason"} (may be []).
+- "penalties_applied": array of {"name","deduction","reason"} (may be []). Apply a penalty
+  from the model whenever it fits — especially `not_legitimate_or_grey` for anything
+  scammy/deceptive/spammy or against a platform's TOS, and the human-touch penalties
+  (`requires_human_fulfillment`, `requires_synchronous_human`, `high_touch_support`).
 - "total": number = weighted_total minus sum of deductions (0-10 scale), 1 decimal.
-- "recommended_stage": one of "drop","validate","build","scale".
-- "rationale": 1-3 sentences.
-- "notes": string (may be "").
+- "recommended_stage": one of "drop","validate","build","scale". Map from `total` against the
+  thresholds, THEN apply `build_gates`: if `total` reaches `min_total_to_build` but ANY
+  build_gates floor is unmet (operational_autonomy/buildability_with_ai/buyer_clarity/
+  willingness_to_pay), cap recommended_stage at "validate" — never "build" or "scale".
+- "rationale": 2-3 plain-language sentences a non-technical operator can act on. State
+  explicitly: WHO would pay (single users vs a specific type of company) and whether they
+  realistically pay; whether it can RUN with little/no human involvement (the autonomy
+  call); and the deciding factor. If a build_gate capped the stage, say which and why.
+- "notes": string (may be ""). Name any failing build_gate here.
 
 Output ONLY the JSON array."""
     if agent == "pain_validation":

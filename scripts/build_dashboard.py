@@ -162,19 +162,36 @@ def _top_opportunities(rows, limit=25):
             return 0.0
 
     scored.sort(key=total_of, reverse=True)
+    # Surface the dimensions the operator cares about most, in plain-language keys.
+    DIM_LABELS = {
+        "buyer_clarity": "Who pays",
+        "operational_autonomy": "Runs alone",
+        "willingness_to_pay": "Will pay",
+        "buildability_with_ai": "Buildable",
+        "pain_severity": "Pain",
+    }
     out = []
     for r in scored[:limit]:
         opp, sc, vr = r["opp"], r["scoring"], r["verdict"]
         src = opp.get("source") or {}
+        per_dim = sc.get("per_dimension") or {}
+        scores = {}
+        for key, label in DIM_LABELS.items():
+            if isinstance(per_dim.get(key), (int, float)):
+                scores[label] = per_dim[key]
         out.append({
             "id": opp.get("id", r["base"]),
-            "problem_statement": _trunc(opp.get("problem_statement"), 200),
-            "target_segment": _trunc(opp.get("target_segment"), 120),
+            # Full problem text — the schema caps it at 500 chars, so show it all.
+            "problem_statement": _trunc(opp.get("problem_statement"), 520),
+            "target_segment": _trunc(opp.get("target_segment"), 240),
             "total": round(total_of(r), 1),
             "recommended_stage": sc.get("recommended_stage"),
+            # Plain-language "why this score / who pays / can it run alone".
+            "rationale": _trunc(sc.get("rationale"), 500),
+            "scores": scores,           # {"Who pays": 8, "Runs alone": 7, ...}
             "verdict": vr.get("status") if vr else None,
             "source_type": src.get("type"),
-            "source_url": src.get("url"),  # public HN/Reddit links are fine
+            "source_url": src.get("url"),  # public links are fine
             "discovered_at": opp.get("discovered_at"),
         })
     return out

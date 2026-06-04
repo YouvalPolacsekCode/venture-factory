@@ -1,52 +1,122 @@
-schema_version: 1
+schema_version: 2
 
 # Weighted-sum opportunity scoring. Every dimension is scored 0-10 by the
-# `opportunity_scoring` agent based on evidence collected by upstream agents.
-# Total = sum(dimension_score * weight) + sum(applicable_penalties).
-# Weights sum to 1.0.
+# `opportunity_scoring` agent from evidence collected by upstream agents.
+# total = sum(dimension_score * weight) + sum(applicable_penalties).  Weights sum to 1.0.
+#
+# v2 (2026-06-04): rebalanced so TWO things are first-class selection criteria —
+#   (A) AUTONOMY  — can Claude + this repo BUILD and then RUN/DELIVER the whole
+#       thing with near-zero ongoing Youval involvement?
+#       -> buildability_with_ai (0.13) + operational_autonomy (0.20) = 0.33
+#   (B) COMMERCIAL REALITY — will someone ACTUALLY pay, is the buyer a specific
+#       identifiable person/company, and is the offer legitimate & sustainable?
+#       -> willingness_to_pay (0.15) + buyer_clarity (0.12) + reach (0.06) + responsiveness (0.09) = 0.42
 
 dimensions:
   pain_severity:
-    weight: 0.20
-    description: How painful is the problem for the target user? 10 = blocks work, costs real money daily.
+    weight: 0.12
+    description: >
+      How painful is the problem for the target user? 0 = trivial annoyance;
+      5 = real recurring cost in time or money; 10 = blocks work / causes
+      financial or legal harm. Cite evidence.
   pain_frequency:
-    weight: 0.10
-    description: How often does the pain occur? 10 = daily or continuous; 1 = once a year.
+    weight: 0.06
+    description: >
+      How often the pain recurs. 0 = once a year; 5 = monthly; 10 = daily/continuous.
   willingness_to_pay:
-    weight: 0.20
-    description: Evidence that the segment pays for adjacent or substitute solutions today.
+    weight: 0.15
+    description: >
+      Hard evidence the segment ALREADY PAYS for adjacent/substitute solutions
+      (or has stated a budget). 0 = no money signal / people expect it free;
+      5 = one paid substitute or quoted budget at our target price; 10 = multiple
+      paid substitutes/budgets at or above target price. "People are annoyed" is
+      NOT willingness to pay.
+  buyer_clarity:
+    weight: 0.12
+    description: >
+      CAN THIS ACTUALLY SELL, AND TO WHOM? Quality of the buyer. 0 = no
+      identifiable buyer or a vague "everyone"; 3 = only individual consumers who
+      rarely pay for tools (weak, high-churn); 6 = a specific nameable
+      prosumer/professional who buys software (indie devs, freelance designers);
+      8 = a specific BUSINESS role with budget authority (e.g. "ops lead at a
+      10-50 person agency", "Shopify store owner >$20k/mo"); 10 = that plus an
+      existing budget line and a reason to buy now. State explicitly WHO buys
+      (single users vs companies) and whether they are reachable and have money.
+      Prefer narrow, named B2B/prosumer ICPs over broad consumer plays.
   lead_reachability:
-    weight: 0.15
-    description: Can we find and contact 100+ qualified leads in under a week through allowed channels?
+    weight: 0.06
+    description: >
+      Can we find and contact 100+ qualified buyers in under a week via allowed
+      channels? 0 = no allowed channel; 5 = manual outreach works; 10 = a public
+      high-intent list exists at <$1/lead.
   responsiveness_signal:
-    weight: 0.15
-    description: Reply rate, click rate, or DM engagement from initial probes. 10 = >15% qualified reply.
+    weight: 0.09
+    description: >
+      Reply/click/booking rate from probes. 0 = none yet or <2%; 5 = 8-15%;
+      10 = >25% qualified reply with bookings. Default to 0-2 with no test data.
   buildability_with_ai:
-    weight: 0.10
-    description: How well does Claude + standard tooling cover the service? 10 = end-to-end automatable.
+    weight: 0.13
+    description: >
+      Can the solution be BUILT with Claude + this repo's standard tooling
+      (prompts, a simple web page/form, files, a Stripe link, email)? 0 = needs
+      custom hardware, model training, or a compliance moat; 5 = significant
+      integration work; 10 = shippable as Claude + prompts + a simple page within
+      a week.
+  operational_autonomy:
+    weight: 0.20
+    description: >
+      THE AUTONOMY TEST: once live, can Claude + this code RUN AND DELIVER the
+      service ONGOING with near-zero Youval involvement? Score DOWN anything
+      needing per-customer manual fulfillment, live sales calls/demos, scheduled
+      meetings, or human-judgement support. 0 = Youval hands-on for every
+      customer (consulting / done-for-you / sales calls); 3 = heavy
+      human-in-the-loop (manual onboarding, frequent judgement calls); 6 = mostly
+      automated, only periodic operator approvals (e.g. approving an outreach
+      batch); 8 = self-serve signup -> automated delivery -> automated support,
+      operator just monitors; 10 = fully hands-off (fulfillment + support +
+      billing all run by Claude + code, no recurring human step). Periodic
+      approval gates for sends/payments are fine; PER-CUSTOMER human work is not.
   defensibility:
-    weight: 0.05
-    description: Workflow stickiness, data moat, or distribution edge over a 6-month horizon.
+    weight: 0.04
+    description: >
+      Workflow stickiness, data moat, or distribution edge over 6 months. 0 =
+      trivially copyable LLM wrapper; 5 = workflow/data lock-in; 10 = proprietary
+      data or distribution advantage.
   founder_fit:
-    weight: 0.05
-    description: Youval's domain, language (Hebrew/English), and timezone advantage for this market.
+    weight: 0.03
+    description: >
+      Youval's domain, language (Hebrew/English), and timezone advantage.
 
-# Stage gates. The factory advances an experiment only when total crosses these.
+# Stage gates on the 0-10 total.
 thresholds:
   min_total_to_validate: 5.5
   min_total_to_build: 6.5
   min_total_to_scale: 7.5
 
-# When two opportunities are within 0.3 of each other on total, break ties by
-# checking these dimensions in order; the higher one wins.
-tie_breakers:
-  - responsiveness_signal
-  - willingness_to_pay
-  - buildability_with_ai
+# HARD per-dimension floors for promotion to BUILD, enforced IN ADDITION to
+# min_total_to_build. A high overall score is not enough: if an idea can't run
+# autonomously or can't clearly sell, it is the wrong thing to build. When the
+# total qualifies for build but any floor below is unmet, recommended_stage is
+# capped at "validate" (never "build"/"scale") and the failing gate is named.
+build_gates:
+  operational_autonomy_min: 7
+  buildability_with_ai_min: 6
+  buyer_clarity_min: 6
+  willingness_to_pay_min: 5
 
-# Additive adjustments to the total. Applied after weighted sum.
-# Negative values lower the score (make it harder to advance).
+# When two opportunities are within 0.3 on total, break ties in this order.
+tie_breakers:
+  - operational_autonomy
+  - buyer_clarity
+  - willingness_to_pay
+  - responsiveness_signal
+
+# Additive adjustments applied AFTER the weighted sum (negative = harder to advance).
 penalties:
-  regulated_industry: -1.5         # healthcare, finance, legal-with-licensure, etc.
+  not_legitimate_or_grey: -5.0      # scam/deceptive/spammy, violates platform or 3rd-party TOS, or legally dubious — effectively disqualifies
+  requires_human_fulfillment: -1.5  # per-customer manual delivery work a human must do
+  requires_synchronous_human: -1.0  # sales calls, live demos, scheduled onboarding/meetings
+  high_touch_support: -0.5          # ongoing human-judgement support load
+  regulated_industry: -1.5          # healthcare, finance, legal-with-licensure, children, etc.
   requires_physical_logistics: -1.0 # shipping, warehousing, in-person service
   b2c_at_scale_needed: -1.0         # business model needs >1000 paying consumers to work

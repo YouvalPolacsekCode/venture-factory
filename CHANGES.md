@@ -1,5 +1,16 @@
 # CHANGES
 
+## Scoring v2 — autonomy + commercial-reality criteria; friendlier dashboard (2026-06-04)
+
+**Selection criteria (`config/scoring_model.yaml`, schema_version 2).** Rebalanced the weighted model so two things are now first-class, addressing "can Claude+this code run it alone with minimal Youval?" and "can this actually sell / who buys / is it legit?":
+- New dimension **`operational_autonomy`** (0.20) — once live, can Claude + this code run AND deliver ongoing with near-zero operator involvement (penalize per-customer manual work, sales calls, human support).
+- New dimension **`buyer_clarity`** (0.12) — is there a specific, nameable buyer with money (single users vs a type of company), or a vague "everyone"? Prefers narrow B2B/prosumer ICPs.
+- Re-weighted so the **autonomy pillar** (`buildability_with_ai` 0.13 + `operational_autonomy` 0.20) = **0.33** and the **commercial pillar** (WTP 0.15 + buyer_clarity 0.12 + reach 0.06 + responsiveness 0.09) = **0.42**; pain 0.18; edge 0.07. Weights sum to 1.0.
+- New **penalties**: `not_legitimate_or_grey` (−5.0, effectively disqualifies scams/spam/TOS-violating/legally-dubious offers), `requires_human_fulfillment` (−1.5), `requires_synchronous_human` (−1.0), `high_touch_support` (−0.5); kept regulated/physical/b2c-scale penalties.
+- New **`build_gates`**: hard per-dimension floors (operational_autonomy ≥7, buildability ≥6, buyer_clarity ≥6, WTP ≥5) enforced *in addition* to the build threshold. The `opportunity_scoring` RUNTIME CONTRACT (in `scripts/run_agent.py`) now scores the two new dims, applies the legitimacy/human-touch penalties, **caps `recommended_stage` at "validate" when a build_gate is unmet**, and writes a **plain-language rationale** stating who pays + whether it can run autonomously. Tie-breakers reordered to autonomy → buyer_clarity → WTP → responsiveness. Verified live: re-scoring an opportunity yielded `operational_autonomy=7, buyer_clarity=5`, stage `drop`, with notes naming the failing gates.
+
+**Friendlier dashboard.** The "Top opportunities" section was a cramped, truncated table (problem cut at ~200 chars, no explanation). Reworked into **readable cards** so the whole problem is understandable from text without clicking: the exporter (`scripts/build_dashboard.py`) now emits the **full problem statement**, the **plain-language `rationale`** ("why this score"), and a **`scores`** map of the operator-facing dimensions (Who pays / Runs alone / Will pay / Buildable / Pain); `dashboard/index.html` renders each as a card with the score + stage (plus a plain gloss like "promising — needs validation"), the full problem, "Who would pay: …", the dimension chips, and "Why this score: …". No new pip deps.
+
 ## Market Radar — source diversity (Lobsters, Stack Exchange, dev.to, GitHub) (2026-06-04)
 
 The pipeline was effectively HN-only: the 3 Reddit sources return **HTTP 403** to scripted/datacenter clients (Reddit locked down unauthenticated `*.json`; `reddit.py` catches it and returns `[]`, failing silently), Product Hunt needs a key, so only HN produced candidates. Fixed by adding four no-auth sources — each verified reachable from scripted clients (incl. GitHub Actions) and live-tested through the real dispatch:

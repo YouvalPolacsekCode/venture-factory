@@ -2,20 +2,34 @@
   "opportunity_id": "01KT9GW587TY14F9D9AXNVMKVQ",
   "per_dimension": {
     "pain_severity": 7,
-    "pain_frequency": 7,
-    "willingness_to_pay": 7,
-    "lead_reachability": 8,
-    "responsiveness_signal": 4,
-    "buildability_with_ai": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
     "defensibility": 5,
-    "founder_fit": 6
+    "founder_fit": 5
   },
-  "weighted_total": 6.6,
-  "penalties_applied": [],
-  "total": 6.6,
-  "recommended_stage": "validate",
-  "rationale": "Engineering managers at AI-adopting companies genuinely feel the ROI-measurement gap, and this surfaces repeatedly in eng leadership conversations. Willingness to pay is reasonable given adjacent spend on tools like LinearB or Jellyfish. However, responsiveness signal is unproven and the space is crowded with incumbent metrics platforms pivoting to cover AI.",
-  "notes": "Weighted_total calc: (7\u00d70.20)+(7\u00d70.10)+(7\u00d70.20)+(8\u00d70.15)+(4\u00d70.15)+(7\u00d70.10)+(5\u00d70.05)+(6\u00d70.05) = 1.40+0.70+1.40+1.20+0.60+0.70+0.25+0.30 = 6.55 \u2192 rounded to 6.6.",
-  "scored_at": "2026-06-04T17:34:30+03:00",
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Meaningful productivity analytics requires integrating with each customer's specific toolchain (GitHub, Jira, Copilot telemetry, IDE plugins). Initial setup and calibration is inherently per-customer manual work."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Engineering managers will have specific questions about metric interpretation, benchmarks, and anomalies \u2014 requiring ongoing human-judgement support."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable (CTOs / EM at 10-500 engineer companies) and they do spend on engineering tooling, but building a credible AI productivity analytics layer requires deep integrations with each customer's stack \u2014 IDE plugins, VCS telemetry, CI pipelines \u2014 that are far beyond Claude + a form + Stripe. Operational autonomy is low because onboarding every team will require custom configuration. Total drops to 3.0 after penalties, well below the validate threshold.",
+  "solution_plan": "Not viable for a solo non-technical operator with this factory. A trustworthy productivity-measurement layer requires telemetry agents deployed inside customers' development environments, per-customer calibration sessions, and ongoing metric-interpretation support. None of these steps can run autonomously via Claude + a static form. A funded devtools startup with engineering capacity is the right vehicle for this opportunity \u2014 not this factory.",
+  "notes": "Fails operational_autonomy_min (4 < 7) and buildability_with_ai_min (4 < 6) build gates. Dropped on total score alone (3.0 < 5.5).",
+  "scored_at": "2026-06-04T20:02:02+03:00",
   "model_version": "claude-sonnet-4-6"
 }

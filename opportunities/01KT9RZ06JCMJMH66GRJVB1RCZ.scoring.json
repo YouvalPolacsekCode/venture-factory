@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KT9RZ06JCMJMH66GRJVB1RCZ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 3,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Target is general consumers migrating off Google Photos \u2014 a B2C tool that needs thousands of downloads to generate meaningful revenue, with essentially zero willingness to pay for data export utilities."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "Google Takeout frustration is real but low-frequency (people export their data maybe once or twice in their lives during a platform migration) and buyers are consumers who overwhelmingly expect this type of utility to be free. There are already free open-source tools (Porte, various scripts) that partially address this. The buyer has no budget line for a data export helper, and a solo operator cannot reach enough consumers cost-effectively to monetize it.",
+  "solution_plan": "Not recommended for build. Even though the pain is genuine, it's a one-time consumer problem \u2014 people export from Google once and never pay for a utility that does it. The category is dominated by free open-source tools, and there is no business model that works for a solo operator here. You cannot sell a subscription for a one-time migration task to consumers who expect free tools. Drop.",
+  "notes": "buyer_clarity fails build_gate (scored 3, floor is 6). willingness_to_pay fails build_gate (scored 3, floor is 5). operational_autonomy fails build_gate (scored 5, floor is 7). Total well below min_total_to_validate.",
+  "scored_at": "2026-06-04T20:02:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -103,16 +103,21 @@ def _build_gates():
 
 def _realistic(per_dim, gates):
     """Derived 'realistic for a solo operator' verdict from the build gates.
-    yes  = clears every gate; no = misses one or more (names the weak legs);
-    None = not scored under the current model yet."""
+    yes  = every gate is scored AND clears its floor;
+    no   = at least one scored gate misses its floor (names the weak legs);
+    None = not scored on any gate, or not scored on all gates yet (older model)
+           — we don't claim 'yes' from a partial check."""
     if not gates:
         return None
-    present = [k for k in gates if isinstance(per_dim.get(k), (int, float))]
-    if not present:
+    scored = {k: per_dim[k] for k in gates if isinstance(per_dim.get(k), (int, float))}
+    if not scored:
         return None
-    weak = [_GATE_LABELS.get(k, k) for k in gates
-            if isinstance(per_dim.get(k), (int, float)) and per_dim[k] < gates[k]]
-    return {"verdict": "no" if weak else "yes", "weak": weak}
+    weak = [_GATE_LABELS.get(k, k) for k, v in scored.items() if v < gates[k]]
+    if weak:
+        return {"verdict": "no", "weak": weak}
+    if len(scored) < len(gates):
+        return None  # passes what was scored, but not scored on every gate — don't overclaim
+    return {"verdict": "yes", "weak": []}
 
 
 # ---------------------------------------------------------------------------

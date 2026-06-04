@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KT9RZ073K8W8W5PB5XW3KX20",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 9,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 6
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a reasonably specific CTO or founder at a 1\u201350 person startup who has demonstrated willingness to pay for adjacent HR tools (Lever, Greenhouse, even Notion HR templates have paid tiers), and they are reachable via LinkedIn and startup communities. The service \u2014 generating a role definition, a structured interview scorecard, and a question bank from a short brief \u2014 is squarely in Claude's wheelhouse and could run largely autonomously once intake is wired. The deciding factor holding this at validate rather than build is zero responsiveness signal and moderate defensibility: the output is a document, and competitors like ChatGPT or Notion AI can replicate it with a good prompt, so price sensitivity is high and retention will be low without a workflow hook.",
+  "solution_plan": "This is an AI-powered interview kit generator: a hiring manager pastes a one-paragraph job description (or answers five questions on a form) and receives a role definition, a structured scorecard, and 15 interview questions tailored to the role. The factory builds it as a Claude prompt chain behind a simple intake form (Typeform or a static HTML page), a Stripe payment link ($19\u201339 one-time or $49/mo unlimited), and an email delivery step that sends the PDF kit within minutes. To sell, the factory drafts cold outreach to CTOs and Ops leads at seed/Series-A startups (sourced from LinkedIn or Crunchbase), and Youval approves each batch before it goes out. Delivery and billing are fully automated; the only recurring human touch is approving outreach batches and occasional Stripe refunds. Validate first by posting a manual version on a startup Slack or Reddit r/startups and charging $19 before building any automation.",
+  "notes": "All build_gate floors technically met at validate threshold. Advance to build only after at least 5 paying customers confirm the framing and price point.",
+  "scored_at": "2026-06-04T20:03:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

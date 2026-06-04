@@ -10,6 +10,14 @@ Batch of operator-requested changes:
 - **Dashboard: "Realistic for a solo operator?" badge.** Derived in `build_dashboard.py` from the scoring `build_gates` (build it / find who pays / get them to pay / run it hands-off): ✅ Yes when all clear, ⚠️ Not yet (names the weak leg) otherwise. Shown on each card alongside the plan.
 - **Dashboard: Refresh button + legend.** A header **↻ Refresh** re-pulls the latest published `data.json` on command (cache-busted). New **"How to read this page"** legend explains stages (drop/validate/build/scale), the realistic badge, and — answering "when is something on me?" — that the only thing requiring the operator is the **Action needed** (approvals) box, which stays empty until the build/launch phases exist.
 
+## Fixes — scoring batch overflow + realistic badge over-claim (2026-06-04)
+
+Two bugs found after the first cross-domain cloud run (market_radar wrote 8 ideas but scoring produced only 1):
+- **Scoring truncation.** With `batch_size: 15` and the new multi-sentence `solution_plan`, one scoring call's JSON array exceeded `max_tokens: 4096` and got truncated, so only the first object parsed. Fixed in `config/agent_models.yaml`: `opportunity_scoring` now `max_tokens: 6144, batch_size: 5`. Re-scored all 14 ideas cleanly (14/14 now carry `solution_plan` + the v2 autonomy/buyer dims).
+- **Realistic badge over-claim.** `_realistic` returned "✅ yes" when it had only checked the gate dims that happened to be present (so v1-scored ideas missing `operational_autonomy`/`buyer_clarity` falsely showed ✅). Now a "yes" requires every gate to be scored AND passing; partial coverage returns no badge instead of overclaiming.
+
+Effect: under the v2 weighting the bar is honestly high — most discovered pains land at `drop` (e.g. the AI-code-review idea fell 7.3→3.9 once `operational_autonomy=5` + human-fulfillment penalties applied), and the current top idea is a non-dev workplace/management one. Thresholds/penalties are tunable in `config/scoring_model.yaml` if the operator wants more ideas to clear `validate`/`build`.
+
 ## Scoring v2 — autonomy + commercial-reality criteria; friendlier dashboard (2026-06-04)
 
 **Selection criteria (`config/scoring_model.yaml`, schema_version 2).** Rebalanced the weighted model so two things are now first-class, addressing "can Claude+this code run it alone with minimal Youval?" and "can this actually sell / who buys / is it legit?":

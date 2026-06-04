@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KT9RZ07EWEHND6M7JR37BFW0",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "Gmail users experiencing phantom email deletion are real and frustrated, but the buyer profile is diffuse (any Gmail user) with very weak willingness-to-pay signal \u2014 people expect Gmail problems to be fixed by Google for free, not solved by a paid third-party tool. Building a reliable diagnostic tool requires Gmail OAuth, ongoing maintenance against API changes, and careful compliance with Google's developer policies; the operational autonomy is low because diagnosing novel filter/routing bugs requires human investigation per case. The deciding factor is the combination of a consumer buyer with no payment habit, Google API dependency risk, and the need for per-case human judgement in support.",
+  "solution_plan": "This would be a Chrome extension or OAuth web app that reads a user's Gmail filters, labels, and routing rules and surfaces anomalies. While Claude could help draft the diagnostic logic, the actual build requires JavaScript extension development, OAuth integration, and ongoing maintenance against Gmail API changes \u2014 not feasible for a non-technical operator without engineering support. More importantly, individual Gmail users almost never pay for inbox tools; the addressable paid market is narrow. Google could also break or block the integration at any time. This is not a viable autonomous micro-service for this factory. Recommend dropping.",
+  "notes": "Total below min_total_to_validate. Build_gate floors unmet: operational_autonomy (4 < 7), buildability_with_ai (5 < 6), buyer_clarity (5 < 6), willingness_to_pay (3 < 5).",
+  "scored_at": "2026-06-04T20:03:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

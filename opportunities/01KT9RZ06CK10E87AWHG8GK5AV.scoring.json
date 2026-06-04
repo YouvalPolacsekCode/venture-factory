@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KT9RZ06CK10E87AWHG8GK5AV",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 broken code generation from OpenAPI specs costs Rust teams meaningful hours \u2014 but solving it requires building and maintaining a high-quality code generator that deeply understands Rust's trait system, axum, and the OpenAPI spec. This is sophisticated open-source developer tooling, not a Claude-prompt-and-landing-page product. Willingness to pay is weak because developers expect code generation tools to be free or part of a larger paid platform. Operational autonomy is critically low: every new OpenAPI version, Rust edition, or axum release requires engineering maintenance.",
+  "solution_plan": "Not recommended for build. A reliable Rust OpenAPI server code generator requires deep expertise in Rust's type system and ongoing maintenance as the ecosystem evolves \u2014 this is a full engineering project, not something the factory can ship in a week. The buyers (Rust backend developers) typically expect such tools to be free/open-source or bundled into a larger paid API platform. A solo non-technical operator has no realistic path to build or maintain this. Drop.",
+  "notes": "buildability_with_ai fails build_gate (scored 2, floor is 6). operational_autonomy fails build_gate (scored 2, floor is 7). buyer_clarity fails build_gate (scored 5, floor is 6). Total below min_total_to_validate.",
+  "scored_at": "2026-06-04T20:02:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

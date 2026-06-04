@@ -1,21 +1,35 @@
 {
   "opportunity_id": "01KT9GW58MDVK6535FFDEMZFKN",
   "per_dimension": {
-    "pain_severity": 9,
+    "pain_severity": 8,
     "pain_frequency": 7,
-    "willingness_to_pay": 8,
-    "lead_reachability": 7,
-    "responsiveness_signal": 5,
-    "buildability_with_ai": 8,
-    "defensibility": 6,
-    "founder_fit": 6
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 5
   },
-  "weighted_total": 7.3,
-  "penalties_applied": [],
-  "total": 7.3,
-  "recommended_stage": "build",
-  "rationale": "Silent AI-introduced bugs in payment/auth paths are a high-severity, recurring pain with active community discussion (47 comments confirms resonance). Teams already pay for code-review and security tooling, so WTP is strong. Claude is well-suited to diff-level LLM review, making this highly buildable as an AI-native service.",
-  "notes": "Weighted_total calc: (9\u00d70.20)+(7\u00d70.10)+(8\u00d70.20)+(7\u00d70.15)+(5\u00d70.15)+(8\u00d70.10)+(6\u00d70.05)+(6\u00d70.05) = 1.80+0.70+1.60+1.05+0.75+0.80+0.30+0.30 = 7.30.",
-  "scored_at": "2026-06-04T17:34:30+03:00",
+  "weighted_total": 5.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Per-repo onboarding requires identifying which modules are 'high-risk zones' (payments, auth) in each customer's codebase \u2014 a human configuration and calibration step that cannot be fully automated without customer involvement."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "False positives and missed catches in security-critical code paths will generate high-anxiety, human-judgement support requests from engineering leads."
+    }
+  ],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is severe and well-evidenced (47-comment thread, recurring industry pattern), and the buyer \u2014 tech leads at AI-assisted startups \u2014 does pay for code quality tooling. However, a credible AI-diff review layer for payment and auth code requires per-repo configuration to identify sensitive zones, which is inherently manual per-customer work. Operational autonomy scores 5, well below the build gate floor of 7, and the heavy onboarding drops the total to 3.9 after penalties.",
+  "solution_plan": "Not viable in current form for a solo non-technical operator. The core value proposition \u2014 targeted review of AI-generated diffs in high-risk code paths \u2014 requires integrating with each customer's CI/CD pipeline and tagging their specific sensitive modules. That onboarding is not automatable via Claude + a form. A stripped-down version (e.g. a GitHub Action that sends AI-generated diffs to Claude for a generic security review) could be an open-source project but is unlikely to generate subscription revenue without the custom-zone intelligence that makes it trustworthy.",
+  "notes": "Fails operational_autonomy_min (5 < 7) build gate. Total also drops to 3.9 after penalties, below validate threshold.",
+  "scored_at": "2026-06-04T20:02:02+03:00",
   "model_version": "claude-sonnet-4-6"
 }

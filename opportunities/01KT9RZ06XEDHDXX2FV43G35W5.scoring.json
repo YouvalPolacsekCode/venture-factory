@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KT9RZ06XEDHDXX2FV43G35W5",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 6
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent for solo developers iterating on SQLite schemas, but developer tooling at this scope has almost no willingness-to-pay signal \u2014 the target audience expects free CLI tools and VS Code extensions, and multiple free open-source alternatives (Flyway, Alembic, custom watch scripts) already exist. The buyer is a solo developer, a notoriously difficult monetisation target. The deciding factor is the near-zero commercial signal combined with a delivery model that would require ongoing technical maintenance (detecting schema diffs, applying safe migrations) that Claude cannot fully own without deep database engine expertise baked into code \u2014 operational autonomy is low because support tickets would require technical human judgement.",
+  "solution_plan": "This is a watch-mode SQLite schema migration CLI. The factory could generate a prompt-driven specification and a simple landing page with a waitlist form, but the actual tool is a pure software artefact (a compiled CLI or VS Code extension) that requires code authoring, versioned releases, and ongoing bug fixes \u2014 not something Claude can build and maintain as a self-running service. Selling to individual developers via Product Hunt or HN is possible but converting them to paid users is extremely hard in this category. There is no autonomous delivery loop: every support request ('why did my migration fail?') needs a human developer to debug. A non-technical solo operator cannot realistically build, ship, or maintain a developer CLI without an engineering co-founder. Recommend dropping unless a paid B2B angle (e.g. SQLite-backed SaaS teams) with a clear budget holder is identified.",
+  "notes": "buyer_clarity below build_gate floor (5 < 6); willingness_to_pay below build_gate floor (2 < 5); operational_autonomy below build_gate floor (5 < 7). Total also below min_total_to_validate threshold.",
+  "scored_at": "2026-06-04T20:03:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

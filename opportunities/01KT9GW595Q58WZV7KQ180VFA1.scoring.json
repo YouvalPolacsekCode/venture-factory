@@ -2,26 +2,29 @@
   "opportunity_id": "01KT9GW595Q58WZV7KQ180VFA1",
   "per_dimension": {
     "pain_severity": 5,
-    "pain_frequency": 6,
+    "pain_frequency": 7,
     "willingness_to_pay": 4,
-    "lead_reachability": 5,
-    "responsiveness_signal": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
     "buildability_with_ai": 7,
+    "operational_autonomy": 6,
     "defensibility": 4,
-    "founder_fit": 4
+    "founder_fit": 5
   },
-  "weighted_total": 4.8,
+  "weighted_total": 4.7,
   "penalties_applied": [
     {
       "name": "b2c_at_scale_needed",
       "deduction": 1.0,
-      "reason": "ESL writing practice is a B2C subscription; sustainable revenue requires a large consumer user base."
+      "reason": "Target segment is individual ESL learners \u2014 a consumer subscription model requires thousands of paying users to generate meaningful revenue, and consumer edtech churn is notoriously high."
     }
   ],
-  "total": 3.8,
+  "total": 3.7,
   "recommended_stage": "drop",
-  "rationale": "The product gap between Duolingo and essay tutors is genuine, but the target segment is fragmented globally, WTP for language-learning apps is structurally low (Duolingo's freemium conditions the market), and reaching qualifying leads at scale is costly. AI buildability is a strength but not enough to offset the B2C scale requirement and weak monetization signals.",
-  "notes": "Weighted_total calc: (5\u00d70.20)+(6\u00d70.10)+(4\u00d70.20)+(5\u00d70.15)+(3\u00d70.15)+(7\u00d70.10)+(4\u00d70.05)+(4\u00d70.05) = 1.00+0.60+0.80+0.75+0.45+0.70+0.20+0.20 = 4.70 \u2192 4.8 after rounding individual terms. After penalty: 4.80\u22121.00 = 3.80.",
-  "scored_at": "2026-06-04T17:34:30+03:00",
+  "rationale": "The buyer here is an individual adult learner \u2014 a consumer segment with weak willingness to pay for writing tools when free alternatives (ChatGPT, Grammarly free tier, countless YouTube channels) exist. There is no hard evidence consumers pay for this at the target price point: Duolingo is freemium and competes at $0 effective cost. Operational autonomy reaches only 6 because gamification state, streaks, and adaptive progression require stateful per-user logic that needs continuous maintenance and content investment, not just one-off Claude calls.",
+  "solution_plan": "Not recommended for build. The core problem is that individual ESL learners are a very hard-to-monetize consumer segment: they expect free or near-free tools, acquisition costs are high, and the market leader (Duolingo) is free. Even if Claude can generate writing prompts and grade responses automatically, you would need thousands of paying subscribers to cover your time \u2014 and consumer subscription retention in edtech is poor. A solo non-technical operator cannot realistically reach and convert enough users to make this viable without significant paid marketing spend. Drop this and look for the same pain in a B2B framing (e.g., corporate English training buyers) where a named budget exists.",
+  "notes": "buyer_clarity fails build_gate (scored 3, floor is 6). willingness_to_pay fails build_gate (scored 4, floor is 5). Total also below min_total_to_validate threshold of 5.5.",
+  "scored_at": "2026-06-04T20:02:59+03:00",
   "model_version": "claude-sonnet-4-6"
 }

@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-04T16:57:33+00:00",
-    "idt": "2026-06-04T19:57:33+03:00"
+    "utc": "2026-06-04T17:03:58+00:00",
+    "idt": "2026-06-04T20:03:58+03:00"
   },
   "funnel": {
     "candidates": 14,
-    "scored": 7,
+    "scored": 14,
     "validated": 0,
     "build_decisions": {},
     "build_now": 0,
@@ -14,116 +14,51 @@
   },
   "top_opportunities": [
     {
-      "id": "01KT9GW58MDVK6535FFDEMZFKN",
-      "problem_statement": "AI coding agents silently introduce subtle bugs in high-stakes code paths (payments, auth, data integrity) that automated tests miss, and teams have no targeted review or guardrail layer for AI-generated changes in these critical zones.",
-      "target_segment": "Senior engineers and tech leads at startups and scaleups running AI-assisted development on production services handling payments or sensitive data",
-      "total": 7.3,
-      "recommended_stage": "build",
-      "rationale": "Silent AI-introduced bugs in payment/auth paths are a high-severity, recurring pain with active community discussion (47 comments confirms resonance). Teams already pay for code-review and security tooling, so WTP is strong. Claude is well-suited to diff-level LLM review, making this highly buildable as an AI-native service.",
-      "solution_plan": "",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Will pay": 8,
-        "Buildable": 8,
-        "Pain": 9
-      },
-      "verdict": null,
-      "source_type": "other",
-      "source_url": "https://dev.to/mickyarun/ai-agents-are-great-at-80-of-our-code-the-other-20-is-why-we-still-need-seniors-3lh5",
-      "discovered_at": "2026-06-04T17:33:54+03:00"
-    },
-    {
-      "id": "01KT9GW587TY14F9D9AXNVMKVQ",
-      "problem_statement": "Engineering teams lack reliable metrics and observability to measure whether AI coding assistants actually improve developer productivity, making it impossible to justify ROI or detect regressions in output quality.",
-      "target_segment": "Engineering managers and CTOs at software companies with 10-500 engineers adopting AI coding tools",
-      "total": 6.6,
+      "id": "01KT9RZ073K8W8W5PB5XW3KX20",
+      "problem_statement": "CTOs and managers at small companies are regularly thrown into unplanned interviews with no defined role, no job spec, and no structured process — leading to poor hiring decisions and wasted time for both sides.",
+      "target_segment": "First-time or non-HR hiring managers at startups and small companies (1–50 employees)",
+      "total": 5.8,
       "recommended_stage": "validate",
-      "rationale": "Engineering managers at AI-adopting companies genuinely feel the ROI-measurement gap, and this surfaces repeatedly in eng leadership conversations. Willingness to pay is reasonable given adjacent spend on tools like LinearB or Jellyfish. However, responsiveness signal is unproven and the space is crowded with incumbent metrics platforms pivoting to cover AI.",
-      "solution_plan": "",
+      "rationale": "The buyer is a reasonably specific CTO or founder at a 1–50 person startup who has demonstrated willingness to pay for adjacent HR tools (Lever, Greenhouse, even Notion HR templates have paid tiers), and they are reachable via LinkedIn and startup communities. The service — generating a role definition, a structured interview scorecard, and a question bank from a short brief — is squarely in Claude's wheelhouse and could run largely autonomously once intake is wired. The deciding factor holding…",
+      "solution_plan": "This is an AI-powered interview kit generator: a hiring manager pastes a one-paragraph job description (or answers five questions on a form) and receives a role definition, a structured scorecard, and 15 interview questions tailored to the role. The factory builds it as a Claude prompt chain behind a simple intake form (Typeform or a static HTML page), a Stripe payment link ($19–39 one-time or $49/mo unlimited), and an email delivery step that sends the PDF kit within minutes. To sell, the factory drafts cold outreach to CTOs and Ops leads at seed/Series-A startups (sourced from LinkedIn or Crunchbase), and Youval approves each batch before…",
       "realistic": {
         "verdict": "yes",
         "weak": []
       },
       "scores": {
-        "Will pay": 7,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=47294229",
-      "discovered_at": "2026-06-04T17:33:54+03:00"
-    },
-    {
-      "id": "01KT9GW58EMCGQBFQMZQ2QRGGM",
-      "problem_statement": "Repository owners and open-source maintainers who have explicit no-AI-generated-content policies have no platform-level controls to prevent AI bots (e.g., GitHub Copilot) from participating in code reviews or PR discussions, undermining their governance policies.",
-      "target_segment": "Open-source maintainers and enterprise repo owners on GitHub with AI-content policies",
-      "total": 4.4,
-      "recommended_stage": "drop",
-      "rationale": "The governance gap is real but affects a narrow, ideologically-motivated open-source maintainer segment that strongly resists paying for tooling. Willingness to pay is low, responsiveness is unproven, and GitHub itself is likely to close this gap natively. Does not clear the 5.5 validate threshold.",
-      "solution_plan": "",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Will pay": 3,
-        "Buildable": 6,
-        "Pain": 5
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 5,
+        "Buildable": 9,
+        "Pain": 6
       },
       "verdict": null,
       "source_type": "forum",
-      "source_url": "https://webapps.stackexchange.com/questions/182412/how-to-ban-copilot-from-github-repo",
-      "discovered_at": "2026-06-04T17:33:54+03:00"
-    },
-    {
-      "id": "01KT9GW58TSY9QNE47ZAZHYZYY",
-      "problem_statement": "Small teams and solo developers running MySQL need lightweight, free, easy-to-deploy database access auditing (who did what, when) but existing solutions are either enterprise-priced, complex to configure, or lack a usable UI.",
-      "target_segment": "Solo developers and small engineering teams (1-10 people) self-hosting MySQL for compliance or debugging purposes",
-      "total": 4.3,
-      "recommended_stage": "drop",
-      "rationale": "The segment explicitly wants free/open-source tooling, making a viable revenue model difficult. Pain is real but low-urgency for most small teams, and several existing free solutions (Percona Audit Log, general-purpose query loggers) partially satisfy the need. Does not clear the 5.5 validate threshold.",
-      "solution_plan": "",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "build it",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Will pay": 3,
-        "Buildable": 5,
-        "Pain": 5
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://softwarerecs.stackexchange.com/questions/95426/gratis-mysql-database-access-auditing",
-      "discovered_at": "2026-06-04T17:33:54+03:00"
+      "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
     },
     {
       "id": "01KT9GW58ZFM53Z9G32RK01TVM",
       "problem_statement": "MacBook users frequently experience unexpected battery drain and sleep failures but Apple's built-in diagnostics do not provide a historical, human-readable explanation of what prevented sleep or caused power spikes, forcing users to diagnose blindly.",
       "target_segment": "MacBook Pro and MacBook Air power users, developers, and professionals who rely on battery life and want actionable power-management diagnostics",
-      "total": 3.8,
+      "total": 4.7,
       "recommended_stage": "drop",
-      "rationale": "While the HN complaint pattern is real, this is a consumer indie-app play with low WTP (users expect free or $5 one-time), no clear B2B angle, and requires B2C scale. The B2C penalty correctly reflects that the revenue model is fragile at small user counts.",
-      "solution_plan": "",
+      "rationale": "MacBook power users do pay for indie utilities (Amphetamine, CleanMyMac, etc.), giving some willingness-to-pay signal (score 5), but the buyer is a broad consumer rather than a named B2B/prosumer with a budget line (buyer clarity 5). More critically, building a reliable macOS system-level tool that reads power and sleep event history requires native macOS APIs and a distributable app — not something buildable via Claude + a web form + Stripe. Total of 4.7 falls below the validate threshold of 5…",
+      "solution_plan": "Not viable for this factory. A macOS menu-bar diagnostic app requires native macOS development (Swift/Objective-C or an Electron wrapper with OS-level API access), App Store distribution or notarization, and OS-version compatibility maintenance. None of that is buildable with Claude + a landing page + Stripe in a week by a non-technical solo operator. This is a valid indie-developer opportunity but requires a developer co-founder or pre-built macOS app expertise.",
       "realistic": {
         "verdict": "no",
         "weak": [
-          "get them to pay"
+          "run it hands-off",
+          "build it",
+          "find who pays"
         ]
       },
       "scores": {
-        "Will pay": 4,
-        "Buildable": 6,
-        "Pain": 5
+        "Who pays": 5,
+        "Runs alone": 5,
+        "Will pay": 5,
+        "Buildable": 4,
+        "Pain": 6
       },
       "verdict": null,
       "source_type": "hn",
@@ -131,37 +66,41 @@
       "discovered_at": "2026-06-04T17:33:54+03:00"
     },
     {
-      "id": "01KT9GW595Q58WZV7KQ180VFA1",
-      "problem_statement": "Adult ESL learners want a gamified, progressive writing practice tool that scales from sentences to full paragraphs and essays, but no mainstream app bridges the gap between micro-drill tools like Duolingo and unstructured free writing.",
-      "target_segment": "Adult non-native English speakers (B1-C1 level) seeking structured, gamified long-form writing practice, including self-hosters",
-      "total": 3.8,
+      "id": "01KT9RZ06XEDHDXX2FV43G35W5",
+      "problem_statement": "Developers iterating rapidly on SQLite schemas during early-stage development have no watch-mode tool that automatically detects schema file changes and applies non-destructive migrations, forcing them to manually nuke and recreate the database on each iteration.",
+      "target_segment": "Solo developers and small teams using SQLite for local development or prototyping, particularly in Python, Rust, or JS stacks",
+      "total": 4.4,
       "recommended_stage": "drop",
-      "rationale": "The product gap between Duolingo and essay tutors is genuine, but the target segment is fragmented globally, WTP for language-learning apps is structurally low (Duolingo's freemium conditions the market), and reaching qualifying leads at scale is costly. AI buildability is a strength but not enough to offset the B2C scale requirement and weak monetization signals.",
-      "solution_plan": "",
+      "rationale": "The pain is real and frequent for solo developers iterating on SQLite schemas, but developer tooling at this scope has almost no willingness-to-pay signal — the target audience expects free CLI tools and VS Code extensions, and multiple free open-source alternatives (Flyway, Alembic, custom watch scripts) already exist. The buyer is a solo developer, a notoriously difficult monetisation target. The deciding factor is the near-zero commercial signal combined with a delivery model that would requ…",
+      "solution_plan": "This is a watch-mode SQLite schema migration CLI. The factory could generate a prompt-driven specification and a simple landing page with a waitlist form, but the actual tool is a pure software artefact (a compiled CLI or VS Code extension) that requires code authoring, versioned releases, and ongoing bug fixes — not something Claude can build and maintain as a self-running service. Selling to individual developers via Product Hunt or HN is possible but converting them to paid users is extremely hard in this category. There is no autonomous delivery loop: every support request ('why did my migration fail?') needs a human developer to debug.…",
       "realistic": {
         "verdict": "no",
         "weak": [
+          "run it hands-off",
+          "find who pays",
           "get them to pay"
         ]
       },
       "scores": {
-        "Will pay": 4,
-        "Buildable": 7,
+        "Who pays": 5,
+        "Runs alone": 5,
+        "Will pay": 2,
+        "Buildable": 6,
         "Pain": 5
       },
       "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://softwarerecs.stackexchange.com/questions/95411/english-writing-practice-site-or-app-like-duolingo-but-longer",
-      "discovered_at": "2026-06-04T17:33:54+03:00"
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=40237443",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
     },
     {
-      "id": "01KT9RZ065WMS0EYH4CMC7PNQ7",
-      "problem_statement": "Developers monitoring network activity lack a single tool that combines per-socket/process transfer rate (current and accumulated) with a modern, usable terminal UI — existing tools like jnettop are functionally adequate but have poor UX.",
-      "target_segment": "Linux/macOS developers and sysadmins doing network diagnostics on the command line",
-      "total": 3.6,
+      "id": "01KT9RZ07EWEHND6M7JR37BFW0",
+      "problem_statement": "Gmail users experience unexplained automatic deletion of legitimate emails and replies with no identifiable filter rule, leaving them unable to diagnose or fix the issue through standard Gmail tooling.",
+      "target_segment": "Business professionals and power users relying on Gmail for critical communications",
+      "total": 4.3,
       "recommended_stage": "drop",
-      "rationale": "The buyers here are individual developers and sysadmins — a segment that overwhelmingly expects CLI tools to be free and open-source; there is essentially zero willingness-to-pay signal for a TUI network monitor. Operational autonomy is very low because the product is a downloadable tool, not a service Claude can deliver and bill automatically. Even if built and polished, monetisation requires a large free-user funnel that a solo non-technical operator cannot realistically sustain.",
-      "solution_plan": "Not recommended for build. This is a developer utility that lives and dies by GitHub stars and open-source adoption. A solo non-technical operator using a Claude factory cannot realistically build a native TUI application (it requires systems-level Rust/C code, OS-level socket APIs, testing on multiple Linux distros) nor monetise it — the market expects this kind of tool to be free. Attempting to sell it as a paid SaaS or paid download would face immediate rejection from the target segment.",
+      "rationale": "Gmail users experiencing phantom email deletion are real and frustrated, but the buyer profile is diffuse (any Gmail user) with very weak willingness-to-pay signal — people expect Gmail problems to be fixed by Google for free, not solved by a paid third-party tool. Building a reliable diagnostic tool requires Gmail OAuth, ongoing maintenance against API changes, and careful compliance with Google's developer policies; the operational autonomy is low because diagnosing novel filter/routing bugs…",
+      "solution_plan": "This would be a Chrome extension or OAuth web app that reads a user's Gmail filters, labels, and routing rules and surfaces anomalies. While Claude could help draft the diagnostic logic, the actual build requires JavaScript extension development, OAuth integration, and ongoing maintenance against Gmail API changes — not feasible for a non-technical operator without engineering support. More importantly, individual Gmail users almost never pay for inbox tools; the addressable paid market is narrow. Google could also break or block the integration at any time. This is not a viable autonomous micro-service for this factory. Recommend dropping.",
       "realistic": {
         "verdict": "no",
         "weak": [
@@ -173,37 +112,318 @@
       },
       "scores": {
         "Who pays": 5,
+        "Runs alone": 4,
+        "Will pay": 3,
+        "Buildable": 5,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webapps.stackexchange.com/questions/182405/some-emails-in-gmail-are-auto-deleted-but-there-is-no-filter",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "id": "01KT9GW58EMCGQBFQMZQ2QRGGM",
+      "problem_statement": "Repository owners and open-source maintainers who have explicit no-AI-generated-content policies have no platform-level controls to prevent AI bots (e.g., GitHub Copilot) from participating in code reviews or PR discussions, undermining their governance policies.",
+      "target_segment": "Open-source maintainers and enterprise repo owners on GitHub with AI-content policies",
+      "total": 4.1,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real but narrow: open-source maintainers with AI-content policies who encounter Copilot bot activity on their repos. This population is a mix of unpaid volunteers and enterprise GitHub admins — the former won't pay for a governance tool, and the latter are likely to wait for GitHub's own platform controls. Willingness to pay is weak (score 3) and buyer clarity is poor (score 4) because the paying sub-segment is hard to isolate. Total of 4.1 falls below the validate threshold.",
+      "solution_plan": "Not recommended for pursuit. The addressable paying audience — enterprise GitHub admins with an explicit AI-content policy AND budget for a third-party enforcement tool — is too small and too hard to reach to justify building. GitHub itself is the natural platform to solve this, and any third-party solution is likely to be deprecated when GitHub ships native controls.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 4,
+        "Runs alone": 6,
+        "Will pay": 3,
+        "Buildable": 5,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webapps.stackexchange.com/questions/182412/how-to-ban-copilot-from-github-repo",
+      "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "id": "01KT9GW58MDVK6535FFDEMZFKN",
+      "problem_statement": "AI coding agents silently introduce subtle bugs in high-stakes code paths (payments, auth, data integrity) that automated tests miss, and teams have no targeted review or guardrail layer for AI-generated changes in these critical zones.",
+      "target_segment": "Senior engineers and tech leads at startups and scaleups running AI-assisted development on production services handling payments or sensitive data",
+      "total": 3.9,
+      "recommended_stage": "drop",
+      "rationale": "The pain is severe and well-evidenced (47-comment thread, recurring industry pattern), and the buyer — tech leads at AI-assisted startups — does pay for code quality tooling. However, a credible AI-diff review layer for payment and auth code requires per-repo configuration to identify sensitive zones, which is inherently manual per-customer work. Operational autonomy scores 5, well below the build gate floor of 7, and the heavy onboarding drops the total to 3.9 after penalties.",
+      "solution_plan": "Not viable in current form for a solo non-technical operator. The core value proposition — targeted review of AI-generated diffs in high-risk code paths — requires integrating with each customer's CI/CD pipeline and tagging their specific sensitive modules. That onboarding is not automatable via Claude + a form. A stripped-down version (e.g. a GitHub Action that sends AI-generated diffs to Claude for a generic security review) could be an open-source project but is unlikely to generate subscription revenue without the custom-zone intelligence that makes it trustworthy.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 5,
+        "Will pay": 6,
+        "Buildable": 6,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://dev.to/mickyarun/ai-agents-are-great-at-80-of-our-code-the-other-20-is-why-we-still-need-seniors-3lh5",
+      "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "id": "01KT9RZ06CK10E87AWHG8GK5AV",
+      "problem_statement": "Rust developers using OpenAPI spec files cannot reliably generate correct, trait-compliant server code; the dominant tool (OpenAPI Generator) produces broken Rust output with known unresolved issues, leaving teams with no production-ready alternative.",
+      "target_segment": "Rust backend developers building REST APIs from OpenAPI specs, in small-to-mid-size engineering teams",
+      "total": 3.9,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real — broken code generation from OpenAPI specs costs Rust teams meaningful hours — but solving it requires building and maintaining a high-quality code generator that deeply understands Rust's trait system, axum, and the OpenAPI spec. This is sophisticated open-source developer tooling, not a Claude-prompt-and-landing-page product. Willingness to pay is weak because developers expect code generation tools to be free or part of a larger paid platform. Operational autonomy is critic…",
+      "solution_plan": "Not recommended for build. A reliable Rust OpenAPI server code generator requires deep expertise in Rust's type system and ongoing maintenance as the ecosystem evolves — this is a full engineering project, not something the factory can ship in a week. The buyers (Rust backend developers) typically expect such tools to be free/open-source or bundled into a larger paid API platform. A solo non-technical operator has no realistic path to build or maintain this. Drop.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 2,
+        "Will pay": 4,
+        "Buildable": 2,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://softwarerecs.stackexchange.com/questions/95419/searching-for-a-rust-rest-server-generator-to-replace-openapi-generator-one-that",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "id": "01KT9GW595Q58WZV7KQ180VFA1",
+      "problem_statement": "Adult ESL learners want a gamified, progressive writing practice tool that scales from sentences to full paragraphs and essays, but no mainstream app bridges the gap between micro-drill tools like Duolingo and unstructured free writing.",
+      "target_segment": "Adult non-native English speakers (B1-C1 level) seeking structured, gamified long-form writing practice, including self-hosters",
+      "total": 3.7,
+      "recommended_stage": "drop",
+      "rationale": "The buyer here is an individual adult learner — a consumer segment with weak willingness to pay for writing tools when free alternatives (ChatGPT, Grammarly free tier, countless YouTube channels) exist. There is no hard evidence consumers pay for this at the target price point: Duolingo is freemium and competes at $0 effective cost. Operational autonomy reaches only 6 because gamification state, streaks, and adaptive progression require stateful per-user logic that needs continuous maintenance…",
+      "solution_plan": "Not recommended for build. The core problem is that individual ESL learners are a very hard-to-monetize consumer segment: they expect free or near-free tools, acquisition costs are high, and the market leader (Duolingo) is free. Even if Claude can generate writing prompts and grade responses automatically, you would need thousands of paying subscribers to cover your time — and consumer subscription retention in edtech is poor. A solo non-technical operator cannot realistically reach and convert enough users to make this viable without significant paid marketing spend. Drop this and look for the same pain in a B2B framing (e.g., corporate Eng…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 3,
+        "Runs alone": 6,
+        "Will pay": 4,
+        "Buildable": 7,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://softwarerecs.stackexchange.com/questions/95411/english-writing-practice-site-or-app-like-duolingo-but-longer",
+      "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "id": "01KT9RZ078RVZP2FXDT05WMF2W",
+      "problem_statement": "Power users running large local LLMs via Ollama cannot access advanced llama.cpp features like tensor overrides and sharded model loading, forcing them to use raw llama.cpp directly and losing Ollama's convenience layer.",
+      "target_segment": "ML engineers and enthusiasts running large local models on multi-GPU or heterogeneous hardware setups",
+      "total": 3.5,
+      "recommended_stage": "drop",
+      "rationale": "The audience is ML engineers and hardware enthusiasts running multi-GPU rigs — a small, technically sophisticated segment that builds its own tooling for free and has near-zero willingness to pay for a configuration wrapper. Buildability is very low: correctly exposing llama.cpp tensor and sharding flags requires deep C++/CUDA knowledge and ongoing compatibility work with upstream Ollama and llama.cpp releases, far beyond what Claude + prompts can produce or maintain. Operational autonomy is es…",
+      "solution_plan": "This is not a viable opportunity for a non-technical solo operator. The problem requires writing and maintaining low-level system software (C++, CUDA, model loading internals) that changes every time Ollama or llama.cpp ships a new version. Claude cannot build or maintain this, and there is no autonomous delivery loop possible — every support interaction involves hardware-specific debugging. Even if a wrapper could be built, ML engineers would use it for free or fork it; there is no identified paying buyer. Recommend dropping entirely.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 4,
+        "Runs alone": 2,
+        "Will pay": 3,
+        "Buildable": 3,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://github.com/ollama/ollama/issues/16515",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "id": "01KT9RZ06QWYQE71QARQEYBMRT",
+      "problem_statement": "Small IT teams managing Microsoft-centric environments need a self-hosted, enterprise-grade password manager that is affordable and demonstrably production-ready, but lack clear guidance on security maturity of available open-source options like Vaultwarden and Passbolt.",
+      "target_segment": "IT administrators and small-to-mid-size businesses managing shared credentials, particularly in Microsoft ecosystems",
+      "total": 3.4,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is real and identifiable — IT admins at SMBs with Microsoft environments do have budget for security tools and pay for managed services. However, the opportunity as framed is a deployment/consulting service, not an autonomous product: each customer engagement requires manual server setup, configuration, and security review that a human must perform. This fundamentally breaks the autonomy requirement — operational_autonomy only reaches 6 before penalties because the core deliverable is…",
+      "solution_plan": "Not recommended for build in current form. The real product here would be a 'Vaultwarden-in-a-box' opinionated setup guide or a managed hosting layer — but delivering it requires hands-on deployment work per customer (configuring servers, hardening, testing), which a Claude factory cannot automate away. If reframed as a fully automated self-serve SaaS (you host a Vaultwarden instance, customer signs up, gets credentials), operational autonomy improves, but then you are competing with Bitwarden Teams ($4/user/mo) directly with no differentiation. The strongest reframe would be an automated audit/compliance report for existing Vaultwarden/Pass…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 6,
+        "Will pay": 6,
+        "Buildable": 7,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://softwarerecs.stackexchange.com/questions/95409/enterprise-level-free-password-manager-solution",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "id": "01KT9RZ065WMS0EYH4CMC7PNQ7",
+      "problem_statement": "Developers monitoring network activity lack a single tool that combines per-socket/process transfer rate (current and accumulated) with a modern, usable terminal UI — existing tools like jnettop are functionally adequate but have poor UX.",
+      "target_segment": "Linux/macOS developers and sysadmins doing network diagnostics on the command line",
+      "total": 3.2,
+      "recommended_stage": "drop",
+      "rationale": "Developers and sysadmins want a polished TUI network monitor, but this is a developer tooling problem that requires systems-level code (kernel socket inspection, ncurses/ratatui TUI) — not something Claude prompts and a web form can build. Willingness to pay is near zero: the entire category of CLI monitoring tools is open-source and free (nethogs, iftop, jnettop), and developers strongly resist paying for tools in this space. The buyer is identifiable (sysadmin/dev) but has no established budg…",
+      "solution_plan": "Not recommended for build. This requires a native systems-programming tool (Rust/Go/C with kernel-level socket access and a terminal UI framework) — completely outside what Claude prompts and simple web pages can produce. The operator cannot build this without a developer writing code. Additionally, the target buyers do not pay for CLI tools — they use free open-source alternatives or build their own. Drop this opportunity.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 4,
         "Runs alone": 3,
         "Will pay": 2,
-        "Buildable": 4,
+        "Buildable": 2,
         "Pain": 4
       },
       "verdict": null,
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=46366838",
       "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "id": "01KT9GW587TY14F9D9AXNVMKVQ",
+      "problem_statement": "Engineering teams lack reliable metrics and observability to measure whether AI coding assistants actually improve developer productivity, making it impossible to justify ROI or detect regressions in output quality.",
+      "target_segment": "Engineering managers and CTOs at software companies with 10-500 engineers adopting AI coding tools",
+      "total": 3.0,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is real and identifiable (CTOs / EM at 10-500 engineer companies) and they do spend on engineering tooling, but building a credible AI productivity analytics layer requires deep integrations with each customer's stack — IDE plugins, VCS telemetry, CI pipelines — that are far beyond Claude + a form + Stripe. Operational autonomy is low because onboarding every team will require custom configuration. Total drops to 3.0 after penalties, well below the validate threshold.",
+      "solution_plan": "Not viable for a solo non-technical operator with this factory. A trustworthy productivity-measurement layer requires telemetry agents deployed inside customers' development environments, per-customer calibration sessions, and ongoing metric-interpretation support. None of these steps can run autonomously via Claude + a static form. A funded devtools startup with engineering capacity is the right vehicle for this opportunity — not this factory.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 4,
+        "Will pay": 5,
+        "Buildable": 4,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=47294229",
+      "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "id": "01KT9GW58TSY9QNE47ZAZHYZYY",
+      "problem_statement": "Small teams and solo developers running MySQL need lightweight, free, easy-to-deploy database access auditing (who did what, when) but existing solutions are either enterprise-priced, complex to configure, or lack a usable UI.",
+      "target_segment": "Solo developers and small engineering teams (1-10 people) self-hosting MySQL for compliance or debugging purposes",
+      "total": 2.8,
+      "recommended_stage": "drop",
+      "rationale": "The segment asking for this solution explicitly wants it free (the forum post asks for 'gratis' FOSS options), which is a clear signal of near-zero willingness to pay (score 2). The buyer is a solo developer or tiny team — the weakest paying buyer archetype. Total of 2.8 after penalties is far below the validate threshold. There is no commercial opportunity here worth pursuing.",
+      "solution_plan": "Not recommended. The community explicitly signals it wants a free/open-source solution, and the segment (solo devs, tiny teams) has minimal software budget. Any paid product here competes directly with free MySQL audit plugins and enterprise tools the target segment can't afford anyway. This is a valid open-source contribution but not a revenue-generating micro-service.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 3,
+        "Runs alone": 5,
+        "Will pay": 2,
+        "Buildable": 5,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://softwarerecs.stackexchange.com/questions/95426/gratis-mysql-database-access-auditing",
+      "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "id": "01KT9RZ06JCMJMH66GRJVB1RCZ",
+      "problem_statement": "Users who export their data via Google Takeout must manually download and reassemble many split archive files, then deal with significant photo duplication across albums, making migration or backup impractical without a dedicated tool.",
+      "target_segment": "General consumers and power users migrating away from Google Photos or backing up their Google data",
+      "total": 2.8,
+      "recommended_stage": "drop",
+      "rationale": "Google Takeout frustration is real but low-frequency (people export their data maybe once or twice in their lives during a platform migration) and buyers are consumers who overwhelmingly expect this type of utility to be free. There are already free open-source tools (Porte, various scripts) that partially address this. The buyer has no budget line for a data export helper, and a solo operator cannot reach enough consumers cost-effectively to monetize it.",
+      "solution_plan": "Not recommended for build. Even though the pain is genuine, it's a one-time consumer problem — people export from Google once and never pay for a utility that does it. The category is dominated by free open-source tools, and there is no business model that works for a solo operator here. You cannot sell a subscription for a one-time migration task to consumers who expect free tools. Drop.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 3,
+        "Runs alone": 5,
+        "Will pay": 3,
+        "Buildable": 5,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=41400732",
+      "discovered_at": "2026-06-04T19:55:15+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3246,
-    "last_7_days_usd": 0.3246,
-    "all_time_usd": 0.3246,
+    "today_usd": 0.4643,
+    "last_7_days_usd": 0.4643,
+    "all_time_usd": 0.4643,
     "by_day": [
       {
         "date": "2026-06-04",
-        "usd": 0.3246
+        "usd": 0.4643
       }
     ],
     "by_agent": [
       {
-        "agent": "market_radar",
-        "usd": 0.1303
+        "agent": "opportunity_scoring",
+        "usd": 0.2625
       },
       {
-        "agent": "opportunity_scoring",
-        "usd": 0.1228
+        "agent": "market_radar",
+        "usd": 0.1303
       },
       {
         "agent": "pain_validation",
@@ -260,7 +480,7 @@
           "succeeded": 2
         },
         "opportunity_scoring": {
-          "succeeded": 2
+          "succeeded": 3
         },
         "pain_validation": {
           "skipped": 1,

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KT9RZ078RVZP2FXDT05WMF2W",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.5,
+  "penalties_applied": [],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The audience is ML engineers and hardware enthusiasts running multi-GPU rigs \u2014 a small, technically sophisticated segment that builds its own tooling for free and has near-zero willingness to pay for a configuration wrapper. Buildability is very low: correctly exposing llama.cpp tensor and sharding flags requires deep C++/CUDA knowledge and ongoing compatibility work with upstream Ollama and llama.cpp releases, far beyond what Claude + prompts can produce or maintain. Operational autonomy is essentially zero because every model version bump or hardware configuration change would require expert human debugging. The deciding factor is that this is a complex open-source infrastructure problem, not a service that a non-technical operator could own.",
+  "solution_plan": "This is not a viable opportunity for a non-technical solo operator. The problem requires writing and maintaining low-level system software (C++, CUDA, model loading internals) that changes every time Ollama or llama.cpp ships a new version. Claude cannot build or maintain this, and there is no autonomous delivery loop possible \u2014 every support interaction involves hardware-specific debugging. Even if a wrapper could be built, ML engineers would use it for free or fork it; there is no identified paying buyer. Recommend dropping entirely.",
+  "notes": "Total well below min_total_to_validate. Multiple build_gate floors unmet: operational_autonomy (2 < 7), buildability_with_ai (3 < 6), buyer_clarity (4 < 6), willingness_to_pay (3 < 5).",
+  "scored_at": "2026-06-04T20:03:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

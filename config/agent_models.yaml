@@ -12,7 +12,9 @@ defaults:
 agents:
   market_radar:        { model: claude-sonnet-4-6, max_tokens: 4096 }
   pain_validation:     { model: claude-sonnet-4-6, max_tokens: 3072, batch_size: 10 }
-  opportunity_scoring: { model: claude-sonnet-4-6, max_tokens: 4096, batch_size: 15 }
+  # batch_size kept small: each scored idea now also emits a multi-sentence
+  # solution_plan, so fewer-per-call keeps the JSON array within max_tokens.
+  opportunity_scoring: { model: claude-sonnet-4-6, max_tokens: 6144, batch_size: 5 }
   cost_gain:           { model: claude-sonnet-4-6, max_tokens: 1024 }
   build_decisions:     { model: claude-opus-4-6,   max_tokens: 2048 }
   service_builder:     { model: claude-sonnet-4-6, max_tokens: 4096 }

@@ -1,0 +1,24 @@
+{
+  "id": "01KT9GW595Q58WZV7KQ180VFA1",
+  "discovered_at": "2026-06-04T17:33:54+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95411/english-writing-practice-site-or-app-like-duolingo-but-longer",
+    "snippet": "I liked Duolingo but the practice items are rather short, a word a sentence. I am looking for something that is also gamified but gradually involves the user into longer chunks of text to read and to write, that I can install or self host."
+  },
+  "problem_statement": "Adult ESL learners want a gamified, progressive writing practice tool that scales from sentences to full paragraphs and essays, but no mainstream app bridges the gap between micro-drill tools like Duolingo and unstructured free writing.",
+  "target_segment": "Adult non-native English speakers (B1-C1 level) seeking structured, gamified long-form writing practice, including self-hosters",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "esl",
+    "english-writing",
+    "gamification",
+    "language-learning",
+    "edtech",
+    "self-hosted",
+    "progressive-learning"
+  ],
+  "notes": "Signals an underserved niche between Duolingo (too short) and essay tutors (too expensive/manual). An AI-powered progressive writing trainer with gamification could be a subscription product.",
+  "status": "candidate"
+}

@@ -1,0 +1,21 @@
+{
+  "opportunity_id": "01KT9GW58MDVK6535FFDEMZFKN",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 5,
+    "buildability_with_ai": 8,
+    "defensibility": 6,
+    "founder_fit": 6
+  },
+  "weighted_total": 7.3,
+  "penalties_applied": [],
+  "total": 7.3,
+  "recommended_stage": "build",
+  "rationale": "Silent AI-introduced bugs in payment/auth paths are a high-severity, recurring pain with active community discussion (47 comments confirms resonance). Teams already pay for code-review and security tooling, so WTP is strong. Claude is well-suited to diff-level LLM review, making this highly buildable as an AI-native service.",
+  "notes": "Weighted_total calc: (9\u00d70.20)+(7\u00d70.10)+(8\u00d70.20)+(7\u00d70.15)+(5\u00d70.15)+(8\u00d70.10)+(6\u00d70.05)+(6\u00d70.05) = 1.80+0.70+1.60+1.05+0.75+0.80+0.30+0.30 = 7.30.",
+  "scored_at": "2026-06-04T17:34:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

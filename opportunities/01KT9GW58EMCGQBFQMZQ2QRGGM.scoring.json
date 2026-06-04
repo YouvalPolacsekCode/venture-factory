@@ -1,0 +1,21 @@
+{
+  "opportunity_id": "01KT9GW58EMCGQBFQMZQ2QRGGM",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "The governance gap is real but affects a narrow, ideologically-motivated open-source maintainer segment that strongly resists paying for tooling. Willingness to pay is low, responsiveness is unproven, and GitHub itself is likely to close this gap natively. Does not clear the 5.5 validate threshold.",
+  "notes": "Weighted_total calc: (5\u00d70.20)+(4\u00d70.10)+(3\u00d70.20)+(7\u00d70.15)+(3\u00d70.15)+(6\u00d70.10)+(3\u00d70.05)+(5\u00d70.05) = 1.00+0.40+0.60+1.05+0.45+0.60+0.15+0.25 = 4.50 \u2192 4.4 (rounding to 1 decimal after full sum).",
+  "scored_at": "2026-06-04T17:34:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01KT9GW58ZFM53Z9G32RK01TVM",
+  "discovered_at": "2026-06-04T17:33:54+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=44751318",
+    "snippet": "I wish there was a tool which let me go back through recent history, even just since the last 100% charge, and tell me why my machine was not sleeping or idling and what was consuming power. Apple has added some energy tools over the years but has never offered tools to explain system behaviour."
+  },
+  "problem_statement": "MacBook users frequently experience unexpected battery drain and sleep failures but Apple's built-in diagnostics do not provide a historical, human-readable explanation of what prevented sleep or caused power spikes, forcing users to diagnose blindly.",
+  "target_segment": "MacBook Pro and MacBook Air power users, developers, and professionals who rely on battery life and want actionable power-management diagnostics",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "macos",
+    "battery",
+    "power-management",
+    "sleep-diagnosis",
+    "macbook",
+    "developer-tools",
+    "system-observability"
+  ],
+  "notes": "Recurring HN complaint pattern. Tools like Amphetamine exist for prevention but not historical diagnosis. A lightweight menu-bar app with a power-event timeline could be a paid indie product.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KT9GW58MDVK6535FFDEMZFKN",
+  "discovered_at": "2026-06-04T17:33:54+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/mickyarun/ai-agents-are-great-at-80-of-our-code-the-other-20-is-why-we-still-need-seniors-3lh5",
+    "snippet": "We let AI agents loose on a payment platform. They crushed the boring stuff. Then they silently broke... [25 score, 47 comments \u2014 active discussion about AI agent failure modes in production codebases]"
+  },
+  "problem_statement": "AI coding agents silently introduce subtle bugs in high-stakes code paths (payments, auth, data integrity) that automated tests miss, and teams have no targeted review or guardrail layer for AI-generated changes in these critical zones.",
+  "target_segment": "Senior engineers and tech leads at startups and scaleups running AI-assisted development on production services handling payments or sensitive data",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agents",
+    "code-review",
+    "critical-path",
+    "payments",
+    "silent-bugs",
+    "ai-safety",
+    "devtools",
+    "senior-engineering"
+  ],
+  "notes": "47 comments signals real resonance. The '80/20 problem' of AI coding is a repeating theme. Opportunity: a static-analysis or LLM-review layer specifically for AI-generated diffs touching flagged high-risk modules.",
+  "status": "candidate"
+}

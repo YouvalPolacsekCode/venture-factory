@@ -1,0 +1,24 @@
+{
+  "id": "01KT9GW58EMCGQBFQMZQ2QRGGM",
+  "discovered_at": "2026-06-04T17:33:54+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182412/how-to-ban-copilot-from-github-repo",
+    "snippet": "How can I ban the user named Copilot from being able to access or make contributions to our GitHub repository? Our repo has a policy explicitly forbidding content generated from AI. The 'Block user' option is missing for 'Copilot'."
+  },
+  "problem_statement": "Repository owners and open-source maintainers who have explicit no-AI-generated-content policies have no platform-level controls to prevent AI bots (e.g., GitHub Copilot) from participating in code reviews or PR discussions, undermining their governance policies.",
+  "target_segment": "Open-source maintainers and enterprise repo owners on GitHub with AI-content policies",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-governance",
+    "github",
+    "copilot",
+    "repo-policy",
+    "access-control",
+    "ai-content-policy",
+    "open-source"
+  ],
+  "notes": "Niche but growing as more orgs adopt AI-content policies (legal, licensing, or cultural reasons). A browser extension or GitHub App that enforces AI-bot exclusion rules could fill this gap.",
+  "status": "candidate"
+}

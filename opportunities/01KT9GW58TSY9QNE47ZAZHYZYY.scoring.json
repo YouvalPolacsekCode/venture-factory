@@ -1,0 +1,21 @@
+{
+  "opportunity_id": "01KT9GW58TSY9QNE47ZAZHYZYY",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "lead_reachability": 6,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The segment explicitly wants free/open-source tooling, making a viable revenue model difficult. Pain is real but low-urgency for most small teams, and several existing free solutions (Percona Audit Log, general-purpose query loggers) partially satisfy the need. Does not clear the 5.5 validate threshold.",
+  "notes": "Weighted_total calc: (5\u00d70.20)+(5\u00d70.10)+(3\u00d70.20)+(6\u00d70.15)+(3\u00d70.15)+(5\u00d70.10)+(3\u00d70.05)+(4\u00d70.05) = 1.00+0.50+0.60+0.90+0.45+0.50+0.15+0.20 = 4.30.",
+  "scored_at": "2026-06-04T17:34:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

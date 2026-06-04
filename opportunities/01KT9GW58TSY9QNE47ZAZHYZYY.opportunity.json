@@ -1,0 +1,24 @@
+{
+  "id": "01KT9GW58TSY9QNE47ZAZHYZYY",
+  "discovered_at": "2026-06-04T17:33:54+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95426/gratis-mysql-database-access-auditing",
+    "snippet": "Is there any FOSS code, preferably PHP, but Python would be acceptable, to audit MySQL database access, and record user name, time and what was done \u2014 e.g. add/change/delete data, maybe reads too?"
+  },
+  "problem_statement": "Small teams and solo developers running MySQL need lightweight, free, easy-to-deploy database access auditing (who did what, when) but existing solutions are either enterprise-priced, complex to configure, or lack a usable UI.",
+  "target_segment": "Solo developers and small engineering teams (1-10 people) self-hosting MySQL for compliance or debugging purposes",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "mysql",
+    "database-auditing",
+    "access-logs",
+    "compliance",
+    "self-hosted",
+    "open-source",
+    "devtools"
+  ],
+  "notes": "Recurring ask in the community. Existing tools (MySQL Enterprise Audit) are paid. A simple open-source or low-cost SaaS audit trail product could capture this segment.",
+  "status": "candidate"
+}

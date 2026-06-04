@@ -1,0 +1,21 @@
+{
+  "opportunity_id": "01KT9GW587TY14F9D9AXNVMKVQ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "lead_reachability": 8,
+    "responsiveness_signal": 4,
+    "buildability_with_ai": 7,
+    "defensibility": 5,
+    "founder_fit": 6
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "validate",
+  "rationale": "Engineering managers at AI-adopting companies genuinely feel the ROI-measurement gap, and this surfaces repeatedly in eng leadership conversations. Willingness to pay is reasonable given adjacent spend on tools like LinearB or Jellyfish. However, responsiveness signal is unproven and the space is crowded with incumbent metrics platforms pivoting to cover AI.",
+  "notes": "Weighted_total calc: (7\u00d70.20)+(7\u00d70.10)+(7\u00d70.20)+(8\u00d70.15)+(4\u00d70.15)+(7\u00d70.10)+(5\u00d70.05)+(6\u00d70.05) = 1.40+0.70+1.40+1.20+0.60+0.70+0.25+0.30 = 6.55 \u2192 rounded to 6.6.",
+  "scored_at": "2026-06-04T17:34:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

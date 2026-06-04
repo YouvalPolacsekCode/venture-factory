@@ -1,0 +1,27 @@
+{
+  "opportunity_id": "01KT9GW58ZFM53Z9G32RK01TVM",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "lead_reachability": 6,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 6,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "MacBook power-user tool is a consumer product; unit economics require thousands of paying individual users to be meaningful."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "While the HN complaint pattern is real, this is a consumer indie-app play with low WTP (users expect free or $5 one-time), no clear B2B angle, and requires B2C scale. The B2C penalty correctly reflects that the revenue model is fragile at small user counts.",
+  "notes": "Weighted_total calc: (5\u00d70.20)+(6\u00d70.10)+(4\u00d70.20)+(6\u00d70.15)+(3\u00d70.15)+(6\u00d70.10)+(4\u00d70.05)+(5\u00d70.05) = 1.00+0.60+0.80+0.90+0.45+0.60+0.20+0.25 = 4.80. After penalty: 4.80\u22121.00 = 3.80.",
+  "scored_at": "2026-06-04T17:34:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

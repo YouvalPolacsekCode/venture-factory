@@ -1,0 +1,24 @@
+{
+  "id": "01KT9GW587TY14F9D9AXNVMKVQ",
+  "discovered_at": "2026-06-04T17:33:54+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=47294229",
+    "snippet": "AI coding tools aren't making 10x developers, they aren't even making 1.5x developers. They also aren't making 'PMs who code' or 'designers who code.' It would be really cool if this was the case... people are losing their jobs, but [we need to understand] the why."
+  },
+  "problem_statement": "Engineering teams lack reliable metrics and observability to measure whether AI coding assistants actually improve developer productivity, making it impossible to justify ROI or detect regressions in output quality.",
+  "target_segment": "Engineering managers and CTOs at software companies with 10-500 engineers adopting AI coding tools",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding",
+    "developer-productivity",
+    "roi-measurement",
+    "engineering-metrics",
+    "claude-code",
+    "copilot",
+    "devtools"
+  ],
+  "notes": "Thread skepticism is high but signals a real gap: no neutral, team-level productivity measurement layer sits between AI coding tools and eng leadership. Opportunity for an analytics/observability layer.",
+  "status": "candidate"
+}

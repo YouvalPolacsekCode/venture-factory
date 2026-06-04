@@ -1,5 +1,15 @@
 # CHANGES
 
+## 24/7, cross-domain sources, solution plans, refresh + legend (2026-06-04)
+
+Batch of operator-requested changes:
+
+- **Runs 24/7 — Shabbat read-only window removed.** Deleted `SHABBAT_BLOCKED_ACTIONS`, `_is_shabbat_window`, `_shabbat_blocks`, `_agent_permissions`, and the read-only branch from `scripts/run_daily_loop.py`; removed the `shabbat_window` block from `config/approval_policy.yaml`; updated the `daily.yml` comment and RUNBOOK. The safety test `test_shabbat_block` became `test_runs_24_7_no_shabbat_window` (asserts the gating is gone). All other guardrails (spend cap, fail-closed, approval queue) still apply at every hour. `uv run safety` → 4 passed.
+- **Cross-domain sources (not just dev/AI).** Added four non-developer Stack Exchange sites to `market_radar_sources.yaml` — `travel`, `money`, `workplace`, `lifehacks` — so ideas span travel assistants, finance tools, work/ops helpers, and everyday-consumer problems, not only developer tooling. Bumped `MAX_PREFETCH_ITEMS` 15→24 so the round-robin gives all ~10 sources representation. Verified live: prefetch spans 10 hosts across dev + travel + money + workplace + lifehacks + general tool-needs.
+- **Per-idea solution plan (build · sell · maintain) for a non-technical solo operator.** The `opportunity_scoring` RUNTIME CONTRACT now emits `solution_plan`: 3-5 plain sentences covering what the micro-service is, how the factory builds it (prompt + landing page + Stripe link + form, no coding), how it's sold (channel, operator approves sends), and how it runs hands-off — or says plainly if a solo operator couldn't realistically run it.
+- **Dashboard: "Realistic for a solo operator?" badge.** Derived in `build_dashboard.py` from the scoring `build_gates` (build it / find who pays / get them to pay / run it hands-off): ✅ Yes when all clear, ⚠️ Not yet (names the weak leg) otherwise. Shown on each card alongside the plan.
+- **Dashboard: Refresh button + legend.** A header **↻ Refresh** re-pulls the latest published `data.json` on command (cache-busted). New **"How to read this page"** legend explains stages (drop/validate/build/scale), the realistic badge, and — answering "when is something on me?" — that the only thing requiring the operator is the **Action needed** (approvals) box, which stays empty until the build/launch phases exist.
+
 ## Scoring v2 — autonomy + commercial-reality criteria; friendlier dashboard (2026-06-04)
 
 **Selection criteria (`config/scoring_model.yaml`, schema_version 2).** Rebalanced the weighted model so two things are now first-class, addressing "can Claude+this code run it alone with minimal Youval?" and "can this actually sell / who buys / is it legit?":

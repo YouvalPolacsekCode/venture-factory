@@ -80,6 +80,41 @@ def _read_json(path: Path):
         return None
 
 
+# Build gates from the scoring model = the "can a solo operator realistically
+# build + sell + maintain this?" test. Loaded once; tolerant of absence.
+_GATE_LABELS = {
+    "buildability_with_ai": "build it",
+    "buyer_clarity": "find who pays",
+    "willingness_to_pay": "get them to pay",
+    "operational_autonomy": "run it hands-off",
+}
+
+
+def _build_gates():
+    try:
+        import yaml  # already a project dependency
+        model = yaml.safe_load((REPO_ROOT / "config" / "scoring_model.yaml").read_text())
+        gates = model.get("build_gates") or {}
+        # keys look like "<dim>_min"
+        return {k[:-4]: v for k, v in gates.items() if k.endswith("_min")}
+    except Exception:
+        return {}
+
+
+def _realistic(per_dim, gates):
+    """Derived 'realistic for a solo operator' verdict from the build gates.
+    yes  = clears every gate; no = misses one or more (names the weak legs);
+    None = not scored under the current model yet."""
+    if not gates:
+        return None
+    present = [k for k in gates if isinstance(per_dim.get(k), (int, float))]
+    if not present:
+        return None
+    weak = [_GATE_LABELS.get(k, k) for k in gates
+            if isinstance(per_dim.get(k), (int, float)) and per_dim[k] < gates[k]]
+    return {"verdict": "no" if weak else "yes", "weak": weak}
+
+
 # ---------------------------------------------------------------------------
 # Opportunity aggregation (funnel + top list)
 # ---------------------------------------------------------------------------
@@ -170,6 +205,7 @@ def _top_opportunities(rows, limit=25):
         "buildability_with_ai": "Buildable",
         "pain_severity": "Pain",
     }
+    gates = _build_gates()
     out = []
     for r in scored[:limit]:
         opp, sc, vr = r["opp"], r["scoring"], r["verdict"]
@@ -188,6 +224,10 @@ def _top_opportunities(rows, limit=25):
             "recommended_stage": sc.get("recommended_stage"),
             # Plain-language "why this score / who pays / can it run alone".
             "rationale": _trunc(sc.get("rationale"), 500),
+            # Non-technical build+sell+maintain plan for a solo operator.
+            "solution_plan": _trunc(sc.get("solution_plan"), 650),
+            # Derived "realistic for a solo operator?" verdict from the build gates.
+            "realistic": _realistic(per_dim, gates),
             "scores": scores,           # {"Who pays": 8, "Runs alone": 7, ...}
             "verdict": vr.get("status") if vr else None,
             "source_type": src.get("type"),

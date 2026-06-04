@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-04T14:54:26+00:00",
-    "idt": "2026-06-04T17:54:26+03:00"
+    "utc": "2026-06-04T16:53:20+00:00",
+    "idt": "2026-06-04T19:53:20+03:00"
   },
   "funnel": {
-    "candidates": 6,
-    "scored": 6,
+    "candidates": 11,
+    "scored": 11,
     "validated": 0,
     "build_decisions": {},
     "build_now": 0,
@@ -20,6 +20,11 @@
       "total": 7.3,
       "recommended_stage": "build",
       "rationale": "Silent AI-introduced bugs in payment/auth paths are a high-severity, recurring pain with active community discussion (47 comments confirms resonance). Teams already pay for code-review and security tooling, so WTP is strong. Claude is well-suited to diff-level LLM review, making this highly buildable as an AI-native service.",
+      "solution_plan": "",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
       "scores": {
         "Will pay": 8,
         "Buildable": 8,
@@ -37,6 +42,11 @@
       "total": 6.6,
       "recommended_stage": "validate",
       "rationale": "Engineering managers at AI-adopting companies genuinely feel the ROI-measurement gap, and this surfaces repeatedly in eng leadership conversations. Willingness to pay is reasonable given adjacent spend on tools like LinearB or Jellyfish. However, responsiveness signal is unproven and the space is crowded with incumbent metrics platforms pivoting to cover AI.",
+      "solution_plan": "",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
       "scores": {
         "Will pay": 7,
         "Buildable": 7,
@@ -48,12 +58,48 @@
       "discovered_at": "2026-06-04T17:33:54+03:00"
     },
     {
+      "id": "01KT9RS0CG26CECW2AD4XCNG15",
+      "problem_statement": "Indie game developers using AI image generation struggle to produce consistent, theme-coherent sprite and asset sets — individual generations are misaligned or glitchy, and correcting them takes more effort than manual drawing.",
+      "target_segment": "Solo indie game developers and small game studios building 2D games who lack professional art skills or budget for artists.",
+      "total": 4.6,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real and recurring — indie devs frequently hit the consistency wall with AI-generated sprites — but the buyer profile is weak: solo indie devs and small studios are notoriously reluctant to pay for tooling, and existing free/cheap alternatives (Midjourney with style references, free itch.io asset packs) absorb most of the budget. Willingness to pay is soft with no hard evidence of a paid substitute at a meaningful price point. Critically, the core product requires calling and orches…",
+      "solution_plan": "WHAT: A themed sprite-pack generator that takes a style brief (e.g. 'top-down RPG, pixel art, forest biome') and returns a consistent set of game assets (characters, tiles, UI elements). BUILD: This would require integrating an image-generation API (Stable Diffusion, DALL-E, or Replicate) plus a consistency-enforcement layer (style seeds, ControlNet-style guidance) — well beyond Claude prompts and a simple form; the factory cannot build this without substantial external API orchestration and likely a real backend. SELL: Potential buyers are on r/gamedev, itch.io forums, and indie dev Discord servers; outreach is feasible but the free-tool cu…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 4,
+        "Will pay": 4,
+        "Buildable": 4,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=41912784",
+      "discovered_at": "2026-06-04T19:51:59+03:00"
+    },
+    {
       "id": "01KT9GW58EMCGQBFQMZQ2QRGGM",
       "problem_statement": "Repository owners and open-source maintainers who have explicit no-AI-generated-content policies have no platform-level controls to prevent AI bots (e.g., GitHub Copilot) from participating in code reviews or PR discussions, undermining their governance policies.",
       "target_segment": "Open-source maintainers and enterprise repo owners on GitHub with AI-content policies",
       "total": 4.4,
       "recommended_stage": "drop",
       "rationale": "The governance gap is real but affects a narrow, ideologically-motivated open-source maintainer segment that strongly resists paying for tooling. Willingness to pay is low, responsiveness is unproven, and GitHub itself is likely to close this gap natively. Does not clear the 5.5 validate threshold.",
+      "solution_plan": "",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "get them to pay"
+        ]
+      },
       "scores": {
         "Will pay": 3,
         "Buildable": 6,
@@ -71,6 +117,14 @@
       "total": 4.3,
       "recommended_stage": "drop",
       "rationale": "The segment explicitly wants free/open-source tooling, making a viable revenue model difficult. Pain is real but low-urgency for most small teams, and several existing free solutions (Percona Audit Log, general-purpose query loggers) partially satisfy the need. Does not clear the 5.5 validate threshold.",
+      "solution_plan": "",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "build it",
+          "get them to pay"
+        ]
+      },
       "scores": {
         "Will pay": 3,
         "Buildable": 5,
@@ -88,6 +142,13 @@
       "total": 3.8,
       "recommended_stage": "drop",
       "rationale": "While the HN complaint pattern is real, this is a consumer indie-app play with low WTP (users expect free or $5 one-time), no clear B2B angle, and requires B2C scale. The B2C penalty correctly reflects that the revenue model is fragile at small user counts.",
+      "solution_plan": "",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "get them to pay"
+        ]
+      },
       "scores": {
         "Will pay": 4,
         "Buildable": 6,
@@ -105,6 +166,13 @@
       "total": 3.8,
       "recommended_stage": "drop",
       "rationale": "The product gap between Duolingo and essay tutors is genuine, but the target segment is fragmented globally, WTP for language-learning apps is structurally low (Duolingo's freemium conditions the market), and reaching qualifying leads at scale is costly. AI buildability is a strength but not enough to offset the B2C scale requirement and weak monetization signals.",
+      "solution_plan": "",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "get them to pay"
+        ]
+      },
       "scores": {
         "Will pay": 4,
         "Buildable": 7,
@@ -114,32 +182,148 @@
       "source_type": "forum",
       "source_url": "https://softwarerecs.stackexchange.com/questions/95411/english-writing-practice-site-or-app-like-duolingo-but-longer",
       "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "id": "01KT9RS0CQ5TA38FGGXE6V5PN1",
+      "problem_statement": "CI/CD tools lack a vendor-neutral standard protocol for reporting structured progress and step-level metadata back to the pipeline environment, forcing developers to use platform-specific hacks (e.g., GitHub Actions workflow commands) that don't port across CI systems.",
+      "target_segment": "DevOps engineers and platform engineering teams managing multi-CI environments (GitHub Actions, GitLab CI, CircleCI, etc.) at mid-to-large software companies.",
+      "total": 3.4,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real but mild — developers work around CI vendor lock-in with shell scripts and conditionals, it's annoying but not blocking. The decisive problem is commercial reality: there is zero evidence anyone pays for CI protocol tooling; the natural monetization path (open spec + adapter libraries) is open-source territory, and a SaaS dashboard layer would need enormous platform buy-in before anyone would pay for it. Beyond willingness to pay, the build and operational profile is deeply wro…",
+      "solution_plan": "This opportunity is not suitable for a solo non-technical operator running a Claude factory. A portable CI progress-reporting protocol is fundamentally an open-source infrastructure project that requires maintaining adapter libraries for 5+ CI platforms, developer community buy-in to reach adoption, and no clear monetization path short of a hosted dashboard that would itself require significant engineering. There is no micro-service angle here that Claude + a form + Stripe can fulfill autonomously. Recommending drop rather than speculating on a forced fit.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 3,
+        "Will pay": 2,
+        "Buildable": 2,
+        "Pain": 4
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=43621006",
+      "discovered_at": "2026-06-04T19:51:59+03:00"
+    },
+    {
+      "id": "01KT9RS0CSEKPF6R5HHQT2B3BB",
+      "problem_statement": "Home and small-business users want local AI-powered security camera monitoring (motion + object detection) but must manually glue together multiple open-source components; no packaged, privacy-first solution exists that installs via standard package managers.",
+      "target_segment": "Privacy-conscious homeowners, self-hosters, and small business owners running local NVR/camera setups on Linux hardware.",
+      "total": 2.9,
+      "recommended_stage": "drop",
+      "rationale": "The buyers here are privacy-conscious self-hosters — a segment that overwhelmingly expects free, open-source software and almost never pays for packaged tooling; there is no credible willingness-to-pay signal beyond hobbyist frustration. The solution itself requires custom model integration, real-time video pipeline engineering, and hardware-level testing that is far outside what Claude + prompts + a simple landing page can build or deliver — making both buildability_with_ai (2) and operational…",
+      "solution_plan": "This cannot realistically be built and sold as an autonomous micro-service by a solo non-technical operator using this factory. The core deliverable is a compiled, packaged Linux binary or container integrating YOLO model inference with a video stream — that requires C++/Python systems engineering, GPU/CPU optimisation, hardware compatibility testing, and ongoing package maintenance across distros. None of that is achievable via Claude prompts + a form + Stripe. Even if built, the self-hosted audience expects it free (GitHub repo), so there is no payment mechanism. There is no version of this opportunity that fits the factory's build-and-del…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 3,
+        "Runs alone": 2,
+        "Will pay": 2,
+        "Buildable": 2,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=44795879",
+      "discovered_at": "2026-06-04T19:51:59+03:00"
+    },
+    {
+      "id": "01KT9RS0CM36VMT4SCPZDKH8BM",
+      "problem_statement": "Users exporting data from Google Takeout must manually download and reconcile multiple large archive files, and the resulting export contains significant duplicate files across albums, making migration or backup workflows painful and error-prone.",
+      "target_segment": "Privacy-conscious consumers and power users migrating away from Google Photos or backing up personal media libraries.",
+      "total": 2.5,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is a privacy-conscious individual consumer facing a one-time migration pain — not a business role with a recurring budget. There is no meaningful evidence these users pay for data-portability tools; free alternatives (rclone, unofficial scripts) already exist and set a $0 price anchor. Even setting aside the commercial problem, the service is difficult to deliver autonomously: processing multi-gigabyte Takeout archives requires user-supplied files and compute resources that are hard t…",
+      "solution_plan": "This is not recommended for build at this stage. If Youval wanted to validate anyway: the micro-service would be a web uploader where consumers drop their Takeout .tgz files, Claude orchestrates deduplication logic, and a processed download link is returned. The factory could build a landing page + Stripe payment ($5–$10 one-time) + a file-processing pipeline. The fundamental problem is selling it: the buyers are individual consumers reached only through Reddit/HN posts, conversion rates are low, and each person only ever needs it once (zero LTV). Delivery also requires handling large file uploads and compute, which adds infrastructure cost…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 3,
+        "Runs alone": 5,
+        "Will pay": 2,
+        "Buildable": 4,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=41400732",
+      "discovered_at": "2026-06-04T19:51:59+03:00"
+    },
+    {
+      "id": "01KT9RS0CWA6XFJVJDA0KC0ZMM",
+      "problem_statement": "Early-stage founders need low-cost or zero-cost user acquisition but lack a structured way to find and coordinate cross-promotion partnerships with complementary non-competing startups, leaving them reliant on expensive paid ads with poor early-stage ROI.",
+      "target_segment": "Pre-seed and seed-stage B2C/B2B SaaS founders with small marketing budgets seeking their first 100–1000 users.",
+      "total": 2.5,
+      "recommended_stage": "drop",
+      "rationale": "The buyers here are early-stage founders — a notoriously payment-resistant segment who expect community tools to be free (WTP score: 3); existing free Slack groups and platforms like SparkLoop already partially cover this need without payment. Operational autonomy is low (score: 4) because each match requires human judgment to vet partner quality and negotiate terms, making truly hands-off delivery unrealistic. The combination of a weak commercial signal, a vague buyer (any pre-seed founder glo…",
+      "solution_plan": "This opportunity scores too low to pursue. The core problem — early founders can't easily find cross-promotion partners — is real but monetization is the fatal flaw: the target segment (pre-seed founders) has almost no software budget and would expect a matchmaking tool to be free or community-run. Building a Claude-powered matching service (parse founder profiles, suggest complementary pairings, draft partnership outreach) is technically feasible, but each match would need Youval to review partner quality and terms, making this a part-time job rather than a product. The factory should not invest further here unless a paying B2B variant surf…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 4,
+        "Will pay": 3,
+        "Buildable": 5,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=43316294",
+      "discovered_at": "2026-06-04T19:51:59+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1321,
-    "last_7_days_usd": 0.1321,
-    "all_time_usd": 0.1321,
+    "today_usd": 0.2724,
+    "last_7_days_usd": 0.2724,
+    "all_time_usd": 0.2724,
     "by_day": [
       {
         "date": "2026-06-04",
-        "usd": 0.1321
+        "usd": 0.2724
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.073
+        "usd": 0.132
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.0505
+        "usd": 0.1273
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0086
+        "usd": 0.0131
       }
     ]
   },
@@ -182,13 +366,14 @@
           "skipped": 1
         },
         "daily_summary": {
-          "succeeded": 1
+          "succeeded": 2
         },
         "market_radar": {
-          "succeeded": 1
+          "succeeded": 2,
+          "awaiting_approval": 1
         },
         "opportunity_scoring": {
-          "succeeded": 1
+          "succeeded": 2
         },
         "pain_validation": {
           "skipped": 1
@@ -197,9 +382,9 @@
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-04.md",
+    "file": "reports/daily/2026-06-04_rerun_1953.md",
     "date": "2026-06-04",
-    "text": "# Daily Summary — 2026-06-04 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 6 |\n| Opportunities validated past threshold | 0 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build or live stage. Factory is in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 5 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues discovery sweeps across tech and SaaS communities.\n2. `opportunity_scoring` processes new candidate signals as they arrive.\n3. `pain_validation` stages for validation runs once candidates reach threshold.\n4. `build_decisions` waits for validated opportunities to emerge.\n5. `cost_gain` analysis scheduled for weekly rollup.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "text": "# Daily Summary — 2026-06-04 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 11 |\n| Opportunities validated past threshold | 0 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments. Factory is in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 6 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues surface sweeps for pain signals across B2B SaaS channels.\n2. `opportunity_scoring` ranks the 11 candidate opportunities by signal strength and TAM.\n3. `pain_validation` probes top-ranked candidates with targeted DMs.\n\n## Operator action items\n\nNone — process the approval queue and move on. The factory has surfaced 11 candidates; the next cycle will validate and rank them. Check back after tomorrow's pain_validation run (scheduled for 09:00 IDT) to review verdicts and decide which to build.",
     "truncated": false
   },
   "analytics": null

@@ -72,9 +72,27 @@
   .metric { display: inline-flex; align-items: baseline; gap: 6px; background: var(--chip); border: 1px solid var(--line); border-radius: 8px; padding: 3px 9px; font-size: 12.5px; }
   .metric .ml { color: var(--muted); }
   .metric .mv { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .opp-plan { margin: 0 0 8px; font-size: 13.5px; line-height: 1.6; color: #d3dae4; background: rgba(91,140,255,.07); border-left: 3px solid #25406e; border-radius: 0 8px 8px 0; padding: 8px 12px; }
   .opp-why { margin: 0 0 8px; font-size: 13.5px; line-height: 1.55; color: #c2c9d4; }
   .opp-foot { font-size: 12px; color: var(--muted); }
   .opp-foot .src { margin-left: 8px; }
+  .real-badge { font-size: 12.5px; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); }
+  .real-badge.yes { color: var(--good); border-color: #1f5e2b; background: #102815; }
+  .real-badge.no { color: var(--warn); border-color: #6b5410; background: #2a2410; }
+  /* refresh button */
+  .refresh { margin-left: auto; background: var(--chip); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 5px 12px; font-size: 13px; cursor: pointer; }
+  .refresh:hover { border-color: var(--accent); }
+  .refresh:disabled { opacity: .6; cursor: default; }
+  .h2note { text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 400; }
+  /* legend */
+  .legend-intro { color: #c2c9d4; font-size: 14px; margin: 0 0 14px; }
+  .legend-grid { display: grid; gap: 18px; }
+  @media (min-width: 760px) { .legend-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .legend-grid h3 { font-size: 13px; margin: 0 0 8px; color: var(--ink); }
+  .legend-grid ul { margin: 0; padding-left: 0; list-style: none; font-size: 13px; color: #c2c9d4; }
+  .legend-grid li { margin-bottom: 7px; line-height: 1.5; }
+  .legend-grid p { font-size: 13px; color: #c2c9d4; line-height: 1.55; margin: 0 0 8px; }
+  .legend-note { color: var(--muted); font-size: 12.5px; }
   .cards { display: flex; flex-wrap: wrap; gap: 14px; }
   .card { flex: 1 1 110px; background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
   .card .v { font-size: 22px; font-weight: 700; }
@@ -100,6 +118,7 @@
     <h1>Venture Factory</h1>
     <span class="sub" id="updated">loading…</span>
     <span class="sub"><span class="dot">●</span> auto-updates daily</span>
+    <button id="refresh" class="refresh" title="Re-pull the latest published data">↻ Refresh</button>
   </header>
 
   <div id="error" class="err-banner" style="display:none"></div>
@@ -110,7 +129,7 @@
   </section>
 
   <section class="panel">
-    <h2>Action needed</h2>
+    <h2>Action needed <span class="h2note">— the only things waiting on you</span></h2>
     <div id="approvals"></div>
   </section>
 
@@ -139,6 +158,34 @@
   <section class="panel">
     <h2>Latest daily report</h2>
     <div id="report"></div>
+  </section>
+
+  <section class="panel legend">
+    <h2>How to read this page</h2>
+    <p class="legend-intro">The factory finds problems, scores them, and (later) builds the best ones. Here's what the labels mean and when something needs you.</p>
+    <div class="legend-grid">
+      <div>
+        <h3>Stage — what the factory thinks of an idea</h3>
+        <ul>
+          <li><span class="chip drop">drop</span> not worth pursuing — too weak to chase.</li>
+          <li><span class="chip validate">validate</span> promising — gather more proof before building.</li>
+          <li><span class="chip build">build</span> strong enough to build into a real micro-service.</li>
+          <li><span class="chip scale">scale</span> already working — pour in more.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Realistic for you (solo)</h3>
+        <ul>
+          <li><span class="real-badge yes">✅ Yes</span> a non-technical solo operator could build, sell &amp; maintain it with this factory.</li>
+          <li><span class="real-badge no">⚠️ Not yet</span> one leg is weak (it names which: build it / find who pays / get them to pay / run it hands-off).</li>
+        </ul>
+      </div>
+      <div>
+        <h3>When does something need <em>you</em>?</h3>
+        <p>Only the <strong>“Action needed”</strong> box at the top. The factory drafts everything itself, but it must ask your approval before any real-world action — sending outreach emails, publishing a page, charging a card, or spending over the daily cap. If that box says “Nothing waiting on you,” there's nothing to do.</p>
+        <p class="legend-note">Right now the loop discovers &amp; scores ideas but doesn't yet auto-build them (the build/launch steps come in the next phases), so expect “Action needed” to stay empty until then.</p>
+      </div>
+    </div>
   </section>
 
   <div class="foot" id="foot"></div>
@@ -237,16 +284,26 @@ function renderOpps(d) {
     ).join("");
     const link = o.source_url
       ? ` <a class="src" href="${esc(o.source_url)}" target="_blank" rel="noopener noreferrer">source ↗</a>` : "";
+    // "Realistic for a solo operator?" derived badge.
+    let realistic = "";
+    if (o.realistic && o.realistic.verdict === "yes") {
+      realistic = `<span class="real-badge yes">✅ Realistic to build, sell &amp; maintain solo</span>`;
+    } else if (o.realistic && o.realistic.verdict === "no") {
+      const weak = (o.realistic.weak || []).join(", ");
+      realistic = `<span class="real-badge no">⚠️ Not yet${weak ? " — weak on: " + esc(weak) : ""}</span>`;
+    }
     return `<article class="opp">
       <div class="opp-head">
         <span class="opp-score">${o.total == null ? "—" : Number(o.total).toFixed(1)}</span>
         ${stage ? `<span class="chip ${esc(stage)}">${esc(stage)}</span>` : ""}
         <span class="opp-stageplain">${esc(stagePlain)}</span>
         ${verdict ? `<span class="chip ${esc(verdict)}">${esc(verdict)}</span>` : ""}
+        ${realistic}
       </div>
       <p class="opp-problem">${esc(o.problem_statement)}</p>
       <p class="opp-who"><span class="lbl">Who would pay:</span> ${esc(o.target_segment || "unclear")}</p>
       ${scoreChips ? `<div class="opp-metrics">${scoreChips}</div>` : ""}
+      ${o.solution_plan ? `<p class="opp-plan"><span class="lbl">How you'd build, sell &amp; maintain it:</span> ${esc(o.solution_plan)}</p>` : ""}
       ${o.rationale ? `<p class="opp-why"><span class="lbl">Why this score:</span> ${esc(o.rationale)}</p>` : ""}
       <div class="opp-foot">${esc(o.source_type || "")}${link}</div>
     </article>`;
@@ -343,18 +400,29 @@ function renderReport(d) {
     + `<pre class="report">${esc(r.text)}${r.truncated ? "\n\n… (truncated — see full report in repo)" : ""}</pre>`;
 }
 
-fetch("./data.json", { cache: "no-store" })
-  .then(res => { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
-  .then(d => {
-    renderUpdated(d);
-    [renderFunnel, renderApprovals, renderOpps, renderServices, renderSpend, renderActivity, renderReport]
-      .forEach(fn => { try { fn(d); } catch (e) { console.error(fn.name, e); } });
-    $("foot").textContent = "Static read-only snapshot · sanitized export · regenerated by the daily run.";
-  })
-  .catch(err => {
-    showError("Could not load data.json (" + err.message + "). If this is a fresh deploy, the daily run may not have published data yet.");
-    $("updated").textContent = "no data";
-  });
+function load() {
+  const btn = $("refresh");
+  if (btn) { btn.disabled = true; btn.textContent = "↻ Refreshing…"; }
+  $("error").style.display = "none";
+  // Cache-bust so a manual refresh always pulls the freshest published data.json.
+  return fetch("./data.json?t=" + Date.now(), { cache: "no-store" })
+    .then(res => { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+    .then(d => {
+      renderUpdated(d);
+      [renderFunnel, renderApprovals, renderOpps, renderServices, renderSpend, renderActivity, renderReport]
+        .forEach(fn => { try { fn(d); } catch (e) { console.error(fn.name, e); } });
+      $("foot").textContent = "Static read-only snapshot · sanitized export · regenerated by the daily run. Refresh re-pulls the latest published data.";
+    })
+    .catch(err => {
+      showError("Could not load data.json (" + err.message + "). If this is a fresh deploy, the daily run may not have published data yet.");
+      $("updated").textContent = "no data";
+    })
+    .finally(() => { if (btn) { btn.disabled = false; btn.textContent = "↻ Refresh"; } });
+}
+
+const _btn = $("refresh");
+if (_btn) _btn.addEventListener("click", load);
+load();
 </script>
 </body>
 </html>

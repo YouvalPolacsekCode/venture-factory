@@ -43,7 +43,7 @@ load_dotenv(REPO_ROOT / ".env")
 
 STRUCTURED_AGENTS = {"market_radar", "opportunity_scoring", "pain_validation", "daily_summary"}
 
-MAX_PREFETCH_ITEMS = 15
+MAX_PREFETCH_ITEMS = 24  # shared round-robin across ~10 sources for domain breadth
 
 # Per-million-token prices (USD). // update from anthropic pricing page
 MODEL_PRICES = {
@@ -427,6 +427,15 @@ Each element MUST contain:
   explicitly: WHO would pay (single users vs a specific type of company) and whether they
   realistically pay; whether it can RUN with little/no human involvement (the autonomy
   call); and the deciding factor. If a build_gate capped the stage, say which and why.
+- "solution_plan": 3-5 plain sentences for a NON-TECHNICAL solo operator (Youval) using
+  this always-on Claude factory. Cover: (1) WHAT the micro-service actually is, in one
+  line; (2) BUILD — how the factory builds it (e.g. a Claude prompt + a simple landing
+  page + a Stripe payment link + an intake form), no coding by the operator; (3) SELL —
+  who to reach and how (the channel), and that outreach goes out only after the operator
+  approves it; (4) MAINTAIN — how delivery + support + billing run hands-off via Claude +
+  this code, and the ONLY recurring human touch (approving sends/payments). Be concrete
+  and realistic; if a solo non-technical operator could NOT actually build+sell+maintain
+  it, say that plainly instead of pretending.
 - "notes": string (may be ""). Name any failing build_gate here.
 
 Output ONLY the JSON array."""

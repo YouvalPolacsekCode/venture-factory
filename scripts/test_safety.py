@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Safety suite (Phase 3). Verifies the factory cannot blow the budget, leak the
-key, or send outreach during Shabbat.
+Safety suite (Phase 3). Verifies the factory cannot blow the budget or leak the
+key, and that it runs 24/7 (no read-only window).
 
 Run with `uv run safety` (wraps pytest) or `uv run python -m pytest scripts/test_safety.py`.
 
@@ -96,17 +96,14 @@ def test_spend_cap():
             f.unlink(missing_ok=True)
 
 
-def test_shabbat_block(monkeypatch):
-    """Friday 19:00 IDT -> read-only window active; outreach-capable agents are
-    blocked, internal agents are not."""
+def test_runs_24_7_no_shabbat_window():
+    """The factory runs 24/7: there is no read-only / time-of-week gating left in
+    the loop (the old Shabbat window was removed)."""
     import run_daily_loop as loop
 
-    friday_1900 = datetime(2026, 6, 5, 19, 0, tzinfo=timezone(timedelta(hours=3)))  # Fri
-    monkeypatch.setattr(loop, "_idt_now", lambda: friday_1900)
-
-    assert loop._is_shabbat_window() is True
-    assert loop._shabbat_blocks("outreach") is True       # holds send_outreach_email
-    assert loop._shabbat_blocks("market_radar") is False  # read-only, allowed on Shabbat
+    assert not hasattr(loop, "_is_shabbat_window")
+    assert not hasattr(loop, "_shabbat_blocks")
+    assert not hasattr(loop, "SHABBAT_BLOCKED_ACTIONS")
 
 
 def test_policy_unreadable():

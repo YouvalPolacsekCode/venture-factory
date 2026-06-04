@@ -85,13 +85,7 @@ caps:
   per_day_paid_marketing_usd: 0   # off by default; flip via spend_above_daily_cap approval
   per_action_usd_hard_ceiling: 10
 
-# Read-only window. All requires_approval actions are blocked during this window;
-# new items are not added to the queue. Wall-clock based, IDT.
-shabbat_window:
-  start: "Fri 18:00"
-  end: "Sat 20:00"
-  timezone: "Asia/Jerusalem"
-  blocks: requires_approval   # auto_allowed reads/writes continue
+# The factory runs 24/7 — there is no read-only / time-of-week window.
 
 # Which agents may request which action_types. Auto_allowed items are not listed
 # here -- every agent may request any auto_allowed action by default.

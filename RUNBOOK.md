@@ -1,6 +1,6 @@
 # Operator Runbook
 
-This is how Youval runs the venture-factory day-to-day. The factory is autonomous but not unsupervised. Three rituals: morning, per-experiment, weekly. Plus rules for Shabbat, levers to push throughput, and red flags that mean stop trusting it.
+This is how Youval runs the venture-factory day-to-day. The factory is autonomous but not unsupervised. It runs 24/7. Three rituals: morning, per-experiment, weekly. Plus levers to push throughput, and red flags that mean stop trusting it.
 
 All times are IDT (UTC+3).
 
@@ -52,17 +52,9 @@ Do not edit agent-generated files directly. The factory will overwrite them. Use
 
 ---
 
-## Shabbat handling
+## Always-on (24/7)
 
-Friday 18:00 IDT to Saturday 20:00 IDT, the factory enters **read-only mode**:
-
-- No outreach (email, SMS, DM) sent.
-- No payments charged or refunded.
-- No deploys, no domain registrations, no external account creation.
-- No items added to `approval_queue/`.
-- `daily_summary` still runs; `analytics` still runs; agents may still read public web and write internal repo files.
-
-Read-only mode is enforced by `config/approval_policy.yaml` via the `shabbat_window` block consulted by every agent before any `requires_approval` action. The operator does not need to do anything to enable or disable it — it is wall-clock based.
+The factory runs **24/7**. There is no read-only / time-of-week window — the loop fires whenever the scheduler triggers it (the cloud cron, plus any manual run). All the other guardrails (per-day spend cap, fail-closed on missing key/policy, the approval queue for outside-world actions) still apply at every hour.
 
 ---
 
@@ -113,8 +105,8 @@ The runner fails closed and enforces spend caps before any paid call.
 
 - **Budget caps** (`config/approval_policy.yaml` → `caps`). Before each Anthropic call the runner makes a *conservative* cost estimate (assumes max tokens in and out). If the projected call would push the day over `per_day_external_api_usd`, or a single call would exceed `per_action_usd_hard_ceiling`, no call is made: it writes an approval to `approval_queue/<ulid>.json` (`action_type` = `spend_above_daily_cap` or `call_paid_api_above_cap`, with `current_spend_usd` / `projected_call_usd` / `requested_overage_usd`, `expires_at` = +24h) and logs `status=awaiting_approval`. Approve with `python scripts/approve.py <ulid>` after raising the cap, or let it expire.
 - **Fail-closed startup.** Missing/empty `ANTHROPIC_API_KEY` → exit 1 ("ANTHROPIC_API_KEY required; see .env.example"). Missing/unparseable `config/approval_policy.yaml` → `run_daily_loop.py` exits 1 ("fail-closed: approval policy unreadable"). The key is never logged.
-- **Shabbat read-only window** (Fri 18:00 → Sat 20:00 IDT). `run_daily_loop.py` sets `RUN_MODE=read_only` and skips any agent holding a blocked action type (`send_outreach_email`, `send_outreach_sms`, `create_payment_link`, `charge_customer`, `deploy_public_domain`, `send_customer_message`) — logged as `shabbat_read_only`. `market_radar`, `opportunity_scoring`, `pain_validation`, `cost_gain`, `daily_summary` still run.
-- **Safety suite.** `uv run safety` runs `scripts/test_safety.py` (missing-key, spend-cap, Shabbat block, policy-unreadable). No live API calls — all guards short-circuit first.
+- **Always-on (24/7).** No read-only / time-of-week window — the loop runs whenever the scheduler fires. The spend cap, fail-closed guards, and the approval queue still apply at every hour.
+- **Safety suite.** `uv run safety` runs `scripts/test_safety.py` (missing-key, spend-cap, 24/7-no-window, policy-unreadable). No live API calls — all guards short-circuit first.
 
 ## Schedule operations (macOS / launchd)
 
@@ -136,7 +128,7 @@ The daily loop runs under a launchd LaunchAgent (macOS replacement for the Windo
 The daily loop's **primary** scheduler is now GitHub Actions, so it runs 24/7 in the cloud without the Mac being awake. launchd (`scripts/install_schedule.sh`) is now an optional local fallback, not the primary path.
 
 - **Where it lives:** `.github/workflows/daily.yml`. It runs on `ubuntu-latest`, installs `uv`, `uv sync`s, writes `.env` from repo secrets at runtime, runs `uv run daily-loop`, then commits results back to `main`.
-- **When it fires:** cron `0 3 * * *` (UTC). GitHub cron has no timezone/DST handling: 03:00 UTC = **06:00 Asia/Jerusalem in summer (IDT)**, and **05:00 local in winter (IST)** — accepted, not corrected. The Shabbat read-only window is enforced inside `run_daily_loop.py`, so the cron fires normally Fri/Sat and the loop self-limits.
+- **When it fires:** cron `0 3 * * *` (UTC). GitHub cron has no timezone/DST handling: 03:00 UTC = **06:00 Asia/Jerusalem in summer (IDT)**, and **05:00 local in winter (IST)** — accepted, not corrected. The loop runs 24/7 (no read-only window), so it fires every day including Fri/Sat.
 - **Manual run:** GitHub repo → **Actions** tab → **daily-loop** (left sidebar) → **Run workflow** button (uses `workflow_dispatch`). Good for proving the pipeline end-to-end.
 - **Read run logs:** Actions tab → daily-loop → click the run → expand the **Run daily loop** step (per-agent `[RUN]/[SKIP]/[WARN]` lines) and **Commit results back** step.
 - **Pause:** Actions tab → daily-loop → top-right **⋯** → **Disable workflow**. Scheduled and manual runs both stop. **Resume:** same menu → **Enable workflow**.

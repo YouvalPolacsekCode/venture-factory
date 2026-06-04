@@ -60,8 +60,7 @@ jobs:
         id: loop
         # Capture the exit code without hard-failing the job, so partial results
         # still get committed back below. The code is surfaced at the very end.
-        # The Shabbat read-only window is enforced INSIDE run_daily_loop.py; the
-        # cron can fire normally on Fri/Sat and the loop self-limits.
+        # The loop runs 24/7 — no read-only / time-of-week window.
         run: |
           set +e
           uv run daily-loop

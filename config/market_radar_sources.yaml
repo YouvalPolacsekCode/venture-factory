@@ -38,6 +38,36 @@ sources:
     enabled: true
     rate_limit_rpm: 5
 
+  # --- Non-developer domains, so ideas aren't all dev/AI tooling ----------
+  # (travel assistants, money tools, workplace/ops helpers, everyday life).
+  - id: se_travel
+    type: stackexchange
+    description: "travel.stackexchange.com — trip planning, logistics, booking pain (travel assistants)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=travel&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_money
+    type: stackexchange
+    description: "money.stackexchange.com — personal finance, budgeting, taxes, billing pain"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=money&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_workplace
+    type: stackexchange
+    description: "workplace.stackexchange.com — work, ops, management, hiring friction (B2B helpers)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=workplace&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_lifehacks
+    type: stackexchange
+    description: "lifehacks.stackexchange.com — everyday consumer problems and workarounds"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=lifehacks&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
   # --- DEV / Forem (maker + founder content; reaction-gated) --------------
   - id: devto_startup
     type: devto

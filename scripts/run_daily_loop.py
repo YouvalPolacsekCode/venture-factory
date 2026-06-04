@@ -9,9 +9,8 @@ Runs the discovery + scoring core in the order from ARCHITECTURE.md section 9:
 
 Each step runs in its own try/except so one failure does not stop the rest.
 Preconditions are file-based (sibling .opportunity/.scoring/.verdict files).
-Respects the Friday 18:00 IDT - Saturday 20:00 IDT read-only window (none of
-the Phase-1 agents send externally, so the window is informational here; P3
-hardens enforcement).
+Runs 24/7 — there is no read-only / time-of-week window; the loop fires whenever
+the scheduler triggers it.
 """
 import json
 import os
@@ -27,12 +26,6 @@ REPO_ROOT = Path(__file__).parent.parent.resolve()
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 load_dotenv(REPO_ROOT / ".env")
-
-# Action types that must not fire during the Shabbat read-only window.
-SHABBAT_BLOCKED_ACTIONS = {
-    "send_outreach_email", "send_outreach_sms", "create_payment_link",
-    "charge_customer", "deploy_public_domain", "send_customer_message",
-}
 
 # (slot_label, agent_slug, external_send)
 DAILY_SEQUENCE = [
@@ -94,16 +87,6 @@ PRECONDITIONS = {
 }
 
 
-def _is_shabbat_window() -> bool:
-    now = _idt_now()
-    weekday = now.weekday()  # Mon=0 .. Sun=6
-    if weekday == 4 and now.hour >= 18:      # Friday from 18:00
-        return True
-    if weekday == 5 and now.hour < 20:       # Saturday until 20:00
-        return True
-    return False
-
-
 def _load_policy_or_die() -> dict:
     """Fail closed: missing/unparseable approval policy halts the loop."""
     p = REPO_ROOT / "config" / "approval_policy.yaml"
@@ -118,32 +101,6 @@ def _load_policy_or_die() -> dict:
     except Exception:
         print("FATAL: fail-closed: approval policy unreadable", file=sys.stderr)
         sys.exit(1)
-
-
-def _agent_permissions(agent: str, policy: dict) -> set:
-    """Permissions an agent holds: AGENT.md frontmatter `permissions` unioned
-    with the agent's requires-approval roles in approval_policy.yaml."""
-    perms: set = set()
-    md = REPO_ROOT / "factory" / "agents" / agent / "AGENT.md"
-    if md.exists():
-        text = md.read_text()
-        if text.startswith("---"):
-            end = text.find("\n---", 3)
-            if end != -1:
-                try:
-                    fm = yaml.safe_load(text[3:end]) or {}
-                    perms.update(fm.get("permissions") or [])
-                except yaml.YAMLError:
-                    pass
-    perms.update((policy.get("roles") or {}).get(agent, []) or [])
-    return perms
-
-
-def _shabbat_blocks(agent: str, policy: dict | None = None) -> bool:
-    """True if this agent holds any action type blocked during the Shabbat window."""
-    if policy is None:
-        policy = _load_policy_or_die()
-    return bool(_agent_permissions(agent, policy) & SHABBAT_BLOCKED_ACTIONS)
 
 
 def _new_ulid() -> str:
@@ -186,27 +143,19 @@ def run_agent_subprocess(agent: str) -> int:
 
 
 def main() -> int:
-    # Fail closed at startup.
-    policy = _load_policy_or_die()
+    # Fail closed at startup (missing/unparseable policy halts the loop).
+    _load_policy_or_die()
     if not os.environ.get("ANTHROPIC_API_KEY"):
         print("ERROR: ANTHROPIC_API_KEY required; see .env.example", file=sys.stderr)
         return 1
 
-    read_only = _is_shabbat_window()
-    if read_only:
-        print("[INFO] RUN_MODE=read_only (Shabbat window): outreach/payment/deploy/"
-              "customer-send agents will be skipped.")
-
+    # Runs 24/7 — no read-only / time-of-week window.
     import db as _db
     _db.apply_migrations()
 
     exit_code = 0
     for slot, agent, _external in DAILY_SEQUENCE:
         try:
-            if read_only and _shabbat_blocks(agent, policy):
-                _log_line(agent, "skipped", "shabbat_read_only")
-                continue
-
             if agent in STUB_AGENTS:
                 _log_line(agent, "skipped", "NOT_IMPLEMENTED (Phase 1 stub)")
                 continue

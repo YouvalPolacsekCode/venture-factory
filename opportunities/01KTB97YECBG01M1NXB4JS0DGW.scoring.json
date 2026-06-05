@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTB97YECBG01M1NXB4JS0DGW",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent \u2014 flaky tests cost engineering teams hours \u2014 and the buyer (QA engineers and dev leads at SaaS companies) is specific enough to be nameable. However, solving nondeterministic test failure reproducibly requires deep integration with test runners, CI infrastructure, and application runtime, which goes well beyond what Claude + prompts can build in a week; this is a hard infrastructure problem, not a text-processing problem. Operational autonomy is also very low: diagnosis would require per-customer session analysis and likely synchronous debugging support, making this a consulting-adjacent product, not a hands-off micro-service. Total falls below the 5.5 validate threshold.",
+  "solution_plan": "This opportunity is not viable for this factory in its current form. The core technical challenge \u2014 deterministically reproducing nondeterministic failures in arbitrary JS test suites \u2014 requires test-runner hooks, sandboxed execution environments, and deep CI integration that cannot be built with Claude prompts and a landing page. A solo non-technical operator cannot realistically build or maintain this without significant engineering infrastructure. Drop and revisit only if a much narrower angle emerges (e.g. a report-analysis service that reads existing flaky-test logs and suggests categories of causes \u2014 but even that has limited willingness-to-pay evidence).",
+  "notes": "buildability_with_ai (3) and operational_autonomy (3) both fail build gates. Total 4.3 is below validate threshold \u2014 drop.",
+  "scored_at": "2026-06-05T10:00:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

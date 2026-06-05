@@ -1,0 +1,25 @@
+{
+  "id": "01KTB97YEKXJE0JSH9WZ25VCT9",
+  "discovered_at": "2026-06-05T09:59:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95408/linux-gui-to-download-from-webdav-and-delete-afterwards",
+    "snippet": "I'm using the Nextcloud Android app to automatically upload new photos and videos to my Nextcloud server. On my desktop, I'd like to have a GUI tool that downloads those files from Nextcloud's WebDAV server and deletes them afterwards - so that the files are not on the server anymore. Nextcloud desktop doesn't even support this workflow."
+  },
+  "problem_statement": "Self-hosted Nextcloud users need a simple GUI sync client that downloads files from WebDAV and deletes them from the server after transfer, enabling a 'offload-and-clear' workflow that the official Nextcloud desktop app does not support.",
+  "target_segment": "Privacy-conscious home users and small teams self-hosting Nextcloud or other WebDAV servers on Linux desktops",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "nextcloud",
+    "webdav",
+    "file-sync",
+    "self-hosted",
+    "linux",
+    "gui",
+    "photo-management",
+    "privacy"
+  ],
+  "notes": "Niche but recurring ask in self-hosted communities. Official clients lack destructive-sync (delete-after-download) mode. Could be a small focused utility or plugin.",
+  "status": "candidate"
+}

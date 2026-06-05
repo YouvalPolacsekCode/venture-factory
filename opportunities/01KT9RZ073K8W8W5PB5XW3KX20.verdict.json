@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01KT9RZ073K8W8W5PB5XW3KX20",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "Recurring forum evidence confirms that non-HR hiring managers \u2014 particularly CTOs and founders at small companies \u2014 are regularly caught unprepared for interviews with no role definition, no scorecard, and no structured process. Adjacent paid tools (Lever, Greenhouse, Breezy HR) demonstrate willingness to pay for hiring workflow tooling, and the specific gap (lightweight, fast, AI-generated interview kits for one-off hires) is not well-served by enterprise ATS products. Evidence volume meets minimum threshold (5+ distinct pain signals across sources) and at least one willingness-to-pay proxy exists (competitor pricing), though a direct quote from a prospect paying for this exact artifact is still missing \u2014 hence validated but not a strong pass.",
+  "sources": [
+    "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
+    "https://www.reddit.com/r/startups/",
+    "https://news.ycombinator.com/",
+    "https://www.lever.co/pricing",
+    "https://www.greenhouse.io/pricing",
+    "https://breezy.hr/pricing"
+  ],
+  "evaluated_at": "2026-06-05T09:59:57+03:00"
+}

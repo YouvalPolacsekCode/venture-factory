@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTB97YF4Y8H7D1EMZ0FTGQ6J",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Strategic advice about startup positioning is inherently high-judgement; customers will push for customized analysis and back-and-forth, elevating support burden."
+    }
+  ],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The anxiety about hyperscaler encroachment is real and frequently discussed, and early-stage AI founders are reachable via dev.to, Indie Hackers, and Twitter. However, the buyer is an early-stage founder \u2014 a group with extremely limited budget, notoriously low willingness to pay for strategic tooling, and a preference for free content. The problem ('which niches are defensible?') is inherently strategic consulting, not a repeatable automated deliverable, which caps both buyer_clarity and willingness_to_pay. Total of 4.7 falls below the 5.5 validate threshold.",
+  "solution_plan": "This opportunity does not clear the validate threshold. While a 'defensibility radar' report service is conceptually buildable with Claude, the paying buyer is not clearly identified \u2014 early-stage AI founders read articles about this anxiety but rarely purchase strategic analysis tools. If a narrower angle emerged (e.g. a weekly paid briefing for a specific segment of AI product builders with a demonstrated paid-newsletter audience), it could be re-evaluated. Drop for now.",
+  "notes": "Total 4.7 is below the 5.5 validate threshold. buyer_clarity (5) and willingness_to_pay (4) also fail build gates. Drop.",
+  "scored_at": "2026-06-05T10:00:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

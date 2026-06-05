@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTB97YESBG89WRCJQ5N4C7ED",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a functioning ORM-integrated admin framework requires bespoke integration work per customer stack; delivery is not automatable via Claude prompts."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Sales to engineering teams at funded startups (especially healthtech) requires demos and scoping calls to close, and onboarding requires technical support sessions."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "The pain is sharp and well-documented \u2014 engineering teams at funded startups genuinely waste weeks building internal admin tooling \u2014 and the buyer (engineering leads at B2B SaaS/healthtech startups) has real budget and willingness to pay as evidenced by Retool's commercial success. However, the solution is a complex developer framework requiring deep ORM and backend integration, which is architecturally far beyond Claude prompts and a simple page; buildability_with_ai and operational_autonomy both score 2. After applying the required penalties for per-customer delivery work and synchronous sales, the total collapses to 2.7. This is a strong real-world problem but the wrong shape for this factory.",
+  "solution_plan": "This opportunity is not viable for this factory. An ORM-integrated admin dashboard framework is a substantial software product requiring significant engineering, custom per-customer integration, technical sales cycles with demos, and ongoing developer support. A solo non-technical operator using Claude prompts and a landing page cannot build or deliver this. The market is real \u2014 consider as a reference point for what buyers in this segment need \u2014 but drop as a factory micro-service target.",
+  "notes": "buildability_with_ai (2) and operational_autonomy (2) both catastrophically fail build gates. Total after penalties is 2.7 \u2014 drop.",
+  "scored_at": "2026-06-05T10:00:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

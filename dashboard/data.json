@@ -1,13 +1,15 @@
 {
   "generated_at": {
-    "utc": "2026-06-04T17:11:10+00:00",
-    "idt": "2026-06-04T20:11:10+03:00"
+    "utc": "2026-06-05T07:01:05+00:00",
+    "idt": "2026-06-05T10:01:05+03:00"
   },
   "funnel": {
-    "candidates": 14,
-    "scored": 14,
-    "validated": 0,
-    "build_decisions": {},
+    "candidates": 19,
+    "scored": 19,
+    "validated": 1,
+    "build_decisions": {
+      "defer_1_week": 1
+    },
     "build_now": 0,
     "services_scaffolded": 0,
     "services_launched": 0
@@ -37,7 +39,7 @@
         "Buildable": 9,
         "Pain": 6
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
       "discovered_at": "2026-06-04T19:55:15+03:00"
@@ -74,6 +76,39 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=44751318",
       "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "topics": [
+        "ai-startup",
+        "platform-risk",
+        "notebooklm"
+      ],
+      "id": "01KTB97YF4Y8H7D1EMZ0FTGQ6J",
+      "problem_statement": "AI-powered productivity startups (summarization, research assistants, content pre-publication review) face existential platform risk as Google and other hyperscalers ship adjacent features in NotebookLM and similar products, creating uncertainty about which niches remain defensible.",
+      "target_segment": "Early-stage AI startup founders and product teams building productivity or content tools on top of LLMs",
+      "total": 4.7,
+      "recommended_stage": "drop",
+      "rationale": "The anxiety about hyperscaler encroachment is real and frequently discussed, and early-stage AI founders are reachable via dev.to, Indie Hackers, and Twitter. However, the buyer is an early-stage founder — a group with extremely limited budget, notoriously low willingness to pay for strategic tooling, and a preference for free content. The problem ('which niches are defensible?') is inherently strategic consulting, not a repeatable automated deliverable, which caps both buyer_clarity and willin…",
+      "solution_plan": "This opportunity does not clear the validate threshold. While a 'defensibility radar' report service is conceptually buildable with Claude, the paying buyer is not clearly identified — early-stage AI founders read articles about this anxiety but rarely purchase strategic analysis tools. If a narrower angle emerged (e.g. a weekly paid briefing for a specific segment of AI product builders with a demonstrated paid-newsletter audience), it could be re-evaluated. Drop for now.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 6,
+        "Will pay": 4,
+        "Buildable": 6,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://dev.to/dannwaneri/google-is-one-feature-away-from-killing-an-entire-startup-category-jk",
+      "discovered_at": "2026-06-05T09:59:00+03:00"
     },
     {
       "topics": [
@@ -144,6 +179,39 @@
     },
     {
       "topics": [
+        "flaky-tests",
+        "test-reliability",
+        "nondeterminism"
+      ],
+      "id": "01KTB97YECBG01M1NXB4JS0DGW",
+      "problem_statement": "Developers running standard frontend/integration test suites (Jasmine, TestCafe, Cypress, etc.) encounter nondeterministic flaky test failures that are extremely difficult to reproduce and diagnose, wasting significant engineering time.",
+      "target_segment": "Software engineers and QA teams at SaaS companies using JS/TS test frameworks",
+      "total": 4.3,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real and frequent — flaky tests cost engineering teams hours — and the buyer (QA engineers and dev leads at SaaS companies) is specific enough to be nameable. However, solving nondeterministic test failure reproducibly requires deep integration with test runners, CI infrastructure, and application runtime, which goes well beyond what Claude + prompts can build in a week; this is a hard infrastructure problem, not a text-processing problem. Operational autonomy is also very low: diag…",
+      "solution_plan": "This opportunity is not viable for this factory in its current form. The core technical challenge — deterministically reproducing nondeterministic failures in arbitrary JS test suites — requires test-runner hooks, sandboxed execution environments, and deep CI integration that cannot be built with Claude prompts and a landing page. A solo non-technical operator cannot realistically build or maintain this without significant engineering infrastructure. Drop and revisit only if a much narrower angle emerges (e.g. a report-analysis service that reads existing flaky-test logs and suggests categories of causes — but even that has limited willingne…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 3,
+        "Will pay": 4,
+        "Buildable": 3,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=39724265",
+      "discovered_at": "2026-06-05T09:59:00+03:00"
+    },
+    {
+      "topics": [
         "ai-governance",
         "github",
         "copilot"
@@ -180,39 +248,43 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3246,
-    "last_7_days_usd": 0.3246,
-    "all_time_usd": 0.3246,
+    "today_usd": 0.3237,
+    "last_7_days_usd": 0.6483,
+    "all_time_usd": 0.6482,
     "by_day": [
       {
         "date": "2026-06-04",
         "usd": 0.3246
+      },
+      {
+        "date": "2026-06-05",
+        "usd": 0.3237
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.1303
+        "usd": 0.1873
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.1228
+        "usd": 0.184
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.1473
       },
       {
         "agent": "pain_validation",
-        "usd": 0.0585
+        "usd": 0.1123
       },
       {
         "agent": "daily_summary",
-        "usd": 0.013
+        "usd": 0.0173
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-05-29",
-      "agents": {}
-    },
     {
       "date": "2026-05-30",
       "agents": {}
@@ -253,19 +325,42 @@
           "succeeded": 2
         },
         "opportunity_scoring": {
-          "succeeded": 3
+          "succeeded": 2
         },
         "pain_validation": {
           "skipped": 1,
           "succeeded": 1
         }
       }
+    },
+    {
+      "date": "2026-06-05",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-04_rerun_1957.md",
-    "date": "2026-06-04",
-    "text": "# Daily Summary — 2026-06-04 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 14 |\n| Opportunities validated past threshold | 0 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments. Factory in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 6 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily sweep of B2B SaaS communities for pain signals.\n2. `opportunity_scoring` processes the 14 candidate opportunities surfaced today.\n3. `pain_validation` runs targeted validation on top-scoring candidates.\n4. `build_decisions` reviews qualified opportunities for experiment fit.\n5. `cost_gain` prepares weekly analytics for Sunday ritual.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-05.md",
+    "date": "2026-06-05",
+    "text": "# Daily Summary — 2026-06-05 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 19 |\n| Opportunities validated past threshold | 1 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 5 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B communities.\n2. `pain_validation` runs targeted validation on the 19 candidate opportunities.\n3. `opportunity_scoring` refines ranking as new validation data arrives.\n4. `build_decisions` evaluates which candidates warrant experiment setup.\n5. `cost_gain` monitors early-stage spend against pipeline value.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

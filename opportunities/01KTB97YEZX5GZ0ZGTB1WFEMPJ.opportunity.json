@@ -1,0 +1,27 @@
+{
+  "id": "01KTB97YEZX5GZ0ZGTB1WFEMPJ",
+  "discovered_at": "2026-06-05T09:59:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95397/looking-for-open-source-business-apps-nextjs-react-typescript-mui-mongodb",
+    "snippet": "Kindly help me to spot some active open source business applications projects built with the stack: NextJS React TypeScript MUI MongoDB. Business applications: Financial accounting, Sales, Purchase, Employee payroll, Production or an ERP suite."
+  },
+  "problem_statement": "Small and mid-size businesses want open-source ERP or business application suites (accounting, HR, sales) built on modern JS stacks (Next.js, React, TypeScript, MongoDB) rather than legacy PHP/Python stacks like Odoo or ERPNext.",
+  "target_segment": "SMB owners and developers evaluating open-source ERP alternatives who are already invested in the Node/React ecosystem",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "erp",
+    "open-source",
+    "nextjs",
+    "react",
+    "typescript",
+    "mongodb",
+    "accounting",
+    "business-apps",
+    "smb",
+    "saas"
+  ],
+  "notes": "Recurring ask across dev forums. Odoo and ERPNext dominate but are Python/PHP based; a modern JS-stack ERP has a clear positioning gap. Signal is single question but maps to broader market pattern.",
+  "status": "candidate"
+}

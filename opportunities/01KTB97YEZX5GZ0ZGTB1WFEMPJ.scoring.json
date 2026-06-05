@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTB97YEZX5GZ0ZGTB1WFEMPJ",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building an ERP suite (accounting, HR, payroll, sales) is a massive multi-year software engineering effort; delivery cannot be automated by Claude."
+    }
+  ],
+  "total": 1.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is poorly defined \u2014 'SMB owners and developers evaluating open-source ERP' is a diffuse group, many of whom specifically want free open-source software and are not paying customers. Building even a minimal ERP suite (accounting, payroll, sales) is a multi-year engineering project orders of magnitude beyond this factory's tooling. Willingness to pay is low because the explicit ask is for open-source alternatives. Total after penalties is 1.6 \u2014 drop immediately.",
+  "solution_plan": "This is not viable for this factory. An ERP or business application suite is one of the most complex categories of software that exists; it cannot be built with Claude prompts and a landing page. The buyers are primarily seeking free open-source tools, not paying for a service. Drop entirely.",
+  "notes": "buildability_with_ai (2), operational_autonomy (2), buyer_clarity (3), willingness_to_pay (3) all fail build gates. Total after penalties is 1.6 \u2014 drop.",
+  "scored_at": "2026-06-05T10:00:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

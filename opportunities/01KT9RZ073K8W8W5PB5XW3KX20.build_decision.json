@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01KT9RZ073K8W8W5PB5XW3KX20",
+  "decided_at": "2026-06-05T10:01:01+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 9,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 5,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.8,
+      "min_total_to_build": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.8 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required gate floors are technically met, but the weighted total of 5.8 falls short of the 6.5 min_total_to_build threshold, and recommended_stage is 'validate' \u2014 not 'build' or 'scale'. The cost-to-gain ratio of 3.58 far exceeds the 0.6 kill threshold, and there is zero responsiveness signal. However, the idea is buildable and the gates are close enough that a one-week validation sprint (manual outreach on r/startups or startup Slack communities, offering a $19 manual kit) could lift responsiveness_signal and willingness_to_pay scores enough to cross the build line \u2014 or confirm this should be killed.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Reddit r/startups + Indie Hackers post offering a free-then-$19 interview kit"
+}

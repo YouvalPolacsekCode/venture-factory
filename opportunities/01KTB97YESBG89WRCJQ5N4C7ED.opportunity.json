@@ -1,0 +1,26 @@
+{
+  "id": "01KTB97YESBG89WRCJQ5N4C7ED",
+  "discovered_at": "2026-06-05T09:59:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=38051437",
+    "snippet": "We're a YC backed healthtech product with a significant amount of need for safe manual data entry and updates, and the requirements for our admin dashboard are complex enough that Django Admin would not cut it. I wish there was a tool like ReTool that was tied to our regular backend and ORM."
+  },
+  "problem_statement": "Developers at startups and scale-ups need an internal admin dashboard framework that integrates directly with their existing ORM/backend (not just via REST), supporting complex validation and permissions without requiring custom frontend work.",
+  "target_segment": "Full-stack engineering teams at B2B SaaS and healthtech startups (5\u2013200 engineers) needing internal tooling beyond Django Admin but without Retool's external-data-only model",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "admin-dashboard",
+    "internal-tools",
+    "orm-integration",
+    "django-admin",
+    "retool-alternative",
+    "developer-tools",
+    "saas",
+    "healthtech",
+    "backend"
+  ],
+  "notes": "Two separate HN threads (items 38051437 and 38072673) independently express the same pain. Retool itself acknowledged the gap and was building a solution (beta stage at time of capture). Persistent demand signal spanning 2023\u20132026 window.",
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01KTB97YECBG01M1NXB4JS0DGW",
+  "discovered_at": "2026-06-05T09:59:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=39724265",
+    "snippet": "I wonder if Antithesis could help with nondeterministic failures observed in unit and integration tests I encounter in my Jasmine and TestCafe suites. Most of the time, these are quite hard to reproduce - if at all possible - and a significant portion of failures is caused by genuine application bugs. I wish there was a tool that [addressed this for standard SaaS stacks]."
+  },
+  "problem_statement": "Developers running standard frontend/integration test suites (Jasmine, TestCafe, Cypress, etc.) encounter nondeterministic flaky test failures that are extremely difficult to reproduce and diagnose, wasting significant engineering time.",
+  "target_segment": "Software engineers and QA teams at SaaS companies using JS/TS test frameworks",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "flaky-tests",
+    "test-reliability",
+    "nondeterminism",
+    "integration-testing",
+    "qa-tooling",
+    "developer-tools",
+    "jasmine",
+    "testcafe",
+    "debugging"
+  ],
+  "notes": "Antithesis focuses on distributed systems; gap exists for lightweight flaky-test detection and reproduction tooling targeting standard web app test suites. Signal is a single HN comment but articulates a clearly felt pain.",
+  "status": "candidate"
+}

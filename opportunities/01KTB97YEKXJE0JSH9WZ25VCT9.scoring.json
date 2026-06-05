@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTB97YEKXJE0JSH9WZ25VCT9",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 5,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 2.8,
+  "penalties_applied": [],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The target is privacy-conscious home users and hobbyists who self-host Nextcloud \u2014 a group that overwhelmingly expects free, open-source software and has essentially zero willingness to pay for a niche GUI utility. The buyer is an individual consumer with no budget authority, no existing spend signal, and the solution itself is a native desktop GUI app that cannot be built with Claude prompts or delivered as a service. Operational autonomy is near zero: a desktop app requires per-platform builds, installation support, and ongoing OS compatibility work. Total is well below every threshold.",
+  "solution_plan": "This is not a viable opportunity for this factory. The audience (self-hosted Linux hobbyists) does not pay for tools of this type, the solution is a native desktop application that Claude cannot build or deliver as a hosted service, and there is no recurring revenue model. A solo non-technical operator cannot build and maintain a cross-platform GUI sync client. Drop entirely.",
+  "notes": "willingness_to_pay (2), buyer_clarity (3), buildability_with_ai (2), operational_autonomy (2) all fail build gates. Total 2.8 \u2014 drop.",
+  "scored_at": "2026-06-05T10:00:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

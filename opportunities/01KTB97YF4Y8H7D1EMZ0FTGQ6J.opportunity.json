@@ -1,0 +1,26 @@
+{
+  "id": "01KTB97YF4Y8H7D1EMZ0FTGQ6J",
+  "discovered_at": "2026-06-05T09:59:00+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/dannwaneri/google-is-one-feature-away-from-killing-an-entire-startup-category-jk",
+    "snippet": "Google Is One Feature Away From Killing an Entire Startup Category. I use NotebookLM as an attack layer before I publish anything. Not for summaries. Not for research. Score: 15, 15 comments on dev.to tagged ai, discuss, startup, productivity."
+  },
+  "problem_statement": "AI-powered productivity startups (summarization, research assistants, content pre-publication review) face existential platform risk as Google and other hyperscalers ship adjacent features in NotebookLM and similar products, creating uncertainty about which niches remain defensible.",
+  "target_segment": "Early-stage AI startup founders and product teams building productivity or content tools on top of LLMs",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-startup",
+    "platform-risk",
+    "notebooklm",
+    "llm",
+    "productivity",
+    "content-tools",
+    "defensibility",
+    "google",
+    "startup-strategy"
+  ],
+  "notes": "Signal is a dev.to article with meaningful engagement (15 points, 15 comments). Reflects a recurring anxiety in the AI-builder community. Opportunity angle: tooling or frameworks that help startups identify and occupy defensible niches before hyperscaler encroachment.",
+  "status": "candidate"
+}

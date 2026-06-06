@@ -3,7 +3,15 @@
 **Slug:** lead_research
 **Owner:** factory
 **Status:** active
-**Schema version:** 1
+**Schema version:** 2
+
+> **CANONICAL OVERRIDE (see docs/DATA_MODEL.md).** Runs only for a service whose
+> `design_review` is APPROVED (`services/<slug>/.design_review.json` status
+> approved) and lacking `.lead_research.json`. Writes `services/<slug>/lead_sources.md`
+> + `.lead_research.json` (NOT `experiments/`). Recommends ONLY channels in
+> `config/lead_research.yaml` allowlist; **ZERO raw PII** — the runner fails
+> closed (PII_LEAK) if a raw email appears. Drafts only; no scraping/sending.
+> 24/7 (ignore any Shabbat rule below).
 
 ## Purpose
 For every validated opportunity, finds reachable target customers and assembles a clean lead list with documented sources. Produces the raw input that Outreach later uses (after approval) to test responsiveness. The business outcome is short time-to-first-conversation: every validated experiment has at least 50 qualified leads, with PII handled correctly, within 24 hours of Pain Validation passing.

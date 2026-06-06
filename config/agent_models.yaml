@@ -16,6 +16,8 @@ agents:
   # solution_plan, so fewer-per-call keeps the JSON array within max_tokens.
   opportunity_scoring: { model: claude-sonnet-4-6, max_tokens: 6144, batch_size: 5 }
   cost_gain:           { model: claude-sonnet-4-6, max_tokens: 1024 }
+  lead_research:       { model: claude-sonnet-4-6, max_tokens: 4096 }
+  responsiveness_test: { model: claude-sonnet-4-6, max_tokens: 6144 }
   build_decisions:     { model: claude-opus-4-6,   max_tokens: 2048 }
   service_builder:     { model: claude-sonnet-4-6, max_tokens: 4096 }
   product_design:      { model: claude-sonnet-4-6, max_tokens: 3072 }

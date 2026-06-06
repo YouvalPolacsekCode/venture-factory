@@ -1,0 +1,28 @@
+schema_version: 1
+
+# Consumed by the lead_research agent (P4.5) in scripts/run_agent.py.
+# lead_research recommends ONLY channels in this allowlist; anything else is
+# flagged `out_of_allowlist` and never recommended. Drafts only — no scraping,
+# buying, or sending happens here (those are downstream, approval-gated).
+
+compliance_region: "il+eu+us"   # checks IL Privacy Law, GDPR, CCPA/CAN-SPAM
+
+# Operator-approved channel types. Keep conservative; widen deliberately.
+channel_allowlist:
+  - cold_email_opt_in_list
+  - manual_outreach
+  - reddit_public_post
+  - facebook_group_post
+  - linkedin_inmail_paid
+  - x_public_post
+  - hn_comment
+
+caps:
+  max_opportunities_per_run: 3
+  max_target_leads_per_channel_per_week: 200
+
+pii:
+  # HARD: lead_research output must contain ZERO raw PII. Any specific identifier
+  # is SHA256(handle@channel)[:12]. The runner re-scans output and fails closed
+  # if a raw email slips through.
+  hash_truncate_chars: 12

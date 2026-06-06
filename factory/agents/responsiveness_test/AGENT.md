@@ -3,7 +3,16 @@
 **Slug:** responsiveness_test
 **Owner:** factory
 **Status:** active
-**Schema version:** 1
+**Schema version:** 2
+
+> **CANONICAL OVERRIDE (see docs/DATA_MODEL.md).** Runs for a design-approved
+> service that has `.lead_research.json` and lacks `.responsiveness_test.json`.
+> DRAFTS ONLY — designs A/B/C variants + thresholds into
+> `services/<slug>/responsiveness_test.md` (+ `.responsiveness_test.json`), first
+> line `STATUS: DRAFT — SENDING REQUIRES OPERATOR APPROVAL`. It does **NOT** send
+> and does **NOT** queue a send approval here — sending is P4.6 (outreach,
+> `send_outreach_email`, operator-approved). Writes to `services/<slug>/` (not
+> `experiments/`). 24/7 (ignore any Shabbat rule below).
 
 ## Purpose
 Measures whether the leads we contact actually open, reply, click, or book a call. Turns raw outreach activity into a clean per-experiment responsiveness signal so Build Decision and Cost/Gain have real data instead of guesses. The business outcome is empirical kill/keep decisions: by end of June 2026, every experiment that reaches the outreach stage has a measured open rate, reply rate, and booked-call rate before any further build investment.

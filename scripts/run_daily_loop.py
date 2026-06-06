@@ -36,6 +36,8 @@ DAILY_SEQUENCE = [
     ("16:00", "build_decisions",     False),
     ("17:00", "service_builder",     False),
     ("17:30", "product_design",      False),
+    ("18:00", "lead_research",       False),
+    ("18:30", "responsiveness_test", False),
     ("22:00", "daily_summary",       False),
 ]
 
@@ -111,6 +113,21 @@ def _service_builder_has_work() -> bool:
         return False
 
 
+def _design_approved_slugs() -> list:
+    sd = REPO_ROOT / "services"
+    out = []
+    if sd.exists():
+        for d in sd.iterdir():
+            m = d / ".design_review.json"
+            if d.is_dir() and m.exists():
+                try:
+                    if json.loads(m.read_text()).get("status") == "approved":
+                        out.append(d)
+                except Exception:
+                    pass
+    return out
+
+
 def _product_design_has_work() -> bool:
     sd = REPO_ROOT / "services"
     if not sd.exists():
@@ -121,6 +138,15 @@ def _product_design_has_work() -> bool:
     return False
 
 
+def _lead_research_has_work() -> bool:
+    return any(not (d / ".lead_research.json").exists() for d in _design_approved_slugs())
+
+
+def _responsiveness_has_work() -> bool:
+    return any((d / ".lead_research.json").exists() and not (d / ".responsiveness_test.json").exists()
+               for d in _design_approved_slugs())
+
+
 PRECONDITIONS = {
     "market_radar": lambda: True,
     "pain_validation": _pain_validation_has_work,
@@ -129,6 +155,8 @@ PRECONDITIONS = {
     "build_decisions": _build_decisions_has_work,
     "service_builder": _service_builder_has_work,
     "product_design": _product_design_has_work,
+    "lead_research": _lead_research_has_work,
+    "responsiveness_test": _responsiveness_has_work,
     "daily_summary": lambda: True,
 }
 

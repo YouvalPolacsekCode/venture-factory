@@ -1,5 +1,13 @@
 # CHANGES
 
+## P4.5 — lead_research + responsiveness_test (drafts only) (2026-06-06)
+
+Both implemented as LLM agents in `scripts/run_agent.py`, **gated behind an approved `design_review`** (run only for services whose `.design_review.json` is `approved`):
+- **lead_research** — ranks compliant outreach channels from the new **`config/lead_research.yaml`** allowlist into `services/<slug>/lead_sources.md` + `.lead_research.json`. **ZERO raw PII** — the processor fails closed (`PII_LEAK`, writes nothing) if a raw email appears in the output. Drafts only; no scraping/sending.
+- **responsiveness_test** — designs A/B/C variants + success thresholds (from `scoring_model.yaml`) into `services/<slug>/responsiveness_test.md` (first line forced to `STATUS: DRAFT — SENDING REQUIRES OPERATOR APPROVAL`) + `.responsiveness_test.json`. **Drafts only — no send and no send-approval is queued here** (sending is P4.6/outreach, operator-approved).
+
+Added `agent_models.yaml` entries; wired both into the loop (18:00 / 18:30) + `should_run`/preconditions; canonical-override headers on both AGENT.md. Verified end-to-end without API incl. the PII fail-closed and the drafts-only invariants.
+
 ## P4.4 — product_design + design-review checkpoint (2026-06-06)
 
 Implemented `product_design` (LLM, sonnet) in `scripts/run_agent.py`: for each scaffolded `services/<slug>/` lacking a `.design_review.json`, it drafts `offer.md`, `pricing.md`, `landing_page_copy.md`, `onboarding_form.md` from the opportunity + scoring + cost_gain + `market_evidence.md`, within new **`config/product_design.yaml`** guardrails (price bounds + cost_gain ARPU band, language/currency per geo, no invented prices/testimonials). It then writes a **`design_review`** approval and a `services/<slug>/.design_review.json` marker and **STOPS — Checkpoint 1 (HARD STOP)**: nothing downstream proceeds until the operator approves. New `execute_action.py` `_checkpoint_adapter` (handles `design_review` + `implementation_review`) flips the marker to `approved` on sign-off. Wired `product_design` into the loop (17:30) + `should_run`/precondition; added the canonical override to its AGENT.md. Verified end-to-end without API: draft → queue → `approve.py` → marker approved; idempotent.

@@ -317,6 +317,16 @@ def should_run(agent: str) -> tuple[bool, str]:
             return True, ""
         return False, "no scaffolded services awaiting design"
 
+    if agent == "lead_research":
+        if _services_pending_lead():
+            return True, ""
+        return False, "no design-approved services awaiting lead research"
+
+    if agent == "responsiveness_test":
+        if _services_pending_responsiveness():
+            return True, ""
+        return False, "no services awaiting responsiveness drafts"
+
     return True, ""
 
 
@@ -537,6 +547,53 @@ Emit a SINGLE JSON object inside one ```json fenced block with EXACTLY:
 The runner writes these four files into services/<slug>/, then queues a
 `design_review` approval and STOPS — nothing else proceeds for this service
 until the operator approves it. Output ONLY the JSON object."""
+    if agent == "lead_research":
+        return """
+
+---
+## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
+
+You produce a ranked, COMPLIANT outreach-channel plan for ONE service. You are
+given `slug`, `opportunity`, and the service `offer`; `lead_source.schema.json`
+and `lead_research.yaml` (the channel allowlist + compliance region) are in the
+system prompt. You do NOT collect leads and you make NO external calls here.
+
+HARD PII RULE: output ZERO raw names, emails, phones, or handles. Audience is a
+COUNT. Any specific identifier must be SHA256(handle@channel) truncated to 12
+chars. Recommend ONLY channel types in the allowlist; mark anything else
+`out_of_allowlist`. Rank by (quality × audience) / max(cost_per_lead, 0.5).
+
+Emit a SINGLE JSON object inside one ```json fenced block with EXACTLY:
+- "slug": echo it.
+- "audience": one-sentence description (no PII).
+- "lead_sources_md": full Markdown for lead_sources.md (channel table + 1-week
+  plan + compliance notes). NO raw PII anywhere.
+- "recommended_channels": array (top 2) of objects with channel, access_method,
+  estimated_audience_size, quality (1-5), cost_per_lead_usd, compliance_notes,
+  out_of_allowlist (bool), sample_search_queries (array).
+Output ONLY the JSON object."""
+    if agent == "responsiveness_test":
+        return """
+
+---
+## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
+
+You DESIGN BUT DO NOT SEND an outreach test for ONE service. You are given
+`slug`, the `offer`/`landing` copy, and `recommended_channels` from
+lead_research; `scoring_model.yaml` (responsiveness_signal thresholds) is in the
+system prompt. Drafts only — SENDING IS A SEPARATE, OPERATOR-APPROVED STEP.
+
+Emit a SINGLE JSON object inside one ```json fenced block with EXACTLY:
+- "slug": echo it.
+- "responsiveness_md": full Markdown. Its FIRST line MUST be exactly
+  `STATUS: DRAFT — SENDING REQUIRES OPERATOR APPROVAL`. Include hypothesis,
+  cohort, A/B/C variants per channel (hook, ≤120-word body with a one-click
+  opt-out line, CTA, and the ONE axis each variant differs on), success
+  thresholds (reply%, booked%) from scoring_model, metrics, test_window_days.
+- "plan": {"hypothesis": str, "variants_count": int, "channels": [str],
+  "success_threshold": {"reply_rate_pct": number, "booked_rate_pct": number},
+  "test_window_days": int, "underpowered": bool}.
+Do NOT request a send. Output ONLY the JSON object."""
     if agent == "daily_summary":
         return """
 
@@ -580,6 +637,17 @@ def _stable_extra_blocks(agent: str) -> list[str]:
     if agent == "product_design":
         return ["## product_design.yaml (pricing + copy guardrails)\n```yaml\n"
                 + (REPO_ROOT / "config" / "product_design.yaml").read_text() + "\n```"]
+    if agent == "lead_research":
+        sch = REPO_ROOT / "templates" / "lead_source.schema.json"
+        return [
+            "## lead_source.schema.json (recommended_channels must validate)\n```json\n"
+            + (sch.read_text() if sch.exists() else "{}") + "\n```",
+            "## lead_research.yaml (channel allowlist + compliance)\n```yaml\n"
+            + (REPO_ROOT / "config" / "lead_research.yaml").read_text() + "\n```",
+        ]
+    if agent == "responsiveness_test":
+        return ["## scoring_model.yaml (responsiveness_signal thresholds)\n```yaml\n"
+                + (REPO_ROOT / "config" / "scoring_model.yaml").read_text() + "\n```"]
     return []
 
 
@@ -637,6 +705,39 @@ def build_user_messages(agent: str, frontmatter: dict, fixture_path: Path | None
                 _section("current_scaffold_files", f"```json\n{json.dumps(cur, indent=2)}\n```"),
             ]))
         return msgs, [f"pending_design:{len(msgs)}"]
+
+    if agent == "lead_research":
+        svc_dir = REPO_ROOT / "services"
+        opp_dir = REPO_ROOT / "opportunities"
+        msgs = []
+        for slug in _services_pending_lead()[:2]:
+            sd = svc_dir / slug
+            scaffold = _safe_load(sd / "_scaffold.json")
+            oid = scaffold.get("opportunity_id", "")
+            opp = _safe_load(opp_dir / f"{oid}.opportunity.json")
+            offer = (sd / "offer.md").read_text(encoding="utf-8")[:2500] if (sd / "offer.md").exists() else ""
+            msgs.append("\n\n".join([
+                _section("slug", slug),
+                _section("opportunity", f"```json\n{json.dumps(opp, indent=2)}\n```"),
+                _section("offer", offer),
+            ]))
+        return msgs, [f"pending_lead:{len(msgs)}"]
+
+    if agent == "responsiveness_test":
+        svc_dir = REPO_ROOT / "services"
+        msgs = []
+        for slug in _services_pending_responsiveness()[:2]:
+            sd = svc_dir / slug
+            offer = (sd / "offer.md").read_text(encoding="utf-8")[:2000] if (sd / "offer.md").exists() else ""
+            landing = (sd / "landing_page_copy.md").read_text(encoding="utf-8")[:1500] if (sd / "landing_page_copy.md").exists() else ""
+            lead = _safe_load(sd / ".lead_research.json")
+            msgs.append("\n\n".join([
+                _section("slug", slug),
+                _section("offer", offer),
+                _section("landing", landing),
+                _section("recommended_channels", f"```json\n{json.dumps(lead.get('recommended_channels', []), indent=2)}\n```"),
+            ]))
+        return msgs, [f"pending_responsiveness:{len(msgs)}"]
 
     if agent == "build_decisions":
         opp_dir = REPO_ROOT / "opportunities"
@@ -1303,6 +1404,106 @@ def _process_product_design(text: str, errors: list[dict],
     return written
 
 
+# ---------------------------------------------------------------------------
+# lead_research + responsiveness_test (P4.5) — drafts only, design-review gated
+# ---------------------------------------------------------------------------
+
+_EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
+
+
+def _services_design_approved() -> list[str]:
+    sd = REPO_ROOT / "services"
+    out = []
+    if sd.exists():
+        for d in sorted(sd.iterdir()):
+            m = d / ".design_review.json"
+            if d.is_dir() and m.exists():
+                try:
+                    if json.loads(m.read_text(encoding="utf-8")).get("status") == "approved":
+                        out.append(d.name)
+                except Exception:
+                    pass
+    return out
+
+
+def _services_pending_lead() -> list[str]:
+    return [s for s in _services_design_approved()
+            if not (REPO_ROOT / "services" / s / ".lead_research.json").exists()]
+
+
+def _services_pending_responsiveness() -> list[str]:
+    out = []
+    for s in _services_design_approved():
+        d = REPO_ROOT / "services" / s
+        if (d / ".lead_research.json").exists() and not (d / ".responsiveness_test.json").exists():
+            out.append(s)
+    return out
+
+
+def _process_lead_research(text: str, errors: list[dict]) -> list[str]:
+    payload = _parse_json_payload(text)
+    if isinstance(payload, list):
+        payload = payload[0] if payload else None
+    if not isinstance(payload, dict) or not payload.get("slug"):
+        errors.append({"code": "BAD_OUTPUT", "message": "lead_research output missing slug"})
+        return []
+    slug = str(payload["slug"]).strip().lower()
+    sd = REPO_ROOT / "services" / slug
+    if not (sd / "_scaffold.json").exists():
+        errors.append({"code": "UNKNOWN_SLUG", "message": slug})
+        return []
+    md = payload.get("lead_sources_md", "")
+    # HARD PII gate — fail closed if a raw email slips through.
+    if _EMAIL_RE.search(md or ""):
+        errors.append({"code": "PII_LEAK", "message": f"raw email in lead_sources.md for {slug}; not written"})
+        return []
+    written = []
+    if isinstance(md, str) and md.strip():
+        (sd / "lead_sources.md").write_text(md, encoding="utf-8")
+        written.append(f"services/{slug}/lead_sources.md")
+    (sd / ".lead_research.json").write_text(json.dumps({
+        "slug": slug,
+        "audience": payload.get("audience"),
+        "recommended_channels": payload.get("recommended_channels", []),
+        "generated_at": _idt_now().isoformat(timespec="seconds"),
+        "status": "draft",
+    }, indent=2), encoding="utf-8")
+    return written
+
+
+_RESP_HEADER = "STATUS: DRAFT — SENDING REQUIRES OPERATOR APPROVAL"
+
+
+def _process_responsiveness_test(text: str, errors: list[dict]) -> list[str]:
+    payload = _parse_json_payload(text)
+    if isinstance(payload, list):
+        payload = payload[0] if payload else None
+    if not isinstance(payload, dict) or not payload.get("slug"):
+        errors.append({"code": "BAD_OUTPUT", "message": "responsiveness_test output missing slug"})
+        return []
+    slug = str(payload["slug"]).strip().lower()
+    sd = REPO_ROOT / "services" / slug
+    if not (sd / "_scaffold.json").exists():
+        errors.append({"code": "UNKNOWN_SLUG", "message": slug})
+        return []
+    md = payload.get("responsiveness_md", "") or ""
+    if not md.lstrip().startswith("STATUS: DRAFT"):
+        md = _RESP_HEADER + "\n\n" + md  # enforce the draft header
+    written = []
+    if md.strip():
+        (sd / "responsiveness_test.md").write_text(md, encoding="utf-8")
+        written.append(f"services/{slug}/responsiveness_test.md")
+    plan = payload.get("plan", {}) if isinstance(payload.get("plan"), dict) else {}
+    (sd / ".responsiveness_test.json").write_text(json.dumps({
+        "slug": slug,
+        "status": "draft",
+        "header": _RESP_HEADER,
+        "plan": plan,
+        "generated_at": _idt_now().isoformat(timespec="seconds"),
+    }, indent=2), encoding="utf-8")
+    return written
+
+
 def _process_pain_validation(text: str, errors: list[dict]) -> list[str]:
     payload = _parse_json_payload(text)
     if isinstance(payload, dict):
@@ -1352,6 +1553,10 @@ def _process(agent: str, text: str, model: str, errors: list[dict],
         return _process_build_decisions(text, errors, approval_requests)
     if agent == "product_design":
         return _process_product_design(text, errors, approval_requests)
+    if agent == "lead_research":
+        return _process_lead_research(text, errors)
+    if agent == "responsiveness_test":
+        return _process_responsiveness_test(text, errors)
     if agent == "daily_summary":
         return _process_daily_summary(text, errors)
 

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTDSHJ3PW6VKDCY2XMQKMN9J",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Financial data aggregation and distribution for European ETFs touches MiFID II, SFDR, and potentially ESMA data licensing rules. Scraping fund provider websites at scale likely violates provider ToS; distributing aggregated fund data commercially may require licensing agreements. Real compliance costs and legal exposure for a solo operator."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the buyer (self-directed European retail investors and independent analysts) is more identifiable than a pure consumer play, but two hard problems block this. First, the regulated_industry penalty reflects that commercially distributing scraped ETF holdings data likely violates fund provider terms of service and potentially MiFID II data licensing rules \u2014 serious legal exposure for a solo operator. Second, maintaining scrapers against dozens of fund providers (Amundi, DWS, Lyxor, and others) who actively obfuscate their data is an ongoing engineering maintenance burden that can't run autonomously; every provider update breaks the pipeline. Operational autonomy scores 5 because of this fragility.",
+  "solution_plan": "This would be an ETF holdings API that scrapes and normalises fund data from European providers. The core build challenge is not the scraping itself (Claude can help write parsers) but the legal exposure: fund providers' ToS prohibit commercial redistribution of scraped data, and MiFID II adds another compliance layer. Maintaining scrapers against sites that deliberately obfuscate data requires ongoing engineering. A solo non-technical operator faces both legal and maintenance risks that make this unviable without significant resources. Drop this opportunity.",
+  "notes": "regulated_industry penalty applied (-1.5). not_legitimate_or_grey not applied (marginal case \u2014 data aggregation is a real use case, but ToS violation risk is captured in regulated_industry). Total 3.8 below min_total_to_validate (5.5). operational_autonomy floor unmet (5, min 7). buildability_with_ai floor unmet (5, min 6).",
+  "scored_at": "2026-06-06T09:23:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

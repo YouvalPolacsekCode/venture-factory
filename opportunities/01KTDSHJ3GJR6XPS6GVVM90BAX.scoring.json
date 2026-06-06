@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTDSHJ3GJR6XPS6GVVM90BAX",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Any service that facilitates or advises on cross-border money transfers touches financial services regulation (FCA, BaFin, etc.), payment institution licensing, AML/KYC obligations, and consumer protection rules across multiple jurisdictions. Even a comparison/information tool carries compliance and liability risk."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "International students are individual consumers, not businesses, and the segment is extremely fragmented and hard to reach at low cost; buyer clarity scores low (4) because there is no tight, reachable ICP with budget authority. More critically, any tool operating in the cross-border payments or FX comparison space is squarely in regulated financial services territory across multiple jurisdictions, applying a -1.5 penalty that reflects real compliance costs and legal exposure. Operational autonomy is also limited because accurate, real-time FX and fee data requires licensed data feeds or partnerships. Not viable for this factory.",
+  "solution_plan": "This would be a comparison tool showing estimated fees and transfer times across providers (Wise, Revolut, bank wire, etc.) for a given tuition payment. Accurate real-time data requires API agreements or web scraping fragile sources; any payment facilitation requires financial licensing. A solo non-technical operator faces real regulatory exposure here, not just technical difficulty. Drop this opportunity.",
+  "notes": "regulated_industry penalty applied. Total 3.1 below min_total_to_validate. buyer_clarity floor unmet (4, min 6). operational_autonomy floor unmet (5, min 7).",
+  "scored_at": "2026-06-06T09:23:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

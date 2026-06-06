@@ -1,0 +1,24 @@
+{
+  "id": "01KTDSHJ3A2QY250VAXPAXGV05",
+  "discovered_at": "2026-06-06T09:22:21+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=36996993",
+    "snippet": "I am a solo founder building a hardware startup and my least favorite thing to do is developing and prototyping a new PCB. Soldering by hand takes hours but I don't make enough of the same kind of board to justify getting any commercial PnP system. I wish there was a tool where I could: 1. Upload a BOM 2. Receive a DXF for laser cutting that arranged all my tapes (off Mouser/Digikey) in some rows or columns 3. Place my board in some spot on a Cartesian motion system 4. Peel open the [tape]..."
+  },
+  "problem_statement": "Solo hardware founders and small electronics prototypers cannot justify the cost of commercial pick-and-place machines but spend many hours hand-soldering PCB prototypes; there is no affordable, semi-automated solution bridging hand assembly and industrial PnP systems.",
+  "target_segment": "Solo hardware founders, indie PCB designers, and small electronics labs producing low-volume prototype runs",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "pick-and-place",
+    "pcb-assembly",
+    "hardware-startup",
+    "electronics-prototyping",
+    "bom-automation",
+    "low-volume-manufacturing",
+    "maker"
+  ],
+  "notes": "Very concrete pain description with a detailed feature wishlist from the author. Niche but high-intensity pain. Could be a SaaS tool generating laser-cut templates + motion system software, or a hardware kit.",
+  "status": "candidate"
+}

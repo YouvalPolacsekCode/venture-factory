@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTDSHJ3A2QY250VAXPAXGV05",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_physical_logistics",
+      "deduction": 1.0,
+      "reason": "Any viable solution involves physical hardware (motion system, laser-cut jigs, tape reels) \u2014 fundamentally outside software-only delivery."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Even the software/SaaS portion (BOM-to-DXF generator) would require per-order calibration, hardware integration support, and physical kit fulfilment if hardware is included."
+    }
+  ],
+  "total": 1.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is extremely vivid and real \u2014 solo hardware founders genuinely suffer through hand-soldering hours \u2014 but the solution is fundamentally a hardware + embedded-software product requiring physical manufacturing, shipping, and hands-on customer support. Claude and a simple web page cannot build or deliver a pick-and-place fixture or motion-system software. The buyer (solo hardware founders) is identifiable, but the niche is tiny and the build complexity is far beyond what this factory can produce autonomously. Operational autonomy scores 2 because every customer interaction involves physical hardware.",
+  "solution_plan": "This is a semi-automated PCB assembly jig \u2014 part laser-cut hardware, part software to generate cutting templates from a BOM. It cannot be built or operated by a solo non-technical operator using Claude + a web form. Hardware design, sourcing, and physical fulfilment are required. A SaaS-only subset (BOM-to-DXF template generator) is technically buildable but has almost no standalone commercial value without the physical system. Drop this opportunity entirely.",
+  "notes": "buildability_with_ai floor unmet (score 2, min 6). operational_autonomy floor unmet (score 2, min 7). Total 1.9 far below all thresholds.",
+  "scored_at": "2026-06-06T09:23:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

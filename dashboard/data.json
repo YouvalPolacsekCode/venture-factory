@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-05T07:01:05+00:00",
-    "idt": "2026-06-05T10:01:05+03:00"
+    "utc": "2026-06-06T06:23:42+00:00",
+    "idt": "2026-06-06T09:23:42+03:00"
   },
   "funnel": {
-    "candidates": 19,
-    "scored": 19,
+    "candidates": 25,
+    "scored": 25,
     "validated": 1,
     "build_decisions": {
       "defer_1_week": 1
@@ -43,6 +43,38 @@
       "source_type": "forum",
       "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
       "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "topics": [
+        "admin-dashboard",
+        "orm-integration",
+        "internal-tools"
+      ],
+      "id": "01KTDSHJ2XEB6QWXM95CXVHD6Z",
+      "problem_statement": "Developers lack a lightweight, framework-agnostic admin dashboard generator that integrates directly with their existing ORM and backend, forcing them to either build custom admin UIs from scratch or adopt heavy third-party platforms.",
+      "target_segment": "Backend web developers and small engineering teams using non-Django frameworks (Node, Rails, Laravel, etc.) who need internal admin tooling",
+      "total": 5.2,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is identifiable — backend developers and small engineering teams — and they do pay for tools like Retool, Forest Admin, or AdminJS, confirming real willingness. However, this is fundamentally a developer-tooling infrastructure product: to be useful it must integrate with multiple ORMs (Prisma, Sequelize, ActiveRecord, Eloquent), which requires deep, framework-specific engineering work that can't be automated by Claude prompts or a simple web page. Retool itself is building this, which…",
+      "solution_plan": "This is an ORM-connected admin dashboard generator. Building a genuinely useful version requires custom connectors for each ORM/framework, schema introspection, and UI scaffolding — work that goes well beyond what Claude + a simple form + Stripe can produce in a week. A solo non-technical operator could not realistically build or maintain this; it would require a software engineer to write and maintain the integrations. Even a narrow MVP (e.g., Prisma-only) would need ongoing engineering as ORM versions change. This is the wrong fit for this factory: skip it.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 4,
+        "Will pay": 6,
+        "Buildable": 4,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=38072673",
+      "discovered_at": "2026-06-06T09:22:21+03:00"
     },
     {
       "topics": [
@@ -248,9 +280,9 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3237,
-    "last_7_days_usd": 0.6483,
-    "all_time_usd": 0.6482,
+    "today_usd": 0.1449,
+    "last_7_days_usd": 0.7932,
+    "all_time_usd": 0.7931,
     "by_day": [
       {
         "date": "2026-06-04",
@@ -259,16 +291,20 @@
       {
         "date": "2026-06-05",
         "usd": 0.3237
+      },
+      {
+        "date": "2026-06-06",
+        "usd": 0.1449
       }
     ],
     "by_agent": [
       {
-        "agent": "market_radar",
-        "usd": 0.1873
+        "agent": "opportunity_scoring",
+        "usd": 0.2629
       },
       {
-        "agent": "opportunity_scoring",
-        "usd": 0.184
+        "agent": "market_radar",
+        "usd": 0.2484
       },
       {
         "agent": "build_decisions",
@@ -280,15 +316,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0173
+        "usd": 0.0223
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-05-30",
-      "agents": {}
-    },
     {
       "date": "2026-05-31",
       "agents": {
@@ -355,13 +387,36 @@
           "succeeded": 1
         }
       }
+    },
+    {
+      "date": "2026-06-06",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-05.md",
-    "date": "2026-06-05",
-    "text": "# Daily Summary — 2026-06-05 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 19 |\n| Opportunities validated past threshold | 1 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 5 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B communities.\n2. `pain_validation` runs targeted validation on the 19 candidate opportunities.\n3. `opportunity_scoring` refines ranking as new validation data arrives.\n4. `build_decisions` evaluates which candidates warrant experiment setup.\n5. `cost_gain` monitors early-stage spend against pipeline value.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
-    "truncated": false
+    "file": "reports/daily/2026-06-06.md",
+    "date": "2026-06-06",
+    "text": "# Daily Summary — 2026-06-06 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 25 |\n| Opportunities validated past threshold | 1 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down phases at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 5 core agents nominal.\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | nominal | Completed 1 run; 25 new pain signals identified |\n| opportunity_scoring | nominal | Completed 1 run; scored all 25 candidates |\n| build_decisions | nominal | Skipped (no pending experiments) |\n| cost_gain | nominal | Skipped (no live experiments to analyze) |\n| pain_validation | nominal | Skipped (pending operator decision on scored opportunities) |\n\n## Tomorrow's auto-scheduled actions\n\n1. `pain_validation` queued to run at 06:00 IDT — will probe the 25 candidate opportunities against operator-selected cohorts.\n2. `build_decisions` will evaluate the 1 validated opportunity if operator approves it for advancement.\n\n## Operator action items",
+    "truncated": true
   },
   "analytics": null
 }

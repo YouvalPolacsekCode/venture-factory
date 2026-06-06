@@ -1,0 +1,24 @@
+{
+  "id": "01KTDSHJ3GJR6XPS6GVVM90BAX",
+  "discovered_at": "2026-06-06T09:22:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/169676/study-in-europe-and-how-to-pay-tuition-fees-in-europe",
+    "snippet": "studying in Europe sounds fun until you realize you actually have to figure out how to pay the tuition. It's not just 'send the money and done.' You've got exchange rates, random bank fees, transfer times, and the university being like 'payment must arrive by this exact date.' And if you're paying from another country, your bank might take a bigger cut than you expected."
+  },
+  "problem_statement": "International students paying tuition to European universities face opaque cross-border transfer fees, unfavorable exchange rates, and strict payment deadlines, with no dedicated tool to compare transfer options and guarantee on-time arrival.",
+  "target_segment": "International students (especially from Asia, Middle East, Africa) enrolled or applying to European universities who need to send large tuition payments across currencies",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "international-tuition-payment",
+    "money-transfer",
+    "cross-border-payments",
+    "student-fintech",
+    "fx-rates",
+    "europe-education",
+    "payment-timing"
+  ],
+  "notes": "The post has a negative score suggesting low-quality content, but the underlying pain (international tuition transfer complexity) is well-documented across many other sources. Treat as corroborating signal only.",
+  "status": "candidate"
+}

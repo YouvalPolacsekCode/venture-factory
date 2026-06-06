@@ -1,0 +1,24 @@
+{
+  "id": "01KTDSHJ2XEB6QWXM95CXVHD6Z",
+  "discovered_at": "2026-06-06T09:22:21+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=38072673",
+    "snippet": "I wish there was a tool like ReTool that was tied to our regular backend and ORM. [Retool employee responds: We're building a backend & ORM integration that will enable you to connect your ORM with Retool directly to build admin dash & flexible tools on top of it.]"
+  },
+  "problem_statement": "Developers lack a lightweight, framework-agnostic admin dashboard generator that integrates directly with their existing ORM and backend, forcing them to either build custom admin UIs from scratch or adopt heavy third-party platforms.",
+  "target_segment": "Backend web developers and small engineering teams using non-Django frameworks (Node, Rails, Laravel, etc.) who need internal admin tooling",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "admin-dashboard",
+    "orm-integration",
+    "internal-tools",
+    "low-code",
+    "backend",
+    "retool-alternative",
+    "developer-tools"
+  ],
+  "notes": "Django Admin's popularity is the benchmark. Retool is aware of this gap and building toward it, which confirms market pull but also signals competition from a well-funded player.",
+  "status": "candidate"
+}

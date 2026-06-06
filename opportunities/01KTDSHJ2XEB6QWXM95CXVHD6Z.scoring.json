@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTDSHJ2XEB6QWXM95CXVHD6Z",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [],
+  "total": 5.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable \u2014 backend developers and small engineering teams \u2014 and they do pay for tools like Retool, Forest Admin, or AdminJS, confirming real willingness. However, this is fundamentally a developer-tooling infrastructure product: to be useful it must integrate with multiple ORMs (Prisma, Sequelize, ActiveRecord, Eloquent), which requires deep, framework-specific engineering work that can't be automated by Claude prompts or a simple web page. Retool itself is building this, which signals the market is real but also that the moat is technical depth, not content or automation. The operational_autonomy score (4) reflects that onboarding requires per-customer technical integration work and support will be high-complexity; this cannot run hands-off.",
+  "solution_plan": "This is an ORM-connected admin dashboard generator. Building a genuinely useful version requires custom connectors for each ORM/framework, schema introspection, and UI scaffolding \u2014 work that goes well beyond what Claude + a simple form + Stripe can produce in a week. A solo non-technical operator could not realistically build or maintain this; it would require a software engineer to write and maintain the integrations. Even a narrow MVP (e.g., Prisma-only) would need ongoing engineering as ORM versions change. This is the wrong fit for this factory: skip it.",
+  "notes": "buildability_with_ai floor unmet (score 4, min 6). operational_autonomy floor unmet (score 4, min 7). Total also below min_total_to_validate threshold of 5.5.",
+  "scored_at": "2026-06-06T09:23:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

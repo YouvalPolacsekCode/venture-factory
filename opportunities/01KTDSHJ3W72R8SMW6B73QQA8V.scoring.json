@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTDSHJ3W72R8SMW6B73QQA8V",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 6,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.3,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Non-profits and public sector teams on zero/minimal budget means viable unit economics require acquiring hundreds or thousands of paying orgs \u2014 the segment self-selects for free tools and grant-funded software, making revenue at small scale implausible."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a non-profit or public-sector team that has explicitly stated a zero-or-minimal budget \u2014 the signal is from someone seeking a free tool, which is the strongest possible anti-willingness-to-pay signal. Building a full-featured multi-tenant project management platform (Kanban, collaborative docs, granular permissions, French UI) is a multi-month engineering effort that Claude + simple tooling cannot deliver in any reasonable timeframe; this is product-company territory, not a micro-service. The total score of 2.3 falls well below the 5.5 validate threshold, and multiple build gates (operational_autonomy=3, buildability_with_ai=3, buyer_clarity=4, willingness_to_pay=2) all fail hard.",
+  "solution_plan": "Not viable for this factory. Building a competitive, fully-localized project management platform with multi-entity permissions is a years-long software product effort requiring a development team \u2014 it cannot be assembled from Claude prompts and a Stripe link. The target segment (French non-profits, public sector) explicitly wants free tools and has no discretionary software budget. Even if something were shipped, acquiring enough paying customers to break even would require a sales and marketing operation far beyond a solo non-technical operator. Drop this opportunity and do not invest further time.",
+  "notes": "Failing build gates: operational_autonomy (3 < 7), buildability_with_ai (3 < 6), buyer_clarity (4 < 6), willingness_to_pay (2 < 5). Core problem: the opportunity is a full SaaS product request from a budget-zero segment, not a monetizable micro-service gap.",
+  "scored_at": "2026-06-06T09:23:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

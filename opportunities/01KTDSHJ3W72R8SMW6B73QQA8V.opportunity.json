@@ -1,0 +1,24 @@
+{
+  "id": "01KTDSHJ3W72R8SMW6B73QQA8V",
+  "discovered_at": "2026-06-06T09:22:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95427/free-low-cost-tool-with-kanban-collaborative-docs-ticket-workflow-multi-entity-permissions-and-french-ui-support",
+    "snippet": "I'm looking for a free or very low-budget tool. Needs: Kanban, online document storage, ticket workflow, multi-entity permissions where satellites are not concerned by all evolutions of the central entity. Working with external provider. French UI support required."
+  },
+  "problem_statement": "Small French-speaking organizations managing multi-entity projects (e.g., central body + satellite partners + external providers) cannot find an affordable project management tool that supports granular multi-entity permissions, collaborative docs, kanban, and a French interface in one product.",
+  "target_segment": "Non-profit associations, public sector project teams, and SMEs in French-speaking markets (France, Belgium, Quebec) managing multi-stakeholder projects on zero or minimal budget",
+  "geo": "FR",
+  "signal_strength": 2,
+  "keywords": [
+    "project-management",
+    "french-localization",
+    "multi-tenant-permissions",
+    "kanban",
+    "collaborative-docs",
+    "nonprofit-tools",
+    "low-budget"
+  ],
+  "notes": "Notion/Linear/Asana don't fully satisfy multi-entity permission granularity at free tiers, and French localization is inconsistent. A Notion-alternative tailored to French public/nonprofit sector could win on compliance and language.",
+  "status": "candidate"
+}

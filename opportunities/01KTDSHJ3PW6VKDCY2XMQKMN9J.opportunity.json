@@ -1,0 +1,24 @@
+{
+  "id": "01KTDSHJ3PW6VKDCY2XMQKMN9J",
+  "discovered_at": "2026-06-06T09:22:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/169674/funds-appear-to-make-information-for-investors-deliberately-difficult-to-access",
+    "snippet": "If I want to know what some iShares or Xtrackers fund is actually holding I can just download some predictably structured URL. Easy. Try the same thing with Amundi \u2014 need to manually click through pointless prompts. Then not even a download URL on the fund website, just a bunch of scripted mess that sometimes manages to correctly convert the displayed graph data."
+  },
+  "problem_statement": "Retail and semi-professional ETF investors in Europe struggle to programmatically access fund holdings data because many fund providers (especially non-iShares) hide it behind dynamic scripting, cookie walls, and inconsistent formats, making portfolio analysis and due diligence unnecessarily difficult.",
+  "target_segment": "Self-directed retail investors and independent financial analysts in Europe who actively research ETF holdings for portfolio construction or compliance",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "etf-data",
+    "fund-holdings",
+    "investor-tools",
+    "data-scraping",
+    "european-etf",
+    "portfolio-analysis",
+    "fintech"
+  ],
+  "notes": "A unified ETF holdings aggregator/API for European funds (Amundi, DWS, Lyxor, etc.) could have B2C and B2B angles. SFDR/MiFID compliance adds further demand.",
+  "status": "candidate"
+}

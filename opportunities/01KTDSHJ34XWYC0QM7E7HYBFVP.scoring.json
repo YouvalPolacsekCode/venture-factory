@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTDSHJ34XWYC0QM7E7HYBFVP",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Target segment is individual consumers and general office workers; the business model requires many small paying users to generate meaningful revenue \u2014 typical paid conversion rates in this segment are very low and the market is already served by free tools (LibreOffice Calc, online converters)."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is individual data analysts and office workers \u2014 a consumer-adjacent segment that overwhelmingly uses free tools (Excel itself opens CSV, LibreOffice is free, dozens of free online converters exist). There is very little evidence of willingness to pay for a standalone CSV-to-Excel converter; paid substitutes at meaningful price points are absent. Operational autonomy is moderate (a downloadable tool or simple web service could run unattended) but the distribution and monetization problem is severe \u2014 reaching paying users at scale in a commoditised market is hard without a significant acquisition budget. Not the right fit.",
+  "solution_plan": "This would be a lightweight web service where users upload a CSV and download a clean Excel file. Claude could handle some data-cleaning logic. However, the market is saturated with free tools, making it nearly impossible to charge meaningfully without a clear differentiator (e.g. a privacy-first offline app would need a desktop installer the factory cannot build). A solo non-technical operator cannot realistically acquire paying customers here at viable unit economics. Drop this one.",
+  "notes": "Total 3.6 is below min_total_to_validate (5.5). buyer_clarity floor unmet (5, min 6). willingness_to_pay floor unmet (4, min 5).",
+  "scored_at": "2026-06-06T09:23:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

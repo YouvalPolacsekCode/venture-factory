@@ -312,6 +312,11 @@ def should_run(agent: str) -> tuple[bool, str]:
             return True, ""
         return False, "no approved builds awaiting scaffold"
 
+    if agent == "product_design":
+        if _services_pending_design():
+            return True, ""
+        return False, "no scaffolded services awaiting design"
+
     return True, ""
 
 
@@ -503,6 +508,35 @@ scoring_result.recommended_stage == "drop", decide "kill". Do not propose
 build_now for an idea that fails the solo-viability gates.
 
 Output ONLY the JSON object."""
+    if agent == "product_design":
+        return """
+
+---
+## RUNTIME CONTRACT (authoritative — overrides any conflicting instruction above)
+
+You design the offer for ONE scaffolded service. You are given `slug`,
+`opportunity`, `scoring_result`, `cost_gain_result`, `market_evidence`, and the
+current `offer.md` / `pricing.md` / `landing_page_copy.md` / `onboarding_form.md`
+scaffolds; `product_design.yaml` guardrails are in the system prompt.
+
+Rules: pricing must obey product_design.yaml (within min/max and the
+cost_gain ARPU band; cite a real competitor price or leave a TODO — never invent
+one). Language/currency per geo. Every benefit must trace to `market_evidence`;
+if unsupported, leave a `<!-- TO BE FILLED BY ... -->` marker rather than
+fabricate. No invented testimonials, names, or quotes.
+
+Emit a SINGLE JSON object inside one ```json fenced block with EXACTLY:
+- "slug": the service slug (echo it).
+- "offer_md": full Markdown for offer.md (resolve the sections you own).
+- "pricing_md": full Markdown for pricing.md (tiers + rationale + competitor anchor or TODO).
+- "landing_page_copy_md": full Markdown (hook, 3 benefits, CTA, FAQ; language per geo).
+- "onboarding_form_md": full Markdown (field list, validation, language labels).
+- "summary": {"offer_one_liner": str, "headline_price": number, "currency": str,
+  "landing_hook": str, "pricing_within_guardrails": bool, "open_todos": [str]}.
+
+The runner writes these four files into services/<slug>/, then queues a
+`design_review` approval and STOPS — nothing else proceeds for this service
+until the operator approves it. Output ONLY the JSON object."""
     if agent == "daily_summary":
         return """
 
@@ -543,6 +577,9 @@ def _stable_extra_blocks(agent: str) -> list[str]:
             "## cost_gain_model.yaml\n```yaml\n"
             + (REPO_ROOT / "config" / "cost_gain_model.yaml").read_text() + "\n```",
         ]
+    if agent == "product_design":
+        return ["## product_design.yaml (pricing + copy guardrails)\n```yaml\n"
+                + (REPO_ROOT / "config" / "product_design.yaml").read_text() + "\n```"]
     return []
 
 
@@ -572,6 +609,34 @@ def build_user_messages(agent: str, frontmatter: dict, fixture_path: Path | None
             _section("existing_opportunity_ids", f"```json\n{json.dumps(_existing_opportunity_ids())}\n```"),
         ])
         return [um], tags
+
+    if agent == "product_design":
+        svc_dir = REPO_ROOT / "services"
+        opp_dir = REPO_ROOT / "opportunities"
+        msgs: list[str] = []
+        for slug in _services_pending_design()[:2]:
+            sd = svc_dir / slug
+            scaffold = json.loads((sd / "_scaffold.json").read_text())
+            oid = scaffold.get("opportunity_id", "")
+            opp = _safe_load(opp_dir / f"{oid}.opportunity.json")
+            scoring = _safe_load(opp_dir / f"{oid}.scoring.json")
+            cg = _safe_load(opp_dir / f"{oid}.cost_gain.json")
+            evidence = ""
+            ev = sd / "market_evidence.md"
+            if ev.exists():
+                evidence = ev.read_text(encoding="utf-8")[:4000]
+            cur = {f: (sd / f).read_text(encoding="utf-8")[:1500]
+                   for f in ("offer.md", "pricing.md", "landing_page_copy.md", "onboarding_form.md")
+                   if (sd / f).exists()}
+            msgs.append("\n\n".join([
+                _section("slug", slug),
+                _section("opportunity", f"```json\n{json.dumps(opp, indent=2)}\n```"),
+                _section("scoring_result", f"```json\n{json.dumps(scoring, indent=2)}\n```"),
+                _section("cost_gain_result", f"```json\n{json.dumps(cg, indent=2)}\n```"),
+                _section("market_evidence", evidence or "(none on file)"),
+                _section("current_scaffold_files", f"```json\n{json.dumps(cur, indent=2)}\n```"),
+            ]))
+        return msgs, [f"pending_design:{len(msgs)}"]
 
     if agent == "build_decisions":
         opp_dir = REPO_ROOT / "opportunities"
@@ -1136,6 +1201,108 @@ def _process_build_decisions(text: str, errors: list[dict],
     return written
 
 
+# ---------------------------------------------------------------------------
+# product_design (P4.4) + design_review checkpoint
+# ---------------------------------------------------------------------------
+
+def _safe_load(path: Path):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _services_pending_design() -> list[str]:
+    """Scaffolded services whose design has not been drafted/queued yet
+    (no .design_review.json marker)."""
+    sd = REPO_ROOT / "services"
+    out = []
+    if sd.exists():
+        for d in sorted(sd.iterdir()):
+            if d.is_dir() and (d / "_scaffold.json").exists() and not (d / ".design_review.json").exists():
+                out.append(d.name)
+    return out
+
+
+def _process_product_design(text: str, errors: list[dict],
+                            approval_requests: list[str]) -> list[str]:
+    payload = _parse_json_payload(text)
+    if isinstance(payload, list):
+        payload = payload[0] if payload else None
+    if not isinstance(payload, dict) or not payload.get("slug"):
+        errors.append({"code": "BAD_OUTPUT", "message": "product_design output missing slug/object"})
+        return []
+    slug = str(payload["slug"]).strip().lower()
+    sd = REPO_ROOT / "services" / slug
+    if not (sd / "_scaffold.json").exists():
+        errors.append({"code": "UNKNOWN_SLUG", "message": slug})
+        return []
+    if (sd / ".design_review.json").exists():
+        return []  # idempotent — already queued
+
+    written: list[str] = []
+    file_map = {
+        "offer.md": payload.get("offer_md"),
+        "pricing.md": payload.get("pricing_md"),
+        "landing_page_copy.md": payload.get("landing_page_copy_md"),
+        "onboarding_form.md": payload.get("onboarding_form_md"),
+    }
+    for fname, content in file_map.items():
+        if isinstance(content, str) and content.strip():
+            (sd / fname).write_text(content, encoding="utf-8")
+            written.append(f"services/{slug}/{fname}")
+
+    summary = payload.get("summary", {}) if isinstance(payload.get("summary"), dict) else {}
+
+    # Light guardrail check (code-side; never fabricate, just flag).
+    pd_cfg = _load_yaml("config/product_design.yaml").get("pricing", {})
+    warns = []
+    try:
+        price = float(summary.get("headline_price"))
+        lo, hi = float(pd_cfg.get("min_price_usd", 19)), float(pd_cfg.get("max_price_usd", 999))
+        if not (lo <= price <= hi):
+            warns.append(f"headline_price {price} outside [{lo},{hi}]")
+    except (TypeError, ValueError):
+        warns.append("headline_price not numeric")
+
+    # Update scaffold bookkeeping.
+    scaffold = _safe_load(sd / "_scaffold.json")
+    scaffold["design_drafted_at"] = _idt_now().isoformat(timespec="seconds")
+    pop = set(scaffold.get("files_populated", [])) | set(file_map.keys())
+    scaffold["files_populated"] = sorted(pop)
+    scaffold["files_partially_populated"] = sorted(
+        set(scaffold.get("files_partially_populated", [])) - set(file_map.keys()))
+    (sd / "_scaffold.json").write_text(json.dumps(scaffold, indent=2), encoding="utf-8")
+
+    # Queue the HARD-STOP design_review checkpoint.
+    action = {
+        "action_type": "design_review",
+        "summary": f"Design review for '{slug}': {summary.get('offer_one_liner', '(offer)')} — "
+                   f"{summary.get('headline_price', '?')} {summary.get('currency', '')}; "
+                   f"hook: {summary.get('landing_hook', '')}",
+        "payload": {
+            "slug": slug,
+            "offer_one_liner": summary.get("offer_one_liner"),
+            "headline_price": summary.get("headline_price"),
+            "currency": summary.get("currency"),
+            "landing_hook": summary.get("landing_hook"),
+            "open_todos": summary.get("open_todos", []),
+            "guardrail_warnings": warns,
+            "files": written,
+        },
+        "cost_estimate_usd": 0.0,
+        "risk": "medium",
+        "expires_at": (_idt_now() + timedelta(hours=72)).isoformat(),
+    }
+    ulid = write_approval_request(action, "product_design")
+    approval_requests.append(ulid)
+    (sd / ".design_review.json").write_text(json.dumps({
+        "ulid": ulid, "status": "pending", "queued_at": _idt_now().isoformat(timespec="seconds"),
+        "summary": action["summary"],
+    }, indent=2), encoding="utf-8")
+    return written
+
+
 def _process_pain_validation(text: str, errors: list[dict]) -> list[str]:
     payload = _parse_json_payload(text)
     if isinstance(payload, dict):
@@ -1183,6 +1350,8 @@ def _process(agent: str, text: str, model: str, errors: list[dict],
         return _process_pain_validation(text, errors)
     if agent == "build_decisions":
         return _process_build_decisions(text, errors, approval_requests)
+    if agent == "product_design":
+        return _process_product_design(text, errors, approval_requests)
     if agent == "daily_summary":
         return _process_daily_summary(text, errors)
 

@@ -1,0 +1,35 @@
+schema_version: 1
+
+# Guardrails for the product_design agent (P4.4). Consumed by
+# scripts/run_agent.py (product_design branch). Pricing must stay within these
+# bounds; the agent never fabricates a price outside the cost_gain-derived range.
+
+pricing:
+  # Absolute sanity bounds for a solo-operated, AI-delivered micro-service.
+  min_price_usd: 19
+  max_price_usd: 999
+  # Preferred model for a hands-off service (one-off productized deliverable).
+  default_model: one_off            # one_off | subscription | usage
+  # The headline price must sit inside the cost_gain expected_arpu range, scaled:
+  anchor_to_cost_gain: true         # center on cost_gain.expected_arpu_usd
+  arpu_band_low_mult: 0.6           # allow 0.6x..2.0x of expected ARPU
+  arpu_band_high_mult: 2.0
+  require_competitor_anchor: true   # pricing.md must cite a real competing price or mark TODO
+
+currency_by_geo:
+  IL: ILS
+  DEFAULT: USD
+language_by_geo:
+  IL: Hebrew
+  DEFAULT: English
+
+copy_rules:
+  - No superlatives or unverifiable claims ("best", "guaranteed results").
+  - Every benefit must trace to market_evidence.md; if not, leave a TODO marker.
+  - Landing copy must include a clear non-advice disclaimer when geo/topic is sensitive.
+  - Never invent testimonials, customer names, or quotes.
+
+review:
+  # Checkpoint 1 is a HARD STOP — no lead research / outreach / publish until the
+  # operator approves the queued `design_review` action.
+  action_type: design_review

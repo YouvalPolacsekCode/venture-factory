@@ -35,6 +35,7 @@ DAILY_SEQUENCE = [
     ("14:00", "cost_gain",           False),
     ("16:00", "build_decisions",     False),
     ("17:00", "service_builder",     False),
+    ("17:30", "product_design",      False),
     ("22:00", "daily_summary",       False),
 ]
 
@@ -110,6 +111,16 @@ def _service_builder_has_work() -> bool:
         return False
 
 
+def _product_design_has_work() -> bool:
+    sd = REPO_ROOT / "services"
+    if not sd.exists():
+        return False
+    for d in sd.iterdir():
+        if d.is_dir() and (d / "_scaffold.json").exists() and not (d / ".design_review.json").exists():
+            return True
+    return False
+
+
 PRECONDITIONS = {
     "market_radar": lambda: True,
     "pain_validation": _pain_validation_has_work,
@@ -117,6 +128,7 @@ PRECONDITIONS = {
     "cost_gain": _cost_gain_has_work,
     "build_decisions": _build_decisions_has_work,
     "service_builder": _service_builder_has_work,
+    "product_design": _product_design_has_work,
     "daily_summary": lambda: True,
 }
 

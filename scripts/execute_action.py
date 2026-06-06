@@ -67,6 +67,27 @@ def _promote_to_build_adapter(request: dict, approved: dict) -> dict:
     return res
 
 
+def _checkpoint_adapter(request: dict, approved: dict) -> dict:
+    """Checkpoint approvals (design_review, implementation_review) are operator
+    sign-offs: flip the service's marker to approved so the pipeline continues.
+    No external call."""
+    action_type = request.get("action_type")
+    payload = approved.get("payload") or request.get("payload") or {}
+    slug = (payload.get("slug") or "").strip().lower()
+    marker = REPO_ROOT / "services" / slug / f".{action_type}.json"
+    if not slug or not (REPO_ROOT / "services" / slug).exists():
+        return {"ok": False, "reason": f"unknown service slug '{slug}'"}
+    data = {}
+    if marker.exists():
+        try:
+            data = json.loads(marker.read_text(encoding="utf-8"))
+        except Exception:
+            data = {}
+    data.update({"status": "approved", "approved_at": approved.get("operator_ts")})
+    marker.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    return {"ok": True, "checkpoint": action_type, "slug": slug, "status": "approved"}
+
+
 # TODO: replace each stub with a real adapter when the relevant service is wired up.
 # Adapter signature: (request: dict, approved: dict) -> dict
 ADAPTERS: dict[str, callable] = {
@@ -99,6 +120,10 @@ ADAPTERS: dict[str, callable] = {
 
     # Build promotion — scaffolds the service folder (internal-only).
     "promote_to_build": _promote_to_build_adapter,
+
+    # Operator checkpoints — flip the service marker to approved (internal-only).
+    "design_review":         _checkpoint_adapter,
+    "implementation_review": _checkpoint_adapter,
 }
 
 _DEFAULT_ADAPTER = _stub_adapter

@@ -3,7 +3,19 @@
 **Slug:** product_design
 **Owner:** factory
 **Status:** active
-**Schema version:** 1
+**Schema version:** 2
+
+> **CANONICAL OVERRIDE (see docs/DATA_MODEL.md — authoritative).** For each
+> scaffolded `services/<slug>/` (has `_scaffold.json`, no `.design_review.json`),
+> drafts `offer.md`, `pricing.md`, `landing_page_copy.md`, `onboarding_form.md`
+> from the opportunity + scoring + cost_gain + `market_evidence.md`, within the
+> guardrails in **`config/product_design.yaml`** (pricing bounds + cost_gain ARPU
+> band; never invent a price or testimonial — leave TODO markers). It then
+> queues a **`design_review`** approval and STOPS — **Checkpoint 1, a HARD STOP**:
+> no lead research / outreach / publish proceeds for that service until the
+> operator approves it (the runner writes `services/<slug>/.design_review.json`
+> and flips it to approved via `execute_action.py` on sign-off). State DB is
+> factory/state.db; 24/7 (ignore any Shabbat rule below).
 
 ## Purpose
 Turns a scaffolded `services/<slug>/` into a coherent offer: what the service does, who it is for, what it costs, what the landing page says, and what the onboarding form asks. The business outcome is a launchable surface: every approved service has clear offer, pricing, landing copy, and onboarding form within 48 hours of scaffolding, in the right language (English by default, Hebrew when the ICP is Israeli).

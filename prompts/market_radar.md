@@ -84,3 +84,7 @@ If no new opportunities found, emit `[]`.
 - Total emitted ≤ 20.
 - All timestamps are IDT (`+03:00`).
 - Shabbat rule respected if applicable.
+
+## Buyer-signal preference (P-D)
+
+The factory only builds what a solo operator can SELL. When distilling raw items into opportunities, **prioritize signals that imply a paying buyer** — someone paying for/using a competitor, a business/work context (a role, freelancer, agency, store owner), or a recurring cost/time-waste with money attached ("we spend hours", "costs us", "I'd pay for", "looking for a tool/service"). **De-prioritize** hobbyist / "should be free" / pure-curiosity signals (scoring penalizes these anyway, so filtering early saves spend). Record the buyer + willingness-to-pay evidence in `notes`; raise `signal_strength` when buyer intent and budget are explicit. The authoritative version of this rule lives in the market_radar RUNTIME CONTRACT in `scripts/run_agent.py`.

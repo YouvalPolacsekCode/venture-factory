@@ -15,6 +15,20 @@ sources:
     enabled: true
     rate_limit_rpm: 10
 
+  - id: hn_buyer_intent
+    type: hn
+    description: 'HN comments with explicit buyer intent ("would pay for") — money attached'
+    url_template: "https://hn.algolia.com/api/v1/search_by_date?query=%22would%20pay%20for%22&tags=comment&hitsPerPage=30"
+    enabled: true
+    rate_limit_rpm: 10
+
+  - id: hn_ask
+    type: hn
+    description: "HN Ask HN threads — people asking for tools/services to solve a problem"
+    url_template: "https://hn.algolia.com/api/v1/search_by_date?tags=ask_hn&hitsPerPage=30"
+    enabled: true
+    rate_limit_rpm: 10
+
   # --- Lobsters (computing community; newest stories) ----------------------
   - id: lobsters_newest
     type: lobsters
@@ -65,6 +79,42 @@ sources:
     type: stackexchange
     description: "lifehacks.stackexchange.com — everyday consumer problems and workarounds"
     url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=lifehacks&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  # --- Professional sites: people with jobs/budgets describing work pain -----
+  - id: se_freelancing
+    type: stackexchange
+    description: "freelancing.stackexchange.com — solo operators running a business (clear budget)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=freelancing&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_pm
+    type: stackexchange
+    description: "pm.stackexchange.com — project managers at companies (B2B budget)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=pm&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_salesforce
+    type: stackexchange
+    description: "salesforce.stackexchange.com — admins/devs on a paid platform (budget present)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=salesforce&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_serverfault
+    type: stackexchange
+    description: "serverfault.com — sysadmins/IT at companies (operational budget)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=serverfault&pagesize=30&filter=withbody"
+    enabled: true
+    rate_limit_rpm: 5
+
+  - id: se_webmasters
+    type: stackexchange
+    description: "webmasters.stackexchange.com — site owners / SEO (often businesses)"
+    url_template: "https://api.stackexchange.com/2.3/questions?order=desc&sort=creation&site=webmasters&pagesize=30&filter=withbody"
     enabled: true
     rate_limit_rpm: 5
 

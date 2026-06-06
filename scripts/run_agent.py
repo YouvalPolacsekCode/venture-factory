@@ -43,7 +43,7 @@ load_dotenv(REPO_ROOT / ".env")
 
 STRUCTURED_AGENTS = {"market_radar", "opportunity_scoring", "pain_validation", "daily_summary"}
 
-MAX_PREFETCH_ITEMS = 24  # shared round-robin across ~10 sources for domain breadth
+MAX_PREFETCH_ITEMS = 36  # shared round-robin across ~17 sources for breadth + buyer signal
 BUILD_DECISIONS_DAILY_CAP = 5   # max build decisions per day
 ACTIVE_BUILDS_MAX = 3           # portfolio cap on simultaneously-building services
 
@@ -422,6 +422,17 @@ them into distinct candidate opportunities and emit a SINGLE JSON array inside o
 - "notes": short free text (may be "").
 
 Do NOT include "id", "discovered_at", or "status" — the runner assigns those.
+
+BUYER-SIGNAL PREFERENCE (the factory only builds things a solo operator can SELL):
+PRIORITIZE signals that imply a paying buyer — someone mentioning they pay for /
+use a competing product, a business/work context (a role at a company, a
+freelancer/agency/store owner), or a recurring cost or time-waste with money
+attached ("we spend hours", "costs us", "I'd pay for", "looking for a tool/
+service"). DE-PRIORITIZE hobbyist / "should be free" / pure-curiosity signals.
+Set higher signal_strength when buyer intent and budget are explicit; put the
+buyer + their willingness-to-pay evidence in "notes". When two clusters compete
+for a slot, keep the one with the clearer paying buyer.
+
 Emit `[]` if there is no real, concrete, repeated pain. Output ONLY the JSON array."""
     if agent == "opportunity_scoring":
         return """

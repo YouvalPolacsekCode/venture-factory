@@ -146,3 +146,10 @@ A static, glanceable status page published to the web, fed by a sanitized export
 - **URL — pick one publish path:**
   - **Default (GitHub Pages from Actions):** `.github/workflows/pages.yml` uploads `dashboard/` and deploys on every push to `main` (and `workflow_dispatch`). URL: `https://<you>.github.io/venture-factory/`. **Requires** Pages enabled (Settings → Pages → Source: **GitHub Actions**); on a **private** repo this needs GitHub Pro/Team.
   - **Free fallback (public mirror):** `scripts/publish_dashboard_public.sh <you>/venture-factory-dashboard` pushes only `index.html` + `data.json` (already sanitized — no source) to a separate public repo whose Pages is free. URL: `https://<you>.github.io/venture-factory-dashboard/`.
+
+## Why so few ideas reach "build" (supply vs calibration)
+
+The factory deliberately runs a strict solo-viability bar (`min_total_to_build` 6.5 + `build_gates`: operational_autonomy ≥7, buyer_clarity ≥6). Early on, 20 scored ideas topped out at 5.8 and none reached build. That was diagnosed (prompt D) as a **supply** problem, not an unreachable bar:
+- `uv run score-calibration` scores hand-crafted strong solo-SaaS fixtures with the real model; strong ideas reach 6.8–7.2 and clear the gates, the weak control drops at ~2. So the 6.5 bar is reachable by a genuinely good idea.
+- The fix was better **input**, not a looser bar: buyer-oriented sources (HN buyer-intent/Ask HN + professional Stack Exchange) and full-range scoring anchors. Thresholds and gates are unchanged on purpose.
+- Expectation: the 24/7 loop accumulates volume; when a genuinely solo-viable idea appears it will clear 6.5 on its own and queue a `promote_to_build` for your approval. If you ever want more candidates faster, widen sources — do not lower the bar.

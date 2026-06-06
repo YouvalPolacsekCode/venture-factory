@@ -20,6 +20,7 @@ daily-loop = "scripts.run_daily_loop:main"
 inbox = "scripts.approvals_inbox:main"
 brief = "scripts.brief:main"
 build-dashboard = "scripts.build_dashboard:main"
+score-calibration = "scripts.score_calibration:main"
 
 [dependency-groups]
 dev = ["pytest>=8.0"]

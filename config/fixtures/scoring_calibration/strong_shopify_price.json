@@ -1,0 +1,22 @@
+{
+  "id": "01KTE8QG26YDZ6D6A8BX5PM6A2",
+  "discovered_at": "2026-06-06T10:00:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://example.com/calib",
+    "snippet": "Shopify store owners doing $20k+/mo manually check competitor stores for price changes and miss undercuts that cost them sales; there is no cheap automated weekly competitor price-monitoring report ta"
+  },
+  "problem_statement": "Shopify store owners doing $20k+/mo manually check competitor stores for price changes and miss undercuts that cost them sales; there is no cheap automated weekly competitor price-monitoring report tailored to their SKUs.",
+  "target_segment": "Shopify store owners with >$20k/mo revenue in competitive niches",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "shopify",
+    "pricing",
+    "ecommerce",
+    "competitor-monitoring",
+    "b2b"
+  ],
+  "notes": "Strong buyer with budget: these owners already pay $20-100/mo for Shopify apps (Prisync, Price2Spy exist at $50-200/mo). Fully automatable: scrape public competitor product pages + Claude writes a weekly diff report emailed automatically. No per-customer human work once set up. Recurring monthly value.",
+  "status": "candidate"
+}

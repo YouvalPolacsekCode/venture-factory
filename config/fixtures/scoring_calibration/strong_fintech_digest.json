@@ -1,0 +1,22 @@
+{
+  "id": "01KTE8QG25SS854KNXS0Z1FWVR",
+  "discovered_at": "2026-06-06T10:00:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://example.com/calib",
+    "snippet": "Compliance officers at small fintech startups must track a stream of regulatory changes across multiple agencies and manually assemble a weekly internal digest of what is relevant to their product."
+  },
+  "problem_statement": "Compliance officers at small fintech startups must track a stream of regulatory changes across multiple agencies and manually assemble a weekly internal digest of what is relevant to their product.",
+  "target_segment": "Compliance/risk leads at sub-50-person fintech startups",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "fintech",
+    "compliance",
+    "regtech",
+    "digest",
+    "b2b"
+  ],
+  "notes": "High-budget buyer: compliance teams pay thousands for tools like Ascent and Compliance.ai. Automatable: monitor public regulator RSS/feeds, Claude filters + summarizes a weekly digest scoped to the customer's product, emailed. Hands-off after onboarding. Strong willingness to pay.",
+  "status": "candidate"
+}

@@ -92,3 +92,7 @@ EXAMPLE ONLY
 - `recommended_stage` matches the thresholds from the config (not from memory).
 - If `evidence_thin: true`, `recommended_stage` is not `build` or `scale`.
 - Timestamps in IDT.
+
+## Calibration anchors (P-D — use the full 0-10 range)
+
+A top score of 5.8 across 20 diverse ideas indicated the rubric was clustering at 3-5. The authoritative fix lives in the `opportunity_scoring` RUNTIME CONTRACT in `scripts/run_agent.py` (injected): per-dimension 9/6/3 anchors instruct the model to reserve 9-10 for genuinely excellent cases and to score each dimension independently before the weighted total. A genuinely strong, solo-viable B2B/prosumer idea should land 7-8+; a mediocre one stays <5.5. The thresholds (`min_total_to_validate` 5.5 / `min_total_to_build` 6.5) and `build_gates` are UNCHANGED — only the use of the range was calibrated. Verify with `uv run score-calibration` (benchmarks the fixtures in `config/fixtures/scoring_calibration/`).

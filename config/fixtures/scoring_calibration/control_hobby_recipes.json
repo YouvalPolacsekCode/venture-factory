@@ -1,0 +1,21 @@
+{
+  "id": "01KTE8QG25SS854KNXS0Z1FWVN",
+  "discovered_at": "2026-06-06T10:00:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://example.com/calib",
+    "snippet": "Home cooks would like a free app that randomly suggests a dinner recipe when they cannot decide what to make."
+  },
+  "problem_statement": "Home cooks would like a free app that randomly suggests a dinner recipe when they cannot decide what to make.",
+  "target_segment": "General home cooks / consumers",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "recipes",
+    "consumer",
+    "hobby",
+    "free"
+  ],
+  "notes": "Weak commercial case: consumers expect this free, dozens of free apps exist, no willingness to pay, no clear paying buyer, ad-only model needs massive scale. Included as a NEGATIVE control \u2014 should stay well below 5.5.",
+  "status": "candidate"
+}

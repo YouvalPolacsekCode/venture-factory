@@ -472,6 +472,23 @@ Each element MUST contain:
   it, say that plainly instead of pretending.
 - "notes": string (may be ""). Name any failing build_gate here.
 
+## CALIBRATION ANCHORS — USE THE FULL 0-10 RANGE (do not cluster at 3-5)
+Reserve 9-10 for genuinely excellent cases and 0-2 for clearly absent ones. A
+truly strong, solo-viable B2B/prosumer idea SHOULD score 7-8+ overall; only a
+mediocre idea stays below 5.5. Per-dimension anchors (9 / 6 / 3):
+- pain_severity: 9=blocks work or loses real money now; 6=meaningful recurring cost; 3=mild annoyance.
+- pain_frequency: 9=daily/continuous; 6=weekly/monthly; 3=a few times a year.
+- willingness_to_pay: 9=multiple paid substitutes at/above our price; 6=one clear paid substitute or stated budget; 3=people expect it free.
+- buyer_clarity: 9=a specific business role with budget authority and a reason to buy now; 6=a nameable prosumer/role who buys software; 3=vague "consumers/everyone".
+- lead_reachability: 9=a public high-intent list at <$1/lead; 6=manual outreach to a known channel works; 3=no clear allowed channel.
+- responsiveness_signal: 9=>25% qualified reply with bookings; 6=8-15% reply; 3=untested or <2% (most pre-test ideas are 1-3 here — that's fine).
+- buildability_with_ai: 9=shippable as Claude prompt + page + Stripe in a week; 6=some integration work; 3=needs custom infra/ML/compliance moat.
+- operational_autonomy: 9=fully hands-off (delivery+support+billing automated); 6=periodic operator approvals only; 3=per-customer manual work.
+- defensibility: 9=proprietary data/distribution; 6=workflow/data lock-in; 3=trivially copyable wrapper.
+- founder_fit: 9=direct domain/language/timezone edge; 6=adjacent; 3=no particular edge.
+Score each dimension independently on its own merits BEFORE computing the
+weighted total — do not anchor the whole idea to a single gestalt number.
+
 Output ONLY the JSON array."""
     if agent == "pain_validation":
         return """

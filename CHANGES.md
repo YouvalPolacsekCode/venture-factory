@@ -1,5 +1,13 @@
 # CHANGES
 
+## Prompt D — buyer-oriented sourcing + scoring calibration (keep the strict bar) (2026-06-06)
+
+The build pipeline was starved (20 ideas scored, top 5.8, 0 reaching the 6.5 build bar). Per the operator's decision the strict bar was KEPT — `min_total_to_validate` (5.5), `min_total_to_build` (6.5), and `build_gates` are unchanged. Two workstreams instead raised supply/quality:
+
+**WS1 — sourcing.** Added buyer/budget-leaning no-auth sources, each verified reachable from a script before wiring (no silent 403s): HN buyer-intent (`"would pay for"`) + Ask HN, and professional Stack Exchange sites (`freelancing`, `pm`, `salesforce`, `serverfault`, `webmasters`). `sysadmin`/`projectmanagement` were rejected (invalid SE names). Raised `MAX_PREFETCH_ITEMS` 24→36 keeping the fair round-robin (15 hosts fetch cleanly). Biased the `market_radar` RUNTIME CONTRACT (and `prompts/market_radar.md`) toward signals implying a paying buyer; de-prioritized hobbyist/"should-be-free" signals.
+
+**WS2 — scoring calibration.** Added per-dimension **9/6/3 full-range anchors** to the `opportunity_scoring` RUNTIME CONTRACT (the injected, authoritative prompt) so the model uses the whole 0-10 range and scores each dimension independently; mirrored in `prompts/opportunity_scoring.md`. Added a benchmark — `scripts/score_calibration.py` (`uv run score-calibration`) — that scores 5 hand-crafted strong solo-SaaS fixtures + 1 weak control (`config/fixtures/scoring_calibration/`) with the real model. **Result: 4/5 strong fixtures reach ≥6.5 AND pass build_gates (7.0, 7.2, 6.8, 7.0); the control drops at 2.2.** So the 6.5 bar is reachable by construction; build_gates (autonomy ≥7, buyer ≥6) clear for genuinely autonomous, clear-buyer ideas. **Conclusion: the empty pipeline is a SUPPLY problem (the strict bar is fine — it needs more/better real ideas + the 24/7 loop's accumulated volume + WS1's buyer-oriented sources), not a calibration one.** No thresholds or gates were lowered.
+
 ## P4.5 — lead_research + responsiveness_test (drafts only) (2026-06-06)
 
 Both implemented as LLM agents in `scripts/run_agent.py`, **gated behind an approved `design_review`** (run only for services whose `.design_review.json` is `approved`):

@@ -1,0 +1,22 @@
+{
+  "id": "01KTE8QG26YDZ6D6A8BX5PM6A1",
+  "discovered_at": "2026-06-06T10:00:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://example.com/calib",
+    "snippet": "Independent podcasters spend 2-3 hours per episode writing show notes, chapter timestamps, and promotional social posts by hand."
+  },
+  "problem_statement": "Independent podcasters spend 2-3 hours per episode writing show notes, chapter timestamps, and promotional social posts by hand.",
+  "target_segment": "Monetizing indie podcasters and small podcast networks",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "podcast",
+    "content",
+    "automation",
+    "creators",
+    "b2b"
+  ],
+  "notes": "Buyer pays today: tools like Capsho and Swell AI charge $30-80/mo for exactly this. Fully automatable: upload transcript/audio, Claude produces notes + timestamps + 5 social posts, emailed back. No human in the loop. Recurring per-episode demand.",
+  "status": "candidate"
+}

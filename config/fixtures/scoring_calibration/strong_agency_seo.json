@@ -1,0 +1,22 @@
+{
+  "id": "01KTE8QG25SS854KNXS0Z1FWVP",
+  "discovered_at": "2026-06-06T10:00:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://example.com/calib",
+    "snippet": "Marketing agencies hand-write SEO meta titles and descriptions for hundreds of client pages every month \u2014 slow, repetitive, and inconsistent across writers."
+  },
+  "problem_statement": "Marketing agencies hand-write SEO meta titles and descriptions for hundreds of client pages every month \u2014 slow, repetitive, and inconsistent across writers.",
+  "target_segment": "Small SEO/marketing agencies (5-50 staff) managing many client sites",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "seo",
+    "agency",
+    "content",
+    "automation",
+    "b2b"
+  ],
+  "notes": "Clear paying buyer: agencies already pay for Surfer SEO, Clearscope ($99-199/mo). Fully AI-buildable: upload a sitemap/URL list, Claude generates optimized meta tags, delivered as a CSV. Hands-off bulk productized service. Recurring per-client-batch revenue.",
+  "status": "candidate"
+}

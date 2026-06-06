@@ -1,0 +1,22 @@
+{
+  "id": "01KTE8QG25SS854KNXS0Z1FWVQ",
+  "discovered_at": "2026-06-06T10:00:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://example.com/calib",
+    "snippet": "Amazon FBA sellers want a fast automated audit of their product listing (title, bullets, backend keywords, image checklist) against current best practices, instead of paying a consultant."
+  },
+  "problem_statement": "Amazon FBA sellers want a fast automated audit of their product listing (title, bullets, backend keywords, image checklist) against current best practices, instead of paying a consultant.",
+  "target_segment": "Amazon FBA sellers doing $5k-100k/mo",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "amazon",
+    "fba",
+    "ecommerce",
+    "listing-optimization",
+    "b2b"
+  ],
+  "notes": "Buyer with money: FBA sellers already pay for Helium 10 and Jungle Scout ($40-100/mo). Automatable: paste an ASIN/listing, Claude returns a scored audit + rewrite suggestions as a report. No human work per order. Recurring as sellers add SKUs.",
+  "status": "candidate"
+}

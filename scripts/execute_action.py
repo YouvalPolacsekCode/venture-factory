@@ -52,6 +52,21 @@ def _stub_adapter(request: dict, approved: dict) -> dict:
     }
 
 
+def _promote_to_build_adapter(request: dict, approved: dict) -> dict:
+    """P4.3 — an approved promote_to_build scaffolds the service (internal-only,
+    no external call). Idempotent: a slug already built is skipped."""
+    import service_builder
+    payload = approved.get("payload") or request.get("payload") or {}
+    oid = payload.get("opportunity_id")
+    slug = (payload.get("proposed_slug") or "").strip().lower()
+    approved_at = approved.get("operator_ts")
+    if not oid or not slug:
+        return {"ok": False, "reason": "missing opportunity_id/proposed_slug in approval payload"}
+    res = service_builder.scaffold_service(
+        oid, slug, approved_at, payload.get("confidence_pct"), payload.get("why_now_memo", ""))
+    return res
+
+
 # TODO: replace each stub with a real adapter when the relevant service is wired up.
 # Adapter signature: (request: dict, approved: dict) -> dict
 ADAPTERS: dict[str, callable] = {
@@ -81,6 +96,9 @@ ADAPTERS: dict[str, callable] = {
     # Cap overrides
     "spend_above_daily_cap":   _stub_adapter,
     "call_paid_api_above_cap": _stub_adapter,
+
+    # Build promotion — scaffolds the service folder (internal-only).
+    "promote_to_build": _promote_to_build_adapter,
 }
 
 _DEFAULT_ADAPTER = _stub_adapter

@@ -306,6 +306,12 @@ def should_run(agent: str) -> tuple[bool, str]:
                 return True, ""
         return False, "no cost/gain'd opportunities awaiting decision"
 
+    if agent == "service_builder":
+        import service_builder
+        if service_builder.find_pending_builds():
+            return True, ""
+        return False, "no approved builds awaiting scaffold"
+
     return True, ""
 
 
@@ -1389,6 +1395,20 @@ def main() -> int:
         st = "succeeded" if not errors else "failed"
         _finalize(run_id, agent, started_at, st, 0, 0, 0.0, outs, [], errors, conn)
         return 0 if st == "succeeded" else 1
+
+    # service_builder is deterministic (no LLM): scaffold approved builds.
+    if agent == "service_builder":
+        import service_builder
+        outs: list[str] = []
+        for r in service_builder.run():
+            if r.get("status") == "scaffolded":
+                outs.extend(r.get("files_created", []))
+                print(f"Scaffolded: services/{r['slug']}/ ({len(r.get('files_created', []))} files)")
+            else:
+                print(f"[service_builder] {r.get('slug', '?')}: {r.get('status')} "
+                      f"({r.get('reason', '')})")
+        _finalize(run_id, agent, started_at, "succeeded", 0, 0, 0.0, outs, [], errors, conn)
+        return 0
 
     try:
         model = "dry-run"

@@ -3,7 +3,20 @@
 **Slug:** service_builder
 **Owner:** factory
 **Status:** active
-**Schema version:** 1
+**Schema version:** 2
+
+> **CANONICAL OVERRIDE (see docs/DATA_MODEL.md — authoritative).** Implemented
+> **deterministically in `scripts/service_builder.py`** (no LLM call). Triggered
+> only by an **operator-approved `promote_to_build`** approval (via
+> `scripts/execute_action.py` on approval, and by the loop's `service_builder`
+> step for idempotency). Copies `templates/service_template/` →
+> `services/<slug>/`, populates `status.md` + `market_evidence.md` from real
+> inputs, and leaves exact `<!-- TO BE FILLED BY <agent_slug> — <what> -->`
+> markers with a matching `next_agent_handoffs` list; writes `_scaffold.json` +
+> `build_provenance.json`. Refuses on slug collision / invalid slug / unapproved
+> or absent approval; idempotent. **No `experiments/` tree, no factory.db, 24/7
+> (ignore any Shabbat rule below).** Handoffs use real agent slugs (the
+> aspirational `ai_engineer` is mapped to `product_design`).
 
 ## Purpose
 Instantiates a new service from `templates/service_template/` once a Build Decision is approved. Wires the experiment evidence into the new service folder so downstream agents (Product Design, Outreach, Customer Delivery, QA, Support) have a complete, consistent scaffold to act on. The business outcome is zero-friction kickoff: from approved decision to fully scaffolded `services/<slug>/` in under 10 minutes, with no manual file copying.

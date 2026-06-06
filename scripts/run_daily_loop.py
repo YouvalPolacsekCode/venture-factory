@@ -34,6 +34,7 @@ DAILY_SEQUENCE = [
     ("09:30", "opportunity_scoring", False),
     ("14:00", "cost_gain",           False),
     ("16:00", "build_decisions",     False),
+    ("17:00", "service_builder",     False),
     ("22:00", "daily_summary",       False),
 ]
 
@@ -100,12 +101,22 @@ def _build_decisions_has_work() -> bool:
     return False
 
 
+def _service_builder_has_work() -> bool:
+    try:
+        sys.path.insert(0, str(REPO_ROOT / "scripts"))
+        import service_builder
+        return bool(service_builder.find_pending_builds())
+    except Exception:
+        return False
+
+
 PRECONDITIONS = {
     "market_radar": lambda: True,
     "pain_validation": _pain_validation_has_work,
     "opportunity_scoring": _opportunity_scoring_has_work,
     "cost_gain": _cost_gain_has_work,
     "build_decisions": _build_decisions_has_work,
+    "service_builder": _service_builder_has_work,
     "daily_summary": lambda: True,
 }
 

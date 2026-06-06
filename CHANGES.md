@@ -1,5 +1,9 @@
 # CHANGES
 
+## P4.3 — service_builder scaffolds approved services (2026-06-06)
+
+New `scripts/service_builder.py` (deterministic, no LLM, internal-only). Triggered by an **operator-approved `promote_to_build`**: copies `templates/service_template/` (17 files) → `services/<slug>/`, populates `status.md` (slug, building stage, provenance, opportunity link) and `market_evidence.md` (verbatim from the opportunity), and leaves the exact `<!-- TO BE FILLED BY <agent_slug> — <what> -->` marker on every downstream-owned file with a matching `next_agent_handoffs` list; writes `_scaffold.json` + `build_provenance.json`. Refuses on slug collision / invalid slug / unapproved-or-absent approval; idempotent (skips a built slug); daily ceiling of 1 new build. Wired two trigger paths: an `execute_action.py` `promote_to_build` adapter (fires on approval) and a `service_builder` loop step + `should_run`/precondition (idempotent catch-up). No fabrication — only known facts are filled. Updated `service_builder` AGENT.md with the canonical override (the aspirational `ai_engineer` owner maps to `product_design`).
+
 ## P4.1 — cost_gain agent live (2026-06-04)
 
 Un-stubbed `cost_gain` as a **deterministic, code-only** step in `scripts/run_agent.py` (no LLM, matching ARCHITECTURE "all math in code"). For each `opportunities/<id>.verdict.json` with `status==validated` lacking a sibling `.cost_gain.json`, `_compute_cost_gain` derives — from `config/cost_gain_model.yaml` + the opportunity's scoring dims — build cost (scaled by `buildability_with_ai`), monthly run cost, ARPU (scaled by `willingness_to_pay`), conversion (from `buyer_clarity`), cost-to-first-paid, 30/90-day gain, the `cost_to_gain_ratio` and a sensitivity band; every figure is listed in `assumptions[]`. Writes `opportunities/<id>.cost_gain.json`. Removed `cost_gain` from `STUB_AGENTS`; added skip-no-work preconditions in both the runner (`should_run`) and the loop (`_cost_gain_has_work`).

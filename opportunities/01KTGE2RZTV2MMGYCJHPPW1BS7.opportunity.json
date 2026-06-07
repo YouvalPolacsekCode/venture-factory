@@ -1,0 +1,24 @@
+{
+  "id": "01KTGE2RZTV2MMGYCJHPPW1BS7",
+  "discovered_at": "2026-06-07T09:59:46+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=34658489",
+    "snippet": "ActivityWatch is great for single device tracking, but I wish there was a tool for multi-device tracking and also away-from-device tracking (tracking gym, sleep, etc...) that integrated all of the data into one place and made it easily accessible."
+  },
+  "problem_statement": "Knowledge workers and productivity-focused individuals cannot get a unified time and activity tracking view across multiple devices and offline activities (gym, sleep, meetings), forcing them to stitch together data from several disconnected tools.",
+  "target_segment": "Productivity-obsessed knowledge workers, freelancers, and solo operators who track personal efficiency and billable time across desktop, mobile, and offline contexts",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "time-tracking",
+    "multi-device",
+    "productivity",
+    "activity-tracking",
+    "quantified-self",
+    "freelancer-tools",
+    "unified-dashboard"
+  ],
+  "notes": "Single HN comment but the author built a Chrome extension (WebBlock) suggesting genuine builder/buyer persona. ActivityWatch has a large open-source user base; multi-device and offline gap is a known limitation. Freelancers billing by time have direct willingness-to-pay. Adjacent to products like Toggl, RescueTime \u2014 differentiation is cross-device + offline unification.",
+  "status": "candidate"
+}

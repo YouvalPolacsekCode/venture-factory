@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTGE2RZTV2MMGYCJHPPW1BS7",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The target segment (productivity-obsessed individuals) is primarily B2C. At $5-15/month per user, the model requires hundreds to thousands of paying consumers to generate meaningful revenue \u2014 well above what a solo operator can acquire without paid marketing or viral growth."
+    }
+  ],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a vague 'productivity-obsessed individual' \u2014 not a named business role with a budget. Free tools (ActivityWatch, RescueTime free tier, Toggl free) dominate this space, and paying consumers for personal productivity software are rare and high-churn. The core technical requirement \u2014 a native agent running on multiple devices (Windows, Mac, mobile) capturing idle/active state and syncing offline activity from wearables \u2014 is far beyond what Claude prompts and a landing page can deliver. This is a product that needs a real engineering team and native app development.",
+  "solution_plan": "This idea is not buildable by a solo non-technical operator using Claude + a landing page. It requires native OS integrations (background processes on Mac/Windows/iOS/Android) to capture application focus and sync with wearables \u2014 none of which Claude can generate and deploy without a software engineering team. Even if the data pipeline were solved, the consumer B2C market for paid productivity tracking is crowded and price-sensitive. Pass.",
+  "notes": "Fails build gates: buildability_with_ai (3 < 6) and operational_autonomy (4 < 7) and buyer_clarity (4 < 6). Total 3.4 is well below validate threshold (5.5). Drop.",
+  "scored_at": "2026-06-07T10:01:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

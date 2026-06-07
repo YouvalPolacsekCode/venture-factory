@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTGE2S06F6AJJJ66652636QB",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a Salesforce ISV developer at an AppExchange partner \u2014 specific, named, and already paying for AppExchange reviews and dev tooling, so willingness to pay exists but is uncertain for this niche static-analysis use case. The pain is real (failed subscriber org upgrades are customer-facing incidents) but low-frequency \u2014 most ISVs hit this rarely. The segment is narrow: there are only ~3,000-5,000 AppExchange managed package ISVs globally, limiting revenue ceiling. Buildability with AI is moderate: a Claude-powered Apex code analyzer that flags expression-length risks is feasible but requires some Apex parsing logic. Validate by posting a free analysis offer in Salesforce developer communities to confirm demand.",
+  "solution_plan": "The micro-service is an 'Apex Expression Complexity Auditor' \u2014 a code analysis tool that scans a Salesforce ISV's Apex classes and flags expressions at risk of hitting the 'expression too long' compiler limit before they cause subscriber org deployment failures. The factory builds it as: a file-upload intake form (ISV uploads their Apex source files) + a Claude prompt trained on the specific AST patterns that trigger the error + a report delivered via email. A Stripe link charges $150-300 per audit or $99/month for CI integration guidance. Outreach targets the Salesforce Developer Trailblazer Community forums, the Salesforce Stack Exchange, and LinkedIn ISV developer groups \u2014 the factory drafts posts and DMs for Youval's approval. Delivery is automated: file upload triggers Claude analysis and report generation, emailed directly to the customer. Youval's only recurring task is approving the outreach batch. The main uncertainty is whether ISVs will pay for a point-in-time audit vs. just asking on Stack Exchange \u2014 validate with a free-then-paid offer to 5 ISVs before building the full automation.",
+  "notes": "All build gates technically pass: operational_autonomy=7 (meets floor), buildability_with_ai=6 (meets floor), buyer_clarity=7 (meets floor), willingness_to_pay=5 (meets floor). However, total of 5.6 is below min_total_to_build (6.5), so validate is the correct stage. Market ceiling is small; worth validating demand before committing build resources.",
+  "scored_at": "2026-06-07T10:01:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

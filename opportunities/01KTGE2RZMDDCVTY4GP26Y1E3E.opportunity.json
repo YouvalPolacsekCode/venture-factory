@@ -1,0 +1,26 @@
+{
+  "id": "01KTGE2RZMDDCVTY4GP26Y1E3E",
+  "discovered_at": "2026-06-07T09:59:46+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48432117",
+    "snippet": "we have a real product (thanks claude) and dozen users signed up still using up their free credits. setup payments because it was so easy, then decided to use their atlas product to incorporate and take a single 6 figure pre-seed funding thru stripe invoice (yes stupid, but we are early). Stripe accepted the pre-seed payment, 3 days later connected to mercury to send it there and just now closed my account and holding funds for 120 [days]."
+  },
+  "problem_statement": "Early-stage startups receiving pre-seed funding via Stripe invoices risk sudden account closure and funds being held for 90-120 days, because Stripe's fraud models flag large one-off payments from investors as suspicious \u2014 leaving founders without access to capital at a critical moment.",
+  "target_segment": "Pre-seed and seed-stage startup founders using Stripe for payment processing, especially those who also used Stripe Atlas for incorporation",
+  "geo": "US",
+  "signal_strength": 3,
+  "keywords": [
+    "stripe",
+    "account-closure",
+    "fintech-risk",
+    "startup-banking",
+    "payment-processing",
+    "pre-seed",
+    "founder-tools",
+    "mercury",
+    "stripe-atlas"
+  ],
+  "notes": "Concrete, recent (2026-06-07) pain from an active founder with a live product and paying users. Six-figure funds frozen. Pattern of Stripe account closures for startups is well-documented across communities (Hacker News, Indie Hackers, Reddit). Opportunity: a compliance/onboarding guide or a funded-startup banking advisory service that steers founders to appropriate rails (ACH wire, SVB/Mercury direct) for large investor transfers. Willingness-to-pay implied \u2014 founder is already paying for Stripe Atlas and has pre-seed capital.",
+  "status": "candidate"
+}

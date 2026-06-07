@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-06T06:23:42+00:00",
-    "idt": "2026-06-06T09:23:42+03:00"
+    "utc": "2026-06-07T07:01:08+00:00",
+    "idt": "2026-06-07T10:01:08+03:00"
   },
   "funnel": {
-    "candidates": 25,
-    "scored": 25,
+    "candidates": 30,
+    "scored": 30,
     "validated": 1,
     "build_decisions": {
       "defer_1_week": 1
@@ -15,6 +15,67 @@
     "services_launched": 0
   },
   "top_opportunities": [
+    {
+      "topics": [
+        "stripe",
+        "account-closure",
+        "fintech-risk"
+      ],
+      "id": "01KTGE2RZMDDCVTY4GP26Y1E3E",
+      "problem_statement": "Early-stage startups receiving pre-seed funding via Stripe invoices risk sudden account closure and funds being held for 90-120 days, because Stripe's fraud models flag large one-off payments from investors as suspicious — leaving founders without access to capital at a critical moment.",
+      "target_segment": "Pre-seed and seed-stage startup founders using Stripe for payment processing, especially those who also used Stripe Atlas for incorporation",
+      "total": 6.3,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a pre-seed or seed-stage founder who has already paid for Stripe Atlas and has live users — a specific, reachable person with demonstrated spending behavior. The pain is severe (six-figure funds frozen at a critical moment) even if it is a low-frequency event. The product — a plain-language guide + payment-rails advisory — is buildable as a Claude-authored document or short advisory workflow, but the willingness to pay for a one-time guide vs. finding the answer free on HN is uncer…",
+      "solution_plan": "The micro-service is a 'Stripe-safe Fundraising Rails' advisory pack: a structured guide + intake form that tells a founder exactly how to receive a pre-seed wire safely (Mercury direct, ACH from investor's bank, what NOT to run through Stripe), with a Claude-generated custom checklist based on their specific situation. The factory builds it as a Claude prompt + a Carrd/Typeform intake page + a Stripe payment link for a one-time $49-99 fee. Outreach goes to founders who post on Hacker News, Indie Hackers, or Reddit about Stripe account issues — the factory drafts those replies and queues them for Youval to approve before posting. Delivery is…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 8,
+        "Pain": 9
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48432117",
+      "discovered_at": "2026-06-07T09:59:46+03:00"
+    },
+    {
+      "topics": [
+        "email-deliverability",
+        "powermta",
+        "ip-warming"
+      ],
+      "id": "01KTGE2S00FDMP0Y3E0X4TD9G9",
+      "problem_statement": "Email infrastructure operators using PowerMTA face opaque and inconsistent temporary deferrals (TSS04/TSS05) from Yahoo/AOL on freshly warmed IPs, with no clear diagnostic tooling to identify root cause or predict when deliverability will recover.",
+      "target_segment": "Email deliverability engineers and marketing operations teams at mid-to-large companies running dedicated email infrastructure (PowerMTA, Postfix) with high-volume sending requirements",
+      "total": 6.1,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, named professional — an email deliverability engineer or marketing ops lead at a company running PowerMTA or Postfix — with a demonstrated budget (PowerMTA licenses run $10k+/year). The pain is real and business-critical: deferral errors during IP warming directly impact revenue-generating email campaigns. However, the build gate for operational_autonomy (6, just at the floor of 7) is not met and buildability_with_ai is only moderate (5, below the 6 floor) because meani…",
+      "solution_plan": "The micro-service is an 'Email Deliverability Deferral Audit' — a structured diagnostic report that tells a PowerMTA operator exactly why Yahoo/AOL is returning TSS04/TSS05 codes and what remediation steps to take, prioritized by likely root cause. The factory builds it as: a Typeform intake (client submits their MTA config, sending volume, deferral logs, IP ages) + a Claude prompt that analyzes the inputs against a curated knowledge base of ISP deferral patterns and generates a PDF-format report. Outreach targets email ops communities (Email Geeks Slack, deliverability subreddits, ServerFault/StackExchange email tags) with the factory draft…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 6,
+        "Will pay": 7,
+        "Buildable": 5,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
+      "discovered_at": "2026-06-07T09:59:46+03:00"
+    },
     {
       "topics": [
         "hiring",
@@ -43,6 +104,35 @@
       "source_type": "forum",
       "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
       "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "topics": [
+        "salesforce",
+        "apex",
+        "managed-package"
+      ],
+      "id": "01KTGE2S06F6AJJJ66652636QB",
+      "problem_statement": "Salesforce ISV partners building managed packages cannot reliably identify which Apex expressions will trigger non-deterministic 'expression too long' compilation errors during subscriber org upgrades, causing failed deployments and customer-facing incidents.",
+      "target_segment": "Salesforce ISV developers and AppExchange partners maintaining managed packages (1GP/2GP) with large enterprise subscriber bases",
+      "total": 5.6,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a Salesforce ISV developer at an AppExchange partner — specific, named, and already paying for AppExchange reviews and dev tooling, so willingness to pay exists but is uncertain for this niche static-analysis use case. The pain is real (failed subscriber org upgrades are customer-facing incidents) but low-frequency — most ISVs hit this rarely. The segment is narrow: there are only ~3,000-5,000 AppExchange managed package ISVs globally, limiting revenue ceiling. Buildability with AI…",
+      "solution_plan": "The micro-service is an 'Apex Expression Complexity Auditor' — a code analysis tool that scans a Salesforce ISV's Apex classes and flags expressions at risk of hitting the 'expression too long' compiler limit before they cause subscriber org deployment failures. The factory builds it as: a file-upload intake form (ISV uploads their Apex source files) + a Claude prompt trained on the specific AST patterns that trigger the error + a report delivered via email. A Stripe link charges $150-300 per audit or $99/month for CI integration guidance. Outreach targets the Salesforce Developer Trailblazer Community forums, the Salesforce Stack Exchange,…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 5,
+        "Buildable": 6,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439479/how-can-i-identify-which-apex-expressions-will-trigger-expression-is-too-long",
+      "discovered_at": "2026-06-07T09:59:46+03:00"
     },
     {
       "topics": [
@@ -280,9 +370,9 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1449,
-    "last_7_days_usd": 0.7932,
-    "all_time_usd": 0.7931,
+    "today_usd": 0.1521,
+    "last_7_days_usd": 0.9453,
+    "all_time_usd": 0.9452,
     "by_day": [
       {
         "date": "2026-06-04",
@@ -295,16 +385,20 @@
       {
         "date": "2026-06-06",
         "usd": 0.1449
+      },
+      {
+        "date": "2026-06-07",
+        "usd": 0.1521
       }
     ],
     "by_agent": [
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2629
+        "usd": 0.34
       },
       {
         "agent": "market_radar",
-        "usd": 0.2484
+        "usd": 0.3186
       },
       {
         "agent": "build_decisions",
@@ -316,19 +410,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0223
+        "usd": 0.0271
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-05-31",
-      "agents": {
-        "market_radar": {
-          "succeeded": 3
-        }
-      }
-    },
     {
       "date": "2026-06-01",
       "agents": {}
@@ -410,13 +496,48 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-07",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-06.md",
-    "date": "2026-06-06",
-    "text": "# Daily Summary — 2026-06-06 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 25 |\n| Opportunities validated past threshold | 1 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down phases at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 5 core agents nominal.\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | nominal | Completed 1 run; 25 new pain signals identified |\n| opportunity_scoring | nominal | Completed 1 run; scored all 25 candidates |\n| build_decisions | nominal | Skipped (no pending experiments) |\n| cost_gain | nominal | Skipped (no live experiments to analyze) |\n| pain_validation | nominal | Skipped (pending operator decision on scored opportunities) |\n\n## Tomorrow's auto-scheduled actions\n\n1. `pain_validation` queued to run at 06:00 IDT — will probe the 25 candidate opportunities against operator-selected cohorts.\n2. `build_decisions` will evaluate the 1 validated opportunity if operator approves it for advancement.\n\n## Operator action items",
-    "truncated": true
+    "file": "reports/daily/2026-06-07.md",
+    "date": "2026-06-07",
+    "text": "# Daily Summary — 2026-06-07 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 30 |\n| Opportunities validated past threshold | 1 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down phases. Discovery pipeline contains 30 candidate opportunities; 1 has passed initial scoring validation.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS forums.\n2. `opportunity_scoring` processes any new candidates added overnight.\n3. `pain_validation` runs targeted validation on highest-scoring opportunities.\n4. `lead_research` begins outreach prep for validated opportunities.\n5. `build_decisions` evaluates candidates meeting validation threshold.\n\n## Operator action items\n\nNone — the factory is in early-stage discovery. Review the 30 candidate opportunities in `opportunities/candidate/` and flag any 2–3 for priority validation by end of week.",
+    "truncated": false
   },
   "analytics": null
 }

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTGE2RZEWZCN6GPFG0VJ2097",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.2,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Automatically mirroring congressional stock trades at brokerage level requires acting as an investment advisor or broker-dealer under SEC/FINRA regulations. A tool that executes trades on a user's behalf without proper RIA registration is likely to violate securities law. Additionally, congressional trade data has a mandatory 45-day disclosure lag, making real-time mirroring misleading and potentially harmful to users who believe they are replicating timely signals. This sits in legally dubious territory for a solo non-licensed operator."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Financial services / securities execution is heavily regulated by SEC, FINRA, and brokerage API terms. Brokerage API access for automated execution (Fidelity, Schwab) requires compliance agreements and often professional status."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The target buyer is a US retail investor \u2014 a real person with real money \u2014 but the product requires brokerage-level execution automation that would classify the operator as an investment advisor or broker-dealer without a license. The SEC's 45-day disclosure lag also means the 'mirroring' signal is stale by design, making the value proposition questionable. Both the legal exposure and the deep brokerage API integration requirements make this undoable and dangerous for a solo non-licensed operator.",
+  "solution_plan": "This idea cannot be built and sold safely by a solo non-technical non-licensed operator. Providing automated trade execution tied to third-party signals requires SEC/FINRA registration that Youval does not have. Even a 'data only' subscription (showing congressional trades) competes directly with Quiver Quantitative and Capitol Trades, which are well-funded. Pass.",
+  "notes": "Disqualified by not_legitimate_or_grey (-5.0) and regulated_industry (-1.5). Total floored at 0. Build gates for operational_autonomy (2 < 7), buildability_with_ai (2 < 6), and willingness_to_pay (6 meets gate but moot) all fail. Drop.",
+  "scored_at": "2026-06-07T10:01:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

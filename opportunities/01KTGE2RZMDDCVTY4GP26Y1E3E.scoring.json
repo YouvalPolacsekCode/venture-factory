@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTGE2RZMDDCVTY4GP26Y1E3E",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a pre-seed or seed-stage founder who has already paid for Stripe Atlas and has live users \u2014 a specific, reachable person with demonstrated spending behavior. The pain is severe (six-figure funds frozen at a critical moment) even if it is a low-frequency event. The product \u2014 a plain-language guide + payment-rails advisory \u2014 is buildable as a Claude-authored document or short advisory workflow, but the willingness to pay for a one-time guide vs. finding the answer free on HN is uncertain, keeping this in validate territory. Build gate for willingness_to_pay is borderline (6, meets the floor of 5); operational_autonomy meets the 7 floor. Validate first by landing page + waitlist to confirm people will actually pay.",
+  "solution_plan": "The micro-service is a 'Stripe-safe Fundraising Rails' advisory pack: a structured guide + intake form that tells a founder exactly how to receive a pre-seed wire safely (Mercury direct, ACH from investor's bank, what NOT to run through Stripe), with a Claude-generated custom checklist based on their specific situation. The factory builds it as a Claude prompt + a Carrd/Typeform intake page + a Stripe payment link for a one-time $49-99 fee. Outreach goes to founders who post on Hacker News, Indie Hackers, or Reddit about Stripe account issues \u2014 the factory drafts those replies and queues them for Youval to approve before posting. Delivery is fully automated: intake form triggers Claude to generate and email the custom advisory pack. Support is handled by Claude replying to follow-up emails; Youval only approves the outreach batch and monitors edge cases. The one genuine risk: this is a frequently asked question that may have free community answers, so the paid validation test (even 10 sales) is essential before building further.",
+  "notes": "All build gates technically pass (operational_autonomy=7, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=6). Total of 6.3 clears min_total_to_build (6.5 needed) narrowly \u2014 falls just short, so validate is correct. Defensibility is weak (3); a free blog post or HN comment can approximate the output. Validate demand with a real payment before investing further.",
+  "scored_at": "2026-06-07T10:01:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

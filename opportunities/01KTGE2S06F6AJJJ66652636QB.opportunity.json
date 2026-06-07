@@ -1,0 +1,25 @@
+{
+  "id": "01KTGE2S06F6AJJJ66652636QB",
+  "discovered_at": "2026-06-07T09:59:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439479/how-can-i-identify-which-apex-expressions-will-trigger-expression-is-too-long",
+    "snippet": "We have a managed package (1GP) that Successfully packaged, Upgraded successfully in majority of subscriber orgs. Yet, a couple customers ran into the following error: Deployment Failure \u2014 Expression is too long, please split this expression into multiple statements. Retrying the upgrade eventually worked in orgs that hit that error which was interesting - as that seems to indicate there's no deterministic error here. How can we identify expressions that are at risk of hitting this limit?"
+  },
+  "problem_statement": "Salesforce ISV partners building managed packages cannot reliably identify which Apex expressions will trigger non-deterministic 'expression too long' compilation errors during subscriber org upgrades, causing failed deployments and customer-facing incidents.",
+  "target_segment": "Salesforce ISV developers and AppExchange partners maintaining managed packages (1GP/2GP) with large enterprise subscriber bases",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "managed-package",
+    "deployment",
+    "isv",
+    "static-analysis",
+    "appexchange",
+    "code-quality"
+  ],
+  "notes": "ISV context means this is a business problem with paying customers affected. Static analysis tooling that pre-identifies Apex expressions at risk of hitting governor limits before packaging would have clear commercial value. Salesforce ISVs pay for AppExchange security reviews and dev tooling. Niche but high-value segment \u2014 a Salesforce-focused linting/CI plugin could address this.",
+  "status": "candidate"
+}

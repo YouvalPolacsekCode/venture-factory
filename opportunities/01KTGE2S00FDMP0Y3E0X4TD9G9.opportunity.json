@@ -1,0 +1,25 @@
+{
+  "id": "01KTGE2S00FDMP0Y3E0X4TD9G9",
+  "discovered_at": "2026-06-07T09:59:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
+    "snippet": "We are using PowerMTA and have recently warmed up new IPs. During the last 2 days, Yahoo/AOL has been returning TSS04 and TSS05 temporary deferrals even on the first emails sent from these IPs. Environment: PowerMTA Port 25 delivery, Proper SPF, DKIM, and rDNS configured, Low sending volume during warm-up, No known complaint history on the new IPs."
+  },
+  "problem_statement": "Email infrastructure operators using PowerMTA face opaque and inconsistent temporary deferrals (TSS04/TSS05) from Yahoo/AOL on freshly warmed IPs, with no clear diagnostic tooling to identify root cause or predict when deliverability will recover.",
+  "target_segment": "Email deliverability engineers and marketing operations teams at mid-to-large companies running dedicated email infrastructure (PowerMTA, Postfix) with high-volume sending requirements",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "email-deliverability",
+    "powermta",
+    "ip-warming",
+    "yahoo-aol",
+    "smtp",
+    "bounce-management",
+    "email-infrastructure",
+    "deliverability-monitoring"
+  ],
+  "notes": "Business context is strong \u2014 PowerMTA is an enterprise-grade paid product; users are professionals managing high-volume sending infrastructure. TSS04/TSS05 errors are a recurring complaint in email ops communities. Opportunity: a deliverability monitoring + diagnostics SaaS that tracks deferral codes, benchmarks recovery timelines, and surfaces actionable remediation steps. Existing tools (MXToolbox, GlockApps, Postmaster Tools) don't cover PowerMTA-specific deferral pattern analysis. Clear willingness-to-pay given existing spend on PowerMTA licenses.",
+  "status": "candidate"
+}

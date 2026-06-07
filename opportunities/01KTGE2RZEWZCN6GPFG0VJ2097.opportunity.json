@@ -1,0 +1,24 @@
+{
+  "id": "01KTGE2RZEWZCN6GPFG0VJ2097",
+  "discovered_at": "2026-06-07T09:59:46+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=36786798",
+    "snippet": "I wish there was a tool that allowed me to follow Congress as if it was an index. Automatically buying and selling what they buy and sell. Right from my Fidelity or something."
+  },
+  "problem_statement": "Retail investors want to automatically mirror congressional stock trades in their own brokerage accounts, but no tool integrates congressional trade disclosures with direct brokerage execution.",
+  "target_segment": "Retail investors and self-directed traders in the US who actively manage their own brokerage accounts",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "congress-trades",
+    "stock-trading",
+    "brokerage-integration",
+    "retail-investing",
+    "trade-mirroring",
+    "political-finance",
+    "fintech"
+  ],
+  "notes": "Single HN comment but captures a recurring desire seen across Reddit and fintech communities. Competing products like Quiver Quantitative and Capitol Trades exist for data, but none offer direct brokerage execution hooks. Buyer intent implied \u2014 person wants it inside their Fidelity account, suggesting existing brokerage relationship and active trading.",
+  "status": "candidate"
+}

@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KTK1X2ZE7D972TB3F5T2RDXJ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Biotech/pharma is a heavily regulated sector; any compliance tooling touching audit trails and document control in these environments requires validation documentation (IQ/OQ/PQ), CSV processes, and potentially 21 CFR Part 11 alignment \u2014 creating significant legal and liability surface."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Deploying or integrating a compliance watermarking layer into a customer's self-hosted eLabFTW instance requires per-customer onboarding, configuration, and validation work \u2014 not automated self-serve delivery."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Regulated-industry buyers expect hands-on support for compliance tooling, including audit documentation and change-control processes."
+    }
+  ],
+  "total": 2.0,
+  "recommended_stage": "drop",
+  "rationale": "Biotech/pharma compliance officers are real buyers with real budgets, and the pain (no built-in PDF watermarking in open-source ELNs) is genuine and regulation-driven. However, selling compliance tooling into validated research environments requires vendor qualification, IQ/OQ/PQ documentation, and ongoing regulated support \u2014 none of which can be automated by Claude. Every customer deployment into a self-hosted eLabFTW instance is bespoke, manual, and liability-heavy. After applying the regulated_industry, requires_human_fulfillment, and high_touch_support penalties the total collapses to 2.0.",
+  "solution_plan": "Not recommended for this factory. Even though the underlying PDF watermarking logic (add exporter name + timestamp to a PDF export) is technically straightforward, the go-to-market is entirely misaligned: pharma/biotech IT buyers require vendor qualification audits, documented validation protocols, and ongoing compliance support before deploying any tool that touches audit trails. A solo non-technical operator cannot credibly meet those requirements or provide the associated support. This is a consulting/professional-services engagement, not an autonomous micro-service. Pass.",
+  "notes": "Total 2.0 after penalties. Fails build_gates: operational_autonomy=3 (below 7), buildability_with_ai=4 (below 6). Regulated industry penalty alone signals structural unsuitability for this factory's model.",
+  "scored_at": "2026-06-08T10:26:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

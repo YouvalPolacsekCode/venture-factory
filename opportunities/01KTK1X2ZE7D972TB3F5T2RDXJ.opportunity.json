@@ -1,0 +1,27 @@
+{
+  "id": "01KTK1X2ZE7D972TB3F5T2RDXJ",
+  "discovered_at": "2026-06-08T10:24:40+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/elabftw/elabftw/issues/6923",
+    "snippet": "In regulated research environments (biotech, pharma), exported PDF documents must contain a visible watermark identifying the exporter and the time of export to prevent unauthorized sharing and maintain traceability. Currently, eLabFTW has no built-in mechanism to add custom watermarks to generated PDFs. Introduce a configuration option (sysconfig) that enables automatic watermarking on all exported PDFs."
+  },
+  "problem_statement": "Biotech and pharma research teams using electronic lab notebooks must add auditable watermarks (exporter identity + timestamp) to every exported PDF for regulatory compliance, but current open-source ELN tools like eLabFTW lack this feature, forcing manual workarounds or custom integrations.",
+  "target_segment": "IT admins and compliance officers at biotech/pharma companies and CROs using open-source electronic lab notebook (ELN) software",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "electronic-lab-notebook",
+    "pdf-watermark",
+    "compliance",
+    "biotech",
+    "pharma",
+    "regulated-research",
+    "document-control",
+    "audit-trail",
+    "elabftw",
+    "pdf-generation"
+  ],
+  "notes": "Strong buyer context: regulated industries (biotech/pharma) have non-negotiable compliance requirements and dedicated IT/compliance budgets. The feature request references specific regulatory traceability requirements \u2014 these organizations pay for validated software and compliance tooling. A plugin, SaaS wrapper, or managed ELN with built-in compliance features could command premium pricing. Opportunity may extend beyond eLabFTW to other open-source ELNs (OpenBIS, SciNote) with the same gap.",
+  "status": "candidate"
+}

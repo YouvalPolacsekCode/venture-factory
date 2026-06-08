@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KTGE2RZMDDCVTY4GP26Y1E3E",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "Six-figure funds frozen at the most critical moment for a startup is an unambiguously burning pain. The HN thread documents a live, concrete incident, and the broader pattern of Stripe account closures for startups is extensively corroborated across HN, Reddit, and Indie Hackers with dozens of nearly identical complaints. Willingness-to-pay is implied by the founder already spending on Stripe Atlas and having pre-seed capital; the main validation risk is whether they'll pay for guidance vs. finding free answers on HN, which the scoring already flags.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48432117"
+  ],
+  "evaluated_at": "2026-06-08T10:25:46+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTK1X2ZMDY6T40A6CQZ44SCZ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [],
+  "total": 5.0,
+  "recommended_stage": "drop",
+  "rationale": "DevOps engineers managing S3-based backup strategies are a real, nameable buyer segment who already pay for AWS S3 (a clear money-in-motion signal), and the tooling gap around cross-object version management is genuine and durable. However, the signal source is a single 2022 HN comment \u2014 extremely weak validation \u2014 and the solution requires a functional web UI or CLI tool that connects to AWS APIs, which sits at moderate buildability (not a simple Claude-prompt service). Operational autonomy is middling because the tool itself must be hosted, maintained, and kept current with AWS API changes. The total of 5.0 falls below the 5.5 validate threshold.",
+  "solution_plan": "Not recommended at this stage. The potential service \u2014 a hosted web dashboard that lets you browse, compare, and restore versioned S3 objects across a restic repo \u2014 is technically feasible with AWS SDK integrations and a simple UI, but it is not shippable as a Claude-prompt-plus-Stripe form in a week. It requires a live hosted application, AWS credential management (a security surface), and ongoing maintenance as AWS evolves. More critically, there is essentially no validated demand signal: a four-year-old HN comment is not a buying signal. Run a Reddit/HN/LinkedIn probe to find 20+ people who express this pain actively before investing further.",
+  "notes": "Below min_total_to_validate (5.0 < 5.5). Fails build_gates: operational_autonomy=5 (below 7), buildability_with_ai=5 (below 6). Primary action if re-evaluating: gather fresh demand signal first.",
+  "scored_at": "2026-06-08T10:26:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

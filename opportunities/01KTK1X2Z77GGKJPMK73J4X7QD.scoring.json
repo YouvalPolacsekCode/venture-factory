@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTK1X2Z77GGKJPMK73J4X7QD",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 9,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [],
+  "total": 5.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent \u2014 AI crawler overload is a documented, acute problem since Feb 2026 \u2014 and the buyer (DevOps/sysadmin at a self-managed server shop) is a nameable professional with budget authority. However, the core solution (lightweight bot-blocking logic for nginx/apache/tomcat) is fundamentally a compiled module, a kernel-level firewall rule, or a config layer \u2014 not a Claude-prompt-plus-Stripe-form. Buildability is low because the actual deliverable is server-side software that needs to run on the customer's infrastructure, not a hosted Claude service, and operational autonomy collapses because every customer deployment requires installation, tuning, and ongoing support on their box. The weighted total of 5.1 falls below the 5.5 validate threshold.",
+  "solution_plan": "Not recommended for this factory. The service would need to be either (a) a SaaS reverse-proxy the customer routes traffic through \u2014 which directly conflicts with the stated buyer desire to avoid adding proxy layers \u2014 or (b) installable software (nginx module, firewall ruleset) shipped to the customer's server, which requires per-customer manual setup, update cycles, and debugging. Neither model fits the autonomous Claude-plus-form-plus-Stripe pattern. A solo non-technical operator cannot realistically build, ship, and maintain per-server software without engineering resources. Pass.",
+  "notes": "Below min_total_to_validate (5.1 < 5.5). Also fails build_gates: operational_autonomy=3 (below 7), buildability_with_ai=3 (below 6). Even if total were higher, the autonomy and buildability failures would cap at validate.",
+  "scored_at": "2026-06-08T10:26:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

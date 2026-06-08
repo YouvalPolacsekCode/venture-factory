@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-07T07:01:08+00:00",
-    "idt": "2026-06-07T10:01:08+03:00"
+    "utc": "2026-06-08T07:26:40+00:00",
+    "idt": "2026-06-08T10:26:40+03:00"
   },
   "funnel": {
-    "candidates": 30,
-    "scored": 30,
-    "validated": 1,
+    "candidates": 33,
+    "scored": 33,
+    "validated": 2,
     "build_decisions": {
-      "defer_1_week": 1
+      "defer_1_week": 2
     },
     "build_now": 0,
     "services_scaffolded": 0,
@@ -39,7 +39,7 @@
         "Buildable": 8,
         "Pain": 9
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48432117",
       "discovered_at": "2026-06-07T09:59:46+03:00"
@@ -165,6 +165,70 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=38072673",
       "discovered_at": "2026-06-06T09:22:21+03:00"
+    },
+    {
+      "topics": [
+        "ai-bot-blocking",
+        "web-crawler",
+        "rate-limiting"
+      ],
+      "id": "01KTK1X2Z77GGKJPMK73J4X7QD",
+      "problem_statement": "Server operators managing public-facing web infrastructure face severe performance degradation from aggressive AI crawler bots since early 2026, and existing reactive IP-throttling scripts are insufficient — they need a lightweight, low-overhead solution that doesn't add more proxy or container layers to already-strained servers.",
+      "target_segment": "SMB and mid-market DevOps/sysadmin teams running nginx/apache/tomcat on self-managed servers with limited resources",
+      "total": 5.1,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real and frequent — AI crawler overload is a documented, acute problem since Feb 2026 — and the buyer (DevOps/sysadmin at a self-managed server shop) is a nameable professional with budget authority. However, the core solution (lightweight bot-blocking logic for nginx/apache/tomcat) is fundamentally a compiled module, a kernel-level firewall rule, or a config layer — not a Claude-prompt-plus-Stripe-form. Buildability is low because the actual deliverable is server-side software that…",
+      "solution_plan": "Not recommended for this factory. The service would need to be either (a) a SaaS reverse-proxy the customer routes traffic through — which directly conflicts with the stated buyer desire to avoid adding proxy layers — or (b) installable software (nginx module, firewall ruleset) shipped to the customer's server, which requires per-customer manual setup, update cycles, and debugging. Neither model fits the autonomous Claude-plus-form-plus-Stripe pattern. A solo non-technical operator cannot realistically build, ship, and maintain per-server software without engineering resources. Pass.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 3,
+        "Will pay": 5,
+        "Buildable": 3,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199151/ai-bots-crawling-servers-in-the-last-months-what-is-the-best-tool-or-approach-t",
+      "discovered_at": "2026-06-08T10:24:40+03:00"
+    },
+    {
+      "topics": [
+        "aws-s3",
+        "object-versioning",
+        "backup"
+      ],
+      "id": "01KTK1X2ZMDY6T40A6CQZ44SCZ",
+      "problem_statement": "DevOps engineers and sysadmins using AWS S3 object versioning for ransomware-resistant backups cannot efficiently browse, compare, restore, or manage versioned objects across large multi-object repositories — no purpose-built tooling exists for this workflow.",
+      "target_segment": "DevOps engineers and sysadmins at SMBs and startups managing S3-based backup strategies with object versioning enabled",
+      "total": 5.0,
+      "recommended_stage": "drop",
+      "rationale": "DevOps engineers managing S3-based backup strategies are a real, nameable buyer segment who already pay for AWS S3 (a clear money-in-motion signal), and the tooling gap around cross-object version management is genuine and durable. However, the signal source is a single 2022 HN comment — extremely weak validation — and the solution requires a functional web UI or CLI tool that connects to AWS APIs, which sits at moderate buildability (not a simple Claude-prompt service). Operational autonomy is…",
+      "solution_plan": "Not recommended at this stage. The potential service — a hosted web dashboard that lets you browse, compare, and restore versioned S3 objects across a restic repo — is technically feasible with AWS SDK integrations and a simple UI, but it is not shippable as a Claude-prompt-plus-Stripe form in a week. It requires a live hosted application, AWS credential management (a security surface), and ongoing maintenance as AWS evolves. More critically, there is essentially no validated demand signal: a four-year-old HN comment is not a buying signal. Run a Reddit/HN/LinkedIn probe to find 20+ people who express this pain actively before investing furt…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 5,
+        "Will pay": 5,
+        "Buildable": 5,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=30106362",
+      "discovered_at": "2026-06-08T10:24:40+03:00"
     },
     {
       "topics": [
@@ -370,9 +434,9 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1521,
-    "last_7_days_usd": 0.9453,
-    "all_time_usd": 0.9452,
+    "today_usd": 0.3429,
+    "last_7_days_usd": 1.2882,
+    "all_time_usd": 1.2881,
     "by_day": [
       {
         "date": "2026-06-04",
@@ -389,36 +453,36 @@
       {
         "date": "2026-06-07",
         "usd": 0.1521
+      },
+      {
+        "date": "2026-06-08",
+        "usd": 0.3429
       }
     ],
     "by_agent": [
       {
-        "agent": "opportunity_scoring",
-        "usd": 0.34
+        "agent": "market_radar",
+        "usd": 0.3935
       },
       {
-        "agent": "market_radar",
-        "usd": 0.3186
+        "agent": "opportunity_scoring",
+        "usd": 0.3902
       },
       {
         "agent": "build_decisions",
-        "usd": 0.1473
+        "usd": 0.2948
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1123
+        "usd": 0.1781
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0271
+        "usd": 0.0316
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-01",
-      "agents": {}
-    },
     {
       "date": "2026-06-02",
       "agents": {}
@@ -531,12 +595,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-08",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-07.md",
-    "date": "2026-06-07",
-    "text": "# Daily Summary — 2026-06-07 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 30 |\n| Opportunities validated past threshold | 1 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down phases. Discovery pipeline contains 30 candidate opportunities; 1 has passed initial scoring validation.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS forums.\n2. `opportunity_scoring` processes any new candidates added overnight.\n3. `pain_validation` runs targeted validation on highest-scoring opportunities.\n4. `lead_research` begins outreach prep for validated opportunities.\n5. `build_decisions` evaluates candidates meeting validation threshold.\n\n## Operator action items\n\nNone — the factory is in early-stage discovery. Review the 30 candidate opportunities in `opportunities/candidate/` and flag any 2–3 for priority validation by end of week.",
+    "file": "reports/daily/2026-06-08.md",
+    "date": "2026-06-08",
+    "text": "# Daily Summary — 2026-06-08 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 33 |\n| Opportunities validated past threshold | 2 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stages at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sourcing pain signals from B2B communities.\n2. `opportunity_scoring` processes new candidate opportunities.\n3. `pain_validation` validates top-ranked candidates against threshold.\n4. `cost_gain` analyzes cost/gain ratios for the weekly review.\n5. `build_decisions` evaluates candidates ready for experiment launch.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

@@ -1,0 +1,27 @@
+{
+  "id": "01KTK1X2ZMDY6T40A6CQZ44SCZ",
+  "discovered_at": "2026-06-08T10:24:40+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=30106362",
+    "snippet": "For my backups I use restic and sync the restic repository data to S3. Even if the source data is corrupted, I can always roll back to the set of S3 object versions from a particular time. The downside to using S3 object versioning is that I haven't found any good tools to work with object versions across multiple objects."
+  },
+  "problem_statement": "DevOps engineers and sysadmins using AWS S3 object versioning for ransomware-resistant backups cannot efficiently browse, compare, restore, or manage versioned objects across large multi-object repositories \u2014 no purpose-built tooling exists for this workflow.",
+  "target_segment": "DevOps engineers and sysadmins at SMBs and startups managing S3-based backup strategies with object versioning enabled",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "aws-s3",
+    "object-versioning",
+    "backup",
+    "ransomware-protection",
+    "restic",
+    "devops",
+    "cloud-storage",
+    "disaster-recovery",
+    "s3-tooling",
+    "version-management"
+  ],
+  "notes": "Buyer context: teams already paying for AWS S3 storage (recurring cost) and investing engineering time in backup infrastructure \u2014 a classic 'we pay for this and it's still painful' signal. The gap is tooling around an existing paid service. Signal is a single 2022 HN comment but the underlying AWS S3 versioning limitation is a durable, well-known gap. Lower signal_strength (2) due to age and single data point; worth pairing with fresher validation before building.",
+  "status": "candidate"
+}

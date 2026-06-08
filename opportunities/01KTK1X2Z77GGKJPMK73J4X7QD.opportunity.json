@@ -1,0 +1,26 @@
+{
+  "id": "01KTK1X2Z77GGKJPMK73J4X7QD",
+  "discovered_at": "2026-06-08T10:24:40+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199151/ai-bots-crawling-servers-in-the-last-months-what-is-the-best-tool-or-approach-t",
+    "snippet": "Since February 2026, I am seeing huge spikes in (Spain located) Internet accessible servers (nginx, apache, tomcat) due to AI bots crawling for content. Is there a recommended way to address this? I am using the typical reactive way of automatically throttling IPs with custom scripts, but wanted to know if there is a better way. The least proxies, software, containers I can put the better, servers already struggling due to internal AIs deployments."
+  },
+  "problem_statement": "Server operators managing public-facing web infrastructure face severe performance degradation from aggressive AI crawler bots since early 2026, and existing reactive IP-throttling scripts are insufficient \u2014 they need a lightweight, low-overhead solution that doesn't add more proxy or container layers to already-strained servers.",
+  "target_segment": "SMB and mid-market DevOps/sysadmin teams running nginx/apache/tomcat on self-managed servers with limited resources",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-bot-blocking",
+    "web-crawler",
+    "rate-limiting",
+    "nginx",
+    "sysadmin",
+    "server-protection",
+    "devops",
+    "bot-mitigation",
+    "traffic-management"
+  ],
+  "notes": "Buyer context: business-critical servers already paying for hosting infra; operator is spending engineering time on custom scripts \u2014 a clear 'time costs money' signal. Pain onset is recent and acute (Feb 2026). Multiple server types mentioned (nginx, apache, tomcat), suggesting a cross-stack need. Willingness to pay implied by desire for a managed/better solution over DIY scripts. Competing products (Cloudflare, Nginx rate-limit modules) exist but require adding proxies the buyer explicitly wants to avoid.",
+  "status": "candidate"
+}

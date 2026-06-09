@@ -1,0 +1,26 @@
+{
+  "id": "01KTNHTB8WAXPM6Z0NYMEGFABC",
+  "discovered_at": "2026-06-09T09:41:16+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48455882",
+    "snippet": "AI companies started with very cheap subscriptions and it's been hardly 1 year and costs has increased 10-50x in a lot of cases. A lot of companies are still using Coding agents as they don't want to miss out on AI. Corporates are spending up to $500 per month per employee and local AI models are becoming good. So companies can just spend 1000 USD more on a beefy 128GB machine..."
+  },
+  "problem_statement": "Companies are paying $300\u2013$500/month per developer for AI coding subscriptions with no tooling to track ROI, optimize seat allocation, or evaluate when switching to local models would be cheaper \u2014 resulting in uncontrolled and unjustified AI tooling spend.",
+  "target_segment": "CTOs, engineering VPs, and IT procurement managers at mid-market software companies (20\u2013500 employees) with multiple AI tool subscriptions.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-spend",
+    "cost-optimization",
+    "saas-management",
+    "developer-tools",
+    "llm-cost",
+    "local-ai",
+    "roi-tracking",
+    "procurement",
+    "ai-tooling"
+  ],
+  "notes": "Single HN post with low score (3), but the $500/month/employee figure is a concrete and credible budget signal. The commenter frames this as a decision companies are actively making. Adjacent to the SaaS spend management category (Zylo, Torii) but specific to AI tooling. A solo operator could build a lightweight AI spend dashboard or a 'should you go local?' calculator. Buyer intent is moderate \u2014 no explicit 'I'd pay for this' but the cost pain is quantified.",
+  "status": "candidate"
+}

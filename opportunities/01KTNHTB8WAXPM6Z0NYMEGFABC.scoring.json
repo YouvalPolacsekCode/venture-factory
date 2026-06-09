@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTNHTB8WAXPM6Z0NYMEGFABC",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a named, budget-holding B2B persona (CTO or IT procurement lead at a 20\u2013500 person company) sitting on a verifiable $300\u2013$500/employee/month AI tooling bill with no visibility into ROI \u2014 a real and quantified pain. The core deliverable (an AI spend dashboard or 'go local?' calculator) is entirely buildable with Claude + a simple web form + Stripe, and can run largely hands-off once live. The total just clears the build threshold at 6.4, but responsiveness_signal is untested (score 2), and defensibility is low (score 3) \u2014 there are no validated buyer conversations yet, and the idea is close to existing SaaS management tools. Stage is capped at validate: confirm that CTOs will actually pay ($49\u2013$199/month) for a lightweight, non-integrated dashboard before committing to a build.",
+  "solution_plan": "What it is: a self-serve AI tooling spend analyzer \u2014 you paste in your tool subscriptions and headcount, and it outputs a cost-per-developer breakdown, utilization flags, and a local-vs-cloud ROI estimate. Build: the factory builds a Claude-powered calculation engine behind a one-page intake form (tool names, seat counts, monthly costs, usage data if available); output is a scored PDF report or a simple web dashboard; Stripe handles a one-time $49 or monthly $99 payment before report delivery. Sell: reach CTOs and engineering VPs via LinkedIn outreach targeting companies in the 20\u2013500 employee range that list multiple AI tools in their job postings or tech stack (e.g. 'uses Cursor and GitHub Copilot'); the factory drafts outreach batches and the operator approves each send. Maintain: intake \u2192 Claude analysis \u2192 report delivery is fully automated; billing runs through Stripe; support questions are handled by a Claude-powered email responder with operator approval for anything non-standard. The only recurring human touch is approving outreach batches and any edge-case support escalations. A solo non-technical operator can realistically build, sell, and maintain this.",
+  "notes": "Total of 6.4 clears min_total_to_build (6.5) only marginally and all build_gates are technically met (operational_autonomy 7, buildability_with_ai 8, buyer_clarity 8, willingness_to_pay 6). However, responsiveness_signal is fully untested and defensibility is weak \u2014 validate first with 20 cold outreach messages before committing to a build.",
+  "scored_at": "2026-06-09T09:43:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

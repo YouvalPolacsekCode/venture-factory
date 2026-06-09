@@ -1,20 +1,49 @@
 {
   "generated_at": {
-    "utc": "2026-06-08T07:26:40+00:00",
-    "idt": "2026-06-08T10:26:40+03:00"
+    "utc": "2026-06-09T06:43:28+00:00",
+    "idt": "2026-06-09T09:43:28+03:00"
   },
   "funnel": {
-    "candidates": 33,
-    "scored": 33,
-    "validated": 2,
+    "candidates": 36,
+    "scored": 36,
+    "validated": 3,
     "build_decisions": {
-      "defer_1_week": 2
+      "defer_1_week": 3
     },
     "build_now": 0,
     "services_scaffolded": 0,
     "services_launched": 0
   },
   "top_opportunities": [
+    {
+      "topics": [
+        "ai-spend",
+        "cost-optimization",
+        "saas-management"
+      ],
+      "id": "01KTNHTB8WAXPM6Z0NYMEGFABC",
+      "problem_statement": "Companies are paying $300–$500/month per developer for AI coding subscriptions with no tooling to track ROI, optimize seat allocation, or evaluate when switching to local models would be cheaper — resulting in uncontrolled and unjustified AI tooling spend.",
+      "target_segment": "CTOs, engineering VPs, and IT procurement managers at mid-market software companies (20–500 employees) with multiple AI tool subscriptions.",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a named, budget-holding B2B persona (CTO or IT procurement lead at a 20–500 person company) sitting on a verifiable $300–$500/employee/month AI tooling bill with no visibility into ROI — a real and quantified pain. The core deliverable (an AI spend dashboard or 'go local?' calculator) is entirely buildable with Claude + a simple web form + Stripe, and can run largely hands-off once live. The total just clears the build threshold at 6.4, but responsiveness_signal is untested (score…",
+      "solution_plan": "What it is: a self-serve AI tooling spend analyzer — you paste in your tool subscriptions and headcount, and it outputs a cost-per-developer breakdown, utilization flags, and a local-vs-cloud ROI estimate. Build: the factory builds a Claude-powered calculation engine behind a one-page intake form (tool names, seat counts, monthly costs, usage data if available); output is a scored PDF report or a simple web dashboard; Stripe handles a one-time $49 or monthly $99 payment before report delivery. Sell: reach CTOs and engineering VPs via LinkedIn outreach targeting companies in the 20–500 employee range that list multiple AI tools in their job p…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48455882",
+      "discovered_at": "2026-06-09T09:41:16+03:00"
+    },
     {
       "topics": [
         "stripe",
@@ -71,7 +100,7 @@
         "Buildable": 5,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
       "discovered_at": "2026-06-07T09:59:46+03:00"
@@ -398,6 +427,37 @@
     },
     {
       "topics": [
+        "ai-code-quality",
+        "technical-debt",
+        "code-review"
+      ],
+      "id": "01KTNHTB8N9P934ZKPGPJJ9KRT",
+      "problem_statement": "Engineering teams are accumulating technical debt from AI-generated code that is structurally poor, hard to test, and difficult to maintain — and there is no systematic tooling or service to audit, remediate, or gate this AI code before it merges.",
+      "target_segment": "Engineering managers and CTOs at software companies with 5–200 developers actively using AI coding agents (Copilot, Cursor, Claude).",
+      "total": 4.2,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is real and well-defined — engineering managers and CTOs at companies using AI coding tools already pay for SonarQube and CodeClimate — and the pain (accumulating AI-generated technical debt) is a genuine, recurring business cost. However, once the penalties for per-customer fulfillment and support load are applied, the total falls below the validate threshold. More critically, operational_autonomy scores only 5: a pure AI-lint-report product is buildable autonomously, but that versio…",
+      "solution_plan": "What it is: an AI code-quality audit report service that scans a repo and flags structural patterns common in AI-generated code (poor test coverage, God functions, missing error handling, copy-paste duplication). Build: the factory connects a Claude prompt chain to GitHub API access, runs static analysis heuristics, and generates a scored PDF/HTML report; a Stripe payment link and a simple intake form (GitHub repo URL + email) are all that's needed. Sell: reach engineering leads via LinkedIn outreach targeting 'Head of Engineering' at companies that list Cursor or Copilot in their job postings; outreach batches require operator approval befo…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 5,
+        "Will pay": 7,
+        "Buildable": 6,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://lobste.rs/s/uvwcdo",
+      "discovered_at": "2026-06-09T09:41:16+03:00"
+    },
+    {
+      "topics": [
         "ai-governance",
         "github",
         "copilot"
@@ -434,9 +494,9 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3429,
-    "last_7_days_usd": 1.2882,
-    "all_time_usd": 1.2881,
+    "today_usd": 0.3548,
+    "last_7_days_usd": 1.643,
+    "all_time_usd": 1.6429,
     "by_day": [
       {
         "date": "2026-06-04",
@@ -457,36 +517,36 @@
       {
         "date": "2026-06-08",
         "usd": 0.3429
+      },
+      {
+        "date": "2026-06-09",
+        "usd": 0.3548
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.3935
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3902
+        "usd": 0.4658
       },
       {
         "agent": "build_decisions",
-        "usd": 0.2948
+        "usd": 0.4534
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.4476
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1781
+        "usd": 0.2398
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0316
+        "usd": 0.0362
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-02",
-      "agents": {}
-    },
     {
       "date": "2026-06-03",
       "agents": {}
@@ -630,12 +690,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-09",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-08.md",
-    "date": "2026-06-08",
-    "text": "# Daily Summary — 2026-06-08 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 33 |\n| Opportunities validated past threshold | 2 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stages at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sourcing pain signals from B2B communities.\n2. `opportunity_scoring` processes new candidate opportunities.\n3. `pain_validation` validates top-ranked candidates against threshold.\n4. `cost_gain` analyzes cost/gain ratios for the weekly review.\n5. `build_decisions` evaluates candidates ready for experiment launch.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-09.md",
+    "date": "2026-06-09",
+    "text": "# Daily Summary — 2026-06-09 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 36 |\n| Opportunities validated past threshold | 3 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues discovery sweeps across pain-signal sources.\n2. `pain_validation` evaluates the 36 candidate opportunities against threshold criteria.\n3. `opportunity_scoring` refines scoring weights based on verdict feedback.\n4. `build_decisions` assesses which validated opportunities warrant experiment launches.\n5. `cost_gain` computes cost-per-opportunity for calibration.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

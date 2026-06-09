@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTNHTB8N9P934ZKPGPJJ9KRT",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Code remediation as a service requires per-repo, per-codebase human judgment to triage and fix findings in any meaningful way beyond a basic lint report. A fully automated audit report is buildable, but the value proposition customers would actually pay for (remediation, not just flagging) requires human engineering work."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Engineering teams evaluating a code quality tool will have questions about false positives, integration with their CI pipeline, and tuning rules \u2014 requiring meaningful support effort per customer."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and well-defined \u2014 engineering managers and CTOs at companies using AI coding tools already pay for SonarQube and CodeClimate \u2014 and the pain (accumulating AI-generated technical debt) is a genuine, recurring business cost. However, once the penalties for per-customer fulfillment and support load are applied, the total falls below the validate threshold. More critically, operational_autonomy scores only 5: a pure AI-lint-report product is buildable autonomously, but that version is commodity and unlikely to command real revenue; the version customers would pay meaningfully for requires human engineering judgment to remediate, which breaks the factory's autonomy model. This is a venture-backed DevTools company idea, not a solo operator microservice.",
+  "solution_plan": "What it is: an AI code-quality audit report service that scans a repo and flags structural patterns common in AI-generated code (poor test coverage, God functions, missing error handling, copy-paste duplication). Build: the factory connects a Claude prompt chain to GitHub API access, runs static analysis heuristics, and generates a scored PDF/HTML report; a Stripe payment link and a simple intake form (GitHub repo URL + email) are all that's needed. Sell: reach engineering leads via LinkedIn outreach targeting 'Head of Engineering' at companies that list Cursor or Copilot in their job postings; outreach batches require operator approval before sending. Maintain: report generation is fully automated; however, customers expecting actionable remediation (not just flagging) will demand human follow-up, which a solo non-technical operator cannot realistically deliver. The gap between what Claude can automate (the report) and what customers would pay premium rates for (the fix) is too wide for this model \u2014 recommend dropping unless scoped to a very minimal one-time audit report at a low price point, which would face a commoditized market.",
+  "notes": "operational_autonomy gate unmet (score 5, floor 7). The buildable version (automated report) is low-value commodity; the valuable version (remediation service) requires per-customer human engineering work. Drop unless scoped to pure self-serve report product at a price point where autonomy is preserved.",
+  "scored_at": "2026-06-09T09:43:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

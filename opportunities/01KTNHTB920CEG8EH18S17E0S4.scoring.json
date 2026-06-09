@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTNHTB920CEG8EH18S17E0S4",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "AI companion/romantic apps sit in a category with significant platform TOS risk (Apple App Store, Google Play), content moderation liability, potential NSFW content exposure, and legal exposure in multiple jurisdictions. The dev.to article itself notes the 'AI boyfriend/girlfriend' framing \u2014 this category is routinely flagged, restricted, or removed by major app stores and payment processors. Building in this space as a solo operator without legal/compliance infrastructure is high-risk and potentially contrary to platform TOS."
+    },
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The business model requires a large volume of end consumers paying $10\u2013$30/month subscriptions to generate meaningful revenue; no B2B or high-ticket path is identified."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "While subscription willingness-to-pay exists in the AI companion space (Replika, Character.ai confirm this), the buyer is a vague consumer audience rather than an identifiable B2B persona with a budget, and the market is dominated by well-funded incumbents. More critically, this category carries substantial platform TOS risk, content moderation liability, and payment processor restrictions \u2014 the not_legitimate_or_grey penalty applies because a solo operator building a niche AI companion app faces near-certain friction or bans from App Store, Google Play, and Stripe without dedicated legal and compliance infrastructure. After penalties the total is effectively zero. Drop immediately.",
+  "solution_plan": "A solo non-technical operator should NOT build this. The AI companion space requires: app store approval (high rejection risk for companion/romantic apps), content moderation infrastructure (legal liability for generated content), payment processor compliance (Stripe and others have explicit restrictions on AI companion products), and the scale of consumer users needed for viable revenue. None of these are solvable with Claude + a landing page + a Stripe link. Even if the technical build were straightforward, the regulatory and platform friction would block distribution and monetization before the first customer arrives. Dropping is the correct call.",
+  "notes": "not_legitimate_or_grey penalty applied: platform TOS risk (App Store, Google Play, Stripe restrictions on AI companion content), content moderation liability, and potential legal exposure in multiple jurisdictions. b2c_at_scale_needed penalty also applied. buyer_clarity gate also unmet (score 3, floor 6). Total after penalties: 0.0.",
+  "scored_at": "2026-06-09T09:43:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

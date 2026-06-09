@@ -1,0 +1,26 @@
+{
+  "id": "01KTNHTB920CEG8EH18S17E0S4",
+  "discovered_at": "2026-06-09T09:41:16+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://dev.to/michael_trifonov_0cb74f99/ai-boyfriends-are-10x-bigger-than-ai-girlfriends-3n7c",
+    "snippet": "AI boyfriends are 10x bigger than AI girlfriends \u2014 score 17, 10 comments on dev.to. Article analyzes the AI companion market, noting nightlife decline and strong commercial demand, with the author observing that the market for AI boyfriend personas is substantially larger than AI girlfriend apps. Discussion touches on monetization, subscription models, and underserved audience segments."
+  },
+  "problem_statement": "The AI companion market is large and growing but dominated by a few generic platforms; there is demand for niche, persona-specific or demographic-specific AI companion products that existing apps do not serve well.",
+  "target_segment": "Solo developers and micro-ISVs building consumer AI apps; indirectly, end consumers who pay $10\u2013$30/month for AI companion subscriptions.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-companion",
+    "ai-girlfriend",
+    "ai-boyfriend",
+    "consumer-ai",
+    "subscription",
+    "niche-app",
+    "indie-hacker",
+    "monetization",
+    "llm"
+  ],
+  "notes": "Market signal rather than direct user pain. Score 17 with 10 comments on dev.to indicates real interest from builders. The 10x asymmetry claim implies unmet demand in a specific segment. Existing players (Character.ai, Replika) are large but generic. A solo operator could build a vertical-specific companion. Buyer evidence: existing subscription revenue in the space confirms willingness to pay. Lower priority because market is crowded and has platform/moderation risks.",
+  "status": "candidate"
+}

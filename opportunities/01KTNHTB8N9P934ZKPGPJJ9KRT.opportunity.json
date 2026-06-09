@@ -1,0 +1,26 @@
+{
+  "id": "01KTNHTB8N9P934ZKPGPJJ9KRT",
+  "discovered_at": "2026-06-09T09:41:16+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://lobste.rs/s/uvwcdo",
+    "snippet": "Cleaning up after AI rockstar developers \u2014 score 20, 7 comments on lobste.rs (audience: working engineers and engineering leads). The linked article discusses the growing problem of AI-generated code that is structurally unsound, untestable, or unmaintainable, left behind by developers who used coding agents without discipline. Comment thread confirms others are experiencing this at their companies and spending significant time cleaning up."
+  },
+  "problem_statement": "Engineering teams are accumulating technical debt from AI-generated code that is structurally poor, hard to test, and difficult to maintain \u2014 and there is no systematic tooling or service to audit, remediate, or gate this AI code before it merges.",
+  "target_segment": "Engineering managers and CTOs at software companies with 5\u2013200 developers actively using AI coding agents (Copilot, Cursor, Claude).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-code-quality",
+    "technical-debt",
+    "code-review",
+    "ai-generated-code",
+    "vibe-coding",
+    "engineering-tooling",
+    "static-analysis",
+    "ci-cd",
+    "developer-tools"
+  ],
+  "notes": "Lobste.rs score 20 with 7 comments is high engagement for that community. The pain is explicitly framed as a business cost: time spent cleaning up after AI 'rockstar' developers. Buyer is the engineering lead or CTO who pays for tooling subscriptions (e.g. SonarQube, CodeClimate). Willingness to pay is implied by existing spend on code quality tools. A lint/audit layer specifically trained to flag AI code smell patterns, or a code-review-as-a-service product, could address this. No dominant solution yet.",
+  "status": "candidate"
+}

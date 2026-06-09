@@ -1,0 +1,20 @@
+{
+  "opportunity_id": "01KTGE2S00FDMP0Y3E0X4TD9G9",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Email deliverability engineers running PowerMTA face revenue-blocking TSS04/TSS05 deferrals from Yahoo/AOL with no vendor-supplied diagnostic tooling; the pain recurs across multiple public forums and affects companies whose livelihood depends on inbox placement. Existing paid tools (MXToolbox, GlockApps) explicitly do not cover PowerMTA deferral-code pattern analysis, and PowerMTA's own license cost (~$10k+/year) confirms a paying, professional buyer segment. At least one clear willingness-to-pay signal exists: competitors charge for deliverability monitoring subscriptions in the $99\u2013$499/month range, and job postings for 'email deliverability engineer' roles are frequent.",
+  "sources": [
+    "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
+    "https://www.gmass.co/blog/yahoo-tss04-tss05/",
+    "https://community.validity.com/s/topic/0TO6S000000k9erWAA/email-deliverability",
+    "https://www.emailgeeks.com",
+    "https://mxtoolbox.com/emailhealth/",
+    "https://glockapps.com/",
+    "https://postmaster.yahoo.com/",
+    "https://www.reddit.com/r/emaildeliverability/",
+    "https://sparkpost.com/pricing/",
+    "https://sendgrid.com/pricing/"
+  ],
+  "evaluated_at": "2026-06-09T09:42:12+03:00"
+}

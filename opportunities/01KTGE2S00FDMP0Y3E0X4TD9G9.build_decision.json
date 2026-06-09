@@ -1,0 +1,50 @@
+{
+  "opportunity_id": "01KTGE2S00FDMP0Y3E0X4TD9G9",
+  "decided_at": "2026-06-09T09:43:23+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 6,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 5,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.1,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "eligible_for_build": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.1 < min_total_to_build 6.5",
+    "operational_autonomy=6 < 7",
+    "buildability_with_ai=5 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Three independent build gates fail: total score 6.1 is below the 6.5 build threshold, operational_autonomy (6) misses its 7-floor because meaningful deliverability diagnostics require ingesting SMTP logs and correlating ISP feedback loops \u2014 not trivially automatable with Claude alone, and buildability_with_ai (5) misses its 6-floor for the same reason. The recommended_stage is 'validate', which caps the maximum decision at defer_1_week. The commercial signal is genuinely strong (buyer_clarity 8, willingness_to_pay 7, clear B2B ICP with existing budget), and the cost-to-gain ratio of 5.31 is extremely unfavorable but could improve dramatically if a validation pass confirms demand and reveals a simpler delivery model. Worth revisiting after a lightweight validation: 3-5 manual audit sales at $300-500 would test demand and inform whether the autonomy gap can close.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 10,
+  "suggested_first_outreach_channel": "Email Geeks Slack + ServerFault email-deliverability tag"
+}

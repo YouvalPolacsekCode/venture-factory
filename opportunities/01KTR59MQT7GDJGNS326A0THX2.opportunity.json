@@ -1,0 +1,24 @@
+{
+  "id": "01KTR59MQT7GDJGNS326A0THX2",
+  "discovered_at": "2026-06-10T10:00:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95432/creating-a-restorable-backup-from-whatsapp-web-servers-when-the-primary-phone-an",
+    "snippet": "I lost an ios phone with a whatsapp account on it's number. I dont have a backup for various reasons. Right now I have access to everything from a desktop whatsapp web interface because of whatsapp's multi device architecture. But if my lost phone will be down for 14 consecutive days (so i'm told) I'll be logged out and loose everything. The same thing will happen if I link my phone number to a new sim card on a new phone. All my chat history will be lost... I currently have access to Whatsapp web on chrome and on macOS native app... I'm trying to create a backup from this access but it seems this isn't possible through whatsapp's own tools. [Cross-posted to webapps.stackexchange.com with identical body]"
+  },
+  "problem_statement": "Users who lose their primary phone lose access to all WhatsApp chat history because there is no supported way to export or back up messages from WhatsApp Web/Desktop to a new device, even when they still have temporary multi-device access.",
+  "target_segment": "Individual consumers and small-business owners who use WhatsApp as a primary communication channel and face device loss or number migration scenarios.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "whatsapp",
+    "chat-backup",
+    "data-recovery",
+    "messaging",
+    "multi-device",
+    "mobile",
+    "data-portability"
+  ],
+  "notes": "Two independent posts (softwarerecs + webapps SE) from same user within hours \u2014 acute, urgent pain with a hard deadline (14-day window). Data recovery services regularly charge $50\u2013$300+ for similar jobs. The user is actively seeking a tool or service, implying willingness to pay. Opportunity: a paid WhatsApp Web scraper/exporter that works within the multi-device session window. Legal/ToS risk is a key constraint to validate.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KTR59MRDDMV6NFAKS3MEJMXZ",
+  "discovered_at": "2026-06-10T10:00:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439491/execution-error-array-type-must-specify-items-schema",
+    "snippet": "I'm trying to run a tool in AgentForce studio Employee Agent but keep getting 'Execution Error: \"Array type must specify items schema\"'. I've tried editing the AgentForce script of the tool directly but I keep getting the same error. The tool is from a custom MCP server. Is there a way to change the schema in Agentforce of Agentforce studio? Here is a snippet of the Agentforce script: actions: ... description: Retrieve physicians/providers based on search..."
+  },
+  "problem_statement": "Salesforce developers integrating custom MCP servers with AgentForce face opaque schema validation errors that are underdocumented, blocking enterprise AI agent deployments and requiring significant debugging time with no clear resolution path.",
+  "target_segment": "Salesforce developers and enterprise solution architects building AI agent workflows with AgentForce and custom MCP integrations.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "mcp",
+    "ai-agents",
+    "enterprise",
+    "developer-tools",
+    "schema-validation",
+    "llm-integration"
+  ],
+  "notes": "Salesforce AgentForce + MCP is a very recent enterprise AI integration stack (2025\u20132026). Schema compatibility issues between MCP tool definitions and AgentForce are a new class of problem with no mature tooling. The buyer is a Salesforce developer at an enterprise (physicians/providers context suggests healthcare or staffing). Salesforce ecosystem budgets are large. Opportunity: a validation/linting tool or compatibility layer for MCP schemas targeting AgentForce, or consulting/documentation product. Single signal but context implies real enterprise spend.",
+  "status": "candidate"
+}

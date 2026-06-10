@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTR59MR1VXMV9M1KK6Z9140H",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Provisioning legacy-CA-compatible TLS certificates or running a managed TLS proxy for enterprise IoT fleets involves per-customer infrastructure configuration, certificate chain validation, and likely security review \u2014 not automatable with standard Claude + Stripe tooling."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise infrastructure sales at this level require scoping calls, security questionnaires, and procurement cycles \u2014 per-customer synchronous engagement is the norm."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and well-defined \u2014 IoT/OT engineers at mid-to-large enterprises with genuine, business-critical budget \u2014 and the pain is severe when it hits. However, the solution requires actual PKI/CA infrastructure or custom TLS proxy hosting that cannot be built as a Claude prompt plus a simple landing page; it demands real server infrastructure, security credentialing, and likely partnerships with a CA. Delivery is per-customer and hands-on, making autonomous operation impossible for a solo non-technical operator. This is an engineering consultancy, not a software product.",
+  "solution_plan": "Not recommended for building in this factory. Solving legacy CA compatibility for enterprise IoT fleets requires running real TLS infrastructure, obtaining CA partnerships or reseller agreements, and doing per-customer technical onboarding. None of that is achievable with Claude + a landing page + Stripe. A solo non-technical operator could not build or maintain this credibly. If pursuing, the realistic path is a technical consulting engagement \u2014 not an autonomous micro-service.",
+  "notes": "Fails build gates: operational_autonomy scored 3 (min 7), buildability_with_ai scored 3 (min 6). Pain and buyer quality are genuinely strong but the solution space is outside this factory's capability.",
+  "scored_at": "2026-06-10T10:02:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

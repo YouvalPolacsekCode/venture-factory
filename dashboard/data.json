@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-09T06:43:28+00:00",
-    "idt": "2026-06-09T09:43:28+03:00"
+    "utc": "2026-06-10T07:02:22+00:00",
+    "idt": "2026-06-10T10:02:22+03:00"
   },
   "funnel": {
-    "candidates": 36,
-    "scored": 36,
+    "candidates": 40,
+    "scored": 40,
     "validated": 3,
     "build_decisions": {
       "defer_1_week": 3
@@ -158,10 +158,41 @@
         "Buildable": 6,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439479/how-can-i-identify-which-apex-expressions-will-trigger-expression-is-too-long",
       "discovered_at": "2026-06-07T09:59:46+03:00"
+    },
+    {
+      "topics": [
+        "salesforce",
+        "agentforce",
+        "mcp"
+      ],
+      "id": "01KTR59MRDDMV6NFAKS3MEJMXZ",
+      "problem_statement": "Salesforce developers integrating custom MCP servers with AgentForce face opaque schema validation errors that are underdocumented, blocking enterprise AI agent deployments and requiring significant debugging time with no clear resolution path.",
+      "target_segment": "Salesforce developers and enterprise solution architects building AI agent workflows with AgentForce and custom MCP integrations.",
+      "total": 5.4,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is specific and real — Salesforce/AgentForce developers at enterprise companies — and the pain of opaque MCP schema errors blocking AI agent deployments is genuine and recurring. However, the signal is a single forum post from a very nascent ecosystem (AgentForce + MCP is 2025–2026 vintage), so market size and buyer volume are unproven. The total of 5.4 falls just below the validate threshold of 5.5, and operational_autonomy (6) is at the floor for a validate push — delivery would req…",
+      "solution_plan": "The idea is a validator/linter that checks MCP tool schema definitions for AgentForce compatibility before deployment, delivered as a web tool: paste your MCP schema JSON, get a compatibility report with fix suggestions. The factory builds this as a Claude prompt that understands AgentForce schema rules + a simple web intake form + a Stripe payment link for a one-time report or a $29/mo subscription. Outreach would target Salesforce developer communities (Trailblazer Community, LinkedIn Salesforce developer groups) with a free-tier hook — operator approves each outreach batch before it sends. Delivery is fully automated (schema in → Claude a…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 6,
+        "Will pay": 5,
+        "Buildable": 6,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439491/execution-error-array-type-must-specify-items-schema",
+      "discovered_at": "2026-06-10T10:00:09+03:00"
     },
     {
       "topics": [
@@ -494,9 +525,9 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3548,
-    "last_7_days_usd": 1.643,
-    "all_time_usd": 1.6429,
+    "today_usd": 0.2082,
+    "last_7_days_usd": 1.8512,
+    "all_time_usd": 1.8511,
     "by_day": [
       {
         "date": "2026-06-04",
@@ -521,36 +552,36 @@
       {
         "date": "2026-06-09",
         "usd": 0.3548
+      },
+      {
+        "date": "2026-06-10",
+        "usd": 0.2082
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4658
+        "usd": 0.5415
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.5139
       },
       {
         "agent": "build_decisions",
         "usd": 0.4534
       },
       {
-        "agent": "opportunity_scoring",
-        "usd": 0.4476
-      },
-      {
         "agent": "pain_validation",
-        "usd": 0.2398
+        "usd": 0.3014
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0362
+        "usd": 0.0409
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-03",
-      "agents": {}
-    },
     {
       "date": "2026-06-04",
       "agents": {
@@ -725,12 +756,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-10",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-09.md",
-    "date": "2026-06-09",
-    "text": "# Daily Summary — 2026-06-09 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 36 |\n| Opportunities validated past threshold | 3 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues discovery sweeps across pain-signal sources.\n2. `pain_validation` evaluates the 36 candidate opportunities against threshold criteria.\n3. `opportunity_scoring` refines scoring weights based on verdict feedback.\n4. `build_decisions` assesses which validated opportunities warrant experiment launches.\n5. `cost_gain` computes cost-per-opportunity for calibration.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-10.md",
+    "date": "2026-06-10",
+    "text": "# Daily Summary — 2026-06-10 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 40 |\n| Opportunities validated past threshold | 4 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. Discovery and validation pipelines are running; results will surface in coming days.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across B2B communities.\n2. `pain_validation` probes top-scored opportunities from today's 40 candidates.\n3. `opportunity_scoring` re-scores incoming candidates as they arrive.\n4. `build_decisions` evaluates which of the 4 validated opportunities merit experiment launch.\n5. `cost_gain` prepares weekly cost/gain analysis for Sunday review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

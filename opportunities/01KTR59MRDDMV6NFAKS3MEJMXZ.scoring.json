@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTR59MRDDMV6NFAKS3MEJMXZ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is specific and real \u2014 Salesforce/AgentForce developers at enterprise companies \u2014 and the pain of opaque MCP schema errors blocking AI agent deployments is genuine and recurring. However, the signal is a single forum post from a very nascent ecosystem (AgentForce + MCP is 2025\u20132026 vintage), so market size and buyer volume are unproven. The total of 5.4 falls just below the validate threshold of 5.5, and operational_autonomy (6) is at the floor for a validate push \u2014 delivery would require ongoing schema database maintenance and Salesforce ecosystem tracking that is meaningful but not fully hands-off. Willingness to pay is possible but unproven at the product level.",
+  "solution_plan": "The idea is a validator/linter that checks MCP tool schema definitions for AgentForce compatibility before deployment, delivered as a web tool: paste your MCP schema JSON, get a compatibility report with fix suggestions. The factory builds this as a Claude prompt that understands AgentForce schema rules + a simple web intake form + a Stripe payment link for a one-time report or a $29/mo subscription. Outreach would target Salesforce developer communities (Trailblazer Community, LinkedIn Salesforce developer groups) with a free-tier hook \u2014 operator approves each outreach batch before it sends. Delivery is fully automated (schema in \u2192 Claude analysis out \u2192 PDF/HTML report). Support is Claude-handled for common questions; operator reviews edge cases. The main recurring human task is keeping the schema rules updated as Salesforce releases AgentForce changes \u2014 roughly monthly review. This is buildable but the market is very early-stage; validate before committing build resources.",
+  "notes": "Total 5.4 is 0.1 below min_total_to_validate (5.5) \u2014 borderline drop vs validate. The opportunity is worth monitoring as the AgentForce + MCP ecosystem matures. If signal_strength increases (more posts, community threads, developer complaints), re-score in 30 days. Operational_autonomy (6) and buildability_with_ai (6) meet build gate minimums, but the total doesn't yet support even validate stage by the model.",
+  "scored_at": "2026-06-10T10:02:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTR59MR7BVH1A5JY2X1KJZ95",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 3,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Employment contract legal analysis is squarely in the legal services domain. In the US, providing specific legal advice requires bar licensure. The product must be carefully positioned as 'educational' or 'informational' only, not legal advice \u2014 which meaningfully limits its value proposition and forces ongoing copy/UX caution. This is a real operational and legal risk, not just a disclaimer issue."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Users with high-stakes contract questions will have follow-up questions, edge cases, and anxiety that generate support load beyond what Claude can fully resolve autonomously \u2014 especially when the answer is 'we can't give legal advice.'"
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real, identifiable segment \u2014 US software engineers reviewing employment contracts \u2014 and there is clear willingness to pay for adjacent legal tools like Clerky. However, the regulated_industry penalty is decisive: offering IP clause analysis as a commercial service in the US requires either practicing without a bar license (illegal) or wrapping every output in disclaimers that gut the product's usefulness. The pain is also infrequent (once per job change) and the market is shallow without scale. The unit economics don't work for a solo micro-service at $50\u2013200 one-time with high support expectations.",
+  "solution_plan": "Not recommended for building in current form. The legal services constraint means the product either (a) gives real analysis and risks unauthorized practice of law, or (b) gives hedged, non-actionable output and competes poorly against free tools like ChatGPT. A non-technical solo operator cannot navigate the compliance and liability exposure. If pursuing anyway, a narrow 'educational explainer' framing (here is what this clause type means historically, here are questions to ask your lawyer) built as a Claude-powered web tool with Stripe could be tested \u2014 but realistic revenue is low and support burden is high.",
+  "notes": "Regulated industry penalty (-1.5) is the decisive factor. Build gates: operational_autonomy scored 7 (meets min 7), buildability_with_ai scored 8 (meets min 6), buyer_clarity scored 6 (meets min 6), willingness_to_pay scored 6 (meets min 5) \u2014 gates technically met, but total of 3.8 is well below min_total_to_validate of 5.5.",
+  "scored_at": "2026-06-10T10:02:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

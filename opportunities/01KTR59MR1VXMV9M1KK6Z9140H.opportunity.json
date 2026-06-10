@@ -1,0 +1,25 @@
+{
+  "id": "01KTR59MR1VXMV9M1KK6Z9140H",
+  "discovered_at": "2026-06-10T10:00:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199180/does-any-ca-still-issue-certificates-compatible-with-starfield-class-2-certifica",
+    "snippet": "I have a fleet of legacy IoT devices that trust only the root certificate: Starfield Class 2 Certification Authority. I need to host a temporary HTTPS endpoint for a one-time firmware update, but the devices cannot be updated until they can successfully validate a server certificate. Does anyone know of a public CA that still issues certificates whose chain can be validated using Starfield Class 2 Certification Authority, or offers a legacy/alternate chain compatible with that root? This is for enterprise-scale deployment."
+  },
+  "problem_statement": "Operators of legacy IoT device fleets cannot perform firmware updates because their devices trust only deprecated root CA certificates (e.g. Starfield Class 2), and no straightforward commercial service exists to provision compatible TLS certificates or proxy endpoints for these one-time migration scenarios.",
+  "target_segment": "IoT/OT engineers and infrastructure teams at mid-to-large enterprises managing legacy device fleets requiring firmware updates.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "iot",
+    "legacy-devices",
+    "ssl-certificate",
+    "certificate-authority",
+    "firmware-update",
+    "tls",
+    "enterprise-infra",
+    "device-management"
+  ],
+  "notes": "Explicit enterprise-scale context ('fleet of legacy IoT devices', 'enterprise-scale deployment'). The poster is blocked from a business-critical operation and is actively seeking a paid CA or service. Legacy IoT certificate management is a recurring pain point as root CAs sunset \u2014 this is likely not a one-off. Opportunity: a managed legacy-CA-compatible TLS proxy or certificate provisioning service targeting IoT fleet operators. Budget is implicitly high (enterprise firmware rollout). Signal strength raised for business-critical framing.",
+  "status": "candidate"
+}

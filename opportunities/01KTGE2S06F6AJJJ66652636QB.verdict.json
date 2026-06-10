@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KTGE2S06F6AJJJ66652636QB",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real but highly infrequent \u2014 most ISVs encounter the non-deterministic 'expression too long' error only during occasional package upgrades, not as a recurring workflow blocker. Evidence volume is thin: the single Stack Exchange post with no upvotes or follow-on discussion suggests this is a niche edge case rather than a widespread, frequently-felt pain. No willingness-to-pay signal exists \u2014 there are no competitors charging for this, no job postings seeking this skill, and no community requests for a paid tool. The global addressable market of ~3,000\u20135,000 AppExchange ISVs is too small to justify building even a lightweight micro-product.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439479/how-can-i-identify-which-apex-expressions-will-trigger-expression-is-too-long"
+  ],
+  "evaluated_at": "2026-06-10T10:01:15+03:00"
+}

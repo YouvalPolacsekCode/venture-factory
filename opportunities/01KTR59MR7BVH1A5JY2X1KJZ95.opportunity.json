@@ -1,0 +1,24 @@
+{
+  "id": "01KTR59MR7BVH1A5JY2X1KJZ95",
+  "discovered_at": "2026-06-10T10:00:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203476/how-to-handle-clause-claiming-developments-relating-to-the-business-of-the-comp",
+    "snippet": "I'm looking at an employment contract that wants me to assign any 'development' that 'relates to the business of the Company or any of the products or services being developed, manufactured or sold by the Company'. This is in California, and I think this language pretty much matches the ceiling provided by law. HOWEVER, it's a big company and I don't know the entire list of products and services 'being developed, manufactured or sold by the Company', so my instinct is to ask for a narrower definition or an exclusion list. Score: 10, 3 comments."
+  },
+  "problem_statement": "Software engineers and knowledge workers joining large companies cannot easily understand the practical scope of overly broad IP assignment clauses in employment contracts, and lack affordable tooling to identify what side-projects or personal work may be at risk before signing.",
+  "target_segment": "Software engineers, designers, and technical knowledge workers (individual contributors) in the US negotiating employment contracts at mid-to-large companies.",
+  "geo": "US",
+  "signal_strength": 3,
+  "keywords": [
+    "employment-contract",
+    "ip-assignment",
+    "legal-tech",
+    "side-project",
+    "developer-tools",
+    "california-law",
+    "contract-review"
+  ],
+  "notes": "Score of 10 and 3 comments indicates resonance. This is a recurring pain point for US tech workers \u2014 broad IP clauses are standard at large companies (Google, Meta, etc.) and the risk is financially significant (losing rights to a side project). Opportunity: a SaaS contract-review tool or templated legal playbook specifically for IP assignment clauses, targeted at engineers. Analogous to services like Clerky or Bonterms but for employee-side use. Buyer is a professional with real financial stakes \u2014 strong willingness to pay $50\u2013$200 for clarity.",
+  "status": "candidate"
+}

@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KTR59MQT7GDJGNS326A0THX2",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 2,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 3,
+    "lead_reachability": 2,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.2,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Building a WhatsApp Web scraper/exporter explicitly violates WhatsApp's Terms of Service (Section 5 prohibits reverse engineering, scraping, or extracting data from WhatsApp). Meta actively enforces these terms and has successfully litigated against similar tools. Any commercial offering here would be legally and technically fragile \u2014 cease-and-desist risk is high."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Each recovery job is a bespoke, time-sensitive operation tied to a specific user's live multi-device session. Meaningful per-customer manual involvement is unavoidable."
+    },
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The buyer is individual consumers in an acute but rare, one-off scenario (phone loss). Reaching enough of them at the right moment to build a sustainable business requires very large consumer scale."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The core product \u2014 scraping or exporting WhatsApp messages from a live web session \u2014 directly violates WhatsApp's Terms of Service, making this a legally untenable business. The buyer is an individual consumer facing a once-in-years emergency, which means the pain is acute but rare, the segment is unreachable at scale, and churn is 100% after one use. Even setting aside the TOS issue, buildability is extremely low because WhatsApp actively blocks automation of its web interface.",
+  "solution_plan": "Not recommended for building. The legal risk alone (WhatsApp/Meta TOS violation, likely CFAA exposure in the US) means this cannot be run as a legitimate commercial service. Even a grey-market tool would be shut down quickly. The operator should not pursue this.",
+  "notes": "Disqualified by not_legitimate_or_grey penalty (-5.0). Total floored at 0.0. Build gates for operational_autonomy (scored 2, min 7), buildability_with_ai (scored 2, min 6), buyer_clarity (scored 3, min 6), and willingness_to_pay (scored 5, min 5 \u2014 barely meets) are also unmet.",
+  "scored_at": "2026-06-10T10:02:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

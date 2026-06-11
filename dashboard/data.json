@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-10T07:02:22+00:00",
-    "idt": "2026-06-10T10:02:22+03:00"
+    "utc": "2026-06-11T07:25:28+00:00",
+    "idt": "2026-06-11T10:25:28+03:00"
   },
   "funnel": {
-    "candidates": 40,
-    "scored": 40,
-    "validated": 3,
+    "candidates": 43,
+    "scored": 43,
+    "validated": 4,
     "build_decisions": {
-      "defer_1_week": 3
+      "defer_1_week": 4
     },
     "build_now": 0,
     "services_scaffolded": 0,
@@ -39,7 +39,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48455882",
       "discovered_at": "2026-06-09T09:41:16+03:00"
@@ -104,6 +104,37 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
       "discovered_at": "2026-06-07T09:59:46+03:00"
+    },
+    {
+      "topics": [
+        "indie-hacker",
+        "portfolio-apps",
+        "micro-saas"
+      ],
+      "id": "01KTTS1G8WVPAMD0QFKWVFZG0H",
+      "problem_statement": "Indie hackers and solo founders building a portfolio of small apps lack tooling to manage, monitor revenue/metrics, and cross-promote multiple micro-products from a single dashboard, forcing them to juggle many separate admin panels and spreadsheets.",
+      "target_segment": "Indie hackers and solo operators running 3-30 small SaaS or digital products simultaneously, typically generating $500–$10k MRR across the portfolio.",
+      "total": 5.9,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a nameable, reachable ICP — indie hackers running 3-30 small SaaS products, active on IndieHackers, Twitter/X, and ProductHunt — who already pay per-product for analytics and hosting tools, giving real willingness-to-pay signal. The service (unified portfolio dashboard with revenue aggregation, renewal alerts, and cross-promotion scheduling) is mostly automatable: Claude can pull and summarise data from connected APIs, and Stripe/billing can run hands-off. The deciding factor holdi…",
+      "solution_plan": "WHAT: A lightweight portfolio-management dashboard for indie hackers that aggregates MRR, key metrics, and renewal dates across all their small products in one place, with weekly digest emails and cross-promotion scheduling. BUILD: The factory creates a simple onboarding form where users connect their Stripe/Paddle accounts via OAuth or API key; Claude pulls and normalises the data, generates a weekly summary email, and schedules cross-promotion nudges; a Stripe subscription link handles billing — no coding by the operator. SELL: Reach founders directly on IndieHackers 'Products' pages, Twitter/X #indiehackers hashtag, and the 'Show HN' crow…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 6,
+        "Will pay": 6,
+        "Buildable": 6,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://dev.to/thegdsks/the-portfolio-math-when-30-small-apps-beat-1-big-one-41ai",
+      "discovered_at": "2026-06-11T10:23:43+03:00"
     },
     {
       "topics": [
@@ -458,6 +489,40 @@
     },
     {
       "topics": [
+        "local-llm",
+        "agentic-coding",
+        "vscode"
+      ],
+      "id": "01KTTS1G8BZ3WWFXVNE96FJNKJ",
+      "problem_statement": "Developers who want AI-assisted agentic coding workflows (à la Claude Code / Cursor) find cloud-API costs prohibitive but cannot find a local LLM that matches the coding quality of hosted models on modest consumer hardware, leaving them stuck between unaffordable cloud and underperforming local alternatives.",
+      "target_segment": "Independent developers, freelancers, and students running mid-range laptops (no discrete GPU) who use or want VS Code-based AI coding agents but cannot absorb $20-100+/month API costs.",
+      "total": 4.3,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is students and indie devs on mid-range laptops — a group with genuine pain but notoriously low willingness to pay for tools, especially when they're already trying to avoid API costs. There is no clear autonomous delivery mechanism: any 'curated guide' service or local-model proxy requires continuous curation, hardware-specific testing, and hands-on support that can't be fully automated. The deciding factor is that both the buyer (price-sensitive individuals, not businesses) and the…",
+      "solution_plan": "N/A — this opportunity is recommended for drop. The target users are cost-sensitive individual developers who are trying to escape paying for AI tools; they are unlikely to pay for a service that helps them avoid paying for services. Any viable offering (e.g. a local-model setup guide with ongoing updates) would require constant manual curation as models change rapidly, making it high-touch to maintain. A solo non-technical operator could not realistically build and sustain this in an automated way.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 4,
+        "Runs alone": 3,
+        "Will pay": 4,
+        "Buildable": 4,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48487147",
+      "discovered_at": "2026-06-11T10:23:43+03:00"
+    },
+    {
+      "topics": [
         "ai-code-quality",
         "technical-debt",
         "code-review"
@@ -486,6 +551,37 @@
       "source_type": "forum",
       "source_url": "https://lobste.rs/s/uvwcdo",
       "discovered_at": "2026-06-09T09:41:16+03:00"
+    },
+    {
+      "topics": [
+        "saas-backend",
+        "backend-integration",
+        "startup-infrastructure"
+      ],
+      "id": "01KTTS1G8M63W79HGA66BJCH8W",
+      "problem_statement": "Early-stage SaaS founders repeatedly discover that their initial stack of auth, payments, and database tools marketed as 'working together' creates integration breakage, vendor lock-in, and hidden operational costs that threaten the business as it scales past MVP.",
+      "target_segment": "Solo founders and small technical teams (1-5 engineers) launching or scaling B2B/B2C SaaS products who self-manage their backend infrastructure.",
+      "total": 4.2,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is a specific, identifiable person — a solo technical founder or small-team CTO already paying for Stripe, Clerk, and Supabase — which is a real B2B-adjacent ICP with budget. However, the core service (integration audit, starter kit maintenance, or cross-service breakage monitoring) requires per-customer bespoke work for audits or significant ongoing engineering for a monitoring product, both of which are difficult to automate fully with just Claude + forms + Stripe. The deciding fact…",
+      "solution_plan": "N/A — recommended for drop after penalties. The audit angle requires hands-on per-client analysis; the starter-kit angle is a commodity with no recurring revenue. A monitoring tool that detects cross-service breakage is the most automatable version but requires building and maintaining integrations with multiple third-party APIs — a significant ongoing engineering burden for a solo non-technical operator.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 5,
+        "Will pay": 6,
+        "Buildable": 6,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://dev.to/nikolaos_c/your-saas-backend-in-2026-1di5",
+      "discovered_at": "2026-06-11T10:23:43+03:00"
     },
     {
       "topics": [
@@ -525,14 +621,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2082,
-    "last_7_days_usd": 1.8512,
-    "all_time_usd": 1.8511,
+    "today_usd": 0.3309,
+    "last_7_days_usd": 1.8575,
+    "all_time_usd": 2.182,
     "by_day": [
-      {
-        "date": "2026-06-04",
-        "usd": 0.3246
-      },
       {
         "date": "2026-06-05",
         "usd": 0.3237
@@ -556,56 +648,36 @@
       {
         "date": "2026-06-10",
         "usd": 0.2082
+      },
+      {
+        "date": "2026-06-11",
+        "usd": 0.3309
       }
     ],
     "by_agent": [
       {
+        "agent": "build_decisions",
+        "usd": 0.6039
+      },
+      {
         "agent": "market_radar",
-        "usd": 0.5415
+        "usd": 0.4869
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.5139
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4534
+        "usd": 0.44
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3014
+        "usd": 0.2938
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0409
+        "usd": 0.0328
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-04",
-      "agents": {
-        "build_decisions": {
-          "skipped": 2
-        },
-        "cost_gain": {
-          "skipped": 2
-        },
-        "daily_summary": {
-          "succeeded": 2
-        },
-        "market_radar": {
-          "succeeded": 2
-        },
-        "opportunity_scoring": {
-          "succeeded": 2
-        },
-        "pain_validation": {
-          "skipped": 1,
-          "succeeded": 1
-        }
-      }
-    },
     {
       "date": "2026-06-05",
       "agents": {
@@ -791,13 +863,48 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-11",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-10.md",
-    "date": "2026-06-10",
-    "text": "# Daily Summary — 2026-06-10 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 40 |\n| Opportunities validated past threshold | 4 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. Discovery and validation pipelines are running; results will surface in coming days.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across B2B communities.\n2. `pain_validation` probes top-scored opportunities from today's 40 candidates.\n3. `opportunity_scoring` re-scores incoming candidates as they arrive.\n4. `build_decisions` evaluates which of the 4 validated opportunities merit experiment launch.\n5. `cost_gain` prepares weekly cost/gain analysis for Sunday review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
-    "truncated": false
+    "file": "reports/daily/2026-06-11.md",
+    "date": "2026-06-11",
+    "text": "# Daily Summary — 2026-06-11 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 43 |\n| Opportunities validated past threshold | 5 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments tracked) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error during run; recovered and succeeded |\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for pain signals across platforms.\n2. `pain_validation` validates top 5 candidate opportunities from today's 43.\n3. `opportunity_scoring` scores new candidates as they arrive.\n4. `cost_gain` updates cost/gain ratios for any live experiments.\n5. `build_decisions` evaluates readiness of validated opportunities for experiment launch.\n\n## Operator action items\n",
+    "truncated": true
   },
   "analytics": null
 }

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTTS1G8WVPAMD0QFKWVFZG0H",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [],
+  "total": 5.9,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a nameable, reachable ICP \u2014 indie hackers running 3-30 small SaaS products, active on IndieHackers, Twitter/X, and ProductHunt \u2014 who already pay per-product for analytics and hosting tools, giving real willingness-to-pay signal. The service (unified portfolio dashboard with revenue aggregation, renewal alerts, and cross-promotion scheduling) is mostly automatable: Claude can pull and summarise data from connected APIs, and Stripe/billing can run hands-off. The deciding factor holding it at 'validate' rather than 'build' is that operational_autonomy scores 6 (floor is 7): the operator approval cadence for outreach is fine, but setting up and maintaining per-product data connectors (Stripe, Paddle, LemonSqueezy, Plausible, etc.) across a fragmented customer base introduces enough per-customer configuration work that full autonomy isn't yet proven.",
+  "solution_plan": "WHAT: A lightweight portfolio-management dashboard for indie hackers that aggregates MRR, key metrics, and renewal dates across all their small products in one place, with weekly digest emails and cross-promotion scheduling. BUILD: The factory creates a simple onboarding form where users connect their Stripe/Paddle accounts via OAuth or API key; Claude pulls and normalises the data, generates a weekly summary email, and schedules cross-promotion nudges; a Stripe subscription link handles billing \u2014 no coding by the operator. SELL: Reach founders directly on IndieHackers 'Products' pages, Twitter/X #indiehackers hashtag, and the 'Show HN' crowd; the factory drafts and queues outreach messages, which go out only after Youval approves each batch. MAINTAIN: Weekly digest generation, renewal alerts, and billing all run via Claude + code; the operator's only recurring touch is approving outreach batches and reviewing the weekly health log (~10 minutes/week). The main validation question is whether indie hackers at $500\u2013$5k MRR will pay $29\u201349/month on top of their existing tool spend \u2014 run 20 cold DMs before building.",
+  "notes": "operational_autonomy scores 6, just below the build gate floor of 7 \u2014 the per-customer connector setup is the sticking point. Total 5.9 clears the validate threshold (5.5) but not build (6.5). Validate first: confirm $29\u201349/month price acceptance with 5 paying signups before investing in connector infrastructure.",
+  "scored_at": "2026-06-11T10:25:12+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

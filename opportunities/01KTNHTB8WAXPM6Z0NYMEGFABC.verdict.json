@@ -1,0 +1,17 @@
+{
+  "opportunity_id": "01KTNHTB8WAXPM6Z0NYMEGFABC",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "Mid-market engineering teams are accumulating $300\u2013$500/developer/month in AI tooling subscriptions (Cursor, GitHub Copilot, ChatGPT Team, Claude Pro, etc.) with no consolidated view of utilization or ROI \u2014 a pain corroborated by multiple HN threads, Reddit discussions, and the emergence of at least two funded competitors (Zylo, Torii) in adjacent SaaS management. Willingness-to-pay is evidenced by competitor pricing ($15k\u2013$50k/year enterprise contracts for SaaS management platforms) and job postings for 'AI tooling procurement' roles, though no direct 'I'd pay $X for this specific tool' quote was found. The pain clears the 5-distinct-evidence threshold and has at least one clear WTP signal (competitor pricing), but the responsiveness signal remains untested.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48455882",
+    "https://news.ycombinator.com/item?id=43568233",
+    "https://www.reddit.com/r/ExperiencedDevs/comments/1kmvq2f/",
+    "https://www.reddit.com/r/devops/comments/1k9zq3p/",
+    "https://zylo.com/pricing/",
+    "https://www.torii.io/pricing/",
+    "https://news.ycombinator.com/item?id=41902864"
+  ],
+  "evaluated_at": "2026-06-11T10:24:32+03:00"
+}

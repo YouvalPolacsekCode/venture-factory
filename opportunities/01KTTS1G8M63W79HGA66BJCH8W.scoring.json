@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KTTS1G8M63W79HGA66BJCH8W",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A backend integration audit is fundamentally a review-and-recommendation service; each client's stack is unique, so meaningful audits require human (or deep per-customer AI) analysis that can't be fully templatised across customers without significant manual work."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a specific, identifiable person \u2014 a solo technical founder or small-team CTO already paying for Stripe, Clerk, and Supabase \u2014 which is a real B2B-adjacent ICP with budget. However, the core service (integration audit, starter kit maintenance, or cross-service breakage monitoring) requires per-customer bespoke work for audits or significant ongoing engineering for a monitoring product, both of which are difficult to automate fully with just Claude + forms + Stripe. The deciding factor is operational autonomy: the most valuable version (audit) is a consulting engagement, and the most automatable version (starter kit) is a one-time sale with no recurring pull.",
+  "solution_plan": "N/A \u2014 recommended for drop after penalties. The audit angle requires hands-on per-client analysis; the starter-kit angle is a commodity with no recurring revenue. A monitoring tool that detects cross-service breakage is the most automatable version but requires building and maintaining integrations with multiple third-party APIs \u2014 a significant ongoing engineering burden for a solo non-technical operator.",
+  "notes": "Fails operational_autonomy build gate (score 5, floor is 7). After the requires_human_fulfillment penalty, total drops to 4.2, below the 5.5 validate threshold.",
+  "scored_at": "2026-06-11T10:25:12+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

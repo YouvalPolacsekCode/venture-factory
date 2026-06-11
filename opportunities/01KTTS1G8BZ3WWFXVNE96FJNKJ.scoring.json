@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTTS1G8BZ3WWFXVNE96FJNKJ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 2,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is students and indie devs on mid-range laptops \u2014 a group with genuine pain but notoriously low willingness to pay for tools, especially when they're already trying to avoid API costs. There is no clear autonomous delivery mechanism: any 'curated guide' service or local-model proxy requires continuous curation, hardware-specific testing, and hands-on support that can't be fully automated. The deciding factor is that both the buyer (price-sensitive individuals, not businesses) and the build (hardware-dependent, high-support) fail the autonomy and commercial-reality tests simultaneously.",
+  "solution_plan": "N/A \u2014 this opportunity is recommended for drop. The target users are cost-sensitive individual developers who are trying to escape paying for AI tools; they are unlikely to pay for a service that helps them avoid paying for services. Any viable offering (e.g. a local-model setup guide with ongoing updates) would require constant manual curation as models change rapidly, making it high-touch to maintain. A solo non-technical operator could not realistically build and sustain this in an automated way.",
+  "notes": "Fails buyer_clarity (score 4, floor is 6), willingness_to_pay (score 4, floor is 5), and operational_autonomy (score 3, floor is 7). Total 4.3 is below the 5.5 validate threshold \u2014 drop.",
+  "scored_at": "2026-06-11T10:25:12+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

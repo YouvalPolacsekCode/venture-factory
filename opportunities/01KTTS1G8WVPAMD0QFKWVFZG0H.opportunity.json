@@ -1,0 +1,25 @@
+{
+  "id": "01KTTS1G8WVPAMD0QFKWVFZG0H",
+  "discovered_at": "2026-06-11T10:23:43+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/thegdsks/the-portfolio-math-when-30-small-apps-beat-1-big-one-41ai",
+    "snippet": "The portfolio math. When 30 small apps beat 1 big one. For a decade the indie hacker... [score 22, 3 comments, tags: indiehackers, startup, productivity, webdev]"
+  },
+  "problem_statement": "Indie hackers and solo founders building a portfolio of small apps lack tooling to manage, monitor revenue/metrics, and cross-promote multiple micro-products from a single dashboard, forcing them to juggle many separate admin panels and spreadsheets.",
+  "target_segment": "Indie hackers and solo operators running 3-30 small SaaS or digital products simultaneously, typically generating $500\u2013$10k MRR across the portfolio.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "indie-hacker",
+    "portfolio-apps",
+    "micro-saas",
+    "revenue-dashboard",
+    "multi-product",
+    "solo-founder",
+    "analytics",
+    "saas"
+  ],
+  "notes": "Score 22 with 3 comments; topic resonates in indie-hacker community. Paying-buyer evidence: these operators already pay for hosting, analytics, and email tools per product \u2014 a consolidated portfolio management layer with unified metrics, renewal alerts, and cross-promotion scheduling would command $29-99/month. Comparable tools (Makerlog, Indie Hackers analytics) are weak on the multi-product management angle.",
+  "status": "candidate"
+}

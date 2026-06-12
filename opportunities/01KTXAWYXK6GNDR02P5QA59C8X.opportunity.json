@@ -1,0 +1,24 @@
+{
+  "id": "01KTXAWYXK6GNDR02P5QA59C8X",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=34144782",
+    "snippet": "I wish there was a tool that allowed me to send my clipboard to a server and anytime I sent something to the clipboard it checks the ssh hosts file for the config and sends it off. I'd like to 'paste' on any other machine with an ssh command."
+  },
+  "problem_statement": "Developers and sysadmins who work across multiple machines via SSH have no seamless way to sync clipboard contents between hosts; copying on one machine and pasting on another requires manual workarounds.",
+  "target_segment": "Software developers and sysadmins who regularly SSH into multiple remote machines and need cross-host clipboard sync.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "clipboard-sync",
+    "ssh",
+    "developer-tools",
+    "terminal",
+    "remote-work",
+    "cross-platform",
+    "productivity"
+  ],
+  "notes": "Single HN comment expressing desire for the tool; no explicit price signal but dev-tool context suggests willingness to pay for a polished solution. Older signal (2022) but the workflow gap persists.",
+  "status": "candidate"
+}

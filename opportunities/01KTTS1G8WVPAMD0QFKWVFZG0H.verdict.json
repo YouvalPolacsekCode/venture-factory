@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KTTS1G8WVPAMD0QFKWVFZG0H",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "weekly",
+  "rationale": "While indie hackers running multi-product portfolios do experience the friction of juggling separate dashboards, the evidence base is thin: the single source is a low-engagement dev.to post (score 22, 3 comments), and no direct willingness-to-pay signals\u2014competitor pricing pages, paid job ads, or prospect quotes\u2014have been located. The pain is real but diffuse and mild; most operators tolerate it with lightweight spreadsheets or simply don't prioritize unified analytics at the $500\u20135k MRR stage. The segment is also global-but-shallow (relatively few people run 3\u201330 products simultaneously at meaningful revenue), making TAM difficult to defend above $2\u20133M globally. Insufficient evidence to pass the 5-distinct-pain-quotes and \u22651 WTP signal threshold; recommend re-queuing after a broader scrape of IndieHackers, HN 'Ask HN: how do you manage multiple SaaS products', and Twitter/X threads.",
+  "sources": [
+    "https://dev.to/thegdsks/the-portfolio-math-when-30-small-apps-beat-1-big-one-41ai"
+  ],
+  "evaluated_at": "2026-06-12T10:14:58+03:00"
+}

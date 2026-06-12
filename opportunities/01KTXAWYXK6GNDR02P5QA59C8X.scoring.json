@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTXAWYXK6GNDR02P5QA59C8X",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The clipboard-sync-over-SSH problem is a real workflow friction for sysadmins and developers who hop between machines, but it is fundamentally a native system daemon/network service problem \u2014 not something a Claude prompt plus a landing page can deliver. The buyer segment (individual developers) has moderate but not strong willingness to pay, and existing free tools like OSC 52, tmux clipboard plugins, and xpaste already cover large parts of this. Operational autonomy is very low because delivery requires a client-side daemon installed on every machine the user owns, which cannot be automated by this factory.",
+  "solution_plan": "This is not a viable build for this factory. The service would require a cross-platform background daemon (Linux/macOS/Windows), SSH protocol integration, and per-machine installation \u2014 all of which require custom software engineering that a non-technical solo operator cannot build or maintain via Claude prompts and a web page. A Stripe link and intake form cannot substitute for distributing and maintaining an installable system utility. Recommend dropping.",
+  "notes": "Fails buildability_with_ai (score 3, floor is 6) and operational_autonomy (score 3, floor is 7). Even if total were higher, these hard gates would cap at validate. Score below validate threshold anyway.",
+  "scored_at": "2026-06-12T10:15:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

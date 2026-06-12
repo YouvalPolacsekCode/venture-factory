@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTXAWYZ379ZE0VD38WN12JYA",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling scheduling software to MSP owners almost certainly requires live demos or at minimum a synchronous onboarding call; MSP buyers are cautious and comparison-shop against ConnectWise/Autotask."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Configuring scheduling workflows per MSP client (their specific technicians, client roster, notification preferences) requires meaningful per-customer setup that is not self-serve out of the box."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable \u2014 operations managers or owners at small MSPs (2\u201320 technicians) \u2014 and MSPs do pay for tooling, so the commercial instinct is sound. However, the operational autonomy score of 4 reflects that each customer needs non-trivial manual configuration, and the sales cycle for scheduling software to MSPs almost always involves demos or calls. With penalties applied the total drops to 2.9, well below the 5.5 validate threshold. The deciding factor is that delivery and sales both require synchronous human work that a solo non-technical operator running an automated factory cannot absorb. This market is also well-served by established tools (ConnectWise, ServiceTitan, Jobber), making differentiation hard to sustain without significant product investment.",
+  "solution_plan": "Not recommended for build. The concept \u2014 a lightweight dispatch/notice tool for small MSPs \u2014 is commercially coherent, but in practice the factory cannot build and sell it without per-customer configuration calls and demo conversations. Even if Claude generated the scheduling logic, each MSP has a unique client list, technician roster, and notification preferences that require manual setup. Selling into MSPs without a sales call is possible via cold email, but conversion to a paid subscription for scheduling software without any demo is realistically very low. There is no clear path to hands-off delivery here. If this idea is revisited, it would need a fully self-serve onboarding flow (structured form \u2192 auto-generated config) that eliminates the setup bottleneck before re-evaluating.",
+  "notes": "Failing build_gate: operational_autonomy (scored 4, minimum 7). Also fails willingness_to_pay gate contextually once setup friction is factored in \u2014 existing well-funded competitors make organic discovery very unlikely. Drop and do not invest further validation resources.",
+  "scored_at": "2026-06-12T10:16:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

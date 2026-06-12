@@ -1,0 +1,24 @@
+{
+  "id": "01KTXAWYZ379ZE0VD38WN12JYA",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203482/asking-for-more-notice-from-management-for-visits-to-clients",
+    "snippet": "I work for a small MSP. Most of the work can be done from home but sometimes my boss asks me to go to client sites. Usually I get no notice about this... if it's planned maintenance or an upgrade, I think me getting notice would benefit all parties involved."
+  },
+  "problem_statement": "MSP technicians and field service workers lack a lightweight scheduling and advance-notice tool that coordinates planned on-site visits between managers and technicians, resulting in last-minute dispatches that disrupt personal and professional planning.",
+  "target_segment": "Small to mid-sized MSPs and field service companies with 2\u201320 technicians who manage client site visits without a formal scheduling system.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "msp",
+    "field-service",
+    "scheduling",
+    "technician-management",
+    "small-business",
+    "dispatch",
+    "workforce-management"
+  ],
+  "notes": "MSPs are known paying buyers for tooling (ConnectWise, Autotask). The pain is operational inefficiency with direct cost implications (technician time, driving costs). Score 6 with 3 comments suggests relatable problem. A focused lightweight scheduling/notification layer for MSPs too small for full PSA suites could have a clear buyer.",
+  "status": "candidate"
+}

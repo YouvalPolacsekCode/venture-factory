@@ -1,0 +1,24 @@
+{
+  "id": "01KTXAWYYC1RVXG7QZ9Z2H4RN6",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=29373715",
+    "snippet": "I wish there was a tool to monitor if some random process is accessing folder X or has high network usage, a la Little Snitch on Mac. Linux desktop doesn't have this."
+  },
+  "problem_statement": "Linux desktop users and developers have no user-friendly, real-time process-level network and filesystem access monitor equivalent to Little Snitch on macOS, making it hard to detect unexpected application behaviour on their workstations.",
+  "target_segment": "Security-conscious developers and power users running Linux desktops who want application-level network and file-access visibility.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "linux",
+    "network-monitor",
+    "process-monitor",
+    "security",
+    "desktop-security",
+    "little-snitch",
+    "developer-tools"
+  ],
+  "notes": "Single HN comment (2021) but the gap is real and persistent \u2014 Little Snitch earns ~$45/license on Mac, suggesting this market pays. Linux professional developer audience is a plausible buyer segment. Needs more corroborating signals.",
+  "status": "candidate"
+}

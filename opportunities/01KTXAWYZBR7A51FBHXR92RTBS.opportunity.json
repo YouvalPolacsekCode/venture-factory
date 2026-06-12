@@ -1,0 +1,25 @@
+{
+  "id": "01KTXAWYZBR7A51FBHXR92RTBS",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://dev.to/k08200/stop-building-ai-assistants-build-ai-firewalls-1mh0",
+    "snippet": "Every week another 'AI agent for X' launches. Email triage. Calendar coordination. Sales follow-up.... Stop Building AI Assistants. Build AI Firewalls. Score 6, 12 comments."
+  },
+  "problem_statement": "Businesses deploying AI agents for workflows (email, sales, scheduling) have no intermediary layer that validates, rate-limits, or blocks AI actions before they cause irreversible side effects \u2014 a gap that creates operational and compliance risk.",
+  "target_segment": "SMB operators, SaaS founders, and operations teams deploying AI agents in customer-facing or internal business workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agent",
+    "ai-safety",
+    "workflow-automation",
+    "compliance",
+    "rate-limiting",
+    "ai-ops",
+    "human-in-the-loop",
+    "startup"
+  ],
+  "notes": "Recent post (2026-05-28) with 12 comments signals active discussion. The 'AI firewall' framing is gaining traction alongside the agent-bankrupting-operator story above \u2014 two independent signals pointing at the same gap. Businesses already spending on AI automation are natural buyers for a guardrail layer. Possible productization: a middleware SDK or SaaS proxy for AI agent action validation.",
+  "status": "candidate"
+}

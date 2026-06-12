@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTXAWYYC1RVXG7QZ9Z2H4RN6",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the Little Snitch pricing analogy ($45/license) gives a willingness-to-pay signal, but building a real-time process-level network and filesystem monitor on Linux requires kernel-level integration (eBPF, netlink sockets, inotify), a native GUI, and per-distro packaging \u2014 completely outside what this factory can produce with Claude prompts and a web page. Buyer clarity is moderate (security-conscious Linux developers) but the Linux desktop market is famously resistant to paying for software. Autonomy and buildability are both near zero for this category.",
+  "solution_plan": "This is not a viable build for this factory. A functional Little Snitch equivalent for Linux requires native system programming, kernel interface expertise, and complex GUI work that cannot be delivered by a non-technical operator using Claude and a web form. Recommend dropping.",
+  "notes": "Fails buildability_with_ai (score 2, floor is 6) and operational_autonomy (score 2, floor is 7). Total also below validate threshold. The analogy to Little Snitch pricing is encouraging as a market signal but the build path is entirely wrong for this factory.",
+  "scored_at": "2026-06-12T10:15:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "01KTXAWYY4Z7JK90KRC8FS1M57",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=21772311",
+    "snippet": "I wish there was a tool as good as Skitch for Linux. Deepin Screenshots come close but it has (had?) issues with Wayland."
+  },
+  "problem_statement": "Linux desktop users lack a polished, Wayland-compatible screenshot annotation tool comparable to Skitch on macOS, forcing them to use workarounds with partial Wayland support.",
+  "target_segment": "Linux power users and developers who use Wayland-based desktops and need annotation/screenshot tooling in their daily workflow.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "screenshot-tool",
+    "linux",
+    "wayland",
+    "annotation",
+    "developer-tools",
+    "desktop-productivity"
+  ],
+  "notes": "Older signal (2022) but the Wayland adoption curve has only grown since. Single comment; no direct payment signal. Hobbyist lean, but developers using Linux workstations do pay for productivity tools. Low confidence without corroboration.",
+  "status": "candidate"
+}

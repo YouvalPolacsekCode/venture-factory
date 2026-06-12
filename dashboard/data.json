@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-11T07:25:28+00:00",
-    "idt": "2026-06-11T10:25:28+03:00"
+    "utc": "2026-06-12T07:16:33+00:00",
+    "idt": "2026-06-12T10:16:33+03:00"
   },
   "funnel": {
-    "candidates": 43,
-    "scored": 43,
+    "candidates": 50,
+    "scored": 50,
     "validated": 4,
     "build_decisions": {
       "defer_1_week": 4
@@ -15,6 +15,35 @@
     "services_launched": 0
   },
   "top_opportunities": [
+    {
+      "topics": [
+        "accessibility",
+        "wcag",
+        "web-compliance"
+      ],
+      "id": "01KTXAWYYM6Q4KH1EDG3P8MTY9",
+      "problem_statement": "Web teams with limited development bandwidth struggle to triage and prioritize WCAG accessibility issues from audit outputs, lacking a structured workflow to decide what to fix first given legal risk, user impact, and dev effort.",
+      "target_segment": "Web managers, digital accessibility coordinators, and small agency dev teams responsible for WCAG compliance at medium-sized organizations.",
+      "total": 6.6,
+      "recommended_stage": "build",
+      "rationale": "Web accessibility coordinators and agency dev teams at medium-sized organizations are specific, reachable buyers with real external legal pressure (ADA, EAA 2025) creating urgent demand — they already pay for tools like Deque/axe Pro. The core service — taking audit output (axe JSON, Lighthouse CSV) and producing a Claude-reasoned prioritization report ranked by legal risk, user impact, and dev effort — is squarely within what Claude can do well without any custom infrastructure. Operational au…",
+      "solution_plan": "The micro-service is an WCAG Accessibility Triage Report: the customer uploads their axe/Lighthouse audit export and receives a Claude-generated prioritization report (ranked by legal exposure, user impact, and estimated fix effort) as a PDF within minutes. BUILD: Claude prompt takes the audit JSON/CSV as input and outputs a structured priority matrix with fix-order rationale; a simple upload form (Tally or similar) collects the file and contact info; Stripe handles one-time payment ($49-99 per report) or a monthly subscription for teams; Claude emails the finished report. No coding by Youval. SELL: reach web accessibility coordinators and a…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webmasters.stackexchange.com/questions/148712/how-do-you-prioritize-accessibility-fixes-when-a-website-has-limited-development",
+      "discovered_at": "2026-06-12T10:14:17+03:00"
+    },
     {
       "topics": [
         "ai-spend",
@@ -131,7 +160,7 @@
         "Buildable": 6,
         "Pain": 6
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "other",
       "source_url": "https://dev.to/thegdsks/the-portfolio-math-when-30-small-apps-beat-1-big-one-41ai",
       "discovered_at": "2026-06-11T10:23:43+03:00"
@@ -164,6 +193,38 @@
       "source_type": "forum",
       "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
       "discovered_at": "2026-06-04T19:55:15+03:00"
+    },
+    {
+      "topics": [
+        "ai-agent",
+        "cost-control",
+        "devops"
+      ],
+      "id": "01KTXAWYXW1W1VHNH8H9RNQ2JC",
+      "problem_statement": "AI coding/devops agents can run up unexpected large cloud or API bills when given autonomous tasks with broad permissions, leaving operators with no cost guardrails or kill-switch in place before damage is done.",
+      "target_segment": "Solo developers, indie hackers, and small engineering teams deploying AI agents for devops or network automation tasks.",
+      "total": 5.7,
+      "recommended_stage": "validate",
+      "rationale": "The pain is acute and real — operators have lost actual money, giving strong willingness-to-pay signal from financial loss. The buyer is identifiable: a solo developer or small team lead already paying for AI API access, with a clear budget motive to prevent runaway costs. However, building a true cost-cap/circuit-breaker SDK or middleware layer requires real integration work (hooking into cloud billing APIs, agent runtimes, or at minimum an API proxy layer), putting buildability at 5 and opera…",
+      "solution_plan": "The micro-service would be an AI Agent Cost Guardian: a lightweight monitoring and alerting layer that watches API spend in real time and sends alerts (email/Slack webhook) when a configurable budget threshold is crossed. BUILD: Claude can draft the monitoring logic and webhook integration; a simple landing page with a Stripe subscription link ($19-39/mo) and an intake form collecting the user's API keys and budget limits; Claude handles alert email drafting. SELL: reach indie hackers and solo devs via Hacker News Show HN, Twitter/X AI dev communities, and ProductHunt — Youval approves the outreach batch before it goes out. MAINTAIN: monitor…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 5,
+        "Will pay": 6,
+        "Buildable": 5,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://lobste.rs/s/ishgbs",
+      "discovered_at": "2026-06-12T10:14:17+03:00"
     },
     {
       "topics": [
@@ -616,19 +677,49 @@
       "source_type": "forum",
       "source_url": "https://webapps.stackexchange.com/questions/182412/how-to-ban-copilot-from-github-repo",
       "discovered_at": "2026-06-04T17:33:54+03:00"
+    },
+    {
+      "topics": [
+        "clipboard-sync",
+        "ssh",
+        "developer-tools"
+      ],
+      "id": "01KTXAWYXK6GNDR02P5QA59C8X",
+      "problem_statement": "Developers and sysadmins who work across multiple machines via SSH have no seamless way to sync clipboard contents between hosts; copying on one machine and pasting on another requires manual workarounds.",
+      "target_segment": "Software developers and sysadmins who regularly SSH into multiple remote machines and need cross-host clipboard sync.",
+      "total": 4.0,
+      "recommended_stage": "drop",
+      "rationale": "The clipboard-sync-over-SSH problem is a real workflow friction for sysadmins and developers who hop between machines, but it is fundamentally a native system daemon/network service problem — not something a Claude prompt plus a landing page can deliver. The buyer segment (individual developers) has moderate but not strong willingness to pay, and existing free tools like OSC 52, tmux clipboard plugins, and xpaste already cover large parts of this. Operational autonomy is very low because delive…",
+      "solution_plan": "This is not a viable build for this factory. The service would require a cross-platform background daemon (Linux/macOS/Windows), SSH protocol integration, and per-machine installation — all of which require custom software engineering that a non-technical solo operator cannot build or maintain via Claude prompts and a web page. A Stripe link and intake form cannot substitute for distributing and maintaining an installable system utility. Recommend dropping.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 3,
+        "Will pay": 4,
+        "Buildable": 3,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=34144782",
+      "discovered_at": "2026-06-12T10:14:17+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3309,
-    "last_7_days_usd": 1.8575,
-    "all_time_usd": 2.182,
+    "today_usd": 0.2174,
+    "last_7_days_usd": 1.7512,
+    "all_time_usd": 2.3994,
     "by_day": [
-      {
-        "date": "2026-06-05",
-        "usd": 0.3237
-      },
       {
         "date": "2026-06-06",
         "usd": 0.1449
@@ -652,55 +743,36 @@
       {
         "date": "2026-06-11",
         "usd": 0.3309
+      },
+      {
+        "date": "2026-06-12",
+        "usd": 0.2174
       }
     ],
     "by_agent": [
       {
-        "agent": "build_decisions",
-        "usd": 0.6039
-      },
-      {
         "agent": "market_radar",
-        "usd": 0.4869
+        "usd": 0.5096
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.44
+        "usd": 0.4712
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.4567
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2938
+        "usd": 0.2804
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0328
+        "usd": 0.0332
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-05",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        }
-      }
-    },
     {
       "date": "2026-06-06",
       "agents": {
@@ -898,13 +970,48 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-12",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-11.md",
-    "date": "2026-06-11",
-    "text": "# Daily Summary — 2026-06-11 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 43 |\n| Opportunities validated past threshold | 5 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments tracked) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error during run; recovered and succeeded |\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for pain signals across platforms.\n2. `pain_validation` validates top 5 candidate opportunities from today's 43.\n3. `opportunity_scoring` scores new candidates as they arrive.\n4. `cost_gain` updates cost/gain ratios for any live experiments.\n5. `build_decisions` evaluates readiness of validated opportunities for experiment launch.\n\n## Operator action items\n",
-    "truncated": true
+    "file": "reports/daily/2026-06-12.md",
+    "date": "2026-06-12",
+    "text": "# Daily Summary — 2026-06-12 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 50 |\n| Opportunities validated past threshold | 6 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error during today's sweep; auto-retried successfully |\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` resumes daily pain signal sweeps across B2B SaaS subreddits and community forums.\n2. `pain_validation` validates high-scoring opportunities from today's 50 candidates against threshold.\n3. `opportunity_scoring` re-ranks candidates based on refined pain signal inputs.\n4. `cost_gain` analyzes weekly cost per validated opportunity and prepares Sunday funnel report.\n5. `responsiveness_test` runs baseline latency checks on factory infrastructure.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "truncated": false
   },
   "analytics": null
 }

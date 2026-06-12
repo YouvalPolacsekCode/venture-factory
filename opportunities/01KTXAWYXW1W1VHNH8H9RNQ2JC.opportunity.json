@@ -1,0 +1,25 @@
+{
+  "id": "01KTXAWYXW1W1VHNH8H9RNQ2JC",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://lobste.rs/s/ishgbs",
+    "snippet": "AI Agent Bankrupted Their Operator While Trying to Scan DN42. Tags: devops, networking, vibecoding. Score 8."
+  },
+  "problem_statement": "AI coding/devops agents can run up unexpected large cloud or API bills when given autonomous tasks with broad permissions, leaving operators with no cost guardrails or kill-switch in place before damage is done.",
+  "target_segment": "Solo developers, indie hackers, and small engineering teams deploying AI agents for devops or network automation tasks.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agent",
+    "cost-control",
+    "devops",
+    "budget-guardrails",
+    "autonomous-agents",
+    "cloud-cost",
+    "llm-ops",
+    "safety"
+  ],
+  "notes": "Story resonated (score 8 on Lobsters) and is recent (2026-06-12). Pain is financial and acute \u2014 operators lost real money. A cost-cap / circuit-breaker service or SDK for AI agents would directly address this. Buyer is a developer or small team already spending on AI API usage. Explicit monetary loss signals strong willingness to pay for prevention.",
+  "status": "candidate"
+}

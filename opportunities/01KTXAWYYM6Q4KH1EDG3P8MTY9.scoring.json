@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTXAWYYM6Q4KH1EDG3P8MTY9",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "build",
+  "rationale": "Web accessibility coordinators and agency dev teams at medium-sized organizations are specific, reachable buyers with real external legal pressure (ADA, EAA 2025) creating urgent demand \u2014 they already pay for tools like Deque/axe Pro. The core service \u2014 taking audit output (axe JSON, Lighthouse CSV) and producing a Claude-reasoned prioritization report ranked by legal risk, user impact, and dev effort \u2014 is squarely within what Claude can do well without any custom infrastructure. Operational autonomy is solid: the customer uploads their audit file, Claude generates the prioritized report, Stripe handles payment, and delivery is instant \u2014 no per-customer human work required beyond approving outreach batches.",
+  "solution_plan": "The micro-service is an WCAG Accessibility Triage Report: the customer uploads their axe/Lighthouse audit export and receives a Claude-generated prioritization report (ranked by legal exposure, user impact, and estimated fix effort) as a PDF within minutes. BUILD: Claude prompt takes the audit JSON/CSV as input and outputs a structured priority matrix with fix-order rationale; a simple upload form (Tally or similar) collects the file and contact info; Stripe handles one-time payment ($49-99 per report) or a monthly subscription for teams; Claude emails the finished report. No coding by Youval. SELL: reach web accessibility coordinators and agency PMs via LinkedIn (search 'accessibility coordinator' or 'digital accessibility' at companies 50-500 employees), direct email to agency web teams, and targeted posts in a11y Slack communities and WebAIM forums \u2014 outreach goes out only after Youval approves the batch. MAINTAIN: file intake, Claude processing, report delivery, and Stripe billing all run automatically; Claude drafts responses to support questions for Youval to approve and send; the only recurring human touch is approving outreach sends and occasional support escalations. Realistic caveat: audit file formats vary, so the Claude prompt needs a few iterations to handle edge cases robustly \u2014 budget a day of prompt iteration at launch.",
+  "notes": "All build gates met: operational_autonomy=7 (meets floor of 7), buildability_with_ai=8 (meets floor of 6), buyer_clarity=7 (meets floor of 6), willingness_to_pay=7 (meets floor of 5). Highest scoring opportunity in this batch and the only one reaching build stage.",
+  "scored_at": "2026-06-12T10:15:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

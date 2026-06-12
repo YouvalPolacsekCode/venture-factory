@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTXAWYY4Z7JK90KRC8FS1M57",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 6,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.2,
+  "penalties_applied": [],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "A Wayland-compatible screenshot annotation tool is a native GUI desktop application problem \u2014 it requires deep Linux display server integration that cannot be built with Claude prompts, a web page, and Stripe. The buyer is a Linux hobbyist/developer who strongly prefers free and open-source software, and willingness to pay is very low. This factory has no path to build or deliver a desktop GUI tool autonomously.",
+  "solution_plan": "This is not a viable build for this factory. A polished Wayland-compatible screenshot/annotation tool is a native desktop application requiring GUI toolkit expertise, Wayland protocol integration, and OS-level packaging \u2014 none of which can be produced by Claude plus a landing page. The buyer segment also leans heavily toward free/open-source tools. Recommend dropping entirely.",
+  "notes": "Fails buildability_with_ai (score 2, floor is 6), operational_autonomy (score 2, floor is 7), buyer_clarity (score 3, floor is 6), and willingness_to_pay (score 3, floor is 5). Total also well below validate threshold.",
+  "scored_at": "2026-06-12T10:15:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KTXAWYYM6Q4KH1EDG3P8MTY9",
+  "discovered_at": "2026-06-12T10:14:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148712/how-do-you-prioritize-accessibility-fixes-when-a-website-has-limited-development",
+    "snippet": "I'm working on improving the accessibility of a medium-sized website and have identified a number of issues through manual testing and automated accessibility audits... The challenge is that development resources are limited, so fixing everything at once is not reasonable."
+  },
+  "problem_statement": "Web teams with limited development bandwidth struggle to triage and prioritize WCAG accessibility issues from audit outputs, lacking a structured workflow to decide what to fix first given legal risk, user impact, and dev effort.",
+  "target_segment": "Web managers, digital accessibility coordinators, and small agency dev teams responsible for WCAG compliance at medium-sized organizations.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "accessibility",
+    "wcag",
+    "web-compliance",
+    "audit",
+    "prioritization",
+    "a11y",
+    "agency",
+    "legal-risk"
+  ],
+  "notes": "WCAG compliance is increasingly legally mandated (ADA, EAA 2025), so buyers have external pressure to spend. Agencies and in-house web teams are paying buyers \u2014 accessibility audit tools (axe, Deque) already have commercial tiers. A prioritization layer on top of existing audit output is a gap. Recent post (2026-06-11) with practical workplace context.",
+  "status": "candidate"
+}

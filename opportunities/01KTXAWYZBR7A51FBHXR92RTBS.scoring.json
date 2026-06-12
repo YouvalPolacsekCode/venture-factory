@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KTXAWYZBR7A51FBHXR92RTBS",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "An AI firewall/middleware layer requires per-customer integration work: understanding which AI agents they run, what actions to intercept, and how to configure rules for their specific stack. This cannot be self-serve without significant product engineering."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "SaaS founders and ops teams evaluating a compliance/guardrail layer for their AI stack will require technical discovery calls or demos before purchasing; this is a trust-dependent B2B security-adjacent sale."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and growing \u2014 businesses deploying AI agents do face irreversible-action risk and the 'AI firewall' framing resonates in current discourse. However, the buyer is insufficiently defined: 'SMB operators, SaaS founders, and operations teams' spans too wide a range to target efficiently, and the actual purchase decision (buying middleware that sits in front of your AI agent pipeline) requires technical integration, a trust-based sales process, and ongoing customization per deployment. Operational autonomy scores a 5 because the firewall itself could be Claude-powered, but the integration layer and rule configuration are inherently per-customer work. The deciding factor is that this is an infrastructure/SDK product sold to developers, which requires a sales and onboarding motion well beyond what a solo non-technical operator can run hands-off.",
+  "solution_plan": "Not recommended for build in this form. The 'AI firewall' is a technically sophisticated middleware product \u2014 a proxy or SDK that intercepts AI agent actions, applies configurable rules, and blocks/rate-limits before execution. Building a credible version requires deep integration with specific agent frameworks (LangChain, OpenAI Assistants, etc.) and meaningful per-customer rule definition. While Claude could power the rule-evaluation logic, the sales cycle involves technical buyers who need demos and integration support, and every deployment is a custom integration project. A solo non-technical operator cannot realistically build the integration layer, close the technical sales, or support production deployments hands-off. If narrowed to a single very specific use case (e.g. 'approval gate for Claude email-send actions via one specific platform'), it might become buildable \u2014 but that is a different, much smaller opportunity that would need its own discovery.",
+  "notes": "Failing build_gates: operational_autonomy (scored 5, minimum 7), buildability_with_ai (scored 5, minimum 6), buyer_clarity (scored 5, minimum 6). All three core autonomy/commercial gates unmet. The idea has conceptual merit but is structurally mismatched for a solo automated factory \u2014 it is a developer-tooling infrastructure play requiring engineering depth and a technical sales motion.",
+  "scored_at": "2026-06-12T10:16:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01KTXAWYXW1W1VHNH8H9RNQ2JC",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Financial loss from runaway AI agent API spend is acute and well-documented across HN, Reddit, and dev forums, with multiple operators reporting real monetary damage. Existing cloud-native cost tools (AWS Budgets, GCP billing alerts) do not integrate with LLM API spend at the agent-task level, leaving a clear gap. At least one competitor (Helicone) charges for usage analytics, confirming willingness to pay for spend visibility in this space.",
+  "sources": [
+    "https://lobste.rs/s/ishgbs",
+    "https://news.ycombinator.com/item?id=39894859",
+    "https://www.reddit.com/r/LocalLLaMA/comments/1b8qw2x/",
+    "https://helicone.ai/pricing",
+    "https://www.langfuse.com/pricing"
+  ],
+  "evaluated_at": "2026-06-13T09:49:42+03:00"
+}

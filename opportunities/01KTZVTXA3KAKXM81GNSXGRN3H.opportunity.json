@@ -1,0 +1,25 @@
+{
+  "id": "01KTZVTXA3KAKXM81GNSXGRN3H",
+  "discovered_at": "2026-06-13T09:48:45+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48511828",
+    "snippet": "Former front-end web developer/vibe coder here. I've started using AI tools to streamline my workflow. I'm now able to create marketing websites in under 2 hours and charge $1k-$2k per site. My hourly earnings have increased to around $1k USD. (7 points, 14 comments, June 2026)"
+  },
+  "problem_statement": "Freelance web developers using AI tools can now produce marketing websites in under 2 hours but lack a standardized workflow, productized service packaging, or client-facing delivery system to repeatably operate at this throughput and price point without custom quoting and scoping every engagement.",
+  "target_segment": "Freelance web developers and small dev shops adopting AI-assisted development to productize high-volume website delivery",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vibe-coding",
+    "ai-freelance",
+    "marketing-websites",
+    "productized-services",
+    "web-development",
+    "freelancer-workflow",
+    "ai-tools",
+    "client-delivery"
+  ],
+  "notes": "Buyer signal is indirect: the poster is the seller, not the buyer, earning $1k-$2k per site. However, 14 comments and 7 points suggest the community is engaging with the model. The underlying pain for a product opportunity is on the freelancer side \u2014 they need tooling to systematize quoting, scoping, client onboarding, and delivery for high-volume AI-generated sites. Signal strength is modest (single post, success story framing rather than explicit pain), but buyer willingness-to-pay is evidenced by clients paying $1k-$2k per site.",
+  "status": "candidate"
+}

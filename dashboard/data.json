@@ -1,14 +1,15 @@
 {
   "generated_at": {
-    "utc": "2026-06-12T07:16:33+00:00",
-    "idt": "2026-06-12T10:16:33+03:00"
+    "utc": "2026-06-13T06:50:30+00:00",
+    "idt": "2026-06-13T09:50:30+03:00"
   },
   "funnel": {
-    "candidates": 50,
-    "scored": 50,
-    "validated": 4,
+    "candidates": 52,
+    "scored": 52,
+    "validated": 5,
     "build_decisions": {
-      "defer_1_week": 4
+      "defer_1_week": 4,
+      "kill": 1
     },
     "build_now": 0,
     "services_scaffolded": 0,
@@ -221,7 +222,7 @@
         "Buildable": 5,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://lobste.rs/s/ishgbs",
       "discovered_at": "2026-06-12T10:14:17+03:00"
@@ -285,6 +286,37 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439491/execution-error-array-type-must-specify-items-schema",
       "discovered_at": "2026-06-10T10:00:09+03:00"
+    },
+    {
+      "topics": [
+        "llm-coding",
+        "spec-driven-development",
+        "ai-agents"
+      ],
+      "id": "01KTZVTX9TFVVYRVXPJT5PAQM1",
+      "problem_statement": "Professional developers using LLM coding agents struggle to maintain comprehension of AI-generated code when working in Spec Driven Development workflows. They are cycling through multiple paid tools (SpecKit, GSD, OpenSpec) seeking a solution that balances AI productivity with code understanding.",
+      "target_segment": "Professional software developers and engineering teams using LLM-assisted coding agents in production workflows",
+      "total": 5.3,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific professional developer role that demonstrably pays for dev tooling — the poster has already cycled through multiple paid SDD tools — giving decent commercial signal, though the HN post itself is low-engagement (3 pts, 3 comments) and no pricing benchmarks are established for this exact solution. The product (a layer that surfaces rationale/intent alongside AI-generated code) is buildable with Claude, but ongoing delivery would require some per-user configuration or integ…",
+      "solution_plan": "The micro-service is a 'code comprehension layer' — given a spec and the AI-generated code, Claude produces an annotated explanation (intent, architecture decisions, potential gotchas) delivered as a structured report or inline comments. BUILD: the factory creates a Claude prompt that takes spec + code as input, a simple intake form (Tally or similar), and a Stripe payment link for a $29–$49/report or $99/mo subscription; no operator coding needed. SELL: target professional developers active in LLM-coding communities (HN, r/LocalLLaMA, X/Twitter #vibecoding, relevant Discord servers); the factory drafts outreach posts and DMs for operator ap…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 6,
+        "Will pay": 5,
+        "Buildable": 6,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48510002",
+      "discovered_at": "2026-06-13T09:48:45+03:00"
     },
     {
       "topics": [
@@ -381,6 +413,39 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=30106362",
       "discovered_at": "2026-06-08T10:24:40+03:00"
+    },
+    {
+      "topics": [
+        "vibe-coding",
+        "ai-freelance",
+        "marketing-websites"
+      ],
+      "id": "01KTZVTXA3KAKXM81GNSXGRN3H",
+      "problem_statement": "Freelance web developers using AI tools can now produce marketing websites in under 2 hours but lack a standardized workflow, productized service packaging, or client-facing delivery system to repeatably operate at this throughput and price point without custom quoting and scoping every engagement.",
+      "target_segment": "Freelance web developers and small dev shops adopting AI-assisted development to productize high-volume website delivery",
+      "total": 5.0,
+      "recommended_stage": "validate",
+      "rationale": "The identified buyer — freelance developers who want to systematize AI-assisted website delivery — is a real segment, but they are individual service providers with thin margins who historically resist paying for workflow tooling when free alternatives exist; willingness_to_pay evidence is indirect (clients pay the freelancer, not the freelancer paying us). Operational autonomy scores 6 because a workflow/quoting tool can be mostly self-serve, but without strong WTP signal or a clearly named bu…",
+      "solution_plan": "The micro-service is a 'productized website delivery kit' — a guided intake form + Claude-generated project brief + client proposal template + Stripe payment link that a freelancer can white-label and send to clients in minutes. BUILD: the factory assembles a Tally intake form that feeds Claude, which outputs a scoped project brief and a PDF proposal; operator approves the template design once; no coding required. SELL: reach freelance developers via communities like Indie Hackers, r/freelance, and X/Twitter threads discussing AI web dev workflows; factory drafts posts and DMs for operator approval. MAINTAIN: form → Claude → email delivery i…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 6,
+        "Will pay": 4,
+        "Buildable": 7,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48511828",
+      "discovered_at": "2026-06-13T09:48:45+03:00"
     },
     {
       "topics": [
@@ -716,14 +781,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2174,
-    "last_7_days_usd": 1.7512,
-    "all_time_usd": 2.3994,
+    "today_usd": 0.3132,
+    "last_7_days_usd": 1.9195,
+    "all_time_usd": 2.7125,
     "by_day": [
-      {
-        "date": "2026-06-06",
-        "usd": 0.1449
-      },
       {
         "date": "2026-06-07",
         "usd": 0.1521
@@ -747,55 +808,36 @@
       {
         "date": "2026-06-12",
         "usd": 0.2174
+      },
+      {
+        "date": "2026-06-13",
+        "usd": 0.3132
       }
     ],
     "by_agent": [
       {
+        "agent": "build_decisions",
+        "usd": 0.6007
+      },
+      {
         "agent": "market_radar",
-        "usd": 0.5096
+        "usd": 0.5124
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4712
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4567
+        "usd": 0.4322
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2804
+        "usd": 0.341
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0331
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-06",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-07",
       "agents": {
@@ -1005,12 +1047,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-13",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-12.md",
-    "date": "2026-06-12",
-    "text": "# Daily Summary — 2026-06-12 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 50 |\n| Opportunities validated past threshold | 6 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error during today's sweep; auto-retried successfully |\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` resumes daily pain signal sweeps across B2B SaaS subreddits and community forums.\n2. `pain_validation` validates high-scoring opportunities from today's 50 candidates against threshold.\n3. `opportunity_scoring` re-ranks candidates based on refined pain signal inputs.\n4. `cost_gain` analyzes weekly cost per validated opportunity and prepares Sunday funnel report.\n5. `responsiveness_test` runs baseline latency checks on factory infrastructure.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-13.md",
+    "date": "2026-06-13",
+    "text": "# Daily Summary — 2026-06-13 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 52 |\n| Opportunities validated past threshold | 7 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments detected in factory state. All experiments are either archived or in discovery phase with no live or validation-stage runs today.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit and forum sweeps for emerging pain signals.\n2. `pain_validation` validates top 10 scoring opportunities from today's candidate pool.\n3. `opportunity_scoring` re-scores the 52-candidate queue and updates verdict files.\n4. `lead_research` collects contact info for validated opportunities (if any breach threshold).\n5. `cost_gain` refreshes weekly cost and gain metrics for experiment evaluation.\n\n## Operator action items\n\nNone — process is running cleanly. No decisions waiting. Review the 52 new candidates in tomorrow's scoring cycle and prepare to greenlight high-signal opportunities for validation.",
     "truncated": false
   },
   "analytics": null

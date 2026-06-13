@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTZVTX9TFVVYRVXPJT5PAQM1",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific professional developer role that demonstrably pays for dev tooling \u2014 the poster has already cycled through multiple paid SDD tools \u2014 giving decent commercial signal, though the HN post itself is low-engagement (3 pts, 3 comments) and no pricing benchmarks are established for this exact solution. The product (a layer that surfaces rationale/intent alongside AI-generated code) is buildable with Claude, but ongoing delivery would require some per-user configuration or integration work, capping operational autonomy at 6. The total of 5.3 clears the validate threshold but not the build threshold (6.5), so the right next step is a lightweight probe \u2014 a landing page or waitlist \u2014 to test whether developers will pay for a standalone tool vs. expecting this as a feature of their existing IDE/agent.",
+  "solution_plan": "The micro-service is a 'code comprehension layer' \u2014 given a spec and the AI-generated code, Claude produces an annotated explanation (intent, architecture decisions, potential gotchas) delivered as a structured report or inline comments. BUILD: the factory creates a Claude prompt that takes spec + code as input, a simple intake form (Tally or similar), and a Stripe payment link for a $29\u2013$49/report or $99/mo subscription; no operator coding needed. SELL: target professional developers active in LLM-coding communities (HN, r/LocalLLaMA, X/Twitter #vibecoding, relevant Discord servers); the factory drafts outreach posts and DMs for operator approval before sending. MAINTAIN: Stripe handles billing, the form triggers Claude which emails the report back automatically; operator reviews only outgoing batch messages and Stripe payouts. The only realistic concern is that developers may expect this capability to be baked into their existing tools (Cursor, GitHub Copilot, etc.) rather than paying for a standalone service \u2014 validate before building.",
+  "notes": "build_gates not triggered (total below min_total_to_build of 6.5 \u2014 stage is validate regardless). Responsiveness_signal is 1 reflecting zero test data; if a probe yields >8% reply, re-score immediately.",
+  "scored_at": "2026-06-13T09:50:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

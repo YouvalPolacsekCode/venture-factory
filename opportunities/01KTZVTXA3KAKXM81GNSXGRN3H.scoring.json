@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KTZVTXA3KAKXM81GNSXGRN3H",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [],
+  "total": 5.0,
+  "recommended_stage": "validate",
+  "rationale": "The identified buyer \u2014 freelance developers who want to systematize AI-assisted website delivery \u2014 is a real segment, but they are individual service providers with thin margins who historically resist paying for workflow tooling when free alternatives exist; willingness_to_pay evidence is indirect (clients pay the freelancer, not the freelancer paying us). Operational autonomy scores 6 because a workflow/quoting tool can be mostly self-serve, but without strong WTP signal or a clearly named buyer with a budget line, this sits just at the validate threshold. The total of 5.0 does not reach the build threshold of 6.5, and buyer_clarity (5) and willingness_to_pay (4) both fall below build_gate floors, confirming validate is the correct stage.",
+  "solution_plan": "The micro-service is a 'productized website delivery kit' \u2014 a guided intake form + Claude-generated project brief + client proposal template + Stripe payment link that a freelancer can white-label and send to clients in minutes. BUILD: the factory assembles a Tally intake form that feeds Claude, which outputs a scoped project brief and a PDF proposal; operator approves the template design once; no coding required. SELL: reach freelance developers via communities like Indie Hackers, r/freelance, and X/Twitter threads discussing AI web dev workflows; factory drafts posts and DMs for operator approval. MAINTAIN: form \u2192 Claude \u2192 email delivery is fully automated; billing runs via Stripe; operator only approves outreach batches. The honest risk is that freelancers earning $1k/hr have little motivation to pay $50\u2013$100/mo for a workflow tool they could approximate with a Google Doc template \u2014 the probe must test price sensitivity before building anything.",
+  "notes": "build_gates not triggered (total 5.0 below min_total_to_build of 6.5). Additionally, buyer_clarity (5) is below the build_gate floor of 6 and willingness_to_pay (4) is below the floor of 5 \u2014 both would cap stage at validate even if total were higher.",
+  "scored_at": "2026-06-13T09:50:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

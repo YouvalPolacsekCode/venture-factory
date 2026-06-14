@@ -1,0 +1,26 @@
+{
+  "id": "01KV2FVV6BGN23W40V4S0D2Q2E",
+  "discovered_at": "2026-06-14T10:17:16+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439512/flow-deactivation-behaviour",
+    "snippet": "In Flow Builder when we Deactivate the flow, sometimes we are asked whether we want to: Deactivate and complete work, or Deactivate and cancel work. And for some flows this question is not asked. But I still haven't figured out exactly when this happens. My code is trying to imitate that behavior. To deactivate the flow I currently use the tooling API to set the activeVersionNumber of a flow definition to 0. And this deactivates the flow but does not replicate the UI behavior faithfully."
+  },
+  "problem_statement": "Salesforce developers automating flow lifecycle management via the Tooling API cannot reliably replicate the platform's own deactivation behavior (complete vs. cancel in-flight work), leading to silent data integrity risks and unpredictable outcomes in automated deployment pipelines.",
+  "target_segment": "Salesforce developers and admins building automated deployment or DevOps pipelines for Salesforce orgs, typically at ISVs or consulting firms.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "flow-builder",
+    "tooling-api",
+    "devops",
+    "deployment-automation",
+    "apex",
+    "flow-lifecycle",
+    "salesforce-admin",
+    "ci-cd"
+  ],
+  "notes": "Buyer context: Salesforce consultants and ISV developers bill hourly and lose money on undocumented platform quirks. A verified reference implementation, tested library, or documentation service for Salesforce Tooling API edge cases has a clear paying audience. Single post; signal strength kept at 2.",
+  "status": "candidate"
+}

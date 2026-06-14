@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KV2FVV6G2Z3Y0493B9HDJ2PC",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling process optimization advisory to engineering managers typically requires a discovery call or demo to understand the team's JIRA workflow, codebase topology, and deployment cadence before any recommendation can be made \u2014 this is a consultative sale."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Recommendations on batching vs. incremental delivery involve ongoing judgment calls as codebase and team dynamics change; customers will need follow-up support that requires human context."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is an engineering manager at a JIRA-using software company \u2014 identifiable but purchasing decisions for workflow tooling at this level involve budget approval cycles and often a consultative evaluation, not a self-serve signup. Willingness to pay is weak: the underlying problem (merge conflicts and UAT coordination overhead) is usually absorbed as team friction rather than paid to solve with a third-party tool. Operational_autonomy scores 4 because meaningful recommendations require understanding each team's specific codebase topology, sprint cadence, and deployment pipeline \u2014 this is inherently per-customer advisory work. Post-penalty total of 3.0 falls well below the validate threshold.",
+  "solution_plan": "Not recommended for build. The concept would be a JIRA ticket clustering analyzer \u2014 a tool that ingests a team's backlog, identifies tickets touching overlapping code areas, and recommends batching strategies. The factory could build a Claude-powered intake form + analysis prompt, but the output requires a discovery phase per customer (understanding their codebase layout, CI/CD setup, team norms) before any useful recommendation can be generated. A solo non-technical operator cannot build a self-serve version that reliably delivers value without that per-customer human touch. The market is also crowded with free Agile coaching resources, making paid willingness low.",
+  "notes": "Fails operational_autonomy build gate (score 4, minimum 7). Fails buildability_with_ai (score 5, minimum 6). Fails willingness_to_pay (score 4, minimum 5). Total post-penalty 3.0 is below validate threshold of 5.5. Drop.",
+  "scored_at": "2026-06-14T10:18:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

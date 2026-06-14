@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KV2FVV64VT74W5YYRT789EBP",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Diagnosing and resolving OIDC federation + MDM policy conflicts requires deep environment-specific investigation; each customer's stack (Entra tenant config, Workspace domain allow-lists, Android Enterprise policy) is unique and cannot be fully automated \u2014 per-customer manual diagnostic work is unavoidable."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise IT environment misconfigurations generate ongoing support queries that require human judgment to triage (policy version changes, silent auth failures, org-specific edge cases)."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 IT admins at mid-market companies running hybrid Intune + Workspace stacks \u2014 and the pain is genuine and recurring. However, the solution fundamentally requires per-customer manual diagnostic work: every org's Entra tenant, Workspace domain allow-lists, and Android Enterprise policies are different, making fully automated delivery impossible. The operational_autonomy score of 3 fails the build gate (minimum 7), and the weighted total of 4.7 (post-penalty: 2.7) falls well below the validate threshold of 5.5. Drop until a templated, fully self-serve diagnostic tool can be scoped.",
+  "solution_plan": "Not recommended for build or validation in current form. To make this viable, the factory would need to produce a fully self-serve diagnostic questionnaire that maps an IT admin's environment to a known-good configuration \u2014 but the problem space is too bespoke and environment-dependent for Claude + a static form to reliably resolve without human follow-up per customer. A solo non-technical operator cannot realistically build and maintain a support-free version of this service today.",
+  "notes": "Fails operational_autonomy build gate (score 3, minimum 7). Also fails buildability_with_ai (score 4, minimum 6). Total post-penalty 2.7 is below validate threshold. Drop.",
+  "scored_at": "2026-06-14T10:18:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

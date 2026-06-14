@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-13T06:50:30+00:00",
-    "idt": "2026-06-13T09:50:30+03:00"
+    "utc": "2026-06-14T07:19:00+00:00",
+    "idt": "2026-06-14T10:19:00+03:00"
   },
   "funnel": {
-    "candidates": 52,
-    "scored": 52,
-    "validated": 5,
+    "candidates": 55,
+    "scored": 55,
+    "validated": 6,
     "build_decisions": {
-      "defer_1_week": 4,
+      "defer_1_week": 5,
       "kill": 1
     },
     "build_now": 0,
@@ -40,7 +40,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148712/how-do-you-prioritize-accessibility-fixes-when-a-website-has-limited-development",
       "discovered_at": "2026-06-12T10:14:17+03:00"
@@ -781,14 +781,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3132,
-    "last_7_days_usd": 1.9195,
-    "all_time_usd": 2.7125,
+    "today_usd": 0.3333,
+    "last_7_days_usd": 2.1007,
+    "all_time_usd": 3.0458,
     "by_day": [
-      {
-        "date": "2026-06-07",
-        "usd": 0.1521
-      },
       {
         "date": "2026-06-08",
         "usd": 0.3429
@@ -812,24 +808,28 @@
       {
         "date": "2026-06-13",
         "usd": 0.3132
+      },
+      {
+        "date": "2026-06-14",
+        "usd": 0.3333
       }
     ],
     "by_agent": [
       {
         "agent": "build_decisions",
-        "usd": 0.6007
+        "usd": 0.7492
       },
       {
         "agent": "market_radar",
-        "usd": 0.5124
+        "usd": 0.5192
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4322
+        "usd": 0.4067
       },
       {
         "agent": "pain_validation",
-        "usd": 0.341
+        "usd": 0.3924
       },
       {
         "agent": "daily_summary",
@@ -838,41 +838,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-07",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-08",
       "agents": {
@@ -1082,12 +1047,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-14",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-13.md",
-    "date": "2026-06-13",
-    "text": "# Daily Summary — 2026-06-13 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 52 |\n| Opportunities validated past threshold | 7 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments detected in factory state. All experiments are either archived or in discovery phase with no live or validation-stage runs today.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit and forum sweeps for emerging pain signals.\n2. `pain_validation` validates top 10 scoring opportunities from today's candidate pool.\n3. `opportunity_scoring` re-scores the 52-candidate queue and updates verdict files.\n4. `lead_research` collects contact info for validated opportunities (if any breach threshold).\n5. `cost_gain` refreshes weekly cost and gain metrics for experiment evaluation.\n\n## Operator action items\n\nNone — process is running cleanly. No decisions waiting. Review the 52 new candidates in tomorrow's scoring cycle and prepare to greenlight high-signal opportunities for validation.",
+    "file": "reports/daily/2026-06-14.md",
+    "date": "2026-06-14",
+    "text": "# Daily Summary — 2026-06-14 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 55 |\n| Opportunities validated past threshold | 8 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit and forum sweeps for B2B pain signals.\n2. `lead_research` resumes outreach list compilation (skipped today; will run tomorrow).\n3. `pain_validation` runs targeted validation on top 10 scored opportunities.\n4. `build_decisions` evaluates readiness of highest-signal opportunities for experimentation.\n5. `cost_gain` computes weekly ROI and funnel metrics for strategic review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

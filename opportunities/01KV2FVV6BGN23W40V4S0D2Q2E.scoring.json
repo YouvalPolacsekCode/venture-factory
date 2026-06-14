@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KV2FVV6BGN23W40V4S0D2Q2E",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A 'verified reference implementation or tested library' for Salesforce Tooling API edge cases requires deep platform expertise to author, test against live orgs, and update when Salesforce changes API behavior \u2014 not automatable by Claude alone without significant ongoing expert curation per new platform release."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is specific and credible \u2014 Salesforce developers and consultants at ISVs who bill hourly and lose money on undocumented platform quirks \u2014 and willingness to pay is plausible given the consulting context. However, the product that would actually solve this (a curated, tested, kept-current reference library for Salesforce Tooling API behavior) requires expert platform knowledge to maintain on an ongoing basis, making operational_autonomy low (5) and failing the build gate (minimum 7). Post-penalty total of 3.5 is below the validate threshold. The core issue is that staying current with Salesforce API changes demands recurring human expert effort, not just Claude prompting.",
+  "solution_plan": "Not recommended for build. The service would be a Salesforce Tooling API edge-case reference guide \u2014 essentially a curated, tested knowledge base covering undocumented behaviors like flow deactivation semantics. The factory could draft initial documentation from public sources, but keeping it accurate as Salesforce ships releases requires a Salesforce-certified expert reviewing and testing each update. A solo non-technical operator without Salesforce domain expertise cannot maintain this credibly, and the value proposition collapses if the documentation goes stale.",
+  "notes": "Fails operational_autonomy build gate (score 5, minimum 7). Total post-penalty 3.5 is below validate threshold of 5.5. Drop.",
+  "scored_at": "2026-06-14T10:18:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

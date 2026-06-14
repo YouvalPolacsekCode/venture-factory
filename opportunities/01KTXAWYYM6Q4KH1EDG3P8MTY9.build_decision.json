@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01KTXAWYYM6Q4KH1EDG3P8MTY9",
+  "decided_at": "2026-06-14T10:18:55+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.6,
+      "threshold": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "qualifies": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the total (6.6) clears the 6.5 build threshold, so this opportunity is technically eligible for build_now. However, the cost_to_gain_ratio of 3.058 is far above the kill threshold of 0.6 defined in cost_gain_model.yaml, and even the optimistic scenario (1.529) exceeds it significantly \u2014 meaning projected costs dwarf projected gains over the first 4 weeks. With zero responsiveness signal (score=2, no outreach test run), committing a full build week to this opportunity is premature. Deferring one week to run a lightweight responsiveness probe (targeted LinkedIn/email outreach to 30-50 accessibility coordinators) will either validate buyer intent or surface a kill signal, at near-zero cost.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "LinkedIn direct messages to accessibility coordinators at 50-500 employee companies"
+}

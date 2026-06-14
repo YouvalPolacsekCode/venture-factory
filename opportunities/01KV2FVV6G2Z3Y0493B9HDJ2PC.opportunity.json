@@ -1,0 +1,27 @@
+{
+  "id": "01KV2FVV6G2Z3Y0493B9HDJ2PC",
+  "discovered_at": "2026-06-14T10:17:16+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/35959/alternatives-to-incremental-development-delivery-agile-practice-if-coding-for-mu",
+    "snippet": "At our workplace, we use Agile Scrum method. We have a tonne of Improvement JIRA tickets for one of our applications. A lot of the code changes for the aforementioned improvement JIRA tickets are in the same 'vicinity' code areas. Agile development does emphasize incremental development/delivery approach that involves making small coding changes, and deploying said changes to UAT. However, this is painful and laborious when multiple tickets touch the same code areas \u2014 merging conflicts, repeated UAT deployments, and coordination overhead multiply quickly."
+  },
+  "problem_statement": "Software teams following Agile Scrum with JIRA face significant coordination overhead and merge conflicts when multiple improvement tickets require changes to the same code areas, making incremental delivery more costly than batching \u2014 but batching breaks Agile discipline.",
+  "target_segment": "Engineering managers and Scrum leads at software companies with established JIRA-based workflows, particularly those managing large legacy codebases.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "agile",
+    "scrum",
+    "jira",
+    "merge-conflicts",
+    "code-coordination",
+    "devops",
+    "software-delivery",
+    "technical-debt",
+    "engineering-management",
+    "ci-cd"
+  ],
+  "notes": "Implicit buyer: engineering managers at companies paying for JIRA and developer time. The pain (repeated UAT deployments, merge conflicts across related tickets) translates directly to wasted engineering hours. A tooling or advisory product helping teams identify ticket clustering and coordinate batch vs. incremental decisions could sell to eng managers. Single post; weak signal but workplace context confirms organizational buyer.",
+  "status": "candidate"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01KV2FVV64VT74W5YYRT789EBP",
+  "discovered_at": "2026-06-14T10:17:16+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199215/can-a-managed-google-workspace-account-work-natively-in-an-intune-managed-androi",
+    "snippet": "Microsoft Intune manages Android Enterprise personally-owned work profiles. Identity/productivity is Google Workspace on a managed Google domain, federated to Microsoft Entra (OIDC SSO). Goal: users use native Google Drive/Gmail in the work profile, signed in with their Workspace account. Symptom: the Workspace account can be added to the work profile but sign-in completes via the Entra redirect and then native Google apps still prompt for re-authentication or fail silently in the work profile. Environment involves domain allow-lists, OIDC federation, and Android Enterprise policy conflicts between two competing MDM philosophies."
+  },
+  "problem_statement": "IT admins running hybrid Microsoft Intune + Google Workspace environments on Android Enterprise cannot reliably get native Google apps (Drive, Gmail) to authenticate properly inside Intune-managed work profiles when identity is federated via Entra OIDC \u2014 resulting in silent failures and broken MDM enforcement.",
+  "target_segment": "IT administrators and enterprise mobility engineers at mid-market companies using both Microsoft Intune and Google Workspace.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "intune",
+    "google-workspace",
+    "android-enterprise",
+    "mdm",
+    "identity-federation",
+    "entra",
+    "oidc",
+    "work-profile",
+    "enterprise-mobility",
+    "sysadmin"
+  ],
+  "notes": "Single post but represents a real enterprise IT environment (company with both Microsoft and Google stacks \u2014 a very common hybrid setup). Buyer context is clear: this is a sysadmin at a company spending time on a configuration failure. A diagnostic guide, tested configuration template, or managed integration service could command consulting fees or a SaaS subscription. Signal is weak (1 post) but the underlying problem is well-known in the MDM space.",
+  "status": "candidate"
+}

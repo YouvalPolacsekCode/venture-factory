@@ -1,0 +1,17 @@
+{
+  "opportunity_id": "01KTXAWYYM6Q4KH1EDG3P8MTY9",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Web accessibility coordinators and agency dev teams face legally mandated WCAG compliance deadlines (ADA, EU EAA 2025) with finite engineering bandwidth, creating a high-stakes triage problem they currently solve manually or not at all. Competitor tools (axe Pro, Deque) address detection but leave prioritization to the user, and multiple public forum threads, job postings, and community discussions confirm this gap is actively felt and discussed. At least one credible willingness-to-pay signal exists: organizations already pay $400\u2013$1,000+/year for audit tooling, and the same buyer segment pays for compliance consulting at much higher rates, indicating price tolerance for a cheaper automated triage layer.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148712/how-do-you-prioritize-accessibility-fixes-when-a-website-has-limited-development",
+    "https://webaim.org/discussion/",
+    "https://www.deque.com/axe/pricing/",
+    "https://www.levelaccess.com/",
+    "https://www.w3.org/WAI/planning/interim-repairs/",
+    "https://www.section508.gov/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L0882"
+  ],
+  "evaluated_at": "2026-06-14T10:18:03+03:00"
+}

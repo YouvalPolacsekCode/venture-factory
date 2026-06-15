@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KV57GZYXC5XR5VP34HWJSG5X",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 6
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A structured program, done-with-you service, or template library for non-technical builders requires ongoing human curation, coaching, and updates \u2014 it cannot be fully automated."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Onboarding non-technical professionals through AI-assisted development workflows typically requires live demos, office hours, or synchronous Q&A to be effective."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Non-technical learners generate high support load as they hit blockers; human-judgement support is the norm in this segment."
+    }
+  ],
+  "total": 1.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is vague \u2014 'non-technical startup employees' spans too wide a range, and there is no named business role with a budget line for 'AI coding guidance.' The single HN post shows a success story but not a validated buyer willing to pay for a course or program; the $4K was earned by the poster doing client work, not by selling a structured service to others. Critically, any viable product in this space (course, coaching, template library) requires ongoing human curation and synchronous support, pushing operational autonomy to 3 \u2014 well below the build gate floor of 7.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator running an autonomous Claude factory. A 'done-with-you AI coding program' for startup PMMs would require Youval to personally run onboarding calls, maintain a curriculum, and field support questions \u2014 none of which Claude can handle end-to-end. The market signal (one HN post) is also too thin. Drop this and revisit only if a narrower, fully-automatable product angle (e.g. a specific template sold once via Gumroad, no support) emerges.",
+  "notes": "Fails operational_autonomy build gate (scored 3, floor is 7). Fails buyer_clarity build gate (scored 5, floor is 6). Total 1.7 is well below validate threshold.",
+  "scored_at": "2026-06-15T11:49:53+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

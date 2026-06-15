@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KV57GZZ44W7F82E1CMR5T3GM",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a vertical PM SaaS (even a lightweight one) requires meaningful onboarding, data migration support, and ongoing product iteration \u2014 not a simple Claude prompt plus Stripe link. The 'build' itself is non-trivial integration work beyond this factory's current standard tooling."
+    }
+  ],
+  "total": 4.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is well-defined \u2014 a 2\u201320 person web agency paying for Monday.com but finding it inadequate \u2014 and willingness to pay is demonstrated by existing spend. However, building a credible vertical PM tool for agencies managing 150+ client sites is a full product engineering effort (custom data models, retainer logic, multi-client views) that cannot be shipped as a Claude prompt plus landing page in a week; buildability_with_ai scores 5 and operational_autonomy scores 5, both below their respective build gate floors of 6 and 7. The gap between the strong commercial signal and the build complexity makes this a drop for this factory's current capabilities.",
+  "solution_plan": "This opportunity has a genuinely strong commercial signal but is not the right fit for a solo non-technical operator using an autonomous Claude factory today. The product needed is a real SaaS with custom database schemas, retainer billing logic, and multi-client dashboards \u2014 requiring a developer or a no-code platform (Bubble, Glide) with significant configuration effort. Youval cannot build this without a technical co-founder or contractor. If the factory's tooling expands to include a managed no-code backend, revisit; for now, drop.",
+  "notes": "Fails operational_autonomy build gate (scored 5, floor is 7). Fails buildability_with_ai build gate (scored 5, floor is 6). Total 4.5 is below validate threshold of 5.5 after penalty.",
+  "scored_at": "2026-06-15T11:49:53+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

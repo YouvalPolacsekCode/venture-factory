@@ -1,0 +1,26 @@
+{
+  "id": "01KV57GZZAY2ATY4PA598EHDMS",
+  "discovered_at": "2026-06-15T11:49:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439519/salesforce-oauth-refresh-token-suddenly-returning-invalid-grant-expired-access",
+    "snippet": "We have a SaaS application that integrates with Salesforce using OAuth Authorization Code Flow with PKCE enabled. Each client authorizes our Connected App in their Salesforce org. We store the access token and refresh token and use the refresh token to obtain new access tokens when required. Recently, multiple client orgs started failing during token refresh with the following response: {\"error\": \"invalid_grant\", \"error_description\": \"expired access/refresh token\"}."
+  },
+  "problem_statement": "SaaS companies integrating with Salesforce via OAuth experience silent, bulk refresh token expiration across multiple customer orgs simultaneously, causing production outages with no proactive alerting or clear remediation path from Salesforce.",
+  "target_segment": "B2B SaaS developers and integration engineers at companies whose product is built on top of Salesforce OAuth, managing multi-org connected app deployments.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "oauth",
+    "saas-integration",
+    "token-management",
+    "connected-apps",
+    "b2b-saas",
+    "api-reliability",
+    "crm-integration",
+    "refresh-token"
+  ],
+  "notes": "Poster runs a production SaaS with multiple paying client orgs affected \u2014 clear business-critical context. Pain is around lack of monitoring/alerting for token health across org fleet. Possible product angle: OAuth token health monitoring and auto-remediation service for multi-org Salesforce ISVs. Single signal but high-severity business impact warrants inclusion.",
+  "status": "candidate"
+}

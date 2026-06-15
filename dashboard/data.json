@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-14T07:19:00+00:00",
-    "idt": "2026-06-14T10:19:00+03:00"
+    "utc": "2026-06-15T08:49:57+00:00",
+    "idt": "2026-06-15T11:49:57+03:00"
   },
   "funnel": {
-    "candidates": 55,
-    "scored": 55,
+    "candidates": 58,
+    "scored": 58,
     "validated": 6,
     "build_decisions": {
       "defer_1_week": 5,
@@ -515,6 +515,70 @@
     },
     {
       "topics": [
+        "agency-pm",
+        "retainer-management",
+        "client-management"
+      ],
+      "id": "01KV57GZZ44W7F82E1CMR5T3GM",
+      "problem_statement": "Small web agencies managing large client portfolios (50–200+ sites, many on retainers) cannot find project management software that handles per-client retainer tracking, site-specific task queues, and multi-client visibility — generic tools like Monday.com are too broad and create overhead rather than reducing it.",
+      "target_segment": "Small web agencies (2–20 person teams) managing retainer clients across mixed CMS environments (WordPress and custom), typically 50–200 client sites.",
+      "total": 4.5,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is well-defined — a 2–20 person web agency paying for Monday.com but finding it inadequate — and willingness to pay is demonstrated by existing spend. However, building a credible vertical PM tool for agencies managing 150+ client sites is a full product engineering effort (custom data models, retainer logic, multi-client views) that cannot be shipped as a Claude prompt plus landing page in a week; buildability_with_ai scores 5 and operational_autonomy scores 5, both below their respe…",
+      "solution_plan": "This opportunity has a genuinely strong commercial signal but is not the right fit for a solo non-technical operator using an autonomous Claude factory today. The product needed is a real SaaS with custom database schemas, retainer billing logic, and multi-client dashboards — requiring a developer or a no-code platform (Bubble, Glide) with significant configuration effort. Youval cannot build this without a technical co-founder or contractor. If the factory's tooling expands to include a managed no-code backend, revisit; for now, drop.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 5,
+        "Will pay": 7,
+        "Buildable": 5,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://pm.stackexchange.com/questions/35953/project-management-in-web-agencies",
+      "discovered_at": "2026-06-15T11:49:15+03:00"
+    },
+    {
+      "topics": [
+        "salesforce",
+        "oauth",
+        "saas-integration"
+      ],
+      "id": "01KV57GZZAY2ATY4PA598EHDMS",
+      "problem_statement": "SaaS companies integrating with Salesforce via OAuth experience silent, bulk refresh token expiration across multiple customer orgs simultaneously, causing production outages with no proactive alerting or clear remediation path from Salesforce.",
+      "target_segment": "B2B SaaS developers and integration engineers at companies whose product is built on top of Salesforce OAuth, managing multi-org connected app deployments.",
+      "total": 4.5,
+      "recommended_stage": "drop",
+      "rationale": "The pain is real and high-severity — production outages from silent bulk token expiration at paying B2B SaaS companies — and the buyer (integration engineer / CTO at a Salesforce ISV) is well-defined with budget authority. However, the solution requires a persistent, stateful monitoring service with Salesforce OAuth integration, multi-tenant token storage, and proactive alerting — none of which can be shipped as a simple Claude prompt plus landing page; buildability_with_ai scores 4, below the…",
+      "solution_plan": "This opportunity has strong pain and a clear B2B buyer, but the required product — a persistent multi-org OAuth token health monitor with Salesforce API integration — is genuine infrastructure software. It cannot be built by a non-technical operator using this Claude factory's standard tooling (prompts, forms, Stripe links). It would require API integrations, a persistent database of token states, and scheduled background jobs with Salesforce-specific OAuth logic. Youval cannot build or maintain this without a technical partner. Drop unless a simpler angle (e.g. a paid diagnostic guide or a one-time audit report delivered via Claude) is vali…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 5,
+        "Will pay": 6,
+        "Buildable": 4,
+        "Pain": 9
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439519/salesforce-oauth-refresh-token-suddenly-returning-invalid-grant-expired-access",
+      "discovered_at": "2026-06-15T11:49:15+03:00"
+    },
+    {
+      "topics": [
         "sqlite",
         "schema-migration",
         "developer-tooling"
@@ -742,53 +806,15 @@
       "source_type": "forum",
       "source_url": "https://webapps.stackexchange.com/questions/182412/how-to-ban-copilot-from-github-repo",
       "discovered_at": "2026-06-04T17:33:54+03:00"
-    },
-    {
-      "topics": [
-        "clipboard-sync",
-        "ssh",
-        "developer-tools"
-      ],
-      "id": "01KTXAWYXK6GNDR02P5QA59C8X",
-      "problem_statement": "Developers and sysadmins who work across multiple machines via SSH have no seamless way to sync clipboard contents between hosts; copying on one machine and pasting on another requires manual workarounds.",
-      "target_segment": "Software developers and sysadmins who regularly SSH into multiple remote machines and need cross-host clipboard sync.",
-      "total": 4.0,
-      "recommended_stage": "drop",
-      "rationale": "The clipboard-sync-over-SSH problem is a real workflow friction for sysadmins and developers who hop between machines, but it is fundamentally a native system daemon/network service problem — not something a Claude prompt plus a landing page can deliver. The buyer segment (individual developers) has moderate but not strong willingness to pay, and existing free tools like OSC 52, tmux clipboard plugins, and xpaste already cover large parts of this. Operational autonomy is very low because delive…",
-      "solution_plan": "This is not a viable build for this factory. The service would require a cross-platform background daemon (Linux/macOS/Windows), SSH protocol integration, and per-machine installation — all of which require custom software engineering that a non-technical solo operator cannot build or maintain via Claude prompts and a web page. A Stripe link and intake form cannot substitute for distributing and maintaining an installable system utility. Recommend dropping.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it",
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 3,
-        "Will pay": 4,
-        "Buildable": 3,
-        "Pain": 5
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=34144782",
-      "discovered_at": "2026-06-12T10:14:17+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3333,
-    "last_7_days_usd": 2.1007,
-    "all_time_usd": 3.0458,
+    "today_usd": 0.1226,
+    "last_7_days_usd": 1.8804,
+    "all_time_usd": 3.1684,
     "by_day": [
-      {
-        "date": "2026-06-08",
-        "usd": 0.3429
-      },
       {
         "date": "2026-06-09",
         "usd": 0.3548
@@ -812,24 +838,28 @@
       {
         "date": "2026-06-14",
         "usd": 0.3333
+      },
+      {
+        "date": "2026-06-15",
+        "usd": 0.1226
       }
     ],
     "by_agent": [
       {
         "agent": "build_decisions",
-        "usd": 0.7492
+        "usd": 0.6017
       },
       {
         "agent": "market_radar",
-        "usd": 0.5192
+        "usd": 0.5113
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4067
+        "usd": 0.4076
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3924
+        "usd": 0.3266
       },
       {
         "agent": "daily_summary",
@@ -838,41 +868,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-08",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-09",
       "agents": {
@@ -1082,12 +1077,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-15",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-14.md",
-    "date": "2026-06-14",
-    "text": "# Daily Summary — 2026-06-14 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 55 |\n| Opportunities validated past threshold | 8 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit and forum sweeps for B2B pain signals.\n2. `lead_research` resumes outreach list compilation (skipped today; will run tomorrow).\n3. `pain_validation` runs targeted validation on top 10 scored opportunities.\n4. `build_decisions` evaluates readiness of highest-signal opportunities for experimentation.\n5. `cost_gain` computes weekly ROI and funnel metrics for strategic review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-15.md",
+    "date": "2026-06-15",
+    "text": "# Daily Summary — 2026-06-15 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 58 |\n| Opportunities validated past threshold | 8 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments. All agents are in discovery/radar mode.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across tech communities.\n2. `opportunity_scoring` processes new candidates discovered today.\n3. `pain_validation` validates top-scored opportunities via targeted outreach.\n4. `lead_research` enriches validated opportunities with contact data.\n5. `build_decisions` evaluates which validated opportunities merit experiment builds.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

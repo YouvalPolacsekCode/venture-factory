@@ -1,0 +1,26 @@
+{
+  "id": "01KV57GZYXC5XR5VP34HWJSG5X",
+  "discovered_at": "2026-06-15T11:49:15+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48537722",
+    "snippet": "I am a non tech person. Currently working as Product Marketing in a Series B startup. What I have built: Custom wordpress theme live on thelatexlab.com, page speed score is 95+. Project Tracking micro SaaS using Next.js, Supabase, Vercel, Posthog, Google Auth - used by 45 Users. Made Two more custom wordpress theme for other businesses. Made $4K in last 2 months. I am just mind blown if a non tech person like me can do this..."
+  },
+  "problem_statement": "Non-technical professionals (marketers, PMs, operators) at startups want to ship real software products using AI coding tools but lack structured guidance, templates, and deployment workflows tailored to their skill level and business context.",
+  "target_segment": "Non-technical startup employees (product marketers, ops, PMs) at Series A\u2013C companies who want to build internal tools or micro-SaaS products using AI coding assistants.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-coding",
+    "no-code",
+    "vibe-coding",
+    "micro-saas",
+    "non-technical-founders",
+    "claude-code",
+    "product-marketing",
+    "internal-tools",
+    "workflow-automation"
+  ],
+  "notes": "Poster made $4K in 2 months building for clients as a non-tech PMM \u2014 clear willingness-to-pay signal on the buyer side (clients paid for WordPress themes and custom tools). Demand for a structured program, template library, or done-with-you service helping non-technical professionals productize AI-assisted development. Adjacent to bootcamp/course market but more ops/tool-delivery focused.",
+  "status": "candidate"
+}

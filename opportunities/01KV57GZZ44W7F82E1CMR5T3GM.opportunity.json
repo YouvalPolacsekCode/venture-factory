@@ -1,0 +1,26 @@
+{
+  "id": "01KV57GZZ44W7F82E1CMR5T3GM",
+  "discovered_at": "2026-06-15T11:49:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/35953/project-management-in-web-agencies",
+    "snippet": "Any small web agencies out there? How do you track everything when it comes to long term project management, especially on customers with retainers? We're a small agency that look after a number of clients and about 150 websites for them, a mix of Wordpress and non-wordpress sites and systems. I've tried things like Monday and such, but they are all too 'generic' I find, especially when it comes to retainer tracking and per-client task visibility."
+  },
+  "problem_statement": "Small web agencies managing large client portfolios (50\u2013200+ sites, many on retainers) cannot find project management software that handles per-client retainer tracking, site-specific task queues, and multi-client visibility \u2014 generic tools like Monday.com are too broad and create overhead rather than reducing it.",
+  "target_segment": "Small web agencies (2\u201320 person teams) managing retainer clients across mixed CMS environments (WordPress and custom), typically 50\u2013200 client sites.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "agency-pm",
+    "retainer-management",
+    "client-management",
+    "wordpress-agency",
+    "project-tracking",
+    "web-agency",
+    "saas-tooling",
+    "recurring-clients",
+    "multi-site-management"
+  ],
+  "notes": "Poster is actively paying for Monday.com and similar tools but finds them inadequate \u2014 clear existing spend with dissatisfaction. Web agencies managing 150 sites on retainer are a well-defined, recurring-revenue buyer segment. Opportunity for a vertical PM tool or lightweight SaaS specifically for web agency retainer workflows. Multiple threads across freelancing and PM forums corroborate this gap.",
+  "status": "candidate"
+}

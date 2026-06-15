@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KV57GZZAY2ATY4PA598EHDMS",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A Salesforce OAuth token health monitoring service requires building and maintaining a persistent agent that polls multi-org token states, handles re-auth flows, and integrates with Salesforce Connected Apps \u2014 this is infrastructure engineering well beyond a Claude prompt plus page plus Stripe."
+    }
+  ],
+  "total": 4.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and high-severity \u2014 production outages from silent bulk token expiration at paying B2B SaaS companies \u2014 and the buyer (integration engineer / CTO at a Salesforce ISV) is well-defined with budget authority. However, the solution requires a persistent, stateful monitoring service with Salesforce OAuth integration, multi-tenant token storage, and proactive alerting \u2014 none of which can be shipped as a simple Claude prompt plus landing page; buildability_with_ai scores 4, below the build gate floor of 6. Operational autonomy also scores 5, reflecting the ongoing infrastructure maintenance required.",
+  "solution_plan": "This opportunity has strong pain and a clear B2B buyer, but the required product \u2014 a persistent multi-org OAuth token health monitor with Salesforce API integration \u2014 is genuine infrastructure software. It cannot be built by a non-technical operator using this Claude factory's standard tooling (prompts, forms, Stripe links). It would require API integrations, a persistent database of token states, and scheduled background jobs with Salesforce-specific OAuth logic. Youval cannot build or maintain this without a technical partner. Drop unless a simpler angle (e.g. a paid diagnostic guide or a one-time audit report delivered via Claude) is validated first.",
+  "notes": "Fails buildability_with_ai build gate (scored 4, floor is 6). Fails operational_autonomy build gate (scored 5, floor is 7). Single forum signal (signal_strength: 2) \u2014 insufficient for validate stage even if build gates were met.",
+  "scored_at": "2026-06-15T11:49:53+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

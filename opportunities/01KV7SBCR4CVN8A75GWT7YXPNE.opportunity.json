@@ -1,0 +1,25 @@
+{
+  "id": "01KV7SBCR4CVN8A75GWT7YXPNE",
+  "discovered_at": "2026-06-16T11:39:14+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/35947/project-management-in-web-agencies",
+    "snippet": "Any small web agencies out there? Probably more a generic 'management' question but how do you track everything when it comes to long term project management, especially on customers with retainers? For context, we're a small agency that look after a number of clients and about 150 websites for them, a mix of Wordpress and non wordpress sites and systems. What do people use to keep track of everything? I've tried things like Monday and such, but they are all too 'generic' I find, especially when..."
+  },
+  "problem_statement": "Small web agencies managing large numbers of client websites (100+) on retainers find generic project management tools like Monday.com too broad \u2014 they lack website-specific tracking (CMS type, renewal dates, per-site task history, client retainer status) forcing agencies to cobble together spreadsheets and generic PM tools.",
+  "target_segment": "Small web agencies (2\u201320 person teams) managing 50\u2013200+ client websites on monthly retainers, primarily WordPress and mixed-CMS environments.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "web-agency",
+    "project-management",
+    "retainer-clients",
+    "wordpress",
+    "client-management",
+    "agency-tools",
+    "website-portfolio-management",
+    "pm-software"
+  ],
+  "notes": "Poster explicitly pays for tools like Monday.com already (paying buyer confirmed) and finds them inadequate for the specific agency/retainer use case. Single signal but the problem is well-articulated and the niche (agency managing 150 client sites) is a real recurring business context. Willingness to pay implied by current spend on generic tools.",
+  "status": "candidate"
+}

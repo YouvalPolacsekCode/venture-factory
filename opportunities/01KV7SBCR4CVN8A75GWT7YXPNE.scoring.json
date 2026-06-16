@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KV7SBCR4CVN8A75GWT7YXPNE",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, nameable B2B role \u2014 the ops lead or founder of a small web agency managing 50\u2013200+ client sites on retainer \u2014 and they demonstrably already pay for tools like Monday.com, confirming willingness to pay. However, this is a structured SaaS product (per-site records, CMS metadata, renewal tracking, task history) that cannot be shipped as a Claude prompt + form + Stripe link in a week; it requires real data modelling, a persistent multi-tenant database, and a usable UI, which puts buildability at 4 and operational autonomy at 4 \u2014 both well below the build gates. The single signal is also weak (one forum post), so volume and reachability need validation before any build commitment.",
+  "solution_plan": "The micro-service would be a lightweight agency client-site tracker: a simple dashboard where an agency can log each client website (CMS type, renewal date, retainer status, last-task notes) and see everything at a glance. To build it without coding, the factory would need to stand up a real persistent web app with a database \u2014 this goes beyond Claude prompts and a Stripe link; it would require a no-code/low-code platform (e.g. Airtable or Notion as the data layer, with a custom view) plus an intake form and a Stripe subscription link for billing. To sell, the factory would identify agency owners on LinkedIn or in agency-focused Slack communities (e.g. Cloudways Agency Partner groups, WP Builds Slack) and draft cold outreach \u2014 Youval approves each batch before it sends. Delivery would be self-serve: the agency signs up, gets a Notion/Airtable template pre-populated with their site count, and billing runs via Stripe automatically. The only recurring human touch is approving outreach batches and occasional template customisation requests \u2014 but a key honest caveat: if agencies want a true standalone SaaS with their own login, custom fields, and integrations, a solo non-technical operator cannot build that without a developer; the Notion/Airtable wrapper is a valid MVP but will hit a ceiling quickly.",
+  "notes": "Fails two build gates: buildability_with_ai (4, below floor of 6) and operational_autonomy (4, below floor of 7). A true multi-tenant SaaS with per-site data models cannot be shipped as pure Claude + prompts. A no-code MVP is feasible but limited. Validate demand and willingness to pay with a waitlist or concierge pilot before committing to build. Single weak signal \u2014 seek 5\u201310 corroborating conversations.",
+  "scored_at": "2026-06-16T11:39:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

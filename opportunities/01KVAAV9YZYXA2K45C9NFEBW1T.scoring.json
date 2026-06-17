@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KVAAV9YZYXA2K45C9NFEBW1T",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 3,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 3,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "SaaS account recovery / escalation concierge inherently requires a human to interact with Google/Microsoft support channels on the client's behalf \u2014 there is no API to automate escalation with Google Workspace support."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Intake triage and status updates require direct client communication; the locked-out user needs to share account details and coordinate credential verification synchronously."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Each case is unique \u2014 different account states, billing histories, lockout causes \u2014 requiring human judgement throughout the resolution process."
+    }
+  ],
+  "total": 1.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is acute and real \u2014 being billed while locked out with no resolution path is genuinely distressing for an SMB owner \u2014 but the proposed concierge service is fundamentally a human-labor product. Resolving Google Workspace admin lockouts requires a human to call Google support, navigate verification steps, and coordinate with the client; there is no automation path. The buyer pool is also fragmented and hard to reach (they're not congregating on a single reachable channel), and they experience this pain once, creating no recurring revenue. Operational autonomy is near zero.",
+  "solution_plan": "This opportunity is not viable for the factory's automation model. The service would require Youval personally to handle each support case \u2014 calling Google, gathering credentials, navigating account verification \u2014 with no repeatable automated delivery. Even if Claude drafts scripts and communication templates, a human must execute every step. This is a consulting/concierge business, not an automated micro-service. Drop and do not pursue.",
+  "notes": "Fails operational_autonomy (3, well below 7 floor) and buyer_clarity (5, below 6 floor). One-time incident nature means no recurring revenue even if a case is resolved. Not a scalable autonomous product.",
+  "scored_at": "2026-06-17T11:24:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

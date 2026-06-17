@@ -1,0 +1,25 @@
+{
+  "id": "01KVAAV9YEZPF1ATHXFA6HQ8KK",
+  "discovered_at": "2026-06-17T11:23:31+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439534/how-to-check-if-users-are-actively-using-lightning-sync",
+    "snippet": "With the shift from Lightning Sync to Einstein Activity Capture, my team is under processing to move. We are facing the difficulty of the limit of 100 Standard EAC licenses so we are thinking of analyzing to narrow down the users. Currently, Lightning Sync config is set to be based on Profile. As far as I check, we can check the sync using the check status but it would be one by one and is not ideal with our current huge database. Anyone have any ideas of how this can be done?"
+  },
+  "problem_statement": "Salesforce admins migrating from Lightning Sync to Einstein Activity Capture need to bulk-analyze which users are actively syncing in order to stay within the 100-license EAC limit, but the only built-in method is a one-by-one manual check \u2014 unworkable at scale.",
+  "target_segment": "Salesforce administrators and ops teams at mid-to-large enterprises managing Lightning Sync to EAC migrations",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "einstein-activity-capture",
+    "lightning-sync",
+    "admin-tooling",
+    "license-management",
+    "crm-migration",
+    "bulk-analysis",
+    "saas-ops"
+  ],
+  "notes": "Buyer signal: team is paying for Salesforce Enterprise + EAC licenses; the 100-license constraint creates real cost pressure to optimize allocation. A lightweight audit tool or Salesforce package that surfaces active-sync users in bulk (e.g. via SOQL on sync logs or scheduled reports) could be sold as a one-time utility or AppExchange add-on. Willingness to pay implied by enterprise SF spend and active migration project.",
+  "status": "candidate"
+}

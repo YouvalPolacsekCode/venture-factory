@@ -1,0 +1,25 @@
+{
+  "id": "01KVAAV9YZYXA2K45C9NFEBW1T",
+  "discovered_at": "2026-06-17T11:23:31+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148709/charged-for-cancelled-google-workspace-account-cannot-access-admin-panel-to-mak",
+    "snippet": "I have been receiving notices from Google about unpaid invoices for Google Workspace. The email says to login to the Google Admin Console to make the payment. However, when I select my account on the login page, the login page reloads with no error message. This has left me with no method of repaying the owed amount. For context, I started a free trial for Google Workspace from my personal Gmail account."
+  },
+  "problem_statement": "Small business owners who cancel or let Google Workspace trials lapse get locked out of the Admin Console while still being billed, creating a Catch-22 with no self-serve resolution path and no accessible support channel.",
+  "target_segment": "SMB owners and solo operators who started a Google Workspace trial and are now locked out of the admin console while accruing charges",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-workspace",
+    "admin-lockout",
+    "billing-dispute",
+    "smb",
+    "saas-support",
+    "account-recovery",
+    "gsuite",
+    "customer-support"
+  ],
+  "notes": "Buyer signal: was a paying (or trial-converting) Google Workspace customer actively trying to resolve a billing obligation. The broader opportunity is a concierge/escalation service for SMBs locked out of major SaaS platforms (Google, Microsoft, etc.) \u2014 these businesses would pay a flat fee to have an expert navigate recovery. Recurring class of complaint across Workspace forums. Single instance here but pattern is well-documented.",
+  "status": "candidate"
+}

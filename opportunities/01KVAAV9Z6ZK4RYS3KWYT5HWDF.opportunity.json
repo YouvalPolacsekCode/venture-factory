@@ -1,0 +1,27 @@
+{
+  "id": "01KVAAV9Z6ZK4RYS3KWYT5HWDF",
+  "discovered_at": "2026-06-17T11:23:31+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/vllm-project/vllm-ascend/issues/10606",
+    "snippet": "4 units of 800I A2 machines, 910B, customer deploying deepseek-v4-pro, weight files over 800GB, but the customer's largest logical volume directory is 700GB \u2014 insufficient to store the complete weight files. Customer split the weight files into two directories and used symlinks to load the model service, but got file errors. Besides replacing hardware disks, is there a software-layer solution?"
+  },
+  "problem_statement": "Enterprise teams deploying large LLMs (800GB+ model weights) on Ascend/NPU hardware hit logical-volume size limits and cannot split weight files across mount points using symlinks \u2014 there is no software-layer multi-path weight loading supported out of the box.",
+  "target_segment": "MLOps and infrastructure engineers at enterprises deploying large open-weight LLMs (70B+ parameters) on on-premises or cloud GPU/NPU clusters",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm-deployment",
+    "model-weights",
+    "mlops",
+    "vllm",
+    "ascend",
+    "npu",
+    "on-prem-ai",
+    "distributed-storage",
+    "large-model",
+    "infra-tooling"
+  ],
+  "notes": "Buyer signal: production enterprise deployment on 4x800I A2 machines (significant hardware spend); customer is blocked from serving a paying business workload. The pain is reproducible for any model >700GB on a single-volume setup (DeepSeek-V3/V4, Llama 405B, etc.). Opportunity: a vLLM plugin or storage abstraction layer that supports multi-path / distributed weight sharding across mount points. Enterprise teams in this situation have budget \u2014 they already bought the hardware.",
+  "status": "candidate"
+}

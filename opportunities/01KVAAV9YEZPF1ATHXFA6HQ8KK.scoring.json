@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KVAAV9YEZPF1ATHXFA6HQ8KK",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A Salesforce AppExchange package or SOQL-based audit tool requires non-trivial Salesforce-platform-specific development (Apex, metadata API, AppExchange security review) that cannot be delivered purely via Claude + prompts + Stripe. Each enterprise deployment also likely requires org-specific config and setup support."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise Salesforce admins will raise config questions, org permission issues, and edge-case sync-log quirks that require human-judgement responses."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and well-defined \u2014 Salesforce admins at mid-to-large enterprises running active EAC migrations \u2014 and they demonstrably pay for Salesforce tooling. However, building a functional bulk-sync audit tool requires Salesforce-platform expertise (Apex/SOQL, metadata API, AppExchange review process) that is well beyond what Claude + a landing page can ship in a week; this is a developer-hours product, not a prompt-plus-Stripe product. Combined with the one-time-utility nature of a migration tool (low recurring revenue) and per-org setup friction, the autonomy and buildability scores pull the total below the validate threshold after penalties.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using this factory. Building a legitimate Salesforce sync-audit tool would require an Apex developer, AppExchange security review, and org-by-org installation support \u2014 none of which the factory can automate. The migration pain is real, but the delivery mechanism is outside the factory's toolset. Drop and do not pursue.",
+  "notes": "Fails buildability_with_ai (5, below 6 floor) and operational_autonomy (4, below 7 floor). Even without penalties the build gates would block promotion. Migration utility also has inherently limited recurring revenue.",
+  "scored_at": "2026-06-17T11:24:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

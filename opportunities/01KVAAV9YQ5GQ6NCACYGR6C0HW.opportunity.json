@@ -1,0 +1,25 @@
+{
+  "id": "01KVAAV9YQ5GQ6NCACYGR6C0HW",
+  "discovered_at": "2026-06-17T11:23:31+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182430/can-i-allow-a-microsoft-organisation-account-of-mine-to-access-another-organisat",
+    "snippet": "I am administrator of Organisation One. I want to be able to share my account's mailbox with my Microsoft 365 Business Basic account in Organisation Two, like one can with a shared mailbox. Is this possible? I ask because with GMail, it is, via account delegation."
+  },
+  "problem_statement": "IT admins who manage multiple Microsoft 365 tenants cannot natively share or delegate mailbox access across tenant boundaries, forcing manual workarounds or duplicate accounts \u2014 a gap that Gmail handles natively via account delegation.",
+  "target_segment": "IT administrators and small business owners managing two or more separate Microsoft 365 tenants (e.g. parent/subsidiary, freelancer with multiple clients)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "microsoft-365",
+    "cross-tenant",
+    "mailbox-delegation",
+    "multi-tenant",
+    "it-admin",
+    "email-management",
+    "saas-ops",
+    "productivity"
+  ],
+  "notes": "Buyer signal: paying M365 Business Basic subscriber, explicitly referencing a workflow available in a competing paid product (Gmail delegation). The gap is structural in Microsoft's architecture; a connector service or managed-identity bridge could be sold to IT-managed SMBs. Single signal but the pain is a known class of M365 complaint \u2014 moderate signal strength pending volume confirmation.",
+  "status": "candidate"
+}

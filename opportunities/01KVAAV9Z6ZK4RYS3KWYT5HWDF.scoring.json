@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KVAAV9Z6ZK4RYS3KWYT5HWDF",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 2
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A vLLM multi-path weight loading plugin requires deep systems/MLOps engineering (Python, distributed storage APIs, vLLM internals, Ascend NPU driver integration) \u2014 this is specialized infrastructure work that cannot be delivered via Claude prompts or a simple web service."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise MLOps teams deploying on proprietary NPU hardware (Ascend 910B) will require environment-specific debugging, driver compatibility troubleshooting, and bespoke configuration support."
+    }
+  ],
+  "total": 2.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuine and expensive \u2014 production deployments blocked by storage architecture limits on hardware costing hundreds of thousands of dollars \u2014 and the buyers demonstrably have budget. However, the solution requires deep systems engineering expertise (vLLM internals, distributed storage, Ascend NPU driver layer) that is far outside the factory's buildability envelope. This is a highly technical open-source contribution or enterprise infrastructure product requiring a team of ML systems engineers, not a solo non-technical operator with Claude and Stripe. No path to autonomous delivery exists.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using this factory. The multi-path weight loading problem requires modifying or extending the vLLM inference engine at the storage abstraction layer, testing across NPU hardware configurations, and providing enterprise-grade reliability guarantees. This is specialized MLOps infrastructure work requiring multiple engineers with deep expertise in distributed systems and ML frameworks. Drop and do not pursue.",
+  "notes": "Fails buildability_with_ai (2, well below 6 floor) and operational_autonomy (2, well below 7 floor). Highly specialized hardware/software domain (Ascend NPU, vLLM internals) with no realistic path for a non-technical solo operator. Pain and budget are real but the product is completely out of scope for this factory.",
+  "scored_at": "2026-06-17T11:24:22+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-17T08:24:27+00:00",
-    "idt": "2026-06-17T11:24:27+03:00"
+    "utc": "2026-06-18T07:28:50+00:00",
+    "idt": "2026-06-18T10:28:50+03:00"
   },
   "funnel": {
-    "candidates": 63,
-    "scored": 63,
+    "candidates": 65,
+    "scored": 65,
     "validated": 6,
     "build_decisions": {
       "defer_1_week": 5,
@@ -44,6 +44,35 @@
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148712/how-do-you-prioritize-accessibility-fixes-when-a-website-has-limited-development",
       "discovered_at": "2026-06-12T10:14:17+03:00"
+    },
+    {
+      "topics": [
+        "llm-cost-monitoring",
+        "api-spend",
+        "openai-billing"
+      ],
+      "id": "01KVCT2K5PFJD2N8YQ5SRT1BPK",
+      "problem_statement": "Engineering teams using LLM APIs (OpenAI, Anthropic, etc.) have no real-time per-feature cost attribution or anomaly alerting, so runaway bugs silently multiply API spend by 3-4x before the monthly invoice surfaces the damage.",
+      "target_segment": "SaaS startups and dev teams that have shipped AI features and are paying $200–$5,000/month in LLM API costs.",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, nameable role — an engineering lead or CTO at a SaaS startup already paying $200–$5k/month in LLM API costs — who demonstrably loses real money to this problem (the source post cites a $1,860 overage). Willingness to pay is credible because they're already paying for LLM APIs and adjacent APM tools (Datadog, Sentry), so a $49–$99/month add-on is in-budget. The autonomy gate is marginal at 7: after onboarding (which requires the customer to drop in a lightweight SDK or s…",
+      "solution_plan": "WHAT: A lightweight LLM cost-monitoring SaaS — a drop-in proxy/middleware layer that sits between a team's app and the OpenAI/Anthropic API, tags every call with a feature label, and fires a Slack or email alert when per-feature spend crosses a configurable threshold. BUILD: The factory builds a simple HTTP proxy using a Claude-generated script (no custom infra — it's a thin reverse proxy with a Postgres cost log), a one-page dashboard served as a static site, a Stripe payment link for $49/month, and an onboarding email sequence. The operator does not write code; the factory handles the prompt engineering, config, and deployment scripts. SEL…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 6,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://dev.to/arpitstack/the-0-bug-that-cost-us-1800-in-api-calls-3add",
+      "discovered_at": "2026-06-18T10:28:07+03:00"
     },
     {
       "topics": [
@@ -773,50 +802,15 @@
       "source_type": "forum",
       "source_url": "https://lobste.rs/s/uvwcdo",
       "discovered_at": "2026-06-09T09:41:16+03:00"
-    },
-    {
-      "topics": [
-        "saas-backend",
-        "backend-integration",
-        "startup-infrastructure"
-      ],
-      "id": "01KTTS1G8M63W79HGA66BJCH8W",
-      "problem_statement": "Early-stage SaaS founders repeatedly discover that their initial stack of auth, payments, and database tools marketed as 'working together' creates integration breakage, vendor lock-in, and hidden operational costs that threaten the business as it scales past MVP.",
-      "target_segment": "Solo founders and small technical teams (1-5 engineers) launching or scaling B2B/B2C SaaS products who self-manage their backend infrastructure.",
-      "total": 4.2,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is a specific, identifiable person — a solo technical founder or small-team CTO already paying for Stripe, Clerk, and Supabase — which is a real B2B-adjacent ICP with budget. However, the core service (integration audit, starter kit maintenance, or cross-service breakage monitoring) requires per-customer bespoke work for audits or significant ongoing engineering for a monitoring product, both of which are difficult to automate fully with just Claude + forms + Stripe. The deciding fact…",
-      "solution_plan": "N/A — recommended for drop after penalties. The audit angle requires hands-on per-client analysis; the starter-kit angle is a commodity with no recurring revenue. A monitoring tool that detects cross-service breakage is the most automatable version but requires building and maintaining integrations with multiple third-party APIs — a significant ongoing engineering burden for a solo non-technical operator.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 5,
-        "Will pay": 6,
-        "Buildable": 6,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "other",
-      "source_url": "https://dev.to/nikolaos_c/your-saas-backend-in-2026-1di5",
-      "discovered_at": "2026-06-11T10:23:43+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1585,
-    "last_7_days_usd": 1.5667,
-    "all_time_usd": 3.4177,
+    "today_usd": 0.1112,
+    "last_7_days_usd": 1.347,
+    "all_time_usd": 3.5289,
     "by_day": [
-      {
-        "date": "2026-06-11",
-        "usd": 0.3309
-      },
       {
         "date": "2026-06-12",
         "usd": 0.2174
@@ -840,67 +834,36 @@
       {
         "date": "2026-06-17",
         "usd": 0.1585
+      },
+      {
+        "date": "2026-06-18",
+        "usd": 0.1112
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5101
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4431
+        "usd": 0.4956
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3771
+        "usd": 0.3736
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.2926
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2033
+        "usd": 0.1523
       },
       {
         "agent": "daily_summary",
-        "usd": 0.033
+        "usd": 0.0328
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-11",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-12",
       "agents": {
@@ -1110,12 +1073,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-18",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-17.md",
-    "date": "2026-06-17",
-    "text": "# Daily Summary — 2026-06-17 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 63 |\n| Opportunities validated past threshold | 8 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stage. Discovery phase opportunities are in the approval queue for operator review.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues radar sweep for B2B pain signals across monitored communities.\n2. `opportunity_scoring` processes any new candidates from today's radar run.\n3. `pain_validation` validates top-scored opportunities against threshold.\n4. `lead_research` collects contact information for validated opportunities.\n5. `build_decisions` evaluates candidates for experiment launch readiness.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-18.md",
+    "date": "2026-06-18",
+    "text": "# Daily Summary — 2026-06-18 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 65 |\n| Opportunities validated past threshold | 8 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweep across B2B forums and communities.\n2. `opportunity_scoring` processes any new candidate opportunities.\n3. `pain_validation` validates highest-scoring candidates against threshold.\n4. `lead_research` collects contact data for validated opportunities.\n5. `build_decisions` evaluates viability of top pain signals.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

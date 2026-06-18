@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KVCT2K5WZBX5VZHV36WFE03N",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Each CloudPages customer has a unique domain/DNS setup (self-hosted vs delegated) requiring hands-on configuration of a Cloudflare Worker or reverse proxy rule \u2014 this is not something that can be self-served without per-customer technical onboarding work by the operator or a skilled contractor."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise Salesforce environments are bespoke; support queries about why legitimate traffic is being blocked (false positives) will require human judgment to diagnose and resolve, not a Claude-automated FAQ."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a Salesforce Marketing Cloud admin or agency managing enterprise accounts \u2014 a real, identifiable role with a clear budget and painful cost leakage (20M wasted bot hits is a concrete dollar loss). However, the solution is fundamentally a per-customer infrastructure configuration problem: each CloudPages setup is different enough (self-hosted vs delegated domains, Cloudflare vs Akamai vs native DNS) that no single automated product cleanly fits without significant bespoke implementation work per client. Buildability_with_ai scores 4 because a Cloudflare Worker pattern can be Claude-generated, but deploying and validating it for each enterprise customer's unique stack requires human hands. Operational_autonomy scores 4 because ongoing false-positive tuning and enterprise support expectations mean Youval would be in the support loop continuously. After penalties for per-customer fulfillment and high-touch support, the total drops to 3.5 \u2014 well below the 5.5 validate threshold. This is a legitimate pain but it's a consulting engagement in disguise, not a scalable autonomous micro-service.",
+  "solution_plan": "This opportunity does not fit the factory model. The core problem \u2014 blocking AI bots on custom CloudPages domain configurations \u2014 requires per-client DNS and proxy configuration that cannot be self-served or automated across the varied enterprise setups involved. A solo non-technical operator could not realistically build, sell, and maintain this without becoming a Salesforce MarTech consultant, which is exactly the high-touch model this factory is designed to avoid. If Youval has a specific Salesforce/MarTech background and wants to explore a consulting productization (fixed-fee 'bot-blocking setup' engagement), that's a separate, non-factory play. Otherwise: drop.",
+  "notes": "Fails build_gates: operational_autonomy = 4 (min 7), buildability_with_ai = 4 (min 6). Total 3.5 is below min_total_to_validate (5.5). Drop recommended.",
+  "scored_at": "2026-06-18T10:28:46+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

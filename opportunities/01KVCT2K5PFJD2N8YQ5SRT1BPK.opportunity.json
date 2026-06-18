@@ -1,0 +1,25 @@
+{
+  "id": "01KVCT2K5PFJD2N8YQ5SRT1BPK",
+  "discovered_at": "2026-06-18T10:28:07+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/arpitstack/the-0-bug-that-cost-us-1800-in-api-calls-3add",
+    "snippet": "Last quarter our OpenAI bill went from $620 to $2,480 in 23 days. No new features shipped. No traffic spike. A silent bug was causing redundant API calls in a retry loop \u2014 and there was no alerting, no budget cap enforcement, and no per-feature cost attribution to catch it until the invoice arrived."
+  },
+  "problem_statement": "Engineering teams using LLM APIs (OpenAI, Anthropic, etc.) have no real-time per-feature cost attribution or anomaly alerting, so runaway bugs silently multiply API spend by 3-4x before the monthly invoice surfaces the damage.",
+  "target_segment": "SaaS startups and dev teams that have shipped AI features and are paying $200\u2013$5,000/month in LLM API costs.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm-cost-monitoring",
+    "api-spend",
+    "openai-billing",
+    "cost-anomaly-detection",
+    "ai-ops",
+    "devops",
+    "saas",
+    "observability"
+  ],
+  "notes": "Buyer is clearly paying (existing OpenAI bill of $620/month baseline). Post has 12 points and 3 comments on dev.to \u2014 concrete dollar amounts cited ($1,800 overage). Willingness-to-pay implied: team would have paid for alerting to avoid $1,860 surprise. Adjacent to existing APM/observability tools but LLM-specific cost attribution is an unserved gap. Solo operator could build a lightweight middleware/SDK layer with a dashboard and per-endpoint cost alerts.",
+  "status": "candidate"
+}

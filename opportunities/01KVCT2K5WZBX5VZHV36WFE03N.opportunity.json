@@ -1,0 +1,26 @@
+{
+  "id": "01KVCT2K5WZBX5VZHV36WFE03N",
+  "discovered_at": "2026-06-18T10:28:07+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439537/bot-hits-inflating-cloudpages-super-messages-mitigations-for-delegated-vs-self",
+    "snippet": "We are currently dealing with a massive wave of AI bot and scraper traffic (GPTBot, ClaudeBot, Bytespider, curl, etc.) hitting our standard CloudPages \u2014 experiencing around 20 million hits recently. Because these requests load successfully and return a standard 200 OK, they are rapidly consuming our Super Message budget. We are actively working on mitigation strategies, but our infrastructure has a mixed setup (self-hosted and delegated domains) which brings up a few challenges."
+  },
+  "problem_statement": "Marketing Cloud / CloudPages customers on metered 'Super Message' plans are losing paid quota to AI crawlers and bots that return 200 OK, with no built-in Salesforce mechanism to block them without also disrupting legitimate traffic on mixed self-hosted/delegated domain setups.",
+  "target_segment": "Salesforce Marketing Cloud administrators and agencies managing CloudPages for mid-to-enterprise brands on metered Super Message contracts.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "bot-traffic",
+    "ai-crawlers",
+    "salesforce-marketing-cloud",
+    "cloudpages",
+    "super-messages",
+    "metered-billing",
+    "bot-mitigation",
+    "martech",
+    "scraper-blocking"
+  ],
+  "notes": "Buyer is paying for metered Salesforce Super Messages \u2014 20M bot hits translates directly to wasted budget. Business context is explicit (enterprise MarTech stack). Poster is actively seeking paid/technical mitigations. A managed bot-filtering proxy or Cloudflare-worker pattern pre-configured for CloudPages self-hosted domains could be productized as a service or SaaS add-on. Willingness-to-pay is high given the direct cost leakage.",
+  "status": "candidate"
+}

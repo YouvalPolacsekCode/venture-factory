@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01KVCT2K5PFJD2N8YQ5SRT1BPK",
+  "decided_at": "2026-06-19T11:27:48+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.5,
+      "threshold_min_total_to_build": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build_now": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates are met and the total score (6.5) equals the min_total_to_build threshold, but the scoring agent's recommended_stage is 'validate' \u2014 not 'build' or 'scale' \u2014 which is a hard blocker for build_now under the runtime contract. This is correct: the cost-to-gain ratio of 4.45 is far above the kill threshold of 0.6, the responsiveness_signal is only 2 (no outreach data yet), and operational_autonomy sits exactly on the floor at 7 with unresolved questions about whether customers will self-serve the SDK integration. The scoring agent explicitly recommended a 1-week validation (landing page + forum posts to collect 10 email sign-ups) before committing build resources. Deferring one week to run that validation is the disciplined move \u2014 if responsiveness comes back strong, the stage should advance to 'build' and we can greenlight next cycle.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "dev.to post + Hacker News Show HN with a landing page collecting email sign-ups"
+}

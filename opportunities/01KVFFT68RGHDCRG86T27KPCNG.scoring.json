@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KVFFT68RGHDCRG86T27KPCNG",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a nameable type \u2014 small Wix operators running paid subscriptions \u2014 and the pain is real (tax misconfiguration and inability to sell private plans carry direct revenue risk), but the core problem is rooted in Wix's own platform limitations, which Claude cannot fix; any solution would be a workaround guide or external billing layer, not a self-contained automated service. Buildability and operational autonomy both score low because meaningful delivery here requires per-client configuration review, tax-jurisdiction-specific advice, and likely integration hand-holding \u2014 none of which can run fully hands-off. With a single low-strength signal and no evidence of willingness to pay beyond platform spend, this doesn't clear the validate threshold of 5.5.",
+  "solution_plan": "The core obstacle is structural: Wix's Pricing Plans product lacks native tax-aware recurring billing and private plan workflows, so any 'solution' would be either (A) a detailed playbook/guide sold as a digital product, or (B) a done-for-you Wix + Stripe setup service. Option A (a paid PDF/video guide) could theoretically be built and sold with Claude writing the content and a Stripe payment link, but the market is too thin and the pain too platform-specific to sustain recurring revenue. Option B requires per-client manual configuration work, which violates the autonomy requirement. A solo non-technical operator could not realistically build a hands-off service here \u2014 the problem is a Wix platform gap, not a gap a Claude-powered micro-service can fill autonomously. Do not pursue in current form.",
+  "notes": "Fails build_gates on operational_autonomy (4 < 7) and buildability_with_ai (4 < 6). Stage capped at drop because total 4.7 is below the validate threshold of 5.5. Root cause: solution requires per-customer manual configuration work tied to a closed third-party platform (Wix), preventing autonomous delivery. Single signal at strength 2 with no corroboration; re-evaluate only if multiple signals emerge showing a reachable segment paying for adjacent Wix billing tooling.",
+  "scored_at": "2026-06-19T11:27:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

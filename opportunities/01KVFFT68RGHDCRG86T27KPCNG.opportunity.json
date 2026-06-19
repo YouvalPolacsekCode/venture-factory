@@ -1,0 +1,26 @@
+{
+  "id": "01KVFFT68RGHDCRG86T27KPCNG",
+  "discovered_at": "2026-06-19T11:26:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148724/wix-pricing-plans-taxes-custom-plans",
+    "snippet": "I am newbie to WIX & have been working on WIX website that currently handles SaaS subscriptions (Silver, Gold, Custom) setup using Wix Pricing Plans and trying to understand the best way to handle taxes, custom client plans - recurring billing, customization etc. We're trying to build a workflow where taxes are handled correctly, recurring billing is automated, custom plans can be sold privately, and customers have a consistent checkout experience. Taxes: There are 3 types of tax setups in WIX S..."
+  },
+  "problem_statement": "Small business operators running SaaS or service subscriptions on Wix cannot reliably configure tax-compliant recurring billing, private custom plans, and consistent checkout \u2014 forcing manual workarounds that risk billing errors and lost revenue.",
+  "target_segment": "Solo operators and small agencies building subscription or SaaS products on Wix; non-technical founders managing recurring revenue without a dedicated dev.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "wix",
+    "recurring-billing",
+    "tax-compliance",
+    "saas-billing",
+    "subscription-management",
+    "no-code",
+    "payment-automation",
+    "custom-plans",
+    "checkout"
+  ],
+  "notes": "Buyer context: operator is actively running paid SaaS subscriptions (Silver/Gold/Custom tiers) and processing real customer billing. Pain is operational and recurring \u2014 incorrect tax handling and inability to sell private plans privately are direct revenue risks. Wix's native Pricing Plans product is clearly insufficient for multi-tier, tax-aware, custom-plan use cases. Willingness to pay is implicit (they are already paying for Wix and managing paying customers). Single signal this cycle; signal_strength capped at 2 pending corroboration from other sources.",
+  "status": "candidate"
+}

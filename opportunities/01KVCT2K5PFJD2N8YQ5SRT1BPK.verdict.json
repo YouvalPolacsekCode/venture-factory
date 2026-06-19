@@ -1,0 +1,18 @@
+{
+  "opportunity_id": "01KVCT2K5PFJD2N8YQ5SRT1BPK",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "Multiple public post-mortems and community threads document real dollar losses from undetected LLM API cost spikes, with the source post alone citing a $1,860 overage on a $620/month baseline \u2014 a 4x multiplier. Competitor products (LangSmith, Helicone, Portkey) exist and charge real money, confirming willingness-to-pay. The problem recurs monthly (invoice cycle is the detection lag) and affects any team shipping AI features without dedicated cost observability.",
+  "sources": [
+    "https://dev.to/arpitstack/the-0-bug-that-cost-us-1800-in-api-calls-3add",
+    "https://helicone.ai/pricing",
+    "https://www.langchain.com/langsmith",
+    "https://portkey.ai/pricing",
+    "https://news.ycombinator.com/item?id=35860725",
+    "https://www.reddit.com/r/MachineLearning/comments/13z7q1k/how_do_you_monitor_openai_api_costs/",
+    "https://news.ycombinator.com/item?id=36464871",
+    "https://openai.com/blog/introducing-usage-tiers"
+  ],
+  "evaluated_at": "2026-06-19T11:27:17+03:00"
+}

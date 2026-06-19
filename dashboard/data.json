@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-18T07:28:50+00:00",
-    "idt": "2026-06-18T10:28:50+03:00"
+    "utc": "2026-06-19T08:27:53+00:00",
+    "idt": "2026-06-19T11:27:53+03:00"
   },
   "funnel": {
-    "candidates": 65,
-    "scored": 65,
-    "validated": 6,
+    "candidates": 66,
+    "scored": 66,
+    "validated": 7,
     "build_decisions": {
-      "defer_1_week": 5,
+      "defer_1_week": 6,
       "kill": 1
     },
     "build_now": 0,
@@ -69,7 +69,7 @@
         "Buildable": 6,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "other",
       "source_url": "https://dev.to/arpitstack/the-0-bug-that-cost-us-1800-in-api-calls-3add",
       "discovered_at": "2026-06-18T10:28:07+03:00"
@@ -576,6 +576,38 @@
     },
     {
       "topics": [
+        "wix",
+        "recurring-billing",
+        "tax-compliance"
+      ],
+      "id": "01KVFFT68RGHDCRG86T27KPCNG",
+      "problem_statement": "Small business operators running SaaS or service subscriptions on Wix cannot reliably configure tax-compliant recurring billing, private custom plans, and consistent checkout — forcing manual workarounds that risk billing errors and lost revenue.",
+      "target_segment": "Solo operators and small agencies building subscription or SaaS products on Wix; non-technical founders managing recurring revenue without a dedicated dev.",
+      "total": 4.7,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is a nameable type — small Wix operators running paid subscriptions — and the pain is real (tax misconfiguration and inability to sell private plans carry direct revenue risk), but the core problem is rooted in Wix's own platform limitations, which Claude cannot fix; any solution would be a workaround guide or external billing layer, not a self-contained automated service. Buildability and operational autonomy both score low because meaningful delivery here requires per-client configu…",
+      "solution_plan": "The core obstacle is structural: Wix's Pricing Plans product lacks native tax-aware recurring billing and private plan workflows, so any 'solution' would be either (A) a detailed playbook/guide sold as a digital product, or (B) a done-for-you Wix + Stripe setup service. Option A (a paid PDF/video guide) could theoretically be built and sold with Claude writing the content and a Stripe payment link, but the market is too thin and the pain too platform-specific to sustain recurring revenue. Option B requires per-client manual configuration work, which violates the autonomy requirement. A solo non-technical operator could not realistically buil…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 4,
+        "Will pay": 5,
+        "Buildable": 4,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webmasters.stackexchange.com/questions/148724/wix-pricing-plans-taxes-custom-plans",
+      "discovered_at": "2026-06-19T11:26:29+03:00"
+    },
+    {
+      "topics": [
         "agency-pm",
         "retainer-management",
         "client-management"
@@ -771,50 +803,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48487147",
       "discovered_at": "2026-06-11T10:23:43+03:00"
-    },
-    {
-      "topics": [
-        "ai-code-quality",
-        "technical-debt",
-        "code-review"
-      ],
-      "id": "01KTNHTB8N9P934ZKPGPJJ9KRT",
-      "problem_statement": "Engineering teams are accumulating technical debt from AI-generated code that is structurally poor, hard to test, and difficult to maintain — and there is no systematic tooling or service to audit, remediate, or gate this AI code before it merges.",
-      "target_segment": "Engineering managers and CTOs at software companies with 5–200 developers actively using AI coding agents (Copilot, Cursor, Claude).",
-      "total": 4.2,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is real and well-defined — engineering managers and CTOs at companies using AI coding tools already pay for SonarQube and CodeClimate — and the pain (accumulating AI-generated technical debt) is a genuine, recurring business cost. However, once the penalties for per-customer fulfillment and support load are applied, the total falls below the validate threshold. More critically, operational_autonomy scores only 5: a pure AI-lint-report product is buildable autonomously, but that versio…",
-      "solution_plan": "What it is: an AI code-quality audit report service that scans a repo and flags structural patterns common in AI-generated code (poor test coverage, God functions, missing error handling, copy-paste duplication). Build: the factory connects a Claude prompt chain to GitHub API access, runs static analysis heuristics, and generates a scored PDF/HTML report; a Stripe payment link and a simple intake form (GitHub repo URL + email) are all that's needed. Sell: reach engineering leads via LinkedIn outreach targeting 'Head of Engineering' at companies that list Cursor or Copilot in their job postings; outreach batches require operator approval befo…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 5,
-        "Will pay": 7,
-        "Buildable": 6,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://lobste.rs/s/uvwcdo",
-      "discovered_at": "2026-06-09T09:41:16+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1112,
-    "last_7_days_usd": 1.347,
-    "all_time_usd": 3.5289,
+    "today_usd": 0.3088,
+    "last_7_days_usd": 1.4384,
+    "all_time_usd": 3.8377,
     "by_day": [
-      {
-        "date": "2026-06-12",
-        "usd": 0.2174
-      },
       {
         "date": "2026-06-13",
         "usd": 0.3132
@@ -838,67 +835,36 @@
       {
         "date": "2026-06-18",
         "usd": 0.1112
+      },
+      {
+        "date": "2026-06-19",
+        "usd": 0.3088
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4956
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3736
+        "usd": 0.4801
       },
       {
         "agent": "build_decisions",
-        "usd": 0.2926
+        "usd": 0.4538
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3094
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1523
+        "usd": 0.1623
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0328
+        "usd": 0.0327
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-12",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-13",
       "agents": {
@@ -1108,12 +1074,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-19",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-18.md",
-    "date": "2026-06-18",
-    "text": "# Daily Summary — 2026-06-18 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 65 |\n| Opportunities validated past threshold | 8 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweep across B2B forums and communities.\n2. `opportunity_scoring` processes any new candidate opportunities.\n3. `pain_validation` validates highest-scoring candidates against threshold.\n4. `lead_research` collects contact data for validated opportunities.\n5. `build_decisions` evaluates viability of top pain signals.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-19.md",
+    "date": "2026-06-19",
+    "text": "# Daily Summary — 2026-06-19 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 66 |\n| Opportunities validated past threshold | 9 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps new B2B SaaS subreddits for pain signals.\n2. `pain_validation` runs targeted DM probes on highest-scoring opportunities.\n3. `lead_research` collects contact details for validated candidates.\n4. `opportunity_scoring` re-ranks the candidate pool by pain depth and fit.\n5. `build_decisions` evaluates the top 3 opportunities for experiment feasibility.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

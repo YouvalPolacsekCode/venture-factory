@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KVMH63E8CDDX4WG43A6RWMZ1",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any solution here is a software feature that must be built into FOSSBilling or delivered as a custom plugin/integration \u2014 there is no repeatable, automated service the factory can deliver per-customer without manual dev work."
+    }
+  ],
+  "total": 2.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real (single all-or-nothing API keys are a genuine security pattern problem for billing operators) but this is fundamentally a feature request for an open-source platform, not a monetizable standalone service. The buyers \u2014 small hosting providers running FOSSBilling \u2014 are deeply cost-sensitive and accustomed to free/open-source tooling; there is no evidence they pay for API security add-ons. Building and delivering a scoped-API-key solution would require custom plugin development per platform and cannot be automated by Claude + standard tooling, making it incompatible with the factory's autonomous delivery model.",
+  "solution_plan": "Not viable as a factory service. If this pain recurs across WHMCS, Blesta, and other billing platforms with paying user bases, the pattern might justify a hosted multi-platform billing security audit tool \u2014 but that would need fresh discovery and validated willingness to pay before the factory should act on it.",
+  "notes": "Dropped. build_gate failures: buildability_with_ai (2, floor 6), operational_autonomy (2, floor 7), buyer_clarity (5, floor 6), willingness_to_pay (3, floor 5). This is a platform feature request, not a deliverable micro-service.",
+  "scored_at": "2026-06-21T10:27:23+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

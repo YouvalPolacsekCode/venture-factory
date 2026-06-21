@@ -1,0 +1,25 @@
+{
+  "id": "01KVMH63EFNVDJGCVJ18KZSMKH",
+  "discovered_at": "2026-06-21T10:26:40+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148716/change-seo-titles",
+    "snippet": "I have a WordPress website page: https://my-site.live/profile/4617798717/ I have the Yoast SEO plugin installed, which generates SEO headers. <title>some text</title>... \u2014 captured 2026-06-13."
+  },
+  "problem_statement": "WordPress site owners using Yoast SEO (or similar plugins) cannot easily customize SEO meta titles and tags for dynamically generated pages such as user profiles, losing control over how those pages appear in search results.",
+  "target_segment": "Small business owners and freelancers running WordPress sites with dynamic content (directories, marketplaces, member profiles) who manage their own SEO.",
+  "geo": "GLOBAL",
+  "signal_strength": 1,
+  "keywords": [
+    "wordpress",
+    "seo",
+    "yoast",
+    "meta-tags",
+    "dynamic-pages",
+    "small-business",
+    "cms",
+    "search-visibility"
+  ],
+  "notes": "Single question but represents a recurring class of WordPress SEO friction. Business context: site appears to be a marketplace or community platform (profile URLs). Buyers here are SMB owners who already pay for hosting and SEO plugins. Weak individual signal; would need aggregation across multiple similar questions to raise above 1. Noting for pattern tracking.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KVMH63DRJ1E010D0X082SN9W",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 9,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, nameable type \u2014 developers integrating LLMs into production apps \u2014 who demonstrably pay for reliability tooling (Galileo, TruLens, LangSmith all have paid tiers), and the explicit HN 'I would pay' signal is unusually direct. Buildability is the constraint: a genuinely useful confidence/uncertainty layer requires either multi-sampling, cross-model consistency checks, or a calibrated classifier \u2014 none are trivially assembled in a week with just Claude + Stripe, and naive approaches risk being worse than useless in the regulated domains (legal, medical) where the pain is sharpest. The build_gate for buildability_with_ai (scored 5, floor is 6) is the deciding factor keeping this at validate \u2014 the technical approach must be validated before committing to build.",
+  "solution_plan": "WHAT: A per-call API wrapper that takes an LLM response and returns a confidence flag (high/medium/low/uncertain) by running lightweight consistency checks \u2014 e.g. asking Claude to self-assess, cross-checking key claims against a second sampling, and returning a structured verdict. BUILD: The factory sets up a Claude-powered prompt pipeline (consistency probe + structured output), wraps it behind a simple API endpoint (using a serverless host like Val.town or a minimal Railway deployment), and publishes a Stripe-linked pricing page with a free-tier trial \u2014 no operator coding required. SELL: Reach developers via HN Show HN post, targeted posts in AI developer Discord communities (e.g. Buildspace, LangChain Discord), and direct outreach to GitHub repos actively using LLM APIs \u2014 outreach batches go out only after the operator approves them. MAINTAIN: API calls, billing, and usage tracking run through Stripe + serverless + Claude; support questions handled by a Claude-powered email responder; the only recurring human touch is approving outreach batches and reviewing monthly billing anomalies. CAVEAT: This is genuinely hard to do well \u2014 a superficial confidence score that misfires will get rejected fast by developers; validate by shipping a free prototype to 10 developers and measuring whether they find it useful before building paid infrastructure.",
+  "notes": "build_gate unmet: buildability_with_ai scored 5 (floor 6). The core technical challenge \u2014 producing a calibrated, trustworthy confidence signal \u2014 is non-trivial with standard Claude + prompt tooling alone. Validate the approach with a working prototype before committing to build.",
+  "scored_at": "2026-06-21T10:27:23+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

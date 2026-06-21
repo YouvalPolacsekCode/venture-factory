@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-20T06:55:11+00:00",
-    "idt": "2026-06-20T09:55:11+03:00"
+    "utc": "2026-06-21T07:27:29+00:00",
+    "idt": "2026-06-21T10:27:29+03:00"
   },
   "funnel": {
-    "candidates": 66,
-    "scored": 66,
+    "candidates": 69,
+    "scored": 69,
     "validated": 7,
     "build_decisions": {
       "defer_1_week": 6,
@@ -102,6 +102,37 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48455882",
       "discovered_at": "2026-06-09T09:41:16+03:00"
+    },
+    {
+      "topics": [
+        "llm",
+        "hallucination",
+        "uncertainty-detection"
+      ],
+      "id": "01KVMH63DRJ1E010D0X082SN9W",
+      "problem_statement": "Developers and technical users using LLMs in production cannot trust model outputs because models confidently assert uncertain or false claims. There is no reliable, affordable signal indicating when an LLM response should not be trusted, forcing manual verification or expensive downstream errors.",
+      "target_segment": "Developers and technical teams integrating LLMs into products or workflows, especially in domains where factual accuracy matters (legal, medical, finance, support).",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, nameable type — developers integrating LLMs into production apps — who demonstrably pay for reliability tooling (Galileo, TruLens, LangSmith all have paid tiers), and the explicit HN 'I would pay' signal is unusually direct. Buildability is the constraint: a genuinely useful confidence/uncertainty layer requires either multi-sampling, cross-model consistency checks, or a calibrated classifier — none are trivially assembled in a week with just Claude + Stripe, and naive…",
+      "solution_plan": "WHAT: A per-call API wrapper that takes an LLM response and returns a confidence flag (high/medium/low/uncertain) by running lightweight consistency checks — e.g. asking Claude to self-assess, cross-checking key claims against a second sampling, and returning a structured verdict. BUILD: The factory sets up a Claude-powered prompt pipeline (consistency probe + structured output), wraps it behind a simple API endpoint (using a serverless host like Val.town or a minimal Railway deployment), and publishes a Stripe-linked pricing page with a free-tier trial — no operator coding required. SELL: Reach developers via HN Show HN post, targeted posts…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 5,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48608387",
+      "discovered_at": "2026-06-21T10:26:40+03:00"
     },
     {
       "topics": [
@@ -769,53 +800,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=39724265",
       "discovered_at": "2026-06-05T09:59:00+03:00"
-    },
-    {
-      "topics": [
-        "local-llm",
-        "agentic-coding",
-        "vscode"
-      ],
-      "id": "01KTTS1G8BZ3WWFXVNE96FJNKJ",
-      "problem_statement": "Developers who want AI-assisted agentic coding workflows (à la Claude Code / Cursor) find cloud-API costs prohibitive but cannot find a local LLM that matches the coding quality of hosted models on modest consumer hardware, leaving them stuck between unaffordable cloud and underperforming local alternatives.",
-      "target_segment": "Independent developers, freelancers, and students running mid-range laptops (no discrete GPU) who use or want VS Code-based AI coding agents but cannot absorb $20-100+/month API costs.",
-      "total": 4.3,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is students and indie devs on mid-range laptops — a group with genuine pain but notoriously low willingness to pay for tools, especially when they're already trying to avoid API costs. There is no clear autonomous delivery mechanism: any 'curated guide' service or local-model proxy requires continuous curation, hardware-specific testing, and hands-on support that can't be fully automated. The deciding factor is that both the buyer (price-sensitive individuals, not businesses) and the…",
-      "solution_plan": "N/A — this opportunity is recommended for drop. The target users are cost-sensitive individual developers who are trying to escape paying for AI tools; they are unlikely to pay for a service that helps them avoid paying for services. Any viable offering (e.g. a local-model setup guide with ongoing updates) would require constant manual curation as models change rapidly, making it high-touch to maintain. A solo non-technical operator could not realistically build and sustain this in an automated way.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it",
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 4,
-        "Runs alone": 3,
-        "Will pay": 4,
-        "Buildable": 4,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48487147",
-      "discovered_at": "2026-06-11T10:23:43+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.0597,
-    "last_7_days_usd": 1.1849,
-    "all_time_usd": 3.8974,
+    "today_usd": 0.1288,
+    "last_7_days_usd": 0.9804,
+    "all_time_usd": 4.0262,
     "by_day": [
-      {
-        "date": "2026-06-14",
-        "usd": 0.3333
-      },
       {
         "date": "2026-06-15",
         "usd": 0.1226
@@ -839,67 +832,36 @@
       {
         "date": "2026-06-20",
         "usd": 0.0597
+      },
+      {
+        "date": "2026-06-21",
+        "usd": 0.1288
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4713
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.3097
+        "usd": 0.4693
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2695
+        "usd": 0.2668
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.1612
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1018
+        "usd": 0.0504
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0325
+        "usd": 0.0327
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-14",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-15",
       "agents": {
@@ -1109,12 +1071,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-21",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-20.md",
-    "date": "2026-06-20",
-    "text": "# Daily Summary — 2026-06-20 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 66 |\n| Opportunities validated past threshold | 9 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in scope today. All agents in discovery/validation mode.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning B2B pain signals across Reddit and HN.\n2. `pain_validation` probes top 10 candidates from today's 66 new opportunities.\n3. `opportunity_scoring` re-evaluates candidates against latest signal weights.\n4. `lead_research` begins outreach prep for validated opportunities (9 candidates).\n5. `build_decisions` assembles experiment roadmap for week-ahead sprint planning.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-21.md",
+    "date": "2026-06-21",
+    "text": "# Daily Summary — 2026-06-21 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 69 |\n| Opportunities validated past threshold | 9 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error in last run; succeeded overall but check logs for partial failure |\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` follows up on 9 validated opportunities for contact details.\n2. `pain_validation` probes top 5 opportunities by score for pain confirmation.\n3. `market_radar` re-scans high-signal communities for emerging patterns.\n4. `opportunity_scoring` processes any new candidate batch from overnight sources.\n\n## Operator action items\n\n1. **Review the `market_radar` error** — 1 error flag despite \"succeeded\" status suggests a partial run or timeout. Check `logs/2026-06-21/market_radar.jsonl` for details and consider a re-run if signal was lost.",
     "truncated": false
   },
   "analytics": null

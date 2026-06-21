@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KVMH63EFNVDJGCVJ18KZSMKH",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.2,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "WordPress SMB owners are essentially individual consumers in purchasing behavior \u2014 low average revenue per user, high churn, and the business model only works at volume (hundreds of paying users) which a solo factory cannot reach organically."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a small business owner managing their own WordPress site \u2014 technically a business, but in practice a consumer-grade buyer who expects cheap or free SEO tools and has many existing free options (Yoast free tier, RankMath, custom PHP snippets). Willingness to pay for a narrow dynamic-page SEO title fix is low, the problem is mild rather than blocking, and the market requires scale to generate meaningful revenue. There is no clear autonomous delivery mechanism \u2014 this would be a WordPress plugin or a one-off consulting fix, neither of which fits the factory model well.",
+  "solution_plan": "Not viable as a factory service in its current form. The pattern of 'WordPress users struggling with plugin limitations on dynamic pages' is worth watching \u2014 if aggregated across dozens of similar queries it might point to a specific niche (e.g. directory site owners) where pain is sharper and willingness to pay is higher. No action recommended now.",
+  "notes": "Dropped. Signal strength is 1 (single StackExchange question). build_gate failures: buyer_clarity (4, floor 6), willingness_to_pay (4, floor 5). Revisit if pattern recurs with stronger buyer signals.",
+  "scored_at": "2026-06-21T10:27:23+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KVMH63E8CDDX4WG43A6RWMZ1",
+  "discovered_at": "2026-06-21T10:26:40+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/FOSSBilling/FOSSBilling/issues/3816",
+    "snippet": "Rather than having a single API key for an account, allow multiple API keys that are assigned different permissions over the account. \u2014 Feature request on FOSSBilling (open-source billing platform), captured 2026-06-21."
+  },
+  "problem_statement": "Operators running billing or hosting infrastructure on platforms like FOSSBilling are forced to use a single all-or-nothing API key, creating security risks when integrating with third-party services, automation scripts, or team members who should only have partial access.",
+  "target_segment": "Small hosting providers, SaaS operators, and freelancers managing client billing via self-hosted billing platforms (FOSSBilling, WHMCS alternatives).",
+  "geo": "GLOBAL",
+  "signal_strength": 1,
+  "keywords": [
+    "api-keys",
+    "scoped-permissions",
+    "billing",
+    "hosting",
+    "security",
+    "saas-ops",
+    "fossbilling",
+    "access-control"
+  ],
+  "notes": "Single feature request but from a business operator context \u2014 people running FOSSBilling are operating actual hosting/billing businesses. The pain (single global API key = security risk) is well-understood in the API space and affects any operator integrating billing APIs with resellers or automation. Weak signal on its own; worth watching for recurrence across WHMCS, Blesta, or other billing forum communities before promoting.",
+  "status": "candidate"
+}

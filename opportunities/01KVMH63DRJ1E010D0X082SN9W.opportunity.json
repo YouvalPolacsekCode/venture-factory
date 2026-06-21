@@ -1,0 +1,25 @@
+{
+  "id": "01KVMH63DRJ1E010D0X082SN9W",
+  "discovered_at": "2026-06-21T10:26:40+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48608387",
+    "snippet": "If you had an llm that could accurately predict when a claim is uncertain it would be very popular, I think. I would pay for that kind of reliability tbh \u2014 comment on thread about GPT-5.5 hallucinating 3x more than MIT-licensed GLM-5.2, captured 2026-06-20."
+  },
+  "problem_statement": "Developers and technical users using LLMs in production cannot trust model outputs because models confidently assert uncertain or false claims. There is no reliable, affordable signal indicating when an LLM response should not be trusted, forcing manual verification or expensive downstream errors.",
+  "target_segment": "Developers and technical teams integrating LLMs into products or workflows, especially in domains where factual accuracy matters (legal, medical, finance, support).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "llm",
+    "hallucination",
+    "uncertainty-detection",
+    "reliability",
+    "ai-trust",
+    "developer-tools",
+    "ai-api",
+    "fact-checking"
+  ],
+  "notes": "Explicit willingness-to-pay stated: 'I would pay for that kind of reliability tbh.' Single data point but unusually direct buyer signal on a thread about benchmark-level hallucination differences. Potential product: a confidence/uncertainty scoring layer or proxy API that wraps LLM calls and flags low-confidence outputs. Adjacent to established players (Galileo, TruLens) but those target ML teams; gap may exist for simpler, per-call API for app developers.",
+  "status": "candidate"
+}

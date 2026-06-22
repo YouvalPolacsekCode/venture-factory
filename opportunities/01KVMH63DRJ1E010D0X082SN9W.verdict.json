@@ -1,0 +1,18 @@
+{
+  "opportunity_id": "01KVMH63DRJ1E010D0X082SN9W",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "daily",
+  "rationale": "LLM hallucination is a documented, daily blocker for developers shipping production AI systems, with explicit willingness-to-pay expressed on the source thread and substantiated by multiple funded competitors (Galileo, TruLens, Aporia) all charging for reliability/observability tooling. The pain is acute in regulated verticals (legal, medical, finance) where a wrong confident answer carries real liability, and the volume of complaint threads, GitHub issues, and academic literature is large enough to satisfy the 5-distinct-signal threshold. The key risk is technical credibility \u2014 a weak confidence score is worse than none \u2014 but the market pain itself is unambiguous.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48608387",
+    "https://news.ycombinator.com/item?id=35816330",
+    "https://news.ycombinator.com/item?id=40390865",
+    "https://www.galileo.ai/pricing",
+    "https://www.trulens.org",
+    "https://aporia.com",
+    "https://www.reddit.com/r/MachineLearning/comments/1c3q2wd/llm_hallucination_in_production/",
+    "https://arxiv.org/abs/2305.14975"
+  ],
+  "evaluated_at": "2026-06-22T11:50:37+03:00"
+}

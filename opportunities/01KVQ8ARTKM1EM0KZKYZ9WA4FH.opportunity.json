@@ -1,0 +1,26 @@
+{
+  "id": "01KVQ8ARTKM1EM0KZKYZ9WA4FH",
+  "discovered_at": "2026-06-22T11:49:39+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48624574",
+    "snippet": "Github decided to disable all Github Actions (including self-hosted runners) access for our open source org for some unknown reason... the issue appeared to be some drive-by contributors who weren't org members being flagged for using Actions to do crypto-mining. As the org isn't technically in our corporate account, Github support has been unhelpful. (7 points, 2026-06-22)"
+  },
+  "problem_statement": "Open-source GitHub organizations are having all CI/CD (GitHub Actions, including self-hosted runners) silently disabled due to abuse by drive-by contributors, with no clear remediation path or responsive support from GitHub.",
+  "target_segment": "Maintainers of active open-source GitHub organizations, particularly those at companies that rely on CI for security-critical or infrastructure projects.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "github-actions",
+    "ci-cd",
+    "open-source",
+    "devops",
+    "abuse-prevention",
+    "self-hosted-runners",
+    "github-ban",
+    "crypto-mining",
+    "contributor-vetting"
+  ],
+  "notes": "Buyer signal: org maintainers who work for companies with paid GitHub corporate accounts \u2014 they have budget. The pain is both technical (broken CI) and political (no support escalation path). Opportunity: a lightweight contributor-vetting / PR-risk-scoring service that detects abuse-prone drive-by contributors before they trigger platform bans. Could be sold as a GitHub App subscription to org admins at $20\u201350/mo. Adjacent: CI abuse insurance / monitoring.",
+  "status": "candidate"
+}

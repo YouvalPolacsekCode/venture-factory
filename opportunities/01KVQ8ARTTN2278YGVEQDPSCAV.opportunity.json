@@ -1,0 +1,26 @@
+{
+  "id": "01KVQ8ARTTN2278YGVEQDPSCAV",
+  "discovered_at": "2026-06-22T11:49:39+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/ollama/ollama/issues/16857",
+    "snippet": "Many users have access to local hardware capable of running smaller models efficiently, while still relying on larger cloud models for reasoning-intensive tasks. Today, applications typically have to build their own orchestration layer to decide which tasks should run locally vs. which should run in the cloud. (Feature request, 2026-06-22)"
+  },
+  "problem_statement": "Developers building AI applications must hand-roll orchestration logic to route inference tasks between local models and cloud LLMs, leading to duplicated effort and brittle per-app solutions with no standardized layer.",
+  "target_segment": "AI application developers and small ML engineering teams using Ollama or similar local inference runtimes who also use cloud LLM APIs (OpenAI, Anthropic, etc.).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "llm-orchestration",
+    "hybrid-inference",
+    "local-llm",
+    "ollama",
+    "cloud-llm",
+    "ai-routing",
+    "mlops",
+    "developer-tools",
+    "inference-cost"
+  ],
+  "notes": "Single GitHub feature request \u2014 weak solo signal, but the underlying need is corroborated by broader market trends (LiteLLM, RouteLLM). Buyer context: developers at companies spending on cloud LLM APIs who want to reduce cost by offloading to local hardware. A managed routing proxy (SaaS or SDK) with smart task classification could sell at $50\u2013200/mo to cost-conscious teams. Signal strength kept at 2 due to single source.",
+  "status": "candidate"
+}

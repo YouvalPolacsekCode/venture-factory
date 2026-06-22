@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KVQ8ARTKM1EM0KZKYZ9WA4FH",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 3,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, identifiable person \u2014 an open-source org maintainer at a company with a paid GitHub account \u2014 and the pain (entire CI/CD going dark with no support path) is genuinely severe when it hits. However, this is a low-frequency event: most orgs experience it rarely or never, which limits recurring subscription value and urgency to act before the pain happens. Willingness to pay exists (GitHub App subscriptions in this space sell at $20\u201350/mo) but the problem is partly a platform-policy issue that GitHub could fix, making long-term defensibility weak. Stage is validate: the pain is real but frequency is too low to drive urgent purchasing without a proof-of-concept conversation.",
+  "solution_plan": "This is a GitHub App that scans new contributors' profiles for abuse signals (brand-new accounts, no prior OSS activity, suspicious commit patterns) and flags or requires approval before they can trigger Actions workflows. The factory builds a Claude-powered risk-scoring prompt + a GitHub App manifest (no custom code needed for the webhook logic beyond a simple Cloudflare Worker) + a Stripe payment link for a monthly subscription; the landing page explains the one-click install. Sell to maintainers of active OSS orgs, reachable via GitHub itself (search for orgs with >50 contributors and open issues about Actions abuse), and communities like r/devops and open-source Slack groups \u2014 all outreach drafts require operator approval before sending. Once installed, the app runs entirely autonomously: Claude scores each new contributor on pull request open, posts a risk badge, and optionally holds Actions triggers for review; billing is Stripe-automated. The only recurring operator step is approving the outreach batch and reviewing any edge-case escalations flagged by Claude.",
+  "notes": "All build gates pass (operational_autonomy=8, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=6). Stage held at validate due to low pain_frequency (3) and untested responsiveness_signal \u2014 the event is catastrophic when it occurs but rare enough that pre-emptive purchasing motivation is unclear. Recommend validating with a free-tier GitHub App install and measuring upgrade conversion.",
+  "scored_at": "2026-06-22T11:51:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

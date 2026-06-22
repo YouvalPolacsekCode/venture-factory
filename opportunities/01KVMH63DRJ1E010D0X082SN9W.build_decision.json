@@ -1,0 +1,49 @@
+{
+  "opportunity_id": "01KVMH63DRJ1E010D0X082SN9W",
+  "decided_at": "2026-06-22T11:51:48+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 5,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "met": true
+    },
+    "total_vs_min_to_build": {
+      "total": 6.4,
+      "min": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "eligible_for_build": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.4 < min_total_to_build 6.5",
+    "buildability_with_ai=5 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Three independent blockers prevent build_now: (1) buildability_with_ai scores 5 against a floor of 6 \u2014 producing a calibrated, trustworthy uncertainty signal is non-trivial with Claude + prompt tooling alone and risks shipping a confidence score that misfires, which would destroy credibility with the developer audience instantly; (2) weighted total of 6.4 falls below the 6.5 min_total_to_build threshold; (3) recommended_stage is 'validate', not 'build' or 'scale'. The cost_to_gain_ratio of 6.42 also far exceeds the 0.6 kill threshold in cost_gain_model, and expected_gain_90d is negative at -$142. However, the pain is real (8 severity, 9 frequency), the buyer is specific and reachable, and the portfolio is empty \u2014 so a validation sprint to prove the technical approach works is worth the week before making a final call.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 10,
+  "suggested_first_outreach_channel": "HN Show HN post + LangChain/AI-eng Discord communities"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KVQ8ARV2BCERY0Z8XMT186Z4",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 8,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Ad-free curated social/content feed is a consumer subscription product that requires thousands of paying users to generate meaningful revenue \u2014 a solo operator cannot reach that scale through approved outreach channels alone."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is a broad consumer \u2014 'adult professionals frustrated by social media' \u2014 which is one of the weakest possible ICPs for a solo B2B factory: no budget authority, very low software purchase intent, and the product requires massive scale to generate revenue. Willingness to pay is weak despite the one commenter's stated intent: Artifact raised millions and shut down, Flipboard and Feedly exist and struggle, and most consumers default to free. There is no realistic path for a solo non-technical operator to build a compelling social feed product and acquire thousands of paying users. Total of 3.3 is well below the validate threshold.",
+  "solution_plan": "Not recommended. A paid ad-free social/content feed is a consumer media product that requires significant content curation infrastructure, distribution at scale (thousands of paid subscribers to be viable), and differentiation from well-funded incumbents who have already failed (Artifact) or stagnated (Feedly). A solo non-technical operator using a Claude factory cannot realistically build, sell, or sustain this \u2014 the b2c_at_scale_needed penalty reflects that the economics only work at a subscriber count that outreach-based acquisition cannot reach. Drop this opportunity.",
+  "notes": "Failing build gates: buyer_clarity=3 (below floor of 6), willingness_to_pay=3 (below floor of 5), operational_autonomy=6 (meets floor marginally). Total 3.3 is far below min_total_to_validate (5.5). The single-commenter source and broad consumer target make this a weak signal overall.",
+  "scored_at": "2026-06-22T11:51:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

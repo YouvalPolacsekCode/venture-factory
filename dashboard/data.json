@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-21T07:27:29+00:00",
-    "idt": "2026-06-21T10:27:29+03:00"
+    "utc": "2026-06-22T08:51:52+00:00",
+    "idt": "2026-06-22T11:51:52+03:00"
   },
   "funnel": {
-    "candidates": 69,
-    "scored": 69,
-    "validated": 7,
+    "candidates": 73,
+    "scored": 73,
+    "validated": 8,
     "build_decisions": {
-      "defer_1_week": 6,
+      "defer_1_week": 7,
       "kill": 1
     },
     "build_now": 0,
@@ -76,6 +76,35 @@
     },
     {
       "topics": [
+        "claude-code",
+        "ai-rate-limiting",
+        "llm-api"
+      ],
+      "id": "01KVQ8ARTAJBEQC5T6DRWB99CK",
+      "problem_statement": "Paying Claude Code subscribers on high-tier plans (20x Max) are experiencing unexpected 529 'overloaded' rate-limit errors with no transparency about limit changes, breaking professional AI-assisted coding workflows.",
+      "target_segment": "Professional developers and teams paying for high-tier Claude Code / Anthropic API plans who rely on consistent throughput for daily coding workflows.",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "Professional developers on $200/mo Claude Code plans are a specific, budget-holding buyer with demonstrated pain (529 errors break real coding workflows daily). Willingness to pay is strong: they already spend heavily on AI tooling and multiple paid proxy/reliability services (LiteLLM, Portkey) exist in the space. However, buildability is moderate — a managed multi-provider failover proxy requires backend infrastructure, key management, and reliability SLAs that go beyond a simple Claude prompt…",
+      "solution_plan": "This is a managed LLM reliability proxy: when your Claude API returns a 529, it automatically retries via a fallback provider (e.g. OpenAI or a secondary Anthropic key) with zero code changes on the customer's end. The factory builds a Claude-assisted configuration wizard + a simple dashboard landing page + Stripe subscription link; actual proxy logic would need a lightweight hosted service (Cloudflare Worker or similar), which the factory can scaffold but the operator would need to deploy to a hosting service (no coding, just a one-click deploy button). Sell to developers active in Claude/Anthropic communities on HN, Reddit r/ClaudeAI, and…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 6,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48624168",
+      "discovered_at": "2026-06-22T11:49:39+03:00"
+    },
+    {
+      "topics": [
         "ai-spend",
         "cost-optimization",
         "saas-management"
@@ -129,7 +158,7 @@
         "Buildable": 5,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48608387",
       "discovered_at": "2026-06-21T10:26:40+03:00"
@@ -162,6 +191,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48432117",
       "discovered_at": "2026-06-07T09:59:46+03:00"
+    },
+    {
+      "topics": [
+        "github-actions",
+        "ci-cd",
+        "open-source"
+      ],
+      "id": "01KVQ8ARTKM1EM0KZKYZ9WA4FH",
+      "problem_statement": "Open-source GitHub organizations are having all CI/CD (GitHub Actions, including self-hosted runners) silently disabled due to abuse by drive-by contributors, with no clear remediation path or responsive support from GitHub.",
+      "target_segment": "Maintainers of active open-source GitHub organizations, particularly those at companies that rely on CI for security-critical or infrastructure projects.",
+      "total": 6.3,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, identifiable person — an open-source org maintainer at a company with a paid GitHub account — and the pain (entire CI/CD going dark with no support path) is genuinely severe when it hits. However, this is a low-frequency event: most orgs experience it rarely or never, which limits recurring subscription value and urgency to act before the pain happens. Willingness to pay exists (GitHub App subscriptions in this space sell at $20–50/mo) but the problem is partly a platfo…",
+      "solution_plan": "This is a GitHub App that scans new contributors' profiles for abuse signals (brand-new accounts, no prior OSS activity, suspicious commit patterns) and flags or requires approval before they can trigger Actions workflows. The factory builds a Claude-powered risk-scoring prompt + a GitHub App manifest (no custom code needed for the webhook logic beyond a simple Cloudflare Worker) + a Stripe payment link for a monthly subscription; the landing page explains the one-click install. Sell to maintainers of active OSS orgs, reachable via GitHub itself (search for orgs with >50 contributors and open issues about Actions abuse), and communities like…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 6,
+        "Buildable": 8,
+        "Pain": 9
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48624574",
+      "discovered_at": "2026-06-22T11:49:39+03:00"
     },
     {
       "topics": [
@@ -346,6 +404,38 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439491/execution-error-array-type-must-specify-items-schema",
       "discovered_at": "2026-06-10T10:00:09+03:00"
+    },
+    {
+      "topics": [
+        "llm-orchestration",
+        "hybrid-inference",
+        "local-llm"
+      ],
+      "id": "01KVQ8ARTTN2278YGVEQDPSCAV",
+      "problem_statement": "Developers building AI applications must hand-roll orchestration logic to route inference tasks between local models and cloud LLMs, leading to duplicated effort and brittle per-app solutions with no standardized layer.",
+      "target_segment": "AI application developers and small ML engineering teams using Ollama or similar local inference runtimes who also use cloud LLM APIs (OpenAI, Anthropic, etc.).",
+      "total": 5.4,
+      "recommended_stage": "drop",
+      "rationale": "The underlying need is real and frequent — developers building LLM apps do hand-roll routing logic repeatedly — but the buyer clarity is only moderate: 'AI application developers' is a broad segment, many of whom are at companies that would build this internally or use open-source tools (LiteLLM, RouteLLM) rather than pay for a managed SaaS. Willingness to pay is weak: the most visible alternatives are free/open-source, and there's no strong signal of a segment already paying for managed routin…",
+      "solution_plan": "Not recommended for build or validation at this time. The market is already served by well-resourced open-source projects (LiteLLM, RouteLLM), and a solo non-technical operator would struggle to build a differentiated managed proxy service that developers would pay for over free alternatives. If revisiting, the angle would need to be a very narrow, opinionated use case (e.g. 'Ollama + Claude Code cost optimizer for indie devs') with a clear paid niche before investing further.",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 6,
+        "Will pay": 5,
+        "Buildable": 5,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://github.com/ollama/ollama/issues/16857",
+      "discovered_at": "2026-06-22T11:49:39+03:00"
     },
     {
       "topics": [
@@ -700,119 +790,15 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439519/salesforce-oauth-refresh-token-suddenly-returning-invalid-grant-expired-access",
       "discovered_at": "2026-06-15T11:49:15+03:00"
-    },
-    {
-      "topics": [
-        "sqlite",
-        "schema-migration",
-        "developer-tooling"
-      ],
-      "id": "01KT9RZ06XEDHDXX2FV43G35W5",
-      "problem_statement": "Developers iterating rapidly on SQLite schemas during early-stage development have no watch-mode tool that automatically detects schema file changes and applies non-destructive migrations, forcing them to manually nuke and recreate the database on each iteration.",
-      "target_segment": "Solo developers and small teams using SQLite for local development or prototyping, particularly in Python, Rust, or JS stacks",
-      "total": 4.4,
-      "recommended_stage": "drop",
-      "rationale": "The pain is real and frequent for solo developers iterating on SQLite schemas, but developer tooling at this scope has almost no willingness-to-pay signal — the target audience expects free CLI tools and VS Code extensions, and multiple free open-source alternatives (Flyway, Alembic, custom watch scripts) already exist. The buyer is a solo developer, a notoriously difficult monetisation target. The deciding factor is the near-zero commercial signal combined with a delivery model that would requ…",
-      "solution_plan": "This is a watch-mode SQLite schema migration CLI. The factory could generate a prompt-driven specification and a simple landing page with a waitlist form, but the actual tool is a pure software artefact (a compiled CLI or VS Code extension) that requires code authoring, versioned releases, and ongoing bug fixes — not something Claude can build and maintain as a self-running service. Selling to individual developers via Product Hunt or HN is possible but converting them to paid users is extremely hard in this category. There is no autonomous delivery loop: every support request ('why did my migration fail?') needs a human developer to debug.…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 5,
-        "Will pay": 2,
-        "Buildable": 6,
-        "Pain": 5
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=40237443",
-      "discovered_at": "2026-06-04T19:55:15+03:00"
-    },
-    {
-      "topics": [
-        "gmail",
-        "email-management",
-        "email-debugging"
-      ],
-      "id": "01KT9RZ07EWEHND6M7JR37BFW0",
-      "problem_statement": "Gmail users experience unexplained automatic deletion of legitimate emails and replies with no identifiable filter rule, leaving them unable to diagnose or fix the issue through standard Gmail tooling.",
-      "target_segment": "Business professionals and power users relying on Gmail for critical communications",
-      "total": 4.3,
-      "recommended_stage": "drop",
-      "rationale": "Gmail users experiencing phantom email deletion are real and frustrated, but the buyer profile is diffuse (any Gmail user) with very weak willingness-to-pay signal — people expect Gmail problems to be fixed by Google for free, not solved by a paid third-party tool. Building a reliable diagnostic tool requires Gmail OAuth, ongoing maintenance against API changes, and careful compliance with Google's developer policies; the operational autonomy is low because diagnosing novel filter/routing bugs…",
-      "solution_plan": "This would be a Chrome extension or OAuth web app that reads a user's Gmail filters, labels, and routing rules and surfaces anomalies. While Claude could help draft the diagnostic logic, the actual build requires JavaScript extension development, OAuth integration, and ongoing maintenance against Gmail API changes — not feasible for a non-technical operator without engineering support. More importantly, individual Gmail users almost never pay for inbox tools; the addressable paid market is narrow. Google could also break or block the integration at any time. This is not a viable autonomous micro-service for this factory. Recommend dropping.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it",
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 4,
-        "Will pay": 3,
-        "Buildable": 5,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://webapps.stackexchange.com/questions/182405/some-emails-in-gmail-are-auto-deleted-but-there-is-no-filter",
-      "discovered_at": "2026-06-04T19:55:15+03:00"
-    },
-    {
-      "topics": [
-        "flaky-tests",
-        "test-reliability",
-        "nondeterminism"
-      ],
-      "id": "01KTB97YECBG01M1NXB4JS0DGW",
-      "problem_statement": "Developers running standard frontend/integration test suites (Jasmine, TestCafe, Cypress, etc.) encounter nondeterministic flaky test failures that are extremely difficult to reproduce and diagnose, wasting significant engineering time.",
-      "target_segment": "Software engineers and QA teams at SaaS companies using JS/TS test frameworks",
-      "total": 4.3,
-      "recommended_stage": "drop",
-      "rationale": "The pain is real and frequent — flaky tests cost engineering teams hours — and the buyer (QA engineers and dev leads at SaaS companies) is specific enough to be nameable. However, solving nondeterministic test failure reproducibly requires deep integration with test runners, CI infrastructure, and application runtime, which goes well beyond what Claude + prompts can build in a week; this is a hard infrastructure problem, not a text-processing problem. Operational autonomy is also very low: diag…",
-      "solution_plan": "This opportunity is not viable for this factory in its current form. The core technical challenge — deterministically reproducing nondeterministic failures in arbitrary JS test suites — requires test-runner hooks, sandboxed execution environments, and deep CI integration that cannot be built with Claude prompts and a landing page. A solo non-technical operator cannot realistically build or maintain this without significant engineering infrastructure. Drop and revisit only if a much narrower angle emerges (e.g. a report-analysis service that reads existing flaky-test logs and suggests categories of causes — but even that has limited willingne…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 6,
-        "Runs alone": 3,
-        "Will pay": 4,
-        "Buildable": 3,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=39724265",
-      "discovered_at": "2026-06-05T09:59:00+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1288,
-    "last_7_days_usd": 0.9804,
-    "all_time_usd": 4.0262,
+    "today_usd": 0.3392,
+    "last_7_days_usd": 1.197,
+    "all_time_usd": 4.3654,
     "by_day": [
-      {
-        "date": "2026-06-15",
-        "usd": 0.1226
-      },
       {
         "date": "2026-06-16",
         "usd": 0.0908
@@ -836,67 +822,36 @@
       {
         "date": "2026-06-21",
         "usd": 0.1288
+      },
+      {
+        "date": "2026-06-22",
+        "usd": 0.3392
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4693
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.2668
+        "usd": 0.469
       },
       {
         "agent": "build_decisions",
-        "usd": 0.1612
+        "usd": 0.3154
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.2778
       },
       {
         "agent": "pain_validation",
-        "usd": 0.0504
+        "usd": 0.1019
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0327
+        "usd": 0.0329
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-15",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-16",
       "agents": {
@@ -1106,12 +1061,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-22",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-21.md",
-    "date": "2026-06-21",
-    "text": "# Daily Summary — 2026-06-21 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 69 |\n| Opportunities validated past threshold | 9 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error in last run; succeeded overall but check logs for partial failure |\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` follows up on 9 validated opportunities for contact details.\n2. `pain_validation` probes top 5 opportunities by score for pain confirmation.\n3. `market_radar` re-scans high-signal communities for emerging patterns.\n4. `opportunity_scoring` processes any new candidate batch from overnight sources.\n\n## Operator action items\n\n1. **Review the `market_radar` error** — 1 error flag despite \"succeeded\" status suggests a partial run or timeout. Check `logs/2026-06-21/market_radar.jsonl` for details and consider a re-run if signal was lost.",
+    "file": "reports/daily/2026-06-22.md",
+    "date": "2026-06-22",
+    "text": "# Daily Summary — 2026-06-22 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 73 |\n| Opportunities validated past threshold | 10 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit sweeps for B2B pain signals.\n2. `pain_validation` tests top 10 candidate opportunities via targeted outreach.\n3. `opportunity_scoring` re-scores all candidates with latest validation data.\n4. `build_decisions` evaluates highest-scoring opportunities for experiment launch.\n5. `cost_gain` computes weekly ROI summary ahead of Monday planning.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

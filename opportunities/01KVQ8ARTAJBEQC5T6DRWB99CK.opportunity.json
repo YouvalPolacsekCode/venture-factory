@@ -1,0 +1,26 @@
+{
+  "id": "01KVQ8ARTAJBEQC5T6DRWB99CK",
+  "discovered_at": "2026-06-22T11:49:39+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48624168",
+    "snippet": "I have been on the 20x Max plan of Claude Code for a while now, however since last week something changed and I seem to have been getting lots and lots of those 529 errors. My workflow hasn't changed, same level of concurrency as usual, did they change their limits? (6 points, 4 comments, 2026-06-22)"
+  },
+  "problem_statement": "Paying Claude Code subscribers on high-tier plans (20x Max) are experiencing unexpected 529 'overloaded' rate-limit errors with no transparency about limit changes, breaking professional AI-assisted coding workflows.",
+  "target_segment": "Professional developers and teams paying for high-tier Claude Code / Anthropic API plans who rely on consistent throughput for daily coding workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "claude-code",
+    "ai-rate-limiting",
+    "llm-api",
+    "developer-tools",
+    "anthropic",
+    "api-reliability",
+    "529-error",
+    "ai-coding-assistant",
+    "quota-management"
+  ],
+  "notes": "Buyer signal is explicit: poster is on a paid '20x Max' plan (~$200/mo tier). Pain is workflow disruption from opaque rate-limit changes. Opportunity angles: (1) a proxy/queue layer that smooths 529s across multiple provider keys, (2) a monitoring/alerting dashboard for LLM API quota health, (3) a multi-provider failover service. Competitors like LiteLLM exist but are self-hosted and complex. A managed version with good UX could command $20\u2013100/mo per team.",
+  "status": "candidate"
+}

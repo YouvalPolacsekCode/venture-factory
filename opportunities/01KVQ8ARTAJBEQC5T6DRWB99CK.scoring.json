@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KVQ8ARTAJBEQC5T6DRWB99CK",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "Professional developers on $200/mo Claude Code plans are a specific, budget-holding buyer with demonstrated pain (529 errors break real coding workflows daily). Willingness to pay is strong: they already spend heavily on AI tooling and multiple paid proxy/reliability services (LiteLLM, Portkey) exist in the space. However, buildability is moderate \u2014 a managed multi-provider failover proxy requires backend infrastructure, key management, and reliability SLAs that go beyond a simple Claude prompt + Stripe page; operational_autonomy scores 7 but just misses the build gate of 7 (it hits it exactly, so gates pass), while buildability_with_ai at 6 just meets the floor. Stage is capped at validate because responsiveness_signal is untested and the technical build complexity needs a scoped proof-of-concept before committing.",
+  "solution_plan": "This is a managed LLM reliability proxy: when your Claude API returns a 529, it automatically retries via a fallback provider (e.g. OpenAI or a secondary Anthropic key) with zero code changes on the customer's end. The factory builds a Claude-assisted configuration wizard + a simple dashboard landing page + Stripe subscription link; actual proxy logic would need a lightweight hosted service (Cloudflare Worker or similar), which the factory can scaffold but the operator would need to deploy to a hosting service (no coding, just a one-click deploy button). Sell to developers active in Claude/Anthropic communities on HN, Reddit r/ClaudeAI, and Twitter/X \u2014 outreach drafts go out only after operator approval. Once live, billing runs through Stripe automatically, usage dashboards update via the proxy logs, and support queries are handled by a Claude-powered FAQ bot; the only recurring operator touch is approving new outreach batches. Realistic caveat: hosting and maintaining a live proxy (even a simple one) requires occasional infra check-ins \u2014 this is not zero-touch, but it is low-touch.",
+  "notes": "build_gates: operational_autonomy=7 (meets floor exactly), buildability_with_ai=6 (meets floor exactly), buyer_clarity=8 (passes), willingness_to_pay=7 (passes). All gates pass, but responsiveness_signal is 0 \u2014 validate first with a landing page to gauge demand before building the proxy infrastructure.",
+  "scored_at": "2026-06-22T11:51:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

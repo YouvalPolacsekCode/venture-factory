@@ -1,0 +1,25 @@
+{
+  "id": "01KVQ8ARV2BCERY0Z8XMT186Z4",
+  "discovered_at": "2026-06-22T11:49:39+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48611307",
+    "snippet": "I wonder how much it would take in a monthly subscription to offset the money they make in ads? Picturing an Instagram without drivel... that I would pay for simply to escape for 15 minutes. Curate the good content... Time lock it based on my prefs so that it respects me as a human being, doesn't try to feed off of me. (2026-06-20)"
+  },
+  "problem_statement": "Consumers want a paid, ad-free, non-manipulative social content feed with time-limiting and curation controls, but no mainstream product offers this \u2014 existing platforms monetize through addictive engagement patterns.",
+  "target_segment": "Adult professionals and knowledge workers who use social media for leisure but are frustrated by addictive design, ads, and low-quality content.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "social-media",
+    "content-curation",
+    "ad-free",
+    "digital-wellbeing",
+    "subscription",
+    "screen-time",
+    "attention-economy",
+    "feed-curation"
+  ],
+  "notes": "Single commenter explicitly states willingness to pay a monthly subscription. Weak signal strength due to single source, but buyer intent is clear and articulated. Hobbyist-adjacent but the willingness-to-pay framing and 'work-life' context elevate it slightly. Existing players: Artifact (defunct), Flipboard, Feedly. Gap: true time-lock + AI curation combo with social feel. Low-cost MVP possible as a curated newsletter or RSS reader with spend controls.",
+  "status": "candidate"
+}

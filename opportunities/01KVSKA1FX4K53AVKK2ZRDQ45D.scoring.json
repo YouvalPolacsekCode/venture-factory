@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KVSKA1FX4K53AVKK2ZRDQ45D",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The buyer is individual consumers/knowledge workers \u2014 not a business role with a budget line. Monetizing a browser extension at meaningful revenue requires thousands of paying individual users."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "The 'I would pay' signal is real but the buyer is individual consumers \u2014 knowledge workers and HN readers \u2014 who are historically reluctant to pay for browser extensions or feed filters beyond a one-time small fee. At the scale needed to generate meaningful revenue this is a B2C volume play, which conflicts directly with the factory's autonomy model. Critically, reliable AI-content detection is a genuinely hard technical problem: current classifiers (GPTZero, etc.) have high false-positive rates and providers actively game them, meaning the service would face constant accuracy complaints requiring human-judgement support and model retraining \u2014 neither of which can be delegated to Claude. The combination of a vague consumer buyer, a technically brittle core, and the scale needed to monetize makes this the wrong thing to build now.",
+  "solution_plan": "Not recommended for build. If pursued: the factory could build a simple web-based text scorer (paste text \u2192 get AI-probability score) using an off-the-shelf detection API (Sapling, GPTZero) plus a Stripe paywall for a small monthly fee. A landing page + intake form + Stripe link is buildable in a week. However, the detection accuracy problem means users will immediately complain about false positives on human-written text, requiring ongoing human triage. There is no credible path to hands-off delivery here without solving a hard ML problem first. A solo non-technical operator cannot realistically maintain accuracy at a level customers will pay for.",
+  "notes": "Fails buyer_clarity gate (score 3 < floor 6): buyer is vague consumers, not a specific business role. Fails operational_autonomy gate (score 5 < floor 7): AI detection accuracy requires ongoing human-judgement support. Also b2c_at_scale_needed penalty applied.",
+  "scored_at": "2026-06-23T09:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

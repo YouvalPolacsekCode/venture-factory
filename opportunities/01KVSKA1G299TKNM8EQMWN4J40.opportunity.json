@@ -1,0 +1,26 @@
+{
+  "id": "01KVSKA1G299TKNM8EQMWN4J40",
+  "discovered_at": "2026-06-23T09:39:58+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48637755",
+    "snippet": "Ask HN: 'Every time I ask the latest models to write something, it defaults to LLMisms like contrastive negation and long unnecessary lists. Is there a way to desloppify AI writing, or is this just the new status quo?' \u2014 4 points, 7 comments, 2026-06-22."
+  },
+  "problem_statement": "Professionals using LLMs for writing find that model outputs consistently default to recognizable stylistic patterns ('LLMisms') that make content sound generic and artificial, and lack a reliable tool to post-process or prompt-engineer their way out of this.",
+  "target_segment": "Content marketers, technical writers, and knowledge workers at companies who use LLMs to draft documents, blog posts, or communications and need outputs that sound human and on-brand.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-writing",
+    "llm-output-quality",
+    "writing-style",
+    "desloppify",
+    "content-quality",
+    "post-processing",
+    "prompt-engineering",
+    "writing-tools",
+    "ai-editing"
+  ],
+  "notes": "Active Ask HN post (4 points, 7 comments) from 2026-06-22 asking for solutions to AI writing style problems. The poster frames it as a workflow problem ('every time I ask'), implying repeated professional use. Buyer context: professionals and teams paying for LLM API access or products who are dissatisfied with output quality. Related to the AI-slop filter cluster but distinct \u2014 this is about improving AI output before publishing, not filtering others' AI content. Potential product: a post-processing API or editor plugin that rewrites LLM output into more natural prose styles. Signal strength 3: recent, multiple comments engaging with the problem, but no explicit price anchor.",
+  "status": "candidate"
+}

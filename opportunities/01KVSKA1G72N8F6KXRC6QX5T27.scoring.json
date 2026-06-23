@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KVSKA1G72N8F6KXRC6QX5T27",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable \u2014 software developers on paid AI coding subscriptions \u2014 but the pain being scored is performance perception ('has it gotten slower?'), which is fundamentally a monitoring/observability problem. The difficulty is that the actual service required is a real-time latency and reliability tracker polling multiple AI provider APIs and surfacing degradation signals, which requires persistent infrastructure and continuous data collection rather than a simple Claude prompt workflow. The ICP is good and the reachability is real (developer forums, Product Hunt, HN), but the signal is a single low-engagement post and there is no price anchor. With a total of 5.4, this falls below the validate threshold of 5.5; the idea needs substantially more demand evidence before it warrants any investment.",
+  "solution_plan": "Not recommended even for validation investment at this time. If the signal strengthens: the factory could build a simple status-aggregation page that polls publicly available AI provider status pages and latency benchmarks, with an email alert subscription (free tier) and a paid tier for custom alerting ($9/month via Stripe). The landing page + polling script + email alerts are buildable without operator coding. However, the polling infrastructure needs to run continuously (a cron job or hosted service), which is slightly outside the pure 'Claude + form + Stripe' pattern and requires a small hosting decision. Youval would need to approve the hosting setup once. A solo non-technical operator could set this up with the factory's help, but it is closer to the edge of the factory's standard tooling than the previous opportunity.",
+  "notes": "Total 5.4 falls below min_total_to_validate (5.5) \u2014 drop stage is correct. Primary weaknesses: extremely thin signal (one 6-upvote post, no body text, no price anchor), and the core product requires persistent polling infrastructure rather than a stateless Claude prompt. If three or more independent demand signals emerge in the next 30 days, re-evaluate.",
+  "scored_at": "2026-06-23T09:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

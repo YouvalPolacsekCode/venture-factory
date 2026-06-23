@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-22T08:51:52+00:00",
-    "idt": "2026-06-22T11:51:52+03:00"
+    "utc": "2026-06-23T06:42:13+00:00",
+    "idt": "2026-06-23T09:42:13+03:00"
   },
   "funnel": {
-    "candidates": 73,
-    "scored": 73,
-    "validated": 8,
+    "candidates": 76,
+    "scored": 76,
+    "validated": 9,
     "build_decisions": {
-      "defer_1_week": 7,
+      "defer_1_week": 8,
       "kill": 1
     },
     "build_now": 0,
@@ -98,7 +98,7 @@
         "Buildable": 6,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48624168",
       "discovered_at": "2026-06-22T11:49:39+03:00"
@@ -162,6 +162,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48608387",
       "discovered_at": "2026-06-21T10:26:40+03:00"
+    },
+    {
+      "topics": [
+        "ai-writing",
+        "llm-output-quality",
+        "writing-style"
+      ],
+      "id": "01KVSKA1G299TKNM8EQMWN4J40",
+      "problem_statement": "Professionals using LLMs for writing find that model outputs consistently default to recognizable stylistic patterns ('LLMisms') that make content sound generic and artificial, and lack a reliable tool to post-process or prompt-engineer their way out of this.",
+      "target_segment": "Content marketers, technical writers, and knowledge workers at companies who use LLMs to draft documents, blog posts, or communications and need outputs that sound human and on-brand.",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer here is meaningfully more specific than the first opportunity: content marketers and technical writers at companies already paying for LLM API access — people with budgets who experience this pain every working day. Willingness to pay is supported by the fact that these teams are already paying for writing tools (Jasper, Copy.ai, Grammarly Business) at $20–100+/month. The core build is almost ideal for this factory: a Claude prompt pipeline that takes LLM draft text and rewrites it in…",
+      "solution_plan": "The micro-service is a 'de-sloppify' rewriting API/web tool: paste LLM draft text, receive a rewritten version in natural prose without LLM tics (no 'contrastive negation', no filler lists, no corporate hedging). The factory builds it as a Claude prompt (pre-engineered style guide) + a simple web form + Stripe subscription link ($29–49/month) — no coding by the operator, deployable in under a week using this repo's standard tooling. To sell, the factory drafts cold outreach targeting content marketing managers and technical writing leads at B2B SaaS companies (findable via LinkedIn), and posts a short demo in communities like r/ContentMarket…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 6,
+        "Buildable": 9,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48637755",
+      "discovered_at": "2026-06-23T09:39:58+03:00"
     },
     {
       "topics": [
@@ -436,6 +465,35 @@
       "source_type": "forum",
       "source_url": "https://github.com/ollama/ollama/issues/16857",
       "discovered_at": "2026-06-22T11:49:39+03:00"
+    },
+    {
+      "topics": [
+        "ai-coding-assistant",
+        "codex",
+        "developer-tools"
+      ],
+      "id": "01KVSKA1G72N8F6KXRC6QX5T27",
+      "problem_statement": "Developers paying for AI coding assistants (specifically OpenAI Codex) are experiencing perceived performance degradation and lack visibility into whether slowdowns are systemic, their own configuration, or temporary — causing lost productivity and uncertainty about tool reliability.",
+      "target_segment": "Software developers and engineering teams at companies paying for AI coding assistant subscriptions (Codex, Copilot, Cursor, etc.).",
+      "total": 5.4,
+      "recommended_stage": "drop",
+      "rationale": "The buyer is identifiable — software developers on paid AI coding subscriptions — but the pain being scored is performance perception ('has it gotten slower?'), which is fundamentally a monitoring/observability problem. The difficulty is that the actual service required is a real-time latency and reliability tracker polling multiple AI provider APIs and surfacing degradation signals, which requires persistent infrastructure and continuous data collection rather than a simple Claude prompt workf…",
+      "solution_plan": "Not recommended even for validation investment at this time. If the signal strengthens: the factory could build a simple status-aggregation page that polls publicly available AI provider status pages and latency benchmarks, with an email alert subscription (free tier) and a paid tier for custom alerting ($9/month via Stripe). The landing page + polling script + email alerts are buildable without operator coding. However, the polling infrastructure needs to run continuously (a cron job or hosted service), which is slightly outside the pure 'Claude + form + Stripe' pattern and requires a small hosting decision. Youval would need to approve the…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 5,
+        "Buildable": 6,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48639619",
+      "discovered_at": "2026-06-23T09:39:58+03:00"
     },
     {
       "topics": [
@@ -726,83 +784,15 @@
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148724/wix-pricing-plans-taxes-custom-plans",
       "discovered_at": "2026-06-19T11:26:29+03:00"
-    },
-    {
-      "topics": [
-        "agency-pm",
-        "retainer-management",
-        "client-management"
-      ],
-      "id": "01KV57GZZ44W7F82E1CMR5T3GM",
-      "problem_statement": "Small web agencies managing large client portfolios (50–200+ sites, many on retainers) cannot find project management software that handles per-client retainer tracking, site-specific task queues, and multi-client visibility — generic tools like Monday.com are too broad and create overhead rather than reducing it.",
-      "target_segment": "Small web agencies (2–20 person teams) managing retainer clients across mixed CMS environments (WordPress and custom), typically 50–200 client sites.",
-      "total": 4.5,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is well-defined — a 2–20 person web agency paying for Monday.com but finding it inadequate — and willingness to pay is demonstrated by existing spend. However, building a credible vertical PM tool for agencies managing 150+ client sites is a full product engineering effort (custom data models, retainer logic, multi-client views) that cannot be shipped as a Claude prompt plus landing page in a week; buildability_with_ai scores 5 and operational_autonomy scores 5, both below their respe…",
-      "solution_plan": "This opportunity has a genuinely strong commercial signal but is not the right fit for a solo non-technical operator using an autonomous Claude factory today. The product needed is a real SaaS with custom database schemas, retainer billing logic, and multi-client dashboards — requiring a developer or a no-code platform (Bubble, Glide) with significant configuration effort. Youval cannot build this without a technical co-founder or contractor. If the factory's tooling expands to include a managed no-code backend, revisit; for now, drop.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 5,
-        "Will pay": 7,
-        "Buildable": 5,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://pm.stackexchange.com/questions/35953/project-management-in-web-agencies",
-      "discovered_at": "2026-06-15T11:49:15+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "oauth",
-        "saas-integration"
-      ],
-      "id": "01KV57GZZAY2ATY4PA598EHDMS",
-      "problem_statement": "SaaS companies integrating with Salesforce via OAuth experience silent, bulk refresh token expiration across multiple customer orgs simultaneously, causing production outages with no proactive alerting or clear remediation path from Salesforce.",
-      "target_segment": "B2B SaaS developers and integration engineers at companies whose product is built on top of Salesforce OAuth, managing multi-org connected app deployments.",
-      "total": 4.5,
-      "recommended_stage": "drop",
-      "rationale": "The pain is real and high-severity — production outages from silent bulk token expiration at paying B2B SaaS companies — and the buyer (integration engineer / CTO at a Salesforce ISV) is well-defined with budget authority. However, the solution requires a persistent, stateful monitoring service with Salesforce OAuth integration, multi-tenant token storage, and proactive alerting — none of which can be shipped as a simple Claude prompt plus landing page; buildability_with_ai scores 4, below the…",
-      "solution_plan": "This opportunity has strong pain and a clear B2B buyer, but the required product — a persistent multi-org OAuth token health monitor with Salesforce API integration — is genuine infrastructure software. It cannot be built by a non-technical operator using this Claude factory's standard tooling (prompts, forms, Stripe links). It would require API integrations, a persistent database of token states, and scheduled background jobs with Salesforce-specific OAuth logic. Youval cannot build or maintain this without a technical partner. Drop unless a simpler angle (e.g. a paid diagnostic guide or a one-time audit report delivered via Claude) is vali…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 5,
-        "Will pay": 6,
-        "Buildable": 4,
-        "Pain": 9
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439519/salesforce-oauth-refresh-token-suddenly-returning-invalid-grant-expired-access",
-      "discovered_at": "2026-06-15T11:49:15+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3392,
-    "last_7_days_usd": 1.197,
-    "all_time_usd": 4.3654,
+    "today_usd": 0.3349,
+    "last_7_days_usd": 1.4411,
+    "all_time_usd": 4.7003,
     "by_day": [
-      {
-        "date": "2026-06-16",
-        "usd": 0.0908
-      },
       {
         "date": "2026-06-17",
         "usd": 0.1585
@@ -826,67 +816,36 @@
       {
         "date": "2026-06-22",
         "usd": 0.3392
+      },
+      {
+        "date": "2026-06-23",
+        "usd": 0.3349
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.469
+        "usd": 0.4793
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3154
+        "usd": 0.465
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2778
+        "usd": 0.3008
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1019
+        "usd": 0.1631
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0329
+        "usd": 0.0328
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-16",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-17",
       "agents": {
@@ -1096,12 +1055,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-23",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-22.md",
-    "date": "2026-06-22",
-    "text": "# Daily Summary — 2026-06-22 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 73 |\n| Opportunities validated past threshold | 10 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit sweeps for B2B pain signals.\n2. `pain_validation` tests top 10 candidate opportunities via targeted outreach.\n3. `opportunity_scoring` re-scores all candidates with latest validation data.\n4. `build_decisions` evaluates highest-scoring opportunities for experiment launch.\n5. `cost_gain` computes weekly ROI summary ahead of Monday planning.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-23.md",
+    "date": "2026-06-23",
+    "text": "# Daily Summary — 2026-06-23 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 76 |\n| Opportunities validated past threshold | 11 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo experiments currently active. All prior experiments archived or concluded.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues monitoring B2B pain signals across target subreddits and forums.\n2. `opportunity_scoring` processes any new candidate opportunities surfaced overnight.\n3. `pain_validation` validates high-scoring candidates against threshold criteria.\n4. `build_decisions` evaluates candidates ready for prototyping or validation phase.\n5. `cost_gain` computes weekly cost/gain ratios for experiment portfolio review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

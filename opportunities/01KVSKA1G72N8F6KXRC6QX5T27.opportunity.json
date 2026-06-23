@@ -1,0 +1,25 @@
+{
+  "id": "01KVSKA1G72N8F6KXRC6QX5T27",
+  "discovered_at": "2026-06-23T09:39:58+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48639619",
+    "snippet": "Ask HN: 'Has Codex gotten slower recently?' \u2014 6 points, posted 2026-06-23. No body text beyond the title, but 6 upvotes in early hours suggests resonance among developers actively using Codex (a paid OpenAI product)."
+  },
+  "problem_statement": "Developers paying for AI coding assistants (specifically OpenAI Codex) are experiencing perceived performance degradation and lack visibility into whether slowdowns are systemic, their own configuration, or temporary \u2014 causing lost productivity and uncertainty about tool reliability.",
+  "target_segment": "Software developers and engineering teams at companies paying for AI coding assistant subscriptions (Codex, Copilot, Cursor, etc.).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding-assistant",
+    "codex",
+    "developer-tools",
+    "performance-monitoring",
+    "llm-reliability",
+    "uptime-monitoring",
+    "developer-productivity",
+    "openai"
+  ],
+  "notes": "Buyer signal: users of Codex are on paid plans. The pain is reliability/observability \u2014 they cannot tell if slowness is their problem or the provider's. Adjacent opportunity: a status/performance monitoring dashboard for AI coding tools (similar to Downdetector but for LLM API latency and quality). Signal strength capped at 2 \u2014 single data point, no body text, could be transient.",
+  "status": "candidate"
+}

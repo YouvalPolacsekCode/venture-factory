@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01KVQ8ARTAJBEQC5T6DRWB99CK",
+  "decided_at": "2026-06-23T09:42:07+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "meets": true
+    },
+    "buildability_with_ai": {
+      "score": 6,
+      "floor": 6,
+      "meets": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "meets": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "meets": true
+    },
+    "total": {
+      "score": 6.5,
+      "min_total_to_build": 6.5,
+      "meets": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build_now": [
+        "build",
+        "scale"
+      ],
+      "meets": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass and the weighted total of 6.5 meets the min_total_to_build threshold. However, recommended_stage is 'validate' \u2014 not 'build' or 'scale' \u2014 so build_now is prohibited by the hard rule. The scoring agent correctly capped the stage because responsiveness_signal is only 2 (no real outreach data yet) and the cost-to-gain ratio of 4.45 far exceeds the kill threshold of 0.6, signaling that projected costs dwarf near-term revenue. A validation landing page and lightweight outreach probe should run this week to collect responsiveness data before committing build resources.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "HN Show/Ask threads + Reddit r/ClaudeAI posts targeting developers complaining about 529 errors"
+}

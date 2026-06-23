@@ -1,0 +1,25 @@
+{
+  "id": "01KVSKA1FX4K53AVKK2ZRDQ45D",
+  "discovered_at": "2026-06-23T09:39:58+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48628116",
+    "snippet": "\"I would pay for any tools that block 'ai agents' from talking to me. Hell I would pay for a tool right now to filter ai slop from the feeds.\" \u2014 comment on 'Don't use AI to write things that you present as your own work' (2026-06-22). A second commenter on the same thread (id=48628604) echoed: \"I'll be optimizing for filtering it out. Even if the source of garbage are genuine humans.\""
+  },
+  "problem_statement": "Knowledge workers and online community members want to filter AI-generated content out of their feeds, inboxes, and comment threads, and are willing to pay for a tool that does this reliably.",
+  "target_segment": "Knowledge workers, writers, and online community members who consume large volumes of text content and want to curate out AI-generated or low-quality AI-assisted writing.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-content-filter",
+    "ai-slop",
+    "content-curation",
+    "feed-filtering",
+    "llm-detection",
+    "writing-quality",
+    "browser-extension",
+    "information-diet"
+  ],
+  "notes": "Two independent HN commenters on the same thread both expressed strong distaste for AI-generated content in feeds, with one using explicit 'I would pay' language. Buyer intent is present. Willingness-to-pay evidence: 'I would pay for a tool right now to filter ai slop from the feeds.' Potential product form: browser extension or RSS/feed layer that scores and hides AI-generated posts. Competing signals suggest this is a recurring frustration across professional communities. Signal strength capped at 3 due to only two data points from a single thread.",
+  "status": "candidate"
+}

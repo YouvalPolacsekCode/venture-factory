@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01KVQ8ARTAJBEQC5T6DRWB99CK",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Professional developers on paid Claude Code plans (\u2265$100/mo) report 529 errors disrupting daily workflows, with multiple HN and Reddit threads confirming the problem is widespread and ongoing. Willingness-to-pay is evidenced by the existence and pricing of competing managed services (Portkey, OpenRouter, LiteLLM Cloud), all charging $20\u2013$500/mo for reliability and routing features. The target segment is clearly defined and budget-holding, though evidence volume sits just at the threshold \u2014 5 distinct pain signals identified across public forums.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48624168",
+    "https://www.reddit.com/r/ClaudeAI/",
+    "https://portkey.ai/pricing",
+    "https://openrouter.ai/",
+    "https://docs.litellm.ai/"
+  ],
+  "evaluated_at": "2026-06-23T09:41:01+03:00"
+}

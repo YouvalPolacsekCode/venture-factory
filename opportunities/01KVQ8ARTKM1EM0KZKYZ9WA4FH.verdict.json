@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KVQ8ARTKM1EM0KZKYZ9WA4FH",
+  "status": "rejected",
+  "severity": "burning",
+  "frequency": "rare",
+  "rationale": "The pain is genuinely severe when it occurs \u2014 complete CI/CD shutdown with no support escalation path \u2014 but evidence of frequency is thin: only a single HN post with 7 points, no corroborating complaint threads, job postings, or competitor products specifically solving this problem. There is no willingness-to-pay signal (no competitor charging for contributor vetting, no quotes from maintainers asking for a paid solution), and the root cause is a GitHub platform policy issue that GitHub itself could patch, making long-term defensibility near-zero. The pain fails the minimum evidence bar (5 distinct pain quotes, 1 WTP signal) required for promotion.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48624574"
+  ],
+  "evaluated_at": "2026-06-24T09:38:33+03:00"
+}

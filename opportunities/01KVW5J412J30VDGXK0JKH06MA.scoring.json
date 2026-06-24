@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KVW5J412J30VDGXK0JKH06MA",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 6,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building and maintaining a validated Brazil tax integration for Salesforce CPQ/Billing (ICMS, PIS, COFINS, ISS mapping, rate tables, edge cases) requires deep, per-client implementation work \u2014 not something Claude can deliver autonomously."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Tax calculation is regulated; incorrect outputs create legal and financial liability for the buyer's org. Any commercial solution must meet compliance standards that a prompt-based tool cannot reliably satisfy."
+    }
+  ],
+  "total": 1.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is crystal-clear \u2014 a Salesforce admin or RevOps lead at a mid-market/enterprise company already paying for AvaTax, with real budget and a real pain \u2014 and Brazilian indirect tax complexity is genuinely severe. However, this is fundamentally a compliance-grade integration problem: Brazilian tax rules (ICMS with state-by-state rates, PIS/COFINS regime switching, ISS municipal codes) require either deep custom Salesforce CPQ configuration, a certified connector to a Brazilian tax engine (Synchro, Avalara BR, Sovos), or both. Claude cannot build or run this autonomously. Every customer would require a scoped implementation engagement. That makes it a consulting/implementation project, not an autonomous micro-service \u2014 wrong shape for this factory entirely.",
+  "solution_plan": "This is not a viable build for this factory. The solution would need to be a certified Salesforce managed package or a professional services engagement that maps Brazilian tax rules into CPQ/Billing logic \u2014 both require compliance expertise, per-client implementation work, and ongoing rate-table maintenance that cannot be automated with Claude and a simple web page. A solo non-technical operator could not build or maintain this without a licensed tax implementation partner. If Youval has deep Salesforce CPQ and Brazil tax domain expertise, the right path would be a consulting engagement or partnership with a Salesforce ISV, not this factory.",
+  "notes": "Fails build_gates: operational_autonomy=2 (well below floor of 7), buildability_with_ai=2 (below floor of 6). Regulated industry penalty and human fulfillment penalty also apply. Total after penalties is 1.7 \u2014 hard drop.",
+  "scored_at": "2026-06-24T09:39:05+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

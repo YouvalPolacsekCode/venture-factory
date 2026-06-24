@@ -1,0 +1,27 @@
+{
+  "id": "01KVW5J412J30VDGXK0JKH06MA",
+  "discovered_at": "2026-06-24T09:37:26+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439554/calculate-brazil-tax-for-salesforce-cpq-and-billing-avatax-vertex-other-opti",
+    "snippet": "Has anyone successfully setup tax integrations to calculate tax for Brazil in Salesforce CPQ and/or Billing? The org currently uses AvaTax managed packages to successfully calculate sales tax and VAT globally, and a recent requirement has the team looking at how to do the same for Brazil. This is not to create a solution for e-Invoicing, that is another project. This is just to get the estimated taxes on quotes and maybe invoices in Salesforce."
+  },
+  "problem_statement": "Salesforce CPQ/Billing orgs that already use AvaTax or Vertex for global tax calculation have no validated path to extend that coverage to Brazilian tax rules (ICMS, PIS, COFINS, ISS, etc.) on quotes and invoices, leaving revenue operations teams flying blind on Brazil deal pricing.",
+  "target_segment": "Salesforce CPQ/Billing administrators and revenue operations teams at mid-market to enterprise companies expanding into Brazil",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce-cpq",
+    "brazil-tax",
+    "tax-integration",
+    "avatax",
+    "vertex",
+    "revenue-operations",
+    "cpq-billing",
+    "latin-america",
+    "saas-tax-compliance",
+    "indirect-tax"
+  ],
+  "notes": "Buyer is clearly a Salesforce admin at a company (business context, existing paid AvaTax subscription). The org already pays for global tax tooling and needs to extend it \u2014 willingness to pay is implied by incumbent spend. Brazil tax complexity (multi-layered indirect taxes) is a known enterprise pain point with few clean Salesforce-native solutions. Gap between AvaTax global coverage and Brazil-specific rules is the product wedge.",
+  "status": "candidate"
+}

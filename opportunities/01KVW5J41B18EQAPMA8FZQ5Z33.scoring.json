@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KVW5J41B18EQAPMA8FZQ5Z33",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 2,
+    "founder_fit": 2
+  },
+  "weighted_total": 3.7,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Scraping Facebook Marketplace to extract and resell sold-item or trending data violates Facebook/Meta's Terms of Service (automated data collection is explicitly prohibited). Building a commercial product on scraped Meta data would expose the operator to cease-and-desist actions, account bans, and legal risk. This is a grey/TOS-violating product."
+    },
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The target buyers are individual resellers \u2014 consumer-grade, high-churn, low willingness to pay. Reaching meaningful revenue requires hundreds to thousands of paying users."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The underlying buyer (part-time resellers sourcing on Facebook Marketplace) is a real enough person but is individual consumers with thin margins and low software spend \u2014 not a business buyer with a budget. More critically, any tool that scrapes or aggregates Facebook Marketplace sold-item data violates Meta's Terms of Service, making this a TOS-grey/legally risky product that this factory should not build. Even setting legality aside, the buildability is poor: Facebook Marketplace has no public API for sold/trending data, scraping at scale is brittle, and the feature set is trivially replicable the moment Meta adds a filter.",
+  "solution_plan": "This is not a viable build for this factory. The core data source (Facebook Marketplace sold-item trends) is only accessible via scraping, which violates Meta's Terms of Service. Building a commercial product on that foundation puts the operator at legal and platform risk \u2014 not appropriate. If there were a legitimate data source (e.g., a reseller platform with an open API), a market-intelligence dashboard for flippers could theoretically be built with Claude + a simple web page + Stripe, but that path does not exist here. Drop this opportunity.",
+  "notes": "Disqualified primarily by not_legitimate_or_grey penalty (-5.0) due to TOS violation risk from scraping Meta. Also fails build_gates: operational_autonomy=3 (below floor of 7), buildability_with_ai=3 (below floor of 6), buyer_clarity=4 (below floor of 6), willingness_to_pay=3 (below floor of 5). Total after penalties floors at 0.0.",
+  "scored_at": "2026-06-24T09:39:05+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

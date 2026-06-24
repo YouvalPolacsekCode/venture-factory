@@ -1,0 +1,27 @@
+{
+  "id": "01KVW5J41B18EQAPMA8FZQ5Z33",
+  "discovered_at": "2026-06-24T09:37:26+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182448/how-to-search-facebook-marketplace-for-recent-trending-sold-items",
+    "snippet": "Trying to see if there's a way to search somewhere on Facebook Marketplace or elsewhere for trending items that have been selling within the last month or two. More so, items that are trending within a set distance limit. Something kind of like what you can do on eBay where you can search an item and then filter for 'sold' items within the last 90 days."
+  },
+  "problem_statement": "Resellers and small retail buyers who source inventory on Facebook Marketplace have no equivalent to eBay's sold-item filter, making it impossible to validate local demand or spot trending categories before buying stock.",
+  "target_segment": "Part-time and full-time resellers, thrift flippers, and small retail buyers who source locally via Facebook Marketplace",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "facebook-marketplace",
+    "reseller-tools",
+    "market-intelligence",
+    "sold-items",
+    "local-commerce",
+    "inventory-sourcing",
+    "price-research",
+    "ebay-alternative",
+    "ecommerce-analytics",
+    "flipping"
+  ],
+  "notes": "Buyer is a reseller who uses Facebook Marketplace as a sourcing channel \u2014 recurring commercial activity with money at stake. Comparison to eBay's paid/premium data features signals familiarity with paying for market intelligence. A scraper-based or aggregator tool surfacing local FB Marketplace sell-through data could fill this gap. Signal is a single post with no upvotes, so strength kept at 2; needs corroboration from reseller communities (r/flipping, etc.).",
+  "status": "candidate"
+}

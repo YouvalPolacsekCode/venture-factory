@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-24T06:39:11+00:00",
-    "idt": "2026-06-24T09:39:11+03:00"
+    "utc": "2026-06-25T06:43:03+00:00",
+    "idt": "2026-06-25T09:43:03+03:00"
   },
   "funnel": {
-    "candidates": 78,
-    "scored": 78,
+    "candidates": 81,
+    "scored": 81,
     "validated": 9,
     "build_decisions": {
       "defer_1_week": 8,
@@ -16,6 +16,35 @@
     "services_launched": 0
   },
   "top_opportunities": [
+    {
+      "topics": [
+        "ai-cost-attribution",
+        "llm-observability",
+        "ai-infrastructure"
+      ],
+      "id": "01KVYR5SFSS1ZS0GVNHJ0DCQZB",
+      "problem_statement": "AI startups running multiple product features on shared LLM infrastructure cannot attribute API costs to individual features or user flows, making it impossible to make data-driven decisions about what to cut, optimize, or price.",
+      "target_segment": "Founders and engineering leads at AI-native SaaS startups with $1k+/month LLM API spend across multiple product features",
+      "total": 7.1,
+      "recommended_stage": "build",
+      "rationale": "Founders and engineering leads at AI-native SaaS startups — a specific, named role at companies already spending $1k–$10k/month on LLM APIs — are the buyer, and they demonstrably pay for observability tooling (Helicone, Langfuse, Datadog). The $4,200/month real-world story confirms the pain is financially material and the fix is technically tractable: a tagging layer that attributes LLM calls to named features and surfaces a cost breakdown. Buildability is strong because the core is an HTTP pro…",
+      "solution_plan": "LLM Cost Attribution is a hosted micro-service that sits between an AI startup's app and its LLM provider (OpenAI/Anthropic API), tagging every request with a feature name and streaming a daily cost-by-feature report to the founder's inbox. The factory builds it as: a lightweight OpenAI-compatible proxy (a Claude-generated Python script deployed to a free-tier cloud function), a simple sign-up page with Stripe subscription ($49–$149/month), and an intake form collecting the customer's API base-URL and feature tag list — no operator coding. To sell, the factory drafts cold emails targeting AI-native startup founders visible on ProductHunt lau…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 8,
+        "Buildable": 7,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph",
+      "discovered_at": "2026-06-25T09:41:14+03:00"
+    },
     {
       "topics": [
         "accessibility",
@@ -187,7 +216,7 @@
         "Buildable": 9,
         "Pain": 6
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48637755",
       "discovered_at": "2026-06-23T09:39:58+03:00"
@@ -281,6 +310,38 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
       "discovered_at": "2026-06-07T09:59:46+03:00"
+    },
+    {
+      "topics": [
+        "llm-cost",
+        "token-optimization",
+        "agentic-ai"
+      ],
+      "id": "01KVYR5SF9QEAV3SWBYH6HZJ2W",
+      "problem_statement": "Teams running multi-turn agentic AI loops struggle to control token consumption and costs, with no clear tooling to identify which loop phases waste the most tokens before they burn budget.",
+      "target_segment": "AI/ML engineers and startup CTOs at companies running production agentic workflows on LLM APIs",
+      "total": 6.0,
+      "recommended_stage": "validate",
+      "rationale": "Engineering teams at AI-native startups with active LLM API spend are a real, paying buyer — the $4,200/month burn story confirms budget and willingness to pay for observability tooling. However, the core product (loop-phase token profiler) requires meaningful integration work — SDK instrumentation or proxy insertion — which pushes buildability below the build gate floor of 6, and ongoing delivery likely needs per-customer setup assistance that reduces operational autonomy below the 7 floor. Th…",
+      "solution_plan": "A token-phase profiler micro-service that wraps an existing agentic loop and reports per-turn token consumption with a cost breakdown by loop phase. The factory builds a lightweight proxy/middleware as a set of Claude prompts plus a simple dashboard page (static HTML + Chart.js), a Stripe subscription link, and an intake form for API key + loop config — no operator coding required. Sell by posting in AI/ML Slack communities (Latent Space, AI Tinkerers), relevant HN 'Show HN' threads, and cold outreach to founders of AI-native startups visible on LinkedIn/X — all outreach batches go out only after operator approval. Delivery is automated: the…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 6,
+        "Will pay": 7,
+        "Buildable": 5,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48669496",
+      "discovered_at": "2026-06-25T09:41:14+03:00"
     },
     {
       "topics": [
@@ -719,84 +780,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=44751318",
       "discovered_at": "2026-06-04T17:33:54+03:00"
-    },
-    {
-      "topics": [
-        "ai-startup",
-        "platform-risk",
-        "notebooklm"
-      ],
-      "id": "01KTB97YF4Y8H7D1EMZ0FTGQ6J",
-      "problem_statement": "AI-powered productivity startups (summarization, research assistants, content pre-publication review) face existential platform risk as Google and other hyperscalers ship adjacent features in NotebookLM and similar products, creating uncertainty about which niches remain defensible.",
-      "target_segment": "Early-stage AI startup founders and product teams building productivity or content tools on top of LLMs",
-      "total": 4.7,
-      "recommended_stage": "drop",
-      "rationale": "The anxiety about hyperscaler encroachment is real and frequently discussed, and early-stage AI founders are reachable via dev.to, Indie Hackers, and Twitter. However, the buyer is an early-stage founder — a group with extremely limited budget, notoriously low willingness to pay for strategic tooling, and a preference for free content. The problem ('which niches are defensible?') is inherently strategic consulting, not a repeatable automated deliverable, which caps both buyer_clarity and willin…",
-      "solution_plan": "This opportunity does not clear the validate threshold. While a 'defensibility radar' report service is conceptually buildable with Claude, the paying buyer is not clearly identified — early-stage AI founders read articles about this anxiety but rarely purchase strategic analysis tools. If a narrower angle emerged (e.g. a weekly paid briefing for a specific segment of AI product builders with a demonstrated paid-newsletter audience), it could be re-evaluated. Drop for now.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 6,
-        "Will pay": 4,
-        "Buildable": 6,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "other",
-      "source_url": "https://dev.to/dannwaneri/google-is-one-feature-away-from-killing-an-entire-startup-category-jk",
-      "discovered_at": "2026-06-05T09:59:00+03:00"
-    },
-    {
-      "topics": [
-        "wix",
-        "recurring-billing",
-        "tax-compliance"
-      ],
-      "id": "01KVFFT68RGHDCRG86T27KPCNG",
-      "problem_statement": "Small business operators running SaaS or service subscriptions on Wix cannot reliably configure tax-compliant recurring billing, private custom plans, and consistent checkout — forcing manual workarounds that risk billing errors and lost revenue.",
-      "target_segment": "Solo operators and small agencies building subscription or SaaS products on Wix; non-technical founders managing recurring revenue without a dedicated dev.",
-      "total": 4.7,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is a nameable type — small Wix operators running paid subscriptions — and the pain is real (tax misconfiguration and inability to sell private plans carry direct revenue risk), but the core problem is rooted in Wix's own platform limitations, which Claude cannot fix; any solution would be a workaround guide or external billing layer, not a self-contained automated service. Buildability and operational autonomy both score low because meaningful delivery here requires per-client configu…",
-      "solution_plan": "The core obstacle is structural: Wix's Pricing Plans product lacks native tax-aware recurring billing and private plan workflows, so any 'solution' would be either (A) a detailed playbook/guide sold as a digital product, or (B) a done-for-you Wix + Stripe setup service. Option A (a paid PDF/video guide) could theoretically be built and sold with Claude writing the content and a Stripe payment link, but the market is too thin and the pain too platform-specific to sustain recurring revenue. Option B requires per-client manual configuration work, which violates the autonomy requirement. A solo non-technical operator could not realistically buil…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 6,
-        "Runs alone": 4,
-        "Will pay": 5,
-        "Buildable": 4,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://webmasters.stackexchange.com/questions/148724/wix-pricing-plans-taxes-custom-plans",
-      "discovered_at": "2026-06-19T11:26:29+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1746,
-    "last_7_days_usd": 1.4572,
-    "all_time_usd": 4.8749,
+    "today_usd": 0.1802,
+    "last_7_days_usd": 1.5262,
+    "all_time_usd": 5.0552,
     "by_day": [
-      {
-        "date": "2026-06-18",
-        "usd": 0.1112
-      },
       {
         "date": "2026-06-19",
         "usd": 0.3088
@@ -820,6 +812,10 @@
       {
         "date": "2026-06-24",
         "usd": 0.1746
+      },
+      {
+        "date": "2026-06-25",
+        "usd": 0.1802
       }
     ],
     "by_agent": [
@@ -829,15 +825,15 @@
       },
       {
         "agent": "market_radar",
-        "usd": 0.4547
+        "usd": 0.4638
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2798
+        "usd": 0.2884
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2247
+        "usd": 0.2761
       },
       {
         "agent": "daily_summary",
@@ -846,41 +842,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-18",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-19",
       "agents": {
@@ -1090,12 +1051,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-25",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-24.md",
-    "date": "2026-06-24",
-    "text": "# Daily Summary — 2026-06-24 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 78 |\n| Opportunities validated past threshold | 12 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| *No active experiments logged* | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS channels.\n2. `pain_validation` probes top 10 scored opportunities from today's candidate pool.\n3. `opportunity_scoring` processes any new incoming signals.\n4. `lead_research` stands ready to enrich validated opportunities.\n5. `build_decisions` evaluates readiness of validated cohorts for experiment launch.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-25.md",
+    "date": "2026-06-25",
+    "text": "# Daily Summary — 2026-06-25 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 81 |\n| Opportunities validated past threshold | 13 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently. All stages dormant or archived.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B communities.\n2. `opportunity_scoring` processes new candidate opportunities.\n3. `pain_validation` validates highest-scoring candidates.\n4. `build_decisions` evaluates readiness of validated opportunities for experimentation.\n5. `cost_gain` computes efficiency metrics on completed work.\n\n## Operator action items\n\nNone — process is running cleanly. 81 candidates in the funnel, 13 passed validation threshold. No decisions waiting. Monitor for when the first experiment moves to discovery phase.",
     "truncated": false
   },
   "analytics": null

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KVYR5SFSS1ZS0GVNHJ0DCQZB",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 8,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 7.1,
+  "penalties_applied": [],
+  "total": 7.1,
+  "recommended_stage": "build",
+  "rationale": "Founders and engineering leads at AI-native SaaS startups \u2014 a specific, named role at companies already spending $1k\u2013$10k/month on LLM APIs \u2014 are the buyer, and they demonstrably pay for observability tooling (Helicone, Langfuse, Datadog). The $4,200/month real-world story confirms the pain is financially material and the fix is technically tractable: a tagging layer that attributes LLM calls to named features and surfaces a cost breakdown. Buildability is strong because the core is an HTTP proxy/middleware plus a Claude-generated report layer, all achievable without custom ML or compliance work; and once live, delivery, reporting, and billing run automatically with only periodic operator approval gates. All four build gates pass.",
+  "solution_plan": "LLM Cost Attribution is a hosted micro-service that sits between an AI startup's app and its LLM provider (OpenAI/Anthropic API), tagging every request with a feature name and streaming a daily cost-by-feature report to the founder's inbox. The factory builds it as: a lightweight OpenAI-compatible proxy (a Claude-generated Python script deployed to a free-tier cloud function), a simple sign-up page with Stripe subscription ($49\u2013$149/month), and an intake form collecting the customer's API base-URL and feature tag list \u2014 no operator coding. To sell, the factory drafts cold emails targeting AI-native startup founders visible on ProductHunt launches, LinkedIn 'AI startup' filters, and replies in relevant HN threads \u2014 each outreach batch is queued for operator approval before sending. Once a customer connects, the proxy runs silently, Claude generates a weekly cost-by-feature digest email automatically, Stripe handles recurring billing, and standard FAQ responses are handled by Claude; the operator's only recurring touch is approving outreach batches and any refund requests. A solo non-technical operator can realistically build and maintain this \u2014 the only meaningful risk is that large startups may resist routing production traffic through a third-party proxy, which the validate stage should probe with 3\u20135 design partners before scaling outreach.",
+  "notes": "All build gates pass: operational_autonomy=7 (meets min 7), buildability_with_ai=7 (meets min 6), buyer_clarity=8 (meets min 6), willingness_to_pay=8 (meets min 5). Closest competitor gap is feature-level cost attribution specifically, which Helicone and Langfuse do not prioritize. Defensibility grows with per-customer tagging history. Recommended to launch with a design-partner cohort of 3\u20135 startups before broad outreach.",
+  "scored_at": "2026-06-25T09:42:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

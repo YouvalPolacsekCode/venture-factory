@@ -1,0 +1,27 @@
+{
+  "id": "01KVYR5SFHR57R5D6HX6Q1XVNV",
+  "discovered_at": "2026-06-25T09:41:14+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182453/how-do-you-track-the-productivity-of-field-sales-teams-across-multiple-locations",
+    "snippet": "I manage a field sales team operating across multiple cities and retail locations. Currently, we rely on spreadsheets, phone calls, WhatsApp updates, and manual reports to track daily activities. Challenges include: verifying whether sales representatives actually visited assigned outlets, monitoring attendance and working hours in the field, tracking planned versus completed routes, measuring productivity across different territories, collecting sales and visit reports in real time."
+  },
+  "problem_statement": "Field sales managers in emerging markets cannot reliably verify outlet visits, track rep attendance, or measure territory productivity without manual spreadsheets and WhatsApp \u2014 leading to wasted payroll and missed sales targets.",
+  "target_segment": "SMB and mid-market sales operations managers running distributed field sales teams across multiple cities, especially in South/Southeast Asia and emerging markets",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "field-sales",
+    "sales-ops",
+    "route-tracking",
+    "attendance-tracking",
+    "crm",
+    "productivity-tracking",
+    "mobile-workforce",
+    "salesforce-automation",
+    "fmcg",
+    "retail-execution"
+  ],
+  "notes": "Poster explicitly lists 5 concrete operational pain points with a multi-city team. Current stack is spreadsheets + WhatsApp \u2014 a strong indicator they are pre-tool and would pay for even a basic SaaS. Category has established paid competitors (Salesforce Maps, Badger Maps, FieldAssist) confirming budget exists. Buyer: ops/sales managers at regional FMCG distributors, pharma field teams, or retail chains.",
+  "status": "candidate"
+}

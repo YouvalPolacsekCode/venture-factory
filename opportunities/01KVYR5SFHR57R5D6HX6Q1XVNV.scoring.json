@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KVYR5SFHR57R5D6HX6Q1XVNV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Field sales tracking requires GPS/mobile app integration, territory configuration per customer, and ongoing per-team setup \u2014 this is fundamentally a mobile SaaS product, not a Claude-prompt service."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling to ops managers at regional FMCG/pharma companies in South/Southeast Asia virtually always requires demos and onboarding calls; self-serve is unrealistic for this segment."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent \u2014 distributed field sales managers genuinely suffer from spreadsheet chaos \u2014 and paid competitors confirm budget exists. However, the actual product needed is a mobile app with GPS tracking, real-time rep location, and territory management: none of that is buildable as a Claude prompt plus a landing page by a solo non-technical operator. Operational autonomy is near zero because every customer needs custom territory setup, mobile app deployment for reps, and ongoing support for a field workforce. This is a well-served market with strong incumbents (Salesforce Maps, FieldAssist) that requires a proper mobile engineering team, not a Claude factory.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using this factory. The core product (GPS-verified field rep tracking across multiple cities) requires a native or PWA mobile app, real-time location services, and per-customer territory configuration \u2014 none of which can be assembled from Claude prompts and a Stripe link. The incumbents (FieldAssist, Badger Maps) are already well-funded. Drop and redirect attention to the LLM observability opportunities in this batch, which are genuinely buildable here.",
+  "notes": "build_gate failed: buildability_with_ai=3 (below min 6), operational_autonomy=2 (below min 7), buyer_clarity=7 (passes), willingness_to_pay=7 (passes). Total 2.9 is below min_total_to_validate threshold of 5.5 after penalties. Drop recommended.",
+  "scored_at": "2026-06-25T09:42:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

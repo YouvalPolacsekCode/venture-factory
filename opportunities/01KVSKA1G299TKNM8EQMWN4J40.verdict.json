@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KVSKA1G299TKNM8EQMWN4J40",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The pain is real and frequent \u2014 LLM stylistic tics are a genuine daily irritant for content professionals already paying for AI writing tools \u2014 but the evidence base is too thin to clear the pass bar: the primary signal is a single low-traction HN thread (4 points, 7 comments), willingness-to-pay anchors are indirect (competitor pricing inference rather than direct quotes), and the space is crowded with well-funded incumbents (Grammarly, Hemingway, Jasper, Quillbot) who are shipping style-cleaning features actively. Verdict is 'rejected' at this stage rather than 'inconclusive' because the defensibility risk is structural (prompt wrapper), the HN signal is below threshold for the required 5 distinct pain quotes, and re-queuing without new evidence is unlikely to change the picture.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48637755"
+  ],
+  "evaluated_at": "2026-06-25T09:42:12+03:00"
+}

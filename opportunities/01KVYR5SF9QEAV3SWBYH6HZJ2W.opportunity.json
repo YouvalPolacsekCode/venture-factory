@@ -1,0 +1,25 @@
+{
+  "id": "01KVYR5SF9QEAV3SWBYH6HZJ2W",
+  "discovered_at": "2026-06-25T09:41:14+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48669496",
+    "snippet": "Lots of products working on saving-tokens-space. Compression, Tool Output rewrite, Sitting as proxy Cache between harness and provider, doing circus with interceptor hooks - these are some of the approaches we are seeing today. In my tests, honest conclusion from repeated observations is that the tangible results are possible only by reducing Turns upfront in an agentic loop. Turns saved in first 25% of an otherwise 40 turn loop can produce significant gains - than turns saved in the latter portion."
+  },
+  "problem_statement": "Teams running multi-turn agentic AI loops struggle to control token consumption and costs, with no clear tooling to identify which loop phases waste the most tokens before they burn budget.",
+  "target_segment": "AI/ML engineers and startup CTOs at companies running production agentic workflows on LLM APIs",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm-cost",
+    "token-optimization",
+    "agentic-ai",
+    "ai-infrastructure",
+    "context-window",
+    "prompt-engineering",
+    "ai-ops",
+    "cost-control"
+  ],
+  "notes": "Corroborated by dev.to post (https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph) where a startup reports burning $4,200/month on AI infra without visibility into which features drove cost. Combined signals suggest willingness to pay for observability/optimization tooling in agentic loops. Buyer: engineering teams at AI-native startups with active API spend.",
+  "status": "candidate"
+}

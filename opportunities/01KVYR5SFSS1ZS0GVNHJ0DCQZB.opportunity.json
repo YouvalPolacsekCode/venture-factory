@@ -1,0 +1,26 @@
+{
+  "id": "01KVYR5SFSS1ZS0GVNHJ0DCQZB",
+  "discovered_at": "2026-06-25T09:41:14+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph",
+    "snippet": "Twelve months ago we were burning $4,200/month on AI infrastructure and could not tell you which features were responsible. Two features out of six were consuming the majority of cost. Only after building custom cost attribution tooling did we identify and fix the drain."
+  },
+  "problem_statement": "AI startups running multiple product features on shared LLM infrastructure cannot attribute API costs to individual features or user flows, making it impossible to make data-driven decisions about what to cut, optimize, or price.",
+  "target_segment": "Founders and engineering leads at AI-native SaaS startups with $1k+/month LLM API spend across multiple product features",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "ai-cost-attribution",
+    "llm-observability",
+    "ai-infrastructure",
+    "cost-visibility",
+    "unit-economics",
+    "ai-ops",
+    "llm-spend",
+    "feature-cost-tracking",
+    "startup-tooling"
+  ],
+  "notes": "Author explicitly states $4,200/month burn with zero feature-level visibility \u2014 then built internal tooling to solve it, confirming the gap is real and solvable. Published post signals others face same issue. Corroborated by HN thread on token-saving strategies (https://news.ycombinator.com/item?id=48669496). Strong buyer signal: this persona is already paying $1k\u2013$10k/month to LLM providers and would pay for observability tooling to reduce that. Comparable to DataDog for LLM spend. Existing players (Helicone, LangSmith, Langfuse) validate the category but signal unmet need for cost-attribution-specifically at the feature level.",
+  "status": "candidate"
+}

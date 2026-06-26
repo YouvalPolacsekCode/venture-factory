@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KW1AQ9BB8F2Y2TZYA7SFTP3G",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Setting up and maintaining a resilient auth-rotation layer for Salesforce + GitHub Actions requires per-customer credential management, integration work, and ongoing Salesforce-platform-specific configuration \u2014 not deliverable fully autonomously."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a named, budget-holding segment (Salesforce DevOps engineers at companies paying enterprise Salesforce + CI/CD tooling costs), and the pain is recurring and costly. However, a monitoring or auth-rotation service for Salesforce + GitHub Actions requires per-customer Salesforce credential access and ongoing maintenance tied to Salesforce platform update cycles \u2014 each new customer is a bespoke integration, not a self-serve signup. After the human fulfillment penalty, total drops to 4.2, below the validate threshold. Operational_autonomy at 5 would also fail the build gate (minimum 7) even if the total were higher.",
+  "solution_plan": "Not recommended for this factory. While the pain is real and the buyer is clear, building an autonomous auth-monitoring or auth-rotation service for Salesforce + GitHub Actions requires per-org credential management and Salesforce API integration depth that can't be delivered hands-off by Claude. Each new customer would need custom setup work by a human with Salesforce admin access. A solo non-technical operator cannot build this autonomously. Pass.",
+  "notes": "Fails operational_autonomy build gate (score 5, minimum 7). Total 4.2 below min_total_to_validate of 5.5.",
+  "scored_at": "2026-06-26T09:45:38+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

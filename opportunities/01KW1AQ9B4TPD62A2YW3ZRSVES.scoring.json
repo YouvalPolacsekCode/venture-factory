@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KW1AQ9B4TPD62A2YW3ZRSVES",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Resolving Salesforce sandbox auth loops requires org-specific Salesforce access and configuration steps that cannot be fully automated without per-customer setup, credential management, and likely Salesforce support touchpoints."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Each affected org requires a human with Salesforce admin credentials to authorize and execute the fix; this is not a self-serve automated delivery."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is clear \u2014 Salesforce admins and DevOps engineers at enterprise companies with active CI/CD pipelines \u2014 and the pain is real (blocked pipelines cause release delays with direct cost). However, the solution to a Salesforce sandbox auth loop is inherently tied to per-org Salesforce credentials and admin access, making autonomous automated delivery essentially impossible without deep per-customer integration. After penalties for required human fulfillment and synchronous involvement, the total score falls well below the validate threshold, and the operational_autonomy score of 3 would also fail the build gate. This is a consulting opportunity, not a scalable autonomous service.",
+  "solution_plan": "Not recommended for this factory. A solo non-technical operator could not build and maintain an autonomous service here: fixing Salesforce sandbox auth loops requires org-by-org admin access and Salesforce-specific tooling that can't be delivered hands-off by Claude. The closest viable product would be a detailed paid runbook/guide, but that's a one-time content sale with no recurring revenue and immediate commoditization. Pass.",
+  "notes": "Fails operational_autonomy build gate (score 3, minimum 7). Fails buildability_with_ai build gate (score 4, minimum 6). Total 2.8 also below min_total_to_validate of 5.5.",
+  "scored_at": "2026-06-26T09:45:38+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

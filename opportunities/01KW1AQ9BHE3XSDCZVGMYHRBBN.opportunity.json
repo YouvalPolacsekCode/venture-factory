@@ -1,0 +1,25 @@
+{
+  "id": "01KW1AQ9BHE3XSDCZVGMYHRBBN",
+  "discovered_at": "2026-06-26T09:43:51+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48680842",
+    "snippet": "I am about to start a bigger project with several subprojects and want to be a human in the loop of otherwise fairly automated loop, which should ideally use different agents for different roles (coding, design, testing, supervision, etc). I know this approach is becoming increasingly common and I wonder if there's already some tooling that facilitates that? Or do you simply use some specific model as a coordinator? [5 points, 4 comments, June 26 2026]"
+  },
+  "problem_statement": "Professional developers and technical solopreneurs running multi-agent AI workflows lack lightweight, configurable orchestration tooling that keeps a human checkpointed in the loop across specialized agents (coder, designer, tester, supervisor), forcing them to wire up fragile custom scripts or rely on heavyweight enterprise platforms.",
+  "target_segment": "Independent developers, technical solopreneurs, and small dev teams building AI-assisted software projects with multi-agent workflows",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "multi-agent",
+    "ai-orchestration",
+    "developer-tools",
+    "human-in-the-loop",
+    "workflow-automation",
+    "llm-tooling",
+    "solodev",
+    "agent-framework"
+  ],
+  "notes": "Poster is starting a real project ('bigger project with several subprojects'), not purely curious \u2014 implies professional context. Market signal is fresh (June 26 2026, 5 points, 4 comments). Existing tools (LangGraph, CrewAI, etc.) are either too low-level or too enterprise-heavy. A paid SaaS orchestration layer targeting solo operators and small teams with a clear human-approval UI could charge per seat/project. Willingness to pay not explicit but professional project context and the 'increasingly common' framing suggest active demand.",
+  "status": "candidate"
+}

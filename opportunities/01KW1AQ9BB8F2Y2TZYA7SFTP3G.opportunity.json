@@ -1,0 +1,25 @@
+{
+  "id": "01KW1AQ9BB8F2Y2TZYA7SFTP3G",
+  "discovered_at": "2026-06-26T09:43:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439563/github-ci-cd-org-auth-failing",
+    "snippet": "I am using GitHub actions to run a CI/CD pipeline for my salesforce project commits. This was all working fine for the past month and just stopped working on the login step. Nothing has changed on my side. [Developer at a company, CI/CD pipeline broken after platform update]"
+  },
+  "problem_statement": "Salesforce's sfdx-url authentication for GitHub Actions CI/CD pipelines breaks silently after platform updates, with no proactive notification, forcing developers to diagnose and fix broken pipelines manually each release cycle.",
+  "target_segment": "Salesforce developers and DevOps engineers at ISVs and enterprise teams using GitHub Actions for Salesforce deployments",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "github-actions",
+    "cicd",
+    "sfdx",
+    "auth",
+    "devops",
+    "release-management",
+    "platform-ops"
+  ],
+  "notes": "Recurring pattern: Salesforce platform changes silently break CI/CD auth. A monitoring/alerting service or a resilient auth-rotation layer for Salesforce + GitHub Actions pipelines would have clear paying buyers (Salesforce dev teams at companies paying for enterprise licenses). Willingness to pay implied by the existing spend on Salesforce + CI/CD infrastructure.",
+  "status": "candidate"
+}

@@ -1,0 +1,12 @@
+{
+  "opportunity_id": "01KVYR5SF9QEAV3SWBYH6HZJ2W",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The pain is real and frequent \u2014 AI engineers running production agentic loops do burn budget on unproductive turns \u2014 but evidence of distinct paying customers is thin: the HN thread is a practitioner discussion, not a buyer signal, and the single dev.to story (shared with candidate 01KVYR5SFSS1ZS0GVNHJ0DCQZB) is the only willingness-to-pay anchor. The problem is also narrower and more technically complex than cost attribution generally: a loop-phase profiler requires per-customer SDK instrumentation or proxy insertion, and no competitor pricing page or paid job posting corroborates a standalone market for this specific slice. Without at least 5 distinct pain quotes and a second WTP signal, the bar for 'pass' is not met.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48669496",
+    "https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph"
+  ],
+  "evaluated_at": "2026-06-26T09:44:51+03:00"
+}

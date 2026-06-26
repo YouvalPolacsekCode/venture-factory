@@ -1,0 +1,25 @@
+{
+  "id": "01KW1AQ9B4TPD62A2YW3ZRSVES",
+  "discovered_at": "2026-06-26T09:43:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439566/reset-email-address-in-sandbox-after-the-new-salesforce-release",
+    "snippet": "When we try to update the email address for any user - say deploy user - it will send an email to us. But when we click the url and then click confirm the change button, it asks us to login. And since this is a new sandbox of course we don't have the password. And we can't reset the password as the email is not updated and it is still .invalid email. [Salesforce CI/CD admin, enterprise context, post-release breakage affecting deploy pipelines]"
+  },
+  "problem_statement": "After a Salesforce platform release, newly spun-up sandboxes enter an unresolvable auth loop: the deploy-user email can't be confirmed without a password, and the password can't be reset without a confirmed email, blocking CI/CD pipelines until manual Salesforce support intervention.",
+  "target_segment": "Salesforce admins and DevOps engineers at companies running CI/CD pipelines against Salesforce sandboxes",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "sandbox",
+    "cicd",
+    "devops",
+    "deployment",
+    "auth-loop",
+    "salesforce-admin",
+    "platform-ops"
+  ],
+  "notes": "Business context is clear: broken sandbox auth blocks release pipelines at companies that pay for Salesforce enterprise licenses. A scripted sandbox-bootstrap or post-refresh automation tool that resolves email/auth state could charge per-org or as a managed package. Paired with the GitHub Actions CI/CD auth failure item (https://salesforce.stackexchange.com/questions/439563/github-ci-cd-org-auth-failing), this suggests a recurring Salesforce DevOps tooling gap. Buyer: Salesforce admin/DevOps teams who already pay for Salesforce and SF DevOps tooling.",
+  "status": "candidate"
+}

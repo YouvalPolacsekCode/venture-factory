@@ -1,0 +1,25 @@
+{
+  "id": "01KW1AQ9BQCPQKRE4MGA16KDYH",
+  "discovered_at": "2026-06-26T09:43:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199333/trying-to-limit-the-number-of-outgoing-connections-to-one-domain",
+    "snippet": "I've got a bunch of Mailman3 mailing lists, but one of them has 500+ users, and about 60 of them are on @rochester.rr.com. RoadRunner has been bouncing all or nearly all the emails because of either too many recipients per connection, or too many simultaneous connections. [Sysadmin managing community/org mailing lists, spending time configuring Postfix throttling manually]"
+  },
+  "problem_statement": "Operators running self-hosted mailing lists (Mailman3/Postfix) waste significant configuration time manually tuning per-domain outbound connection throttling to satisfy ISP rate limits, and still suffer delivery failures when ISP policies change silently.",
+  "target_segment": "Sysadmins and DevOps engineers managing self-hosted bulk mailing lists for organizations, communities, or SaaS products",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "postfix",
+    "mailman",
+    "mailing-list",
+    "smtp-throttling",
+    "self-hosted-email",
+    "bulk-email",
+    "sysadmin"
+  ],
+  "notes": "Single signal but professional/ops context is clear. The pain is recurring (ISP rate limits change, requiring ongoing tuning). A managed deliverability layer or a Postfix config-as-a-service for self-hosters could charge monthly. Weaker signal than the Salesforce cluster \u2014 only one data point here.",
+  "status": "candidate"
+}

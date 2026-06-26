@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KW1AQ9BQCPQKRE4MGA16KDYH",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Self-hosted Postfix/Mailman3 deliverability tuning is highly environment-specific; meaningful help requires per-customer server access and configuration work, not automated delivery."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer segment \u2014 sysadmins running self-hosted Mailman3/Postfix for organizations \u2014 is small, fragmented, and unlikely to pay for a SaaS deliverability tool when the underlying infrastructure is deliberately self-hosted to avoid vendor lock-in. Willingness to pay is weak (score 4): the self-hosting choice itself signals a preference against managed services. The solution is inherently per-customer configuration work requiring server access, which fails the autonomy requirement. Single-signal evidence (one ServeFault post) gives low confidence. Total 2.8 falls well below the validate threshold.",
+  "solution_plan": "Not recommended for this factory. Self-hosted email deliverability is a niche that by definition attracts operators who prefer to manage their own infrastructure and avoid paid tools. Each customer engagement would require hands-on server-level configuration. A solo non-technical operator cannot deliver this autonomously, and the addressable market of organizations running Mailman3 at scale is small enough that even full capture would not yield meaningful revenue. Pass.",
+  "notes": "Single weak signal (signal_strength 2). Fails operational_autonomy build gate (score 5, minimum 7). Fails buyer_clarity build gate (score 4, minimum 6). Fails willingness_to_pay build gate (score 4, minimum 5). Total 2.8 well below min_total_to_validate.",
+  "scored_at": "2026-06-26T09:45:38+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

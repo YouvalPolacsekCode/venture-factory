@@ -1,0 +1,12 @@
+{
+  "opportunity_id": "01KVYR5SFSS1ZS0GVNHJ0DCQZB",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "daily",
+  "rationale": "The primary source documents a real $4,200/month unattributed LLM spend problem that required bespoke internal tooling to resolve \u2014 a classic 'pain so bad we built it ourselves' signal. This is corroborated by an active HN thread on token-cost management and validated by the existence of funded competitors (Helicone, Langfuse, LangSmith) who charge for adjacent observability, confirming willingness-to-pay in the category. The pain is daily and burning because every LLM API call made without cost attribution compounds the financial opacity.",
+  "sources": [
+    "https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph",
+    "https://news.ycombinator.com/item?id=48669496"
+  ],
+  "evaluated_at": "2026-06-27T09:22:53+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01KW3VWCEDJJ9QXHR9A3ZK7RW3",
+  "discovered_at": "2026-06-27T09:22:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203501/client-frequently-paying-late-manager-claiming-i-make-mistakes-but-doesnt-prov",
+    "snippet": "I work for a small MSP. The owner is almost always late paying my invoices... he requested I fill out time sheets in the proprietary system he built. Recently he said that my invoice doesn't match the time sheets so he fixed the time sheets for me but wont do this again. I'm not sure what the mistakes were but I actually copy the data from the time sheets to my invoices."
+  },
+  "problem_statement": "Independent contractors and freelancers working with clients who use proprietary time-tracking or billing systems struggle with invoice-to-timesheet reconciliation errors, leading to late or disputed payments and power imbalances with clients.",
+  "target_segment": "Independent contractors and freelancers (especially in IT/MSP services) billing clients who use custom or proprietary time-tracking systems",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "invoice-reconciliation",
+    "timesheet-sync",
+    "freelance-billing",
+    "contractor-payments",
+    "late-payments",
+    "msp",
+    "time-tracking"
+  ],
+  "notes": "Recurring pain for contractors: manual copy of timesheet data to invoices creates errors and disputes. Buyer signal: contractors are already losing money through late payments and disputes \u2014 clear ROI for a tool that auto-syncs timesheet exports to invoice templates. Adjacent to existing invoicing tools but focused on cross-system reconciliation. Users in this space spend on tools like FreshBooks, Harvest, etc.",
+  "status": "candidate"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KW3VWCE6Q7MPGAN6HX5XCG4Z",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A functional DOCX editor requires ongoing software engineering to maintain compatibility with the DOCX spec, handle edge cases, and fix rendering bugs \u2014 not automatable by Claude alone."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "Building a reliable DOCX editor is a deep software engineering problem \u2014 OOXML is a notoriously complex spec and existing attempts (LibreOffice, OnlyOffice) have required years of engineering effort. This is not buildable by a Claude factory + simple tooling in any reasonable timeframe; buildability_with_ai scores 3 because it requires custom rendering logic, not prompts. The buyer mix is freelancers and indie devs who are motivated by avoiding a $100/year subscription, meaning price ceiling is very low and churn is high. The deciding factor is that this is fundamentally an engineering product, not a Claude-powered service, making it the wrong category for this factory.",
+  "solution_plan": "WHAT: A hosted SaaS DOCX editor with basic formatting, track changes, and export. BUILD: This cannot realistically be built by the factory \u2014 a DOCX editor requires a rendering engine (e.g. integrating an existing open-source library like Mammoth.js or ProseMirror with OOXML serialization), which requires real software development, not Claude prompts. The operator cannot build or maintain this without a technical co-founder or contractor. SELL: N/A \u2014 build viability is the blocking constraint. MAINTAIN: N/A. REALITY CHECK: Do not pursue. The editorial opportunity here is reselling or white-labeling an existing editor (e.g. CKEditor, TinyMCE with DOCX plugin), but that involves licensing costs and integration complexity that still exceeds the factory's autonomous build capability.",
+  "notes": "Total 3.2 \u2014 drop. buildability_with_ai (3) and operational_autonomy (4) both fail build_gates floors. This is an engineering product, not a Claude-powered service.",
+  "scored_at": "2026-06-27T09:24:10+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

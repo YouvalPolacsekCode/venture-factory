@@ -1,0 +1,25 @@
+{
+  "id": "01KW3VWCENZT4FSE5QB7SC0P9M",
+  "discovered_at": "2026-06-27T09:22:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439571/can-the-agentforce-mobile-sdk-chat-ui-be-fully-themed-branded-in-react-native-o",
+    "snippet": "I'm integrating the Agentforce Mobile SDK into a React Native app and need to brand the chat experience to a client's design system (colors, fonts, overall styling)... I don't see any direct theming, color, or font configuration for the chat UI."
+  },
+  "problem_statement": "Salesforce developers integrating Agentforce Mobile SDK into React Native apps for enterprise clients cannot theme or brand the chat UI to match client design systems, forcing them to build costly custom wrappers or ship off-brand experiences.",
+  "target_segment": "Salesforce developers and mobile app agencies building branded AI chat experiences on top of Agentforce for enterprise clients",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "react-native",
+    "mobile-sdk",
+    "ui-theming",
+    "enterprise-chat",
+    "white-label",
+    "sdk-customization"
+  ],
+  "notes": "Agency/enterprise developer asking on behalf of a client \u2014 classic B2B buyer context. Building branded mobile apps for enterprise clients implies significant project budgets. A theming/wrapper library or service for Agentforce Mobile SDK chat UI could be sold as an npm package or professional services engagement. Willingness to pay is high given enterprise client expectations.",
+  "status": "candidate"
+}

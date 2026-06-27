@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KW3VWCENZT4FSE5QB7SC0P9M",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a custom React Native theming wrapper for Agentforce SDK requires per-client professional services: scoping the client's design system, implementing and testing the wrapper, and iterating on UI bugs \u2014 all requiring developer judgment per engagement."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Agency/enterprise clients expect scoping calls, design reviews, and handoff meetings \u2014 standard professional services delivery that cannot be automated."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a Salesforce developer or mobile agency with a real enterprise client budget \u2014 buyer clarity and willingness to pay are genuine strengths. However, solving Agentforce Mobile SDK theming for React Native is a professional services problem: each client has a unique design system, requires hands-on SDK integration, and expects synchronous communication throughout. Operational autonomy scores 3 because every delivery requires developer work. Even if packaged as an npm library, maintaining SDK compatibility as Salesforce updates Agentforce is ongoing engineering work beyond the factory's capability. The deciding factor: this is a consulting engagement, not a scalable autonomous service.",
+  "solution_plan": "WHAT: A pre-built theming layer / npm package for Agentforce Mobile SDK that applies client brand tokens (colors, fonts, border radii) to the chat UI. BUILD: The factory cannot autonomously build this \u2014 it requires React Native development expertise, hands-on SDK testing, and ongoing maintenance as Salesforce releases SDK updates. A solo non-technical operator cannot build or maintain this; it would require hiring a React Native developer. SELL: The channel exists (Salesforce AppExchange, Salesforce developer forums, LinkedIn targeting mobile dev agencies), but the sales cycle is enterprise-length with demos and calls. REALITY CHECK: Do not pursue as a factory-autonomous service. If pursued at all, it would require a technical partner and would be a consulting/professional services engagement, not a hands-off micro-service.",
+  "notes": "Total 3.0 \u2014 drop. operational_autonomy (3) fails build_gate floor of 7; buildability_with_ai (4) fails build_gate floor of 6. This is a professional services engagement, not a Claude-powered autonomous service.",
+  "scored_at": "2026-06-27T09:24:10+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

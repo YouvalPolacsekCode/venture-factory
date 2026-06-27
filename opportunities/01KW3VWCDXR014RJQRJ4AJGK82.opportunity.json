@@ -1,0 +1,24 @@
+{
+  "id": "01KW3VWCDXR014RJQRJ4AJGK82",
+  "discovered_at": "2026-06-27T09:22:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48694802",
+    "snippet": "For those who are using llms on macbook, Want to understand how macbook is different than dedicated GPU in running those models? and how to know how much a macbook is capable of running a model? [24 points, 45 comments]"
+  },
+  "problem_statement": "Developers and technical users running local LLMs lack a clear, reliable way to benchmark and predict which models will run well on Apple Silicon vs. dedicated GPU hardware, leading to wasted time and poor model selection.",
+  "target_segment": "Developer/ML practitioners running local LLMs on MacBooks or considering hardware upgrades",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "local-llm",
+    "apple-silicon",
+    "gpu-benchmarking",
+    "model-compatibility",
+    "llm-hardware",
+    "macbook",
+    "on-device-ai"
+  ],
+  "notes": "45 comments on a question about MacBook vs GPU for LLMs signals active community with unresolved confusion. Buyers here are developers who have already purchased or are about to purchase hardware \u2014 real spend involved. A tool or service that maps model requirements to hardware capability (memory bandwidth, unified memory size) would capture this. Willingness to pay is implied by hardware purchase decisions in the thousands of dollars.",
+  "status": "candidate"
+}

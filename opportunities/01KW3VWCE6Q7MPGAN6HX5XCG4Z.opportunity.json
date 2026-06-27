@@ -1,0 +1,24 @@
+{
+  "id": "01KW3VWCE6Q7MPGAN6HX5XCG4Z",
+  "discovered_at": "2026-06-27T09:22:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48692474",
+    "snippet": "The open source DOCX editor submitted to HN a few weeks ago has been deleted. The github repo under eigenpal is gone. The web site at docx-editor is 503. No idea what's going on. [81 points, 38 comments]"
+  },
+  "problem_statement": "There is no reliable, self-hostable or open-source DOCX editor that individuals and small teams can depend on \u2014 existing tools disappear, go offline, or lack basic functionality, leaving users without a trustworthy alternative to Microsoft Word for collaborative document editing.",
+  "target_segment": "Freelancers, small teams, and indie developers who need a dependable lightweight DOCX editor without a Microsoft 365 subscription",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "docx-editor",
+    "word-processor",
+    "open-source",
+    "self-hosted",
+    "document-editing",
+    "microsoft-word-alternative",
+    "collaboration"
+  ],
+  "notes": "81 points and 38 comments on HN for a disappeared DOCX editor signals strong unmet demand. Users are frustrated that existing open-source options are unreliable. Buyer signal: people avoiding Microsoft 365 subscriptions (~$100\u2013$360/year per user) represent clear willingness to pay for a stable alternative. A hosted SaaS DOCX editor with a freemium or low monthly fee could capture this segment.",
+  "status": "candidate"
+}

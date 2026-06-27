@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW3VWCEWSJM74XBSXEC55ZHF",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.7,
+  "penalties_applied": [],
+  "total": 6.7,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is specific and named \u2014 SEO agencies, legal teams, and compliance officers \u2014 all of whom have budget authority and operate in contexts where documented evidence of webpage changes has real financial or legal value. Willingness to pay is evidenced by existing paid services (Visualping at $10-$40/mo, Distill.io, Versionista at $25+/mo for legal-grade monitoring), confirming this segment pays for web change tools. The service is cleanly buildable: a Claude-powered intake (URL + date range) that queries available archives, synthesizes a change report, and delivers a timestamped PDF \u2014 fully automated end-to-end. Operational autonomy is strong because the delivery is asynchronous and document-based. Capped at validate because the specific angle (recent-window recovery for legal/compliance) is a differentiated niche that needs a market probe to confirm volume and willingness to pay at a premium price point versus existing monitoring tools.",
+  "solution_plan": "WHAT: A paid on-demand service \u2014 submit a URL and a date window, receive a forensic-quality report documenting what changed, what was recoverable, and from which sources, delivered as a timestamped PDF. BUILD: Factory creates a Tally intake form (URL, date range, context/purpose), a Claude workflow that queries Wayback Machine API, Archive.ph, Google Cache, and CDN/ISP cache hints, synthesizes findings into a structured change report, and generates a branded PDF; payment via Stripe ($49-$99 per report, or $199/mo for agencies with 5 reports); delivery via email within 1 hour. No coding by operator. SELL: Target SEO agency owners (LinkedIn, SEO Twitter/X communities, Ahrefs/SEMrush user groups) and legal/compliance professionals (legal tech newsletters, bar association forums); outreach copy drafted by factory, sent only after operator approval. MAINTAIN: Submission \u2192 Claude processing \u2192 PDF email delivery is fully automated; Stripe handles billing and receipts; Claude handles common support questions via email template; operator reviews weekly outreach approval queue. ONLY recurring human touch: approving outreach batches and reviewing any legally sensitive report requests flagged by Claude.",
+  "notes": "Passes all build_gates floors (operational_autonomy 8 \u2265 7, buildability_with_ai 8 \u2265 6, buyer_clarity 7 \u2265 6, willingness_to_pay 7 \u2265 5). Capped at validate (not build) because total 6.7 meets the 6.5 threshold but responsiveness_signal is untested. Recommend a probe: post a $49 waitlist offer in 2-3 SEO communities and one legal-tech forum to test conversion intent before building. Strong candidate if probe returns even 5-8% signup rate.",
+  "scored_at": "2026-06-27T09:24:10+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

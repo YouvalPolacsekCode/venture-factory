@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01KVYR5SFSS1ZS0GVNHJ0DCQZB",
+  "decided_at": "2026-06-27T09:24:25+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 8,
+      "floor": 5,
+      "pass": true
+    },
+    "total": {
+      "score": 7.1,
+      "min_total_to_build": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "eligible_for_build_now": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass and the total score (7.1) exceeds the 6.5 build threshold, so this opportunity is technically eligible for build_now. However, the cost-to-gain ratio of 3.344 far exceeds the kill threshold of 0.6 in cost_gain_model.yaml \u2014 even the optimistic scenario (1.672) is nearly 3x the kill line. This means the opportunity is projected to cost over three times what it earns in the first four weeks. Additionally, the responsiveness_signal is only 3/10 (no outreach test data), and the core product requires AI startups to route production LLM traffic through a third-party proxy \u2014 a significant trust barrier that has not been validated with any design partners yet. Deferring one week to run a lightweight responsiveness test (cold outreach to 20\u201330 AI startup founders gauging interest in feature-level cost attribution) would either confirm demand or expose that the proxy-trust objection is fatal, at negligible cost.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn DM to AI startup founders who recently posted about LLM costs"
+}

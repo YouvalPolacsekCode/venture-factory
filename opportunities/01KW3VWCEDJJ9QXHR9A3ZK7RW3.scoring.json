@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW3VWCEDJJ9QXHR9A3ZK7RW3",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is an independent contractor in IT/MSP services \u2014 a specific, nameable professional who already pays for invoicing tools (FreshBooks, Harvest, QuickBooks) and has clear financial pain from disputed or delayed payments. Willingness to pay is real: the ROI is direct (even one recovered disputed invoice justifies months of subscription). The service is buildable with Claude: upload a timesheet export (CSV/PDF), upload or describe your invoice, Claude reconciles them and flags discrepancies, generates a clean invoice PDF. Operational autonomy is solid \u2014 intake form + Claude processing + PDF delivery is fully automated, with only outreach batches requiring operator approval. The deciding factor is that this is validate-stage because no market probe has been run yet and the niche (MSP contractors specifically) needs confirmation of sufficient volume.",
+  "solution_plan": "WHAT: An AI-powered timesheet-to-invoice reconciliation service \u2014 contractors upload their timesheet export and invoice draft, Claude finds discrepancies and returns a clean, corrected invoice PDF. BUILD: Factory creates a simple intake form (Tally or Typeform), a Claude prompt that parses both documents and produces a line-item reconciliation report plus a formatted invoice, and a Stripe payment link for a per-use fee (~$9) or monthly plan (~$29/mo); output delivered via email. No coding by the operator. SELL: Reach IT contractors and MSP freelancers via r/msp, r/freelance, LinkedIn groups for IT consultants, and cold email to freelancers listed on Upwork/Toptal in IT infrastructure; outreach goes out only after operator approval. MAINTAIN: Submission \u2192 Claude processing \u2192 email delivery is fully automated; Stripe handles billing; Claude handles support FAQs; operator reviews outreach batches weekly. ONLY human touch: approving outreach sends and reviewing any flagged edge-case submissions.",
+  "notes": "Passes all build_gates floors (operational_autonomy 7 \u2265 7, buildability_with_ai 7 \u2265 6, buyer_clarity 6 \u2265 6, willingness_to_pay 6 \u2265 5). Capped at validate because responsiveness_signal is untested (2) and total 6.0 is below the 6.5 min_to_build threshold. Recommend a 2-week outreach probe to 50 IT/MSP freelancers before committing to build.",
+  "scored_at": "2026-06-27T09:24:10+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

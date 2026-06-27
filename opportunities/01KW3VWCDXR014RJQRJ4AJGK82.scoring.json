@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW3VWCDXR014RJQRJ4AJGK82",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "drop",
+  "rationale": "The audience is individual developers and ML hobbyists \u2014 a tech-savvy cohort that skews strongly toward free tools, community wikis, and existing benchmarking sites (like llm.ggerganov.com or everymac.com). While hardware spend is real, software spend on a benchmarking tool is not well evidenced: no paid substitutes at meaningful price points exist, and the HN thread is a question post, not a frustrated-with-a-product post. Buyer clarity is weak because 'developers running local LLMs' spans students, hobbyists, and professionals with very different willingness to pay \u2014 no specific budget holder or purchase trigger is named. The deciding factor is low willingness to pay for a tool in a space dominated by open-source and community knowledge.",
+  "solution_plan": "WHAT: A web-based compatibility checker \u2014 enter a model name and MacBook spec (chip, unified memory) and get a predicted run quality score and configuration tips. BUILD: Factory builds a Claude-powered lookup that parses model metadata (parameters, quantization, context length) against Apple Silicon memory bandwidth tables and generates a recommendation; hosted as a static page with a one-time or subscription Stripe link. SELL: Reach HN, r/LocalLLaMA, and r/MachineLearning communities via show-posts and targeted Reddit ads; outreach approved by operator before sending. MAINTAIN: Model database updated via a periodic Claude scrape; support is an FAQ page; billing via Stripe. Only recurring human touch: approving outreach batches. REALITY CHECK: The audience expects this for free \u2014 monetization is the hardest unsolved problem here and solo viability is marginal without a clear paid-tier hook.",
+  "notes": "Does not reach min_total_to_validate threshold of 5.5. Willingness_to_pay at 4 is below build_gate floor of 5; buyer_clarity at 5 is below build_gate floor of 6.",
+  "scored_at": "2026-06-27T09:24:10+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

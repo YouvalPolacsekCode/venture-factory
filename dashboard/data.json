@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-26T06:45:43+00:00",
-    "idt": "2026-06-26T09:45:43+03:00"
+    "utc": "2026-06-27T06:24:29+00:00",
+    "idt": "2026-06-27T09:24:29+03:00"
   },
   "funnel": {
-    "candidates": 85,
-    "scored": 85,
-    "validated": 9,
+    "candidates": 90,
+    "scored": 90,
+    "validated": 10,
     "build_decisions": {
-      "defer_1_week": 8,
+      "defer_1_week": 9,
       "kill": 1
     },
     "build_now": 0,
@@ -40,10 +40,39 @@
         "Buildable": 7,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "other",
       "source_url": "https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph",
       "discovered_at": "2026-06-25T09:41:14+03:00"
+    },
+    {
+      "topics": [
+        "webpage-archiving",
+        "version-recovery",
+        "web-monitoring"
+      ],
+      "id": "01KW3VWCEWSJM74XBSXEC55ZHF",
+      "problem_statement": "Website owners, legal professionals, and SEO practitioners cannot reliably recover very recent (days-old) versions of webpages when standard archiving tools like Wayback Machine and Archive.ph have no captures, leaving evidence gaps for legal, compliance, or competitive intelligence purposes.",
+      "target_segment": "SEO agencies, legal teams, compliance officers, and web professionals who need recent webpage version recovery for evidence or audit purposes",
+      "total": 6.7,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is specific and named — SEO agencies, legal teams, and compliance officers — all of whom have budget authority and operate in contexts where documented evidence of webpage changes has real financial or legal value. Willingness to pay is evidenced by existing paid services (Visualping at $10-$40/mo, Distill.io, Versionista at $25+/mo for legal-grade monitoring), confirming this segment pays for web change tools. The service is cleanly buildable: a Claude-powered intake (URL + date rang…",
+      "solution_plan": "WHAT: A paid on-demand service — submit a URL and a date window, receive a forensic-quality report documenting what changed, what was recoverable, and from which sources, delivered as a timestamped PDF. BUILD: Factory creates a Tally intake form (URL, date range, context/purpose), a Claude workflow that queries Wayback Machine API, Archive.ph, Google Cache, and CDN/ISP cache hints, synthesizes findings into a structured change report, and generates a branded PDF; payment via Stripe ($49-$99 per report, or $199/mo for agencies with 5 reports); delivery via email within 1 hour. No coding by operator. SELL: Target SEO agency owners (LinkedIn, S…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webmasters.stackexchange.com/questions/148726/how-can-i-recover-a-recent-historical-version-of-a-webpage-when-wayback-machine",
+      "discovered_at": "2026-06-27T09:22:12+03:00"
     },
     {
       "topics": [
@@ -345,6 +374,35 @@
     },
     {
       "topics": [
+        "invoice-reconciliation",
+        "timesheet-sync",
+        "freelance-billing"
+      ],
+      "id": "01KW3VWCEDJJ9QXHR9A3ZK7RW3",
+      "problem_statement": "Independent contractors and freelancers working with clients who use proprietary time-tracking or billing systems struggle with invoice-to-timesheet reconciliation errors, leading to late or disputed payments and power imbalances with clients.",
+      "target_segment": "Independent contractors and freelancers (especially in IT/MSP services) billing clients who use custom or proprietary time-tracking systems",
+      "total": 6.0,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is an independent contractor in IT/MSP services — a specific, nameable professional who already pays for invoicing tools (FreshBooks, Harvest, QuickBooks) and has clear financial pain from disputed or delayed payments. Willingness to pay is real: the ROI is direct (even one recovered disputed invoice justifies months of subscription). The service is buildable with Claude: upload a timesheet export (CSV/PDF), upload or describe your invoice, Claude reconciles them and flags discrepanci…",
+      "solution_plan": "WHAT: An AI-powered timesheet-to-invoice reconciliation service — contractors upload their timesheet export and invoice draft, Claude finds discrepancies and returns a clean, corrected invoice PDF. BUILD: Factory creates a simple intake form (Tally or Typeform), a Claude prompt that parses both documents and produces a line-item reconciliation report plus a formatted invoice, and a Stripe payment link for a per-use fee (~$9) or monthly plan (~$29/mo); output delivered via email. No coding by the operator. SELL: Reach IT contractors and MSP freelancers via r/msp, r/freelance, LinkedIn groups for IT consultants, and cold email to freelancers l…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://workplace.stackexchange.com/questions/203501/client-frequently-paying-late-manager-claiming-i-make-mistakes-but-doesnt-prov",
+      "discovered_at": "2026-06-27T09:22:12+03:00"
+    },
+    {
+      "topics": [
         "indie-hacker",
         "portfolio-apps",
         "micro-saas"
@@ -621,6 +679,38 @@
     },
     {
       "topics": [
+        "local-llm",
+        "apple-silicon",
+        "gpu-benchmarking"
+      ],
+      "id": "01KW3VWCDXR014RJQRJ4AJGK82",
+      "problem_statement": "Developers and technical users running local LLMs lack a clear, reliable way to benchmark and predict which models will run well on Apple Silicon vs. dedicated GPU hardware, leading to wasted time and poor model selection.",
+      "target_segment": "Developer/ML practitioners running local LLMs on MacBooks or considering hardware upgrades",
+      "total": 5.3,
+      "recommended_stage": "drop",
+      "rationale": "The audience is individual developers and ML hobbyists — a tech-savvy cohort that skews strongly toward free tools, community wikis, and existing benchmarking sites (like llm.ggerganov.com or everymac.com). While hardware spend is real, software spend on a benchmarking tool is not well evidenced: no paid substitutes at meaningful price points exist, and the HN thread is a question post, not a frustrated-with-a-product post. Buyer clarity is weak because 'developers running local LLMs' spans stu…",
+      "solution_plan": "WHAT: A web-based compatibility checker — enter a model name and MacBook spec (chip, unified memory) and get a predicted run quality score and configuration tips. BUILD: Factory builds a Claude-powered lookup that parses model metadata (parameters, quantization, context length) against Apple Silicon memory bandwidth tables and generates a recommendation; hosted as a static page with a one-time or subscription Stripe link. SELL: Reach HN, r/LocalLLaMA, and r/MachineLearning communities via show-posts and targeted Reddit ads; outreach approved by operator before sending. MAINTAIN: Model database updated via a periodic Claude scrape; support is…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "find who pays",
+          "get them to pay"
+        ]
+      },
+      "scores": {
+        "Who pays": 5,
+        "Runs alone": 7,
+        "Will pay": 4,
+        "Buildable": 7,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48694802",
+      "discovered_at": "2026-06-27T09:22:12+03:00"
+    },
+    {
+      "topics": [
         "admin-dashboard",
         "orm-integration",
         "internal-tools"
@@ -682,117 +772,15 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199151/ai-bots-crawling-servers-in-the-last-months-what-is-the-best-tool-or-approach-t",
       "discovered_at": "2026-06-08T10:24:40+03:00"
-    },
-    {
-      "topics": [
-        "aws-s3",
-        "object-versioning",
-        "backup"
-      ],
-      "id": "01KTK1X2ZMDY6T40A6CQZ44SCZ",
-      "problem_statement": "DevOps engineers and sysadmins using AWS S3 object versioning for ransomware-resistant backups cannot efficiently browse, compare, restore, or manage versioned objects across large multi-object repositories — no purpose-built tooling exists for this workflow.",
-      "target_segment": "DevOps engineers and sysadmins at SMBs and startups managing S3-based backup strategies with object versioning enabled",
-      "total": 5.0,
-      "recommended_stage": "drop",
-      "rationale": "DevOps engineers managing S3-based backup strategies are a real, nameable buyer segment who already pay for AWS S3 (a clear money-in-motion signal), and the tooling gap around cross-object version management is genuine and durable. However, the signal source is a single 2022 HN comment — extremely weak validation — and the solution requires a functional web UI or CLI tool that connects to AWS APIs, which sits at moderate buildability (not a simple Claude-prompt service). Operational autonomy is…",
-      "solution_plan": "Not recommended at this stage. The potential service — a hosted web dashboard that lets you browse, compare, and restore versioned S3 objects across a restic repo — is technically feasible with AWS SDK integrations and a simple UI, but it is not shippable as a Claude-prompt-plus-Stripe form in a week. It requires a live hosted application, AWS credential management (a security surface), and ongoing maintenance as AWS evolves. More critically, there is essentially no validated demand signal: a four-year-old HN comment is not a buying signal. Run a Reddit/HN/LinkedIn probe to find 20+ people who express this pain actively before investing furt…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 6,
-        "Runs alone": 5,
-        "Will pay": 5,
-        "Buildable": 5,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=30106362",
-      "discovered_at": "2026-06-08T10:24:40+03:00"
-    },
-    {
-      "topics": [
-        "vibe-coding",
-        "ai-freelance",
-        "marketing-websites"
-      ],
-      "id": "01KTZVTXA3KAKXM81GNSXGRN3H",
-      "problem_statement": "Freelance web developers using AI tools can now produce marketing websites in under 2 hours but lack a standardized workflow, productized service packaging, or client-facing delivery system to repeatably operate at this throughput and price point without custom quoting and scoping every engagement.",
-      "target_segment": "Freelance web developers and small dev shops adopting AI-assisted development to productize high-volume website delivery",
-      "total": 5.0,
-      "recommended_stage": "validate",
-      "rationale": "The identified buyer — freelance developers who want to systematize AI-assisted website delivery — is a real segment, but they are individual service providers with thin margins who historically resist paying for workflow tooling when free alternatives exist; willingness_to_pay evidence is indirect (clients pay the freelancer, not the freelancer paying us). Operational autonomy scores 6 because a workflow/quoting tool can be mostly self-serve, but without strong WTP signal or a clearly named bu…",
-      "solution_plan": "The micro-service is a 'productized website delivery kit' — a guided intake form + Claude-generated project brief + client proposal template + Stripe payment link that a freelancer can white-label and send to clients in minutes. BUILD: the factory assembles a Tally intake form that feeds Claude, which outputs a scoped project brief and a PDF proposal; operator approves the template design once; no coding required. SELL: reach freelance developers via communities like Indie Hackers, r/freelance, and X/Twitter threads discussing AI web dev workflows; factory drafts posts and DMs for operator approval. MAINTAIN: form → Claude → email delivery i…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 6,
-        "Will pay": 4,
-        "Buildable": 7,
-        "Pain": 5
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48511828",
-      "discovered_at": "2026-06-13T09:48:45+03:00"
-    },
-    {
-      "topics": [
-        "macos",
-        "battery",
-        "power-management"
-      ],
-      "id": "01KT9GW58ZFM53Z9G32RK01TVM",
-      "problem_statement": "MacBook users frequently experience unexpected battery drain and sleep failures but Apple's built-in diagnostics do not provide a historical, human-readable explanation of what prevented sleep or caused power spikes, forcing users to diagnose blindly.",
-      "target_segment": "MacBook Pro and MacBook Air power users, developers, and professionals who rely on battery life and want actionable power-management diagnostics",
-      "total": 4.7,
-      "recommended_stage": "drop",
-      "rationale": "MacBook power users do pay for indie utilities (Amphetamine, CleanMyMac, etc.), giving some willingness-to-pay signal (score 5), but the buyer is a broad consumer rather than a named B2B/prosumer with a budget line (buyer clarity 5). More critically, building a reliable macOS system-level tool that reads power and sleep event history requires native macOS APIs and a distributable app — not something buildable via Claude + a web form + Stripe. Total of 4.7 falls below the validate threshold of 5…",
-      "solution_plan": "Not viable for this factory. A macOS menu-bar diagnostic app requires native macOS development (Swift/Objective-C or an Electron wrapper with OS-level API access), App Store distribution or notarization, and OS-version compatibility maintenance. None of that is buildable with Claude + a landing page + Stripe in a week by a non-technical solo operator. This is a valid indie-developer opportunity but requires a developer co-founder or pre-built macOS app expertise.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it",
-          "find who pays"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 5,
-        "Will pay": 5,
-        "Buildable": 4,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=44751318",
-      "discovered_at": "2026-06-04T17:33:54+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2008,
-    "last_7_days_usd": 1.4182,
-    "all_time_usd": 5.2559,
+    "today_usd": 0.3541,
+    "last_7_days_usd": 1.7126,
+    "all_time_usd": 5.61,
     "by_day": [
-      {
-        "date": "2026-06-20",
-        "usd": 0.0597
-      },
       {
         "date": "2026-06-21",
         "usd": 0.1288
@@ -816,67 +804,36 @@
       {
         "date": "2026-06-26",
         "usd": 0.2008
+      },
+      {
+        "date": "2026-06-27",
+        "usd": 0.3541
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4745
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3197
+        "usd": 0.4913
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3038
+        "usd": 0.4602
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.398
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2873
+        "usd": 0.3301
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0329
+        "usd": 0.033
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-20",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "skipped": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-21",
       "agents": {
@@ -1086,12 +1043,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-27",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-26.md",
-    "date": "2026-06-26",
-    "text": "# Daily Summary — 2026-06-26 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 85 |\n| Opportunities validated past threshold | 14 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B channels.\n2. `pain_validation` probes top-scoring opportunities from today's candidate pool (85 items).\n3. `opportunity_scoring` re-evaluates verdicts on any new market signals.\n4. `build_decisions` reviews validated opportunities for experiment fit.\n5. `cost_gain` prepares weekly efficiency metrics if experiments are live.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-27.md",
+    "date": "2026-06-27",
+    "text": "# Daily Summary — 2026-06-27 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 90 |\n| Opportunities validated past threshold | 15 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues weekly pain signal sweeps across B2B communities.\n2. `pain_validation` validates remaining candidate opportunities against pain thresholds.\n3. `opportunity_scoring` refines scoring on backlog of 90 candidates.\n4. `build_decisions` evaluates highest-ranked candidates for experiment launch readiness.\n5. `cost_gain` updates running cost/gain analysis as opportunities move through pipeline.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

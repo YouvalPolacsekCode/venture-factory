@@ -1,0 +1,24 @@
+{
+  "id": "01KW3VWCEWSJM74XBSXEC55ZHF",
+  "discovered_at": "2026-06-27T09:22:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148726/how-can-i-recover-a-recent-historical-version-of-a-webpage-when-wayback-machine",
+    "snippet": "I am trying to find the content of a webpage that changed between 19 June 2026 and 22 June 2026. I have already checked Wayback Machine, Archive.ph, search engine caches and my browser history without success."
+  },
+  "problem_statement": "Website owners, legal professionals, and SEO practitioners cannot reliably recover very recent (days-old) versions of webpages when standard archiving tools like Wayback Machine and Archive.ph have no captures, leaving evidence gaps for legal, compliance, or competitive intelligence purposes.",
+  "target_segment": "SEO agencies, legal teams, compliance officers, and web professionals who need recent webpage version recovery for evidence or audit purposes",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "webpage-archiving",
+    "version-recovery",
+    "web-monitoring",
+    "legal-evidence",
+    "seo-audit",
+    "content-change-detection",
+    "compliance"
+  ],
+  "notes": "Legal/compliance context (complaints policy page) implies professional buyer with budget. Content change monitoring and recovery services are already sold (e.g., Visualping, Distill.io) but gap exists for recent-window recovery with legal-grade evidence. Law firms and compliance teams have clear willingness to pay for defensible evidence capture.",
+  "status": "candidate"
+}

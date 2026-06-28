@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW6G62FFCHE2DADVHS5FQ6GM",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "drop",
+  "rationale": "Post-migration GSC cleanup is a real but episodic pain (happens once per migration, not recurring daily), and the buyer is a small business owner or indie dev who often self-manages SEO \u2014 a segment that pays for tools but has a low ceiling (typically $20-100/mo range). Buyer clarity is moderate at best: 'small business website owners' is broad and hard to reach efficiently, and many will see this as a one-off task rather than a subscription. The total of 5.3 falls just below the validate threshold; the main limiting factors are low pain frequency and a diffuse buyer ICP.",
+  "solution_plan": "This would be a 'GSC Migration Cleanup' report tool: the customer connects their Google Search Console property via OAuth, the service fetches all reported URLs, compares against their submitted sitemap, and Claude categorises each phantom URL (legacy platform artifact, crawl spam, redirect gap) and outputs a remediation checklist plus a disavow file. BUILD: feasible with GSC API + Claude analysis + a simple results page and Stripe for a one-time payment ($29-49/report); no coding by the operator beyond the initial setup. SELL: target web developer forums (Dev.to, Indie Hackers, Webmasters Stack Exchange), post-migration SEO communities; outreach goes out only after operator approves. MAINTAIN: mostly automated \u2014 OAuth token refresh, Claude analysis, PDF report generation; operator only approves outreach batches. HOWEVER: pain is episodic (one migration, one cleanup), making recurring revenue hard; and the ICP is too broad to reach efficiently. Validate demand with a landing page and waitlist before building.",
+  "notes": "Total 5.3 falls just below min_total_to_validate (5.5). Primary limiting factors: pain_frequency=4 (episodic, post-migration only) and buyer_clarity=5 (broad SMB/indie dev ICP without clear high-intent channel).",
+  "scored_at": "2026-06-28T09:57:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

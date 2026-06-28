@@ -1,0 +1,25 @@
+{
+  "id": "01KW6G62F7JYV2R4J9E7X2HFTS",
+  "discovered_at": "2026-06-28T09:55:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439572/passing-multiple-values-from-crma-dashboard-to-salesforce",
+    "snippet": "I want to pass multiple values from CRMA Analytics Dashboard to Salesforce - on click of cell. Now I've Table widget which is showing data coming from SAQL. Also, I'm using Text widget - where I'm trying to launch a Flow with mapped value (using Interaction). But while click on cell in Table - not able to retain the selection/selected value and then clicking on Text widget - it passes null values to Flow. The requirement is to pass multiple values (other than recordId) from CRMA Dashboard to a Flow."
+  },
+  "problem_statement": "Salesforce CRM Analytics (CRMA) developers cannot reliably pass multiple non-recordId field values from dashboard widget interactions into Salesforce Flows, causing null-value errors that block dashboard-driven automation use cases.",
+  "target_segment": "Salesforce developers and CRM Analytics consultants at companies using Salesforce Sales/Service Cloud with Einstein Analytics dashboards",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "crm-analytics",
+    "einstein-analytics",
+    "flow-builder",
+    "dashboard-automation",
+    "saql",
+    "salesforce-dev",
+    "no-code-automation"
+  ],
+  "notes": "Buyer signal: professional Salesforce developer/consultant context. Companies pay significant Salesforce licensing fees; CRMA is an add-on SKU. Consultants bill by the hour resolving these integration gaps. A Salesforce AppExchange component or consulting accelerator that bridges CRMA widget interactions to Flow inputs would have clear paying buyers. Single signal but a well-known class of CRMA limitation.",
+  "status": "candidate"
+}

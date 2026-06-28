@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KW6G62F06VXZJCXEW92QW8VF",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": -1.5,
+      "reason": "Primary buyers are healthcare and legal professionals; HIPAA compliance for healthcare document transmission and legal liability for fax delivery failures add meaningful regulatory risk and support complexity."
+    }
+  ],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer exists \u2014 legal/healthcare SMB admins who pay eFax or RingCentral \u2014 but the regulated_industry penalty is material because any healthcare document transmitted by fax must meet HIPAA standards, which requires BAAs and audit logging that a simple Claude + Stripe setup cannot provide out-of-the-box. Even setting regulation aside, the fax-sending core relies on third-party telephony APIs (Twilio, Fax.to) that require account setup, per-page costs, and failure-handling logic; operational autonomy is limited by fax delivery failures that need human review. At 4.0 total, this falls below the validate threshold.",
+  "solution_plan": "This would be an 'Email-to-Fax Router' micro-service: an email address the customer controls forwards to this service, which uses a fax API (e.g. Twilio Programmable Fax or Interfax) to send the attachment to a fixed fax number, then logs confirmation. BUILD: technically feasible with a webhook receiver + Twilio Fax API + Claude for error triage, and a simple admin dashboard; a developer would be needed for the telephony integration. SELL: legal ops and healthcare admin communities; but the regulated nature means prospects will immediately ask about HIPAA compliance, BAAs, and audit trails \u2014 questions that are hard to answer cheaply. MAINTAIN: fax delivery failures, bounce handling, and regulatory audit requests add recurring human-judgement work. Honest verdict: the regulated-industry constraint and the need for real telephony infrastructure make this harder than it looks; drop unless you can secure a HIPAA-compliant fax API partner and legal review.",
+  "notes": "Total 4.0 falls below min_total_to_validate (5.5). Primary driver: regulated_industry penalty (-1.5) plus moderate operational_autonomy limited by fax delivery failure handling and HIPAA requirements.",
+  "scored_at": "2026-06-28T09:57:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

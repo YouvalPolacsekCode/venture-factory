@@ -1,0 +1,26 @@
+{
+  "id": "01KW6G62F06VXZJCXEW92QW8VF",
+  "discovered_at": "2026-06-28T09:55:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95466/background-service-for-forwarding-email-messages-as-fax-documents",
+    "snippet": "There is a rather-niche set of people, organizations or government agencies, which, for bureaucratic or personal reasons, cannot receive email - and will only receive either regular mail or facsimilie (fax). Suppose I want to arrange it so that sending email to some address results in a fax being sent to a known, fixed, fax number (i.e. phone number, with a fax machine connected on the other side). I know there are quite a few websites for offer the opposite, i.e. an artificial fax number where..."
+  },
+  "problem_statement": "Professionals and businesses that must communicate with government agencies or regulated entities that only accept fax have no simple, self-hostable background service to automatically forward emails to a fixed fax number, forcing manual workarounds.",
+  "target_segment": "Legal, healthcare, and compliance professionals at SMBs who regularly submit documents to government agencies or regulated counterparties that mandate fax",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "fax",
+    "email-to-fax",
+    "document-workflow",
+    "compliance",
+    "government-forms",
+    "automation",
+    "self-hosted",
+    "legal-ops",
+    "healthcare-admin"
+  ],
+  "notes": "Buyer signal: professional/business context dealing with regulatory/government fax mandates \u2014 this is a recurring operational cost. Existing SaaS fax services (eFax, HelloFax, RingCentral Fax) charge monthly fees, indicating willingness to pay. The specific gap is an email-triggered, background, programmable forwarding service rather than a manual send-each-time UI. Single signal but structurally persistent pain for legal/healthcare/government-adjacent businesses.",
+  "status": "candidate"
+}

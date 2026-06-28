@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW6G62EPPFGX9E0R938TRN8Q",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a concrete, named enterprise persona \u2014 FinOps analysts and cloud platform teams at companies with serious Azure AI spend \u2014 who already pay for tools like Apptio and CloudHealth, so willingness-to-pay is credible. However, the core solution requires real Azure API integration work (querying Cost Management + Foundry resource metadata, reconciling SaaS billing records) that goes well beyond a Claude prompt and a landing page, and ongoing delivery would require per-customer Azure credential management and data pipeline work that can't run fully hands-off. Both buildability_with_ai and operational_autonomy fall below build-gate floors, capping the stage at validate despite a genuine enterprise pain.",
+  "solution_plan": "This would be a 'Azure AI Cost Attribution' report service: given a customer's Azure credentials (read-only Cost Management + AI Foundry API scopes), it pulls spend data and Foundry resource metadata, then Claude reconciles and labels each SaaS cost row with the originating Foundry resource, project, and team tag, emitting a CSV or Slack digest. BUILD challenge: integrating with Azure APIs securely (OAuth, least-privilege service principals) is non-trivial; a solo non-technical operator cannot set this up without a developer. SELL: target FinOps forums (FinOps Foundation Slack, Azure community), LinkedIn ads aimed at 'FinOps analyst' + 'Azure' titles; first validate with 5-10 interviews before building. MAINTAIN: even if built, credential rotation, multi-tenant data isolation, and per-customer Azure environment differences make ongoing support non-trivial. Honest verdict: this is a real problem with paying buyers, but the build and operate complexity is beyond a non-technical solo operator using only Claude + standard tooling \u2014 validate the demand first, then consider hiring a dev or partnering.",
+  "notes": "Fails build_gates: buildability_with_ai=4 (below min 6) and operational_autonomy=4 (below min 7). Azure API integration and multi-tenant credential management require engineering beyond Claude + prompts.",
+  "scored_at": "2026-06-28T09:57:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

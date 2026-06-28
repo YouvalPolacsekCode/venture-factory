@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KW3VWCEDJJ9QXHR9A3ZK7RW3",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and financially consequential for affected contractors, but evidence volume is thin: the single source thread documents one individual's dispute, and the broader market signal (5+ distinct pain quotes, at least 1 willingness-to-pay signal) does not meet the pass threshold from available public evidence. Existing invoicing tools (FreshBooks, Harvest, QuickBooks) already handle timesheet-to-invoice workflows for most contractors, meaning the addressable niche is the narrow slice using proprietary/custom client-side systems \u2014 too small and fragmented to confirm without direct outreach. Marking rejected (insufficient evidence) rather than inconclusive because the structural market gap is narrow and the differentiation claim requires primary validation before any build investment.",
+  "sources": [
+    "https://workplace.stackexchange.com/questions/203501/client-frequently-paying-late-manager-claiming-i-make-mistakes-but-doesnt-prov"
+  ],
+  "evaluated_at": "2026-06-28T09:56:35+03:00"
+}

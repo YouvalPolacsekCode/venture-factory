@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW6G62F7JYV2R4J9E7X2HFTS",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [],
+  "total": 4.8,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce CRMA developers are a real, paying B2B segment, and the pain (null-value bugs blocking dashboard-driven automation) is genuine and recurring. However, the solution is fundamentally a Salesforce AppExchange component or a deep Apex/LWC integration \u2014 it cannot be built with Claude + a landing page + Stripe; it requires Salesforce-certified development, AppExchange security review, and per-org deployment support, all of which are far outside the solo non-technical operator model. Operational autonomy is also very low because each client implementation requires Salesforce org-specific configuration and troubleshooting. Both buildability_with_ai and operational_autonomy fail build gates decisively, and the total falls below the validate threshold.",
+  "solution_plan": "This would need to be a Salesforce consulting accelerator or AppExchange managed package \u2014 neither is achievable by a non-technical solo operator without a certified Salesforce developer partner. The build path (Apex triggers, LWC components, AppExchange security review) is months of work; the sell path (Salesforce partner ecosystem, AppExchange listing) requires ISV certification; and maintenance involves per-org debugging and Salesforce release compatibility. Honest verdict: this is firmly a specialist Salesforce consultancy play, not a Claude-factory micro-service. Drop.",
+  "notes": "Total 4.8 falls below min_total_to_validate (5.5). Fails build_gates: buildability_with_ai=3 (below min 6) and operational_autonomy=3 (below min 7). Requires Salesforce-certified development and per-org deployment work.",
+  "scored_at": "2026-06-28T09:57:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

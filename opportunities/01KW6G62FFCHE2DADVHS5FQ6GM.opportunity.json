@@ -1,0 +1,26 @@
+{
+  "id": "01KW6G62FFCHE2DADVHS5FQ6GM",
+  "discovered_at": "2026-06-28T09:55:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148704/many-unknown-spammy-urls-listed-in-google-search-console",
+    "snippet": "I have a website that used to be hosted on Squarespace and is now a vanilla HTML/CSS site hosted on Netlify. When I inspect my site on Google Search Console, there are about fifteen thousand URLs that I don't recognize (I should only have 89 according to my sitemap which looks correct). When I go to these URLs in my browser, I get a 404. The unknown URLs aren't being indexed. I don't recognize the referring URL, which also 404s."
+  },
+  "problem_statement": "Website owners who migrate platforms (e.g., Squarespace to Netlify/static hosting) find thousands of phantom or legacy URLs polluting their Google Search Console coverage report, with no automated tool to diagnose the source, bulk-disavow crawl spam, or reconcile GSC data against their actual sitemap.",
+  "target_segment": "Small business owners and indie web developers who self-manage SEO after a site migration",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-search-console",
+    "seo",
+    "site-migration",
+    "crawl-spam",
+    "url-cleanup",
+    "netlify",
+    "squarespace",
+    "sitemap",
+    "technical-seo"
+  ],
+  "notes": "Buyer signal: business website owner context; SEO tools are a well-established paid category (Ahrefs, Semrush, Screaming Frog all charge). Post-migration GSC cleanup is a recurring pain. The specific gap is automated reconciliation between GSC reported URLs and current sitemap + identification of spam referrers. Moderate buyer intent \u2014 these owners typically pay for SEO tools or hire agencies. Single signal but a common post-migration scenario.",
+  "status": "candidate"
+}

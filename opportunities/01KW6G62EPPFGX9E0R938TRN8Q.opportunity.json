@@ -1,0 +1,26 @@
+{
+  "id": "01KW6G62EPPFGX9E0R938TRN8Q",
+  "discovered_at": "2026-06-28T09:55:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199339/how-to-trace-azure-saas-model-deployment-costs-back-to-their-azure-ai-foundry-re",
+    "snippet": "I deployed a few Opus 4.8 endpoints in my Azure subscription. Each Opus 4.8 endpoint is in a distinct Azure Foundry resource. Looking at the cost management page, I can group the cost by resource: But as you see, for Opus, the resource type is 'SaaS' and I don't see a way to identify, for each Opus expense row, which Azure Foundry resource the expense comes from. Clicking on the expand button doesn't give the resource name either. How to trace Azure SaaS model deployment costs back to their Azure AI Foundry resource?"
+  },
+  "problem_statement": "Engineers and FinOps teams deploying multiple Azure AI Foundry (AI Studio) endpoints cannot attribute SaaS-type AI model spend back to individual resources in Azure Cost Management, making it impossible to do per-project or per-team chargeback on AI API costs.",
+  "target_segment": "Cloud engineers, FinOps analysts, and ML platform teams at mid-to-large companies running multiple AI workloads on Azure",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "azure",
+    "cost-attribution",
+    "finops",
+    "cloud-cost-management",
+    "ai-foundry",
+    "llm-ops",
+    "saas-cost-visibility",
+    "chargeback",
+    "azure-ai"
+  ],
+  "notes": "Buyer signal: professional infrastructure context, explicit cost management pain with real money at stake. Single signal but the problem is structural \u2014 Azure's Cost Management UI does not expose Foundry resource names for SaaS-type deployments. A tool or service that bridges Azure Cost Management + Foundry resource metadata would have clear willingness-to-pay from FinOps/platform teams that already pay for cloud cost tools (Apptio, CloudHealth, etc.).",
+  "status": "candidate"
+}

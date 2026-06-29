@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-28T06:57:36+00:00",
-    "idt": "2026-06-28T09:57:36+03:00"
+    "utc": "2026-06-29T07:23:59+00:00",
+    "idt": "2026-06-29T10:23:59+03:00"
   },
   "funnel": {
-    "candidates": 94,
-    "scored": 94,
-    "validated": 10,
+    "candidates": 96,
+    "scored": 96,
+    "validated": 11,
     "build_decisions": {
-      "defer_1_week": 9,
+      "defer_1_week": 10,
       "kill": 1
     },
     "build_now": 0,
@@ -69,7 +69,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148726/how-can-i-recover-a-recent-historical-version-of-a-webpage-when-wayback-machine",
       "discovered_at": "2026-06-27T09:22:12+03:00"
@@ -307,6 +307,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48624574",
       "discovered_at": "2026-06-22T11:49:39+03:00"
+    },
+    {
+      "topics": [
+        "tech-news",
+        "content-filtering",
+        "ai-fatigue"
+      ],
+      "id": "01KW943KM7B2BP8S9SCRR3Z4MD",
+      "problem_statement": "Tech professionals who rely on industry news for work can no longer efficiently find non-AI tech stories because major outlets like Techmeme and HN are saturated with AI content, making it costly in time to stay informed on topics relevant to their actual work.",
+      "target_segment": "Software engineers, indie developers, and tech-focused knowledge workers who follow industry news as part of their professional practice",
+      "total": 6.3,
+      "recommended_stage": "validate",
+      "rationale": "The audience — software engineers and indie devs who follow tech news professionally — does demonstrably pay for curated newsletters (TLDR, The Pragmatic Engineer), confirming willingness_to_pay at a moderate level. However, buyer_clarity lands at 6 rather than higher because this is a prosumer/individual-consumer mix with real 'should be free' sentiment, and there is no named business role with a budget line. The build_gate for buyer_clarity (floor: 6) is met but barely, and responsiveness_sig…",
+      "solution_plan": "The micro-service is a weekly or twice-weekly curated email digest of non-AI tech news, filtered and summarised by Claude from RSS/HN/lobste.rs feeds. BUILD: the factory sets up a Claude prompt pipeline that ingests feeds, filters out AI-tagged stories, summarises the remainder into a scannable digest, and sends via a transactional email provider (e.g. Resend or Buttondown); a simple landing page with a Stripe subscription link ($8–12/mo) and an email sign-up form is the entire storefront — no coding by Youval. SELL: reach 300–500 potential subscribers by posting in HN threads (like the source thread), relevant subreddits (r/programming, r/w…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 8,
+        "Will pay": 6,
+        "Buildable": 8,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48713041",
+      "discovered_at": "2026-06-29T10:22:10+03:00"
     },
     {
       "topics": [
@@ -740,50 +769,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48694802",
       "discovered_at": "2026-06-27T09:22:12+03:00"
-    },
-    {
-      "topics": [
-        "google-search-console",
-        "seo",
-        "site-migration"
-      ],
-      "id": "01KW6G62FFCHE2DADVHS5FQ6GM",
-      "problem_statement": "Website owners who migrate platforms (e.g., Squarespace to Netlify/static hosting) find thousands of phantom or legacy URLs polluting their Google Search Console coverage report, with no automated tool to diagnose the source, bulk-disavow crawl spam, or reconcile GSC data against their actual sitemap.",
-      "target_segment": "Small business owners and indie web developers who self-manage SEO after a site migration",
-      "total": 5.3,
-      "recommended_stage": "drop",
-      "rationale": "Post-migration GSC cleanup is a real but episodic pain (happens once per migration, not recurring daily), and the buyer is a small business owner or indie dev who often self-manages SEO — a segment that pays for tools but has a low ceiling (typically $20-100/mo range). Buyer clarity is moderate at best: 'small business website owners' is broad and hard to reach efficiently, and many will see this as a one-off task rather than a subscription. The total of 5.3 falls just below the validate thresh…",
-      "solution_plan": "This would be a 'GSC Migration Cleanup' report tool: the customer connects their Google Search Console property via OAuth, the service fetches all reported URLs, compares against their submitted sitemap, and Claude categorises each phantom URL (legacy platform artifact, crawl spam, redirect gap) and outputs a remediation checklist plus a disavow file. BUILD: feasible with GSC API + Claude analysis + a simple results page and Stripe for a one-time payment ($29-49/report); no coding by the operator beyond the initial setup. SELL: target web developer forums (Dev.to, Indie Hackers, Webmasters Stack Exchange), post-migration SEO communities; out…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "find who pays"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 7,
-        "Will pay": 6,
-        "Buildable": 7,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://webmasters.stackexchange.com/questions/148704/many-unknown-spammy-urls-listed-in-google-search-console",
-      "discovered_at": "2026-06-28T09:55:30+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2077,
-    "last_7_days_usd": 1.7915,
-    "all_time_usd": 5.8177,
+    "today_usd": 0.3212,
+    "last_7_days_usd": 1.7735,
+    "all_time_usd": 6.1389,
     "by_day": [
-      {
-        "date": "2026-06-22",
-        "usd": 0.3392
-      },
       {
         "date": "2026-06-23",
         "usd": 0.3349
@@ -807,24 +801,28 @@
       {
         "date": "2026-06-28",
         "usd": 0.2077
+      },
+      {
+        "date": "2026-06-29",
+        "usd": 0.3212
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4961
+        "usd": 0.4933
       },
       {
         "agent": "build_decisions",
-        "usd": 0.4602
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.4111
+        "usd": 0.4569
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3917
+        "usd": 0.4017
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3892
       },
       {
         "agent": "daily_summary",
@@ -833,41 +831,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-22",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-23",
       "agents": {
@@ -1077,12 +1040,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-29",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-28.md",
-    "date": "2026-06-28",
-    "text": "# Daily Summary — 2026-06-28 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 94 |\n| Opportunities validated past threshold | 16 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently staged in the factory.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues pain signal discovery across B2B SaaS channels.\n2. `pain_validation` runs targeted probes on today's 16 validated opportunities.\n3. `opportunity_scoring` re-ranks candidates for next round of validation.\n4. `build_decisions` evaluates top scorers for experiment launch readiness.\n5. `cost_gain` analyzes validation-to-build conversion funnel.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-06-29.md",
+    "date": "2026-06-29",
+    "text": "# Daily Summary — 2026-06-29 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 96 |\n| Opportunities validated past threshold | 17 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (awaiting active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes outreach list compilation.\n2. `product_design` evaluates highest-scoring validated opportunities.\n3. `service_builder` provisions infrastructure for greenlit services.\n4. `responsiveness_test` validates live experiments.\n5. `cost_gain` publishes weekly cost/gain ratios for strategic review.\n\n## Operator action items\n\nNone — process is nominal. All opportunities scored and validated subsets identified. Resume active experiments Monday.",
     "truncated": false
   },
   "analytics": null

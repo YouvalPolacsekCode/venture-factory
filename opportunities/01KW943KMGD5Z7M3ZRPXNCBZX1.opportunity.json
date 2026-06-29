@@ -1,0 +1,27 @@
+{
+  "id": "01KW943KMGD5Z7M3ZRPXNCBZX1",
+  "discovered_at": "2026-06-29T10:22:10+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48712376",
+    "snippet": "I am building a local-first Mac writing app, and I am stuck on the story-memory layer. The problem: given a long fiction manuscript, I need to extract characters, aliases, relationships, locations, timeline facts, and unresolved plot facts. It has to work reasonably well across CJK and Latin-script text. For example, Chinese/Japanese/Korean names do not tokenize like English names, aliases may be implicit, and the same character can appear under several surface forms across chapters. [2026-06-28]"
+  },
+  "problem_statement": "Developers building local-first writing or document apps for multilingual (CJK + Latin) audiences have no ready-made, offline-capable library or service for extracting named entities, relationships, and narrative facts from long-form text without bundling a large model.",
+  "target_segment": "Indie developers and small software teams building writing, editing, or document intelligence apps targeting multilingual (especially East Asian) markets",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "nlp",
+    "entity-extraction",
+    "cjk",
+    "local-first",
+    "writing-app",
+    "offline-ml",
+    "named-entity-recognition",
+    "multilingual",
+    "fiction-tools",
+    "developer-tools"
+  ],
+  "notes": "Single signal but the poster is explicitly a developer building a commercial product (a Mac writing app), which is a paying-buyer context. The gap is specific and technical: no existing lightweight offline library handles CJK+Latin NER well for narrative text. A productized API or embeddable library could charge per-seat or per-API-call to app developers. Willingness to pay is implied by commercial product context rather than stated explicitly \u2014 signal_strength capped at 2.",
+  "status": "candidate"
+}

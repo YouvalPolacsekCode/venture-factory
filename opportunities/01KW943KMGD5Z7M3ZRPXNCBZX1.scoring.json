@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KW943KMGD5Z7M3ZRPXNCBZX1",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 6,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Delivering a reliable multilingual NER library/API for CJK+Latin narrative text requires ongoing model evaluation, edge-case triage, and quality assurance per language variant \u2014 not automatable by a standard Claude prompt pipeline."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is specific and real \u2014 indie devs building commercial writing apps \u2014 and the pain is genuine. However, buildability_with_ai scores 3 because CJK named-entity recognition with implicit aliases across long manuscripts is well outside what a Claude prompt plus a simple web page can reliably deliver; it requires model fine-tuning, tokenisation libraries, and multilingual evaluation infrastructure that a solo non-technical operator cannot assemble. Operational_autonomy is equally low: every edge case (new script system, ambiguous alias, genre-specific vocabulary) surfaces support needs that require engineering judgement. Combined with a single-signal weak willingness-to-pay read and very low responsiveness data, the total falls well below the validate threshold.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator running a Claude-based factory. The core technical requirement \u2014 a reliable offline-capable multilingual NER engine for CJK+Latin narrative text \u2014 needs specialised ML infrastructure (tokenisers, NER model fine-tuning, benchmark evaluation across scripts) that cannot be assembled from Claude prompts and a Stripe link. Even if a cloud API wrapper were built, every quality issue would require engineering triage that Youval cannot perform, and the target buyers (developers) would quickly identify unreliable extractions and churn. Recommend dropping this opportunity and watching for a narrower signal (e.g. a Latin-only fiction writing tool where Claude's built-in NER is adequate) that fits the factory's actual capability envelope.",
+  "notes": "Failing build_gates: buildability_with_ai (scored 3, floor 6) and operational_autonomy (scored 3, floor 7). Total 3.1 is below min_total_to_validate (5.5). Drop.",
+  "scored_at": "2026-06-29T10:23:43+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

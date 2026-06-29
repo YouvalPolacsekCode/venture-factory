@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KW943KM7B2BP8S9SCRR3Z4MD",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The audience \u2014 software engineers and indie devs who follow tech news professionally \u2014 does demonstrably pay for curated newsletters (TLDR, The Pragmatic Engineer), confirming willingness_to_pay at a moderate level. However, buyer_clarity lands at 6 rather than higher because this is a prosumer/individual-consumer mix with real 'should be free' sentiment, and there is no named business role with a budget line. The build_gate for buyer_clarity (floor: 6) is met but barely, and responsiveness_signal is untested, so validate is the right stage before committing to build.",
+  "solution_plan": "The micro-service is a weekly or twice-weekly curated email digest of non-AI tech news, filtered and summarised by Claude from RSS/HN/lobste.rs feeds. BUILD: the factory sets up a Claude prompt pipeline that ingests feeds, filters out AI-tagged stories, summarises the remainder into a scannable digest, and sends via a transactional email provider (e.g. Resend or Buttondown); a simple landing page with a Stripe subscription link ($8\u201312/mo) and an email sign-up form is the entire storefront \u2014 no coding by Youval. SELL: reach 300\u2013500 potential subscribers by posting in HN threads (like the source thread), relevant subreddits (r/programming, r/webdev), and targeted cold emails to indie-dev communities; outreach copy is drafted by the factory and goes out only after Youval approves each batch. MAINTAIN: Claude runs the digest pipeline on a schedule, handles subscription confirmation/cancellation via Stripe webhooks, and auto-replies to support emails; Youval's only recurring touch is approving the weekly send and any refund requests. VALIDATE FIRST: before building, post a one-paragraph pitch in the HN thread and a waitlist form \u2014 if 50+ people sign up in 72 hours, proceed to build.",
+  "notes": "buyer_clarity floor (6) is met at exactly the minimum. Defensibility is low \u2014 a determined competitor can replicate the filter. Validate with a waitlist before investing in the pipeline build.",
+  "scored_at": "2026-06-29T10:23:43+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

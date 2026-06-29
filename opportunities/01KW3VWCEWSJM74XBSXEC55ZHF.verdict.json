@@ -1,0 +1,14 @@
+{
+  "opportunity_id": "01KW3VWCEWSJM74XBSXEC55ZHF",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "A documented, recurring need exists across SEO, legal, and compliance contexts: practitioners routinely discover that Wayback Machine and Archive.ph have no captures for pages that changed in the past few days, leaving evidence gaps they cannot fill with free tools. Competitor products (Visualping, Versionista, Distill.io) confirm the segment pays for web-change tooling, and legal/compliance buyers have clear budget authority. The gap\u2014on-demand forensic recovery of very recent (1\u20137 day) windows rather than ongoing monitoring\u2014is unserved at a premium price point.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148726/how-can-i-recover-a-recent-historical-version-of-a-webpage-when-wayback-machine",
+    "https://visualping.io/pricing",
+    "https://versionista.com/pricing",
+    "https://distill.io/#pricing"
+  ],
+  "evaluated_at": "2026-06-29T10:23:12+03:00"
+}

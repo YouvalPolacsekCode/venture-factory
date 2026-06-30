@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-06-29T07:23:59+00:00",
-    "idt": "2026-06-29T10:23:59+03:00"
+    "utc": "2026-06-30T06:48:06+00:00",
+    "idt": "2026-06-30T09:48:06+03:00"
   },
   "funnel": {
-    "candidates": 96,
-    "scored": 96,
+    "candidates": 97,
+    "scored": 97,
     "validated": 11,
     "build_decisions": {
       "defer_1_week": 10,
@@ -578,7 +578,7 @@
         "Buildable": 4,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199339/how-to-trace-azure-saas-model-deployment-costs-back-to-their-azure-ai-foundry-re",
       "discovered_at": "2026-06-28T09:55:30+03:00"
@@ -774,14 +774,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3212,
-    "last_7_days_usd": 1.7735,
-    "all_time_usd": 6.1389,
+    "today_usd": 0.1552,
+    "last_7_days_usd": 1.5938,
+    "all_time_usd": 6.2941,
     "by_day": [
-      {
-        "date": "2026-06-23",
-        "usd": 0.3349
-      },
       {
         "date": "2026-06-24",
         "usd": 0.1746
@@ -805,67 +801,36 @@
       {
         "date": "2026-06-29",
         "usd": 0.3212
+      },
+      {
+        "date": "2026-06-30",
+        "usd": 0.1552
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4933
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4569
+        "usd": 0.4848
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4017
+        "usd": 0.4018
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3892
+        "usd": 0.367
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.3073
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0325
+        "usd": 0.033
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-23",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-24",
       "agents": {
@@ -1075,12 +1040,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-06-30",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-29.md",
-    "date": "2026-06-29",
-    "text": "# Daily Summary — 2026-06-29 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 96 |\n| Opportunities validated past threshold | 17 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (awaiting active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes outreach list compilation.\n2. `product_design` evaluates highest-scoring validated opportunities.\n3. `service_builder` provisions infrastructure for greenlit services.\n4. `responsiveness_test` validates live experiments.\n5. `cost_gain` publishes weekly cost/gain ratios for strategic review.\n\n## Operator action items\n\nNone — process is nominal. All opportunities scored and validated subsets identified. Resume active experiments Monday.",
+    "file": "reports/daily/2026-06-30.md",
+    "date": "2026-06-30",
+    "text": "# Daily Summary — 2026-06-30 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 97 |\n| Opportunities validated past threshold | 18 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or services running today. Factory in discovery phase across all signals.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. Market radar, opportunity scoring, and pain validation completed successfully this morning (06:46–06:48 UTC). Build decisions, cost gain, lead research, product design, responsiveness test, and service builder skipped per schedule.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps emerging B2B SaaS communities for fresh pain signals.\n2. `pain_validation` runs targeted DM probes on today's 18 validated opportunities.\n3. `opportunity_scoring` re-ranks candidates based on overnight signal decay.\n4. `lead_research` attempts contact on high-confidence verdicts.\n5. `cost_gain` computes weekly efficiency metrics for the rolling dashboard.\n\n## Operator action items\n\nNone — process the approval queue and move on. The factory is healthy and producing steady candidate flow. Review the 18 validated opportunities in `verdicts/` at your convenience; recommend picking the top 3 by pain intensity for next week's build sprint.",
     "truncated": false
   },
   "analytics": null

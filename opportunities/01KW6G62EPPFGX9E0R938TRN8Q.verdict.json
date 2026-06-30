@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KW6G62EPPFGX9E0R938TRN8Q",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and structural \u2014 Azure Cost Management genuinely does not expose Foundry resource names for SaaS-type AI deployments \u2014 but evidence is thin: a single ServerFault post with no confirmed upvotes or peer corroboration found in adjacent searches. Willingness-to-pay is inferred from analogous tools (Apptio, CloudHealth) rather than demonstrated for this specific gap, and the build complexity (Azure OAuth, multi-tenant credential management, Cost Management + Foundry API reconciliation) puts it well beyond auto-operated tooling. Insufficient distinct pain quotes and no direct WTP signal; rejecting this cycle with a recommendation to re-scan after 60 days when Azure usage grows further.",
+  "sources": [
+    "https://serverfault.com/questions/1199339/how-to-trace-azure-saas-model-deployment-costs-back-to-their-azure-ai-foundry-re"
+  ],
+  "evaluated_at": "2026-06-30T09:47:40+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KWE7X6E57Q9VA10XHYJ5Y8GE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "Engineering teams at 5-200 person startups are a real, named B2B buyer with budget authority and existing multi-tool spend (Confluence, GitHub, Notion), and the onboarding pain is genuine and recurrent with every new hire. However, buildability is the limiting factor: a service that meaningfully connects Git history, Confluence, Slack threads, and Notion into coherent context is substantially more than a Claude prompt plus a landing page \u2014 it requires OAuth integrations, data ingestion pipelines, and reliable chunking/retrieval across heterogeneous sources. Operational_autonomy suffers for the same reason: the cross-tool sync layer needs ongoing maintenance and per-workspace setup that goes beyond periodic approval gates, so neither the build_gate for autonomy (needs 7, scores 5) nor buildability (needs 6, scores 5) is met at this stage.",
+  "solution_plan": "The micro-service would be an 'Engineering Decision Log as a Service' \u2014 a lightweight intake form where engineers paste or link a decision (Slack thread, Notion snippet, ADR), Claude summarizes and tags it, and it's stored in a searchable index that new hires can query in plain English. BUILD: the factory creates a Claude prompt chain (intake \u2192 summarize \u2192 tag \u2192 store), a simple web form (Typeform or equivalent), a Zapier/Make bridge to a Notion or Airtable store, and a Stripe payment link \u2014 no custom coding. SELL: reach engineering leads and CTOs of Series A-B startups via LinkedIn Sales Navigator or Apollo (a public, filterable list) with a short cold message; outreach batches go out only after Youval approves them. MAINTAIN: submissions are processed by Claude automatically; new hires search via a hosted query page; billing is Stripe recurring; Youval only approves outreach batches and monitors for errors. The honest constraint is that this narrowed version (structured intake only, no automatic Slack/Git ingestion) is viable solo, but it solves a fraction of the stated pain \u2014 validate whether buyers will pay for this scoped version before expanding.",
+  "notes": "build_gates not met: operational_autonomy=5 (floor 7) and buildability_with_ai=5 (floor 6). A scoped version (manual intake + Claude summarization, no live integrations) is buildable but may feel insufficient to buyers expecting full context aggregation. Validate willingness to pay for the narrow version first.",
+  "scored_at": "2026-07-01T10:06:12+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

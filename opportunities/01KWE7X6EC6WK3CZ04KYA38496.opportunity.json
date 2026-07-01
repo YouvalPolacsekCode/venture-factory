@@ -1,0 +1,27 @@
+{
+  "id": "01KWE7X6EC6WK3CZ04KYA38496",
+  "discovered_at": "2026-07-01T10:04:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182469/what-are-the-most-effective-ways-to-measure-field-sales-team-productivity",
+    "snippet": "I'm looking for practical ways to measure the productivity of a field sales team beyond just revenue. We currently track customer visits and daily reports, but I'm interested in KPIs that provide better visibility into performance. Which metrics have proven most useful? For example: Customer visit completion rate, Route efficiency, Average meeting duration, Conversion rate, Sales per visit, Time spent traveling vs. selling. Are there any industry best practices or frameworks for evaluating field sales [performance]?"
+  },
+  "problem_statement": "Field sales managers lack tooling to track granular productivity KPIs beyond revenue \u2014 metrics like route efficiency, visit completion rate, and time-spent-selling vs. traveling \u2014 leaving performance gaps invisible until it's too late.",
+  "target_segment": "Field sales managers and sales ops roles at SMB-to-mid-market companies with distributed outside sales reps, especially in FMCG, pharma, or B2B distribution.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "field-sales",
+    "sales-productivity",
+    "kpi-tracking",
+    "route-efficiency",
+    "crm",
+    "sales-analytics",
+    "outside-sales",
+    "sales-ops",
+    "performance-management",
+    "visit-tracking"
+  ],
+  "notes": "Buyer signal: person manages a field sales team and is actively seeking tooling/frameworks \u2014 business context confirmed. Tagged automation + CRM + analytics suggesting willingness to adopt paid tooling. Single signal, score -2 (may be off-topic for webapps SE), but the underlying need is real and recurrent in this segment. Existing CRM spend (Salesforce, HubSpot) often doesn't surface field-specific metrics.",
+  "status": "candidate"
+}

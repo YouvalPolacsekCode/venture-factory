@@ -1,0 +1,27 @@
+{
+  "id": "01KWE7X6E57Q9VA10XHYJ5Y8GE",
+  "discovered_at": "2026-07-01T10:04:46+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48742163",
+    "snippet": "Requirements in Confluence. Architecture decisions in someone's head or a six month old Notion page. Code in Git. Slack threads nobody searches. And a new developer joining who has to piece all of it together from scratch every single time. We talk a lot about building smarter with AI, but the actual bottleneck isn't code generation. It's that by the time AI touches anything, half the reasoning behind the system is already gone. It generates against the 'what' while the [why is lost]."
+  },
+  "problem_statement": "Engineering teams lose the reasoning and decision context behind their systems across fragmented tools (Confluence, Notion, Git, Slack), forcing every new developer to reconstruct it from scratch and making AI code tools work against incomplete context.",
+  "target_segment": "Software engineering teams at startups and scaleups (5-200 engineers) already paying for Confluence, Notion, and GitHub who onboard new developers frequently.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "developer-onboarding",
+    "knowledge-management",
+    "context-loss",
+    "engineering-docs",
+    "architecture-decisions",
+    "confluence",
+    "notion",
+    "ai-coding",
+    "team-productivity",
+    "decision-log"
+  ],
+  "notes": "Buyer context: teams already paying for Confluence, Notion, GitHub. The author frames it as the #1 bottleneck to productive AI usage \u2014 strong framing for upsell/wedge into existing tool spend. Pain is recurring (every new hire). Willingness-to-pay evidence: implicit in existing multi-tool spend and frustration that none of them solve it. Posted 2026-07-01, 3 points early \u2014 watch for comment traction.",
+  "status": "candidate"
+}

@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-06-30T06:48:06+00:00",
-    "idt": "2026-06-30T09:48:06+03:00"
+    "utc": "2026-07-01T07:06:28+00:00",
+    "idt": "2026-07-01T10:06:28+03:00"
   },
   "funnel": {
-    "candidates": 97,
-    "scored": 97,
-    "validated": 11,
+    "candidates": 99,
+    "scored": 99,
+    "validated": 12,
     "build_decisions": {
-      "defer_1_week": 10,
+      "defer_1_week": 11,
       "kill": 1
     },
     "build_now": 0,
@@ -332,7 +332,7 @@
         "Buildable": 8,
         "Pain": 6
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48713041",
       "discovered_at": "2026-06-29T10:22:10+03:00"
@@ -585,6 +585,69 @@
     },
     {
       "topics": [
+        "developer-onboarding",
+        "knowledge-management",
+        "context-loss"
+      ],
+      "id": "01KWE7X6E57Q9VA10XHYJ5Y8GE",
+      "problem_statement": "Engineering teams lose the reasoning and decision context behind their systems across fragmented tools (Confluence, Notion, Git, Slack), forcing every new developer to reconstruct it from scratch and making AI code tools work against incomplete context.",
+      "target_segment": "Software engineering teams at startups and scaleups (5-200 engineers) already paying for Confluence, Notion, and GitHub who onboard new developers frequently.",
+      "total": 5.6,
+      "recommended_stage": "validate",
+      "rationale": "Engineering teams at 5-200 person startups are a real, named B2B buyer with budget authority and existing multi-tool spend (Confluence, GitHub, Notion), and the onboarding pain is genuine and recurrent with every new hire. However, buildability is the limiting factor: a service that meaningfully connects Git history, Confluence, Slack threads, and Notion into coherent context is substantially more than a Claude prompt plus a landing page — it requires OAuth integrations, data ingestion pipeline…",
+      "solution_plan": "The micro-service would be an 'Engineering Decision Log as a Service' — a lightweight intake form where engineers paste or link a decision (Slack thread, Notion snippet, ADR), Claude summarizes and tags it, and it's stored in a searchable index that new hires can query in plain English. BUILD: the factory creates a Claude prompt chain (intake → summarize → tag → store), a simple web form (Typeform or equivalent), a Zapier/Make bridge to a Notion or Airtable store, and a Stripe payment link — no custom coding. SELL: reach engineering leads and CTOs of Series A-B startups via LinkedIn Sales Navigator or Apollo (a public, filterable list) with…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 5,
+        "Will pay": 5,
+        "Buildable": 5,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48742163",
+      "discovered_at": "2026-07-01T10:04:46+03:00"
+    },
+    {
+      "topics": [
+        "field-sales",
+        "sales-productivity",
+        "kpi-tracking"
+      ],
+      "id": "01KWE7X6EC6WK3CZ04KYA38496",
+      "problem_statement": "Field sales managers lack tooling to track granular productivity KPIs beyond revenue — metrics like route efficiency, visit completion rate, and time-spent-selling vs. traveling — leaving performance gaps invisible until it's too late.",
+      "target_segment": "Field sales managers and sales ops roles at SMB-to-mid-market companies with distributed outside sales reps, especially in FMCG, pharma, or B2B distribution.",
+      "total": 5.6,
+      "recommended_stage": "validate",
+      "rationale": "Field sales managers at SMB/mid-market companies (FMCG, pharma, B2B distribution) are a specific, nameable B2B role with budget authority and an established pattern of paying for CRM and analytics tooling — the buyer is real. The pain is high-frequency (daily visibility gap) and the segment already tolerates software spend, giving a credible willingness-to-pay signal. However, the core product would need to ingest GPS/location data, mobile rep activity logs, and CRM visit records to produce the…",
+      "solution_plan": "The micro-service is a 'Field Sales KPI Report Generator' — field managers submit a weekly CSV export of rep activity (visits, outcomes, travel logs) and Claude produces a formatted KPI report with route efficiency, visit completion rate, and selling-time ratio, delivered by email. BUILD: the factory creates a Claude prompt that parses a CSV and outputs a structured KPI narrative, an upload form (Typeform), and a Stripe subscription link for monthly access — no coding by the operator. SELL: target sales ops and field sales directors at SMB distributors and pharma reps companies via LinkedIn; a shortlist of companies with 'field sales' in job…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 6,
+        "Will pay": 5,
+        "Buildable": 6,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webapps.stackexchange.com/questions/182469/what-are-the-most-effective-ways-to-measure-field-sales-team-productivity",
+      "discovered_at": "2026-07-01T10:04:46+03:00"
+    },
+    {
+      "topics": [
         "salesforce",
         "agentforce",
         "mcp"
@@ -705,83 +768,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48510002",
       "discovered_at": "2026-06-13T09:48:45+03:00"
-    },
-    {
-      "topics": [
-        "web-agency",
-        "project-management",
-        "retainer-clients"
-      ],
-      "id": "01KV7SBCR4CVN8A75GWT7YXPNE",
-      "problem_statement": "Small web agencies managing large numbers of client websites (100+) on retainers find generic project management tools like Monday.com too broad — they lack website-specific tracking (CMS type, renewal dates, per-site task history, client retainer status) forcing agencies to cobble together spreadsheets and generic PM tools.",
-      "target_segment": "Small web agencies (2–20 person teams) managing 50–200+ client websites on monthly retainers, primarily WordPress and mixed-CMS environments.",
-      "total": 5.3,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a specific, nameable B2B role — the ops lead or founder of a small web agency managing 50–200+ client sites on retainer — and they demonstrably already pay for tools like Monday.com, confirming willingness to pay. However, this is a structured SaaS product (per-site records, CMS metadata, renewal tracking, task history) that cannot be shipped as a Claude prompt + form + Stripe link in a week; it requires real data modelling, a persistent multi-tenant database, and a usable UI, whic…",
-      "solution_plan": "The micro-service would be a lightweight agency client-site tracker: a simple dashboard where an agency can log each client website (CMS type, renewal date, retainer status, last-task notes) and see everything at a glance. To build it without coding, the factory would need to stand up a real persistent web app with a database — this goes beyond Claude prompts and a Stripe link; it would require a no-code/low-code platform (e.g. Airtable or Notion as the data layer, with a custom view) plus an intake form and a Stripe subscription link for billing. To sell, the factory would identify agency owners on LinkedIn or in agency-focused Slack commun…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 4,
-        "Will pay": 6,
-        "Buildable": 4,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://pm.stackexchange.com/questions/35947/project-management-in-web-agencies",
-      "discovered_at": "2026-06-16T11:39:14+03:00"
-    },
-    {
-      "topics": [
-        "local-llm",
-        "apple-silicon",
-        "gpu-benchmarking"
-      ],
-      "id": "01KW3VWCDXR014RJQRJ4AJGK82",
-      "problem_statement": "Developers and technical users running local LLMs lack a clear, reliable way to benchmark and predict which models will run well on Apple Silicon vs. dedicated GPU hardware, leading to wasted time and poor model selection.",
-      "target_segment": "Developer/ML practitioners running local LLMs on MacBooks or considering hardware upgrades",
-      "total": 5.3,
-      "recommended_stage": "drop",
-      "rationale": "The audience is individual developers and ML hobbyists — a tech-savvy cohort that skews strongly toward free tools, community wikis, and existing benchmarking sites (like llm.ggerganov.com or everymac.com). While hardware spend is real, software spend on a benchmarking tool is not well evidenced: no paid substitutes at meaningful price points exist, and the HN thread is a question post, not a frustrated-with-a-product post. Buyer clarity is weak because 'developers running local LLMs' spans stu…",
-      "solution_plan": "WHAT: A web-based compatibility checker — enter a model name and MacBook spec (chip, unified memory) and get a predicted run quality score and configuration tips. BUILD: Factory builds a Claude-powered lookup that parses model metadata (parameters, quantization, context length) against Apple Silicon memory bandwidth tables and generates a recommendation; hosted as a static page with a one-time or subscription Stripe link. SELL: Reach HN, r/LocalLLaMA, and r/MachineLearning communities via show-posts and targeted Reddit ads; outreach approved by operator before sending. MAINTAIN: Model database updated via a periodic Claude scrape; support is…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "find who pays",
-          "get them to pay"
-        ]
-      },
-      "scores": {
-        "Who pays": 5,
-        "Runs alone": 7,
-        "Will pay": 4,
-        "Buildable": 7,
-        "Pain": 5
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48694802",
-      "discovered_at": "2026-06-27T09:22:12+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1552,
-    "last_7_days_usd": 1.5938,
-    "all_time_usd": 6.2941,
+    "today_usd": 0.3135,
+    "last_7_days_usd": 1.7327,
+    "all_time_usd": 6.6076,
     "by_day": [
-      {
-        "date": "2026-06-24",
-        "usd": 0.1746
-      },
       {
         "date": "2026-06-25",
         "usd": 0.1802
@@ -805,67 +800,36 @@
       {
         "date": "2026-06-30",
         "usd": 0.1552
+      },
+      {
+        "date": "2026-07-01",
+        "usd": 0.3135
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4848
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.4018
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.367
+        "usd": 0.485
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3073
+        "usd": 0.4571
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.3905
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3671
       },
       {
         "agent": "daily_summary",
-        "usd": 0.033
+        "usd": 0.0329
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-24",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-25",
       "agents": {
@@ -1075,12 +1039,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-01",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-06-30.md",
-    "date": "2026-06-30",
-    "text": "# Daily Summary — 2026-06-30 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 97 |\n| Opportunities validated past threshold | 18 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or services running today. Factory in discovery phase across all signals.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. Market radar, opportunity scoring, and pain validation completed successfully this morning (06:46–06:48 UTC). Build decisions, cost gain, lead research, product design, responsiveness test, and service builder skipped per schedule.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps emerging B2B SaaS communities for fresh pain signals.\n2. `pain_validation` runs targeted DM probes on today's 18 validated opportunities.\n3. `opportunity_scoring` re-ranks candidates based on overnight signal decay.\n4. `lead_research` attempts contact on high-confidence verdicts.\n5. `cost_gain` computes weekly efficiency metrics for the rolling dashboard.\n\n## Operator action items\n\nNone — process the approval queue and move on. The factory is healthy and producing steady candidate flow. Review the 18 validated opportunities in `verdicts/` at your convenience; recommend picking the top 3 by pain intensity for next week's build sprint.",
+    "file": "reports/daily/2026-07-01.md",
+    "date": "2026-07-01",
+    "text": "# Daily Summary — 2026-07-01 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 99 |\n| Opportunities validated past threshold | 19 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stages. All discovery-phase work feeds the opportunity pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` will resume (skipped today; check scheduling logic).\n2. `market_radar` continues daily pain-signal sweeps across B2B SaaS channels.\n3. `opportunity_scoring` processes new candidate opportunities from today's surfacing run.\n4. `pain_validation` validates high-scoring candidates via targeted outreach.\n5. `cost_gain` computes weekly ROI metrics for the experiment portfolio.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

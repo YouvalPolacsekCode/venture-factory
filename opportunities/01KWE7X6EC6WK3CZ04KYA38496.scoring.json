@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KWE7X6EC6WK3CZ04KYA38496",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "Field sales managers at SMB/mid-market companies (FMCG, pharma, B2B distribution) are a specific, nameable B2B role with budget authority and an established pattern of paying for CRM and analytics tooling \u2014 the buyer is real. The pain is high-frequency (daily visibility gap) and the segment already tolerates software spend, giving a credible willingness-to-pay signal. However, the core product would need to ingest GPS/location data, mobile rep activity logs, and CRM visit records to produce the KPIs described, which requires integrations and a mobile component that push beyond a simple Claude + form stack; operational_autonomy is also limited because per-team configuration and onboarding each new field org are non-trivial. Both build gates (autonomy and buildability) sit at the floor, not above it, so validate-first is correct.",
+  "solution_plan": "The micro-service is a 'Field Sales KPI Report Generator' \u2014 field managers submit a weekly CSV export of rep activity (visits, outcomes, travel logs) and Claude produces a formatted KPI report with route efficiency, visit completion rate, and selling-time ratio, delivered by email. BUILD: the factory creates a Claude prompt that parses a CSV and outputs a structured KPI narrative, an upload form (Typeform), and a Stripe subscription link for monthly access \u2014 no coding by the operator. SELL: target sales ops and field sales directors at SMB distributors and pharma reps companies via LinkedIn; a shortlist of companies with 'field sales' in job posts is reachable via Apollo; outreach batches need Youval's approval before sending. MAINTAIN: report generation is fully automated (CSV in \u2192 Claude processes \u2192 email out); Stripe handles billing; Youval only approves outreach and reviews the occasional edge-case CSV format. The honest constraint: this CSV-based approach validates the payment intent cheaply, but the real product buyers ultimately want is live GPS-integrated dashboards \u2014 that is a much larger build requiring integrations this solo factory cannot ship; be explicit about scope when selling.",
+  "notes": "build_gates not met: operational_autonomy=6 (floor 7) and buildability_with_ai=6 (floor 6 \u2014 exactly at floor but not above; borderline). Single low-signal data point (one StackExchange question, signal_strength=2). Recommend validating with 3-5 direct outreach conversations before committing to build. No particular founder_fit edge noted for this segment.",
+  "scored_at": "2026-07-01T10:06:12+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

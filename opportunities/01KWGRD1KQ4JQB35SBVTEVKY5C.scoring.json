@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KWGRD1KQ4JQB35SBVTEVKY5C",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 4,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "SharePoint migration is fundamentally a hands-on project: source/destination mapping, permissions audit, test migrations, cutover \u2014 all require direct human involvement per engagement."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Migration projects require scoping calls, stakeholder alignment, and sign-off before execution. No self-serve path exists for high-stakes enterprise data migration."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Post-migration validation and issue resolution (missing permissions, broken links) require ongoing human judgment per client."
+    }
+  ],
+  "total": 2.0,
+  "recommended_stage": "drop",
+  "rationale": "IT admins and M365 consultants are real buyers with real budget \u2014 ShareGate and Metalogix prove willingness to pay at $300\u2013$500+ per migration. However, the service itself is inherently a hands-on, project-based engagement: every migration requires human scoping, execution oversight, and post-migration validation. Operational autonomy is near zero (score 2). This is a consultancy service dressed as a product, and no amount of Claude automation changes the need for per-customer human project management. Penalties drop total to 2.0.",
+  "solution_plan": "Not viable for this factory. SharePoint-to-SharePoint migration is a professional services engagement, not a repeatable automated product \u2014 the buyer pays for human expertise, not a script. Tools like ShareGate already automate the mechanical parts; what remains is judgment-intensive project work. A solo non-technical operator cannot build a competing migration tool, and offering migration as a service would require Youval's full hands-on involvement per client. Drop this path.",
+  "notes": "Fails operational_autonomy_min (2 < 7) and buildability_with_ai_min (3 < 6). The market is proven but the delivery model is fundamentally incompatible with autonomous operation.",
+  "scored_at": "2026-07-02T09:33:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

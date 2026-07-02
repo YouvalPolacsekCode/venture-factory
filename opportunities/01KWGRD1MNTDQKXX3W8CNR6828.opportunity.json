@@ -1,0 +1,25 @@
+{
+  "id": "01KWGRD1MNTDQKXX3W8CNR6828",
+  "discovered_at": "2026-07-02T09:31:32+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=25054195",
+    "snippet": "I wish there was a tool to sandbox Windows applications; not primarily for security reasons but mostly because of the immense amount of trash left behind all over %APPDATA% and other random disk locations, the registry, etc. I wish I could start a command line (terminal) that will virtualize the file system in a 'workspace' such that any crap that would otherwise pollute my system drive ends up in a neat box on my 'work' drive."
+  },
+  "problem_statement": "Windows power users and developers are frustrated by applications scattering files across AppData, the registry, and random disk locations, and want a sandboxing or filesystem virtualisation tool that cleanly isolates app side-effects per workspace without the limitations of Windows Sandbox.",
+  "target_segment": "Windows developers, sysadmins, and technical power users who manage multiple projects or client environments on a single machine.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "windows",
+    "sandboxing",
+    "filesystem-isolation",
+    "developer-tools",
+    "workspace-management",
+    "registry-cleanup",
+    "appdata",
+    "virtualization"
+  ],
+  "notes": "Older signal (2020) but the underlying pain is persistent and unresolved \u2014 Windows Sandbox is too heavyweight and requires Enterprise SKU. Expressed as 'I wish I could' with a concrete use-case. Buyer signal moderate: developers and consultants who manage clean environments would pay for a lightweight tool; similar to how Sandboxie had commercial tiers.",
+  "status": "candidate"
+}

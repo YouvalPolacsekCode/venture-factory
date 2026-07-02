@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KWGRD1MDJEB5NB5NDH0ACBTY",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A meaningful CI/build audit requires reading actual pipeline configs (GitHub Actions YAML, Dockerfile, package.json, etc.) and producing tailored recommendations \u2014 per-customer analysis that cannot be fully standardised without hands-on access to each codebase."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "Engineering leads at Series A\u2013C startups are a named buyer with real budget authority and genuine pain \u2014 CI bloat is a continuous, measurable cost in compute spend and developer time. Willingness to pay at $200\u2013500/mo is plausible given existing tools like Trunk.io or BuildPulse. However, delivering actionable CI optimisation recommendations requires direct access to each customer's pipeline configuration and codebase context, making per-customer human fulfillment unavoidable at anything beyond a shallow checklist. Operational autonomy scores 5 and after the requires_human_fulfillment penalty the total drops to 4.2, below the validate threshold. Buildability with AI is also only moderate (5) \u2014 the hardest and most valuable part is codebase-specific diagnosis, not generic advice.",
+  "solution_plan": "Not viable in current form for this factory. A truly useful CI optimisation service requires reading each customer's actual pipeline files and understanding their specific build graph \u2014 that's per-customer technical work that cannot be delegated to Claude prompts alone without codebase access integrations (GitHub App, CI provider APIs). The surface-level version (a generic checklist report) is buildable but would not differentiate from free blog posts and would not command $200+/mo. A solo non-technical operator cannot build the deeper integrations needed to make this genuinely valuable. Drop unless a fully self-serve, automated pipeline analyser can be scoped \u2014 revisit if a GitHub App integration path becomes feasible.",
+  "notes": "After requires_human_fulfillment penalty, total falls to 4.2, below min_total_to_validate (5.5). Operational_autonomy (5) and buildability_with_ai (5) also both fall short of their respective build gate floors.",
+  "scored_at": "2026-07-02T09:33:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

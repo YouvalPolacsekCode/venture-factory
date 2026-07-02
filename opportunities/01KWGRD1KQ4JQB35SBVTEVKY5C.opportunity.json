@@ -1,0 +1,25 @@
+{
+  "id": "01KWGRD1KQ4JQB35SBVTEVKY5C",
+  "discovered_at": "2026-07-02T09:31:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182472/need-help-migrating-sharepoint-online-site-to-another-sharepoint-site",
+    "snippet": "I'm planning to migrate data from one SharePoint Online site to another SharePoint Online site. I need to transfer document libraries, folders, files, metadata, permissions, and version history without losing any data. The source site contains a large amount of business data, so I'm looking for a reliable and secure migration method that minimizes downtime. Has anyone recently performed a SharePoint-to-SharePoint migration? Which tools or methods would you recommend?"
+  },
+  "problem_statement": "IT professionals and admins migrating large SharePoint Online tenants struggle to reliably preserve metadata, permissions, and version history while minimising downtime, and lack clear guidance on trustworthy tooling.",
+  "target_segment": "IT admins, M365 consultants, and system integrators at SMB-to-enterprise companies running SharePoint Online.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "sharepoint",
+    "microsoft-365",
+    "data-migration",
+    "it-admin",
+    "permissions",
+    "version-history",
+    "enterprise-saas",
+    "cloud-migration"
+  ],
+  "notes": "Business data migration is high-stakes and time-sensitive \u2014 classic paid-tool territory. Existing players (ShareGate, Metalogix) charge hundreds of dollars per migration. Signal implies willingness to pay for reliability and support. Buyer: IT admin or consultant on a billable engagement.",
+  "status": "candidate"
+}

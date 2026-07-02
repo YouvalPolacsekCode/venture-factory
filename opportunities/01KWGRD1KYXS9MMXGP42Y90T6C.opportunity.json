@@ -1,0 +1,24 @@
+{
+  "id": "01KWGRD1KYXS9MMXGP42Y90T6C",
+  "discovered_at": "2026-07-02T09:31:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148741/can-google-ad-manager-be-set-up-to-not-have-any-3rd-party-ads",
+    "snippet": "I have a new client with an existing website. She has been using Google Ad Manager successfully for several years, except for one issue: she would like all third party ads removed. That is, she would like to direct sell ad space on the site to local companies only. I have spent a couple of unsuccessful hours trying to find a way to turn off the ads from other agencies/3rd parties. My searches provide conflicting information."
+  },
+  "problem_statement": "Web consultants and small publishers want to configure Google Ad Manager for direct-sold local advertising only, but GAM's UI and documentation make it difficult to reliably block all programmatic/3rd-party demand, costing billable hours and delaying client launches.",
+  "target_segment": "Freelance web consultants and small independent publishers managing ad operations for local business clients.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-ad-manager",
+    "direct-ad-sales",
+    "ad-ops",
+    "publisher",
+    "freelance-consultant",
+    "local-advertising",
+    "programmatic-blocking"
+  ],
+  "notes": "Consultant is on a paid client engagement \u2014 time wasted is directly billable cost. A step-by-step GAM configuration guide or a lightweight SaaS that audits and enforces direct-only ad rules could sell to this segment. Single signal but professional context elevates relevance.",
+  "status": "candidate"
+}

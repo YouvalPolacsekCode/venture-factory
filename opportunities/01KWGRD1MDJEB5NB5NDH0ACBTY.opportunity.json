@@ -1,0 +1,25 @@
+{
+  "id": "01KWGRD1MDJEB5NB5NDH0ACBTY",
+  "discovered_at": "2026-07-02T09:31:32+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/suraj_at_esence/scaling-codebases-without-platform-bloat-1dj8",
+    "snippet": "Redundant compilation lags, bloated CI pipelines and version drift for internal modules quietly drain engineering productivity. Scaling codebases without platform bloat remains a persistent challenge for startups and growing engineering teams."
+  },
+  "problem_statement": "Growing engineering teams at startups suffer silent productivity losses from bloated CI pipelines, redundant compilation steps, and version drift in internal modules, with no lightweight tooling to diagnose and fix the bloat without adopting a full platform.",
+  "target_segment": "Engineering leads and DevOps engineers at Series A\u2013C startups with 10\u201350 engineers scaling a monorepo or multi-service codebase.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ci-cd",
+    "developer-productivity",
+    "monorepo",
+    "build-tooling",
+    "devops",
+    "startup-engineering",
+    "pipeline-optimization",
+    "version-drift"
+  ],
+  "notes": "Article framing implies this is a known, recurring cost \u2014 'quietly drain' suggests ongoing time and compute spend. Engineering time at funded startups is expensive; a paid audit or lightweight CI optimisation tool could command $200\u2013$500/mo. Buyer signal: engineering orgs with cloud CI spend.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KWGRD1KFXDF1E6V7KFEFX0CE",
+  "discovered_at": "2026-07-02T09:31:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439605/sfmc-installed-package-api-calls-limited-to-packages-home-bu-despite-multi-bu",
+    "snippet": "Created a Server-to-Server Installed Package in Salesforce Marketing Cloud with explicit access granted to multiple Business Units. Despite this, API calls using the package credentials only work against the BU where the package was created. Other BUs are unreachable even though access is visible in the package settings. Is this expected behaviour? Is the recommended approach to create a separate Installed Package per BU? Context: the end goal is to register this package in Agentforce to use MCE..."
+  },
+  "problem_statement": "Salesforce Marketing Cloud installed packages do not honour multi-BU access grants at runtime, forcing practitioners to create a separate package per Business Unit and multiplying credential management overhead across enterprise orgs.",
+  "target_segment": "Salesforce Marketing Cloud admins and developers at mid-to-large enterprises managing multi-BU orgs or building Agentforce integrations.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "multi-bu",
+    "api-integration",
+    "credential-management",
+    "enterprise-saas",
+    "agentforce",
+    "sfmc"
+  ],
+  "notes": "Professional/enterprise context \u2014 poster is building a production integration against a paid Salesforce product. Pain implies repeated manual work per BU and risk of credential sprawl. A tool or managed service that automates cross-BU token orchestration or provides a unified SFMC API proxy could attract paid users. Buyer signal: active paid Salesforce contract, engineering time wasted.",
+  "status": "candidate"
+}

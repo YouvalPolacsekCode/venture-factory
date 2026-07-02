@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KWGRD1KYXS9MMXGP42Y90T6C",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is a freelance web consultant, not a business with a clear budget line \u2014 willingness to pay for a niche GAM configuration guide or audit tool is weak (score 3), as consultants typically solve one-off config problems via free documentation or Stack Overflow rather than paying for tooling. Buyer clarity is low (score 4): the segment is diffuse freelancers, not a named business role with recurring spend. While buildability is decent (a Claude-powered GAM audit tool with a checklist report is technically feasible), the commercial foundation is too weak to justify even validation spend. Total of 4.4 falls below the 5.5 validate threshold.",
+  "solution_plan": "Not recommended for investment. A GAM direct-sell configuration guide or lightweight audit tool is buildable (Claude could generate a step-by-step checklist report from a user's GAM settings), but the market is too thin: freelance consultants face this problem rarely and would search for a free answer before paying. The addressable base of people with this exact GAM configuration problem at any given time is very small. Even at $29 one-time, conversion rates would likely be too low to justify building and marketing a standalone product.",
+  "notes": "Total 4.4 is below min_total_to_validate (5.5). Willingness_to_pay (3) and buyer_clarity (4) are the primary limiting factors.",
+  "scored_at": "2026-07-02T09:33:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KWGRD1KFXDF1E6V7KFEFX0CE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A cross-BU token orchestration proxy or unified SFMC API layer requires per-customer setup, credential onboarding, and integration debugging \u2014 hands-on per client work that cannot be fully automated."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling into enterprise Salesforce environments typically requires a scoping call or demo; self-serve signup is unlikely for credential management tooling touching production Salesforce orgs."
+    }
+  ],
+  "total": 2.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real enterprise SFMC developer or admin with genuine pain and an active Salesforce contract, but building the actual solution \u2014 a cross-BU API proxy or token orchestration layer \u2014 requires deep SFMC-specific integration work well beyond a Claude prompt plus a web form. Operational autonomy is low because each customer would need bespoke credential setup. The weighted total before penalties is already borderline and penalties from per-customer human work and required sales calls drop this to 2.6 \u2014 well below the validate threshold.",
+  "solution_plan": "Not viable for this factory. A working SFMC cross-BU token proxy would require deep Salesforce Connected App integration, OAuth scope negotiation per BU, and likely ongoing debugging of Salesforce platform quirks \u2014 this is a full SaaS product, not a prompt-plus-Stripe service. A solo non-technical operator cannot build or maintain it without engineering resources. If the goal is a consultancy service (do-it-for-you credential setup), it could generate revenue but would be entirely Youval's hands-on billable time, which contradicts the autonomy requirement. Drop this path.",
+  "notes": "Fails operational_autonomy_min (4 < 7) and buildability_with_ai_min (4 < 6). Even ignoring penalties, the total would not reach validate threshold after penalty deductions.",
+  "scored_at": "2026-07-02T09:33:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

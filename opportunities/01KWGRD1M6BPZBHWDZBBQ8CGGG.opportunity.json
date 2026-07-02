@@ -1,0 +1,25 @@
+{
+  "id": "01KWGRD1M6BPZBHWDZBBQ8CGGG",
+  "discovered_at": "2026-07-02T09:31:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148740/blog-posts-are-not-being-indexed-in-google-while-the-main-pages-are-indexed",
+    "snippet": "My website has been online for quite some time, and the main pages are already indexed by Google. However, none of my blog posts are being indexed. The blog posts are included in my XML sitemap. I submitted the sitemap in Google Search Console. The pages are not blocked by robots.txt. There is no noindex meta tag on the blog posts. I have requested indexing multiple times through Google Search Console. The blog posts are accessible and return HTTP 200. Despite all this, they are not indexed."
+  },
+  "problem_statement": "Website owners and content marketers find that blog posts fail to get indexed by Google despite correct technical setup, and Google Search Console provides no actionable diagnostic information to explain or fix the problem.",
+  "target_segment": "SMB website owners, content marketers, and SEO freelancers managing content-driven sites dependent on organic search traffic.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "google-indexing",
+    "search-console",
+    "content-marketing",
+    "blog",
+    "organic-search",
+    "site-audit",
+    "crawl-budget"
+  ],
+  "notes": "Recurring pain reported widely across SEO communities \u2014 Google's opaque indexing decisions frustrate businesses dependent on organic traffic. Several paid SEO audit tools exist but gap remains for a targeted indexing-diagnostic service. Buyer signal moderate: content businesses with revenue tied to SEO would pay for a reliable fix workflow.",
+  "status": "candidate"
+}

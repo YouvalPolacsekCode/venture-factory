@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KWGRD1MNTDQKXX3W8CNR6828",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 1,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.5,
+  "penalties_applied": [],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and persistent \u2014 Windows developers and power users genuinely suffer from app pollution across AppData and the registry \u2014 but the solution is a low-level OS-level filesystem virtualisation tool (kernel-mode drivers, registry hooking, VFS layer), which is categorically unbuildable with Claude prompts, a landing page, and Stripe. Operational autonomy is near-zero because the product itself is native Windows software requiring installation, ongoing maintenance against Windows updates, and deep systems expertise. The buyer segment is nameable (Windows devs/sysadmins) but sprawling and mostly individual \u2014 Sandboxie existed and pivoted to free, signalling weak sustained willingness to pay at commercial price points. All four build gates fail badly.",
+  "solution_plan": "This is not a viable opportunity for a solo non-technical operator running a Claude-based factory. The core requirement is a Windows kernel-mode filesystem and registry virtualisation layer \u2014 essentially a lightweight hypervisor or filter driver \u2014 which requires C/C++ systems programming, Windows Driver Kit development, code-signing certificates, and continuous compatibility work across Windows versions and updates. There is no Claude-prompt equivalent for this. Even if scoped down to a 'wrapper script that moves AppData to a folder', it would require a native Windows executable, installer, and ongoing QA \u2014 none of which this factory can produce or maintain. A non-technical solo operator could not build, sell, or maintain this. The honest recommendation is to drop it entirely.",
+  "notes": "Fails all four build gates: buildability_with_ai=1 (requires native kernel/driver development, not achievable with Claude + web tooling), operational_autonomy=2 (requires per-update compatibility maintenance and user-side installation support), buyer_clarity=5 (individual developers rarely sustain SaaS payments for dev-environment tooling \u2014 see Sandboxie going free), willingness_to_pay=4 (historical precedent of commercial tools collapsing to free/open-source in this niche). This is fundamentally a native Windows systems software product, not a Claude-deliverable micro-service.",
+  "scored_at": "2026-07-02T09:34:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

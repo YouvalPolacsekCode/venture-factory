@@ -1,0 +1,25 @@
+{
+  "id": "01KWKA89ZG5163YV10HFYX940Z",
+  "discovered_at": "2026-07-03T09:22:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48766153",
+    "snippet": "Vercel is a generic cloud provider, so you won't get any of the MCP specific features (listed in the post) and development experience - monetization is still not regulated by the protocol, so people would pay for your product before using your MCP, then you can charge based on subscription or usage as usual!"
+  },
+  "problem_statement": "Developers building and selling MCP (Model Context Protocol) servers lack standardized infrastructure for monetization, access control, and usage-based billing, forcing them to bolt on custom payment flows before buyers can use their tools.",
+  "target_segment": "Indie developers and small startups building and commercializing MCP servers for AI agent ecosystems",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "monetization",
+    "developer-tools",
+    "api-billing",
+    "saas-infrastructure",
+    "llm-tooling"
+  ],
+  "notes": "YC S25 company (Manufact) launched explicitly around MCP cloud \u2014 validates that the space is attracting investment. Comment explicitly notes 'monetization is still not regulated by the protocol' \u2014 gap acknowledged by practitioners. Buyer signal moderate: MCP developers are building commercial products and need billing infrastructure, but market is very early. Signal strength kept at 2 because it is a single launch thread rather than repeated independent complaints.",
+  "status": "candidate"
+}

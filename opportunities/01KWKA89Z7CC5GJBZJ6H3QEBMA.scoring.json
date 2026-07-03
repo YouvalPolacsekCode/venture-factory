@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KWKA89Z7CC5GJBZJ6H3QEBMA",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Solving context-window-driven code duplication requires deep codebase analysis and tooling that integrates into dev workflows (IDE plugins, CI hooks). Setup and onboarding per team is non-trivial and likely needs human-guided configuration."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Developer tools with codebase-specific behavior generate high support load \u2014 edge cases per language/framework require human-judgement responses."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The target buyer is clear \u2014 software developers and engineering teams already paying $19-20/month for AI coding tools \u2014 and the pain is real and frequent. However, the core fix (pre-AI context management, deduplication enforcement, codebase indexing) requires building a non-trivial developer tool that integrates into existing IDEs or CI pipelines, well beyond what Claude prompts + a landing page can ship. Operational autonomy is low because the tool's value is deeply tied to each team's specific codebase, making per-customer setup unavoidable. The total after penalties drops to 3.5 \u2014 below the validate threshold.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using this factory. The product would need to be an IDE extension or a CLI tool that indexes codebases, detects duplicate logic, and feeds structured context summaries to AI assistants before they write code \u2014 requiring real software engineering to build, maintain, and integrate with Cursor/Copilot APIs. There is no version of this that the factory can ship as a Claude prompt plus a Stripe link and a form. Recommend drop.",
+  "notes": "Fails operational_autonomy_min (4 < 7) and buildability_with_ai_min (4 < 6). Even if total were higher, both build gates would block promotion.",
+  "scored_at": "2026-07-03T09:23:44+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

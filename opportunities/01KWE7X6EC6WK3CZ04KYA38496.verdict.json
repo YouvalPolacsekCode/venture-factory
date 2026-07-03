@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KWE7X6EC6WK3CZ04KYA38496",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The pain is real and frequent \u2014 field sales managers genuinely lack granular KPI visibility beyond revenue \u2014 but validation evidence is thin: a single StackExchange question with signal_strength 2 cannot meet the threshold of 5 distinct pain quotes. Willingness-to-pay signals are inferred from CRM spend patterns rather than documented (no competitor pricing pages, no 'is there a tool for this' quotes found in provided sources). The segment is crowded (Badger Maps, Map My Customers, Repsly, Spotio all charge for this exact problem), and the CSV-based MVP approach underdelivers relative to what buyers already expect. Marking rejected pending re-scan with broader source coverage.",
+  "sources": [
+    "https://webapps.stackexchange.com/questions/182469/what-are-the-most-effective-ways-to-measure-field-sales-team-productivity"
+  ],
+  "evaluated_at": "2026-07-03T09:23:02+03:00"
+}

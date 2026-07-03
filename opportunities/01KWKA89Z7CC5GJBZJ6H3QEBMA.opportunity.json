@@ -1,0 +1,25 @@
+{
+  "id": "01KWKA89Z7CC5GJBZJ6H3QEBMA",
+  "discovered_at": "2026-07-03T09:22:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48770319",
+    "snippet": "Here are my biggest gripes with AI coding assistants right now: Obsessed with reinventing the wheel. You'll often find it writing three duplicate functions for the exact same feature in a single file. Why? Because it's terrified of blowing up the context window, so it only reads a fraction of a large file and completely misses the existing functionality. Why are files so bloated in the first place? Because AI prefers adding new code over modifying existing code, and it rarely deletes anything."
+  },
+  "problem_statement": "AI coding assistants produce duplicate functions, bloat files, and fail to understand existing code due to context window limitations, creating significant rework costs for professional developers using paid AI tools.",
+  "target_segment": "Software developers and engineering teams at companies using paid AI coding assistants (e.g. Cursor, GitHub Copilot, Claude Code)",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-coding",
+    "context-window",
+    "code-duplication",
+    "developer-tools",
+    "llm-coding-assistant",
+    "code-quality",
+    "refactoring",
+    "productivity"
+  ],
+  "notes": "13 points and 5 comments on HN as of 2026-07-03 \u2014 fresh and resonant. Buyer signal: professional devs already paying for AI coding tools (Cursor ~$20/mo, Copilot ~$19/mo). Pain is about output quality degrading at scale \u2014 a tool that manages codebase context or enforces deduplication before AI writes code could sell to engineering teams. Adjacent to existing paid tooling budgets.",
+  "status": "candidate"
+}

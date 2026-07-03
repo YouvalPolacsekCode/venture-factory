@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KWKA89ZQXFYJYHMNKAEYZB63",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "SEO recovery involves nuanced diagnosis per site \u2014 Google's indexing behaviour is opaque and inconsistent, and affected business owners will ask 'why isn't it working yet?' questions that require human judgement to answer credibly."
+    }
+  ],
+  "total": 5.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is specific and commercially motivated \u2014 small SaaS and business site owners who depend on organic traffic and have just lost it \u2014 and pain severity is high (direct revenue loss). Willingness to pay is credible given the revenue impact. However, the pain is low-frequency (most sites are deindexed rarely or once), which limits recurring revenue potential. The total of 5.3 falls just below the validate threshold of 5.5, and the autonomy score of 6 only barely clears its build gate floor. The deciding factor is frequency: a deindexing event is a crisis, not a steady subscription need, making the unit economics difficult for a recurring SaaS.",
+  "solution_plan": "The micro-service would be an 'SEO Deindex Recovery Audit' \u2014 a paid one-time report (e.g. $97-$197) where the owner submits their site URL and a brief description of the incident, Claude analyzes their Search Console data (exported as CSV), checks technical signals (sitemap validity, crawl errors, redirect chains, canonical tags), and produces a prioritized recovery checklist with exact Search Console actions to take. The factory builds this as a Tally intake form + Claude analysis prompt + automated PDF report delivered by email + a Stripe payment link. No coding by Youval. To sell: reach out to site owners posting in SEO forums (WebmasterWorld, r/SEO, StackExchange) and to SaaS founders on Twitter/X who mention deindexing \u2014 outreach drafts are queued for Youval's approval before sending. Maintenance is mostly automated; Youval only approves outreach batches. The main limit is that demand is event-driven and sporadic, making it a one-off product rather than a subscription \u2014 viable as a side earner but not a scalable recurring business.",
+  "notes": "Total 5.3 falls below min_total_to_validate (5.5) \u2014 drop. If frequency were higher (e.g. bundled with ongoing monitoring), the score would clear validate. Worth revisiting as a one-time report product if a higher-volume lead channel is identified.",
+  "scored_at": "2026-07-03T09:23:44+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

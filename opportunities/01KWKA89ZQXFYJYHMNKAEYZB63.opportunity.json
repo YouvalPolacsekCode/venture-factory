@@ -1,0 +1,25 @@
+{
+  "id": "01KWKA89ZQXFYJYHMNKAEYZB63",
+  "discovered_at": "2026-07-03T09:22:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148742/need-help-google-deindexed-my-entire-website-after-downtime-now-none-of-my-p",
+    "snippet": "My website went down for a few days about a month ago, and Google deindexed all of my pages. The site has been fully restored, but I'm still unable to get even a single page reindexed despite submitting the sitemap and requesting indexing through Google Search Console. There are no robots.txt or noindex issues, and all pages return 200 OK. Has anyone faced this before or knows how to fix it? The website is https://www.iposcanner.ai"
+  },
+  "problem_statement": "Business website owners who experience unexpected downtime face permanent or prolonged Google deindexing that persists even after full restoration, with no reliable recovery path through Search Console alone, causing sustained loss of organic traffic and revenue.",
+  "target_segment": "Small business and SaaS site owners who depend on organic search traffic and have experienced downtime-triggered deindexing",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "google-index",
+    "deindexing",
+    "site-recovery",
+    "search-console",
+    "organic-traffic",
+    "uptime",
+    "seo-recovery"
+  ],
+  "notes": "Poster runs iposcanner.ai \u2014 a commercial SaaS product, clear business buyer. The pain has direct revenue impact: losing all indexed pages = losing all organic search acquisition. Opportunity could be a monitoring + rapid-response service that detects deindexing risk and accelerates resubmission/recovery. Buyer willingness-to-pay is implied by the business context, though no explicit price mention. Signal strength kept at 2 \u2014 single post, but pattern of deindex-after-downtime is a known recurring complaint across SEO forums.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KWNW09Z32K7V655YW15B5TAQ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A full field-sales CRM with live GPS tracking, visit logging, and mobile access requires ongoing per-customer configuration, onboarding, and data integrations that Claude + static tooling cannot deliver hands-off."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "SMB field teams expect support for mobile app issues, GPS sync problems, and reporting questions \u2014 this generates recurring human-judgement support load."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 a field sales manager at a growing SMB with active purchase intent and clear willingness to pay (this is an established paid software category with multiple incumbents like Badger Maps, Map My Customers, and Salesforce Maps). However, the core product required \u2014 a mobile CRM with live GPS tracking, visit logging, and reporting \u2014 is a complex native-app-grade system that a Claude-prompt + landing-page + Stripe-link stack simply cannot build or deliver autonomously. Operational autonomy scores 2 because every customer would need hands-on setup, mobile app access, and GPS infrastructure that sits entirely outside this factory's tooling. The weighted total already falls below the validate threshold (4.4 \u2192 2.4 after penalties), making this a clear drop.",
+  "solution_plan": "This is not a viable micro-service for this factory. A field-sales CRM with live GPS tracking requires a native or progressive-web mobile app, real-time location APIs, a relational database per client, and ongoing DevOps \u2014 none of which can be assembled by Claude + prompts + Stripe in a week, and none of which can run hands-off. A solo non-technical operator could not build, sell, or maintain this without a software engineering team. The right move is to drop this opportunity and not pursue it further. If there is a narrower slice of this problem \u2014 for example, an AI-generated weekly field sales report from a CSV export, or an outreach sequence for field sales managers promoting a third-party tool via affiliate \u2014 that narrower slice should be filed as a new, separate opportunity.",
+  "notes": "Fails build_gates on operational_autonomy (scored 2, floor is 7) and buildability_with_ai (scored 2, floor is 6). Even without penalties the weighted total of 4.4 is below min_total_to_validate (5.5). The signal source is a single negatively-scored Stack Exchange post \u2014 thin evidence base. Drop and do not invest further validation resources.",
+  "scored_at": "2026-07-04T09:11:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

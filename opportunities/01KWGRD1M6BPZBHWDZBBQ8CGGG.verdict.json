@@ -1,0 +1,14 @@
+{
+  "opportunity_id": "01KWGRD1M6BPZBHWDZBBQ8CGGG",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Google indexing failures are a persistent, widely-reported pain across SEO communities, with thousands of threads on Stack Exchange, Reddit, and specialist forums documenting the exact problem. At least one clear willingness-to-pay signal exists: competing tools (Ahrefs, Screaming Frog, IndexNow services) charge real money for adjacent diagnostics, and job boards regularly list SEO audit work. The segment skews broad (consumer bloggers to agencies), which keeps buyer clarity moderate, but the subset of SEO freelancers and Shopify/content-site owners with revenue tied to organic traffic is large enough and budget-holding enough to justify advancement.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148740/blog-posts-are-not-being-indexed-in-google-while-the-main-pages-are-indexed",
+    "https://www.reddit.com/r/SEO/",
+    "https://ahrefs.com/pricing",
+    "https://www.screamingfrog.co.uk/seo-spider/#pricing"
+  ],
+  "evaluated_at": "2026-07-05T09:30:57+03:00"
+}

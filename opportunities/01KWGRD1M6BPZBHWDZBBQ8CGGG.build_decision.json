@@ -1,0 +1,53 @@
+{
+  "opportunity_id": "01KWGRD1M6BPZBHWDZBBQ8CGGG",
+  "decided_at": "2026-07-05T09:31:10+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 5,
+      "floor": 6,
+      "met": false
+    },
+    "willingness_to_pay": {
+      "score": 5,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.6,
+      "min_total_to_build": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.6 < min_total_to_build 6.5",
+    "buyer_clarity=5 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "This opportunity fails three independent build_now requirements: buyer_clarity scores 5 vs. the floor of 6, the weighted total of 5.6 falls well short of the 6.5 build threshold, and recommended_stage is 'validate' rather than 'build' or 'scale'. The cost-to-gain ratio of 6.22 also far exceeds the kill threshold of 0.6, and the 90-day expected gain is negative (-$92.25). However, the underlying pain is real, buildability and autonomy are adequate, and the portfolio is empty \u2014 so a validation sprint (sharpen ICP to SEO freelancers with client billings, run a free-diagnostic community post, measure response) could lift buyer_clarity and total enough to reconsider next week rather than killing outright.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "r/SEO free-diagnostic offer post"
+}

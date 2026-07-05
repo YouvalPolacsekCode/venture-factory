@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-07-04T06:11:59+00:00",
-    "idt": "2026-07-04T09:11:59+03:00"
+    "utc": "2026-07-05T06:31:15+00:00",
+    "idt": "2026-07-05T09:31:15+03:00"
   },
   "funnel": {
     "candidates": 109,
     "scored": 109,
-    "validated": 12,
+    "validated": 13,
     "build_decisions": {
-      "defer_1_week": 11,
+      "defer_1_week": 12,
       "kill": 1
     },
     "build_now": 0,
@@ -672,7 +672,7 @@
         "Buildable": 7,
         "Pain": 6
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148740/blog-posts-are-not-being-indexed-in-google-while-the-main-pages-are-indexed",
       "discovered_at": "2026-07-02T09:31:32+03:00"
@@ -773,14 +773,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1517,
-    "last_7_days_usd": 1.5765,
-    "all_time_usd": 7.1864,
+    "today_usd": 0.2634,
+    "last_7_days_usd": 1.6322,
+    "all_time_usd": 7.4498,
     "by_day": [
-      {
-        "date": "2026-06-28",
-        "usd": 0.2077
-      },
       {
         "date": "2026-06-29",
         "usd": 0.3212
@@ -804,67 +800,36 @@
       {
         "date": "2026-07-04",
         "usd": 0.1517
+      },
+      {
+        "date": "2026-07-05",
+        "usd": 0.2634
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.49
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.4098
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3426
+        "usd": 0.4657
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3007
+        "usd": 0.4517
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.4004
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.2807
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0336
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-28",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-06-29",
       "agents": {
@@ -1074,12 +1039,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-05",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "skipped": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-04.md",
-    "date": "2026-07-04",
-    "text": "# Daily Summary — 2026-07-04 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 109 |\n| Opportunities validated past threshold | 21 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments detected. Factory is in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping emerging SaaS platforms and B2B communities for pain signals.\n2. `pain_validation` probes top 15 candidates from today's scoring run.\n3. `opportunity_scoring` re-ranks existing candidate pool against cost thresholds.\n4. `build_decisions` evaluates validation results for service viability.\n5. `cost_gain` computes weekly metrics across all completed validations.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-05.md",
+    "date": "2026-07-05",
+    "text": "# Daily Summary — 2026-07-05 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 109 |\n| Opportunities validated past threshold | 22 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently running. All agents are in nominal or skipped state pending weekend schedule.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. `lead_research`, `opportunity_scoring`, `product_design`, `responsiveness_test`, and `service_builder` skipped per weekend schedule (expected). Core discovery agents (`market_radar`, `pain_validation`, `build_decisions`, `cost_gain`) completed successfully in early morning UTC window.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily sweep of emerging pain signals across B2B channels.\n2. `pain_validation` validates high-signal opportunities from weekend discovery run.\n3. `build_decisions` evaluates the 22 validated verdicts for prototype readiness.\n4. `cost_gain` computes weekend economics for Monday steering meeting.\n\n## Operator action items\n\nNone — process is running cleanly. Review the 22 validated opportunities from today's scoring run on Monday morning; 109 candidates are staged for validation handoff.",
     "truncated": false
   },
   "analytics": null

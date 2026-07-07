@@ -1,0 +1,27 @@
+{
+  "id": "01KWXMPWX4RPDZ0BMAVNFSGBN9",
+  "discovered_at": "2026-07-07T09:37:08+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48810964",
+    "snippet": "I think coding benchmark results don't represent our messy reality. As they 1) Use purpose-built test harnesses \u2014 We use Claude Code or Codex 2) Test one-shot tasks \u2014 We work in sessions. Sessions are messy, we start with a large primary task, then some cleanup, an adjacent fix here another over there. We start, stop, and change our minds. That changes both cost and quality. Cache TTLs expire. Context grows. I am working on creating one. Here's my rough plan: 1) Use Claude Code and run real sessions..."
+  },
+  "problem_statement": "Engineering teams paying for AI coding agents (Claude Code, Codex) cannot measure real-world session-level performance \u2014 existing benchmarks only test one-shot tasks in clean harnesses, leaving teams blind to actual cost and quality in messy multi-step work sessions.",
+  "target_segment": "Engineering managers and platform/tooling engineers at software companies using paid AI coding agent subscriptions (Claude Code, GitHub Copilot, Codex).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding-agents",
+    "llm-evaluation",
+    "developer-productivity",
+    "claude-code",
+    "codex",
+    "benchmarking",
+    "session-analytics",
+    "cost-tracking",
+    "ai-tooling",
+    "engineering-teams"
+  ],
+  "notes": "Author is actively building a solution themselves, implying strong felt need. Business context is clear: teams paying recurring subscription costs for Claude Code/Codex with no visibility into ROI across real sessions. Willingness to pay implied by existing spend on the underlying tools. Signal is a single HN thread with 5 comments (3 points) \u2014 not yet multi-source, hence signal_strength 2. Watch for follow-up posts or ProductHunt launches in this space.",
+  "status": "candidate"
+}

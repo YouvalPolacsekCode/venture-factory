@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KWXMPWX4RPDZ0BMAVNFSGBN9",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is real and nameable \u2014 engineering managers and platform engineers at companies already paying $20\u2013100+/seat/month for Claude Code or Codex, giving them a clear budget and a ROI pressure to justify spend. However, the core deliverable (multi-session replay, cost attribution, quality scoring across messy real workflows) requires non-trivial instrumentation: capturing session telemetry from Claude Code or Codex APIs, aggregating across engineers, and producing comparable metrics \u2014 this isn't a one-week Claude-prompt-plus-Stripe build. Operational autonomy is also capped at 5 because meaningful interpretation of session data likely requires periodic human curation of benchmark definitions and report framing, and early customers will want custom dashboards. Two build_gates fail (buildability_with_ai=5 < 6 required; operational_autonomy=5 < 7 required), so the stage is capped at validate despite the commercial signal.",
+  "solution_plan": "The micro-service is a 'real-session AI coding ROI report' \u2014 a recurring report card showing engineering teams their actual Claude Code / Codex cost, velocity, and quality trends across real messy sessions, not toy benchmarks. To validate without building: the factory drafts a one-page PDF sample report and a 5-question intake survey (team size, tools used, biggest cost concern), posts the Typeform link to HN, r/ExperiencedDevs, and a few engineering Slack communities, and offers the first 5 teams a free manual version in exchange for a $49/month commitment. Outreach (DMs to HN commenters on AI-coding threads, cold emails to eng managers at Series A\u2013C startups visible on LinkedIn) is drafted by the factory and goes out only after Youval approves each batch. If 3+ teams pre-commit, the factory can then design a lightweight data-collection flow \u2014 a CLI wrapper or GitHub Action that logs session metadata to a shared bucket \u2014 but that integration step means build complexity is genuinely higher than standard Claude+Stripe, so validate first. Ongoing delivery of manual reports requires ~1\u20132 hours of operator time per customer per month at this stage, which is the honest blocker to autonomy; only invest in automating the pipeline if pre-commitments confirm demand.",
+  "notes": "Two build_gates unmet: buildability_with_ai=5 (needs session telemetry integration from Claude Code/Codex APIs \u2014 not a simple prompt+form build) and operational_autonomy=5 (per-customer report assembly requires human judgment until the data pipeline is built). Validate by seeking 3+ pre-commitments before any build investment. The problem is real and the buyer has money; the question is whether a lightweight automated version is feasible before a well-funded competitor ships it.",
+  "scored_at": "2026-07-07T09:37:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

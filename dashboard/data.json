@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-06T07:02:27+00:00",
-    "idt": "2026-07-06T10:02:27+03:00"
+    "utc": "2026-07-07T06:37:36+00:00",
+    "idt": "2026-07-07T09:37:36+03:00"
   },
   "funnel": {
-    "candidates": 109,
-    "scored": 109,
+    "candidates": 110,
+    "scored": 110,
     "validated": 13,
     "build_decisions": {
       "defer_1_week": 12,
@@ -492,6 +492,38 @@
     },
     {
       "topics": [
+        "ai-coding-agents",
+        "llm-evaluation",
+        "developer-productivity"
+      ],
+      "id": "01KWXMPWX4RPDZ0BMAVNFSGBN9",
+      "problem_statement": "Engineering teams paying for AI coding agents (Claude Code, Codex) cannot measure real-world session-level performance — existing benchmarks only test one-shot tasks in clean harnesses, leaving teams blind to actual cost and quality in messy multi-step work sessions.",
+      "target_segment": "Engineering managers and platform/tooling engineers at software companies using paid AI coding agent subscriptions (Claude Code, GitHub Copilot, Codex).",
+      "total": 5.8,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is real and nameable — engineering managers and platform engineers at companies already paying $20–100+/seat/month for Claude Code or Codex, giving them a clear budget and a ROI pressure to justify spend. However, the core deliverable (multi-session replay, cost attribution, quality scoring across messy real workflows) requires non-trivial instrumentation: capturing session telemetry from Claude Code or Codex APIs, aggregating across engineers, and producing comparable metrics — this…",
+      "solution_plan": "The micro-service is a 'real-session AI coding ROI report' — a recurring report card showing engineering teams their actual Claude Code / Codex cost, velocity, and quality trends across real messy sessions, not toy benchmarks. To validate without building: the factory drafts a one-page PDF sample report and a 5-question intake survey (team size, tools used, biggest cost concern), posts the Typeform link to HN, r/ExperiencedDevs, and a few engineering Slack communities, and offers the first 5 teams a free manual version in exchange for a $49/month commitment. Outreach (DMs to HN commenters on AI-coding threads, cold emails to eng managers at…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 5,
+        "Will pay": 6,
+        "Buildable": 5,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48810964",
+      "discovered_at": "2026-07-07T09:37:08+03:00"
+    },
+    {
+      "topics": [
         "ai-agent",
         "cost-control",
         "devops"
@@ -739,48 +771,15 @@
       "source_type": "forum",
       "source_url": "https://github.com/ollama/ollama/issues/16857",
       "discovered_at": "2026-06-22T11:49:39+03:00"
-    },
-    {
-      "topics": [
-        "ai-coding-assistant",
-        "codex",
-        "developer-tools"
-      ],
-      "id": "01KVSKA1G72N8F6KXRC6QX5T27",
-      "problem_statement": "Developers paying for AI coding assistants (specifically OpenAI Codex) are experiencing perceived performance degradation and lack visibility into whether slowdowns are systemic, their own configuration, or temporary — causing lost productivity and uncertainty about tool reliability.",
-      "target_segment": "Software developers and engineering teams at companies paying for AI coding assistant subscriptions (Codex, Copilot, Cursor, etc.).",
-      "total": 5.4,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is identifiable — software developers on paid AI coding subscriptions — but the pain being scored is performance perception ('has it gotten slower?'), which is fundamentally a monitoring/observability problem. The difficulty is that the actual service required is a real-time latency and reliability tracker polling multiple AI provider APIs and surfacing degradation signals, which requires persistent infrastructure and continuous data collection rather than a simple Claude prompt workf…",
-      "solution_plan": "Not recommended even for validation investment at this time. If the signal strengthens: the factory could build a simple status-aggregation page that polls publicly available AI provider status pages and latency benchmarks, with an email alert subscription (free tier) and a paid tier for custom alerting ($9/month via Stripe). The landing page + polling script + email alerts are buildable without operator coding. However, the polling infrastructure needs to run continuously (a cron job or hosted service), which is slightly outside the pure 'Claude + form + Stripe' pattern and requires a small hosting decision. Youval would need to approve the…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 5,
-        "Buildable": 6,
-        "Pain": 5
-      },
-      "verdict": null,
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48639619",
-      "discovered_at": "2026-06-23T09:39:58+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.0663,
-    "last_7_days_usd": 1.3773,
-    "all_time_usd": 7.5161,
+    "today_usd": 0.0998,
+    "last_7_days_usd": 1.3219,
+    "all_time_usd": 7.6159,
     "by_day": [
-      {
-        "date": "2026-06-30",
-        "usd": 0.1552
-      },
       {
         "date": "2026-07-01",
         "usd": 0.3135
@@ -804,67 +803,36 @@
       {
         "date": "2026-07-06",
         "usd": 0.0663
+      },
+      {
+        "date": "2026-07-07",
+        "usd": 0.0998
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4634
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.3388
+        "usd": 0.47
       },
       {
         "agent": "build_decisions",
         "usd": 0.3008
       },
       {
+        "agent": "pain_validation",
+        "usd": 0.2776
+      },
+      {
         "agent": "opportunity_scoring",
-        "usd": 0.2405
+        "usd": 0.2402
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0336
+        "usd": 0.0333
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-06-30",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-01",
       "agents": {
@@ -1074,12 +1042,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-07",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-06.md",
-    "date": "2026-07-06",
-    "text": "# Daily Summary — 2026-07-06 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 109 |\n| Opportunities validated past threshold | 22 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| *No active experiments* | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` enriches the 22 validated opportunities with contact data.\n2. `pain_validation` runs targeted validation probes on high-scoring candidates.\n3. `market_radar` scans emerging SaaS verticals for new pain signals.\n4. `opportunity_scoring` re-ranks candidates as new context arrives.\n5. `cost_gain` computes weekly cost efficiency baseline for Monday review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-07.md",
+    "date": "2026-07-07",
+    "text": "# Daily Summary — 2026-07-07 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 110 |\n| Opportunities validated past threshold | 22 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `pain_validation` probes 10 top-scored opportunities from today's surface.\n2. `lead_research` extracts contact data for the 22 validated candidates.\n3. `opportunity_scoring` re-ranks emerging signals.\n4. `market_radar` continues radar sweep across B2B SaaS cohorts.\n5. `build_decisions` evaluates readiness of validated cohort for outreach prep.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

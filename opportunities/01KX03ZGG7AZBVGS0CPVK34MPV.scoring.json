@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KX03ZGG7AZBVGS0CPVK34MPV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and expensive \u2014 spot node failures translate directly to lost cloud cost savings and degraded capacity \u2014 and the buyer is a DevOps/platform engineer at a company spending meaningful money on GKE. However, signal strength is only 2 (one source) and lead reachability is difficult: GKE-with-Shielded-Nodes is a narrow configuration, there is no public list of affected companies, and outreach channels for this exact audience are sparse. Buildability is constrained because a reliable auto-remediation agent for Kubernetes CSR failures requires cluster access, persistent monitoring infrastructure, and careful security design \u2014 not a Claude-prompt-plus-landing-page play. The total falls below the 5.5 validate threshold.",
+  "solution_plan": "Not viable at this stage. The service would be a GKE health monitor that detects CSR auto-denial loops and triggers remediation. While Claude could help draft runbooks or analyze logs, the actual remediation requires a privileged Kubernetes operator running inside the customer's cluster \u2014 meaning per-cluster setup, infrastructure access, and security review for every customer. A solo non-technical operator cannot build and deploy that safely. If signal strength increases to 4+ (multiple independent reports confirming the bug is widespread), revisit as a managed-script distribution or a lightweight SaaS alerting layer. For now, drop.",
+  "notes": "Total 5.4 falls below min_total_to_validate (5.5). Also fails operational_autonomy build_gate (score 5, min 7) and buildability_with_ai (score 5, min 6). Primary issue is too narrow a confirmed audience plus infrastructure complexity that doesn't suit this factory.",
+  "scored_at": "2026-07-08T08:44:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

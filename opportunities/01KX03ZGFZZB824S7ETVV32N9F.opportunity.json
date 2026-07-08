@@ -1,0 +1,27 @@
+{
+  "id": "01KX03ZGFZZB824S7ETVV32N9F",
+  "discovered_at": "2026-07-08T08:42:28+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48825447",
+    "snippet": "I've seen numbers like 75% of code at Google is AI generated, huge %s of code overall is AI generated, open source projects overwhelmed with 'slop' PR requests. It's pretty undeniable that AI code is here to stay \u2014 so on your teams / companies how are you managing staying up on PR reviews, and documentation?"
+  },
+  "problem_statement": "Engineering teams using AI coding tools (Copilot, Cursor, etc.) have no reliable way to keep documentation and architectural context in sync as AI-generated code rapidly changes codebases, leading to stale docs and costly review bottlenecks.",
+  "target_segment": "Engineering managers and senior developers at software companies (10\u2013500 engineers) where AI-assisted coding is standard practice.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-code-generation",
+    "documentation",
+    "pr-review",
+    "code-quality",
+    "developer-tooling",
+    "devops",
+    "technical-debt",
+    "cursor",
+    "copilot",
+    "automation"
+  ],
+  "notes": "Multiple community members engaging (4 points, 4 comments on a niche Ask HN). Poster frames it as a team/company problem, not personal curiosity. Companies already paying for AI coding tools and documentation platforms \u2014 the gap is glue between them. Opportunity: a bot or CI step that detects AI-generated code changes and auto-drafts or flags stale documentation, integrated into GitHub/GitLab PR workflow. Willingness-to-pay implied by existing spend on Copilot/Cursor + Confluence/Notion.",
+  "status": "candidate"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "01KX03ZGFFASJKS8K2TM35JVTD",
+  "discovered_at": "2026-07-08T08:42:28+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95476/documented-e2ee-messaging-sdk-library-for-electron-react-native-nestjs-chat",
+    "snippet": "I am looking for a ready-to-use or well-documented software library/SDK to add client-side end-to-end encryption to an existing chat application. Current stack: Backend: NestJS / TypeScript, Desktop client: Electron, Mobile clients: React Native for iOS and Android. Existing product: custom chat application, not based on Matrix or Signal. Current state: no E2EE yet. Goal: add real client-side E2EE before offering the product to other companies. Required features: One-to-one encrypted messaging, Group e[ncryption]..."
+  },
+  "problem_statement": "Developers building commercial chat products cannot find a well-documented, cross-platform E2EE SDK (Electron + React Native + NestJS) to ship client-side encryption before selling to enterprise customers, blocking their go-to-market.",
+  "target_segment": "Indie developers and small software teams building B2B chat or collaboration SaaS products who need to add E2EE as a compliance or sales requirement.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "e2ee",
+    "encryption",
+    "sdk",
+    "chat",
+    "messaging",
+    "cross-platform",
+    "electron",
+    "react-native",
+    "nestjs",
+    "b2b-saas",
+    "compliance",
+    "security"
+  ],
+  "notes": "Buyer signal is explicit: the poster already has a product and needs E2EE *before offering it to other companies* \u2014 i.e., a sales gate. They are actively looking for a paid or licensable library. Gap exists because Matrix/Signal SDKs don't fit non-Matrix stacks cleanly. Opportunity: a turnkey E2EE messaging SDK with clear docs for the NestJS/Electron/React Native stack, or a hosted key-management + encryption service with those client libs.",
+  "status": "candidate"
+}

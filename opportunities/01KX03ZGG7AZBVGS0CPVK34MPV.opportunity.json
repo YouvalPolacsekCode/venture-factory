@@ -1,0 +1,27 @@
+{
+  "id": "01KX03ZGG7AZBVGS0CPVK34MPV",
+  "discovered_at": "2026-07-08T08:42:28+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199409/gke-kubelet-bootstrap-csrs-from-recreated-nodes-stay-pending-14-min-then-get-a",
+    "snippet": "On GKE, nodes join fine on first boot, but a recreated node VM (spot preemption, auto-repair) can never rejoin the cluster. Seen on two separate clusters over the past month, on 1.35.5 (REGULAR channel) and 1.34.8-gke.1126000 (STABLE), and on different node pools: an on-demand default pool and a spot worker pool. Zonal private cluster in Europe with Shielded Nodes and Workload Identity. [CSRs] stay Pending ~14 min then get AutoDenied; auto-repair loops the pool forever."
+  },
+  "problem_statement": "DevOps teams running GKE with Shielded Nodes and spot/preemptible instances face a critical bug where recreated node VMs cannot rejoin clusters due to CSR auto-denial, causing auto-repair to loop indefinitely and effectively killing spot workloads.",
+  "target_segment": "DevOps and platform engineers at companies running production GKE clusters with spot/preemptible nodes to reduce cloud costs.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "gke",
+    "kubernetes",
+    "spot-instances",
+    "node-autoprovisioning",
+    "csr",
+    "shielded-nodes",
+    "google-cloud",
+    "devops",
+    "infrastructure",
+    "reliability"
+  ],
+  "notes": "Single detailed report but affects two production clusters over a month \u2014 indicates real operational cost (spot pool unavailable = lost cost savings + degraded capacity). Companies using spot nodes specifically to reduce cloud spend; a monitoring/alerting or automated remediation tool for GKE CSR failures could command payment. Signal strength kept at 2 due to single source; watch for confirmation. Opportunity: a GKE-specific health monitor or auto-remediation script/service that detects and resolves CSR denial loops.",
+  "status": "candidate"
+}

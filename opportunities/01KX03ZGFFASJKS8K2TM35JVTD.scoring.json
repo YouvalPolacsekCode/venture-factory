@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KX03ZGFFASJKS8K2TM35JVTD",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "An E2EE SDK is a software engineering artifact \u2014 creating and maintaining actual cryptographic libraries, client SDKs for three platforms, and security documentation requires deep developer work per release cycle, not automatable by Claude prompts."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is clear (a dev team with a real compliance deadline and budget) and willingness to pay is credible since E2EE is a sales gate for enterprise contracts. However, the core deliverable is a production-grade cryptographic SDK across three platforms (Electron, React Native, NestJS) \u2014 this is a serious engineering artifact that cannot be shipped as Claude prompts + a landing page; it needs expert security engineering and ongoing maintenance. Buildability and operational autonomy score rock-bottom, making this fundamentally a wrong fit for a solo non-technical operator running an AI factory.",
+  "solution_plan": "This opportunity is NOT viable for a solo non-technical operator. The service would be a licensable E2EE SDK for NestJS/Electron/React Native stacks. Building it requires writing and auditing production cryptographic code across three platforms \u2014 work that demands a senior security engineer and carries serious liability if done wrong. Claude cannot generate and maintain a trustworthy crypto SDK autonomously. Even if built, ongoing support (security patches, platform updates, customer integration help) requires deep human expertise per customer. Recommend dropping this opportunity entirely.",
+  "notes": "Fails buildability_with_ai (score 2, min 6) and operational_autonomy (score 2, min 7). Both are hard build_gates. Also applies requires_human_fulfillment penalty. The idea itself is a real market gap but is the wrong shape for this factory.",
+  "scored_at": "2026-07-08T08:44:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

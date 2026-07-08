@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KX03ZGFQXEAMS8J1AEFEBKN7",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, reachable person \u2014 a dev team lead or CTO at a 5\u201350 person company burning engineering hours on LLM API glue code, and they already pay multiple LLM providers, so willingness to pay is credible. The problem is real and daily. However, the AI gateway space is crowded (LiteLLM, Portkey, Helicone, OpenRouter) and the differentiator is not yet clear, which suppresses defensibility. Buildability is constrained because a functional gateway needs persistent infrastructure (a proxy server, a database for logs/costs, auth), which goes beyond simple Claude prompts \u2014 meaning it can reach 'validate' but needs a clearer unique angle before committing to build.",
+  "solution_plan": "The service would be a dead-simple AI gateway SaaS: a single proxy URL teams point their OpenAI/Anthropic/Gemini calls at, which adds cost tracking, per-key rate limits, and an audit log dashboard. BUILD: the factory can create a landing page with a waitlist form, write a clear one-pager comparing to LiteLLM/Portkey (what makes this simpler), and set up a Stripe payment link for early access. The actual gateway proxy needs lightweight infrastructure (e.g. a Cloudflare Worker or a Render service) \u2014 technically feasible but requires some setup beyond pure Claude prompts, so Youval may need a developer to implement the proxy layer. SELL: reach engineering managers via LinkedIn, relevant Slack communities (Latent Space, AI Engineer), and direct outreach to companies posting AI engineering jobs \u2014 outreach goes out only after operator approval. MAINTAIN: billing via Stripe, support via a Claude-powered email responder, usage dashboards auto-generated. The one recurring human task is approving outreach batches. Validate first with 10 warm conversations before committing to build.",
+  "notes": "Fails operational_autonomy build_gate (score 5, min 7) and buildability_with_ai (score 4, min 6). Stage is validate. Crowded market means validation must surface a clear differentiated angle \u2014 likely 'simplest self-hostable option for 2\u201310 person teams.'",
+  "scored_at": "2026-07-08T08:44:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

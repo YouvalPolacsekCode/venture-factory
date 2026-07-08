@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KX03ZGFZZB824S7ETVV32N9F",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.8,
+  "penalties_applied": [],
+  "total": 6.8,
+  "recommended_stage": "build",
+  "rationale": "The buyer is a specific, named role \u2014 engineering managers and senior devs at companies already paying for Copilot/Cursor plus Confluence/Notion \u2014 which means willingness to pay is backed by existing adjacent spend and the buyer has budget authority. The pain is daily and compounding as AI code output accelerates. Critically, this fits the factory's shape well: a GitHub App that triggers on PRs, uses Claude to analyze code diffs and auto-draft documentation updates or flag stale docs, is genuinely buildable with Claude + a simple GitHub App scaffold + Stripe, and once live, runs autonomously per PR trigger with no human involvement except approving outreach batches. All build gates pass.",
+  "solution_plan": "The micro-service is a GitHub App called something like 'DocDrift' \u2014 it watches every PR, detects when AI-generated or significant code changes are made, and uses Claude to either auto-draft matching documentation updates or flag which existing docs are now stale, posting a summary comment on the PR. BUILD: the factory creates a GitHub App (using a standard Node.js scaffold), wires PR webhook events to a Claude prompt that diffs code against existing docs, and posts a structured comment; a landing page with a 14-day free trial and Stripe subscription ($29\u2013$79/mo per repo) is added alongside. No coding by Youval \u2014 the factory handles prompt design, the app config, and the page. SELL: outreach targets engineering managers at 20\u2013200 person software companies currently job-posting for 'developer experience' or 'platform engineering' roles \u2014 a public signal of doc pain. Outreach drafts go to Youval for approval before sending. MAINTAIN: every PR triggers automatically, billing runs through Stripe, support questions are answered by a Claude-powered email responder; Youval's only recurring task is approving outreach batches and reviewing weekly usage reports.",
+  "notes": "All build gates pass: operational_autonomy 7 (meets min 7), buildability_with_ai 8 (meets min 6), buyer_clarity 8 (meets min 6), willingness_to_pay 7 (meets min 5). Primary risk is crowded adjacent tooling (Mintlify, Swimm) \u2014 validate pricing sensitivity and differentiation on 'AI-code-aware' angle before full build.",
+  "scored_at": "2026-07-08T08:44:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

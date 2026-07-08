@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-07T06:37:36+00:00",
-    "idt": "2026-07-07T09:37:36+03:00"
+    "utc": "2026-07-08T05:44:14+00:00",
+    "idt": "2026-07-08T08:44:14+03:00"
   },
   "funnel": {
-    "candidates": 110,
-    "scored": 110,
+    "candidates": 114,
+    "scored": 114,
     "validated": 13,
     "build_decisions": {
       "defer_1_week": 12,
@@ -44,6 +44,35 @@
       "source_type": "other",
       "source_url": "https://dev.to/arpitstack/we-had-6-features-2-were-eating-our-budget-2bph",
       "discovered_at": "2026-06-25T09:41:14+03:00"
+    },
+    {
+      "topics": [
+        "ai-code-generation",
+        "documentation",
+        "pr-review"
+      ],
+      "id": "01KX03ZGFZZB824S7ETVV32N9F",
+      "problem_statement": "Engineering teams using AI coding tools (Copilot, Cursor, etc.) have no reliable way to keep documentation and architectural context in sync as AI-generated code rapidly changes codebases, leading to stale docs and costly review bottlenecks.",
+      "target_segment": "Engineering managers and senior developers at software companies (10–500 engineers) where AI-assisted coding is standard practice.",
+      "total": 6.8,
+      "recommended_stage": "build",
+      "rationale": "The buyer is a specific, named role — engineering managers and senior devs at companies already paying for Copilot/Cursor plus Confluence/Notion — which means willingness to pay is backed by existing adjacent spend and the buyer has budget authority. The pain is daily and compounding as AI code output accelerates. Critically, this fits the factory's shape well: a GitHub App that triggers on PRs, uses Claude to analyze code diffs and auto-draft documentation updates or flag stale docs, is genuin…",
+      "solution_plan": "The micro-service is a GitHub App called something like 'DocDrift' — it watches every PR, detects when AI-generated or significant code changes are made, and uses Claude to either auto-draft matching documentation updates or flag which existing docs are now stale, posting a summary comment on the PR. BUILD: the factory creates a GitHub App (using a standard Node.js scaffold), wires PR webhook events to a Claude prompt that diffs code against existing docs, and posts a structured comment; a landing page with a 14-day free trial and Stripe subscription ($29–$79/mo per repo) is added alongside. No coding by Youval — the factory handles prompt d…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48825447",
+      "discovered_at": "2026-07-08T08:42:28+03:00"
     },
     {
       "topics": [
@@ -517,10 +546,42 @@
         "Buildable": 5,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48810964",
       "discovered_at": "2026-07-07T09:37:08+03:00"
+    },
+    {
+      "topics": [
+        "llm",
+        "ai-gateway",
+        "api-management"
+      ],
+      "id": "01KX03ZGFQXEAMS8J1AEFEBKN7",
+      "problem_statement": "Engineering teams integrating multiple LLM providers face growing operational overhead: fragmented API key management, inconsistent rate-limiting, missing cost visibility, and no unified audit log — with no lightweight self-hostable solution that handles all of this together.",
+      "target_segment": "Software development teams and agencies at small-to-mid-size companies building AI-powered features across multiple LLM providers.",
+      "total": 5.8,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, reachable person — a dev team lead or CTO at a 5–50 person company burning engineering hours on LLM API glue code, and they already pay multiple LLM providers, so willingness to pay is credible. The problem is real and daily. However, the AI gateway space is crowded (LiteLLM, Portkey, Helicone, OpenRouter) and the differentiator is not yet clear, which suppresses defensibility. Buildability is constrained because a functional gateway needs persistent infrastructure (a p…",
+      "solution_plan": "The service would be a dead-simple AI gateway SaaS: a single proxy URL teams point their OpenAI/Anthropic/Gemini calls at, which adds cost tracking, per-key rate limits, and an audit log dashboard. BUILD: the factory can create a landing page with a waitlist form, write a clear one-pager comparing to LiteLLM/Portkey (what makes this simpler), and set up a Stripe payment link for early access. The actual gateway proxy needs lightweight infrastructure (e.g. a Cloudflare Worker or a Render service) — technically feasible but requires some setup beyond pure Claude prompts, so Youval may need a developer to implement the proxy layer. SELL: reach…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 5,
+        "Will pay": 7,
+        "Buildable": 4,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webmasters.stackexchange.com/questions/148750/what-are-the-advantages-of-an-ai-gateway-over-calling-llm-apis-directly",
+      "discovered_at": "2026-07-08T08:42:28+03:00"
     },
     {
       "topics": [
@@ -708,82 +769,15 @@
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148740/blog-posts-are-not-being-indexed-in-google-while-the-main-pages-are-indexed",
       "discovered_at": "2026-07-02T09:31:32+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "agentforce",
-        "mcp"
-      ],
-      "id": "01KTR59MRDDMV6NFAKS3MEJMXZ",
-      "problem_statement": "Salesforce developers integrating custom MCP servers with AgentForce face opaque schema validation errors that are underdocumented, blocking enterprise AI agent deployments and requiring significant debugging time with no clear resolution path.",
-      "target_segment": "Salesforce developers and enterprise solution architects building AI agent workflows with AgentForce and custom MCP integrations.",
-      "total": 5.4,
-      "recommended_stage": "drop",
-      "rationale": "The buyer is specific and real — Salesforce/AgentForce developers at enterprise companies — and the pain of opaque MCP schema errors blocking AI agent deployments is genuine and recurring. However, the signal is a single forum post from a very nascent ecosystem (AgentForce + MCP is 2025–2026 vintage), so market size and buyer volume are unproven. The total of 5.4 falls just below the validate threshold of 5.5, and operational_autonomy (6) is at the floor for a validate push — delivery would req…",
-      "solution_plan": "The idea is a validator/linter that checks MCP tool schema definitions for AgentForce compatibility before deployment, delivered as a web tool: paste your MCP schema JSON, get a compatibility report with fix suggestions. The factory builds this as a Claude prompt that understands AgentForce schema rules + a simple web intake form + a Stripe payment link for a one-time report or a $29/mo subscription. Outreach would target Salesforce developer communities (Trailblazer Community, LinkedIn Salesforce developer groups) with a free-tier hook — operator approves each outreach batch before it sends. Delivery is fully automated (schema in → Claude a…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 6,
-        "Will pay": 5,
-        "Buildable": 6,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439491/execution-error-array-type-must-specify-items-schema",
-      "discovered_at": "2026-06-10T10:00:09+03:00"
-    },
-    {
-      "topics": [
-        "llm-orchestration",
-        "hybrid-inference",
-        "local-llm"
-      ],
-      "id": "01KVQ8ARTTN2278YGVEQDPSCAV",
-      "problem_statement": "Developers building AI applications must hand-roll orchestration logic to route inference tasks between local models and cloud LLMs, leading to duplicated effort and brittle per-app solutions with no standardized layer.",
-      "target_segment": "AI application developers and small ML engineering teams using Ollama or similar local inference runtimes who also use cloud LLM APIs (OpenAI, Anthropic, etc.).",
-      "total": 5.4,
-      "recommended_stage": "drop",
-      "rationale": "The underlying need is real and frequent — developers building LLM apps do hand-roll routing logic repeatedly — but the buyer clarity is only moderate: 'AI application developers' is a broad segment, many of whom are at companies that would build this internally or use open-source tools (LiteLLM, RouteLLM) rather than pay for a managed SaaS. Willingness to pay is weak: the most visible alternatives are free/open-source, and there's no strong signal of a segment already paying for managed routin…",
-      "solution_plan": "Not recommended for build or validation at this time. The market is already served by well-resourced open-source projects (LiteLLM, RouteLLM), and a solo non-technical operator would struggle to build a differentiated managed proxy service that developers would pay for over free alternatives. If revisiting, the angle would need to be a very narrow, opinionated use case (e.g. 'Ollama + Claude Code cost optimizer for indie devs') with a clear paid niche before investing further.",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 6,
-        "Runs alone": 6,
-        "Will pay": 5,
-        "Buildable": 5,
-        "Pain": 6
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://github.com/ollama/ollama/issues/16857",
-      "discovered_at": "2026-06-22T11:49:39+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.0998,
-    "last_7_days_usd": 1.3219,
-    "all_time_usd": 7.6159,
+    "today_usd": 0.1902,
+    "last_7_days_usd": 1.1986,
+    "all_time_usd": 7.8061,
     "by_day": [
-      {
-        "date": "2026-07-01",
-        "usd": 0.3135
-      },
       {
         "date": "2026-07-02",
         "usd": 0.2377
@@ -807,24 +801,28 @@
       {
         "date": "2026-07-07",
         "usd": 0.0998
+      },
+      {
+        "date": "2026-07-08",
+        "usd": 0.1902
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.47
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.3008
+        "usd": 0.4843
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2776
+        "usd": 0.2697
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2402
+        "usd": 0.2602
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.1509
       },
       {
         "agent": "daily_summary",
@@ -833,41 +831,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-01",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-02",
       "agents": {
@@ -1077,12 +1040,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-08",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-07.md",
-    "date": "2026-07-07",
-    "text": "# Daily Summary — 2026-07-07 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 110 |\n| Opportunities validated past threshold | 22 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `pain_validation` probes 10 top-scored opportunities from today's surface.\n2. `lead_research` extracts contact data for the 22 validated candidates.\n3. `opportunity_scoring` re-ranks emerging signals.\n4. `market_radar` continues radar sweep across B2B SaaS cohorts.\n5. `build_decisions` evaluates readiness of validated cohort for outreach prep.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-08.md",
+    "date": "2026-07-08",
+    "text": "# Daily Summary — 2026-07-08 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 114 |\n| Opportunities validated past threshold | 23 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS communities.\n2. `opportunity_scoring` processes any new candidate opportunities entered today.\n3. `pain_validation` validates high-scoring candidates against threshold criteria.\n4. `build_decisions` evaluates validated opportunities for experiment suitability.\n5. `cost_gain` computes cost/gain projections for opportunities moving to build phase.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

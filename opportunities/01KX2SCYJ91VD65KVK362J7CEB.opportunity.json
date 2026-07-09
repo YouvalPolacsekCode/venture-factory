@@ -1,0 +1,26 @@
+{
+  "id": "01KX2SCYJ91VD65KVK362J7CEB",
+  "discovered_at": "2026-07-09T09:35:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199434/someone-compromised-my-resend-api-key",
+    "snippet": "I bought a VPS for hosting my node.js backend. I disabled root password login, created a user with sudo and a user called deploy. A github action builds docker image from repo and uses ssh to login as deploy user and start the container. In a folder there is a docker compose and .env. The env is passed to the compose. Ssh key is in action secrets... Someone compromised my resend api key. I am learning devops now so I used AI a lot."
+  },
+  "problem_statement": "Solo developers and small teams self-hosting backends on VPS expose API keys and secrets via .env files in docker-compose setups, leading to credential compromise. They lack accessible, opinionated secrets-management tooling that fits a simple VPS+GitHub Actions workflow.",
+  "target_segment": "Indie developers and small dev teams self-hosting Node.js or containerised backends on VPS, using GitHub Actions CI/CD",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "secrets-management",
+    "api-key-security",
+    "vps-hosting",
+    "devops",
+    "github-actions",
+    "docker",
+    "env-files",
+    "credential-leak",
+    "self-hosted"
+  ],
+  "notes": "Buyer context: person paying for VPS + using production infrastructure (Grafana, Loki, Prometheus stack mentioned). Paid tools like Doppler ($10-$30/mo) and Infisical exist, suggesting willingness to pay in this segment. Signal is single instance but the problem class (leaked .env secrets in docker-compose on VPS) is extremely common and well-documented across ServerFault, Reddit r/devops, and similar. Prioritised over weaker signals in this batch.",
+  "status": "candidate"
+}

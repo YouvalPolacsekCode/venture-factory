@@ -1,0 +1,26 @@
+{
+  "id": "01KX2SCYJQJ9P6S4GDQTTSQENE",
+  "discovered_at": "2026-07-09T09:35:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/Anirban-cludo/erpnext-issues/issues/13",
+    "snippet": "ERPNext Issue ID: ISS-2026-00134. Customer: Sushrusha Nursing Home (SNH). Raised By: support@cludotechnology.in. Issue Type: Feature Request. Sales Price should come automatically as MRP in 'Opening stock update' page. Status: Open."
+  },
+  "problem_statement": "Small businesses using ERPNext (especially healthcare and retail) must manually enter MRP/sale price when updating opening stock, causing data entry errors and wasted time during inventory setup and migrations.",
+  "target_segment": "SMB owners and ERP implementation consultants deploying ERPNext for retail, healthcare, and distribution clients in emerging markets",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "erpnext",
+    "inventory-management",
+    "erp-customisation",
+    "small-business",
+    "healthcare-ops",
+    "retail-ops",
+    "data-entry",
+    "frappe",
+    "implementation-consulting"
+  ],
+  "notes": "Signal comes from a paying ERP customer (nursing home) via a technology consultancy (Cludo Technology), indicating a real business context with money already spent on ERP implementation. ERP consultants frequently sell customisations and plugins to bridge gaps like this \u2014 a niche but monetisable opportunity (Frappe marketplace, custom app). Single instance; signal_strength 2 pending corroboration from ERPNext forums or GitHub.",
+  "status": "candidate"
+}

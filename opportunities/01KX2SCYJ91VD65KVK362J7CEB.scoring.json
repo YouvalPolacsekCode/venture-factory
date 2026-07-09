@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KX2SCYJ91VD65KVK362J7CEB",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and severe \u2014 a compromised API key is an incident with financial and reputational consequences, and the problem class (plain-text secrets in .env files on VPS with GitHub Actions) is endemic among indie developers. Willingness to pay is credible: Doppler and Infisical both have paid tiers at $10\u201330/mo and this segment buys infrastructure tooling. However, the product cannot run autonomously: secrets management requires integrating with live infrastructure (VPS, Docker, GitHub Actions secrets injection), which means per-customer setup work and ongoing technical support that goes well beyond Claude prompt + Stripe. Operational autonomy (4) and buildability with AI (4) both fail the build gates hard \u2014 this is a real DevSecOps product, not a micro-service Youval can ship in a week. Validate the segment's price sensitivity and whether a 'secrets audit + setup guide' productised service (rather than a full tool) could work instead.",
+  "solution_plan": "This cannot honestly be built as a hands-off micro-service by a solo non-technical operator in this factory's current form. The actual product (a secrets manager that integrates with VPS Docker environments and GitHub Actions) requires real software engineering, not just a Claude prompt and a landing page. A more honest adjacent option: a 'VPS Secrets Audit' report service \u2014 the operator promotes a $49 fixed-price audit, the customer submits their docker-compose and GitHub Actions config via a form, Claude generates a security findings report with remediation steps, and the operator reviews before sending. But delivery still requires technical judgement on each submission, so autonomy remains low. This opportunity scores better as a validated pain signal pointing toward an affiliate/referral play (e.g. a free guide that funnels to Doppler/Infisical with an affiliate link) than as a buildable product here. Recommend validating whether the segment would pay for a guide/setup service before committing further.",
+  "notes": "Fails build gates: operational_autonomy=4 (below floor of 7) and buildability_with_ai=4 (below floor of 6). The underlying problem is real but the solution requires live infrastructure integration that cannot be automated by this factory.",
+  "scored_at": "2026-07-09T09:36:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

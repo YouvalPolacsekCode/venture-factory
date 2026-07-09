@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01KX03ZGFQXEAMS8J1AEFEBKN7",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The pain is real and daily \u2014 engineering teams integrating multiple LLM providers genuinely face fragmented key management, missing cost visibility, and audit log gaps. However, the market is saturated with well-funded, established solutions (LiteLLM, Portkey, Helicone, OpenRouter, AWS Bedrock Gateway) that already address this exact problem, and the source signal is a single Stack Exchange question with no evidence of unmet demand beyond existing tools. Willingness-to-pay evidence exists (competitors charge $20\u2013$500/mo) but accrues to incumbents, not a new entrant, and no differentiated angle with defensibility has emerged to justify advancing.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148750/what-are-the-advantages-of-an-ai-gateway-over-calling-llm-apis-directly",
+    "https://portkey.ai/pricing",
+    "https://www.helicone.ai/pricing",
+    "https://docs.litellm.ai/docs/",
+    "https://openrouter.ai/"
+  ],
+  "evaluated_at": "2026-07-09T09:36:15+03:00"
+}

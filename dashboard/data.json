@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-08T05:44:14+00:00",
-    "idt": "2026-07-08T08:44:14+03:00"
+    "utc": "2026-07-09T06:37:02+00:00",
+    "idt": "2026-07-09T09:37:02+03:00"
   },
   "funnel": {
-    "candidates": 114,
-    "scored": 114,
+    "candidates": 117,
+    "scored": 117,
     "validated": 13,
     "build_decisions": {
       "defer_1_week": 12,
@@ -578,7 +578,7 @@
         "Buildable": 4,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148750/what-are-the-advantages-of-an-ai-gateway-over-calling-llm-apis-directly",
       "discovered_at": "2026-07-08T08:42:28+03:00"
@@ -774,14 +774,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1902,
-    "last_7_days_usd": 1.1986,
-    "all_time_usd": 7.8061,
+    "today_usd": 0.1924,
+    "last_7_days_usd": 1.1533,
+    "all_time_usd": 7.9985,
     "by_day": [
-      {
-        "date": "2026-07-02",
-        "usd": 0.2377
-      },
       {
         "date": "2026-07-03",
         "usd": 0.1895
@@ -805,20 +801,24 @@
       {
         "date": "2026-07-08",
         "usd": 0.1902
+      },
+      {
+        "date": "2026-07-09",
+        "usd": 0.1924
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4843
+        "usd": 0.4733
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2697
+        "usd": 0.2694
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2602
+        "usd": 0.2261
       },
       {
         "agent": "build_decisions",
@@ -826,46 +826,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0333
+        "usd": 0.0335
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-02",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-03",
       "agents": {
@@ -1075,12 +1040,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-09",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-08.md",
-    "date": "2026-07-08",
-    "text": "# Daily Summary — 2026-07-08 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 114 |\n| Opportunities validated past threshold | 23 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS communities.\n2. `opportunity_scoring` processes any new candidate opportunities entered today.\n3. `pain_validation` validates high-scoring candidates against threshold criteria.\n4. `build_decisions` evaluates validated opportunities for experiment suitability.\n5. `cost_gain` computes cost/gain projections for opportunities moving to build phase.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-09.md",
+    "date": "2026-07-09",
+    "text": "# Daily Summary — 2026-07-09 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 117 |\n| Opportunities validated past threshold | 24 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in factory. All previous experiments archived or wound down.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily sweep for emerging pain signals across B2B SaaS and vertical communities.\n2. `pain_validation` probes top 15 opportunities from today's candidate pool (117 total).\n3. `opportunity_scoring` re-scores any new candidates that arrive overnight.\n4. `build_decisions` evaluates whether any validated opportunities (24 to date) meet launch threshold.\n5. `cost_gain` prepares weekly cost/benefit analysis for Sunday review.\n\n## Operator action items\n\nNone — process continues on schedule. Factory is in exploration mode: 117 candidates in funnel, 24 passed pain validation. When one reaches build threshold, `build_decisions` will queue it for your approval.",
     "truncated": false
   },
   "analytics": null

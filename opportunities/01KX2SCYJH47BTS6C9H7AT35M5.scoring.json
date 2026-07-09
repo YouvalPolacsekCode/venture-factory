@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KX2SCYJH47BTS6C9H7AT35M5",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Onboarding each author requires collecting, curating, and licensing their content (books, talks, interviews), which is per-customer manual work that cannot be automated."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Signing authors as 'licensors' requires negotiation, contract review, and relationship management \u2014 inherently synchronous and human-intensive."
+    }
+  ],
+  "total": 2.1,
+  "recommended_stage": "drop",
+  "rationale": "The concept is intellectually interesting but commercially fragile for a solo operator. The buyer picture is split and weak: readers (B2C) rarely pay $15 per book for a chat interface when free summaries exist, and authors/publishers (B2B) need active relationship sales plus legal licensing agreements before anything can be built. Operational autonomy is low because every author onboarding is bespoke \u2014 content must be licensed, curated, and validated per author, which is non-automatable manual work. The total collapses to 2.1 after applying the human-fulfillment and synchronous-human penalties, which accurately reflect the sales-call and content-licensing reality. Drop and monitor; revisit if a major publisher signals intent to license at scale.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using this factory. The core bottleneck is supply-side: every author requires a licensing agreement and content ingestion before any reader can use the product. That is per-customer legal and relationship work that Claude cannot automate. The demand side is also unproven \u2014 $15/book is a high bar when readers can get free AI book summaries. There is no realistic path to hands-off operation here. Do not build.",
+  "notes": "Total falls to 2.1 after penalties \u2014 well below min_total_to_validate (5.5). Primary issues: buyer_clarity=4 (split B2C/B2B with no clear high-budget buyer), operational_autonomy=4 (per-author content licensing is manual), and penalties for human fulfillment and synchronous sales work.",
+  "scored_at": "2026-07-09T09:36:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

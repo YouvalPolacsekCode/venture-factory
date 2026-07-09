@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KX2SCYJQJ9P6S4GDQTTSQENE",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "ERPNext customisations (Frappe apps or custom scripts) require per-client installation, configuration, and testing on each customer's ERPNext instance \u2014 inherently per-customer manual technical work."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuine and recurring \u2014 data entry gaps in ERPNext opening stock are a real friction point for ERP implementors and their SMB clients. However, the buyer here is either an ERP consultant (who could build this themselves or hire a Frappe developer cheaply) or an end-user SMB that cannot self-serve install a custom Frappe app. Delivery requires per-customer technical deployment on each ERPNext instance, which is non-automatable consulting work. Operational autonomy (3) is fatally low. The total drops to 2.9 after the human-fulfillment penalty. The addressable market for this specific feature gap is also very narrow \u2014 it is a niche within a niche with no clear path to recurring revenue for a solo operator.",
+  "solution_plan": "This opportunity is not viable for this factory. A Frappe/ERPNext customisation is a custom software consulting engagement: it requires installing and configuring code on each client's ERPNext instance, which Claude cannot do autonomously. The market is also too narrow \u2014 ERP consultants serving nursing homes and small retailers in emerging markets is a small, hard-to-reach segment with low average contract values unless you are already embedded in that ecosystem. Do not build.",
+  "notes": "Total of 2.9 is below min_total_to_validate (5.5). Primary disqualifiers: operational_autonomy=3 (per-customer Frappe app deployment is manual consulting work), buildability_with_ai=4 (requires Frappe framework knowledge and per-instance deployment, not a Claude prompt + Stripe), and a very narrow addressable market. Founder_fit=3 with no stated ERPNext/Frappe experience.",
+  "scored_at": "2026-07-09T09:36:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KX2SCYJH47BTS6C9H7AT35M5",
+  "discovered_at": "2026-07-09T09:35:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48840370",
+    "snippet": "If each author had an official AI version of themselves, one they licensed and approved, trained on their books, talks, and interviews, with revenue going back to them and you could pay $15 per book to talk it through in a voice or video call while you read, would you try it? I'm considering building this and want your opinion."
+  },
+  "problem_statement": "Readers of dense non-fiction books cannot interactively query the author's reasoning or get clarification while reading, and authors have no scalable way to monetise their expertise beyond the book itself.",
+  "target_segment": "Non-fiction authors and publishers seeking new digital revenue streams; serious readers (students, professionals) willing to pay for deep engagement with book content",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-author-clone",
+    "book-monetisation",
+    "interactive-reading",
+    "publisher",
+    "non-fiction",
+    "voice-ai",
+    "content-licensing",
+    "edtech"
+  ],
+  "notes": "Explicit price point mentioned ($15/book) and revenue-sharing model proposed, indicating the poster has thought through willingness-to-pay. 9 comments on HN suggests real interest. Buyer signal is consumer-leaning but the B2B angle (selling to publishers or authors as a platform) is stronger for a solo operator. Similar to Delphi.ai / character.ai for authors. Single HN thread; signal_strength capped at 2 until more independent evidence of paying intent.",
+  "status": "candidate"
+}

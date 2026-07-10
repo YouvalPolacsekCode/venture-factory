@@ -1,0 +1,17 @@
+{
+  "opportunity_id": "01KX03ZGFZZB824S7ETVV32N9F",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Evidence across HN, Reddit, and developer forums confirms that AI-generated code volume is overwhelming documentation workflows and PR review capacity at engineering teams of all sizes. Competitors (Mintlify, Swimm, Stenography) charge real money for adjacent solutions and have traction, confirming willingness to pay. The specific gap \u2014 detecting drift between AI-generated code changes and existing docs in a PR workflow \u2014 is documented in multiple threads and job postings for Developer Experience engineers.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48825447",
+    "https://news.ycombinator.com/item?id=35974019",
+    "https://news.ycombinator.com/item?id=34397570",
+    "https://www.reddit.com/r/ExperiencedDevs/comments/1dg5kdl/how_are_you_handling_documentation_with_ai_coding/",
+    "https://swimm.io/pricing",
+    "https://mintlify.com/pricing",
+    "https://www.reddit.com/r/devops/comments/1cbz3q1/documentation_rot_is_killing_us_since_we_adopted/"
+  ],
+  "evaluated_at": "2026-07-10T09:34:12+03:00"
+}

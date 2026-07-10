@@ -1,0 +1,49 @@
+{
+  "opportunity_id": "01KX03ZGFZZB824S7ETVV32N9F",
+  "decided_at": "2026-07-10T09:34:26+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total": {
+      "score": 6.8,
+      "min_total_to_build": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": [
+        "build",
+        "scale"
+      ],
+      "pass": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the scoring total clears the 6.5 threshold, so build_now is technically permissible. However, the cost_to_gain_ratio is 2.727 \u2014 far above the kill threshold of 0.6 in cost_gain_model.yaml \u2014 meaning projected 4-week costs vastly outstrip projected 4-week gains. With a responsiveness_signal of only 2 (no outreach test data), zero current portfolio pressure, and a crowded adjacent space (Mintlify, Swimm, Gitbook AI), committing a full build week now is premature. A one-week defer to run a lightweight responsiveness probe (targeted outreach to 50 engineering managers posting DevEx roles) will either validate demand or kill the idea at near-zero cost.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "cold-email to engineering managers at companies with open 'developer experience' or 'platform engineering' roles on LinkedIn/Greenhouse"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01KX7TK3V05F06789BF488XFXF",
+  "discovered_at": "2026-07-11T08:32:20+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48867021",
+    "snippet": "i use claude code daily and measured what pages cost it while doing research. an average wikipedia article is 68,240 tokens of raw html (tiktoken); nike's homepage is 353,000. claude code's built-in webfetch handles the easy case well. it summarizes wikipedia to about 950 tokens and clears cloudflare on some sites like indeed and ticketmaster. but on js-rendered and some anti-bot pages it returns nothing."
+  },
+  "problem_statement": "AI coding agents using web-fetch tools waste massive token budgets on raw HTML (68k\u2013353k tokens per page) and return nothing on JS-rendered or anti-bot-protected pages, making agentic web research expensive and unreliable for developers paying per token.",
+  "target_segment": "Software developers and solo operators using AI coding agents (Claude Code, Cursor, etc.) on paid API plans who need reliable, token-efficient web content retrieval during agentic workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agent",
+    "token-cost",
+    "web-scraping",
+    "js-rendering",
+    "claude-code",
+    "llm-tooling",
+    "developer-tools",
+    "anti-bot",
+    "web-fetch",
+    "cost-optimization"
+  ],
+  "notes": "Poster is a daily paid Claude Code user who actively measured token consumption \u2014 clear paying buyer. Pain is quantified (68k raw vs 950 summarized). Gap: no reliable solution for JS-rendered pages returns nothing. A proxy/pre-processing service that delivers clean, token-minimal page content to AI agents would address this. Competitor surface: Firecrawl, Jina Reader \u2014 but agent-native integration with anti-bot bypass is the unmet piece. Signal strength capped at 3 because it's a single post; the underlying problem is widely discussed in the AI-dev community.",
+  "status": "candidate"
+}

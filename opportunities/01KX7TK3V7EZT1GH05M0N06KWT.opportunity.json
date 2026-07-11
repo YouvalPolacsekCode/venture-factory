@@ -1,0 +1,26 @@
+{
+  "id": "01KX7TK3V7EZT1GH05M0N06KWT",
+  "discovered_at": "2026-07-11T08:32:20+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=24475008",
+    "snippet": "I wish there was a tool that combined the information output of godbolt with the rest of repl.it features for C++. I would pay for such a tool."
+  },
+  "problem_statement": "C++ developers lack a combined interactive environment that pairs compiler-explorer-style assembly/optimization output (like Godbolt) with full repl/execution and sharing features, forcing them to context-switch between multiple tools during development and learning.",
+  "target_segment": "C++ software engineers, systems programmers, and CS educators who regularly use Compiler Explorer and online REPLs for development, debugging, or teaching.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cpp",
+    "developer-tools",
+    "compiler-explorer",
+    "repl",
+    "ide",
+    "systems-programming",
+    "code-education",
+    "godbolt",
+    "interactive-coding"
+  ],
+  "notes": "Explicit 'I would pay for such a tool' \u2014 strongest possible individual WTP signal. However signal is from 2020 (stale) and is a single data point. Godbolt and Replit have both evolved since; partial overlap may now exist. Signal strength set to 2 (explicit WTP but old and isolated). Worth a quick validation pass to check if the gap still exists in 2026 before investing.",
+  "status": "candidate"
+}

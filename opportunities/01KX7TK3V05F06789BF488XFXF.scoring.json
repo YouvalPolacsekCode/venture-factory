@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KX7TK3V05F06789BF488XFXF",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.9,
+  "penalties_applied": [],
+  "total": 6.9,
+  "recommended_stage": "build",
+  "rationale": "The buyer is a specific, identifiable person \u2014 a paid Claude Code / Cursor / API-plan developer who burns real token budget daily on bloated HTML and gets zero return on JS-rendered pages; this is quantified pain (68k raw vs 950 summarized), not a vague annoyance. Willingness to pay is solid: Firecrawl and Jina Reader already charge for clean-content APIs, proving the segment pays for exactly this. The service is fully automatable \u2014 intake is an API call, delivery is a cleaned markdown payload, billing is usage-based Stripe \u2014 with no per-customer human work required; the only gate is approving outreach batches. The deciding risk is defensibility: Firecrawl/Jina are established, so differentiation must come from agent-native ergonomics (MCP tool, Claude Code plugin) and anti-bot reliability rather than price alone.",
+  "solution_plan": "WHAT: A hosted web-content cleaning API (and MCP tool) that accepts a URL, renders JS if needed, strips boilerplate, and returns token-minimal markdown \u2014 purpose-built for AI coding agents. BUILD: The factory scaffolds a Claude-powered pipeline (headless browser via Browserless or ScrapingBee API for JS rendering + Claude prompt to extract and compress content), wraps it in a simple REST endpoint deployed on a serverless host, adds a Stripe usage-based billing link, and publishes an MCP tool manifest so Claude Code users can drop it in with one config line \u2014 no operator coding needed. SELL: Target paid Claude Code and Cursor users via HN Show HN post, the Claude Discord/community forums, and a short thread on X/Twitter developer communities; the factory drafts all outreach copy and posts go live only after Youval approves. MAINTAIN: Every request is processed by the pipeline automatically; billing reconciles via Stripe; Claude handles support tickets via a simple email-to-Claude routing rule; Youval's only recurring touch is reviewing weekly usage reports and approving any outreach or pricing changes. CAVEAT: Anti-bot bypass depends on a third-party scraping API (Browserless/ScrapingBee) whose terms must be respected \u2014 factor in their per-request cost (~$0.001\u2013$0.005) when setting pricing to stay margin-positive.",
+  "notes": "",
+  "scored_at": "2026-07-11T08:33:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

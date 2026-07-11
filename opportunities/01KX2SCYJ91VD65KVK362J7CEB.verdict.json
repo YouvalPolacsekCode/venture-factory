@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KX2SCYJ91VD65KVK362J7CEB",
+  "status": "rejected",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "The pain is genuine and well-documented \u2014 plaintext .env secrets leaking through VPS/Docker/GitHub Actions setups is an endemic, high-severity problem with real financial consequences. However, the scoring analysis correctly identifies that no buildable, autonomous product exists here for this factory: secrets management requires live infrastructure integration, per-customer setup work, and ongoing technical support that Claude + Stripe cannot replace. The opportunity is better treated as a validated pain signal pointing toward an affiliate/referral play (e.g., a free guide funnelling to Doppler or Infisical) than as a promotable experiment. Rejecting to prevent wasted build cycles; pain evidence is noted for reuse in content/affiliate strategies.",
+  "sources": [
+    "https://serverfault.com/questions/1199434/someone-compromised-my-resend-api-key"
+  ],
+  "evaluated_at": "2026-07-11T08:33:01+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KX7TK3V7EZT1GH05M0N06KWT",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The single 2020 'I would pay' comment is genuine WTP signal but is six years stale and isolated \u2014 Godbolt and Replit have both matured significantly since, and the gap may no longer exist in the same form; the actual buyer population is unclear (individual developers, students, educators?) without a verified budget or modern replication of the pain. More critically, building a combined Compiler Explorer + REPL environment is substantial infrastructure \u2014 it requires a sandboxed multi-language code execution engine, compiler toolchain integration, and real-time assembly output, none of which is shippable as a Claude prompt plus a simple page; this is well outside Claude-factory buildability. Operational autonomy is equally low: a live coding environment requires ongoing infra ops (sandbox security, compiler version management, latency SLAs) that cannot run hands-off. This is not the right fit for a solo non-technical operator running an AI micro-service factory.",
+  "solution_plan": "This opportunity is not recommended for building. A credible Godbolt+Replit hybrid requires a secure sandboxed code-execution backend with compiler toolchains for C++, real-time websocket-based REPL sessions, and assembly-output rendering \u2014 none of this is buildable by a non-technical solo operator using Claude prompts and a Stripe link. Even if outsourced to a cloud execution API, the ongoing ops burden (security patches, compiler updates, abuse prevention, latency management) would demand continuous engineering attention that falls outside what this factory can automate. The signal is also too old and thin to justify the investment risk. If this space remains interesting, the right move is a quick validation pass (post a landing page, measure signups) before any build commitment \u2014 but even a validated signal would require a technical co-founder or contracted engineers to ship.",
+  "notes": "Fails build_gates on operational_autonomy (3 < 7), buildability_with_ai (3 < 6), buyer_clarity (5 < 6), and willingness_to_pay (4 < 5). Total 4.0 also falls below min_total_to_validate (5.5), so the stage is drop rather than validate.",
+  "scored_at": "2026-07-11T08:33:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

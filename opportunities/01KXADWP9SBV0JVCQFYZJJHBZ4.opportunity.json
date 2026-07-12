@@ -1,0 +1,25 @@
+{
+  "id": "01KXADWP9SBV0JVCQFYZJJHBZ4",
+  "discovered_at": "2026-07-12T08:48:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439620/unable-to-use-multi-line-strings-in-apex-within-visual-studio-code",
+    "snippet": "I am trying to use this relatively new feature, but VS code does not like it and the code does not compile when deploying. I get errors like Unexpected symbol '\\r', was expecting '\\n' and Expecting ';' but was: ',' \u2014 Salesforce developer trying to use Apex multi-line string literals in VS Code, blocked from deploying due to tooling incompatibility with a recently released language feature."
+  },
+  "problem_statement": "Salesforce developers cannot use newly shipped Apex language features (multi-line string literals) because the VS Code Salesforce extension and deployment toolchain do not yet support them, causing compile errors and blocking deployments in production workflows.",
+  "target_segment": "Salesforce Apex developers at companies using VS Code and the Salesforce CLI for deployments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "vscode",
+    "developer-tooling",
+    "deployment",
+    "language-features",
+    "dx-tooling",
+    "ide-plugin"
+  ],
+  "notes": "Business context: Salesforce devs are paid professionals at companies; deployment blockers have real cost. Single signal but the pain pattern (IDE lagging behind language releases) is a known recurring problem in the Salesforce ecosystem. A tool or extension layer that bridges new Apex syntax for older toolchain versions could command a subscription from dev teams.",
+  "status": "candidate"
+}

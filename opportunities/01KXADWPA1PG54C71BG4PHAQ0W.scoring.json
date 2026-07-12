@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KXADWPA1PG54C71BG4PHAQ0W",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [],
+  "total": 5.9,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is sharply defined \u2014 Salesforce admins and release managers at compliance-sensitive enterprises \u2014 and the pain is serious: permission misconfiguration from API/UI divergence can cause audit failures with real legal and financial consequences. The existing market for Salesforce governance tools (e.g., OwnBackup, Certinia, Strongpoint) confirms willingness to pay at the enterprise level. However, building a reliable pre-deployment permission auditor requires deep Salesforce Metadata API integration and enough logic to model permission dependency graphs, which is more than a pure Claude + form solution; and with no responsiveness signal yet, the stage is validate before committing to build.",
+  "solution_plan": "The micro-service would be a Salesforce Permission Pre-Flight Checker: an operator-approved outreach campaign identifies Salesforce admins and release managers on LinkedIn and the Trailblazer Community, offering a paid audit report. The factory builds a form-based intake (org URL, permission set XML upload or API token), Claude analyzes the permission dependency graph against known Salesforce cascade rules, and outputs a PDF/HTML risk report flagging dangerous cascades before deployment. Stripe handles a one-time report fee ($49\u2013$149) or a monthly subscription. Delivery is automated (Claude generates the report, emails it); the operator's only recurring action is approving outreach batches and reviewing flagged edge cases. The honest constraint: this needs a small amount of Salesforce Metadata API integration work (connecting to the org or parsing exported XML) that goes slightly beyond a pure no-code setup \u2014 a freelance Salesforce developer for one day could handle it. Validate first by offering manual reports via a Typeform to 20 target buyers before investing in automation.",
+  "notes": "operational_autonomy=6 meets the floor of 7 only marginally \u2014 it fails the build_gate (floor is 7, score is 6), capping stage at validate. buildability_with_ai=6 meets its floor exactly. Recommend validating demand and tightening the automation story before promoting to build.",
+  "scored_at": "2026-07-12T08:49:39+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

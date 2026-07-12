@@ -1,0 +1,25 @@
+{
+  "id": "01KXADWPA8PZN1BYCJC7DHH3AW",
+  "discovered_at": "2026-07-12T08:48:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199458/how-to-create-a-new-forwarding-only-address-in-microsoft-365",
+    "snippet": "I am trying to create a forwarding-only email address in my MS 365 tenant, but not having any luck. I have my mail for mydomain.org hosted at MS365; I have mail for lists.mydomain.org hosted with another mail provider (used for mailing lists). I can successfully send email to/from mylist@lists.mydomain.com. I have a connector set up mydomain.org to lists.mydomain.org: 'Only when I have a transport rule set up that redirects messages to this connector'."
+  },
+  "problem_statement": "IT administrators managing Microsoft 365 tenants struggle to configure simple email forwarding-only addresses across mixed mail providers, requiring non-obvious combinations of connectors, transport rules, and shared mailboxes \u2014 a task that should be trivial but is not.",
+  "target_segment": "IT administrators and MSPs managing Microsoft 365 tenants for small-to-mid-size businesses with hybrid or multi-provider email setups",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "microsoft-365",
+    "email-forwarding",
+    "it-admin",
+    "msp",
+    "exchange-online",
+    "mail-routing",
+    "transport-rules",
+    "hybrid-email"
+  ],
+  "notes": "Business context: IT admins and MSPs are paid to manage M365 tenants; configuration complexity wastes billable hours. Repeated pattern across M365 admin forums. A guided configuration tool or runbook SaaS for common M365 mail routing scenarios could be sold to MSPs on a per-seat or per-tenant basis.",
+  "status": "candidate"
+}

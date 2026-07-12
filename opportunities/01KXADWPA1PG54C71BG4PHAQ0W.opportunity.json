@@ -1,0 +1,26 @@
+{
+  "id": "01KXADWPA1PG54C71BG4PHAQ0W",
+  "discovered_at": "2026-07-12T08:48:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439629/deploying-a-profile-via-metadata-api-with-debug-apex-enabled-but-modify-all-data",
+    "snippet": "In the Salesforce Setup UI, enabling 'Debug Apex' on a Profile forces 'Modify All Data' (and the permissions Modify All Data itself depends on) to also enable \u2014 checking the box cascades automatically. Unchecking 'Debug Apex' afterward does not roll back the permissions it forced on; the UI's dependency engine only cascades forward. Deploying a Profile via Metadata API with Debug Apex enabled but Modify All Data disabled: does server-side validation enforce the same dependency as the Setup UI?"
+  },
+  "problem_statement": "Salesforce admins and developers cannot reliably manage permission dependencies when deploying Profiles via the Metadata API \u2014 the UI cascades permissions forward but does not roll them back, and it is unclear whether the API enforces the same rules, creating security and compliance risk in enterprise orgs.",
+  "target_segment": "Salesforce administrators and DevOps engineers at mid-to-large enterprises managing permission sets and profile deployments via CI/CD",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "metadata-api",
+    "permissions",
+    "profile-deployment",
+    "apex-debugger",
+    "devops",
+    "compliance",
+    "security",
+    "ci-cd"
+  ],
+  "notes": "Business buyer: Salesforce admins and release managers at companies with compliance requirements. Permission misconfiguration can cause audit failures. A tool that audits and reconciles Salesforce permission dependencies pre-deployment (and flags risky cascades) would fit a recurring enterprise compliance workflow. Willingness to pay is implied by the enterprise context and existing market for Salesforce governance tools.",
+  "status": "candidate"
+}

@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01KX7TK3V05F06789BF488XFXF",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "daily",
+  "rationale": "Daily paid users of Claude Code and Cursor face quantified, recurring token waste (68k\u2013353k tokens for raw HTML vs ~950 for summarized content) and complete failures on JS-rendered/anti-bot pages. Competing products (Firecrawl, Jina Reader) already charge for clean-content APIs, confirming willingness to pay, while the agent-native MCP integration angle and anti-bot bypass remain demonstrably unmet by current solutions.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48867021",
+    "https://www.firecrawl.dev",
+    "https://jina.ai/reader/",
+    "https://www.scrapingbee.com/pricing/",
+    "https://browserless.io/pricing/"
+  ],
+  "evaluated_at": "2026-07-12T08:48:56+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KXADWP9SBV0JVCQFYZJJHBZ4",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is clear \u2014 Salesforce developers at companies using VS Code \u2014 and the pain is real: deployment blockers on a new language feature cost real engineering time. However, the core solution requires building or wrapping a VS Code extension and/or a CLI toolchain shim that transpiles or patches new Apex syntax, which is deep developer tooling work well beyond Claude prompts + a landing page. Operational autonomy is low because ongoing maintenance tracks Salesforce platform releases, and the underlying fix (Salesforce updating their official extension) could eliminate the problem at any time, making this a fragile niche with a short window.",
+  "solution_plan": "This one is not a viable build for a solo non-technical operator. The service would be a syntax-compatibility shim or VS Code extension wrapper that lets developers deploy new Apex multi-line string literals without errors. Building it requires deep knowledge of the Salesforce DX toolchain, VS Code extension APIs, and Apex compilation internals \u2014 none of which can be assembled from Claude prompts and a Stripe link. Even if a workaround exists (e.g., a pre-deploy text transformer), keeping it current as Salesforce ships new features demands ongoing engineering judgment. This is a job for an open-source contributor or a Salesforce ISV, not a micro-service factory.",
+  "notes": "Does not reach min_total_to_validate (5.5). buildability_with_ai=3 fails build_gate floor of 6; operational_autonomy=4 fails floor of 7. Even with more signal, the technical barrier makes this wrong for this factory.",
+  "scored_at": "2026-07-12T08:49:39+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01KX7TK3V05F06789BF488XFXF",
+  "decided_at": "2026-07-12T08:49:53+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total": {
+      "score": 6.9,
+      "threshold": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the total score (6.9) clears the 6.5 threshold, so this opportunity is technically eligible for build_now. However, the cost-to-gain ratio is 4.02 \u2014 far above the kill threshold of 0.6 in cost_gain_model.yaml \u2014 meaning projected 4-week costs ($800) dwarf projected 4-week gross gain ($199). The responsiveness signal is only 2 (no outreach test run yet), so we have zero validated demand beyond a single HN comment. Firecrawl and Jina Reader are established competitors with funding; differentiating on 'agent-native ergonomics' alone is speculative. Deferring one week to run a lightweight responsiveness test (Show HN draft, targeted Discord/X outreach to 50 Claude Code power users) will either validate demand or confirm the cost-to-gain gap is real, at near-zero cost.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "HN Show HN post + Claude Discord community"
+}

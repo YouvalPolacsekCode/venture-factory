@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KXADWPA8PZN1BYCJC7DHH3AW",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is reasonably specific \u2014 IT admins and MSPs managing M365 tenants \u2014 and the pain (non-obvious multi-step configuration for a task that should be trivial) is a genuine recurring time sink. MSPs in particular bill by the hour, so tools that save configuration time have a clear value proposition and an established software-buying habit. The challenge is that the solution (a guided runbook or configuration wizard) is straightforward to build but is also commoditized: Microsoft's own documentation, community guides, and admin tooling partially cover this ground, making defensibility low and willingness to pay only moderate. Validate whether MSPs will pay before building.",
+  "solution_plan": "The micro-service is an M365 Mail Routing Configuration Wizard: a step-by-step guided tool that outputs the exact PowerShell commands, connector settings, and transport rule configurations needed for common hybrid/multi-provider email scenarios. The factory builds it as a Claude-powered multi-step form (user answers 5\u20138 questions about their setup), which generates a tailored configuration guide and copy-pasteable scripts, delivered by email. Stripe handles a one-time fee ($29\u2013$79) or an MSP subscription ($49/month for unlimited runs). Outreach goes to MSP communities (Reddit r/msp, Spiceworks, LinkedIn MSP groups) with operator approval before each batch. Delivery and support are fully automated \u2014 Claude handles follow-up questions against a knowledge base. The operator's only recurring task is approving outreach batches. Honest constraint: the content must be kept current as Microsoft updates M365; Claude can handle updates if fed Microsoft's changelog, but the operator needs to flag when major M365 changes ship.",
+  "notes": "All build_gates are met at this score level, but total (5.6) is below min_total_to_build (6.5), so stage is validate. Defensibility is the main weakness \u2014 validate that MSPs will pay before the market gets crowded with free alternatives.",
+  "scored_at": "2026-07-12T08:49:39+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

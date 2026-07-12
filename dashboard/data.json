@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-07-11T05:33:39+00:00",
-    "idt": "2026-07-11T08:33:39+03:00"
+    "utc": "2026-07-12T05:49:58+00:00",
+    "idt": "2026-07-12T08:49:58+03:00"
   },
   "funnel": {
-    "candidates": 119,
-    "scored": 119,
-    "validated": 14,
+    "candidates": 122,
+    "scored": 122,
+    "validated": 15,
     "build_decisions": {
-      "defer_1_week": 13,
+      "defer_1_week": 14,
       "kill": 1
     },
     "build_now": 0,
@@ -69,7 +69,7 @@
         "Buildable": 7,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48867021",
       "discovered_at": "2026-07-11T08:32:20+03:00"
@@ -521,6 +521,37 @@
     },
     {
       "topics": [
+        "salesforce",
+        "metadata-api",
+        "permissions"
+      ],
+      "id": "01KXADWPA1PG54C71BG4PHAQ0W",
+      "problem_statement": "Salesforce admins and developers cannot reliably manage permission dependencies when deploying Profiles via the Metadata API — the UI cascades permissions forward but does not roll them back, and it is unclear whether the API enforces the same rules, creating security and compliance risk in enterprise orgs.",
+      "target_segment": "Salesforce administrators and DevOps engineers at mid-to-large enterprises managing permission sets and profile deployments via CI/CD",
+      "total": 5.9,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is sharply defined — Salesforce admins and release managers at compliance-sensitive enterprises — and the pain is serious: permission misconfiguration from API/UI divergence can cause audit failures with real legal and financial consequences. The existing market for Salesforce governance tools (e.g., OwnBackup, Certinia, Strongpoint) confirms willingness to pay at the enterprise level. However, building a reliable pre-deployment permission auditor requires deep Salesforce Metadata API…",
+      "solution_plan": "The micro-service would be a Salesforce Permission Pre-Flight Checker: an operator-approved outreach campaign identifies Salesforce admins and release managers on LinkedIn and the Trailblazer Community, offering a paid audit report. The factory builds a form-based intake (org URL, permission set XML upload or API token), Claude analyzes the permission dependency graph against known Salesforce cascade rules, and outputs a PDF/HTML risk report flagging dangerous cascades before deployment. Stripe handles a one-time report fee ($49–$149) or a monthly subscription. Delivery is automated (Claude generates the report, emails it); the operator's on…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 6,
+        "Will pay": 6,
+        "Buildable": 6,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439629/deploying-a-profile-via-metadata-api-with-debug-apex-enabled-but-modify-all-data",
+      "discovered_at": "2026-07-12T08:48:05+03:00"
+    },
+    {
+      "topics": [
         "hiring",
         "interviewing",
         "startup-ops"
@@ -736,50 +767,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48742163",
       "discovered_at": "2026-07-01T10:04:46+03:00"
-    },
-    {
-      "topics": [
-        "field-sales",
-        "sales-productivity",
-        "kpi-tracking"
-      ],
-      "id": "01KWE7X6EC6WK3CZ04KYA38496",
-      "problem_statement": "Field sales managers lack tooling to track granular productivity KPIs beyond revenue — metrics like route efficiency, visit completion rate, and time-spent-selling vs. traveling — leaving performance gaps invisible until it's too late.",
-      "target_segment": "Field sales managers and sales ops roles at SMB-to-mid-market companies with distributed outside sales reps, especially in FMCG, pharma, or B2B distribution.",
-      "total": 5.6,
-      "recommended_stage": "validate",
-      "rationale": "Field sales managers at SMB/mid-market companies (FMCG, pharma, B2B distribution) are a specific, nameable B2B role with budget authority and an established pattern of paying for CRM and analytics tooling — the buyer is real. The pain is high-frequency (daily visibility gap) and the segment already tolerates software spend, giving a credible willingness-to-pay signal. However, the core product would need to ingest GPS/location data, mobile rep activity logs, and CRM visit records to produce the…",
-      "solution_plan": "The micro-service is a 'Field Sales KPI Report Generator' — field managers submit a weekly CSV export of rep activity (visits, outcomes, travel logs) and Claude produces a formatted KPI report with route efficiency, visit completion rate, and selling-time ratio, delivered by email. BUILD: the factory creates a Claude prompt that parses a CSV and outputs a structured KPI narrative, an upload form (Typeform), and a Stripe subscription link for monthly access — no coding by the operator. SELL: target sales ops and field sales directors at SMB distributors and pharma reps companies via LinkedIn; a shortlist of companies with 'field sales' in job…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 6,
-        "Will pay": 5,
-        "Buildable": 6,
-        "Pain": 6
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://webapps.stackexchange.com/questions/182469/what-are-the-most-effective-ways-to-measure-field-sales-team-productivity",
-      "discovered_at": "2026-07-01T10:04:46+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.152,
-    "last_7_days_usd": 1.2403,
-    "all_time_usd": 8.4266,
+    "today_usd": 0.3395,
+    "last_7_days_usd": 1.3164,
+    "all_time_usd": 8.7662,
     "by_day": [
-      {
-        "date": "2026-07-05",
-        "usd": 0.2634
-      },
       {
         "date": "2026-07-06",
         "usd": 0.0663
@@ -803,67 +799,36 @@
       {
         "date": "2026-07-11",
         "usd": 0.152
+      },
+      {
+        "date": "2026-07-12",
+        "usd": 0.3395
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4598
+        "usd": 0.4856
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3026
+        "usd": 0.3049
       },
       {
         "agent": "pain_validation",
-        "usd": 0.2584
+        "usd": 0.2577
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.1855
+        "usd": 0.2346
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0338
+        "usd": 0.0336
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-05",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "skipped": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-06",
       "agents": {
@@ -1073,12 +1038,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-12",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-11.md",
-    "date": "2026-07-11",
-    "text": "# Daily Summary — 2026-07-11 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 119 |\n| Opportunities validated past threshold | 26 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. All discovery-phase work is captured in the opportunity pipeline above.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeps for emerging pain signals across target cohorts.\n2. `opportunity_scoring` processes new candidate opportunities from today's radar run.\n3. `pain_validation` validates high-scoring candidates via outbound research.\n4. `build_decisions` evaluates validated opportunities for prototype feasibility.\n5. `cost_gain` prepares weekly efficiency metrics for Sunday ritual review.\n\n## Operator action items\n\nNone — process the approval queue (empty) and move on.",
+    "file": "reports/daily/2026-07-12.md",
+    "date": "2026-07-12",
+    "text": "# Daily Summary — 2026-07-12 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 122 |\n| Opportunities validated past threshold | 27 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes normal operation; 3 candidate opportunities queued for enrichment.\n2. `pain_validation` probes the 27 validated candidates for fit signals.\n3. `product_design` reviews top 5 candidates for solution viability.\n4. `build_decisions` evaluates which candidates warrant experiment prototyping.\n5. `cost_gain` calculates expected ROI on the week's validated opportunities.\n\n## Operator action items\n\nNone — process the validation results and prepare recommendations for Monday morning.",
     "truncated": false
   },
   "analytics": null

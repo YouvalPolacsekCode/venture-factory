@@ -1,0 +1,27 @@
+{
+  "id": "01KXD0X3G1Y056HETZDP3DJK56",
+  "discovered_at": "2026-07-13T08:58:51+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48886741",
+    "snippet": "Should HN add the ability to flag articles as AI-generated? This doesn't have to act as a regular flag, i.e., it won't de-rank the article; it could just show up as an indicator, allowing others (like myself) who don't like reading AI-generated text, to skip it. Open questions: 1. Why is the regular voting system not enough? 2. Should HN change in response to the gen AI era? It has been successful not changing fundamentals. [365 points, 194 comments \u2014 broad community engagement indicating widespread frustration with undisclosed AI-generated content across the web]"
+  },
+  "problem_statement": "Content curators, newsletter editors, and platform operators cannot reliably identify and label AI-generated articles at scale, causing reader trust erosion and wasted review time when AI content is not disclosed.",
+  "target_segment": "Newsletter editors, content platform operators, media publishers, and community moderators who curate or gate-keep content feeds and need to flag or filter AI-generated submissions.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-detection",
+    "content-moderation",
+    "ai-generated-content",
+    "newsletter",
+    "publishing",
+    "content-curation",
+    "media",
+    "trust",
+    "labeling",
+    "platform-ops"
+  ],
+  "notes": "365 upvotes and 194 comments on HN is a strong community signal. The discussion implies platform operators and editors want tooling \u2014 not just personal readers. Potential paying buyers: newsletter platforms, community platforms (forums, aggregators), media companies that want to audit submitted content. Adjacent products (Originality.ai, GPTZero) already charge $10\u2013$30/mo per seat, validating willingness to pay. Buyer signal is indirect but plausible; signal_strength capped at 3 because the thread is a feature request aimed at HN itself, not a direct 'I pay for X and it doesn't do Y' complaint.",
+  "status": "candidate"
+}

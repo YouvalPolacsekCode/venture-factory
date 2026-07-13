@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KXADWPA1PG54C71BG4PHAQ0W",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and has compliance consequences, but evidence is thin: the single source is a low-traffic Stack Exchange question with no answers, no visible upvotes, and no corroborating community discussion visible from the provided data. The scoring model itself flagged responsiveness_signal=1 (effectively zero) and the problem requires deep Salesforce Metadata API integration that goes beyond the factory's autonomous build capability. Without at least 5 distinct pain quotes and a willingness-to-pay signal from primary sources, the bar for 'pass' is not met; the candidate is rejected this cycle and should be re-queued for Market Radar to surface stronger evidence.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439629/deploying-a-profile-via-metadata-api-with-debug-apex-enabled-but-modify-all-data"
+  ],
+  "evaluated_at": "2026-07-13T08:59:53+03:00"
+}

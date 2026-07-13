@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-12T05:49:58+00:00",
-    "idt": "2026-07-12T08:49:58+03:00"
+    "utc": "2026-07-13T06:00:18+00:00",
+    "idt": "2026-07-13T09:00:18+03:00"
   },
   "funnel": {
-    "candidates": 122,
-    "scored": 122,
+    "candidates": 123,
+    "scored": 123,
     "validated": 15,
     "build_decisions": {
       "defer_1_week": 14,
@@ -545,10 +545,39 @@
         "Buildable": 6,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439629/deploying-a-profile-via-metadata-api-with-debug-apex-enabled-but-modify-all-data",
       "discovered_at": "2026-07-12T08:48:05+03:00"
+    },
+    {
+      "topics": [
+        "ai-detection",
+        "content-moderation",
+        "ai-generated-content"
+      ],
+      "id": "01KXD0X3G1Y056HETZDP3DJK56",
+      "problem_statement": "Content curators, newsletter editors, and platform operators cannot reliably identify and label AI-generated articles at scale, causing reader trust erosion and wasted review time when AI content is not disclosed.",
+      "target_segment": "Newsletter editors, content platform operators, media publishers, and community moderators who curate or gate-keep content feeds and need to flag or filter AI-generated submissions.",
+      "total": 5.9,
+      "recommended_stage": "validate",
+      "rationale": "The market has validated willingness to pay — Originality.ai and GPTZero charge $10–$30/seat/mo — and the buyer is a nameable role (newsletter editor, community moderator, content ops manager at a small publisher) who already buys software tools. However, responsiveness is untested (default 2), the source signal is an HN feature-request thread rather than direct buyer complaints, and the space has several established competitors making defensibility low. The total of 5.9 clears the validate thr…",
+      "solution_plan": "WHAT: A lightweight AI-content detection micro-service that accepts a URL or pasted text and returns a confidence score plus a shareable badge/label, priced at ~$19/mo per seat for newsletter editors and small platform operators. BUILD: The factory wires a Claude prompt (using Claude's own pattern-recognition on writing style, hedging language, and structural tells) to a simple landing page with an input form, a Stripe payment link for a monthly subscription, and an email delivery of the scored report — no coding by Youval. SELL: Outreach targets newsletter operators listed on public directories (Substack leaderboard, Beehiiv featured creato…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 6,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 7,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48886741",
+      "discovered_at": "2026-07-13T08:58:51+03:00"
     },
     {
       "topics": [
@@ -735,51 +764,15 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199339/how-to-trace-azure-saas-model-deployment-costs-back-to-their-azure-ai-foundry-re",
       "discovered_at": "2026-06-28T09:55:30+03:00"
-    },
-    {
-      "topics": [
-        "developer-onboarding",
-        "knowledge-management",
-        "context-loss"
-      ],
-      "id": "01KWE7X6E57Q9VA10XHYJ5Y8GE",
-      "problem_statement": "Engineering teams lose the reasoning and decision context behind their systems across fragmented tools (Confluence, Notion, Git, Slack), forcing every new developer to reconstruct it from scratch and making AI code tools work against incomplete context.",
-      "target_segment": "Software engineering teams at startups and scaleups (5-200 engineers) already paying for Confluence, Notion, and GitHub who onboard new developers frequently.",
-      "total": 5.6,
-      "recommended_stage": "validate",
-      "rationale": "Engineering teams at 5-200 person startups are a real, named B2B buyer with budget authority and existing multi-tool spend (Confluence, GitHub, Notion), and the onboarding pain is genuine and recurrent with every new hire. However, buildability is the limiting factor: a service that meaningfully connects Git history, Confluence, Slack threads, and Notion into coherent context is substantially more than a Claude prompt plus a landing page — it requires OAuth integrations, data ingestion pipeline…",
-      "solution_plan": "The micro-service would be an 'Engineering Decision Log as a Service' — a lightweight intake form where engineers paste or link a decision (Slack thread, Notion snippet, ADR), Claude summarizes and tags it, and it's stored in a searchable index that new hires can query in plain English. BUILD: the factory creates a Claude prompt chain (intake → summarize → tag → store), a simple web form (Typeform or equivalent), a Zapier/Make bridge to a Notion or Airtable store, and a Stripe payment link — no custom coding. SELL: reach engineering leads and CTOs of Series A-B startups via LinkedIn Sales Navigator or Apollo (a public, filterable list) with…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 5,
-        "Will pay": 5,
-        "Buildable": 5,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48742163",
-      "discovered_at": "2026-07-01T10:04:46+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3395,
-    "last_7_days_usd": 1.3164,
-    "all_time_usd": 8.7662,
+    "today_usd": 0.1587,
+    "last_7_days_usd": 1.4088,
+    "all_time_usd": 8.9249,
     "by_day": [
-      {
-        "date": "2026-07-06",
-        "usd": 0.0663
-      },
       {
         "date": "2026-07-07",
         "usd": 0.0998
@@ -803,24 +796,28 @@
       {
         "date": "2026-07-12",
         "usd": 0.3395
+      },
+      {
+        "date": "2026-07-13",
+        "usd": 0.1587
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4856
+        "usd": 0.4868
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.3187
       },
       {
         "agent": "build_decisions",
         "usd": 0.3049
       },
       {
-        "agent": "pain_validation",
-        "usd": 0.2577
-      },
-      {
         "agent": "opportunity_scoring",
-        "usd": 0.2346
+        "usd": 0.2648
       },
       {
         "agent": "daily_summary",
@@ -829,41 +826,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-06",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "skipped": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-07",
       "agents": {
@@ -1073,12 +1035,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-13",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-12.md",
-    "date": "2026-07-12",
-    "text": "# Daily Summary — 2026-07-12 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 122 |\n| Opportunities validated past threshold | 27 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes normal operation; 3 candidate opportunities queued for enrichment.\n2. `pain_validation` probes the 27 validated candidates for fit signals.\n3. `product_design` reviews top 5 candidates for solution viability.\n4. `build_decisions` evaluates which candidates warrant experiment prototyping.\n5. `cost_gain` calculates expected ROI on the week's validated opportunities.\n\n## Operator action items\n\nNone — process the validation results and prepare recommendations for Monday morning.",
+    "file": "reports/daily/2026-07-13.md",
+    "date": "2026-07-13",
+    "text": "# Daily Summary — 2026-07-13 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 123 |\n| Opportunities validated past threshold | 28 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS channels.\n2. `pain_validation` runs targeted validation probes on top-scored opportunities.\n3. `opportunity_scoring` ranks new candidates by confidence and fit.\n4. `cost_gain` computes weekly ROI and experiment performance metrics.\n5. `build_decisions` reviews validation results to route candidates into experiments or archive.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

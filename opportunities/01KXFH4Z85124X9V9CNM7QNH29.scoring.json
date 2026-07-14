@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KXFH4Z85124X9V9CNM7QNH29",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 freelance and agency developers already paying for Copilot/ChatGPT \u2014 and the pain (30-min rate-limit lockouts mid-client-project) is genuine and recurring. However, the proposed solution is a VS Code extension with multi-LLM failover logic, which requires custom extension development, API key management per-user, and deep IDE integration that cannot be shipped as a Claude prompt + landing page + Stripe link; buildability_with_ai scores 3. Worse, ongoing delivery means per-user configuration, debugging broken integrations, and keeping up with API changes from multiple LLM providers \u2014 far from autonomous operation, scoring operational_autonomy at 3. Both build_gates are decisively unmet, and the weighted total of 4.6 falls below the 5.5 validate threshold, so drop is warranted.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator running a Claude factory. The core product \u2014 a quota-aware VS Code extension that transparently fails over across OpenAI, Anthropic, and local Ollama \u2014 is a software engineering project requiring extension development expertise, per-user configuration flows, continuous maintenance as upstream APIs change, and integration testing across multiple LLM providers. There is no plausible path to building this without a developer, and no path to running it hands-off: every new user needs setup help, every API deprecation breaks something, and support would be continuous and technical. The factory cannot build or maintain this; a team with VS Code extension and LLM integration experience would be needed. Recommend dropping and not investing further research time.",
+  "notes": "Fails two hard build_gates: buildability_with_ai=3 (floor 6) and operational_autonomy=3 (floor 7). Even if the total were higher, this could not advance to build. Single-signal source (signal_strength=2) also means the market breadth is unconfirmed. The pain is real but the solution shape is fundamentally mismatched to a Claude-factory delivery model.",
+  "scored_at": "2026-07-14T08:22:33+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

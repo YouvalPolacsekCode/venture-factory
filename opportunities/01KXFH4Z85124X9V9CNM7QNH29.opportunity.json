@@ -1,0 +1,26 @@
+{
+  "id": "01KXFH4Z85124X9V9CNM7QNH29",
+  "discovered_at": "2026-07-14T08:21:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95480/looking-for-a-free-open-source-vs-code-ai-coding-assistant-similar-to-github-cop",
+    "snippet": "I'm currently working on a client project, and I'm running into usage limits with AI coding assistants. I've been using GitHub Copilot and OpenAI Codex/ChatGPT, but the limits are so strict that sometimes I can't use them for 30 minutes or more. Even with a paid ChatGPT subscription, I still hit model usage limits (especially on GPT-5.x), which interrupts my development workflow. I'm looking for a free or open-source alternative that works directly inside VS Code and can do things like: AI code [completion/chat]"
+  },
+  "problem_statement": "Freelance and agency developers on paid AI coding assistant subscriptions (Copilot, ChatGPT) hit hard rate limits mid-project, causing workflow interruptions of 30+ minutes and forcing a search for fallback tooling with no seamless handoff.",
+  "target_segment": "Freelance software developers and small dev agencies doing client work, already paying for AI coding tools.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding-assistant",
+    "rate-limiting",
+    "developer-tools",
+    "vs-code",
+    "copilot-alternative",
+    "llm",
+    "freelance-dev",
+    "workflow-interruption",
+    "paid-subscription"
+  ],
+  "notes": "Buyer is explicit: paying for ChatGPT subscription and GitHub Copilot yet still blocked. Pain is mid-project workflow disruption on client work (time = money). Opportunity could be a quota-aware IDE extension that transparently fails over across multiple LLM backends (OpenAI, Anthropic, local Ollama) so developers never hit a cold wall. Single signal from one post; signal_strength capped at 2 pending corroboration.",
+  "status": "candidate"
+}

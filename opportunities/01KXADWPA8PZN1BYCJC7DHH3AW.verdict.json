@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KXADWPA8PZN1BYCJC7DHH3AW",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "monthly",
+  "rationale": "The pain is real and documented across IT admin forums, but evidence of willingness to pay for a dedicated tool is absent. Free alternatives (Microsoft documentation, community scripts, PowerShell galleries) adequately serve the need, and the low signal strength (2) combined with low defensibility (3) and a single source thread cannot meet the 5-distinct-pain-quotes threshold. MSPs solve this once per client setup rather than as a recurring workflow, undermining the subscription value proposition.",
+  "sources": [
+    "https://serverfault.com/questions/1199458/how-to-create-a-new-forwarding-only-address-in-microsoft-365"
+  ],
+  "evaluated_at": "2026-07-14T08:22:17+03:00"
+}

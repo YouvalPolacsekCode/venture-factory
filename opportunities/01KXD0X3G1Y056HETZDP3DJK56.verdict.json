@@ -1,0 +1,13 @@
+{
+  "opportunity_id": "01KXD0X3G1Y056HETZDP3DJK56",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The pain is real and frequent \u2014 content curators and platform operators encounter AI-generated submissions daily \u2014 but the market is already served by established, well-funded competitors (Originality.ai, GPTZero, Copyleaks) with stronger detection models. The source signal is an HN feature-request thread aimed at HN itself, not direct buyer complaints about inadequate tooling. Critically, using Claude as a general-purpose AI-content detector carries unacceptable false-positive risk that would erode buyer trust, and no credible differentiation exists to justify a new entrant at this stage.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48886741",
+    "https://originality.ai/pricing",
+    "https://gptzero.me/pricing"
+  ],
+  "evaluated_at": "2026-07-15T08:23:21+03:00"
+}

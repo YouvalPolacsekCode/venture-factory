@@ -1,0 +1,26 @@
+{
+  "id": "01KXJ3MCM7W1SQRRTQ7MMSXXGP",
+  "discovered_at": "2026-07-15T08:22:43+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95481/http-proxy-like-software-between-browser-and-internet-that-can-manipulate-the-do",
+    "snippet": "I am currently in need of a software that sits between my web browser and the internet and acts like a HTTP(S) proxy, but which can manipulate the pages that the browser sees on-the-fly. For example, I would like to be able to change certain attributes of HTML elements before the page is delivered to the browser. I am aware of extensions like TamperMonkey and GreaseMonkey, and I have used them successfully sometimes. But in this case, they are obviously not appropriate for the task."
+  },
+  "problem_statement": "Developers and QA engineers need a local HTTPS-intercepting proxy that can modify response HTML/DOM on-the-fly before delivery to the browser, but existing browser extension solutions (TamperMonkey, GreaseMonkey) are insufficient for cases where extension-layer access is unavailable or the modification must be transparent to the page itself.",
+  "target_segment": "Web developers, QA engineers, and web archivists who need transparent browser-level HTTP interception with DOM rewriting capabilities",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "http-proxy",
+    "dom-manipulation",
+    "browser-automation",
+    "qa-tooling",
+    "web-testing",
+    "mitm-proxy",
+    "developer-tools",
+    "web-archiving",
+    "tampermonkey-alternative"
+  ],
+  "notes": "Poster is a technical user with a specific professional workflow need (web archiving/DOM attribute manipulation) that existing free tools don't solve. This is a tooling purchase context \u2014 developers and QA teams regularly pay for proxy tools (Charles Proxy ~$50, Proxyman ~$100, Burp Suite Professional $449/yr). The gap is a no-code or low-code GUI tool for DOM rewriting rules layered on top of MITM proxy infrastructure. Single signal here but the Charles/Proxyman market validates willingness to pay in this segment.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KXJ3MCM7W1SQRRTQ7MMSXXGP",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is real and identifiable \u2014 web developers and QA engineers at software companies who already pay for tools like Charles Proxy ($50) or Burp Suite ($449/yr), confirming willingness to pay at meaningful price points. The problem is genuine and frequent for this segment. However, buildability_with_ai scores 3 because this is fundamentally a network-layer infrastructure product: it requires a working MITM proxy engine, TLS certificate handling, and a GUI for rule management \u2014 none of which can be assembled from Claude prompts and a Stripe link. This is software engineering work, not prompt engineering. The operational_autonomy of 7 reflects that once built, a SaaS or installable tool could run hands-off \u2014 but we can't get to 'once built' without substantial development work a non-technical solo operator cannot execute. Validate the demand signal (e.g. post on HN, developer forums) before investing in build.",
+  "solution_plan": "This cannot be built by a non-technical solo operator using Claude prompts and standard factory tooling. The core product \u2014 a local HTTPS-intercepting proxy with DOM rewriting rules \u2014 is a compiled network application that requires deep knowledge of TLS interception, certificate authorities, and browser trust stores. Claude can help write code, but this is not a 'Claude prompt + Stripe link' build; it needs actual software development, testing across OS environments, and security review. What the factory COULD do: (1) validate demand by posting a landing page describing the concept and collecting email sign-ups or pre-orders from developer communities (HN, Reddit r/webdev, devtools forums); (2) if strong signal (50+ sign-ups), explore partnering with or acquiring an existing open-source MITM proxy project and adding a paid GUI layer. Maintenance would be largely hands-off once shipped (license key delivery via Stripe, async support via Claude), but getting there requires technical co-founder or contractor involvement. Recommend validating demand only at this stage.",
+  "notes": "Failing build_gate: buildability_with_ai (3 < 6 minimum). Even if total were higher, this gate prevents promotion to build. Total of 5.6 qualifies for validate stage, which is appropriate \u2014 the market signal is worth probing cheaply before ruling out a technical partnership approach.",
+  "scored_at": "2026-07-15T08:23:58+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

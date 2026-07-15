@@ -1,0 +1,25 @@
+{
+  "id": "01KXJ3MCM07QDEE9984THEECZJ",
+  "discovered_at": "2026-07-15T08:22:43+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://travel.stackexchange.com/questions/204052/lost-luggage-%e2%82%ac7-000-of-receipts-the-airline-only-compensated-%e2%82%ac300",
+    "snippet": "I had the misfortune of China Eastern Airlines losing my luggage. It's been several months now, with no more hope of finding it. My fianc\u00e9e's jewellery box was inside, and I can provide at least \u20ac2,000 of invoices for the contents. However, China Eastern is only offering \u20ac300 in compensation. And AirAdvisor didn't help at all \u2014 not one bit. It was a flight from Japan to Paris with a connection in Shanghai. What can I do to ramp up the pressure? Or are there basically no laws protecting me because..."
+  },
+  "problem_statement": "Airline passengers with documented losses far exceeding airline compensation caps (e.g. \u20ac7,000 loss, \u20ac300 offer) have no effective low-cost advocacy service to escalate claims \u2014 existing services like AirAdvisor are failing to deliver results, leaving passengers with no recourse.",
+  "target_segment": "International air travelers who have suffered significant lost or damaged baggage losses and received inadequate airline compensation offers",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "lost-luggage",
+    "airline-compensation",
+    "passenger-rights",
+    "travel-claims",
+    "chargeback",
+    "dispute-resolution",
+    "aviation-law",
+    "baggage-claim"
+  ],
+  "notes": "Poster had \u20ac7,000 in documented losses and only received \u20ac300. Explicitly states that a paid third-party service (AirAdvisor) failed them. Willingness to pay for effective advocacy is implied by the gap between loss and compensation. Opportunity: contingency-fee or flat-fee escalation service (legal letters, consumer authority filings, credit card chargeback guidance) targeting EU/Montreal Convention routes where liability limits are navigable. Recurring demand given frequency of airline baggage incidents globally. Single data point here but known pattern across travel forums.",
+  "status": "candidate"
+}

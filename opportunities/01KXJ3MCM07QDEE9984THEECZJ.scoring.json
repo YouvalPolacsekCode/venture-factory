@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KXJ3MCM07QDEE9984THEECZJ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Effective claims escalation \u2014 drafting legally sound demand letters, filing with consumer authorities in multiple jurisdictions, coordinating chargeback evidence \u2014 requires per-case human judgment or qualified legal review. Claude can draft templates but each case needs custom application and verification of local rules (Montreal Convention vs EU261, etc.)."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Realistically, passengers will expect some dialogue to assess their specific case, documents, and options before paying. A fully async intake \u2192 automated letter service risks producing wrong-jurisdiction filings that harm customers."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Claimants in distress (significant financial loss, emotional investment like jewelry) will require support interactions, follow-up questions, and status updates \u2014 hard to automate fully without risking bad outcomes."
+    }
+  ],
+  "total": 2.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuinely severe \u2014 people suffer documented four-figure losses against three-figure offers \u2014 and there is some willingness to pay implied by existing services like AirAdvisor. However, the operational_autonomy score of 3 reflects a core structural problem: each claim involves unique documentation, jurisdiction-specific rules (Montreal Convention thresholds, EU261 applicability, national consumer authority processes), and requires per-case legal judgment that Claude cannot safely automate without qualified review. The business is essentially a paralegal service, not a software product, and penalties bring the total to 2.0. Drop unless redesigned as a purely informational/document-template product with very narrow scope.",
+  "solution_plan": "This cannot realistically be built as a solo non-technical operator's autonomous service. Here is what it would actually require: a qualified legal professional (or partnership with one) in each target jurisdiction to review letters before they go out; per-case intake calls or detailed async Q&A to understand each passenger's specific situation; ongoing monitoring of regulatory changes across EU, UK, Japan, etc. The gap between what Claude can safely produce (a generic demand letter template) and what actually moves airlines (correctly cited jurisdiction-specific law with credible threat of authority filing) is too large. A stripped-down version \u2014 a paid PDF guide + template package for a flat fee \u2014 could work autonomously, but the pain signal here is for advocacy, not guides. Recommending drop.",
+  "notes": "Failing build_gates: operational_autonomy (3 < 7 minimum). Total after penalties (2.0) falls below min_total_to_validate (5.5) regardless. The underlying demand is real but the delivery model is incompatible with autonomous operation.",
+  "scored_at": "2026-07-15T08:23:58+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

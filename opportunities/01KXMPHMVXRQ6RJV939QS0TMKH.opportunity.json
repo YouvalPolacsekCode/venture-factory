@@ -1,0 +1,24 @@
+{
+  "id": "01KXMPHMVXRQ6RJV939QS0TMKH",
+  "discovered_at": "2026-07-16T08:31:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://travel.stackexchange.com/questions/204052/lost-luggage-%e2%82%ac7-000-of-receipts-the-airline-only-offered-%e2%82%ac300",
+    "snippet": "I had the misfortune of China Eastern Airlines losing my luggage. It's been several months now, with no more hope of finding it. My fianc\u00e9e's jewellery box was inside, and I can provide at least \u20ac2,000 of invoices for the contents (the 7000 is total value, 2000 is what I can prove with receipts). However, China Eastern is only offering \u20ac300 in compensation. And AirAdvisor didn't help at all \u2014 not one bit. It was a flight from Japan to Paris with a connection in Shanghai. What can I do to ramp up the pressure?"
+  },
+  "problem_statement": "Airline passengers who suffer lost luggage with high-value contents receive lowball compensation offers (e.g. \u20ac300 against \u20ac2,000+ in documented losses) and existing claim services like AirAdvisor fail to escalate effectively, leaving passengers without recourse guidance for international itineraries.",
+  "target_segment": "Frequent travelers and business travelers who have experienced lost or damaged luggage on international flights, particularly involving non-EU carriers",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "lost-luggage",
+    "airline-compensation",
+    "travel-insurance",
+    "claim-escalation",
+    "passenger-rights",
+    "international-travel",
+    "dispute-resolution"
+  ],
+  "notes": "Buyer signal moderate: the poster has \u20ac2,000+ in documented losses and already tried a paid/service-based solution (AirAdvisor) that failed. Willingness to pay for effective claim assistance is implied by the stakes. However, this is a single signal and the space has existing players (AirAdvisor, AirHelp). Opportunity may be in specialization: non-EU carriers (China Eastern, etc.) where Montreal Convention claims are harder to navigate, or a done-for-you documentation and escalation service. Lower signal strength due to single data point and existing competition.",
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01KXMPHMVEE3XT8AMKMJZ3V1BR",
+  "discovered_at": "2026-07-16T08:31:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439646/how-can-freelancers-work-with-shared-salesforce-admin-accounts-after-the-new-pas",
+    "snippet": "With Salesforce's new passkey requirement, I'm trying to understand how to handle the following situation. I work as a freelancer for several small companies that can't afford additional Salesforce licenses. In many cases, I share the same System Administrator user with the business owner or management. Since passkeys are tied to a specific device/user, we can no longer both access the same account easily. I'm a bit confused about how this is supposed to work and what the recommended approach is."
+  },
+  "problem_statement": "Salesforce's new passkey/MFA requirement breaks the common freelancer practice of sharing a single System Administrator account across multiple small-business clients, since passkeys are device-bound. Freelancers now face access lockouts or compliance violations with no clear low-cost workaround.",
+  "target_segment": "Salesforce freelance admins and consultants serving SMB clients who share admin credentials across multiple orgs",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "passkey",
+    "mfa",
+    "freelancer",
+    "admin-access",
+    "credential-sharing",
+    "smb",
+    "saas-compliance",
+    "identity-management"
+  ],
+  "notes": "Buyer signal clear: freelancers are paid consultants; their small-business clients pay Salesforce licenses. Salesforce's forced passkey rollout is a platform-mandated trigger event creating immediate pain. A tool or service that manages multi-client Salesforce access (e.g., device-agnostic MFA bridge, per-client credential vault, or delegated access setup service) could command a subscription fee from consultants managing 5\u201320 clients. Urgency is high because this is a forced platform change, not a preference.",
+  "status": "candidate"
+}

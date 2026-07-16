@@ -1,0 +1,27 @@
+{
+  "id": "01KXMPHMVPJX9EQ9FNA2H9W1KD",
+  "discovered_at": "2026-07-16T08:31:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199497/what-are-the-common-approaches-to-implementing-on-prem-mfa-for-active-directory",
+    "snippet": "We are planning to add MFA to an on-premises Active Directory environment. Our setup is fairly straightforward: Windows Server with on-prem Active Directory, most users authenticate directly against AD, administrators use RDP for server management, part of the infrastructure is isolated from the Internet, so cloud-only MFA services are not an option. We're looking for an MFA approach that can be deployed entirely on-premises while protecting both Windows logons and RDP."
+  },
+  "problem_statement": "Organizations running air-gapped or internet-restricted on-premises Active Directory environments cannot use cloud-based MFA solutions, yet still need to protect Windows logons and RDP access with multi-factor authentication. Existing on-prem MFA options are complex, expensive, or poorly documented.",
+  "target_segment": "IT administrators and sysadmins at mid-market companies, government contractors, and regulated-industry firms with on-prem AD and internet-restricted infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "active-directory",
+    "on-premises",
+    "mfa",
+    "rdp-security",
+    "air-gapped",
+    "windows-server",
+    "enterprise-security",
+    "identity",
+    "authentication",
+    "compliance"
+  ],
+  "notes": "Buyer signal present: this is a business IT context with compliance drivers (regulated industries, government contractors). Companies in this segment routinely pay for security tooling. The air-gapped constraint rules out mainstream SaaS MFA vendors (Duo, Okta, Azure AD), creating a genuine gap. A lightweight on-prem MFA appliance or simplified deployment service/guide could be sold to IT teams. Recurring pain evidenced by the question being asked in 2026 despite MFA being a mature category \u2014 the on-prem niche remains underserved.",
+  "status": "candidate"
+}

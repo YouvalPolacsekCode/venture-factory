@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KXMPHMVPJX9EQ9FNA2H9W1KD",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "On-premises MFA deployment requires physical or remote hands-on installation of software/appliances in customer infrastructure \u2014 cannot be delivered autonomously by Claude."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Primary buyers are government contractors and regulated-industry firms; selling security tooling into these environments involves compliance requirements, procurement processes, and liability exposure."
+    }
+  ],
+  "total": 1.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable (IT admins at mid-market regulated firms) and willingness to pay is supported by the compliance-driven context, but the solution is a deeply technical on-premises software deployment that must be installed and configured inside customer infrastructure \u2014 completely incompatible with autonomous AI-driven delivery. Buildability_with_ai is near-zero (this needs compiled software, Windows Server integration, and on-prem network access), and operational_autonomy is likewise near-zero. After penalties for human fulfillment and regulated-industry risk, the score collapses to 1.7, which is well below any meaningful threshold.",
+  "solution_plan": "This is not buildable or deliverable by a solo non-technical operator using this factory. On-premises MFA for Active Directory requires shipping or deploying server software (e.g. a RADIUS server, a Windows credential provider DLL) into customer networks that are intentionally isolated from the internet \u2014 meaning Claude cannot reach them, cannot configure them, and cannot support them autonomously. Even a 'simplified deployment guide' product would require constant expert human support for edge cases in a security-critical, regulated context. Drop immediately.",
+  "notes": "Fails every build gate: operational_autonomy = 2 (floor 7), buildability_with_ai = 2 (floor 6), buyer_clarity = 7 (passes), willingness_to_pay = 7 (passes). The fundamental problem is that the solution physically cannot be delivered autonomously.",
+  "scored_at": "2026-07-16T08:33:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

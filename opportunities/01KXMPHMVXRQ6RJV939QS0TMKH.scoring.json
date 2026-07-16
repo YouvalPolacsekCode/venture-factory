@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KXMPHMVXRQ6RJV939QS0TMKH",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 3,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Effective airline claim escalation beyond document generation requires human judgment, legal knowledge, and ongoing correspondence management per case \u2014 cannot be fully automated for complex international cases (Montreal Convention disputes with non-EU carriers)."
+    },
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Lost luggage claimants are individual consumers with a one-time, low-frequency event. Reaching viable revenue requires processing high volumes of individual B2C cases, as there is no recurring B2B buyer."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Claimants in distress (lost valuables, emotional stakes) typically require reassurance and case-specific guidance that goes beyond automated responses."
+    }
+  ],
+  "total": 1.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and acute when it occurs, but lost luggage is a rare, one-time event for any individual \u2014 meaning the buyer population is essentially impossible to reach proactively (you cannot find people who are about to lose luggage), and monetization requires high B2C volume. The existing players (AirHelp, AirAdvisor) already serve this market, and the differentiated niche (non-EU carriers, Montreal Convention) requires genuine legal expertise per case rather than automated document generation. After penalties for per-case human work, B2C scale dependency, and support load, the score drops to 1.6.",
+  "solution_plan": "This idea does not fit the factory model for a solo non-technical operator. Lost luggage claims are episodic B2C events \u2014 there is no proactive lead channel (you cannot reach people before their luggage is lost), the buyer is a one-time distressed consumer, and meaningful claim escalation against non-EU carriers requires legal knowledge and persistent human correspondence that Claude cannot autonomously manage to a satisfying resolution. Competitors already exist and have failed at scale. Drop.",
+  "notes": "Fails operational_autonomy_min (scored 5, floor 7) and buyer_clarity_min (scored 4, floor 6). Lead reachability is near-zero for a reactive, one-time consumer event. No path to recurring revenue or a scalable autonomous delivery model.",
+  "scored_at": "2026-07-16T08:33:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

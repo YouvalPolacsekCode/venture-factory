@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KXJ3MCM7W1SQRRTQ7MMSXXGP",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real and the willingness-to-pay benchmark is solid (Charles Proxy, Burp Suite, Proxyman all have paying userbases), but the evidence base is too thin to meet the pass threshold: a single forum post with no corroborating pain quotes, no community upvotes cited, and no competitor pricing directly tied to DOM-rewriting specifically. The buildability gate failure (score 3/10) is independently disqualifying under factory criteria. Marking rejected rather than inconclusive because the core blocker is structural (build gate), not merely evidentiary\u2014re-queuing for evidence would not resolve the gate failure.",
+  "sources": [
+    "https://softwarerecs.stackexchange.com/questions/95481/http-proxy-like-software-between-browser-and-internet-that-can-manipulate-the-do"
+  ],
+  "evaluated_at": "2026-07-16T08:32:23+03:00"
+}

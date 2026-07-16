@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KXMPHMVEE3XT8AMKMJZ3V1BR",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A practical solution here is a setup/configuration service (delegated access, per-client credential vault, or MFA bridge guidance) that likely requires per-client manual implementation work or at minimum a guided onboarding review per org \u2014 not a fully automated delivery."
+    },
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 0,
+      "reason": "Not applicable \u2014 legitimate compliance/access management problem."
+    }
+  ],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a well-defined, paying professional \u2014 Salesforce freelance admins who earn their living from multi-client consulting \u2014 so the commercial intent is real. However, the core deliverable is inherently technical infrastructure (device-agnostic MFA bridges, credential vaults, delegated Salesforce access configuration) that cannot be built and delivered autonomously by Claude + a simple web page + Stripe; it requires per-client setup work and likely vendor integrations, pulling operational_autonomy and buildability_with_ai well below their build-gate floors. The weighted total (5.8) before penalty already misses the build threshold, and after applying the human-fulfillment penalty it drops to 4.3 \u2014 below the validate floor.",
+  "solution_plan": "This idea is not viable for a solo non-technical operator running an autonomous Claude factory. The problem is real and the buyers exist, but the solution is fundamentally a technical configuration service (setting up delegated Salesforce access or a per-client MFA credential workflow per org). Each client engagement requires bespoke setup that a human IT professional must execute \u2014 it is not automatable via prompts, a landing page, and a Stripe link. A non-technical operator could not build or maintain this without per-customer manual involvement, which defeats the factory model. Drop and do not pursue.",
+  "notes": "Fails operational_autonomy_min (scored 4, floor is 7) and buildability_with_ai_min (scored 4, floor is 6). Even without the human-fulfillment penalty the total (5.8) only reaches validate range, not build range. The underlying pain is real but the solution type is incompatible with autonomous delivery.",
+  "scored_at": "2026-07-16T08:33:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KXQ90YW4BEX83JXM6G0203GD",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is identifiable \u2014 an eng lead or technical founder at a 2-20 person dev-community SaaS, who already uses paid help-desk tools and is explicitly evaluating AI automation, giving a real budget signal. The pain is real and daily: every duplicate bug report across Discord, GitHub, and email wastes developer time, which has a direct, measurable dollar cost. The deciding factor holding this to 'validate' is that no response signal exists yet and this is a crowded space (Linear, Plain, Unito, Zapier all partially address it), so we need at least a 10-reply HN/Discord thread or a landing-page waitlist before committing to build.",
+  "solution_plan": "The micro-service is an AI-powered duplicate-report deduplicator and cross-channel aggregator for small dev teams \u2014 it listens to Discord, GitHub Issues, and email, clusters semantically similar reports, and posts a unified summary with a canonical issue link. The factory builds this as a Claude prompt pipeline connected via webhooks (Discord bot token, GitHub webhook, email forwarding alias) feeding into a lightweight web dashboard hosted on a static page; a Stripe subscription link handles billing at ~$49/mo per workspace, with a 14-day free trial captured via an intake form \u2014 Youval touches nothing except approving the outreach batch. To sell, the factory identifies Discord servers of open-source/indie SaaS projects (public Discord invites + GitHub topics), posts a targeted 'are you drowning in duplicate bug reports?' message in #support or #dev channels, and DMs eng leads \u2014 all outreach queued for Youval's one-time approval before sending. Ongoing: new reports are ingested automatically, Claude clusters and labels them, and weekly digest emails go to the customer's team; billing renews via Stripe, support questions are answered by a Claude-backed help bot. The only recurring human touch is approving outreach batches and reviewing any flagged edge cases flagged by the system.",
+  "notes": "operational_autonomy scored 7 (meets gate floor of 7 exactly) \u2014 viable but thin margin. buildability_with_ai at 7 is achievable but Discord bot + GitHub webhook + email ingestion is non-trivial integration work; factory tooling can handle it but plan for 2-week build. No responsiveness signal yet \u2014 validate with a landing page or HN comment before building.",
+  "scored_at": "2026-07-17T08:33:45+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

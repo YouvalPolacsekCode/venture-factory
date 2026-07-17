@@ -1,0 +1,27 @@
+{
+  "id": "01KXQ90YWCTWRVY6FPXS08X4EV",
+  "discovered_at": "2026-07-17T08:33:10+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95488/best-workflow-to-import-parasolid-x-t-cad-models-into-blender-for-unity",
+    "snippet": "I received a set of 3D CAD models from an organization in Parasolid (.x_t) format. My ultimate goal is to optimize and process them in Blender, and then export them into Unity. However, I am struggling with the CAD-to-Mesh conversion. I have already tried using ABViewer 16, FreeCAD 1.1, CAD Assistant, and Plasticity, but the results are always broken. The exported meshes come out distorted, with broken geomet..."
+  },
+  "problem_statement": "Professionals working at the intersection of CAD engineering and real-time 3D (game engines, AR/VR) cannot reliably convert Parasolid and other B-rep CAD formats into clean, game-ready meshes \u2014 existing tools produce broken geometry, costing studios hours of manual repair work per model.",
+  "target_segment": "3D artists, technical artists, and visualization engineers at game studios, architectural visualization firms, and industrial simulation companies that receive CAD assets from engineering partners.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cad-to-mesh",
+    "parasolid",
+    "blender",
+    "unity",
+    "3d-conversion",
+    "game-dev",
+    "visualization",
+    "b-rep",
+    "mesh-repair",
+    "pipeline-tooling"
+  ],
+  "notes": "Buyer is a professional studio or agency receiving CAD from clients/partners \u2014 a clear commercial workflow. User tried 4 paid/professional tools (ABViewer, FreeCAD, CAD Assistant, Plasticity) and all failed, indicating willingness to pay for a working solution. Single signal but represents a known recurring pain in the archviz/gamedev/industrial-sim space. A SaaS conversion API or batch pipeline tool is a plausible product.",
+  "status": "candidate"
+}

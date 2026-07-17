@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-16T05:33:11+00:00",
-    "idt": "2026-07-16T08:33:11+03:00"
+    "utc": "2026-07-17T05:33:51+00:00",
+    "idt": "2026-07-17T08:33:51+03:00"
   },
   "funnel": {
-    "candidates": 129,
-    "scored": 129,
+    "candidates": 131,
+    "scored": 131,
     "validated": 15,
     "build_decisions": {
       "defer_1_week": 14,
@@ -307,6 +307,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48637755",
       "discovered_at": "2026-06-23T09:39:58+03:00"
+    },
+    {
+      "topics": [
+        "help-desk",
+        "ticket-deduplication",
+        "multi-channel-support"
+      ],
+      "id": "01KXQ90YW4BEX83JXM6G0203GD",
+      "problem_statement": "Small dev teams managing support across Discord, GitHub issues, and email struggle with duplicate bug reports across channels, causing wasted dev time triaging the same issue multiple times and failing to connect reports to internal documentation.",
+      "target_segment": "Small-to-mid software companies and indie devs running community Discord servers alongside GitHub and email support, typically 2-20 person eng teams.",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is identifiable — an eng lead or technical founder at a 2-20 person dev-community SaaS, who already uses paid help-desk tools and is explicitly evaluating AI automation, giving a real budget signal. The pain is real and daily: every duplicate bug report across Discord, GitHub, and email wastes developer time, which has a direct, measurable dollar cost. The deciding factor holding this to 'validate' is that no response signal exists yet and this is a crowded space (Linear, Plain, Unito…",
+      "solution_plan": "The micro-service is an AI-powered duplicate-report deduplicator and cross-channel aggregator for small dev teams — it listens to Discord, GitHub Issues, and email, clusters semantically similar reports, and posts a unified summary with a canonical issue link. The factory builds this as a Claude prompt pipeline connected via webhooks (Discord bot token, GitHub webhook, email forwarding alias) feeding into a lightweight web dashboard hosted on a static page; a Stripe subscription link handles billing at ~$49/mo per workspace, with a 14-day free trial captured via an intake form — Youval touches nothing except approving the outreach batch. To…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=48942806",
+      "discovered_at": "2026-07-17T08:33:10+03:00"
     },
     {
       "topics": [
@@ -732,51 +761,15 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439479/how-can-i-identify-which-apex-expressions-will-trigger-expression-is-too-long",
       "discovered_at": "2026-06-07T09:59:46+03:00"
-    },
-    {
-      "topics": [
-        "azure",
-        "cost-attribution",
-        "finops"
-      ],
-      "id": "01KW6G62EPPFGX9E0R938TRN8Q",
-      "problem_statement": "Engineers and FinOps teams deploying multiple Azure AI Foundry (AI Studio) endpoints cannot attribute SaaS-type AI model spend back to individual resources in Azure Cost Management, making it impossible to do per-project or per-team chargeback on AI API costs.",
-      "target_segment": "Cloud engineers, FinOps analysts, and ML platform teams at mid-to-large companies running multiple AI workloads on Azure",
-      "total": 5.6,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a concrete, named enterprise persona — FinOps analysts and cloud platform teams at companies with serious Azure AI spend — who already pay for tools like Apptio and CloudHealth, so willingness-to-pay is credible. However, the core solution requires real Azure API integration work (querying Cost Management + Foundry resource metadata, reconciling SaaS billing records) that goes well beyond a Claude prompt and a landing page, and ongoing delivery would require per-customer Azure cred…",
-      "solution_plan": "This would be a 'Azure AI Cost Attribution' report service: given a customer's Azure credentials (read-only Cost Management + AI Foundry API scopes), it pulls spend data and Foundry resource metadata, then Claude reconciles and labels each SaaS cost row with the originating Foundry resource, project, and team tag, emitting a CSV or Slack digest. BUILD challenge: integrating with Azure APIs securely (OAuth, least-privilege service principals) is non-trivial; a solo non-technical operator cannot set this up without a developer. SELL: target FinOps forums (FinOps Foundation Slack, Azure community), LinkedIn ads aimed at 'FinOps analyst' + 'Azur…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 4,
-        "Will pay": 7,
-        "Buildable": 4,
-        "Pain": 8
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://serverfault.com/questions/1199339/how-to-trace-azure-saas-model-deployment-costs-back-to-their-azure-ai-foundry-re",
-      "discovered_at": "2026-06-28T09:55:30+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.181,
-    "last_7_days_usd": 1.4235,
-    "all_time_usd": 9.422,
+    "today_usd": 0.1168,
+    "last_7_days_usd": 1.2641,
+    "all_time_usd": 9.5388,
     "by_day": [
-      {
-        "date": "2026-07-10",
-        "usd": 0.2762
-      },
       {
         "date": "2026-07-11",
         "usd": 0.152
@@ -800,67 +793,36 @@
       {
         "date": "2026-07-16",
         "usd": 0.181
+      },
+      {
+        "date": "2026-07-17",
+        "usd": 0.1168
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4825
+        "usd": 0.4959
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3562
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.3049
+        "usd": 0.2949
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2451
+        "usd": 0.2859
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.1533
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0348
+        "usd": 0.0343
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-10",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "skipped": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-11",
       "agents": {
@@ -1070,13 +1032,48 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-17",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-16.md",
-    "date": "2026-07-16",
-    "text": "# Daily Summary — 2026-07-16 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 129 |\n| Opportunities validated past threshold | 31 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B channels.\n2. `pain_validation` validates high-scoring opportunities from today's 129 candidates.\n3. `opportunity_scoring` re-ranks remaining candidates against threshold.\n4. `build_decisions` evaluates top verdicts for experiment viability.\n5. `cost_gain` prepares weekly cost/gain analysis for Sunday report.\n\n## Operator action items\n\nNone — all agents running cleanly. Review the 31 validated opportunities and decide which 1–3 to greenlight for experiment build.",
-    "truncated": false
+    "file": "reports/daily/2026-07-17.md",
+    "date": "2026-07-17",
+    "text": "# Daily Summary — 2026-07-17 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 131 |\n| Opportunities validated past threshold | 31 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| — | — | — | — |\n\nNo active experiments or services are running.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues monitoring B2B pain signals across subreddits and forums.\n2. `opportunity_scoring` re-scores any new candidate opportunities against experiment thresholds.\n3. `pain_validation` probes top-ranked opportunities to confirm signal strength.\n4. `build_decisions` evaluates validated opportunities for experiment fit.\n5. `cost_gain` updates cost/gain analysis on active work (as it emerges).\n\n## Operator action items\n",
+    "truncated": true
   },
   "analytics": null
 }

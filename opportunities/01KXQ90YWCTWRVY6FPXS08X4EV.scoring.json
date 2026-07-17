@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KXQ90YWCTWRVY6FPXS08X4EV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "CAD-to-mesh conversion at acceptable quality requires running specialized geometry kernels (Open CASCADE, Parasolid SDK, or equivalent) and per-model QA \u2014 Claude cannot perform this; every conversion job needs validated toolchain execution and likely manual mesh inspection for complex models."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuine and the buyer (technical artist or viz engineer at a studio) is nameable and has paid for tools before \u2014 but the core bottleneck is a geometry processing problem that Claude and a prompt pipeline simply cannot solve; it requires licensed CAD kernels (Parasolid SDK alone costs thousands per seat), mesh repair algorithms, and per-model validation that a human or specialized software must perform. Operational_autonomy and buildability_with_ai both score 2 because this is fundamentally a computational geometry product, not an AI-text-automation product, making it the wrong fit for this factory. Total of 3.0 falls well below the 5.5 validate threshold.",
+  "solution_plan": "This is not a viable build for a non-technical solo operator using a Claude factory. The actual solution requires licensing the Parasolid SDK or integrating Open CASCADE, writing or wrapping mesh repair algorithms, and running a GPU-capable conversion pipeline \u2014 none of which can be done with prompts, a landing page, and Stripe. A solo non-technical founder would need to hire a C++/Python geometry engineer and negotiate SDK licensing before writing a line of product code. Recommending drop: the problem is real but it is an engineering infrastructure problem, not an AI automation opportunity.",
+  "notes": "Failing build gates: operational_autonomy (scored 2, floor is 7) and buildability_with_ai (scored 2, floor is 6). Even if total were higher, these gates would cap the stage at validate. The opportunity is dropped on total score alone (3.0 < 5.5 validate threshold), and the gate failures confirm the direction.",
+  "scored_at": "2026-07-17T08:33:45+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

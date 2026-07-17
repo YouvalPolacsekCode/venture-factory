@@ -1,0 +1,27 @@
+{
+  "id": "01KXQ90YW4BEX83JXM6G0203GD",
+  "discovered_at": "2026-07-17T08:33:10+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48942806",
+    "snippet": "we run a discord server with our Github, forum and email. i am curious how fellow HNs handle ticket management and issue tracking across multiple support channels and connect with their internal docs. For example users will report same bug in different channels, this will increase the work load on the devs, and as to the company whole. So i have some questions in my mind: 1. What help desk software are you guys using 2. how do you track duplicate issues 3. Has any one used Claude or any automated..."
+  },
+  "problem_statement": "Small dev teams managing support across Discord, GitHub issues, and email struggle with duplicate bug reports across channels, causing wasted dev time triaging the same issue multiple times and failing to connect reports to internal documentation.",
+  "target_segment": "Small-to-mid software companies and indie devs running community Discord servers alongside GitHub and email support, typically 2-20 person eng teams.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "help-desk",
+    "ticket-deduplication",
+    "multi-channel-support",
+    "discord",
+    "github-issues",
+    "developer-tools",
+    "support-automation",
+    "issue-tracking",
+    "ai-triage",
+    "saas"
+  ],
+  "notes": "Author explicitly mentions evaluating paid help desk software and AI automation (Claude), indicating budget exists. Pain is recurring operational cost: same bugs reported N times across channels multiplies dev triage load. Buyer is eng lead or founder at a dev-community-driven SaaS. Signal strength limited to single post but problem is well-articulated and commercially oriented.",
+  "status": "candidate"
+}

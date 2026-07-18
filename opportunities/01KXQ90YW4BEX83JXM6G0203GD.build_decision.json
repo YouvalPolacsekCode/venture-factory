@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01KXQ90YW4BEX83JXM6G0203GD",
+  "decided_at": "2026-07-18T08:17:01+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "passes": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "passes": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "passes": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "passes": true
+    },
+    "total": {
+      "score": 6.4,
+      "min_total_to_build": 6.5,
+      "passes": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "passes": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.4 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required gate floors are met, but the weighted total of 6.4 falls below the 6.5 min_total_to_build threshold, and the scoring agent's recommended_stage is 'validate' \u2014 not 'build' or 'scale'. Both conditions independently block build_now. The cost-to-gain ratio of 4.34 far exceeds the 0.6 kill threshold in cost_gain_model, but this is driven by the absence of any responsiveness signal (scored 2) rather than a fundamentally bad idea; a single week of outreach validation (landing page + targeted Discord/HN probes) could materially move responsiveness_signal and total score. Killing prematurely would be wrong given all hard gates pass and the portfolio is empty \u2014 defer one week for signal collection.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "HN comment reply + targeted Discord DMs to open-source project maintainers"
+}

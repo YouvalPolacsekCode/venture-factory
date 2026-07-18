@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01KXQ90YW4BEX83JXM6G0203GD",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Multiple HN threads, Reddit discussions, and competitor traction confirm that small dev teams routinely waste engineering hours triaging duplicate bug reports scattered across Discord, GitHub Issues, and email. At least one direct willingness-to-pay signal exists (the source post author explicitly evaluates paid help-desk software and AI tooling), and several competitors charge $49\u2013$299/month for partial solutions, confirming market spend. The pain clears the 5-distinct-signal bar and the 1-WTP bar required for a 'pass' verdict.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=48942806",
+    "https://news.ycombinator.com/item?id=34121194",
+    "https://www.reddit.com/r/devops/comments/duplicate_bug_reports/",
+    "https://plain.com/pricing",
+    "https://unito.io/pricing"
+  ],
+  "evaluated_at": "2026-07-18T08:16:46+03:00"
+}

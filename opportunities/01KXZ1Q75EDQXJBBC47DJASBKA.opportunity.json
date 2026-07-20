@@ -1,0 +1,24 @@
+{
+  "id": "01KXZ1Q75EDQXJBBC47DJASBKA",
+  "discovered_at": "2026-07-20T08:59:26+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48973899",
+    "snippet": "Happy Kagi user. I switched to Orion at some point, but due to bugs and battery drain, I had to switch back (to Safari!) As soon as those are fixed, I'm back again. I'd also pay for it, if that changes anything. Actually, I would pay for the browser, period, if it was good, respected privacy, was efficient and fast on mobile, and synced things between devices."
+  },
+  "problem_statement": "Privacy-focused power users lack a polished, cross-device syncing browser that is fast on mobile and battery-efficient \u2014 existing options (Orion, Safari, Firefox) each fail on at least one of these dimensions, leaving a clear willingness-to-pay gap.",
+  "target_segment": "Privacy-conscious tech workers and developers willing to pay for a premium browser experience across desktop and mobile.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "browser",
+    "privacy",
+    "cross-device-sync",
+    "mobile-battery",
+    "paid-browser",
+    "kagi",
+    "safari-alternative"
+  ],
+  "notes": "Buyer intent is explicit ('I would pay for the browser, period'). However this is a single HN comment and the product category (browser) has very high engineering barriers for a solo operator \u2014 flagged low signal_strength accordingly. Worth monitoring if more such comments cluster.",
+  "status": "candidate"
+}

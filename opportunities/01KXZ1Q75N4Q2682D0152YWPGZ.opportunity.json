@@ -1,0 +1,27 @@
+{
+  "id": "01KXZ1Q75N4Q2682D0152YWPGZ",
+  "discovered_at": "2026-07-20T08:59:26+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199527/azure-ad-ignores-saml-forceauthn-from-a-keycloak-identity-broker-how-to-force",
+    "snippet": "Setup: Keycloak acts as an identity broker with Azure AD (Entra ID) configured as a SAML 2.0 identity provider. On a shared, Entra-joined device, User A signs in through the app, then User B tries to sign in \u2014 but Azure AD ignores ForceAuthn and silently reuses User A's session, logging User B in as User A. This is a security issue on shared devices in enterprise environments."
+  },
+  "problem_statement": "Enterprise teams using Keycloak as an identity broker in front of Azure AD/Entra ID cannot force re-authentication on shared devices because Entra ID ignores SAML ForceAuthn requests, creating a security and compliance gap for multi-user shared workstations.",
+  "target_segment": "IT/DevOps engineers and security teams at mid-to-large companies running Keycloak + Entra ID SSO with shared physical or virtual workstations.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "sso",
+    "saml",
+    "keycloak",
+    "azure-ad",
+    "entra-id",
+    "shared-device",
+    "identity-broker",
+    "force-authn",
+    "enterprise-security",
+    "compliance"
+  ],
+  "notes": "B2B/enterprise context \u2014 companies pay for SSO infrastructure and compliance tooling. The problem is a known gap between Keycloak and Entra ID behaviour. A targeted configuration guide, managed Keycloak module, or SaaS wrapper that handles ForceAuthn workarounds could command a service/consulting fee. Single data point today; needs volume confirmation.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KXZ1Q75N4Q2682D0152YWPGZ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any viable solution here \u2014 whether a custom Keycloak module, a managed configuration service, or a diagnostic tool \u2014 requires hands-on enterprise integration work per customer: reviewing their specific Keycloak/Entra setup, testing in their environment, and delivering a validated fix. This is inherently per-customer manual fulfillment."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise security buyers at companies running Keycloak + Entra ID SSO will require at minimum a scoping call and likely a compliance review before purchasing any identity/SSO tooling. No self-serve click-and-buy path exists for this buyer."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the buyer is identifiable \u2014 IT/security engineers at mid-large enterprises running Keycloak + Entra ID \u2014 and enterprises do pay for SSO and compliance tooling. However, every viable solution path requires per-customer manual integration work (inspecting their Keycloak config, testing against their Entra tenant, validating the fix), plus synchronous sales touchpoints that security-sensitive enterprise buyers will insist on. The penalties correctly drag this below the validate threshold. This is a consulting engagement disguised as a product opportunity.",
+  "solution_plan": "There is no clean product path here for a solo non-technical operator. The closest viable form would be a paid technical guide or Keycloak module sold on Gumroad \u2014 but even that requires deep Keycloak/SAML expertise to produce credibly, and enterprise buyers with a live security gap will demand support, customization, and validation calls that fall outside what this factory can deliver hands-off. If Youval has direct Keycloak/Entra expertise, this could be pursued as a consulting engagement, but that is outside the factory model. Recommend drop.",
+  "notes": "operational_autonomy score 4 fails build gate (min 7). buildability_with_ai score 5 fails build gate (min 6). Total after penalties (2.8) is well below the validate threshold of 5.5. The underlying problem is real but the delivery model required is consulting, not autonomous micro-service.",
+  "scored_at": "2026-07-20T08:59:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

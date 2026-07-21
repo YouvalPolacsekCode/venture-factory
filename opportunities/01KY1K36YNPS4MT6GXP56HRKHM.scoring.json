@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY1K36YNPS4MT6GXP56HRKHM",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [],
+  "total": 4.9,
+  "recommended_stage": "drop",
+  "rationale": "IT admins at SMBs running Cisco ASA/FTD are a real, paying segment \u2014 Duo and Okta prove willingness to spend on exactly this. However, a RADIUS-based MFA service requires real infrastructure (a server that handles authentication requests 24/7), compliance considerations, and per-customer configuration that Claude + a simple page cannot deliver autonomously; every deployment needs hands-on setup and ongoing uptime guarantees that a solo non-technical operator cannot sustain. Both buildability_with_ai (3) and operational_autonomy (3) badly fail their build gates, and the weighted total (4.9) falls below the 5.5 validate threshold, so this is a drop.",
+  "solution_plan": "Not viable as a factory micro-service. A RADIUS MFA service is fundamentally a 24/7 infrastructure product requiring server upkeep, network-level integration, and per-customer firewall/ASA configuration \u2014 none of which Claude or a simple web page can handle autonomously. A solo non-technical operator could not realistically build or maintain this without a dedicated engineering team and security compliance posture. The idea should be dropped or re-scoped as a paid consulting referral to existing vendors.",
+  "notes": "Fails buildability_with_ai (3 < 6) and operational_autonomy (3 < 7) build gates. Total also below validate threshold.",
+  "scored_at": "2026-07-21T08:42:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

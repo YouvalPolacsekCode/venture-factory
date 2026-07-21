@@ -1,0 +1,25 @@
+{
+  "id": "01KY1K36ZPHK647WVA7SRCGF4S",
+  "discovered_at": "2026-07-21T08:41:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182500/send-email-when-duplicate-entry-is-submitted-in-google-forms",
+    "snippet": "I have a Google Form that is used to receive bookings for a variety of events. People forget that they have already booked for an event and end up booking a second time. I cannot limit respondents to one response per email, because people can book for more than one event. I thought of creating a Google Apps Script that works on the Google Sheet..."
+  },
+  "problem_statement": "Event organizers and small business operators using Google Forms for bookings have no built-in way to detect and alert on duplicate registrations per event, causing overbooking confusion and manual cleanup work.",
+  "target_segment": "Event organizers, community managers, and small business owners using Google Forms and Sheets for booking management",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-forms",
+    "google-sheets",
+    "event-booking",
+    "duplicate-detection",
+    "automation",
+    "small-business",
+    "no-code",
+    "google-apps-script"
+  ],
+  "notes": "Moderate buyer signal: operators managing real bookings (implying revenue or attendance accountability). Pain is concrete and recurring ('frequently'). Opportunity: a lightweight Google Workspace add-on or Zapier-style automation that flags duplicate event-email combos. This is a recurring gap in the Google Forms ecosystem \u2014 multiple similar questions exist across Stack communities.",
+  "status": "candidate"
+}

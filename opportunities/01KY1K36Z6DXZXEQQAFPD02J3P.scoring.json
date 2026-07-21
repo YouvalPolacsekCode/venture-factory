@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KY1K36Z6DXZXEQQAFPD02J3P",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Resolving Named Query MCP parameter-type failures in a specific Salesforce org requires per-customer investigation of their implementation, org setup, and Salesforce platform version \u2014 bespoke manual work each time."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The MCP-Named Query parameter bug is a narrower, more specific pain than the Agentforce-Flow issue and affects a smaller slice of the already-small population of developers building MCP agents on Salesforce. Even if productized as a test harness or integration library, delivery and debugging would require per-customer manual involvement. After penalties, total is 3.0 and operational_autonomy fails its gate. The market is too narrow and the delivery model too manual for the factory.",
+  "solution_plan": "Not viable as an autonomous factory micro-service. The audience is a very small subset of Salesforce developers working on a cutting-edge and still-buggy Salesforce feature; at this stage it's closer to a niche Stack Overflow contribution than a sellable product. A test harness could theoretically be built, but selling, onboarding, and supporting enterprise Salesforce customers requires hands-on consulting engagement. Drop.",
+  "notes": "Fails operational_autonomy (4 < 7) build gate. Total after penalty is 3.0, below validate threshold.",
+  "scored_at": "2026-07-21T08:42:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

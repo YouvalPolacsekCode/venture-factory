@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KY1K36YYX81NNDYKFZG66SAW",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Diagnosing Agentforce-Flow integration failures requires per-customer investigation of org-specific configurations, custom objects, and flow logic \u2014 each engagement is bespoke manual consulting work."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Debugging enterprise Salesforce orgs requires back-and-forth, access to org data, and ongoing human judgement \u2014 not automatable via Claude alone."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce developers and admins at enterprise orgs are real paid professionals, and Agentforce-Flow failures are genuinely painful for their delivery timelines. However, this is a consulting/debugging problem: every customer's Salesforce org is different, and diagnosing failures requires org access, manual investigation, and iterative back-and-forth \u2014 all heavy human-fulfillment work. After penalties, total collapses to 2.7, and operational_autonomy (4) fails its build gate. This cannot run hands-off.",
+  "solution_plan": "Not viable as an autonomous factory micro-service. The core problem \u2014 debugging why Agentforce fails when called from a specific org's Flow \u2014 is inherently bespoke per customer; it requires org access, reading custom configurations, and iterative trial-and-error that a solo operator cannot automate. At best this is a freelance consulting offer, which the factory is not designed to fulfill. Drop.",
+  "notes": "Fails operational_autonomy (4 < 7) and buildability_with_ai (5 < 6) build gates. Total after penalties is 2.7, well below validate threshold.",
+  "scored_at": "2026-07-21T08:42:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

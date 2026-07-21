@@ -1,0 +1,26 @@
+{
+  "id": "01KY1K36ZXA2AB0DHWFBNP6VHE",
+  "discovered_at": "2026-07-21T08:41:34+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://lobste.rs/s/t2jxyu",
+    "snippet": "432 Linux kernel CVEs published in the last 24 hours (link: https://lore.kernel.org/linux-cve-announce/)"
+  },
+  "problem_statement": "Security and DevOps teams responsible for Linux infrastructure face an unmanageable CVE triage burden when hundreds of kernel CVEs are published in a single day, with no automated tooling to prioritize which vulnerabilities actually affect their specific kernel version and configuration.",
+  "target_segment": "Security engineers, DevOps teams, and SREs at companies running Linux-based infrastructure at scale",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "linux-security",
+    "cve-triage",
+    "vulnerability-management",
+    "kernel",
+    "devops",
+    "sre",
+    "security-automation",
+    "patch-management",
+    "infosec"
+  ],
+  "notes": "Buyer signal: security tooling is a well-funded category; teams already pay for Snyk, Wiz, Qualys, etc. The 432-CVEs-in-24h event (2026-07-20) is a concrete, recent stress-test of existing triage processes and creates immediate urgency. Opportunity: a kernel CVE relevance filter that cross-references published CVEs against a customer's running kernel version, enabled modules, and distro patch status \u2014 a layer above raw NVD/CVE feeds that existing tools don't handle well at this velocity.",
+  "status": "candidate"
+}

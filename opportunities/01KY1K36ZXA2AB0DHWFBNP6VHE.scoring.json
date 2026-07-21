@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY1K36ZXA2AB0DHWFBNP6VHE",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [],
+  "total": 5.7,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and acute \u2014 432 CVEs in 24 hours is a concrete, documented stress event, and security teams at Linux-infrastructure companies already spend real budget on Snyk, Wiz, and Qualys, confirming willingness to pay. The buyer is identifiable (security engineers and SREs at mid-to-large companies running Linux at scale), but the build_gates are the decisive blocker: buildability and operational autonomy both fall short, because accurate CVE-to-kernel-version relevance mapping requires ingesting live kernel metadata, distro patch feeds, and customer environment data \u2014 well beyond a Claude prompt and a Stripe link. Delivery would require per-customer environment setup and ongoing data pipeline maintenance, making this a systems-integration product rather than an autonomous AI micro-service for a solo non-technical operator.",
+  "solution_plan": "The micro-service would be a kernel CVE relevance filter: customers submit their kernel version and distro, and Claude cross-references incoming CVE feeds to flag only those that actually apply. Building it would require: ingesting NVD/CVE feeds automatically, mapping CVEs to kernel version ranges and distro patch status (data that changes daily and requires reliable parsing of structured kernel security advisories), and presenting a filtered dashboard or digest \u2014 this goes well beyond a simple prompt+page+Stripe stack and needs real data-pipeline and integration engineering. Selling would target security engineers via LinkedIn outreach or communities like r/netsec and the CISA/NVD mailing lists, but those channels require technical credibility and a working demo before any serious buyer engages. Maintaining it means keeping the CVE ingestion pipeline current, handling edge cases in kernel version matching, and supporting customer-specific configurations \u2014 all of which require ongoing technical judgment, not just Claude approvals. As a solo non-technical operator, the build and maintenance burden here is beyond the factory's autonomous capability in its current form; this would need a technical co-founder or a contracted engineer to build the data infrastructure before it could run hands-off.",
+  "notes": "Fails build_gates: operational_autonomy (4, minimum 7) and buildability_with_ai (4, minimum 6). The core challenge is that CVE-to-kernel-version relevance is a structured data-matching problem requiring live feed ingestion and version-range logic \u2014 not a natural-language task Claude can handle reliably with prompt engineering alone. Recommend validating buyer interest and willingness to pay first (a simple waitlist page + outreach to security teams) before investing in any build.",
+  "scored_at": "2026-07-21T08:42:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

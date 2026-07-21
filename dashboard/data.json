@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-20T05:59:55+00:00",
-    "idt": "2026-07-20T08:59:55+03:00"
+    "utc": "2026-07-21T05:42:55+00:00",
+    "idt": "2026-07-21T08:42:55+03:00"
   },
   "funnel": {
-    "candidates": 133,
-    "scored": 133,
+    "candidates": 139,
+    "scored": 139,
     "validated": 16,
     "build_decisions": {
       "defer_1_week": 15,
@@ -735,45 +735,44 @@
     },
     {
       "topics": [
-        "salesforce",
-        "apex",
-        "managed-package"
+        "linux-security",
+        "cve-triage",
+        "vulnerability-management"
       ],
-      "id": "01KTGE2S06F6AJJJ66652636QB",
-      "problem_statement": "Salesforce ISV partners building managed packages cannot reliably identify which Apex expressions will trigger non-deterministic 'expression too long' compilation errors during subscriber org upgrades, causing failed deployments and customer-facing incidents.",
-      "target_segment": "Salesforce ISV developers and AppExchange partners maintaining managed packages (1GP/2GP) with large enterprise subscriber bases",
-      "total": 5.6,
+      "id": "01KY1K36ZXA2AB0DHWFBNP6VHE",
+      "problem_statement": "Security and DevOps teams responsible for Linux infrastructure face an unmanageable CVE triage burden when hundreds of kernel CVEs are published in a single day, with no automated tooling to prioritize which vulnerabilities actually affect their specific kernel version and configuration.",
+      "target_segment": "Security engineers, DevOps teams, and SREs at companies running Linux-based infrastructure at scale",
+      "total": 5.7,
       "recommended_stage": "validate",
-      "rationale": "The buyer is a Salesforce ISV developer at an AppExchange partner — specific, named, and already paying for AppExchange reviews and dev tooling, so willingness to pay exists but is uncertain for this niche static-analysis use case. The pain is real (failed subscriber org upgrades are customer-facing incidents) but low-frequency — most ISVs hit this rarely. The segment is narrow: there are only ~3,000-5,000 AppExchange managed package ISVs globally, limiting revenue ceiling. Buildability with AI…",
-      "solution_plan": "The micro-service is an 'Apex Expression Complexity Auditor' — a code analysis tool that scans a Salesforce ISV's Apex classes and flags expressions at risk of hitting the 'expression too long' compiler limit before they cause subscriber org deployment failures. The factory builds it as: a file-upload intake form (ISV uploads their Apex source files) + a Claude prompt trained on the specific AST patterns that trigger the error + a report delivered via email. A Stripe link charges $150-300 per audit or $99/month for CI integration guidance. Outreach targets the Salesforce Developer Trailblazer Community forums, the Salesforce Stack Exchange,…",
+      "rationale": "The pain is real and acute — 432 CVEs in 24 hours is a concrete, documented stress event, and security teams at Linux-infrastructure companies already spend real budget on Snyk, Wiz, and Qualys, confirming willingness to pay. The buyer is identifiable (security engineers and SREs at mid-to-large companies running Linux at scale), but the build_gates are the decisive blocker: buildability and operational autonomy both fall short, because accurate CVE-to-kernel-version relevance mapping requires…",
+      "solution_plan": "The micro-service would be a kernel CVE relevance filter: customers submit their kernel version and distro, and Claude cross-references incoming CVE feeds to flag only those that actually apply. Building it would require: ingesting NVD/CVE feeds automatically, mapping CVEs to kernel version ranges and distro patch status (data that changes daily and requires reliable parsing of structured kernel security advisories), and presenting a filtered dashboard or digest — this goes well beyond a simple prompt+page+Stripe stack and needs real data-pipeline and integration engineering. Selling would target security engineers via LinkedIn outreach or c…",
       "realistic": {
-        "verdict": "yes",
-        "weak": []
+        "verdict": "no",
+        "weak": [
+          "run it hands-off",
+          "build it"
+        ]
       },
       "scores": {
         "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 5,
-        "Buildable": 6,
-        "Pain": 7
+        "Runs alone": 4,
+        "Will pay": 8,
+        "Buildable": 4,
+        "Pain": 8
       },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439479/how-can-i-identify-which-apex-expressions-will-trigger-expression-is-too-long",
-      "discovered_at": "2026-06-07T09:59:46+03:00"
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://lobste.rs/s/t2jxyu",
+      "discovered_at": "2026-07-21T08:41:34+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1065,
-    "last_7_days_usd": 1.0461,
-    "all_time_usd": 9.9709,
+    "today_usd": 0.174,
+    "last_7_days_usd": 1.0616,
+    "all_time_usd": 10.1449,
     "by_day": [
-      {
-        "date": "2026-07-14",
-        "usd": 0.1585
-      },
       {
         "date": "2026-07-15",
         "usd": 0.1576
@@ -797,67 +796,36 @@
       {
         "date": "2026-07-20",
         "usd": 0.1065
+      },
+      {
+        "date": "2026-07-21",
+        "usd": 0.174
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.4691
+        "usd": 0.4941
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2028
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.1883
+        "usd": 0.2561
       },
       {
         "agent": "build_decisions",
         "usd": 0.1512
       },
       {
+        "agent": "pain_validation",
+        "usd": 0.1267
+      },
+      {
         "agent": "daily_summary",
-        "usd": 0.0347
+        "usd": 0.0335
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-14",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-15",
       "agents": {
@@ -1067,12 +1035,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-21",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-20.md",
-    "date": "2026-07-20",
-    "text": "# Daily Summary — 2026-07-20 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 133 |\n| Opportunities validated past threshold | 32 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues monitoring for emerging pain signals.\n2. `opportunity_scoring` processes any new candidate opportunities.\n3. `pain_validation` begins outreach probes on highest-scoring candidates.\n4. `lead_research` collects contact details for validated opportunities.\n5. `build_decisions` evaluates readiness of top candidates for experiment launch.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-21.md",
+    "date": "2026-07-21",
+    "text": "# Daily Summary — 2026-07-21 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 139 |\n| Opportunities validated past threshold | 32 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `pain_validation` runs targeted validation probes on the 32 opportunities that crossed the scoring threshold yesterday.\n2. `build_decisions` reviews pain signals and determines which opportunities warrant experiment inception.\n3. `market_radar` continues daily sweeps for new pain signals across monitored communities.\n4. `opportunity_scoring` processes any new candidate opportunities from overnight radar runs.\n5. `cost_gain` computes metrics on any active experiments (none currently).\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

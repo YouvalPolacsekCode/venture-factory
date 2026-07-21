@@ -1,0 +1,25 @@
+{
+  "id": "01KY1K36ZEWE5RZR2EJ011ZM09",
+  "discovered_at": "2026-07-21T08:41:34+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48986353",
+    "snippet": "Curious to know how are you interviewing engineers? Do you have a no-LLM policy? Are take-home tests worth it? How do you make sure engineer is a 'good' engineer?"
+  },
+  "problem_statement": "Engineering hiring managers and CTOs lack reliable, bias-resistant methods to evaluate software engineer candidates now that LLMs make traditional coding tests trivially completable, creating uncertainty about signal validity in technical interviews.",
+  "target_segment": "Engineering managers, CTOs, and technical recruiters at software companies hiring developers in 2026",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "technical-hiring",
+    "engineering-interviews",
+    "llm-cheating",
+    "take-home-test",
+    "ai-era-hiring",
+    "recruiting",
+    "developer-assessment",
+    "hr-tech"
+  ],
+  "notes": "Buyer signal: companies spend significant budget on recruiting and hiring tools (HackerRank, Codility, etc. are known paid products). The agentic-era framing is fresh (2026-07-20) and the question has active engagement. Opportunity: interview platform or assessment methodology explicitly designed for the LLM era \u2014 e.g., live pair-programming evaluation, design/architecture walkthroughs, or AI-usage-allowed assessments that test judgment rather than syntax recall.",
+  "status": "candidate"
+}

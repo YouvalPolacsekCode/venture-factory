@@ -1,0 +1,27 @@
+{
+  "id": "01KY1K36YNPS4MT6GXP56HRKHM",
+  "discovered_at": "2026-07-21T08:41:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199531/mfa-options-for-cisco-anyconnect-vpn-with-radius-on-asa-ftd",
+    "snippet": "Need 2FA on Cisco AnyConnect VPN through RADIUS, without standing up an expensive cloud MFA service. We're on ASA/FTD. What are the sane options here?"
+  },
+  "problem_statement": "SMB and mid-market IT teams running Cisco AnyConnect VPN on ASA/FTD need affordable MFA via RADIUS but existing cloud MFA services are considered too expensive, leaving them without a compliant 2FA solution.",
+  "target_segment": "IT administrators and sysadmins at SMBs and mid-market companies running Cisco ASA/FTD VPN infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "mfa",
+    "vpn",
+    "cisco",
+    "radius",
+    "anyconnect",
+    "2fa",
+    "network-security",
+    "sysadmin",
+    "asa-ftd",
+    "cost-reduction"
+  ],
+  "notes": "Explicit buyer signal: operator wants MFA but calls existing cloud MFA services 'expensive', indicating active spend evaluation and willingness to pay for a cheaper alternative. This is a recurring compliance requirement in corporate IT. Opportunity: self-hostable or low-cost RADIUS-based MFA appliance/service targeting Cisco VPN shops. Competing products (Duo, Okta) are known-expensive, leaving a clear price wedge.",
+  "status": "candidate"
+}

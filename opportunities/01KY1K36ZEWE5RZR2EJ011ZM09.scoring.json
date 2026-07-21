@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KY1K36ZEWE5RZR2EJ011ZM09",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.1,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "The most defensible and high-signal assessment formats (live pair programming, architecture walkthroughs) require real-time human evaluator participation \u2014 not purely automatable."
+    }
+  ],
+  "total": 5.1,
+  "recommended_stage": "drop",
+  "rationale": "Engineering managers and CTOs at software companies are a clearly identified, paying segment \u2014 HackerRank and Codility prove there's real budget for assessment tooling. The pain (LLMs breaking traditional coding tests) is severe and timely in 2026. However, the most valuable differentiation in this space involves human judgment in evaluation \u2014 live walkthroughs, pair programming sessions \u2014 which prevents full autonomy. Even a more automated approach (AI-evaluated take-homes) faces a crowded market and requires significant platform build. After the synchronous-human penalty, total falls to 5.1, just below the validate threshold. Borderline: could revisit if scoped to a fully automated AI-judgment evaluation product.",
+  "solution_plan": "Borderline viable only if scoped to a 100% automated format. The concept would be: (1) a simple web form where companies submit a candidate's GitHub or code samples, Claude evaluates them against a rubric tuned for the AI era (judges architecture decisions, commit history, code review comments \u2014 things LLMs don't fake well), and returns a structured report; (2) built as Claude prompt pipeline + intake form + Stripe + PDF report delivery, no human evaluation; (3) sold to engineering managers via LinkedIn/HN outreach approved by Youval; (4) delivery fully automated, billing via Stripe, support via Claude-drafted FAQ. The catch: evaluation quality may not match human reviewers, and the market is competitive. Worth a quick landing-page test before investing further.",
+  "notes": "Weighted total before penalty is 6.1 (above validate threshold), but synchronous-human penalty brings it to 5.1. A narrower automated-only scope could lift operational_autonomy above 7 and remove the penalty, potentially reaching validate. As scoped, drop.",
+  "scored_at": "2026-07-21T08:42:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

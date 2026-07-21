@@ -1,0 +1,26 @@
+{
+  "id": "01KY1K36Z6DXZXEQQAFPD02J3P",
+  "discovered_at": "2026-07-21T08:41:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439664/how-to-properly-set-parameters-integer-and-date-fields-for-named-query-mcp-u",
+    "snippet": "There's documented limitations on Named Query API and using it for MCP and Agent use. However I'm trying to build a simple query with an integer parameter, while it works perfectly when called from API/workbench, it keeps failing when invoked as a tool from MCP (Custom Salesforce hosted MCP). It shows 'Unexpected error while processing request'."
+  },
+  "problem_statement": "Salesforce developers building MCP-connected agents cannot pass typed parameters (integers, dates) through Named Query API when invoked via MCP tooling, blocking agentic CRM automation workflows.",
+  "target_segment": "Salesforce developers and solution architects building AI agent integrations on Salesforce platform at enterprise or mid-market companies",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "mcp",
+    "agentforce",
+    "named-query",
+    "api-integration",
+    "ai-agents",
+    "soql",
+    "enterprise",
+    "crm-automation"
+  ],
+  "notes": "Second Salesforce Agentforce/MCP friction signal on same day as the Flow failure issue \u2014 confirms a pattern of real paid-developer pain around Salesforce AI tooling. Buyer context: enterprise Salesforce licenses are expensive; consultant/developer time on this is billable. Opportunity: consulting playbook, integration library, or automated test harness for Agentforce/MCP parameter handling.",
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01KY1K36YYX81NNDYKFZG66SAW",
+  "discovered_at": "2026-07-21T08:41:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439667/agentforce-works-with-direct-input-but-fails-when-invoked-from-flow",
+    "snippet": "When I provide the input directly to the agent (using the Agent Builder or Test panel), the agent executes successfully and returns the expected response. However, when I invoke the same agent from a Salesforce Flow using the same input, the flow fails and throws an error."
+  },
+  "problem_statement": "Salesforce developers and admins cannot reliably invoke Agentforce agents from Salesforce Flows, causing automation pipelines to fail silently and blocking AI-assisted workflow deployments in enterprise orgs.",
+  "target_segment": "Salesforce developers and admins at companies actively deploying Agentforce in enterprise Salesforce orgs",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "flow-automation",
+    "ai-agents",
+    "enterprise-integration",
+    "no-code",
+    "salesforce-flow",
+    "debugging",
+    "crm"
+  ],
+  "notes": "Buyer signal: Salesforce orgs are paid enterprise customers; developers billing time against Agentforce deployments represent clear professional spend. The Named Query MCP parameter failure (separate SE question same day) reinforces a pattern of Agentforce integration friction. Opportunity: diagnostic tooling, integration middleware, or documented patterns/service for Agentforce-Flow reliability. Multiple Salesforce SE posts on same day suggest emerging, repeated pain.",
+  "status": "candidate"
+}

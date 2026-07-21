@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KY1K36ZPHK647WVA7SRCGF4S",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The primary users are individual event organizers and small community managers \u2014 consumer/prosumer segment that expects free Google add-ons and whose aggregate revenue would require hundreds or thousands of paying users to be meaningful."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "Event organizers using Google Forms have a real, recurring duplicate-booking problem, and the technical build is genuinely easy \u2014 Claude + Apps Script logic + a simple notification layer is achievable in days. But the buyers are individual consumers and community managers who expect free Google Workspace tooling; there is no demonstrated willingness to pay (3) and buyer clarity is low (3) \u2014 this is a 'everyone' audience without budget authority. After the b2c-scale penalty, total is 3.6. The combination of weak commercial signal and a market that expects free tools makes this a drop.",
+  "solution_plan": "Not commercially viable as a micro-service. The technical problem is easy to solve (a Google Apps Script runs the duplicate check and sends an email alert), but the people who need it expect free solutions \u2014 the Google Workspace Marketplace is full of free add-ons, and community event managers don't have software budgets. Even at $5/month, converting enough users to meaningful revenue would require thousands of customers. The factory's time is better spent on B2B buyers with real budgets. Drop.",
+  "notes": "Fails willingness_to_pay (3 < 5) and buyer_clarity (3 < 6) build gates. Total after penalty is 3.6, below validate threshold.",
+  "scored_at": "2026-07-21T08:42:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

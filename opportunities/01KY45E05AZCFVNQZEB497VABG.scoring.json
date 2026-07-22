@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY45E05AZCFVNQZEB497VABG",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.4,
+  "penalties_applied": [],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "The Ollama GPU resource management problem is technically real and affects a growing segment of developer/ML power users, but the buyer is mixed (hobbyists plus professionals) with almost no willingness to pay \u2014 Ollama itself is free and open source, and users expect GPU tooling to be free or OS-level. More critically, the solution requires system-level GPU/VRAM management code (CUDA context manipulation, process suspension) that is completely outside what Claude plus a landing page and Stripe can build. Both buildability_with_ai (2) and operational_autonomy (2) fail their gates by a wide margin.",
+  "solution_plan": "A solo non-technical operator absolutely cannot build this. GPU VRAM pause/resume requires low-level CUDA or driver-level code \u2014 it's a systems programming problem, not a prompt engineering problem. Even if outsourced to engineers, the target users (developers running Ollama) expect this kind of tool to be free and open-source, not a paid subscription. There is no viable micro-service angle here for this factory. Drop entirely.",
+  "notes": "Fails buildability_with_ai (2 < 6 floor), operational_autonomy (2 < 7 floor), buyer_clarity (4 < 6 floor), and willingness_to_pay (3 < 5 floor). All four build gates fail. Total 3.4 well below min_total_to_validate.",
+  "scored_at": "2026-07-22T08:42:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KY45E054C7WCB8RDZFEEX2KD",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Portfolio-level resource planning outputs require human review and judgment before acting; the service would need ongoing analyst-type configuration and interpretation per client, not fully automated delivery."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "PMO leads and portfolio managers at mid-large organizations are a real B2B buyer with budget \u2014 they pay for Planview, Smartsheet, and Wrike \u2014 and the pain of inadequate AI-native capacity planning is structurally validated. However, building a genuinely useful portfolio-level AI planning layer requires deep integrations with existing PM tools (Jira, MS Project, Smartsheet), per-customer data mapping, and ongoing model tuning: operational_autonomy (5) misses its build-gate floor of 7, and the human-fulfillment penalty drops the total to 3.8. This is closer to a consulting product than an autonomous micro-service.",
+  "solution_plan": "The product concept is an AI capacity planning assistant: upload your resource/project data, Claude forecasts bottlenecks and generates reallocation recommendations. The factory could build a Claude prompt + a CSV/file intake form + a simple output page with a Stripe payment link. However, enterprise PMO buyers expect integrations (Jira, MS Project) and validated outputs \u2014 a generic Claude wrapper on uploaded CSVs would not retain paying customers. Operational_autonomy is capped at 5 because each customer needs custom data mapping and the outputs need human review before PMO decisions. Drop until a lighter, more specific sub-problem (e.g. 'weekly capacity snapshot report from a Jira export') is identified that can run hands-off.",
+  "notes": "Fails operational_autonomy build gate (5 < 7 floor). human_fulfillment penalty applied (-1.5). Total after penalty: 3.8, below min_total_to_validate.",
+  "scored_at": "2026-07-22T08:42:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01KY45E05AZCFVNQZEB497VABG",
+  "discovered_at": "2026-07-22T08:40:31+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://github.com/ollama/ollama/issues/17298",
+    "snippet": "Many users run Ollama on a primary workstation alongside other heavy workloads like gaming, media playback, or 3D rendering. When a user suddenly needs 100% of their GPU resources, there is no way to free the VRAM without completely terminating the Ollama service, which permanently destroys any long-running generations that are currently processing."
+  },
+  "problem_statement": "Developers and power users running local LLMs via Ollama on their primary workstation cannot pause or yield GPU/VRAM to other demanding applications without killing active generation sessions entirely, forcing a choice between LLM work and other GPU-intensive tasks.",
+  "target_segment": "AI developers, ML engineers, and technical power users running local LLMs on consumer or prosumer GPU workstations for development, testing, or research workflows",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ollama",
+    "local-llm",
+    "gpu-management",
+    "vram",
+    "developer-tools",
+    "ai-inference",
+    "workstation",
+    "llm-tooling",
+    "resource-management"
+  ],
+  "notes": "Buyer signal is moderate: these are developers actively using Ollama in workflows, some in professional/research contexts. The pain is concrete and technical. Monetization angle: a GPU resource manager or Ollama companion app (paid tier) that enables stateful pause/resume of LLM generations. Hobbyist use mixed with professional use; signal_strength kept at 2 due to single feature request with no upvotes, though the underlying user class (dev workstation LLM runners) is growing rapidly.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KY45E054C7WCB8RDZFEEX2KD",
+  "discovered_at": "2026-07-22T08:40:31+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/35977/how-is-ai-actually-changing-resource-capacity-planning-at-the-portfolio-level",
+    "snippet": "AI is rapidly changing project and resource management, but how is it impacting resource capacity planning at the portfolio level? Are you using AI for forecasting demand, balancing workloads, or optimizing resource allocation across multiple projects? What benefits or challenges have you experienced?"
+  },
+  "problem_statement": "Portfolio-level resource and capacity planning remains largely manual or spreadsheet-driven at many organizations, and PMs are actively seeking but not finding AI-powered solutions that actually work for multi-project demand forecasting, workload balancing, and resource allocation at scale.",
+  "target_segment": "Portfolio managers and PMO leads at mid-to-large professional services firms, software companies, or enterprises managing 10+ concurrent projects with shared resource pools",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "resource-planning",
+    "capacity-planning",
+    "portfolio-management",
+    "pmo",
+    "ai-forecasting",
+    "project-management",
+    "workforce-planning",
+    "enterprise-software"
+  ],
+  "notes": "Business context: PMO/portfolio manager role in a company environment. Question implies current tools are insufficient and willingness to adopt new tooling. Market has paid incumbents (Planview, Smartsheet, Wrike) with known gaps in AI-native forecasting. Signal is weak (single question, no upvotes) but the market gap is structurally validated by the incumbents' slow AI adoption. Potential product: AI capacity planning layer that integrates with existing PM tools.",
+  "status": "candidate"
+}

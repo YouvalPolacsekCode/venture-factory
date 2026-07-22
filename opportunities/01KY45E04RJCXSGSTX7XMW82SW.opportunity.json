@@ -1,0 +1,25 @@
+{
+  "id": "01KY45E04RJCXSGSTX7XMW82SW",
+  "discovered_at": "2026-07-22T08:40:31+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=48999810",
+    "snippet": "Is anyone else experiencing delays in getting a CVE ID assigned on Github? I can only assume there's a flood of reports coming from researchers using LLMs. https://github.com/orgs/community/discussions/199123"
+  },
+  "problem_statement": "Security researchers and open-source maintainers are experiencing significant delays in CVE ID assignment through GitHub's advisory system, likely due to a surge of LLM-generated vulnerability reports flooding the queue. This blocks coordinated disclosure timelines and creates legal/reputational risk for maintainers and companies awaiting a CVE before patching.",
+  "target_segment": "Security researchers, OSS maintainers, and corporate AppSec teams that rely on GitHub Advisory Database / GHSA for CVE assignment as part of their vulnerability disclosure workflow",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cve",
+    "vulnerability-disclosure",
+    "security",
+    "appsec",
+    "github-advisory",
+    "coordinated-disclosure",
+    "llm-abuse",
+    "open-source-security"
+  ],
+  "notes": "Business context: AppSec teams at companies have SLAs on disclosure timelines; delays create compliance and PR risk. Signal is single post with 4 upvotes but references a broader community discussion thread, suggesting wider frustration. Potential product: a CVE tracking and escalation workflow tool that monitors assignment status, sends alerts, and helps teams manage disclosure timelines across multiple pending CVEs.",
+  "status": "candidate"
+}

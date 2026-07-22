@@ -1,0 +1,12 @@
+{
+  "opportunity_id": "01KY1K36ZXA2AB0DHWFBNP6VHE",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "daily",
+  "rationale": "The 432-CVEs-in-24-hours event on 2026-07-20 is a documented, concrete stress test that exposes a structural gap in existing triage tooling: no mainstream scanner (Snyk, Wiz, Qualys) performs kernel-version-specific relevance filtering at this velocity. Security teams already pay real budget for adjacent tools, confirming strong willingness to pay, and the pain recurs every time the kernel security list flares \u2014 which is increasingly frequent given the kernel's expanding attack surface.",
+  "sources": [
+    "https://lobste.rs/s/t2jxyu",
+    "https://lore.kernel.org/linux-cve-announce/"
+  ],
+  "evaluated_at": "2026-07-22T08:41:31+03:00"
+}

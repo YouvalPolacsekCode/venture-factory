@@ -1,0 +1,26 @@
+{
+  "id": "01KY45E04H1YFDG1HM5BNXA1MJ",
+  "discovered_at": "2026-07-22T08:40:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439675/how-are-yall-handling-all-these-mfa-requirements",
+    "snippet": "My company has a policy against using any MFA other than the company standard (DUO). We had to work with our SSO team to add an attribute to SSO SAML exchange to show 'amr = mfa' in order to bypass first round of MFA requirement. Now that Salesforce is coming out with Admin and report export MFA, how are you handling this? My SSO team says they cannot add another 'amr' attribute to accommodate the admin requirement (since it would require a different attribute, there are no overlapping attributes)."
+  },
+  "problem_statement": "Enterprise IT teams running Salesforce with a corporate SSO and MFA standard (e.g. DUO) face growing friction as Salesforce rolls out layered MFA requirements for admin actions and report exports. Existing SAML attribute workarounds break when new MFA scopes are added, forcing ongoing SSO team involvement with no scalable solution.",
+  "target_segment": "Salesforce admins and enterprise IT/security teams at mid-to-large companies using corporate SSO (Okta, Azure AD, Ping) with a mandated MFA provider",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "mfa",
+    "sso",
+    "enterprise-it",
+    "saml",
+    "identity",
+    "compliance",
+    "admin-tools",
+    "security-policy"
+  ],
+  "notes": "Clear business context: company IT policy, SSO team coordination, Salesforce admin role. Salesforce licensing implies paid environment. Pain is ongoing and will intensify as Salesforce expands MFA scopes. Potential product: a middleware/adapter that maps corporate MFA signals to Salesforce-specific AMR attributes without SSO team custom work each time.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY45E04H1YFDG1HM5BNXA1MJ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is clear \u2014 enterprise Salesforce admins and IT security teams at companies running corporate SSO \u2014 and they genuinely pay for Salesforce tooling. However, the solution is fundamentally a SAML/identity middleware adapter requiring deep integration with Okta, Azure AD, Ping Identity, and Salesforce's MFA framework: this is not buildable as a Claude prompt plus a landing page and Stripe link, and it cannot run autonomously post-launch (each customer requires custom SSO configuration). Both buildability_with_ai (2) and operational_autonomy (2) fail their build-gate floors by a wide margin, and the weighted total of 4.3 sits below the validate threshold of 5.5.",
+  "solution_plan": "This is an enterprise identity integration product \u2014 it would need to act as a SAML proxy that translates corporate MFA signals (DUO, Okta MFA) into the specific AMR attributes Salesforce requires per scope. Building it requires deep SSO protocol work and per-customer configuration by a solutions engineer, not a Claude prompt. A solo non-technical operator could not realistically build, sell (requires enterprise sales cycles), or maintain (requires ongoing SSO support) this product. Drop this and look for a lighter-weight adjacent opportunity if the Salesforce-admin segment proves valuable.",
+  "notes": "Fails buildability_with_ai (2 < 6 floor) and operational_autonomy (2 < 7 floor). Total 4.3 also below min_total_to_validate (5.5). Correct stage: drop.",
+  "scored_at": "2026-07-22T08:42:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

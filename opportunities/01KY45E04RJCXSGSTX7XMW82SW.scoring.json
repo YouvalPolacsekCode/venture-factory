@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY45E04RJCXSGSTX7XMW82SW",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real for AppSec teams \u2014 CVE assignment delays disrupt coordinated disclosure SLAs \u2014 but the buyer is diffuse: it spans individual OSS maintainers (who won't pay), corporate AppSec teams (who might), and security researchers (mixed). Willingness to pay is weak: there's no clear paid substitute and the primary workaround is just waiting or escalating manually. Total of 4.7 falls below the 5.5 validate threshold, and buyer_clarity (5) and willingness_to_pay (4) both miss their build-gate floors.",
+  "solution_plan": "The product would be a CVE assignment tracker: a Claude-powered dashboard that monitors GitHub Advisory Database submission status, sends Slack/email alerts on delays, calculates disclosure deadline risk, and drafts escalation messages. The factory could build this as a webhook listener + Claude prompt + a simple status page with a Stripe subscription. However, the market is narrow and the willingness to pay signal is absent \u2014 OSS maintainers won't pay, and enterprise AppSec teams already have expensive GRC tools. Validate whether any AppSec team lead would pay $50\u2013200/month for this before investing build time.",
+  "notes": "Total 4.7 below min_total_to_validate (5.5). Buyer clarity and willingness_to_pay also below build-gate floors. Drop unless a paid AppSec buyer can be confirmed.",
+  "scored_at": "2026-07-22T08:42:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

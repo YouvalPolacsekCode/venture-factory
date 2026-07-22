@@ -1,0 +1,50 @@
+{
+  "opportunity_id": "01KY1K36ZXA2AB0DHWFBNP6VHE",
+  "decided_at": "2026-07-22T08:42:38+03:00",
+  "decision": "kill",
+  "confidence_pct": 88,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 4,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 4,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 8,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.7,
+      "min_total_to_build": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "eligible_for_build": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.7 < min_total_to_build 6.5",
+    "operational_autonomy=4 < 7",
+    "buildability_with_ai=4 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "This opportunity fails three independent build qualifications: operational_autonomy (4 vs floor 7), buildability_with_ai (4 vs floor 6), and total score (5.7 vs 6.5 minimum). The cost_to_gain_ratio of 6.448 massively exceeds the kill threshold of 0.6, and expected_gain_90d is negative at -$159.34. While the pain and buyer willingness are genuinely strong, the core product requires live CVE feed ingestion, structured kernel-version-range matching, and per-customer environment configuration \u2014 this is a systems-integration engineering product fundamentally mismatched with the factory's autonomous Claude-plus-prompts delivery model. Deferral would not fix the structural gap; killing is appropriate.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 21,
+  "suggested_first_outreach_channel": "r/netsec + LinkedIn security-engineer outreach"
+}

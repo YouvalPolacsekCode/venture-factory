@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY45E04Y22RX417181C51099",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is a real but niche network engineering annoyance \u2014 Chrome HTTP/2 connection pooling conflicts with VPN state changes \u2014 and the buyer (platform engineers, DevOps) is only moderately clear. Critically, the solution requires either a browser extension (Chrome store approval, ongoing maintenance, distribution challenges) or a smart proxy middleware (per-environment deployment, custom configuration per company), neither of which is buildable as a Claude prompt plus a landing page, and neither can run autonomously. Willingness to pay is very weak: there are no paid substitutes and the workaround is a browser restart. Total of 3.6 is well below the validate threshold.",
+  "solution_plan": "A solo non-technical operator could not realistically build or maintain this. The solution requires either systems-level network proxy code or a browser extension with deep Chrome networking API access \u2014 both require real software engineering. Even if built, selling to DevOps/platform engineers requires technical credibility and a free tier to prove value, and support would require hands-on debugging of customer network environments. Drop this entirely.",
+  "notes": "Total 3.6 well below min_total_to_validate (5.5). Fails buildability_with_ai (3 < 6), operational_autonomy (3 < 7), buyer_clarity (4 < 6), and willingness_to_pay (3 < 5). All four build gates fail.",
+  "scored_at": "2026-07-22T08:42:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01KY45E04Y22RX417181C51099",
+  "discovered_at": "2026-07-22T08:40:31+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199528/proper-proxy-behavior-for-403s-when-accessing-vpn-protected-sites",
+    "snippet": "Modern browsers (especially Chrome) aggressively pool and reuse existing HTTP/2 TCP sockets. When the user subsequently connects to their VPN, their local routing table updates, but Chrome continues using the open, pre-VPN HTTP/2 TCP connection. Because the connection remains intact after the initial 403, Chrome stays stuck in a failed state until the user manually flushes connections or restarts."
+  },
+  "problem_statement": "Developers and IT teams deploying internal web apps behind VPN face a recurring UX failure: Chrome reuses pre-VPN HTTP/2 connections after VPN connect, causing 403 errors and stuck browser states that require manual intervention. There is no clean proxy-side solution to force connection teardown and re-auth when VPN status changes.",
+  "target_segment": "Platform engineers, DevOps, and IT admins at companies running internal web applications or dashboards protected by VPN/zero-trust access controls",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vpn",
+    "proxy",
+    "http2",
+    "chrome",
+    "internal-tools",
+    "devops",
+    "zero-trust",
+    "network-engineering",
+    "enterprise-networking"
+  ],
+  "notes": "Business context: developer at a company dealing with an ops nuisance affecting user experience for VPN-connected employees. Problem is structural (Chrome behavior + VPN routing) and affects any company running VPN-gated apps. Low signal count but technically concrete and recurring across enterprise environments. Potential product: a smart proxy middleware or browser extension that detects VPN state changes and gracefully tears down pooled connections.",
+  "status": "candidate"
+}

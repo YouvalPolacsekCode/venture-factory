@@ -1,0 +1,25 @@
+{
+  "id": "01KY6R32FDTN60921R1SQDKW9E",
+  "discovered_at": "2026-07-23T08:45:04+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49008599",
+    "snippet": "\"You know what does work? Adblock. It reasons that we could build a new form of it. I would pay for som[ething like this]\" \u2014 HN commenter on 'Advertise in ChatGPT' thread, July 2026. Commenter references open-weights models (Kimi) and distillation to CPU as the enabling technology for a new generation of AI-powered ad/content filtering."
+  },
+  "problem_statement": "As AI assistants (ChatGPT, Gemini, etc.) begin serving sponsored content and ads, users have no tool to detect, label, or filter AI-generated advertising responses \u2014 the same problem Adblock solved for the web, now emerging for LLM interfaces.",
+  "target_segment": "Privacy-conscious power users and developers who already pay for ad-blocking tools or VPNs, and who use AI assistants daily for work.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-advertising",
+    "ad-filtering",
+    "llm",
+    "privacy",
+    "adblock",
+    "open-weights",
+    "browser-extension",
+    "chatgpt"
+  ],
+  "notes": "Buyer intent present ('I would pay for') but problem is still nascent \u2014 ChatGPT ads are just rolling out. Early-mover window exists. Adblock/uBlock have proven willingness-to-pay (donations, premium tiers) in this demographic. Signal is speculative but timely given the July 2026 context of ChatGPT advertising launch.",
+  "status": "candidate"
+}

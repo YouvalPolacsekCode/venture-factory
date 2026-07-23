@@ -1,0 +1,26 @@
+{
+  "id": "01KY6R32F5RM2CJFC2YBCJZFT4",
+  "discovered_at": "2026-07-23T08:45:04+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439682/data-cloud-web-sdk-deviceid-changes-within-the-same-domain-best-practices-for",
+    "snippet": "\"I am currently implementing Salesforce Data Cloud to track anonymous users across a portfolio of 14 distinct domains. Our main goal is to build audiences for paid media retargeting. We are using the Interactions Web SDK, but we are facing unexpected behavior with the deviceId generation... The deviceId changes within the same domain.\" \u2014 Marketing engineer, July 2026."
+  },
+  "problem_statement": "Marketing engineers implementing Salesforce Data Cloud for cross-domain anonymous audience tracking hit SDK bugs where deviceId resets unexpectedly, breaking retargeting audience builds and wasting paid media budget.",
+  "target_segment": "Marketing engineers and martech architects at mid-to-large companies running Salesforce Data Cloud for paid media retargeting across multiple web properties.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "data-cloud",
+    "cross-domain-tracking",
+    "anonymous-tracking",
+    "retargeting",
+    "paid-media",
+    "martech",
+    "identity-resolution",
+    "sdk"
+  ],
+  "notes": "Clear business buyer: managing 14 domains for paid media retargeting means real ad spend tied to this working correctly. A broken deviceId directly costs money in mis-attributed audiences. Opportunity: a lightweight identity-stitching middleware or documented implementation pattern/service layer on top of Salesforce Data Cloud SDK. Recurring pain as Salesforce Data Cloud is actively being adopted.",
+  "status": "candidate"
+}

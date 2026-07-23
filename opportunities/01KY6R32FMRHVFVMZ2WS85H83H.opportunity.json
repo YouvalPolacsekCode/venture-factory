@@ -1,0 +1,26 @@
+{
+  "id": "01KY6R32FMRHVFVMZ2WS85H83H",
+  "discovered_at": "2026-07-23T08:45:04+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/verbb/formie/issues/2891",
+    "snippet": "\"Trying to use the Communication preferences API from Hubspot. To use the official Hubspot Opt-in to subscribe to newsletters we should use the Communication preferences API... At the moment, we can only map contacts, deals, companies, and forms, but not communication preferences. Would it be possible to integrate support for communication preferences?\" \u2014 GitHub issue on Formie (Craft CMS form plugin), July 2026."
+  },
+  "problem_statement": "Agencies and developers building Craft CMS sites with HubSpot integrations cannot wire up proper opt-in consent flows for newsletters because the HubSpot Communication Preferences API is not supported \u2014 forcing manual workarounds that break GDPR compliance.",
+  "target_segment": "Craft CMS agencies and freelance developers building marketing sites with HubSpot CRM integrations for clients in regulated markets (EU, UK).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "hubspot",
+    "craft-cms",
+    "formie",
+    "gdpr",
+    "email-opt-in",
+    "newsletter",
+    "crm-integration",
+    "compliance",
+    "communication-preferences"
+  ],
+  "notes": "Business context: agencies charging clients for HubSpot/Craft CMS integrations; compliance gap (GDPR opt-in) adds urgency. Opportunity: a paid Formie add-on or standalone plugin (~$99-199 one-time or per-site license) bridging the Communication Preferences API. Small niche but clear paying buyer (agencies pass costs to clients). Low competition in Craft CMS plugin ecosystem.",
+  "status": "candidate"
+}

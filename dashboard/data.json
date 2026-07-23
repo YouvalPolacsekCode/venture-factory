@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-22T05:42:44+00:00",
-    "idt": "2026-07-22T08:42:44+03:00"
+    "utc": "2026-07-23T05:46:12+00:00",
+    "idt": "2026-07-23T08:46:12+03:00"
   },
   "funnel": {
-    "candidates": 144,
-    "scored": 144,
+    "candidates": 149,
+    "scored": 149,
     "validated": 17,
     "build_decisions": {
       "defer_1_week": 15,
@@ -163,6 +163,35 @@
     },
     {
       "topics": [
+        "mcp",
+        "ai-agents",
+        "web-search"
+      ],
+      "id": "01KY6R32EMV4NY6TWWQD00JPD8",
+      "problem_statement": "Developers running AI agents (coding assistants, autonomous pipelines) lack a reliable, privacy-respecting MCP-compatible web search tool; Kagi has not shipped an official MCP server, leaving builders patching around the gap with inferior alternatives.",
+      "target_segment": "AI/software developers and solo operators running LLM agent pipelines who already pay for Kagi or similar premium search subscriptions.",
+      "total": 6.6,
+      "recommended_stage": "build",
+      "rationale": "The buyer is a specific, nameable type — AI/software developers who already pay for Kagi subscriptions — and explicit willingness-to-pay is on record from the HN thread. The service is highly automatable: a hosted MCP-compatible search proxy wrapping Kagi's API can deliver, bill, and run entirely without per-customer human involvement. The deciding factor is that the gap is real and uncontested — Kagi has no official MCP server — and the technical build is straightforward for Claude-assisted to…",
+      "solution_plan": "The micro-service is a hosted MCP-compatible web-search proxy that sits between an AI agent and Kagi's search API, translating MCP tool calls into Kagi searches and returning structured results. The factory builds it by writing a Claude-backed MCP server (a small JSON-RPC endpoint), a one-page landing site explaining what it does, a Stripe subscription link ($8-15/mo), and an API-key intake form — no coding by Youval. To sell, the factory drafts targeted posts in HN 'Show HN', the Kagi community Discord, and r/LocalLLaMA, plus cold DMs to GitHub repos that reference Kagi and MCP; outreach goes out only after Youval approves each batch. Once…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 6
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=49008244",
+      "discovered_at": "2026-07-23T08:45:04+03:00"
+    },
+    {
+      "topics": [
         "llm-cost-monitoring",
         "api-spend",
         "openai-billing"
@@ -218,6 +247,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48624168",
       "discovered_at": "2026-06-22T11:49:39+03:00"
+    },
+    {
+      "topics": [
+        "hubspot",
+        "craft-cms",
+        "formie"
+      ],
+      "id": "01KY6R32FMRHVFVMZ2WS85H83H",
+      "problem_statement": "Agencies and developers building Craft CMS sites with HubSpot integrations cannot wire up proper opt-in consent flows for newsletters because the HubSpot Communication Preferences API is not supported — forcing manual workarounds that break GDPR compliance.",
+      "target_segment": "Craft CMS agencies and freelance developers building marketing sites with HubSpot CRM integrations for clients in regulated markets (EU, UK).",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is tightly defined — Craft CMS agencies and freelancers billing clients for HubSpot integrations in GDPR markets — and they have clear budget authority and a compliance urgency that justifies paying for a plugin ($99-199/site). The build is feasible: a Craft CMS/Formie plugin bridging HubSpot's Communication Preferences API is within Claude-assisted coding range, and delivery (plugin download + license key) is fully automatable. The total exactly meets min_total_to_build (6.5) but res…",
+      "solution_plan": "The micro-service is a paid Craft CMS plugin (Formie add-on) that connects Formie form submissions to HubSpot's Communication Preferences API, enabling proper GDPR opt-in consent flows without manual workarounds. The factory builds it by writing the plugin code with Claude (Craft CMS plugin architecture is well-documented), setting up a Gumroad or Lemon Squeezy storefront ($149/site license), a one-page landing page explaining the GDPR compliance angle, and an automated license-key delivery email. To sell, the factory drafts targeted messages to the Craft CMS Discord (#plugins channel), the Craft CMS community forum, and GitHub watchers of t…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "other",
+      "source_url": "https://github.com/verbb/formie/issues/2891",
+      "discovered_at": "2026-07-23T08:45:04+03:00"
     },
     {
       "topics": [
@@ -700,83 +758,15 @@
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148750/what-are-the-advantages-of-an-ai-gateway-over-calling-llm-apis-directly",
       "discovered_at": "2026-07-08T08:42:28+03:00"
-    },
-    {
-      "topics": [
-        "ai-agent",
-        "cost-control",
-        "devops"
-      ],
-      "id": "01KTXAWYXW1W1VHNH8H9RNQ2JC",
-      "problem_statement": "AI coding/devops agents can run up unexpected large cloud or API bills when given autonomous tasks with broad permissions, leaving operators with no cost guardrails or kill-switch in place before damage is done.",
-      "target_segment": "Solo developers, indie hackers, and small engineering teams deploying AI agents for devops or network automation tasks.",
-      "total": 5.7,
-      "recommended_stage": "validate",
-      "rationale": "The pain is acute and real — operators have lost actual money, giving strong willingness-to-pay signal from financial loss. The buyer is identifiable: a solo developer or small team lead already paying for AI API access, with a clear budget motive to prevent runaway costs. However, building a true cost-cap/circuit-breaker SDK or middleware layer requires real integration work (hooking into cloud billing APIs, agent runtimes, or at minimum an API proxy layer), putting buildability at 5 and opera…",
-      "solution_plan": "The micro-service would be an AI Agent Cost Guardian: a lightweight monitoring and alerting layer that watches API spend in real time and sends alerts (email/Slack webhook) when a configurable budget threshold is crossed. BUILD: Claude can draft the monitoring logic and webhook integration; a simple landing page with a Stripe subscription link ($19-39/mo) and an intake form collecting the user's API keys and budget limits; Claude handles alert email drafting. SELL: reach indie hackers and solo devs via Hacker News Show HN, Twitter/X AI dev communities, and ProductHunt — Youval approves the outreach batch before it goes out. MAINTAIN: monitor…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 5,
-        "Will pay": 6,
-        "Buildable": 5,
-        "Pain": 8
-      },
-      "verdict": "validated",
-      "source_type": "hn",
-      "source_url": "https://lobste.rs/s/ishgbs",
-      "discovered_at": "2026-06-12T10:14:17+03:00"
-    },
-    {
-      "topics": [
-        "linux-security",
-        "cve-triage",
-        "vulnerability-management"
-      ],
-      "id": "01KY1K36ZXA2AB0DHWFBNP6VHE",
-      "problem_statement": "Security and DevOps teams responsible for Linux infrastructure face an unmanageable CVE triage burden when hundreds of kernel CVEs are published in a single day, with no automated tooling to prioritize which vulnerabilities actually affect their specific kernel version and configuration.",
-      "target_segment": "Security engineers, DevOps teams, and SREs at companies running Linux-based infrastructure at scale",
-      "total": 5.7,
-      "recommended_stage": "validate",
-      "rationale": "The pain is real and acute — 432 CVEs in 24 hours is a concrete, documented stress event, and security teams at Linux-infrastructure companies already spend real budget on Snyk, Wiz, and Qualys, confirming willingness to pay. The buyer is identifiable (security engineers and SREs at mid-to-large companies running Linux at scale), but the build_gates are the decisive blocker: buildability and operational autonomy both fall short, because accurate CVE-to-kernel-version relevance mapping requires…",
-      "solution_plan": "The micro-service would be a kernel CVE relevance filter: customers submit their kernel version and distro, and Claude cross-references incoming CVE feeds to flag only those that actually apply. Building it would require: ingesting NVD/CVE feeds automatically, mapping CVEs to kernel version ranges and distro patch status (data that changes daily and requires reliable parsing of structured kernel security advisories), and presenting a filtered dashboard or digest — this goes well beyond a simple prompt+page+Stripe stack and needs real data-pipeline and integration engineering. Selling would target security engineers via LinkedIn outreach or c…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 4,
-        "Will pay": 8,
-        "Buildable": 4,
-        "Pain": 8
-      },
-      "verdict": "validated",
-      "source_type": "other",
-      "source_url": "https://lobste.rs/s/t2jxyu",
-      "discovered_at": "2026-07-21T08:41:34+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3677,
-    "last_7_days_usd": 1.2717,
-    "all_time_usd": 10.5127,
+    "today_usd": 0.1603,
+    "last_7_days_usd": 1.251,
+    "all_time_usd": 10.673,
     "by_day": [
-      {
-        "date": "2026-07-16",
-        "usd": 0.181
-      },
       {
         "date": "2026-07-17",
         "usd": 0.1168
@@ -800,12 +790,16 @@
       {
         "date": "2026-07-22",
         "usd": 0.3677
+      },
+      {
+        "date": "2026-07-23",
+        "usd": 0.1603
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5161
+        "usd": 0.5183
       },
       {
         "agent": "build_decisions",
@@ -813,54 +807,19 @@
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2781
+        "usd": 0.295
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1431
+        "usd": 0.1035
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0337
+        "usd": 0.0335
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-16",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-17",
       "agents": {
@@ -1070,12 +1029,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-23",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-22.md",
-    "date": "2026-07-22",
-    "text": "# Daily Summary — 2026-07-22 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 144 |\n| Opportunities validated past threshold | 33 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nAll experiments archived or in wind-down. No active discovery, validation, build, live, or scaling stages detected. Factory is in holding pattern pending operator next-cycle direction.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across tracked channels.\n2. `opportunity_scoring` re-ranks the 144 candidate opportunities.\n3. `pain_validation` probes the top 10 highest-scored candidates for confirmation.\n4. `cost_gain` updates weekly cost/gain ratios for portfolio review.\n5. `build_decisions` flags opportunities ready to move into validation phase.\n\n## Operator action items\n\n1. **Select next experiment to launch** — 33 validated opportunities are ready. Review the top 5 by pain signal and addressability; choose one to move into build phase.\n2. **Define success metrics for the next cycle** — no active experiments means no learning velocity. Set target stages, timelines, and kill thresholds for the next 7 days.",
+    "file": "reports/daily/2026-07-23.md",
+    "date": "2026-07-23",
+    "text": "# Daily Summary — 2026-07-23 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 149 |\n| Opportunities validated past threshold | 33 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across SaaS communities.\n2. `opportunity_scoring` processes new candidate opportunities surfaced today.\n3. `pain_validation` validates top-scored opportunities against operator thresholds.\n4. `lead_research` collects contact details for validated opportunities.\n5. `build_decisions` evaluates which opportunities merit experiment buildout.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

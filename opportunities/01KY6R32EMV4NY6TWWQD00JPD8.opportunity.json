@@ -1,0 +1,25 @@
+{
+  "id": "01KY6R32EMV4NY6TWWQD00JPD8",
+  "discovered_at": "2026-07-23T08:45:04+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49008244",
+    "snippet": "\"I would love a Kagi MCP to give my agents a better web search tool but they don't seem interested. I would pay for this.\" \u2014 HN commenter on a thread about Kagi search, July 2026. Kagi has no official MCP server; users running AI coding agents and autonomous pipelines are forced to use inferior search tools or build ad-hoc wrappers."
+  },
+  "problem_statement": "Developers running AI agents (coding assistants, autonomous pipelines) lack a reliable, privacy-respecting MCP-compatible web search tool; Kagi has not shipped an official MCP server, leaving builders patching around the gap with inferior alternatives.",
+  "target_segment": "AI/software developers and solo operators running LLM agent pipelines who already pay for Kagi or similar premium search subscriptions.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "mcp",
+    "ai-agents",
+    "web-search",
+    "kagi",
+    "llm-tooling",
+    "developer-tools",
+    "search-api",
+    "autonomous-agents"
+  ],
+  "notes": "Explicit willingness-to-pay stated ('I would pay for this'). Kagi subscribers already have a paid relationship with search; an unofficial MCP wrapper or hosted MCP-search proxy could charge a small monthly fee. Second HN commenter (Cider9986) also expressed paying for Kagi/Brave at $3/mo with Monero \u2014 general paid-search sentiment is present. Low competition: no dominant MCP search product for agents yet.",
+  "status": "candidate"
+}

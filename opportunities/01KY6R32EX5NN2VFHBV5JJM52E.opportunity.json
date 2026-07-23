@@ -1,0 +1,25 @@
+{
+  "id": "01KY6R32EX5NN2VFHBV5JJM52E",
+  "discovered_at": "2026-07-23T08:45:04+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439683/deploying-an-agent-script-agent-into-a-build-process",
+    "snippet": "\"I have a mature CI/CD pipeline... I have checked in an agent script agent -- version 3 and activated -- into the package repo and a new scratch org builds without error. However the agent is in limbo and corrupted as there is no user assigned to it in the new scratch org. The agent is listed in the Setup->Agentforce Studio-->Agentforce Agents list, but nothing comes up when I click on it.\" \u2014 Salesforce developer, July 2026."
+  },
+  "problem_statement": "Salesforce developers with established CI/CD pipelines cannot reliably deploy Agentforce agents through scratch orgs because user-assignment state is lost on deployment, leaving agents in a broken/corrupted state and blocking automated build processes.",
+  "target_segment": "Salesforce developers and DevOps engineers at companies running Agentforce who have mature CI/CD pipelines (scratch orgs, packaging).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "cicd",
+    "devops",
+    "scratch-org",
+    "deployment",
+    "enterprise",
+    "developer-tools"
+  ],
+  "notes": "Buyer signal: this is an enterprise Salesforce developer with a mature pipeline \u2014 the pain directly blocks shipping velocity. Agentforce is a new paid Salesforce product tier; companies investing in it have real budgets. Opportunity: a deployment helper tool or documented pattern (sold as a managed package, consulting engagement, or SaaS config service) that auto-assigns users and validates agent state post-deploy. No existing solution visible.",
+  "status": "candidate"
+}

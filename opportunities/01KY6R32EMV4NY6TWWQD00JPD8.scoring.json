@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY6R32EMV4NY6TWWQD00JPD8",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "build",
+  "rationale": "The buyer is a specific, nameable type \u2014 AI/software developers who already pay for Kagi subscriptions \u2014 and explicit willingness-to-pay is on record from the HN thread. The service is highly automatable: a hosted MCP-compatible search proxy wrapping Kagi's API can deliver, bill, and run entirely without per-customer human involvement. The deciding factor is that the gap is real and uncontested \u2014 Kagi has no official MCP server \u2014 and the technical build is straightforward for Claude-assisted tooling. Operational autonomy meets the build gate floor at 7.",
+  "solution_plan": "The micro-service is a hosted MCP-compatible web-search proxy that sits between an AI agent and Kagi's search API, translating MCP tool calls into Kagi searches and returning structured results. The factory builds it by writing a Claude-backed MCP server (a small JSON-RPC endpoint), a one-page landing site explaining what it does, a Stripe subscription link ($8-15/mo), and an API-key intake form \u2014 no coding by Youval. To sell, the factory drafts targeted posts in HN 'Show HN', the Kagi community Discord, and r/LocalLLaMA, plus cold DMs to GitHub repos that reference Kagi and MCP; outreach goes out only after Youval approves each batch. Once live, customers self-serve signup, get an API key via automated email, and the proxy handles all search delivery; Stripe handles billing; Claude handles support queries from a shared inbox. The only recurring human touch is Youval approving outreach batches and reviewing the monthly Stripe dashboard.",
+  "notes": "All build_gates pass. Defensibility is low (trivially forkable wrapper), but that does not block build \u2014 it just means moving fast matters. Kagi's own API terms should be reviewed before launch.",
+  "scored_at": "2026-07-23T08:46:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

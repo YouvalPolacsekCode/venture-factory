@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KY6R32FDTN60921R1SQDKW9E",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Privacy/ad-blocking tools targeting individual consumers need large user volume to generate meaningful revenue; the business model requires >1000 paying consumers to work at even minimal scale."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is individual privacy-conscious consumers \u2014 not a named business role with a budget \u2014 and while analogues like uBlock exist, AI-ad filtering is nascent enough that willingness-to-pay is speculative rather than proven. The problem is real but too early: ChatGPT ads are just launching, the technical challenge of detecting AI-generated sponsored content is genuinely hard (score 5 buildability), and consumer distribution without a clear channel makes this an uphill fight. After the b2c-at-scale penalty the total lands at 3.6, below the validate threshold. Come back in 6 months when the problem is concrete and measurable.",
+  "solution_plan": "A solo non-technical operator cannot build this viably right now. Detecting AI-sponsored content reliably requires a browser extension with a classification model, which is non-trivial to build with Claude alone, and distributing it to thousands of consumers with no existing channel is a major acquisition problem. The idea is worth watching but not acting on today.",
+  "notes": "Total below min_total_to_validate (3.6 < 5.5). Problem is pre-product-market-fit at this date. Re-evaluate Q4 2026 if ChatGPT ad complaints become a measurable, named complaint category.",
+  "scored_at": "2026-07-23T08:46:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

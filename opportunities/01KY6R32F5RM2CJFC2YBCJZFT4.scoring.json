@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KY6R32F5RM2CJFC2YBCJZFT4",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Identity-stitching middleware for Salesforce Data Cloud requires bespoke implementation per client's domain portfolio, SDK version, and consent architecture \u2014 not automatable delivery."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Martech architects at mid-to-large companies will require discovery, scoping, and onboarding calls before any implementation; async self-serve is not viable at this complexity level."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 marketing engineers at companies managing 14+ domains with live paid media budgets \u2014 and the pain costs actual ad spend. But the solution is a deep integration problem tied to Salesforce's SDK internals, cross-domain cookie behavior, and consent management architecture; it cannot be packaged as a generic automated service a Claude factory builds and delivers hands-off. Operational autonomy (3) and buildability with AI (3) both fail their build-gate floors hard, and after penalties the total drops to 2.4. This is a specialist consulting engagement.",
+  "solution_plan": "A solo non-technical operator cannot build or maintain this. Resolving cross-domain deviceId resets in Salesforce Data Cloud SDK requires platform-specific debugging, client org access, and martech architecture knowledge that Claude cannot substitute for. Dropping is correct.",
+  "notes": "Fails operational_autonomy_min (3 < 7), buildability_with_ai_min (3 < 6). Total also falls below min_total_to_validate after penalties.",
+  "scored_at": "2026-07-23T08:46:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

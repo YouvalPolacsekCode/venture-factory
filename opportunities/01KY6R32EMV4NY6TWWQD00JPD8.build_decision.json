@@ -1,0 +1,49 @@
+{
+  "opportunity_id": "01KY6R32EMV4NY6TWWQD00JPD8",
+  "decided_at": "2026-07-24T08:43:41+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total": {
+      "score": 6.6,
+      "min_total_to_build": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": [
+        "build",
+        "scale"
+      ],
+      "pass": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All scoring gates pass and the total (6.6) clears the 6.5 build threshold, so this opportunity is technically eligible for build_now. However, the cost_to_gain_ratio of 3.058 far exceeds the kill threshold of 0.6 defined in cost_gain_model.yaml, meaning projected 4-week costs outstrip projected 4-week gains by 3\u00d7. The responsiveness_signal is only 3 (no real outreach test yet), and defensibility is minimal \u2014 a single HN comment is thin demand evidence to commit a build week. Deferring one week to run a lightweight responsiveness probe (Show HN draft, Discord post, targeted DMs to Kagi+MCP GitHub repos) would either validate real demand or save the operator a wasted build cycle.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Kagi community Discord + targeted GitHub issue/discussion comments on repos referencing Kagi API"
+}

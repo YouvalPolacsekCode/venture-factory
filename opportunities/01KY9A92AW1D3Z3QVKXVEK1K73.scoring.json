@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KY9A92AW1D3Z3QVKXVEK1K73",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 8,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Anonymous paid search is a pure consumer product requiring thousands of paying users to generate meaningful revenue at $3/mo price point; unit economics only work at scale."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is individual privacy-focused consumers \u2014 not a specific business role with a budget \u2014 who are notoriously reluctant to pay for software and expect search to be free; the '$3/mo with Monero' signal is a single HN comment representing a very small tail of ultra-privacy users, not a validated paying segment. Building anonymous search infrastructure (a private search proxy that accepts Monero/crypto with no account linkage) requires real backend infrastructure, API agreements with an underlying search index (Bing, Brave Search API), and compliance consideration around anonymous payments \u2014 well beyond a prompt-and-Stripe micro-service. Operational_autonomy is also penalized by the need to handle anonymous crypto payment flows and the absence of any customer identity for support or fraud control. Total of 3.0 firmly in drop territory.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator. Anonymous paid search requires backend infrastructure to proxy and de-identify queries to a licensed search index, a crypto payment system that genuinely preserves anonymity (Lightning, Monero), and ongoing legal/compliance attention around anonymous payment processing. None of this is buildable via Claude prompts and a Stripe link. Even if built, the target segment ($3/mo individual privacy users paying in Monero) would require thousands of customers to generate meaningful revenue, and there is no clear allowed channel to reach them at volume. Do not pursue.",
+  "notes": "Fails buyer_clarity (score 3, floor 6), willingness_to_pay (score 4, floor 5), operational_autonomy (score 4, floor 7), and buildability_with_ai (score 5, floor 6). Multiple build_gates failing. Total 3.0 well below drop threshold.",
+  "scored_at": "2026-07-24T08:43:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

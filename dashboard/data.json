@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-07-23T05:46:12+00:00",
-    "idt": "2026-07-23T08:46:12+03:00"
+    "utc": "2026-07-24T05:43:46+00:00",
+    "idt": "2026-07-24T08:43:46+03:00"
   },
   "funnel": {
-    "candidates": 149,
-    "scored": 149,
-    "validated": 17,
+    "candidates": 153,
+    "scored": 153,
+    "validated": 18,
     "build_decisions": {
-      "defer_1_week": 15,
+      "defer_1_week": 16,
       "kill": 2
     },
     "build_now": 0,
@@ -185,10 +185,39 @@
         "Buildable": 8,
         "Pain": 6
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=49008244",
       "discovered_at": "2026-07-23T08:45:04+03:00"
+    },
+    {
+      "topics": [
+        "dns-hijack",
+        "smb-security",
+        "http-redirect"
+      ],
+      "id": "01KY9A92AM5RD9T189BJXEC3QA",
+      "problem_statement": "Small and mid-sized businesses suffer DNS hijack or HTTP-redirect injection attacks and lack the internal expertise to quickly detect, diagnose, and remediate the attack — often discovering it only via end-user reports or consumer AV software.",
+      "target_segment": "IT administrators and small business owners at SMBs without a dedicated security team, running web-facing services.",
+      "total": 6.6,
+      "recommended_stage": "build",
+      "rationale": "The buyer is a specific, identifiable business role — IT admin or small business owner running web-facing services — who would realistically pay $20–$50/month for continuous DNS and HTTP-redirect monitoring because the downside (customers landing on phishing/malware pages) is severe and carries real reputational and liability risk. Willingness to pay is supported by adjacent paid tools (uptime monitors, security SaaS) that SMBs already buy. The service can be built as a scheduled probe (Claude…",
+      "solution_plan": "The micro-service is a continuous DNS and HTTP-redirect monitor: every 15 minutes it checks whether the customer's domain resolves to expected IPs and whether HTTP requests redirect only to expected destinations — and fires an email alert the moment something anomalous appears, before customers notice. The factory builds it as a scheduled Claude-assisted probe (DNS lookups + HTTP HEAD requests via code), a simple landing page with a Stripe subscription ($29/mo per domain, annual discount), and an onboarding form where the customer enters their domain and alert email — no engineering by the operator. Outreach targets SMB IT admins and founder…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 7,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199547/i-think-my-company-has-suffered-from-a-dns-hijack-spoof-or-something",
+      "discovered_at": "2026-07-24T08:41:24+03:00"
     },
     {
       "topics": [
@@ -726,51 +755,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48810964",
       "discovered_at": "2026-07-07T09:37:08+03:00"
-    },
-    {
-      "topics": [
-        "llm",
-        "ai-gateway",
-        "api-management"
-      ],
-      "id": "01KX03ZGFQXEAMS8J1AEFEBKN7",
-      "problem_statement": "Engineering teams integrating multiple LLM providers face growing operational overhead: fragmented API key management, inconsistent rate-limiting, missing cost visibility, and no unified audit log — with no lightweight self-hostable solution that handles all of this together.",
-      "target_segment": "Software development teams and agencies at small-to-mid-size companies building AI-powered features across multiple LLM providers.",
-      "total": 5.8,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a specific, reachable person — a dev team lead or CTO at a 5–50 person company burning engineering hours on LLM API glue code, and they already pay multiple LLM providers, so willingness to pay is credible. The problem is real and daily. However, the AI gateway space is crowded (LiteLLM, Portkey, Helicone, OpenRouter) and the differentiator is not yet clear, which suppresses defensibility. Buildability is constrained because a functional gateway needs persistent infrastructure (a p…",
-      "solution_plan": "The service would be a dead-simple AI gateway SaaS: a single proxy URL teams point their OpenAI/Anthropic/Gemini calls at, which adds cost tracking, per-key rate limits, and an audit log dashboard. BUILD: the factory can create a landing page with a waitlist form, write a clear one-pager comparing to LiteLLM/Portkey (what makes this simpler), and set up a Stripe payment link for early access. The actual gateway proxy needs lightweight infrastructure (e.g. a Cloudflare Worker or a Render service) — technically feasible but requires some setup beyond pure Claude prompts, so Youval may need a developer to implement the proxy layer. SELL: reach…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 5,
-        "Will pay": 7,
-        "Buildable": 4,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://webmasters.stackexchange.com/questions/148750/what-are-the-advantages-of-an-ai-gateway-over-calling-llm-apis-directly",
-      "discovered_at": "2026-07-08T08:42:28+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1603,
-    "last_7_days_usd": 1.251,
-    "all_time_usd": 10.673,
+    "today_usd": 0.3616,
+    "last_7_days_usd": 1.4958,
+    "all_time_usd": 11.0346,
     "by_day": [
-      {
-        "date": "2026-07-17",
-        "usd": 0.1168
-      },
       {
         "date": "2026-07-18",
         "usd": 0.2653
@@ -794,67 +787,36 @@
       {
         "date": "2026-07-23",
         "usd": 0.1603
+      },
+      {
+        "date": "2026-07-24",
+        "usd": 0.3616
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5183
+        "usd": 0.532
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3007
+        "usd": 0.4497
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.295
+        "usd": 0.3164
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1035
+        "usd": 0.1643
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0335
+        "usd": 0.0334
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-17",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-18",
       "agents": {
@@ -1064,12 +1026,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-24",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-23.md",
-    "date": "2026-07-23",
-    "text": "# Daily Summary — 2026-07-23 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 149 |\n| Opportunities validated past threshold | 33 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across SaaS communities.\n2. `opportunity_scoring` processes new candidate opportunities surfaced today.\n3. `pain_validation` validates top-scored opportunities against operator thresholds.\n4. `lead_research` collects contact details for validated opportunities.\n5. `build_decisions` evaluates which opportunities merit experiment buildout.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-24.md",
+    "date": "2026-07-24",
+    "text": "# Daily Summary — 2026-07-24 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 153 |\n| Opportunities validated past threshold | 34 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes discovery on today's 34 validated opportunities.\n2. `pain_validation` probes top-ranked candidates for pain signal confirmation.\n3. `market_radar` sweeps for emerging B2B SaaS pain signals.\n4. `cost_gain` computes ROI on any active outreach.\n5. `opportunity_scoring` re-ranks the candidate pool.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

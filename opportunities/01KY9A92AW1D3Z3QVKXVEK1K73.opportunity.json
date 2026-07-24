@@ -1,0 +1,25 @@
+{
+  "id": "01KY9A92AW1D3Z3QVKXVEK1K73",
+  "discovered_at": "2026-07-24T08:41:24+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49006698",
+    "snippet": "Brave is as good results as Kagi for me and more anonymity-focused, because your searches aren't tied to an account, but I like that Kagi has a simple business model. I would pay for either if I could pay 3 dollars or less per month with Monero. \u2014 HN comment on 'Back to Kagi', captured 2026-07-22."
+  },
+  "problem_statement": "Privacy-conscious users are willing to pay for private search engines but are blocked from doing so because existing paid options (Kagi) require account-linked payment, undermining the privacy proposition. There is latent demand for a truly anonymous paid search tier.",
+  "target_segment": "Privacy-focused individual users and developers who actively use tools like Brave, Monero, or VPNs and distrust account-linked subscriptions.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "private-search",
+    "anonymous-payment",
+    "monero",
+    "privacy",
+    "search-engine",
+    "subscription",
+    "kagi",
+    "brave"
+  ],
+  "notes": "Explicit 'I would pay' signal with a specific price point ($3/mo) and payment method (Monero). The pain is the contradiction between paying for privacy and having to create an account to do so. Opportunity: anonymous prepaid search access (token/voucher model, Monero/crypto payment, no account required). Single HN comment but touches a real structural gap in the privacy-tools market.",
+  "status": "candidate"
+}

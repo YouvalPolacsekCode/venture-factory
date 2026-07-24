@@ -1,0 +1,26 @@
+{
+  "id": "01KY9A92A4425EQDZR3ZFYQ6Z1",
+  "discovered_at": "2026-07-24T08:41:24+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49019748",
+    "snippet": "I would pay for tooling, but most of them is now pure grift. Even Jetbrains has gone the anticonsumer route with their focus on AI (plugins enabled by default). \u2014 HN comment on 'Escape IntelliJ: Scala and Kotlin LSPs on Emacs Eglot', captured 2026-07-23."
+  },
+  "problem_statement": "Professional developers are frustrated that major IDE vendors (JetBrains and others) are forcing AI features and upsells into previously clean tooling, eroding trust and usability. There is explicit willingness to pay for honest, non-bloated developer tooling that respects the user.",
+  "target_segment": "Professional software engineers (Scala, Kotlin, JVM ecosystem) who pay for IDE subscriptions and feel betrayed by AI-feature bloat from incumbents.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ide",
+    "developer-tooling",
+    "anti-ai-bloat",
+    "jetbrains",
+    "lsp",
+    "willingness-to-pay",
+    "subscription",
+    "scala",
+    "kotlin"
+  ],
+  "notes": "Explicit 'I would pay for tooling' buyer signal. Pain is anti-incumbent (JetBrains AI push). Opportunity: a lean, honest IDE plugin or standalone LSP-based editor experience with a simple paid license and no AI upsell. Single signal but high credibility in HN context. Watch for corroborating signals in r/scala, r/kotlin, r/emacs.",
+  "status": "candidate"
+}

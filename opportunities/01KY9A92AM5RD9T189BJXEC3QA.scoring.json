@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY9A92AM5RD9T189BJXEC3QA",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "build",
+  "rationale": "The buyer is a specific, identifiable business role \u2014 IT admin or small business owner running web-facing services \u2014 who would realistically pay $20\u2013$50/month for continuous DNS and HTTP-redirect monitoring because the downside (customers landing on phishing/malware pages) is severe and carries real reputational and liability risk. Willingness to pay is supported by adjacent paid tools (uptime monitors, security SaaS) that SMBs already buy. The service can be built as a scheduled probe (Claude + a headless HTTP checker + DNS resolver calls), delivered as a SaaS with email/Slack alerting, self-serve signup, and Stripe billing \u2014 all automated. Operational autonomy is strong: probes run on a cron, alerts fire automatically, and support questions are Claude-handled. All build_gates pass.",
+  "solution_plan": "The micro-service is a continuous DNS and HTTP-redirect monitor: every 15 minutes it checks whether the customer's domain resolves to expected IPs and whether HTTP requests redirect only to expected destinations \u2014 and fires an email alert the moment something anomalous appears, before customers notice. The factory builds it as a scheduled Claude-assisted probe (DNS lookups + HTTP HEAD requests via code), a simple landing page with a Stripe subscription ($29/mo per domain, annual discount), and an onboarding form where the customer enters their domain and alert email \u2014 no engineering by the operator. Outreach targets SMB IT admins and founders via LinkedIn searches ('IT manager small business'), relevant Reddit communities (r/sysadmin, r/smallbusiness), and cold email to businesses that recently registered or renewed domains \u2014 all outreach batches go out only after operator approval. Ongoing delivery is fully automated: probes run on the server, alerts send via email API (SendGrid), billing via Stripe, and Claude drafts responses to support queries for the operator to approve-and-send. The operator's only recurring touch is approving outreach batches and reviewing weekly anomaly summaries. Competitive moat is thin (Uptime Robot exists) so differentiate on the specific DNS/redirect-injection detection angle, not generic uptime.",
+  "notes": "All build_gates pass. Closest competitive risk is Uptime Robot / Better Uptime \u2014 position specifically on DNS hijack and HTTP-redirect injection, not generic uptime monitoring. This is the highest-scoring candidate today.",
+  "scored_at": "2026-07-24T08:43:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

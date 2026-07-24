@@ -1,0 +1,24 @@
+{
+  "id": "01KY9A92AM5RD9T189BJXEC3QA",
+  "discovered_at": "2026-07-24T08:41:24+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199547/i-think-my-company-has-suffered-from-a-dns-hijack-spoof-or-something",
+    "snippet": "Connections to my company's website using http rather than https are redirected [to] another site. Avast seems to block the site... After clicking, the user is directed to press Win Key+r and run the following command... \u2014 ServerFault, captured 2026-07-23. Score: -1 but describes a live attack scenario at a real company."
+  },
+  "problem_statement": "Small and mid-sized businesses suffer DNS hijack or HTTP-redirect injection attacks and lack the internal expertise to quickly detect, diagnose, and remediate the attack \u2014 often discovering it only via end-user reports or consumer AV software.",
+  "target_segment": "IT administrators and small business owners at SMBs without a dedicated security team, running web-facing services.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "dns-hijack",
+    "smb-security",
+    "http-redirect",
+    "incident-response",
+    "web-security",
+    "dns-monitoring",
+    "detection"
+  ],
+  "notes": "Real company affected by a live DNS hijack/HTTP-injection attack, discovered reactively. Buyer is the IT admin or business owner who would pay for proactive DNS and HTTP-redirect monitoring with alerting. Existing tools (Avast, etc.) detected but didn't prevent. Opportunity: a low-cost SaaS that continuously monitors a company's domain for unexpected HTTP/DNS redirects and alerts owners before customers are impacted. Single signal but business context is clear.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KY9A92A4425EQDZR3ZFYQ6Z1",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer signal is real \u2014 professional developers on HN explicitly saying 'I would pay' for honest tooling is credible \u2014 but buyer_clarity is weak: 'developers frustrated by JetBrains' is a vibe, not a specific business role with a budget line, and this skews toward individual consumer purchases (low ARPU, high churn). More critically, the product itself is a clean IDE plugin or LSP-based experience, which requires non-trivial engineering effort (deep language-server integration, editor compatibility), cannot be built with Claude prompts + a landing page, and cannot be delivered or maintained hands-off \u2014 every new version, every language-server update, and every support ticket demands real engineering. This falls squarely below the build_gates for buildability_with_ai and operational_autonomy and doesn't clear the 5.5 validate threshold.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator running a Claude factory. Building a usable IDE plugin or LSP layer for Scala/Kotlin requires sustained software engineering work (editor protocol, language semantics, packaging for JetBrains Marketplace or VS Code), ongoing maintenance per upstream LSP changes, and hands-on developer support. There is no prompt-and-Stripe path here. If you want to serve frustrated developers, a better angle would be a newsletter or curated resource (non-monetizable at scale) rather than a competing tooling product.",
+  "notes": "Fails buildability_with_ai (score 3, floor 6) and operational_autonomy (score 4, floor 7). Idea requires real engineering, not a Claude-based micro-service. Total 4.6 also below min_total_to_validate (5.5).",
+  "scored_at": "2026-07-24T08:43:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

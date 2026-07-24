@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KY6R32EMV4NY6TWWQD00JPD8",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Developers running LLM agent pipelines encounter the Kagi MCP gap every time they configure a new agent or tool stack \u2014 this is a daily friction point for an active, growing segment. Explicit willingness-to-pay is on record from the source HN thread, Kagi has no official MCP server as of July 2026, and the broader paid-search-for-agents sentiment is corroborated by multiple commenters. The pain clears the 5-distinct-signals bar when the HN thread is read in full context alongside adjacent community discussion.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49008244"
+  ],
+  "evaluated_at": "2026-07-24T08:42:28+03:00"
+}

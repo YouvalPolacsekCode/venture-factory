@@ -1,0 +1,25 @@
+{
+  "id": "01KY9A92AD5KPTAXDKSECC8XW3",
+  "discovered_at": "2026-07-24T08:41:24+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439686/is-there-any-api-available-to-quickly-find-out-if-installed-package-version-is-r",
+    "snippet": "I am building certain CI/CD process based upon if staging environment has released or beta package version. I need a way to quickly find out if installed package version is released or not. This would be inefficient to check the released package version list against the installed package version id. \u2014 Salesforce Stack Exchange, captured 2026-07-23."
+  },
+  "problem_statement": "Salesforce developers building CI/CD pipelines cannot efficiently determine at runtime whether an installed managed package version is released or beta, forcing slow workarounds against the Tooling API. This blocks reliable automated deployment gating.",
+  "target_segment": "Salesforce ISV developers and DevOps engineers at companies with managed package CI/CD pipelines (2GP/2GMP).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "cicd",
+    "managed-package",
+    "devops",
+    "tooling-api",
+    "2gp",
+    "deployment-automation",
+    "isv"
+  ],
+  "notes": "Professional CI/CD context \u2014 company-grade workflow blocker. Buyer is a Salesforce developer/team already investing in CI/CD infrastructure. Opportunity: a lightweight API wrapper or CLI tool that abstracts package-version release-state checks, potentially bundled into a broader Salesforce DevOps utility. Single question but reflects a recurring pain pattern in Salesforce DevOps community.",
+  "status": "candidate"
+}

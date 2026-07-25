@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KYBW9VK8RF4793YZE73YVHKT",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any meaningful GCP support escalation path ultimately requires a human who understands GCP internals, has vendor relationships, or can do credible advocacy \u2014 Claude cannot substitute for a real support engineer or GCP partner-channel contact."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Escalation services inherently require real-time or near-real-time human coordination: triaging a downed VM, joining a bridge call, filing partner-portal tickets on behalf of the customer \u2014 none of this can be queued and batched."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Each customer's GCP environment, project structure, and incident context is unique, requiring bespoke human judgement per engagement."
+    }
+  ],
+  "total": 1.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and acute \u2014 a production VM that won't start and a vendor who has closed the support ticket is genuinely severe \u2014 but the opportunity fails on nearly every commercialisation and autonomy dimension. The actual deliverable customers would pay for is a human expert who can escalate inside Google's partner network, which Claude cannot replicate; operational autonomy and buildability scores are both 3, well below the build gates. There is no automated, hands-off product here \u2014 only a consulting/brokerage service requiring per-incident human work, synchronous coordination, and deep GCP vendor relationships Youval does not currently have.",
+  "solution_plan": "This opportunity does not qualify for build. The core thing a paying customer needs is a person with GCP partner-channel access or insider knowledge who can physically escalate on their behalf \u2014 not a Claude prompt or a landing page. Even if we built a triage form and automated a first-response email, the moment the customer needs an actual result (VM unblocked, ticket reopened) a human must act. A solo non-technical operator without existing GCP partner credentials or reseller status cannot realistically build or maintain this service. The better path is to drop this and focus on a fully automated B2B micro-service where Claude can own delivery end-to-end.",
+  "notes": "Failing build gates: operational_autonomy (3, floor 7), buildability_with_ai (3, floor 6). Even without the gate check, total after penalties (1.4) is far below the validate threshold of 5.5. The underlying pain pattern (cloud vendor support inadequacy for SMBs) is real and worth watching, but the solution form factor demanded by customers is human expertise, not software.",
+  "scored_at": "2026-07-25T08:36:13+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01KYBW9VK8RF4793YZE73YVHKT",
+  "discovered_at": "2026-07-25T08:34:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199550/compute-engine-vm-instance-always-failing-to-start",
+    "snippet": "Google is blocking support options and closing tickets on request. Failed to start VM instance on (machine type) current unavailable on (zone). We switched Zones, switched machine types, but are constantly getting this error. I wrote a support ticket. They closed it with no response and then closed down my options to file a ticket or call support. Even going so far as removing my option to contact sales to get advanced support. Seems to be something fishy going on with the support system."
+  },
+  "problem_statement": "Businesses running workloads on Google Cloud Platform lose access to support channels when experiencing critical VM provisioning failures, leaving them with no escalation path and no recourse when infrastructure is unavailable.",
+  "target_segment": "SMB and mid-market companies running production workloads on Google Cloud Platform who lack enterprise support contracts",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cloud-infrastructure",
+    "gcp",
+    "vendor-support",
+    "escalation",
+    "vm-provisioning",
+    "support-gap",
+    "google-cloud",
+    "infrastructure-reliability",
+    "devops",
+    "b2b-saas"
+  ],
+  "notes": "Business context is clear: a company ('Tounsi Corp') is blocked from running VMs and cannot reach Google support, indicating a paying GCP customer. The pain is severe (production infrastructure down) and the support channel has been actively closed by the vendor. Opportunity: a managed GCP support escalation or cloud infrastructure monitoring/alerting service that provides a human escalation path independent of Google's own support. Willingness-to-pay is implied by the business context and severity. Signal is weak (single post) but the pattern of GCP/AWS/Azure support being inadequate for SMBs is well-documented; this is one data point in a broader pattern. Would need corroboration from additional sources before scoring higher.",
+  "status": "candidate"
+}

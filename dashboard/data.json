@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-24T05:43:46+00:00",
-    "idt": "2026-07-24T08:43:46+03:00"
+    "utc": "2026-07-25T05:36:18+00:00",
+    "idt": "2026-07-25T08:36:18+03:00"
   },
   "funnel": {
-    "candidates": 153,
-    "scored": 153,
+    "candidates": 154,
+    "scored": 154,
     "validated": 18,
     "build_decisions": {
       "defer_1_week": 16,
@@ -301,7 +301,7 @@
         "Buildable": 7,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "other",
       "source_url": "https://github.com/verbb/formie/issues/2891",
       "discovered_at": "2026-07-23T08:45:04+03:00"
@@ -760,14 +760,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3616,
-    "last_7_days_usd": 1.4958,
-    "all_time_usd": 11.0346,
+    "today_usd": 0.1695,
+    "last_7_days_usd": 1.4,
+    "all_time_usd": 11.2041,
     "by_day": [
-      {
-        "date": "2026-07-18",
-        "usd": 0.2653
-      },
       {
         "date": "2026-07-19",
         "usd": 0.0604
@@ -791,67 +787,36 @@
       {
         "date": "2026-07-24",
         "usd": 0.3616
+      },
+      {
+        "date": "2026-07-25",
+        "usd": 0.1695
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.532
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4497
+        "usd": 0.5391
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3164
+        "usd": 0.3468
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.2985
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1643
+        "usd": 0.1824
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0334
+        "usd": 0.0333
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-18",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "skipped": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-19",
       "agents": {
@@ -1061,12 +1026,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-25",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-24.md",
-    "date": "2026-07-24",
-    "text": "# Daily Summary — 2026-07-24 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 153 |\n| Opportunities validated past threshold | 34 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes discovery on today's 34 validated opportunities.\n2. `pain_validation` probes top-ranked candidates for pain signal confirmation.\n3. `market_radar` sweeps for emerging B2B SaaS pain signals.\n4. `cost_gain` computes ROI on any active outreach.\n5. `opportunity_scoring` re-ranks the candidate pool.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-25.md",
+    "date": "2026-07-25",
+    "text": "# Daily Summary — 2026-07-25 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 154 |\n| Opportunities validated past threshold | 35 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. The factory is in discovery/validation mode across all candidate opportunities.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. Morning run (05:34–08:36 IDT) completed without errors:\n- `market_radar`, `opportunity_scoring`, `pain_validation` succeeded.\n- Remaining agents skipped (no trigger conditions).\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` scans emerging B2B SaaS pain signals on day 2 of the week.\n2. `opportunity_scoring` re-ranks the 154 candidate opportunities by estimated ROI.\n3. `pain_validation` runs targeted probes on top 20 candidates from today's scoring.\n4. `build_decisions` may trigger if any candidate crosses validation threshold.\n5. `cost_gain` calculates running cost-per-validated-opportunity.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

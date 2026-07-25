@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KY6R32FMRHVFVMZ2WS85H83H",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real and compliance-urgent but the evidence base is extremely thin: a single GitHub issue on a niche plugin for a niche CMS. The Craft CMS + HubSpot + Formie intersection represents a very small developer population globally, and no willingness-to-pay signals, competitor pricing, or corroborating threads were found. With only one signal source and no evidence of others encountering this problem, the niche likely does not meet the minimum 5 distinct pain quotes threshold required for a pass verdict.",
+  "sources": [
+    "https://github.com/verbb/formie/issues/2891"
+  ],
+  "evaluated_at": "2026-07-25T08:35:53+03:00"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01KYEFNF38E5R16FF1VGW35JXN",
+  "discovered_at": "2026-07-26T08:51:45+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49054859",
+    "snippet": "If PoW (proof-of-work) schemes like Anubis ultimately don't work in practice, because Bots/Crawlers are increasingly using headless browsers, are able to solve captures, proofs, etc; What options do we have realistically to filter out or block unwanted traffic? What clever schemes can we come up that don't rely on centralised services like Cloudflare?"
+  },
+  "problem_statement": "Website and SaaS operators need effective bot/crawler traffic filtering that does not depend on Cloudflare or other centralized third-party services, but existing PoW and CAPTCHA approaches are increasingly defeated by headless-browser bots.",
+  "target_segment": "Indie SaaS operators, self-hosted web service owners, and small engineering teams running public-facing web properties who pay for bandwidth and compute consumed by bot traffic.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "bot-filtering",
+    "anti-bot",
+    "web-security",
+    "cloudflare-alternative",
+    "headless-browser",
+    "proof-of-work",
+    "captcha",
+    "traffic-filtering",
+    "self-hosted",
+    "saas-infrastructure"
+  ],
+  "notes": "Poster explicitly rejects Cloudflare dependency, signalling willingness to pay for an independent solution. Business context: operators absorb real compute/bandwidth costs from unwanted traffic. Pattern recurs across HN threads on Anubis and bot-blocking. Buyer signal: infrastructure owners who already pay Cloudflare or suffer without it.",
+  "status": "candidate"
+}

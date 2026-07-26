@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYEFNF38E5R16FF1VGW35JXN",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and recurring \u2014 indie SaaS operators and self-hosted infra owners genuinely pay for bandwidth consumed by bots, and the Cloudflare-independence signal suggests budget awareness. However, effective bot-filtering without centralized infrastructure is a hard technical problem that goes well beyond Claude prompts: it requires reverse-proxy logic, fingerprinting heuristics, and ongoing cat-and-mouse maintenance against evolving headless-browser bots \u2014 scoring low on both buildability and operational autonomy. The buyer is identifiable (indie SaaS operators, small eng teams) but the solution cannot be delivered or maintained hands-off, so the build gates on buildability_with_ai (4 vs floor of 6) and operational_autonomy (4 vs floor of 7) are both unmet.",
+  "solution_plan": "This idea cannot realistically be built and run by a solo non-technical operator using Claude + this factory. Effective bot-filtering is an infrastructure security product requiring a reverse proxy, heuristic fingerprinting, and continuous adversarial updates \u2014 none of which are deliverable as a Claude prompt plus a landing page. Attempting to sell a Claude-backed wrapper here would produce an ineffective product and reputational harm. The factory could validate demand (draft an outreach email to indie SaaS founders on indie.hackers/HN, collect replies, map to existing paid tools), but should not attempt to build the product itself. Recommend a validate stage only: survey 20-30 target buyers to quantify their actual spend on bot damage and willingness to pay for a managed alternative, then re-evaluate if a credible technical partner or open-source core emerges.",
+  "notes": "build_gate failures: buildability_with_ai=4 (floor 6), operational_autonomy=4 (floor 7). The core deliverable is a network-layer security tool, not an AI-wrapped workflow.",
+  "scored_at": "2026-07-26T08:53:42+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

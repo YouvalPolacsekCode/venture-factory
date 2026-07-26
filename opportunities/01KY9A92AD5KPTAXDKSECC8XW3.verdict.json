@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KY9A92AD5KPTAXDKSECC8XW3",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real and technically specific \u2014 Salesforce ISV DevOps teams genuinely hit this friction during every CI/CD pipeline run that gates on managed package release state. However, the market is extremely narrow (few hundred teams globally doing 2GP CI/CD), the single forum signal does not meet the minimum 5 distinct pain quotes threshold, there is no willingness-to-pay evidence found in public sources, and Salesforce's own tooling roadmap could close the gap. Evidence count falls well below the pass bar.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439686/is-there-any-api-available-to-quickly-find-out-if-installed-package-version-is-r"
+  ],
+  "evaluated_at": "2026-07-26T08:53:01+03:00"
+}

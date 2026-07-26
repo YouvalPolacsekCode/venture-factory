@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KYEFNF3H3A14FW334T85KV3A",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Meaningful GCP escalation \u2014 writing tickets, navigating vendor support trees, making phone calls, researching zone availability workarounds \u2014 requires per-customer human judgment and action that Claude cannot fully automate."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Incident response inherently involves time-sensitive coordination: the operator must review the situation, decide on escalation paths, and communicate with the affected team in real time."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is severe and real \u2014 production VM failures with no support recourse is a genuine crisis for paying GCP customers \u2014 but the proposed service (escalation brokering, incident monitoring) cannot be delivered autonomously. Each customer incident requires a human to read context, judge severity, contact Google, and coordinate a response; Claude can draft messages but cannot substitute for the actual escalation work. After penalties for per-customer fulfillment and synchronous human involvement, the total drops to 2.9, well below the validate threshold. This is closer to a consulting retainer than an autonomous micro-service.",
+  "solution_plan": "This idea is not viable as a solo non-technical operator's autonomous micro-service. The core value \u2014 actually getting Google to respond and resolving a live production incident \u2014 requires a human advocate with GCP expertise making calls and writing escalations. Claude can draft support tickets and synthesize documentation, but the service cannot deliver meaningful results without hands-on human work per customer. A passive monitoring dashboard (alerting when GCP status page changes) is buildable but doesn't solve the core pain of getting support responses. Recommend dropping this opportunity unless reframed as a purely informational product (e.g. a GCP zone availability status aggregator) \u2014 but that version has low willingness-to-pay.",
+  "notes": "Total after penalties is 2.9 \u2014 below min_total_to_validate (5.5). The service model is fundamentally consulting-shaped, not product-shaped.",
+  "scored_at": "2026-07-26T08:53:42+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

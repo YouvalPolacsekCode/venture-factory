@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KYEFNF3RDSRFN6K1C9W8BVRD",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Salesforce platform quirks are highly context-specific; support questions from consulting customers will require judgment calls about org configuration, API version, and data model \u2014 not fully automatable."
+    }
+  ],
+  "total": 5.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a named professional (Salesforce LWC developer or consultant at a firm) with real budget authority and an hourly-rate incentive to resolve blockers fast \u2014 that's a genuine strength. However, the market is narrow (LWC compound-field issues are a specific platform bug, not a broad workflow gap), the signal is a single forum post (signal_strength 2), and there is no tested responsiveness signal at all. After the high-touch-support penalty the total falls to 5.0, just below the validate threshold of 5.5. The opportunity is better framed as a content/SEO play (a free detailed workaround article that drives consulting leads) than a paid micro-service.",
+  "solution_plan": "This idea sits just below the validate threshold and should be dropped in its current form. A paid LWC utility library for compound field normalization is technically buildable (Claude can help draft Apex/JS code and documentation), but the market is too narrow and the support burden too high for an autonomous product: every Salesforce org has a unique data model, so customers would need custom help rather than a generic tool. If Youval wanted to probe this space, the right low-cost test is publishing a detailed free article (with a 'hire me for Salesforce consulting' CTA) rather than building a product \u2014 but that is a content strategy, not a factory-built autonomous service. Recommend drop and re-evaluate only if multiple corroborating signals appear across different Salesforce pain points pointing to a broader workflow automation gap.",
+  "notes": "Total 5.0 is below min_total_to_validate (5.5). Market is too narrow and single-signal. high_touch_support penalty applied.",
+  "scored_at": "2026-07-26T08:53:42+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

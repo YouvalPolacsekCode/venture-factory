@@ -1,0 +1,27 @@
+{
+  "id": "01KYEFNF3RDSRFN6K1C9W8BVRD",
+  "discovered_at": "2026-07-26T08:51:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439693/lwc-wiregetrecord-breaks-when-compound-address-field-included",
+    "snippet": "I'm using the wire-service to retrieve data from a custom object. It all works well until I include an address field. I've seen it detailed that each individual field within the compound field needs to be specified. For my custom field specifying the individual fields does not work. import ADDRESS_CITY from '@salesforce/schema/MyObject__c.Address__City__s'; with ADDRESS_CITY then included in @wire(getRecord...)."
+  },
+  "problem_statement": "Salesforce developers building Lightning Web Components are blocked by undocumented and inconsistent behavior of compound address fields in the wire service, with no reliable workaround available through official documentation.",
+  "target_segment": "Salesforce developers and consultants at companies that have invested in custom LWC development on the Salesforce platform.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "lwc",
+    "lightning-web-components",
+    "wire-service",
+    "compound-fields",
+    "address-field",
+    "crm-development",
+    "salesforce-consulting",
+    "apex",
+    "platform-bugs"
+  ],
+  "notes": "Single signal but in a high-value professional context \u2014 Salesforce developers are paid employees or consultants billing by the hour; any blocker translates directly to client cost. Opportunity: a Salesforce LWC utility library or diagnostic tool that normalizes compound field access. Buyer: Salesforce consulting firms or ISVs who repeatedly hit platform edge cases.",
+  "status": "candidate"
+}

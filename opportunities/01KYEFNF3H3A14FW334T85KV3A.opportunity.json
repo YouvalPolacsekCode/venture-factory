@@ -1,0 +1,27 @@
+{
+  "id": "01KYEFNF3H3A14FW334T85KV3A",
+  "discovered_at": "2026-07-26T08:51:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199550/compute-engine-vm-instance-fails-to-start",
+    "snippet": "Google is blocking support options and closing tickets on request. Failed to start VM instance on (machine type) current unavailable on (zone). We switched Zones, switched machine types, but continue to get this error. I wrote a support ticket. They closed it with no response and then closed down my options to file a ticket or call support."
+  },
+  "problem_statement": "Businesses running workloads on Google Cloud Compute Engine face VM availability failures with no actionable support path \u2014 Google closes tickets without resolution and removes further escalation options, leaving paying customers stuck.",
+  "target_segment": "Small-to-mid-size engineering teams and startups that run production workloads on Google Cloud Platform and lack enterprise support contracts.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "cloud-support",
+    "gcp",
+    "google-cloud",
+    "vm-availability",
+    "compute-engine",
+    "cloud-reliability",
+    "support-escalation",
+    "infrastructure",
+    "devops",
+    "cloud-vendor"
+  ],
+  "notes": "Poster is a paying GCP customer experiencing a production-blocking failure with no support recourse \u2014 high frustration, clear budget (they pay for GCP). Opportunity: a third-party GCP incident monitoring and escalation service, or a multi-cloud failover broker that triggers automatically when a zone/machine type becomes unavailable. Buyer willingness-to-pay implied by production dependency on paid cloud.",
+  "status": "candidate"
+}

@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-26T05:53:47+00:00",
-    "idt": "2026-07-26T08:53:47+03:00"
+    "utc": "2026-07-27T06:20:04+00:00",
+    "idt": "2026-07-27T09:20:04+03:00"
   },
   "funnel": {
-    "candidates": 157,
-    "scored": 157,
+    "candidates": 160,
+    "scored": 160,
     "validated": 18,
     "build_decisions": {
       "defer_1_week": 16,
@@ -606,6 +606,35 @@
     },
     {
       "topics": [
+        "dns",
+        "powerdns",
+        "zone-transfer"
+      ],
+      "id": "01KYH3JCTC976FKMFZQ8P05KJ7",
+      "problem_statement": "DNS administrators scaling PowerDNS to multiple secondaries have no built-in bulk zone transfer mechanism — every workaround requires manual per-zone handling, creating operational toil proportional to zone count.",
+      "target_segment": "Sysadmins and DevOps engineers at SMBs or hosting providers managing PowerDNS with 50+ zones",
+      "total": 6.0,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is specific and nameable — sysadmins and DevOps engineers at DNS-heavy SMBs or hosting providers — and they have demonstrated budget authority for infrastructure tooling that saves operational time; willingness to pay clears the gate. The build is plausible: a Claude-backed script generator or managed bulk-sync microservice (Claude generates the PowerDNS API calls, a simple web UI collects credentials and zone lists, Stripe handles a one-time or annual license) is within factory reach…",
+      "solution_plan": "The micro-service is a PowerDNS Bulk Zone Sync tool — a hosted script or lightweight web app that automates transferring all zones from a primary to one or more new secondaries in a single operation, replacing the painful one-zone-at-a-time manual process. BUILD: The factory creates a Claude-powered script generator (user inputs their PowerDNS API endpoint and credentials via a secure intake form; Claude generates and validates the bulk axfr/notify configuration or API calls); a simple landing page explains the tool; a Stripe payment link gates download/access at a one-time price (~$49–$149) or an annual subscription for the hosted version.…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 7,
+        "Will pay": 6,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199553/how-to-add-a-new-secondary-powerdns-server-and-transfer-all-existing-zones-from",
+      "discovered_at": "2026-07-27T09:18:05+03:00"
+    },
+    {
+      "topics": [
         "indie-hacker",
         "portfolio-apps",
         "micro-saas"
@@ -723,51 +752,15 @@
       "source_type": "forum",
       "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
       "discovered_at": "2026-06-04T19:55:15+03:00"
-    },
-    {
-      "topics": [
-        "ai-coding-agents",
-        "llm-evaluation",
-        "developer-productivity"
-      ],
-      "id": "01KWXMPWX4RPDZ0BMAVNFSGBN9",
-      "problem_statement": "Engineering teams paying for AI coding agents (Claude Code, Codex) cannot measure real-world session-level performance — existing benchmarks only test one-shot tasks in clean harnesses, leaving teams blind to actual cost and quality in messy multi-step work sessions.",
-      "target_segment": "Engineering managers and platform/tooling engineers at software companies using paid AI coding agent subscriptions (Claude Code, GitHub Copilot, Codex).",
-      "total": 5.8,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is real and nameable — engineering managers and platform engineers at companies already paying $20–100+/seat/month for Claude Code or Codex, giving them a clear budget and a ROI pressure to justify spend. However, the core deliverable (multi-session replay, cost attribution, quality scoring across messy real workflows) requires non-trivial instrumentation: capturing session telemetry from Claude Code or Codex APIs, aggregating across engineers, and producing comparable metrics — this…",
-      "solution_plan": "The micro-service is a 'real-session AI coding ROI report' — a recurring report card showing engineering teams their actual Claude Code / Codex cost, velocity, and quality trends across real messy sessions, not toy benchmarks. To validate without building: the factory drafts a one-page PDF sample report and a 5-question intake survey (team size, tools used, biggest cost concern), posts the Typeform link to HN, r/ExperiencedDevs, and a few engineering Slack communities, and offers the first 5 teams a free manual version in exchange for a $49/month commitment. Outreach (DMs to HN commenters on AI-coding threads, cold emails to eng managers at…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 5,
-        "Will pay": 6,
-        "Buildable": 5,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48810964",
-      "discovered_at": "2026-07-07T09:37:08+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1966,
-    "last_7_days_usd": 1.5362,
-    "all_time_usd": 11.4007,
+    "today_usd": 0.1848,
+    "last_7_days_usd": 1.6145,
+    "all_time_usd": 11.5855,
     "by_day": [
-      {
-        "date": "2026-07-20",
-        "usd": 0.1065
-      },
       {
         "date": "2026-07-21",
         "usd": 0.174
@@ -791,24 +784,28 @@
       {
         "date": "2026-07-26",
         "usd": 0.1966
+      },
+      {
+        "date": "2026-07-27",
+        "usd": 0.1848
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.564
+        "usd": 0.572
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3971
+        "usd": 0.4119
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.2989
       },
       {
         "agent": "build_decisions",
         "usd": 0.2985
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.2434
       },
       {
         "agent": "daily_summary",
@@ -817,41 +814,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-20",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-21",
       "agents": {
@@ -1061,12 +1023,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-27",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-26.md",
-    "date": "2026-07-26",
-    "text": "# Daily Summary — 2026-07-26 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 157 |\n| Opportunities validated past threshold | 36 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently deployed.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues pain-signal sweeps across social and B2B channels.\n2. `opportunity_scoring` processes any new candidate opportunities.\n3. `pain_validation` validates high-scoring candidates from today's batch.\n4. `build_decisions` reviews validated opportunities for experiment launch readiness.\n5. `cost_gain` (weekly) prepares cost/gain analysis for Sunday report.\n\n## Operator action items\n\nNone — process is running cleanly. Morning agents (`market_radar`, `opportunity_scoring`, `pain_validation`) completed successfully. No decisions waiting; review the 157 candidate opportunities and 36 validated verdicts as the week progresses.",
+    "file": "reports/daily/2026-07-27.md",
+    "date": "2026-07-27",
+    "text": "# Daily Summary — 2026-07-27 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 160 |\n| Opportunities validated past threshold | 36 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS and vertical forums.\n2. `opportunity_scoring` processes any new candidate opportunities queued overnight.\n3. `pain_validation` runs targeted validation probes on top-scoring candidates.\n4. `build_decisions` evaluates validation results and recommends experiments to launch.\n5. `cost_gain` computes weekly ROI ratios for the Monday operator review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

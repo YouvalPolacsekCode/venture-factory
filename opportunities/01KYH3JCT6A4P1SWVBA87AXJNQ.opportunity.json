@@ -1,0 +1,25 @@
+{
+  "id": "01KYH3JCT6A4P1SWVBA87AXJNQ",
+  "discovered_at": "2026-07-27T09:18:05+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/arqamwd/logging-workouts-is-solved-im-building-what-comes-after-36cc",
+    "snippet": "Every workout tracker I've tried has the same limitation: it records what you did, but it doesn't... [score: 28, 10 comments, tags: buildinpublic, ai, fitness, startup]"
+  },
+  "problem_statement": "Existing workout tracking apps record exercise history but fail to provide actionable coaching intelligence \u2014 users want adaptive programming and insights, not just a log, and are paying for apps that don't deliver this.",
+  "target_segment": "Fitness enthusiasts and intermediate-to-advanced gym-goers who already pay for workout tracking apps (e.g., Strong, Hevy, Fitbod) but want AI-driven adaptive programming",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "fitness",
+    "workout-tracker",
+    "ai-coaching",
+    "adaptive-programming",
+    "health-tech",
+    "saas",
+    "mobile-app",
+    "personal-training"
+  ],
+  "notes": "Builder is actively building in this space (28 upvotes, 10 comments on dev.to indicates real audience interest). The framing 'logging is solved' implies the next problem is intelligence/coaching. Target users already pay $5\u201315/month for existing trackers, indicating willingness to pay. Competing products (Fitbod at ~$80/yr, Ladder, Future at $200/mo) confirm paid market exists. A solo operator could position as a smarter alternative to Fitbod.",
+  "status": "candidate"
+}

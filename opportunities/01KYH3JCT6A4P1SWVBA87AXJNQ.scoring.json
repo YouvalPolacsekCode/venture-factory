@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KYH3JCT6A4P1SWVBA87AXJNQ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Adaptive coaching that is genuinely useful requires per-user program generation, ongoing progress review, and feedback loops that cannot be fully automated without significant per-customer Claude involvement \u2014 and edge cases (injury, plateau, form issues) push toward human-judgement support."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Fitness coaching users expect responsive, personalized answers to questions about their programming; automated support alone will generate churn and complaints."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The market is confirmed real \u2014 Fitbod, Ladder, and Future collectively prove that intermediate gym-goers pay $80\u2013$2,400/year for adaptive programming, so willingness to pay is genuine. The buyer (an individual fitness enthusiast, not a business) is nameable but is a consumer, not a B2B role with a budget line, which limits price ceiling and increases churn risk. The fatal constraint is operational autonomy: delivering coaching that actually retains users requires per-user adaptive programming, ongoing feedback interpretation, and support that goes well beyond what a fully automated Claude pipeline can handle reliably \u2014 this is closer to a done-for-you service than a self-serve SaaS.",
+  "solution_plan": "The factory cannot realistically deliver a competitive AI coaching product hands-off. Truly adaptive programming (adjusting sets, reps, periodization based on logged performance week over week) requires persistent user state, a mobile or web app to capture workout logs, and per-user Claude analysis runs that must be reviewed for safety and quality. While Claude can generate a workout plan from a form submission, turning that into a retained subscription product that users pay $10\u2013$15/month for ongoing requires app infrastructure and support capacity beyond a landing page + Stripe. This would require a technical co-founder or a mobile app developer to ship properly.",
+  "notes": "operational_autonomy score 4 fails build gate (floor 7). buildability_with_ai score 5 is on the border of the floor (6) but the operational gap is the deciding factor. Consumer fitness app in a crowded, mobile-first market is not the right fit for a factory-only build.",
+  "scored_at": "2026-07-27T09:19:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

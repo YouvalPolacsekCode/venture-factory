@@ -1,0 +1,25 @@
+{
+  "id": "01KYH3JCSZJZM9G2P7XNMCNN8N",
+  "discovered_at": "2026-07-27T09:18:05+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49064775",
+    "snippet": "Hey HN, I built PlainLink around a simple idea: the clipboard is a better place to clean tracking links than the browser. Links get copied from browsers, Messages, Slack, email, terminals, and native apps. A browser extension only sees one part of that. PlainLink watches the macOS clipboard and removes known tracking parameters before the URL is pasted anywhere else. The menu bar app is native Swift/AppKit, while the cleaning engine, clipboard watcher, installer, diagnostics, and restor..."
+  },
+  "problem_statement": "Knowledge workers and privacy-conscious professionals waste time manually stripping tracking parameters from URLs copied across browsers, Slack, email, and terminals \u2014 browser extensions only cover part of the workflow.",
+  "target_segment": "Mac-using knowledge workers, developers, and privacy-conscious professionals who share links frequently across multiple apps",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "url-cleaning",
+    "tracking-parameters",
+    "privacy",
+    "clipboard",
+    "macos",
+    "productivity",
+    "link-sharing",
+    "developer-tools"
+  ],
+  "notes": "Builder launched a native macOS app solving this. Implies sufficient frustration to build a product. Buyer signal is moderate \u2014 privacy tools often face 'should be free' resistance, but professional/team context (Slack, work email) suggests willingness to pay for a polished tool. Solo operator could productize as a low-cost utility app on the Mac App Store.",
+  "status": "candidate"
+}

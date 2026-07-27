@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYH3JCSZJZM9G2P7XNMCNN8N",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 7,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real but mild \u2014 tracking parameters are a cosmetic annoyance for most users, not a workflow blocker that costs time or money. Privacy-tool buyers skew strongly toward free/open-source solutions (ClearURLs, uBlock, browser extensions), and there's no clear evidence that individual users or businesses budget for a paid clipboard cleaner; willingness to pay is the critical weakness. More importantly, the product is a native macOS app (Swift/AppKit), which sits outside what a Claude-based factory can build without a developer \u2014 the buildability score reflects this hard constraint.",
+  "solution_plan": "This is not buildable by the factory as described. The existing product is a native Swift/AppKit macOS app \u2014 the factory cannot write, compile, or ship native Swift code. Even reframing it as a web-based link-cleaning API or browser extension runs into the same gap: the core clipboard-watching mechanic requires native OS integration that goes beyond Claude + a landing page + Stripe. A solo non-technical operator using this factory cannot realistically build or maintain this. If Youval were willing to license or white-label the existing open-source PlainLink engine, there might be a narrow path \u2014 but that is a partnership play, not a build play.",
+  "notes": "buildability_with_ai fails the build gate (score 3 < floor 6). buyer_clarity also fails (score 4 < floor 6). willingness_to_pay fails (score 3 < floor 5). Product requires native macOS app development \u2014 outside factory tooling.",
+  "scored_at": "2026-07-27T09:19:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYH3JCTC976FKMFZQ8P05KJ7",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is specific and nameable \u2014 sysadmins and DevOps engineers at DNS-heavy SMBs or hosting providers \u2014 and they have demonstrated budget authority for infrastructure tooling that saves operational time; willingness to pay clears the gate. The build is plausible: a Claude-backed script generator or managed bulk-sync microservice (Claude generates the PowerDNS API calls, a simple web UI collects credentials and zone lists, Stripe handles a one-time or annual license) is within factory reach. The score sits at 6.0, which crosses the validate threshold and technically meets the build total floor (6.5 not quite reached), so the right move is to validate with outreach to sysadmin communities (ServerFault, r/sysadmin, PowerDNS forums) before committing to build.",
+  "solution_plan": "The micro-service is a PowerDNS Bulk Zone Sync tool \u2014 a hosted script or lightweight web app that automates transferring all zones from a primary to one or more new secondaries in a single operation, replacing the painful one-zone-at-a-time manual process. BUILD: The factory creates a Claude-powered script generator (user inputs their PowerDNS API endpoint and credentials via a secure intake form; Claude generates and validates the bulk axfr/notify configuration or API calls); a simple landing page explains the tool; a Stripe payment link gates download/access at a one-time price (~$49\u2013$149) or an annual subscription for the hosted version. SELL: The factory drafts targeted posts for r/sysadmin, the PowerDNS mailing list, and replies to open ServerFault threads like the source question; all outreach goes to the operator for approval before sending. MAINTAIN: For a script/download model, delivery is fully automated post-payment; for a hosted version, Claude handles support tickets via email with templated responses; billing runs through Stripe. The operator's only recurring touch is approving outreach batches and reviewing any edge-case support tickets flagged by Claude. CAUTION: Market size is narrow \u2014 this is a niche sysadmin tool, not a broad SaaS \u2014 so revenue ceiling is low; validate demand before investing build time.",
+  "notes": "All build gates met: operational_autonomy 7 (meets floor), buildability_with_ai 7 (meets floor), buyer_clarity 7 (meets floor), willingness_to_pay 6 (meets floor). weighted_total 6.0 is below min_total_to_build (6.5), so stage is validate on total threshold, not gate failure. Single data point source warrants validation before build.",
+  "scored_at": "2026-07-27T09:19:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

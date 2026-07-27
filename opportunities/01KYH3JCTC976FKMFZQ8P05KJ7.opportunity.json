@@ -1,0 +1,25 @@
+{
+  "id": "01KYH3JCTC976FKMFZQ8P05KJ7",
+  "discovered_at": "2026-07-27T09:18:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199553/how-to-add-a-new-secondary-powerdns-server-and-transfer-all-existing-zones-from",
+    "snippet": "I had a PowerDNS setup with one primary and one secondary. I added another secondary for redundancy, but can't find a proper way to get the new secondary to synchronize and get all existing zones from the primary. Every solution I found needs you to handle it one zone at a time."
+  },
+  "problem_statement": "DNS administrators scaling PowerDNS to multiple secondaries have no built-in bulk zone transfer mechanism \u2014 every workaround requires manual per-zone handling, creating operational toil proportional to zone count.",
+  "target_segment": "Sysadmins and DevOps engineers at SMBs or hosting providers managing PowerDNS with 50+ zones",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "dns",
+    "powerdns",
+    "zone-transfer",
+    "devops",
+    "sysadmin",
+    "infrastructure",
+    "automation",
+    "server-management"
+  ],
+  "notes": "Single data point but represents a recurring class of operational pain at any DNS-heavy org. The 'one zone at a time' limitation implies hours of manual work at scale \u2014 clear time cost. Hosting providers and managed DNS resellers are natural paying buyers. A scripted bulk-sync tool or managed service could monetize via one-time sale or subscription. Signal strength kept at 2 due to single source.",
+  "status": "candidate"
+}

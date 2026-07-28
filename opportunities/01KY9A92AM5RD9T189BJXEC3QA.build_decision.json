@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01KY9A92AM5RD9T189BJXEC3QA",
+  "decided_at": "2026-07-28T08:40:13+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_to_build": {
+      "total": 6.6,
+      "min": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates technically pass and the total (6.6) clears the 6.5 threshold, but the cost-to-gain ratio of 4.02 massively exceeds the kill threshold of 0.6 from cost_gain_model.yaml, and even the optimistic scenario (2.01) is over 3\u00d7 the kill line. The 90-day expected gain of $329 against a build cost of $768 plus run costs means this service would burn cash for months before break-even at 26 customers \u2014 with zero responsiveness signal yet collected. The competitive landscape (Uptime Robot, Better Uptime, dozens of DNS monitoring tools) is crowded, and the differentiation on 'DNS hijack detection specifically' is thin. Before committing a build slot, we need a responsiveness test: cold outreach to 50-100 SMB IT admins to validate that this specific angle (not generic uptime) resonates and that the $29/mo price point lands. If the responsiveness test returns \u22658% qualified reply rate within one week, revisit for build_now.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn DM to SMB IT admins and r/sysadmin post"
+}

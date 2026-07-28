@@ -1,0 +1,27 @@
+{
+  "id": "01KYKKP7T90X60WSCZPY8S9RKW",
+  "discovered_at": "2026-07-28T08:38:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439704/3rd-party-integrations-that-demand-sys-admin-permissions-and-new-phishing-resist",
+    "snippet": "A few of our 3rd party integrations demand Sys Admin/broad permissions which is problematic due to the new phishing resistant MFA requirements. Not using the integration is not really an option and I don't believe I'm the only one in the same boat. We integrate with Docusign, for example. Support is saying the integration will break if we restrict permissions... I'm not a security specialist and my org does not have a Salesforce-specific one but I'm working on this in partnership with my IT dept."
+  },
+  "problem_statement": "Salesforce admins are forced to grant Sys Admin-level permissions to third-party integrations (e.g. Docusign) to keep them functional, but Salesforce's new phishing-resistant MFA requirements make this a compliance violation with no clear remediation path.",
+  "target_segment": "Salesforce admins and IT security teams at mid-market and enterprise companies running managed third-party integrations under tightening MFA compliance mandates.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "mfa",
+    "third-party-integration",
+    "compliance",
+    "docusign",
+    "permissions",
+    "security",
+    "sysadmin",
+    "phishing-resistant-mfa",
+    "enterprise-saas"
+  ],
+  "notes": "Buyer is a business (Salesforce org with active integrations). The compliance deadline is externally imposed by Salesforce, creating urgency. Poster explicitly says 'not using the integration is not really an option,' indicating willingness to pay for a solution. Potential product: a least-privilege permission audit/remediation service or a middleware layer that proxies integrations without requiring Sys Admin grants. Signal is a single post but the compliance mandate affects a large class of orgs.",
+  "status": "candidate"
+}

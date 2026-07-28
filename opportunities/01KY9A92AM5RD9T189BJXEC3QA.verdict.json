@@ -1,0 +1,17 @@
+{
+  "opportunity_id": "01KY9A92AM5RD9T189BJXEC3QA",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "DNS hijack and HTTP-redirect injection attacks on SMBs are a documented, recurring threat class with confirmed real-world victims, multiple paid competitors (indicating willingness to pay), and a clear buyer (IT admin or SMB owner) who faces severe reputational and liability consequences. The pain is high-severity even at low frequency because a single undetected incident can redirect customers to phishing pages for hours before discovery. Adjacent SaaS markets (uptime monitoring, DNS monitoring) show SMBs already pay $15\u2013$50/month for comparable proactive alerting.",
+  "sources": [
+    "https://serverfault.com/questions/1199547/i-think-my-company-has-suffered-from-a-dns-hijack-spoof-or-something",
+    "https://www.reddit.com/r/sysadmin/search/?q=dns+hijack+small+business",
+    "https://uptimerobot.com/pricing/",
+    "https://betteruptime.com/pricing",
+    "https://dnsfilter.com/pricing",
+    "https://www.bleepingcomputer.com/news/security/dns-hijacking/",
+    "https://www.ic3.gov/Media/Y2019/PSA190527"
+  ],
+  "evaluated_at": "2026-07-28T08:39:17+03:00"
+}

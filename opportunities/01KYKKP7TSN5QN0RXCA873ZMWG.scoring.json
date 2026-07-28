@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KYKKP7TSN5QN0RXCA873ZMWG",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 2
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Any product that helps individuals in OFAC-sanctioned countries (Iran, Russia, Belarus) access international payment rails or bypass hiring platform restrictions is directly in the path of US Treasury OFAC sanctions and equivalent EU/UK regimes. Operating this as a service \u2014 even with good intentions \u2014 exposes the operator to severe legal liability. This is a hard disqualifier."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Sanctions compliance is a heavily regulated domain; building tooling here requires legal expertise and ongoing regulatory monitoring far beyond a solo operator's capacity."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuine and severe \u2014 blocked income for skilled professionals \u2014 but any service that facilitates cross-border payments or platform access for individuals in OFAC-sanctioned countries is legally untenable for a solo operator. The `not_legitimate_or_grey` penalty alone would push the total to -1.6 before clamping to 0.0. The opportunity was correctly flagged in its own notes as requiring regulatory feasibility assessment; that assessment result is: do not build. Drop immediately.",
+  "solution_plan": "This opportunity must be dropped without further investigation. Helping individuals in sanctions-affected countries access international payment rails or bypass hiring platform restrictions \u2014 regardless of the humanitarian merit \u2014 places the operator in direct conflict with OFAC (US Treasury), EU sanctions regulations, and equivalent UK regimes. Penalties for violations include multi-million-dollar fines and criminal prosecution for individuals. No product architecture, Claude prompt, or legal wrapper available to a solo non-technical operator makes this safe to operate. Do not validate, do not prototype, do not contact potential users.",
+  "notes": "Hard disqualifier: not_legitimate_or_grey penalty applied. OFAC sanctions exposure makes this legally untenable for a solo operator. All build gates also fail: operational_autonomy (2 < 7), buildability_with_ai (2 < 6), buyer_clarity (4 < 6).",
+  "scored_at": "2026-07-28T08:39:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

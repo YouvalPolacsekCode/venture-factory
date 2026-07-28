@@ -1,0 +1,27 @@
+{
+  "id": "01KYKKP7TSN5QN0RXCA873ZMWG",
+  "discovered_at": "2026-07-28T08:38:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://freelancing.stackexchange.com/questions/11049/how-can-software-engineers-in-iran-find-remote-jobs-while-dealing-with-sanctions",
+    "snippet": "I am an IT and cybersecurity professional from Iran, and I would like to know about the possibility of getting remote jobs from international companies. Because of international sanctions, many services such as payment systems, online platforms, and some companies do not officially support users from Iran. This makes me worried about whether it is possible to work remotely for foreign companies."
+  },
+  "problem_statement": "Skilled software and cybersecurity professionals in sanctions-affected countries cannot access international payment rails, hiring platforms, or remote work marketplaces, blocking them from earning in global markets despite in-demand skills.",
+  "target_segment": "Freelance software engineers and IT professionals based in sanctions-affected countries (Iran, Russia, Belarus, etc.) seeking remote work with international clients.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "sanctions",
+    "freelance",
+    "remote-work",
+    "payment-rails",
+    "cross-border-payments",
+    "developer-hiring",
+    "compliance",
+    "iran",
+    "international-freelancing",
+    "financial-access"
+  ],
+  "notes": "Real recurring pain with economic stakes \u2014 the poster is a professional trying to earn income, not a hobbyist. However, the legal/compliance complexity of operating in this space is a significant barrier for any product builder; any solution must navigate OFAC and similar regulations carefully. Signal strength kept low (2) due to single post and the operational/legal risk to a solo operator building here. Included for awareness; Pain Validation should assess regulatory feasibility before proceeding.",
+  "status": "candidate"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KYKKP7TJGXRZMQ7FXTW4N9ED",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Diagnosing and fixing a specific Windows Server update failure is deeply environment-specific \u2014 component store state, driver stack, virtualisation layer. No generalisable automated fix exists; each case needs manual investigation."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and recurring \u2014 monthly unpatched servers are a genuine security/compliance risk \u2014 but the buyer (an in-house sysadmin at an enterprise) typically does not pay for single-issue diagnostic tools; they file Microsoft support tickets. Willingness to pay is weak (4) because there is no existing paid substitute at a clear price point, and the buyer_clarity (5) is a named role but one that usually lacks direct purchasing authority for one-off tooling. More critically, every case of 0x800f0986 has a different root cause; a generalisable automated fix is not achievable, making `operational_autonomy` (4) and `buildability_with_ai` (4) both below build-gate floors. The human-fulfillment penalty reflects that real remediation requires hands-on triage per server.",
+  "solution_plan": "This opportunity is NOT viable for the factory model as described. The Windows Server 0x800f0986 error requires environment-specific forensic investigation per server \u2014 checking component store logs, driver signatures, virtualisation host configs \u2014 that cannot be packaged into a general automated delivery. A Claude-powered 'guided diagnostic wizard' (web form \u2192 Claude analysis \u2192 remediation script) is theoretically possible, but the output quality would be too variable to charge for, and sysadmins with this problem are used to free community support (ServerFault, Microsoft forums). Without a clear paid substitute and without autonomous delivery, this does not meet the factory model criteria. Drop.",
+  "notes": "Failing build gates: operational_autonomy (4 < 7), buildability_with_ai (4 < 6), buyer_clarity (5 < 6), willingness_to_pay (4 < 5). Weighted total of 4.5 also falls below the 5.5 validate threshold before penalties.",
+  "scored_at": "2026-07-28T08:39:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01KYKKP7TJGXRZMQ7FXTW4N9ED",
+  "discovered_at": "2026-07-28T08:38:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199562/windows-server-2019-cumulative-updates-fail-every-month-with-0x800f0986-dism-s",
+    "snippet": "Windows Server 2019 cumulative updates fail every month with 0x800f0986 (PSFX_E_APPLY_FORWARD_DELTA_FAILED) but DISM and SFC find no corruption - how do I find and fix the actual corrupt file? Every monthly cumulative update for several months has failed and rolled back... DISM /Online /Cleanup-Image /RestoreHealth and sfc /scannow complete with no integrity violations."
+  },
+  "problem_statement": "Windows Server 2019 sysadmins face recurring monthly cumulative update failures with error 0x800f0986 that standard Microsoft diagnostic tools (DISM, SFC) cannot detect or fix, leaving servers unpatched and exposed for months.",
+  "target_segment": "Windows Server sysadmins and IT ops teams managing Windows Server 2019 VMs, particularly those running SQL Server workloads in enterprise environments.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "windows-server",
+    "patch-management",
+    "cumulative-update",
+    "sysadmin",
+    "dism",
+    "windows-update",
+    "it-ops",
+    "server-maintenance",
+    "compliance",
+    "vulnerability-management"
+  ],
+  "notes": "Business context: SQL Server 2019 production VM, recurring monthly failure over several months. The pain is operational (unpatched servers = security/compliance risk) and time-intensive (manual investigation each cycle). A diagnostic or remediation tool that identifies the specific corrupt component behind 0x800f0986 when DISM/SFC fail would have clear enterprise buyer. Single post, so signal strength kept at 2; the pattern is likely widespread given the error code specificity.",
+  "status": "candidate"
+}

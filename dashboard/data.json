@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-07-27T06:20:04+00:00",
-    "idt": "2026-07-27T09:20:04+03:00"
+    "utc": "2026-07-28T05:40:18+00:00",
+    "idt": "2026-07-28T08:40:18+03:00"
   },
   "funnel": {
-    "candidates": 160,
-    "scored": 160,
-    "validated": 18,
+    "candidates": 163,
+    "scored": 163,
+    "validated": 19,
     "build_decisions": {
-      "defer_1_week": 16,
+      "defer_1_week": 17,
       "kill": 2
     },
     "build_now": 0,
@@ -214,7 +214,7 @@
         "Buildable": 7,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199547/i-think-my-company-has-suffered-from-a-dns-hijack-spoof-or-something",
       "discovered_at": "2026-07-24T08:41:24+03:00"
@@ -757,14 +757,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1848,
-    "last_7_days_usd": 1.6145,
-    "all_time_usd": 11.5855,
+    "today_usd": 0.3571,
+    "last_7_days_usd": 1.7976,
+    "all_time_usd": 11.9426,
     "by_day": [
-      {
-        "date": "2026-07-21",
-        "usd": 0.174
-      },
       {
         "date": "2026-07-22",
         "usd": 0.3677
@@ -788,24 +784,28 @@
       {
         "date": "2026-07-27",
         "usd": 0.1848
+      },
+      {
+        "date": "2026-07-28",
+        "usd": 0.3571
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.572
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.4119
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.2989
+        "usd": 0.5673
       },
       {
         "agent": "build_decisions",
-        "usd": 0.2985
+        "usd": 0.4532
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3837
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.3603
       },
       {
         "agent": "daily_summary",
@@ -814,41 +814,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-21",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-22",
       "agents": {
@@ -1058,12 +1023,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-28",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-27.md",
-    "date": "2026-07-27",
-    "text": "# Daily Summary — 2026-07-27 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 160 |\n| Opportunities validated past threshold | 36 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS and vertical forums.\n2. `opportunity_scoring` processes any new candidate opportunities queued overnight.\n3. `pain_validation` runs targeted validation probes on top-scoring candidates.\n4. `build_decisions` evaluates validation results and recommends experiments to launch.\n5. `cost_gain` computes weekly ROI ratios for the Monday operator review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-28.md",
+    "date": "2026-07-28",
+    "text": "# Daily Summary — 2026-07-28 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 163 |\n| Opportunities validated past threshold | 37 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes sourcing contact data for the 37 validated opportunities.\n2. `pain_validation` probes pain-signal strength on highest-scoring cohorts.\n3. `market_radar` scans emerging B2B verticals for new candidate pools.\n4. `build_decisions` evaluates which validated opportunities merit experiment builds.\n5. `cost_gain` runs weekly cost/revenue analysis on pipeline.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

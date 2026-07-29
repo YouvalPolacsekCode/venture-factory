@@ -1,0 +1,26 @@
+{
+  "id": "01KYP6BZ3HE7J9MSFGWY14QYZ3",
+  "discovered_at": "2026-07-29T08:43:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199571/why-does-sending-an-email-goes-to-spam-and-junk-folder",
+    "snippet": "This is a new domain and the emails are going to the junk and spam folder to Gmail, HotMail and outlook.barracudacentral.org. First I found my static IP address blacklisted (from my ISP) on spamhaus.org and barracudacentral.org. This was changed from the one I had. When I send an email to gmail I find this (Received: from proxy) and it goes to the spam folder. I don't actually have my own mail server it is outsourced to a hosting provider."
+  },
+  "problem_statement": "Small business and indie operators launching new domains find their transactional or outreach emails land in spam due to IP blacklisting and misconfigured mail headers, with no clear guided remediation path even when using outsourced hosting.",
+  "target_segment": "Solo operators, small business owners, and early-stage founders setting up email infrastructure for a new domain or product",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "spam-blacklist",
+    "new-domain",
+    "dkim",
+    "spf",
+    "dmarc",
+    "transactional-email",
+    "smtp-configuration",
+    "ip-reputation"
+  ],
+  "notes": "Operator is already paying for hosting and outsourced mail \u2014 has a commercial context. Email deliverability is a recurring, well-known paid category (tools like Mailgun, Postmark, MXToolbox exist) but guided setup/remediation for non-technical founders remains underserved. Moderate signal \u2014 single post but highly representative of a common repeating problem.",
+  "status": "candidate"
+}

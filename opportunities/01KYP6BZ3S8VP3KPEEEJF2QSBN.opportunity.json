@@ -1,0 +1,25 @@
+{
+  "id": "01KYP6BZ3S8VP3KPEEEJF2QSBN",
+  "discovered_at": "2026-07-29T08:43:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49093364",
+    "snippet": "I had two problems that kept nagging me. My SSH port was still exposed to the internet. I had no easy way to know if a service had crashed or how much CPU, RAM, or disk space my VPS was actually using and I didn't want to SSH into it to see what's happening every time."
+  },
+  "problem_statement": "Solo developers and indie operators running VPS-hosted services lack a simple, secure way to monitor service health and resource usage without exposing SSH to the internet or logging in manually each time.",
+  "target_segment": "Solo developers and indie hackers running self-hosted services or SaaS products on VPS instances",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vps-monitoring",
+    "server-health",
+    "ssh-security",
+    "self-hosted",
+    "uptime-monitoring",
+    "resource-monitoring",
+    "devops",
+    "indie-hacker"
+  ],
+  "notes": "Author spent a weekend solving this and wrote it up \u2014 signals real friction. Commercial context: running production services. Tools like Beszel, Tailscale are free/open-source but the gap is a polished, paid monitoring+security bundle for non-DevOps solo operators. Weak buyer signal on its own but representative of a segment that pays for tools like Plausible, Hetzner, etc.",
+  "status": "candidate"
+}

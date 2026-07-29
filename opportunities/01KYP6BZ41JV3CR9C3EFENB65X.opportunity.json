@@ -1,0 +1,26 @@
+{
+  "id": "01KYP6BZ41JV3CR9C3EFENB65X",
+  "discovered_at": "2026-07-29T08:43:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439706/server-side-validation-of-uploaded-files",
+    "snippet": "I wanted to harden server-side validation for file uploads in Apex, but I haven't found much articles or established patterns for this. Context: I have a REST endpoint that accepts a file name and the file's Blob data directly in the request body. This endpoint is exposed to guest users through an Experience Cloud site. This logic is part of a managed package, so I don't control the end customer's org configuration."
+  },
+  "problem_statement": "Salesforce ISV developers building managed packages with file upload endpoints exposed to guest users lack established patterns or tooling for server-side file validation and security hardening in Apex.",
+  "target_segment": "Salesforce ISV developers and AppExchange managed package authors building customer-facing Experience Cloud applications",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "file-upload-security",
+    "managed-package",
+    "experience-cloud",
+    "isv",
+    "appexchange",
+    "server-side-validation",
+    "owasp"
+  ],
+  "notes": "ISV/managed package context implies commercial product being sold on AppExchange \u2014 clear paying-builder context. Security hardening tooling or code templates for Salesforce devs is a niche but monetizable category (existing players: Salesforce Security Review consultants charging $5-20k). Single signal but domain-specific gap.",
+  "status": "candidate"
+}

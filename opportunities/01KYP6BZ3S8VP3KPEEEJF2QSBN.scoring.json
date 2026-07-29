@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYP6BZ3S8VP3KPEEEJF2QSBN",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [],
+  "total": 5.1,
+  "recommended_stage": "drop",
+  "rationale": "Solo developers running VPS instances are a real segment with genuine friction (SSH exposure, manual health checks) and they do pay for tools like Plausible or Hetzner backups, but buyer clarity is weak \u2014 this segment tends to adopt free/open-source solutions (Beszel, Uptime Kuma, Netdata) and has strong DIY instincts that depress willingness to pay for a managed wrapper. The total of 5.1 falls below the validate threshold of 5.5. Even if it cleared that bar, buyer_clarity at 5 would fail the build gate floor of 6.",
+  "solution_plan": "Not recommended to pursue. The segment \u2014 indie hackers and solo developers running VPS instances \u2014 skews heavily toward free open-source tooling and is unlikely to convert to a paid service at meaningful volume without a strong differentiator. The opportunity sits below the validate threshold, meaning even a lightweight probe is unlikely to return enough signal to justify building. If Youval has a strong personal affinity for this space, the minimum viable test would be a landing page describing a 'VPS Health Dashboard' service at $9/mo with a waitlist \u2014 but expectations for conversion should be low.",
+  "notes": "Total 5.1 is below min_total_to_validate (5.5). Additionally, buyer_clarity (5) would fail the build_gate floor (6) even if total improved. Drop recommended.",
+  "scored_at": "2026-07-29T08:44:55+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

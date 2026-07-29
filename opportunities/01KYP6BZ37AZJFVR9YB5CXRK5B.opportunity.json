@@ -1,0 +1,26 @@
+{
+  "id": "01KYP6BZ37AZJFVR9YB5CXRK5B",
+  "discovered_at": "2026-07-29T08:43:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49092716",
+    "snippet": "Question is specifically for GTM engineers and performance marketers. Curious if any agentic AI ad optimization tools have actually worked for you? I tried PMax on Google Ads and our sign ups increased but pipeline didn't move (most sign ups weren't relevant audience). I am evaluating Factors and Pixis. Curious what else should I look at?"
+  },
+  "problem_statement": "Performance marketers running paid acquisition are trying agentic AI ad optimization tools (PMax, Factors, Pixis) but struggling to find ones that actually improve pipeline quality rather than just increasing volume of low-intent signups.",
+  "target_segment": "GTM engineers and performance marketers at B2B SaaS companies spending on Google/Meta ads",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ad-optimization",
+    "agentic-ai",
+    "performance-marketing",
+    "gtm",
+    "google-ads",
+    "pipeline-quality",
+    "pmax",
+    "b2b-saas",
+    "paid-acquisition"
+  ],
+  "notes": "Buyer is explicitly evaluating paid tools (Factors ~$500-2k/mo, Pixis enterprise-tier). The pain is pipeline quality vs. volume \u2014 a differentiated positioning gap. Recent signal (2026-07-29). Single post but highly specific named-tool comparison implies active vendor evaluation budget.",
+  "status": "candidate"
+}

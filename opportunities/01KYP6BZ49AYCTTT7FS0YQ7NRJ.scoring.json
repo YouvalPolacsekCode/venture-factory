@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KYP6BZ49AYCTTT7FS0YQ7NRJ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Salesforce permission gap analysis for enterprise clients requires understanding each client's specific org configuration, security policies, and compliance requirements \u2014 this is inherently per-client consulting work that cannot be fully automated by Claude without hands-on access to each Salesforce org."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling governance/compliance tooling to enterprise Salesforce accounts reliably requires discovery calls and solution scoping; the consultant posting this is already working in a synchronous client-service model."
+    }
+  ],
+  "total": 2.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer \u2014 Salesforce consultants and enterprise admins \u2014 is identifiable and has budget, but the problem (granular permission gaps in Salesforce) is highly org-specific, Salesforce platform-dependent, and the kind of issue that gets resolved either by Salesforce's own roadmap or by paid consultants doing bespoke configuration work. Delivering a genuinely useful automated solution would require per-org org access and nuanced configuration judgment, making this a consulting engagement, not an autonomous micro-service. The total drops to 2.5 after penalties, well below any threshold.",
+  "solution_plan": "Not recommended to pursue as an autonomous factory service. The problem requires per-client Salesforce org access to diagnose and remediate permission gaps \u2014 there is no standardized deliverable Claude can generate that would be useful without knowing each client's specific configuration. This is fundamentally a consulting engagement that a Salesforce-certified admin or ISV consultant delivers in billable hours. A non-technical solo operator without Salesforce domain expertise (founder_fit=3) cannot build or sell into this space competitively.",
+  "notes": "Fails operational_autonomy_min (scored 4, floor is 7) and buildability_with_ai_min (scored 5, floor is 6). Total after penalties is 2.5, well below min_total_to_validate (5.5). Drop.",
+  "scored_at": "2026-07-29T08:44:55+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

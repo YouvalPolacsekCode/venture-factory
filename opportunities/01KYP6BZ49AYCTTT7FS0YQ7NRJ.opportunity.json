@@ -1,0 +1,25 @@
+{
+  "id": "01KYP6BZ49AYCTTT7FS0YQ7NRJ",
+  "discovered_at": "2026-07-29T08:43:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439701/granular-read-only-permission-to-query-installedsubscriberpackage",
+    "snippet": "My client is trying to figure out the least amount of permissions they can ask the service account to have to be able to run read-only query for InstalledSubscriberPackage. Looks like it is 'Download AppExchange Packages', which grants ALOT of permissions like installation, uninstallations and others which contradicts the Salesforce best practice of requiring the least privilege permissions for AppExchange products."
+  },
+  "problem_statement": "Salesforce integration developers and admins cannot grant granular read-only access to package inventory data without also granting dangerous installation/uninstallation permissions, violating least-privilege security principles required by enterprise clients.",
+  "target_segment": "Salesforce integration consultants, ISVs, and enterprise Salesforce admins managing multi-org or multi-tenant environments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "permissions",
+    "least-privilege",
+    "appexchange",
+    "enterprise-security",
+    "integration",
+    "service-account",
+    "salesforce-admin"
+  ],
+  "notes": "Posted by a consultant on behalf of a client \u2014 classic paid-services buyer context. Salesforce permission gaps are routinely solved by paid consultants or ISV tooling. Weak standalone signal but consistent with a category of Salesforce governance/compliance tooling that sells well at enterprise accounts.",
+  "status": "candidate"
+}

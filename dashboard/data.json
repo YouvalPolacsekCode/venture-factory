@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-28T05:40:18+00:00",
-    "idt": "2026-07-28T08:40:18+03:00"
+    "utc": "2026-07-29T05:45:01+00:00",
+    "idt": "2026-07-29T08:45:01+03:00"
   },
   "funnel": {
-    "candidates": 163,
-    "scored": 163,
+    "candidates": 168,
+    "scored": 168,
     "validated": 19,
     "build_decisions": {
       "defer_1_week": 17,
@@ -726,45 +726,43 @@
     },
     {
       "topics": [
-        "hiring",
-        "interviewing",
-        "startup-ops"
+        "salesforce",
+        "apex",
+        "file-upload-security"
       ],
-      "id": "01KT9RZ073K8W8W5PB5XW3KX20",
-      "problem_statement": "CTOs and managers at small companies are regularly thrown into unplanned interviews with no defined role, no job spec, and no structured process — leading to poor hiring decisions and wasted time for both sides.",
-      "target_segment": "First-time or non-HR hiring managers at startups and small companies (1–50 employees)",
-      "total": 5.8,
+      "id": "01KYP6BZ41JV3CR9C3EFENB65X",
+      "problem_statement": "Salesforce ISV developers building managed packages with file upload endpoints exposed to guest users lack established patterns or tooling for server-side file validation and security hardening in Apex.",
+      "target_segment": "Salesforce ISV developers and AppExchange managed package authors building customer-facing Experience Cloud applications",
+      "total": 5.9,
       "recommended_stage": "validate",
-      "rationale": "The buyer is a reasonably specific CTO or founder at a 1–50 person startup who has demonstrated willingness to pay for adjacent HR tools (Lever, Greenhouse, even Notion HR templates have paid tiers), and they are reachable via LinkedIn and startup communities. The service — generating a role definition, a structured interview scorecard, and a question bank from a short brief — is squarely in Claude's wheelhouse and could run largely autonomously once intake is wired. The deciding factor holding…",
-      "solution_plan": "This is an AI-powered interview kit generator: a hiring manager pastes a one-paragraph job description (or answers five questions on a form) and receives a role definition, a structured scorecard, and 15 interview questions tailored to the role. The factory builds it as a Claude prompt chain behind a simple intake form (Typeform or a static HTML page), a Stripe payment link ($19–39 one-time or $49/mo unlimited), and an email delivery step that sends the PDF kit within minutes. To sell, the factory drafts cold outreach to CTOs and Ops leads at seed/Series-A startups (sourced from LinkedIn or Crunchbase), and Youval approves each batch before…",
+      "rationale": "Salesforce ISV developers building AppExchange managed packages are a specific, named B2B buyer with real security review costs ($5–20k for Salesforce Security Review consultants) — willingness to pay and buyer clarity are both solid. Claude can generate an Apex file-validation code template or security checklist report with high buildability. However, the total (5.9) sits below the build threshold (6.5), and operational_autonomy at 6 just barely clears its gate floor — the niche is narrow enou…",
+      "solution_plan": "The micro-service is a Salesforce Apex File Upload Security Audit Pack: a Salesforce ISV developer submits their managed package context (endpoint type, user type, file types accepted) via a form, and Claude generates a tailored Apex code template with server-side validation logic, an OWASP-aligned security checklist, and a written security narrative ready to paste into a Salesforce Security Review submission. BUILD: A simple intake form + Claude prompt trained on Salesforce Apex security patterns + Stripe payment link at ~$149/report + automated file/email delivery — no coding by Youval. SELL: Reach Salesforce ISV developers via Salesforce…",
       "realistic": {
-        "verdict": "yes",
-        "weak": []
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
       },
       "scores": {
         "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 5,
-        "Buildable": 9,
-        "Pain": 6
+        "Runs alone": 6,
+        "Will pay": 7,
+        "Buildable": 6,
+        "Pain": 7
       },
-      "verdict": "validated",
+      "verdict": null,
       "source_type": "forum",
-      "source_url": "https://workplace.stackexchange.com/questions/203468/what-to-prepare-for-a-job-interview-that-im-going-conduct",
-      "discovered_at": "2026-06-04T19:55:15+03:00"
+      "source_url": "https://salesforce.stackexchange.com/questions/439706/server-side-validation-of-uploaded-files",
+      "discovered_at": "2026-07-29T08:43:12+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3571,
-    "last_7_days_usd": 1.7976,
-    "all_time_usd": 11.9426,
+    "today_usd": 0.2021,
+    "last_7_days_usd": 1.632,
+    "all_time_usd": 12.1447,
     "by_day": [
-      {
-        "date": "2026-07-22",
-        "usd": 0.3677
-      },
       {
         "date": "2026-07-23",
         "usd": 0.1603
@@ -788,67 +786,36 @@
       {
         "date": "2026-07-28",
         "usd": 0.3571
+      },
+      {
+        "date": "2026-07-29",
+        "usd": 0.2021
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5673
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4532
+        "usd": 0.5604
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3837
+        "usd": 0.3917
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3603
+        "usd": 0.343
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.3036
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0333
+        "usd": 0.0332
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-22",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-23",
       "agents": {
@@ -1058,12 +1025,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-29",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-28.md",
-    "date": "2026-07-28",
-    "text": "# Daily Summary — 2026-07-28 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 163 |\n| Opportunities validated past threshold | 37 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes sourcing contact data for the 37 validated opportunities.\n2. `pain_validation` probes pain-signal strength on highest-scoring cohorts.\n3. `market_radar` scans emerging B2B verticals for new candidate pools.\n4. `build_decisions` evaluates which validated opportunities merit experiment builds.\n5. `cost_gain` runs weekly cost/revenue analysis on pipeline.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-29.md",
+    "date": "2026-07-29",
+    "text": "# Daily Summary — 2026-07-29 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 168 |\n| Opportunities validated past threshold | 37 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stages. Market radar and opportunity scoring completed successfully; pain validation confirmed 37 candidates above threshold from yesterday's 168 surfaced opportunities.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. Market radar, opportunity scoring, and pain validation all succeeded; remaining agents (build_decisions, cost_gain, lead_research, product_design, responsiveness_test, service_builder) skipped as expected during discovery phase.\n\n## Tomorrow's auto-scheduled actions\n\n1. `build_decisions` evaluates the 37 validated opportunities to identify next build candidates.\n2. `cost_gain` runs preliminary ROI projections on candidates that clear build_decisions review.\n3. `lead_research` enriches contact lists for top-ranked candidates.\n4. `opportunity_scoring` re-sweeps market radar feeds for new signals.\n5. `pain_validation` probes the next batch of candidates from the queue.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

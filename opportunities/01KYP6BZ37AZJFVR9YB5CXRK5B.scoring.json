@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KYP6BZ37AZJFVR9YB5CXRK5B",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Ad optimization that actually moves pipeline quality \u2014 not just volume \u2014 requires ongoing human analysis of campaign structure, audience targeting decisions, and creative iteration. There's no plug-and-play Claude prompt that replaces a skilled performance marketer's judgment loop."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling to GTM engineers and performance marketers at B2B SaaS companies typically requires a demo, scoping conversation, or at minimum a discovery call to establish trust and understand their ad account structure before delivering anything useful."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and has budget \u2014 GTM engineers at B2B SaaS companies are actively evaluating tools at $500\u20132k/mo. However, the core problem (pipeline quality vs. volume) requires nuanced, per-campaign human judgment that Claude cannot reliably automate end-to-end; the delivery model is inherently consulting-shaped. The combination of low buildability-as-an-autonomous-product and heavy human fulfillment requirement drops this well below viability as a factory-run micro-service.",
+  "solution_plan": "This opportunity does not suit a solo non-technical operator running an autonomous Claude factory. Building a genuinely useful ad pipeline-quality optimizer requires direct access to each client's Google/Meta ad account, deep campaign analysis, creative strategy decisions, and ongoing iteration \u2014 all of which require human judgment per customer. Even if Claude could write the analysis, the operator would be doing per-client consulting work for every engagement. This is a human services business disguised as a tooling opportunity. Pass.",
+  "notes": "Fails operational_autonomy_min (scored 3, floor is 7) and buildability_with_ai_min (scored 4, floor is 6). Even without penalties the build gates would cap this at validate. With penalties the total drops to 3.1, which is below the validate threshold.",
+  "scored_at": "2026-07-29T08:44:55+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

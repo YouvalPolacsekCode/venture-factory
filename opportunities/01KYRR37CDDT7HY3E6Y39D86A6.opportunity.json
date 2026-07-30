@@ -1,0 +1,24 @@
+{
+  "id": "01KYRR37CDDT7HY3E6Y39D86A6",
+  "discovered_at": "2026-07-30T08:31:29+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49096457",
+    "snippet": "I'd gladly pay $17 a year \u2014 hell ten times that \u2014 to not see ads on Instagram. However, the fact that I can and would pay for that means that Meta can't afford to lose me, because it kills the value of their audience."
+  },
+  "problem_statement": "Professionals and high-income users would willingly pay a meaningful subscription fee to use major social platforms without advertising, but platforms have no incentive to offer this, leaving a persistent unmet preference for ad-free social consumption.",
+  "target_segment": "High-income professionals and knowledge workers who use Instagram, Facebook, or similar ad-supported platforms daily and have expressed explicit willingness to pay for an ad-free experience.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ad-free",
+    "social-media",
+    "subscription",
+    "attention-economy",
+    "instagram",
+    "privacy",
+    "content-consumption"
+  ],
+  "notes": "Commenter explicitly states willingness to pay $170/year. The structural barrier is that Meta cannot offer this without cannibalizing ad revenue \u2014 not a product gap a solo operator can directly fill. However, adjacent opportunities exist: browser-based ad-blocking subscription services, curated ad-free content newsletters, or social feed management tools that reduce ad exposure. Signal strength kept low because no direct product opportunity is available \u2014 this is a preference signal, not an actionable gap for a solo builder.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYRR37C4VZPTA1F4C3G8N6Q3",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [],
+  "total": 6.2,
+  "recommended_stage": "validate",
+  "rationale": "Small business owners with a broken email deliverability setup face real, immediate revenue loss \u2014 a legitimately severe pain with a named, reachable buyer (new-domain operators, solo founders, small agency owners) who already pay for hosting and tools. Willingness to pay is backed by the existence of paid competitors (MXToolbox Pro, GlockApps, Postmark's deliverability tools at $10\u2013$99/mo). However, the operational_autonomy score sits at 6, which just misses the build_gate floor of 7: the core deliverability audit can be automated, but fixing the underlying issues (DNS record edits, hosting provider coordination, DMARC policy tuning) often requires back-and-forth guidance that edges toward human-in-the-loop support, especially for non-technical users. Stage is therefore capped at validate \u2014 confirm that an automated diagnosis + fix-checklist flow truly resolves cases without per-customer hand-holding.",
+  "solution_plan": "This is an automated email deliverability audit and fix-guidance service: a user enters their domain, the service checks SPF/DKIM/DMARC records, blacklist status, and mail header patterns via APIs (MXToolbox, Google Postmaster, Spamhaus), and delivers a plain-language report with a prioritised fix checklist \u2014 no coding by Youval. BUILD: the factory sets up a Claude-powered diagnosis prompt that parses DNS lookup results and blacklist API responses into a structured report, pairs it with a simple intake form (domain name + email), a Stripe payment link (~$29 one-time or $19/mo), and an email delivery step \u2014 all wired together in this repo; Youval approves the outreach batch, nothing else. SELL: target new-domain owners posting in ServerFault, Reddit r/selfhosted, r/smallbusiness, and indie-founder Slack groups; the factory drafts outreach replies and posts, Youval approves before sending. MAINTAIN: new submissions run automatically \u2014 Claude fetches DNS/blacklist data, generates the report, emails it to the customer, and logs the transaction; Stripe handles billing; the only recurring human touch is approving outreach batches and reviewing flagged edge cases monthly. CAVEAT: if a significant share of customers need hands-on DNS editing help beyond the report, support load will require either a more prescriptive guided flow or a scope narrowing \u2014 validate this before building.",
+  "notes": "build_gate miss: operational_autonomy scored 6, below the required floor of 7. Validate by running 5\u201310 manual audits to confirm the automated report resolves the issue without follow-up support in >80% of cases.",
+  "scored_at": "2026-07-30T08:33:05+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

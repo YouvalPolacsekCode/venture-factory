@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-07-29T05:45:01+00:00",
-    "idt": "2026-07-29T08:45:01+03:00"
+    "utc": "2026-07-30T05:33:10+00:00",
+    "idt": "2026-07-30T08:33:10+03:00"
   },
   "funnel": {
-    "candidates": 168,
-    "scored": 168,
+    "candidates": 170,
+    "scored": 170,
     "validated": 19,
     "build_decisions": {
       "defer_1_week": 17,
@@ -514,6 +514,37 @@
     {
       "topics": [
         "email-deliverability",
+        "spam-filter",
+        "dns-configuration"
+      ],
+      "id": "01KYRR37C4VZPTA1F4C3G8N6Q3",
+      "problem_statement": "Small business operators launching a new domain find their transactional and outreach email consistently landing in spam due to IP blacklists, misconfigured mail headers, and missing authentication records — costing them leads and revenue while they lack expertise to diagnose and fix it.",
+      "target_segment": "Small business owners and solo operators who recently acquired a new domain and outsource their email hosting, without in-house technical staff.",
+      "total": 6.2,
+      "recommended_stage": "validate",
+      "rationale": "Small business owners with a broken email deliverability setup face real, immediate revenue loss — a legitimately severe pain with a named, reachable buyer (new-domain operators, solo founders, small agency owners) who already pay for hosting and tools. Willingness to pay is backed by the existence of paid competitors (MXToolbox Pro, GlockApps, Postmark's deliverability tools at $10–$99/mo). However, the operational_autonomy score sits at 6, which just misses the build_gate floor of 7: the core…",
+      "solution_plan": "This is an automated email deliverability audit and fix-guidance service: a user enters their domain, the service checks SPF/DKIM/DMARC records, blacklist status, and mail header patterns via APIs (MXToolbox, Google Postmaster, Spamhaus), and delivers a plain-language report with a prioritised fix checklist — no coding by Youval. BUILD: the factory sets up a Claude-powered diagnosis prompt that parses DNS lookup results and blacklist API responses into a structured report, pairs it with a simple intake form (domain name + email), a Stripe payment link (~$29 one-time or $19/mo), and an email delivery step — all wired together in this repo; Yo…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 6,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder",
+      "discovered_at": "2026-07-30T08:31:29+03:00"
+    },
+    {
+      "topics": [
+        "email-deliverability",
         "powermta",
         "ip-warming"
       ],
@@ -628,7 +659,7 @@
         "Buildable": 7,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199553/how-to-add-a-new-secondary-powerdns-server-and-transfer-all-existing-zones-from",
       "discovered_at": "2026-07-27T09:18:05+03:00"
@@ -723,50 +754,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48886741",
       "discovered_at": "2026-07-13T08:58:51+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "apex",
-        "file-upload-security"
-      ],
-      "id": "01KYP6BZ41JV3CR9C3EFENB65X",
-      "problem_statement": "Salesforce ISV developers building managed packages with file upload endpoints exposed to guest users lack established patterns or tooling for server-side file validation and security hardening in Apex.",
-      "target_segment": "Salesforce ISV developers and AppExchange managed package authors building customer-facing Experience Cloud applications",
-      "total": 5.9,
-      "recommended_stage": "validate",
-      "rationale": "Salesforce ISV developers building AppExchange managed packages are a specific, named B2B buyer with real security review costs ($5–20k for Salesforce Security Review consultants) — willingness to pay and buyer clarity are both solid. Claude can generate an Apex file-validation code template or security checklist report with high buildability. However, the total (5.9) sits below the build threshold (6.5), and operational_autonomy at 6 just barely clears its gate floor — the niche is narrow enou…",
-      "solution_plan": "The micro-service is a Salesforce Apex File Upload Security Audit Pack: a Salesforce ISV developer submits their managed package context (endpoint type, user type, file types accepted) via a form, and Claude generates a tailored Apex code template with server-side validation logic, an OWASP-aligned security checklist, and a written security narrative ready to paste into a Salesforce Security Review submission. BUILD: A simple intake form + Claude prompt trained on Salesforce Apex security patterns + Stripe payment link at ~$149/report + automated file/email delivery — no coding by Youval. SELL: Reach Salesforce ISV developers via Salesforce…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 6,
-        "Will pay": 7,
-        "Buildable": 6,
-        "Pain": 7
-      },
-      "verdict": null,
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439706/server-side-validation-of-uploaded-files",
-      "discovered_at": "2026-07-29T08:43:12+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2021,
-    "last_7_days_usd": 1.632,
-    "all_time_usd": 12.1447,
+    "today_usd": 0.1823,
+    "last_7_days_usd": 1.654,
+    "all_time_usd": 12.3269,
     "by_day": [
-      {
-        "date": "2026-07-23",
-        "usd": 0.1603
-      },
       {
         "date": "2026-07-24",
         "usd": 0.3616
@@ -790,20 +786,24 @@
       {
         "date": "2026-07-29",
         "usd": 0.2021
+      },
+      {
+        "date": "2026-07-30",
+        "usd": 0.1823
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5604
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3917
+        "usd": 0.546
       },
       {
         "agent": "pain_validation",
-        "usd": 0.343
+        "usd": 0.4083
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3626
       },
       {
         "agent": "build_decisions",
@@ -811,46 +811,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0334
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-23",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-24",
       "agents": {
@@ -1060,12 +1025,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-07-30",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-07-29.md",
-    "date": "2026-07-29",
-    "text": "# Daily Summary — 2026-07-29 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 168 |\n| Opportunities validated past threshold | 37 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stages. Market radar and opportunity scoring completed successfully; pain validation confirmed 37 candidates above threshold from yesterday's 168 surfaced opportunities.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. Market radar, opportunity scoring, and pain validation all succeeded; remaining agents (build_decisions, cost_gain, lead_research, product_design, responsiveness_test, service_builder) skipped as expected during discovery phase.\n\n## Tomorrow's auto-scheduled actions\n\n1. `build_decisions` evaluates the 37 validated opportunities to identify next build candidates.\n2. `cost_gain` runs preliminary ROI projections on candidates that clear build_decisions review.\n3. `lead_research` enriches contact lists for top-ranked candidates.\n4. `opportunity_scoring` re-sweeps market radar feeds for new signals.\n5. `pain_validation` probes the next batch of candidates from the queue.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-07-30.md",
+    "date": "2026-07-30",
+    "text": "# Daily Summary — 2026-07-30 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 170 |\n| Opportunities validated past threshold | 38 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or validation stages at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping social channels and community forums for emerging pain signals.\n2. `opportunity_scoring` processes the 170 candidate opportunities queued from today's market radar run.\n3. `pain_validation` validates high-scoring candidates via targeted outreach probes.\n4. `build_decisions` reviews validated opportunities and recommends which merit experiment launch.\n5. `cost_gain` prepares weekly performance metrics for the Sunday report.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

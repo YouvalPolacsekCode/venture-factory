@@ -1,0 +1,26 @@
+{
+  "id": "01KYRR37C4VZPTA1F4C3G8N6Q3",
+  "discovered_at": "2026-07-30T08:31:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder",
+    "snippet": "We have a new domain. Sending email to Gmail, HotMail results in the messages sent to the Spam folder. I discovered that the static IP address for our email server was blacklisted on spamhaus.org. The IP address was changed to a different address. When I send an email to gmail I find this: (Received: from proxy) and it goes to the Spam folder. I think it should be (Received: from)? How does this get fixed? I don't actually have my own mail server it is outsourced to a hosting provider."
+  },
+  "problem_statement": "Small business operators launching a new domain find their transactional and outreach email consistently landing in spam due to IP blacklists, misconfigured mail headers, and missing authentication records \u2014 costing them leads and revenue while they lack expertise to diagnose and fix it.",
+  "target_segment": "Small business owners and solo operators who recently acquired a new domain and outsource their email hosting, without in-house technical staff.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "spam-filter",
+    "dns-configuration",
+    "new-domain",
+    "smtp",
+    "blacklist",
+    "spf-dkim-dmarc",
+    "small-business",
+    "transactional-email"
+  ],
+  "notes": "Operator is running a business domain (not personal), has already paid for hosting infrastructure, and is blocked from reaching customers. Willingness to pay for a fix is implied by the business context and urgency. This is a recurring class of problem \u2014 new domain + outsourced hosting + no technical staff \u2014 seen repeatedly across ServerFault, Reddit sysadmin, and support forums. A guided setup wizard or done-for-you deliverability audit service could serve this segment. Signal is low here (single question) but the broader category is well-documented.",
+  "status": "candidate"
+}

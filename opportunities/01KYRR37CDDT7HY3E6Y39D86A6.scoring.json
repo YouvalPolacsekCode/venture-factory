@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KYRR37CDDT7HY3E6Y39D86A6",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 7,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.7,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Any product that attempts to strip or circumvent ads on Meta/Instagram/Facebook platforms would violate Meta's Terms of Service and potentially the Computer Fraud and Abuse Act (automated scraping/modification of platform content). A browser-extension ad-blocker for social platforms sits in a persistent legal and TOS grey zone. Adjacent plays (curated newsletters, feed managers) do not \u2014 but those are different, weaker opportunities not described in this candidate."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The underlying signal \u2014 that some users would pay to avoid social-media ads \u2014 is real, but there is no buildable product here for a solo operator. The buyer is a vague 'high-income professional' with no specific role, budget line, or reachability path; willingness to pay is expressed as a hypothetical ($170/yr for a platform feature the platform won't offer), not as spend on a substitute. Any direct implementation (ad-stripping browser tool, automated feed cleaner on Meta) violates platform TOS and carries legal exposure, triggering the not_legitimate_or_grey penalty. Adjacent ideas (ad-free newsletters, curated content digests) are genuinely different opportunities that would need to be scoped separately \u2014 they are not what this candidate describes.",
+  "solution_plan": "There is no viable product to build from this signal as stated. The structural barrier \u2014 Meta's TOS and economic incentives \u2014 is not something a solo operator can engineer around legitimately. If Youval wants to explore the adjacent space (e.g. a curated, ad-free weekly digest of niche professional content delivered by email), that should be filed as a new, separate opportunity with a defined ICP and monetisation model. This candidate should be dropped.",
+  "notes": "not_legitimate_or_grey penalty applied: any direct ad-suppression tool on Meta/Instagram violates platform TOS. Scored 0.0 after penalty. Drop.",
+  "scored_at": "2026-07-30T08:33:05+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

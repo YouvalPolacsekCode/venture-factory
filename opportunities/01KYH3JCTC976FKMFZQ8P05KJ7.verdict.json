@@ -1,0 +1,14 @@
+{
+  "opportunity_id": "01KYH3JCTC976FKMFZQ8P05KJ7",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real but the addressable population is too small and the problem is too easily solved by a free bash script to justify a paid product. Evidence search finds scattered forum posts but no community velocity, no competitor charging money for bulk zone sync tooling, and no willingness-to-pay signals beyond anecdote. The ceiling is too low to meet the evidence bar for validation.",
+  "sources": [
+    "https://serverfault.com/questions/1199553/how-to-add-a-new-secondary-powerdns-server-and-transfer-all-existing-zones-from",
+    "https://github.com/PowerDNS/pdns/issues",
+    "https://www.reddit.com/r/sysadmin/",
+    "https://doc.powerdns.com/authoritative/modes-of-operation.html"
+  ],
+  "evaluated_at": "2026-07-30T08:32:31+03:00"
+}

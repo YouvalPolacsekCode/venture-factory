@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01KYP6BZ3HE7J9MSFGWY14QYZ3",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Email deliverability failures for new domains are a well-documented, recurring pain with clear willingness-to-pay evidence: multiple paid competitors (MXToolbox Pro at $129/yr, GlockApps at $79/mo, Postmark's deliverability tools) serve this exact segment, and community threads across ServerFault, Reddit, and IndieHackers surface this problem multiple times per week. The gap \u2014 guided, plain-language remediation for non-technical founders rather than raw diagnostic data \u2014 is real and underserved by existing free tools.",
+  "sources": [
+    "https://serverfault.com/questions/1199571/why-does-sending-an-email-goes-to-spam-and-junk-folder",
+    "https://www.reddit.com/r/selfhosted/search/?q=email+deliverability+spam+new+domain",
+    "https://www.indiehackers.com/post/how-i-fixed-my-email-deliverability-issues",
+    "https://mxtoolbox.com/pricing.aspx",
+    "https://glockapps.com/pricing/",
+    "https://postmarkapp.com/pricing"
+  ],
+  "evaluated_at": "2026-07-31T08:57:57+03:00"
+}

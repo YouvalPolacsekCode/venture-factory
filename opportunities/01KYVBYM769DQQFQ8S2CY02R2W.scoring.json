@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYVBYM769DQQFQ8S2CY02R2W",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, identifiable B2B persona \u2014 QA engineers / DevOps leads at mid-market to enterprise Salesforce shops \u2014 who are actively paying for Salesforce licenses and CI/CD tooling, so willingness to pay is plausible and the ICP is clear. However, the solution itself (a managed auth-proxy or drop-in library for Salesforce JWT token refresh) requires real integration work that goes well beyond a Claude prompt + Stripe link: it must handle OAuth 2.0 JWT flows, token rotation, and injection into Playwright/Selenium runtimes, making buildability and operational autonomy both constrained. With only a single forum signal and no tested response rate, this needs demand validation before committing engineering effort.",
+  "solution_plan": "The micro-service is a hosted Salesforce test-auth helper: teams point their CI/CD pipeline at it and get a fresh, valid frontdoor session token on demand, so they never have to manage JWT refresh logic themselves. BUILD: the factory can scaffold a lightweight API endpoint (using a simple serverless function or Cloudflare Worker), a Claude-assisted setup guide, a Stripe subscription link, and a short intake form \u2014 but the core token-refresh logic must be coded (not pure Claude prompting), which means Youval would need a developer or a no-code integration service like Val.town or Pipedream to wire the Salesforce Connected App OAuth flow; this is not a pure factory build. SELL: target QA engineers and DevOps leads via Salesforce Developer forums (SFSE, Trailblazer Community), LinkedIn searches for 'Salesforce QA automation', and a short post on r/salesforce \u2014 outreach batches go out only after Youval approves each one. MAINTAIN: once a customer connects their Salesforce Connected App credentials, token refresh runs automatically on each CI/CD call; billing is Stripe recurring; support queries go to a Claude-powered email responder. The only recurring human touch is approving new outreach batches and reviewing any flagged support escalations. CAVEAT: the integration complexity (Salesforce Connected App setup per customer, credential storage, compliance around storing org tokens) means this is not a fully autonomous factory build \u2014 Youval would need a technical collaborator or a very constrained SaaS wrapper to make it viable.",
+  "notes": "Build gates not met: operational_autonomy=5 (below floor of 7) and buildability_with_ai=5 (below floor of 6). The solution requires per-customer credential management and real OAuth integration work that exceeds current factory tooling. Stage capped at 'validate' \u2014 confirm demand volume first (Salesforce MFA rollout is a broad forcing event worth monitoring), then reassess technical feasibility.",
+  "scored_at": "2026-07-31T08:58:18+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

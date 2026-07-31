@@ -1,0 +1,27 @@
+{
+  "id": "01KYVBYM769DQQFQ8S2CY02R2W",
+  "discovered_at": "2026-07-31T08:56:59+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439716/salesforce-jwt-auth-errors",
+    "snippet": "We use Playwright based automation with C# and .NET to run a nightly test suite in our sandbox. With the new MFA changes, our regular SSO/NO-SSO authentication doesn't work anymore, so we started using access tokens via an external client app. We just create a frontdoorURL per pipeline run which is then used to log in. Most of our tests run locally, and on our ADO pipeline if the whole suite isn't ran together. However, whenever the whole suite is ran together we run into errors where one of the [sessions/tokens expires mid-run]."
+  },
+  "problem_statement": "Salesforce MFA enforcement breaks existing Playwright/Selenium CI/CD test automation pipelines: teams that relied on SSO or username/password auth must now retrofit JWT + frontdoor token flows, and token expiry mid-suite causes intermittent failures that are hard to debug and block nightly regression runs.",
+  "target_segment": "QA engineers and DevOps teams at mid-market to enterprise companies running automated Salesforce UI test suites in CI/CD pipelines (Azure DevOps, GitHub Actions, etc.).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "mfa",
+    "test-automation",
+    "playwright",
+    "jwt",
+    "ci-cd",
+    "devops",
+    "qa-tooling",
+    "session-management",
+    "salesforce-dx"
+  ],
+  "notes": "Business context is clear: a team is paying for Salesforce licenses + ADO pipeline minutes and their nightly regression suite is broken by a platform-enforced MFA change. They are actively researching workarounds (JWT auth, frontdoor.jsp). A managed auth-proxy or a drop-in library that handles Salesforce JWT token refresh for test runners could be a paid tool. Single signal but the underlying trigger (Salesforce MFA rollout affecting all non-human logins) is a broad, forced migration event affecting many orgs simultaneously \u2014 worth monitoring for volume.",
+  "status": "candidate"
+}

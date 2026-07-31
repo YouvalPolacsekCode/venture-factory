@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01KYP6BZ3HE7J9MSFGWY14QYZ3",
+  "decided_at": "2026-07-31T08:58:31+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "passes": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "passes": true
+    },
+    "buyer_clarity": {
+      "score": 6,
+      "floor": 6,
+      "passes": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "passes": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 5.8,
+      "threshold": 6.5,
+      "passes": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build_now": [
+        "build",
+        "scale"
+      ],
+      "passes": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.8 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass their per-dimension floors, but the weighted total of 5.8 falls well below the 6.5 min_total_to_build threshold, and the scoring agent's recommended_stage is 'validate' \u2014 not 'build' or 'scale'. The cost-to-gain ratio of 3.75 (even optimistic at 1.88) far exceeds the 0.6 kill threshold from cost_gain_model, signaling poor unit economics at current signal strength. However, the idea is not dead: the pain is real, gates all pass, and the portfolio is empty. A validation probe (free audits in 2 communities to measure demand and refine positioning against free tools like MXToolbox) could lift responsiveness_signal and buyer_clarity enough to clear the total threshold. Deferring one week to allow that probe before committing build resources.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "r/Entrepreneur or IndieHackers post offering 5 free email deliverability audits"
+}

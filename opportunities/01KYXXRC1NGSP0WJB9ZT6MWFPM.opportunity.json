@@ -1,0 +1,26 @@
+{
+  "id": "01KYXXRC1NGSP0WJB9ZT6MWFPM",
+  "discovered_at": "2026-08-01T08:46:37+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/169879/earned-%c2%a3900-on-the-side-do-i-need-to-tell-hmrc-or-does-the-%c2%a31-000-trading-allow",
+    "snippet": "I've been doing a bit of freelance work on the side of my normal job and made around \u00a3900 from it this tax year. I keep seeing people mention a \u00a31,000 trading allowance... Is the \u00a31,000 based on what I got paid, or what's left after expenses? I had just under \u00a3900 come in but spent around \u00a3200 on software tools and equipment for the work."
+  },
+  "problem_statement": "UK-based side-income earners and early-stage freelancers are confused about HMRC tax thresholds (trading allowance vs. net profit), leading to anxiety about compliance, under- or over-reporting, and inability to make confident decisions about growing their freelance income.",
+  "target_segment": "UK-based employed professionals earning side income (freelance, gig work) below \u00a35,000/year who lack accountant support",
+  "geo": "GB",
+  "signal_strength": 3,
+  "keywords": [
+    "hmrc",
+    "uk-tax",
+    "trading-allowance",
+    "freelance",
+    "side-income",
+    "self-assessment",
+    "tax-compliance",
+    "sole-trader",
+    "gig-economy"
+  ],
+  "notes": "Buyer context: person with real money at stake (\u00a3900 income, \u00a3200 in expenses, potential HMRC penalty risk). High anxiety = willingness to pay for clarity. This is a recurring question cluster (many similar questions on Money SE, Reddit r/UKPersonalFinance). Opportunity: a low-cost UK-specific tax clarity tool for side-hustlers\u2014a structured Q&A / decision-tree that outputs a plain-English verdict on whether they need to self-assess, with upsell to affordable accountant referral. Competing products (TaxScouts, GoSimpleTax) exist but at higher price points.",
+  "status": "candidate"
+}

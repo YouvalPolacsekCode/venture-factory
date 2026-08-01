@@ -1,0 +1,25 @@
+{
+  "id": "01KYXXRC14R2HC58A2WMCT56GH",
+  "discovered_at": "2026-08-01T08:46:37+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/169880/manager-business-money-and-boxes-for-taxes",
+    "snippet": "I'm using hledger to manage my company's bank account. When I receive a payment, I record a transaction from Income:XXX to Assets:Bank:B1. Later, I create another transaction to reserve the money for taxes... This worked well until I had to switch banks. I want to preserve the history of what actually happened..."
+  },
+  "problem_statement": "Small business owners using plain-text accounting tools (hledger/ledger-cli) struggle to correctly model tax-reservation workflows when switching banks, preserving transaction history while keeping books accurate\u2014a recurring operational pain with real financial compliance stakes.",
+  "target_segment": "Freelancers and small business owners using plain-text / double-entry accounting tools (hledger, ledger-cli, beancount) to manage company finances",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "hledger",
+    "plain-text-accounting",
+    "small-business",
+    "tax-reservation",
+    "bank-migration",
+    "bookkeeping",
+    "ledger-cli",
+    "freelancer-finance"
+  ],
+  "notes": "Buyer context: business owner managing real company bank account and tax liabilities. The pain is operational/compliance-critical (wrong books = tax risk). Plain-text accounting has a growing but underserved professional user base willing to pay for tooling. Opportunity: guided workflow templates or a SaaS layer on top of hledger for common small-business scenarios (tax pots, bank switches). Adjacent to existing paid products like Actual Budget.",
+  "status": "candidate"
+}

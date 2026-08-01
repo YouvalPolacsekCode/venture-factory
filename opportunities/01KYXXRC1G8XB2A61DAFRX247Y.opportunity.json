@@ -1,0 +1,25 @@
+{
+  "id": "01KYXXRC1G8XB2A61DAFRX247Y",
+  "discovered_at": "2026-08-01T08:46:37+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/CommunityMaintained/tubeless/issues/131",
+    "snippet": "When running any jobs, there is no way to pause, stop, and/or force stop an executing job. Currently, when a reconciliation job is running, you have to wait for it to finish before running another. Considering a reconciliation task can take hours on big libraries, which makes it painful to interrupt mid-way if you realize you made an error in your media profile configuration."
+  },
+  "problem_statement": "Users of self-hosted media library management tools lack the ability to pause, cancel, or force-stop long-running reconciliation jobs (which can take hours), forcing them to wait out erroneous runs before correcting configuration mistakes\u2014wasting significant time.",
+  "target_segment": "Power users and prosumers running self-hosted media management servers with large libraries (thousands of files)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "media-management",
+    "self-hosted",
+    "job-control",
+    "long-running-jobs",
+    "reconciliation",
+    "home-server",
+    "media-library",
+    "background-jobs"
+  ],
+  "notes": "Buyer context: technically sophisticated self-hosted user with large media libraries; implicit time cost ('hours'). While this is a feature request on a free tool, it signals a gap in self-hosted media management job orchestration. Willingness to pay is moderate\u2014this segment often prefers free tools but will pay for reliability/control. A managed cloud wrapper or a standalone job-control daemon for self-hosted media stacks could be monetizable.",
+  "status": "candidate"
+}

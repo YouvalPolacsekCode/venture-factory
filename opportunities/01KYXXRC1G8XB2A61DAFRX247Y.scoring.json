@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KYXXRC1G8XB2A61DAFRX247Y",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Self-hosted prosumer/hobbyist segment expects free tools; any paid wrapper needs large consumer volume to generate meaningful revenue."
+    }
+  ],
+  "total": 2.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a technically sophisticated self-hosted media hobbyist \u2014 a consumer persona that deeply prefers free, open-source solutions and rarely pays for tooling improvements to existing free tools. Willingness to pay is very low: this is a feature request on a free GitHub project, not a commercial context. A paid job-control daemon would compete directly with the free tool's roadmap and would need thousands of users to generate meaningful revenue. Buildability and autonomy are also constrained because job control requires deep integration with the specific media management tool's internals.",
+  "solution_plan": "Not recommended \u2014 drop this opportunity. The self-hosted media hobbyist segment is not a viable paying customer base for a solo operator's micro-service. The realistic path to monetization requires either (a) contributing a PR to the free tool and building reputation (not a business), or (b) building a full managed cloud alternative at a scale that requires significant infrastructure investment. Neither is appropriate for this factory.",
+  "notes": "Total 2.6 is well below the validate threshold of 5.5. buyer_clarity (3), willingness_to_pay (2), operational_autonomy (5), and buildability_with_ai (5) all fail build gates. Drop.",
+  "scored_at": "2026-08-01T08:48:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

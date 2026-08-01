@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYXXRC0X7EN3KZ6A51PM59C9",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [],
+  "total": 5.2,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a professional Salesforce developer or admin at a company \u2014 a real B2B persona with budget \u2014 experiencing silent data corruption in production, which is a legitimate pain. However, the problem is highly niche (specific to AI-assisted sf CLI deployments) and buildability is constrained: a useful linting/diff tool requires deep Salesforce API integration and knowledge of deployment metadata side-effects, not just a Claude prompt + landing page. Operational autonomy is limited because validating deployment previews likely requires per-run API calls against live Salesforce orgs, and support questions will be complex. Signal strength is weak (single forum post), so this needs validation before any build investment.",
+  "solution_plan": "WHAT: A pre-deployment diff checker that flags potential data-layer side-effects (like LastViewedDate wipes) before an sf CLI deployment runs. BUILD: The factory can build a lightweight web form where developers paste their deployment manifest or changeset; Claude analyzes it against a knowledge base of known Salesforce deployment side-effects and outputs a risk report \u2014 paired with a Stripe subscription link at ~$29/mo. SELL: Target Salesforce developer communities (Salesforce Stack Exchange, Trailblazer Community, relevant LinkedIn groups and Slack workspaces) with a cold outreach sequence the factory drafts and queues for your approval. MAINTAIN: Delivery is automated (form \u2192 Claude analysis \u2192 email report), billing via Stripe, and routine support handled by Claude; the only recurring human touch is approving outreach batches. CAUTION: The knowledge base of side-effects needs ongoing curation as Salesforce evolves \u2014 this is a real maintenance burden. Validate demand with 20+ outreach messages before building.",
+  "notes": "operational_autonomy (5) and buildability_with_ai (5) both fall below build_gate floors (7 and 6 respectively). Stage capped at validate.",
+  "scored_at": "2026-08-01T08:48:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

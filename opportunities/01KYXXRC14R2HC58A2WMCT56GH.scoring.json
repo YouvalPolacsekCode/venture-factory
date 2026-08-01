@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYXXRC14R2HC58A2WMCT56GH",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [],
+  "total": 5.1,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a small business owner or freelancer using hledger/ledger-cli \u2014 a technically self-sufficient persona who overwhelmingly prefers free community resources and is reluctant to pay for tooling (competing free docs, Hacker News threads, and the hledger manual itself address these questions). Willingness to pay is the key weakness: this niche skews heavily toward DIY-ers, and the few paid products in adjacent space (Actual Budget) target less technical users. The pain is real but episodic (bank switches, year-end tax prep), and the buyer segment is reachable only through diffuse channels. Worth a small validation probe but unlikely to convert at meaningful scale.",
+  "solution_plan": "WHAT: A guided plain-text accounting template pack and Q&A assistant for common small-business scenarios (tax reservation, bank migration, year-end close) in hledger/beancount. BUILD: The factory builds a simple web page with a Stripe payment link (~$19 one-time or $9/mo) and a Claude-powered intake form; the user describes their scenario and receives a ready-to-use hledger journal template with explanatory comments. SELL: Post in hledger mailing list, r/plaintextaccounting, and Hacker News 'Ask HN' \u2014 the factory drafts the posts for your approval before publishing. MAINTAIN: Fully automated (form \u2192 Claude \u2192 email delivery \u2192 Stripe billing); no per-customer human work beyond approving any refund requests. CAUTION: This segment is price-sensitive and may expect free answers; run a 30-day revenue test before investing further.",
+  "notes": "buyer_clarity (5) and willingness_to_pay (4) both fall below build_gate floors. Stage capped at validate.",
+  "scored_at": "2026-08-01T08:48:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KYP6BZ41JV3CR9C3EFENB65X",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real and specific \u2014 Salesforce ISV developers do face a genuine gap in established server-side file validation patterns for Apex \u2014 but the market is extremely thin. Only a few hundred active AppExchange ISVs build guest-user file-upload endpoints, single-signal discovery, near-zero community discussion volume, and no observable willingness-to-pay signal beyond inferred consultant costs. The evidence base does not meet the five-distinct-pain-quotes bar required for a pass verdict.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439706/server-side-validation-of-uploaded-files"
+  ],
+  "evaluated_at": "2026-08-01T08:47:39+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KYXXRC1A1Y1MAK6GV8S2AEKS",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a small travel/visa-agency website operator in the GCC/MENA region with commercial revenue tied to organic traffic \u2014 a real business buyer. However, lead reachability is challenging: GCC-based website operators are not on a clean public list, cold outreach channels are unclear, and geographic/language factors (UAE-based, Arabic-language content concerns) add friction for Youval. The SEO audit space is also heavily competed (Ahrefs, Semrush, Screaming Frog), and the niche-down to visa/travel doesn't create enough differentiation to justify a premium. Validate with direct outreach to 20+ UAE travel agency sites before committing.",
+  "solution_plan": "WHAT: A niche SEO audit report specifically for visa/travel country-specific pages \u2014 benchmarks each page against competitors and surfaces content differentiation gaps. BUILD: The factory builds a web form where the operator submits their domain; Claude crawls the public pages (via URL fetching), compares them against a competitor set, and produces a PDF-style audit report delivered by email \u2014 Stripe charges $49/report or $79/mo. SELL: Identify UAE travel agency websites via Google searches and LinkedIn; the factory drafts cold outreach emails for your review and approval before sending. MAINTAIN: Delivery is fully automated (form \u2192 Claude analysis \u2192 email report \u2192 Stripe billing); only human touch is approving the outreach batch and reviewing any dispute emails. CAUTION: Youval has no particular GCC/UAE market edge, and the competitive SEO tool market means buyers may default to established tools. Confirm 3+ paying customers before scaling.",
+  "notes": "lead_reachability (4) is weak; founder_fit (3) is a real gap for GCC market. Total (5.3) is below the build threshold anyway.",
+  "scored_at": "2026-08-01T08:48:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

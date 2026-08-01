@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KYXXRC1NGSP0WJB9ZT6MWFPM",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 9,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "UK tax guidance touches a regulated domain (tax advice); product must be carefully positioned as information/tools, not regulated financial advice, and may face legal scrutiny."
+    }
+  ],
+  "total": 4.9,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a UK-based employed professional with real HMRC compliance anxiety \u2014 a specific, nameable person with money at stake and existing paid alternatives (TaxScouts at ~\u00a399+, GoSimpleTax at ~\u00a319/yr), confirming willingness to pay. The service is highly buildable: a Claude-powered decision-tree Q&A that outputs a plain-English verdict is a near-perfect fit for this factory. However, the regulated_industry penalty is material: UK tax guidance falls close enough to regulated financial/tax advice that positioning must be carefully managed, and Youval operating from Israel adds a layer of jurisdictional risk. Validate with a simple landing page and an email waitlist before building.",
+  "solution_plan": "WHAT: A UK side-hustle tax clarity tool \u2014 a structured online Q&A that asks 5-8 questions about your income, expenses, and employment situation, then outputs a plain-English verdict on HMRC self-assessment obligations and the trading allowance, with a clear disclaimer that it is information, not regulated advice. BUILD: The factory builds a simple multi-step web form (Typeform-style, or a Claude-powered chat page) + a Stripe payment link at \u00a34.99/use or \u00a39.99/yr; Claude handles all Q&A logic from a well-structured HMRC rules knowledge base. SELL: Reach buyers via Reddit r/UKPersonalFinance, r/FreelanceUK, and targeted Facebook/Google ads around UK tax deadlines (January 31, April 5); the factory drafts all ad copy and posts for your approval before publishing. MAINTAIN: Fully automated \u2014 user pays \u2192 completes form \u2192 Claude generates verdict PDF \u2192 delivered by email; billing and refunds via Stripe; Claude handles FAQ support emails. The only recurring human touch is approving ad spend and reviewing any legal/compliance queries. IMPORTANT: Add a clear 'this is not regulated financial advice' disclaimer on every output and the landing page; consult a UK legal template service (e.g. Docular) before launch \u2014 the factory can draft the terms for your review.",
+  "notes": "regulated_industry penalty drops total from 6.4 to 4.9, below the validate threshold of 5.5 without penalty. Stage is validate. build_gates: operational_autonomy (8) \u2713, buildability_with_ai (9) \u2713, buyer_clarity (6) \u2713, willingness_to_pay (6) \u2713 \u2014 all gates pass, but total is below min_total_to_build (6.5) after penalty. Validate with a 2-week landing page test targeting r/UKPersonalFinance before building.",
+  "scored_at": "2026-08-01T08:48:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

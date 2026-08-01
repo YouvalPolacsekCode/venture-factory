@@ -1,0 +1,25 @@
+{
+  "id": "01KYXXRC0X7EN3KZ6A51PM59C9",
+  "discovered_at": "2026-08-01T08:46:37+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439719/lastvieweddate-is-wiped-out-after-deploying-via-sf-cli-using-claude-code-or-code",
+    "snippet": "I'm having this weird issue where the LastViewedDate is wiped out on all the records for ONLY the standard objects. I couldn't find anything online, can someone help me out? This obviously is messing up the Recently Viewed list view. [Using sf CLI with Claude Code or Codex for deployment]"
+  },
+  "problem_statement": "Salesforce developers using AI coding assistants (Claude Code, Codex) for deployments via sf CLI experience silent data side-effects\u2014LastViewedDate wiped on standard objects\u2014that corrupt standard list views and are undocumented, making AI-assisted Salesforce deployment unreliable in production.",
+  "target_segment": "Salesforce developers and admins at companies using AI coding assistants for automated Salesforce deployments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "ai-coding-assistant",
+    "deployment",
+    "sf-cli",
+    "side-effects",
+    "data-integrity",
+    "salesforce-admin",
+    "devops"
+  ],
+  "notes": "Buyer context: professional Salesforce developer at a company, using paid tools (Claude Code / OpenAI Codex). Pain is silent data corruption in production list views. No existing documentation or workaround found. Could indicate a broader class of AI-assisted deployment side-effects on Salesforce metadata/data. A linting/diff tool that previews data-layer side-effects before sf CLI deployment could be monetizable as a dev tool subscription.",
+  "status": "candidate"
+}

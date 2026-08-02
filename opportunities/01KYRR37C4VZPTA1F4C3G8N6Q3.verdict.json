@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01KYRR37C4VZPTA1F4C3G8N6Q3",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Email deliverability failures for new domains are a high-frequency, revenue-blocking pain documented across dozens of forums, Reddit threads, and support communities \u2014 operators are actively losing leads and sales. Willingness-to-pay is confirmed by multiple paid competitors (MXToolbox Pro, GlockApps, Postmark) charging $10\u2013$99/month, and by job postings for deliverability consultants. The target segment (new-domain SMB operators without in-house technical staff) is clearly defined and reachable through the communities where they already self-identify.",
+  "sources": [
+    "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder",
+    "https://www.reddit.com/r/selfhosted/search/?q=email+deliverability+spam",
+    "https://www.reddit.com/r/smallbusiness/search/?q=email+spam+folder+new+domain",
+    "https://mxtoolbox.com/pricing.aspx",
+    "https://glockapps.com/pricing/",
+    "https://postmarkapp.com/pricing"
+  ],
+  "evaluated_at": "2026-08-02T08:47:54+03:00"
+}

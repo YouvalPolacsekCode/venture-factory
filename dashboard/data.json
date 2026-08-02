@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-08-01T05:48:55+00:00",
-    "idt": "2026-08-01T08:48:55+03:00"
+    "utc": "2026-08-02T05:48:11+00:00",
+    "idt": "2026-08-02T08:48:11+03:00"
   },
   "funnel": {
     "candidates": 176,
     "scored": 176,
-    "validated": 20,
+    "validated": 21,
     "build_decisions": {
-      "defer_1_week": 18,
+      "defer_1_week": 19,
       "kill": 2
     },
     "build_now": 0,
@@ -537,7 +537,7 @@
         "Buildable": 8,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder",
       "discovered_at": "2026-07-30T08:31:29+03:00"
@@ -759,14 +759,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2309,
-    "last_7_days_usd": 1.7027,
-    "all_time_usd": 12.9068,
+    "today_usd": 0.2777,
+    "last_7_days_usd": 1.7838,
+    "all_time_usd": 13.1844,
     "by_day": [
-      {
-        "date": "2026-07-26",
-        "usd": 0.1966
-      },
       {
         "date": "2026-07-27",
         "usd": 0.1848
@@ -790,67 +786,36 @@
       {
         "date": "2026-08-01",
         "usd": 0.2309
+      },
+      {
+        "date": "2026-08-02",
+        "usd": 0.2777
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.576
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.4099
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3737
+        "usd": 0.5559
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3093
+        "usd": 0.4639
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.4067
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3234
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0338
+        "usd": 0.0337
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-26",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-27",
       "agents": {
@@ -1060,12 +1025,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-02",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "skipped": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-01.md",
-    "date": "2026-08-01",
-    "text": "# Daily Summary — 2026-08-01 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 176 |\n| Opportunities validated past threshold | 40 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently running. Factory in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps for new pain signals across monitored sources.\n2. `pain_validation` runs targeted validation probes on top 40 validated opportunities.\n3. `opportunity_scoring` re-ranks candidate pool against updated market signals.\n4. `lead_research` begins outreach prep on highest-confidence validation set.\n5. `build_decisions` reviews validation verdicts for experiment launch readiness.\n\n## Operator action items\n\n1. **Review the 40 validated opportunities** — all passed pain-signal threshold yesterday. Prioritize top 10 by score for experiment launch candidate pipeline.\n2. **Stage first experiment build** — sufficient validation signal exists to begin product design on the highest-conviction 2–3 opportunities.",
+    "file": "reports/daily/2026-08-02.md",
+    "date": "2026-08-02",
+    "text": "# Daily Summary — 2026-08-02 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 176 |\n| Opportunities validated past threshold | 41 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in build, validation, live, or scaling stage.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 8 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` collects contact details from the 41 validated opportunities.\n2. `opportunity_scoring` re-ranks remaining candidates against pain thresholds.\n3. `build_decisions` evaluates which validated opportunities warrant experiment launch.\n4. `market_radar` sweeps emerging pain signals in underserved verticals.\n5. `pain_validation` probes the top 20 candidates for decision-maker accessibility.\n\n## Operator action items\n\nNone — the factory is in discovery mode. Review the 41 validated opportunities at your convenience and confirm which warrant outreach prioritization.",
     "truncated": false
   },
   "analytics": null

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZ33XAPTSZ8YB6DG08A01XTS",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Continuous customer feedback loop tooling for individual founders requires contextual judgment about their specific product \u2014 automation alone produces generic advice. Meaningful delivery would require human curation/interpretation of feedback data."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "This is a solo founder personal post-mortem \u2014 a single, weak signal with no clear commercial intent or buyer willingness to pay for tooling. Solo founders experiencing this pain typically seek peer communities, advisors, or free frameworks rather than paying for a validation tool. Buyer clarity is low (vague 'solo founders' without a specific role or budget authority), and no evidence of any paid substitute exists. Total well below validate threshold.",
+  "solution_plan": "Not recommended. The signal is too weak and the buyer too diffuse. If the AI MVP scoping opportunity (01KZ33XAPJZS8T6S22C6R1AZE0) is ever validated, this pain point could be folded into that service as an ongoing feedback module \u2014 but it does not stand alone as a buildable opportunity.",
+  "notes": "Total 2.9 is well below min_total_to_validate (5.5). Weak single signal, no willingness-to-pay evidence, vague buyer. Discard.",
+  "scored_at": "2026-08-03T09:11:24+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

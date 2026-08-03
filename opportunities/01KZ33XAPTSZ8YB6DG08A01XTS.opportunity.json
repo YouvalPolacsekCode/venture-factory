@@ -1,0 +1,24 @@
+{
+  "id": "01KZ33XAPTSZ8YB6DG08A01XTS",
+  "discovered_at": "2026-08-03T09:10:23+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://dev.to/giftysoftdev/i-understood-the-problem-i-still-built-the-wrong-product-5h1i",
+    "snippet": "I have been quieter than usual over the past few months. Although I enjoy building in public, some... [7 score, 13 comments \u2014 founder reflection on building wrong product despite problem understanding]"
+  },
+  "problem_statement": "Indie founders and small startup teams understand a user problem intellectually but still build the wrong solution due to inadequate continuous customer feedback loops during development, costing months of wasted work and money.",
+  "target_segment": "Solo founders and small startup teams (1\u20135 people) building B2B or B2C SaaS products",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "founder-tools",
+    "customer-validation",
+    "product-market-fit",
+    "startup",
+    "feedback-loop",
+    "user-research",
+    "build-wrong-product"
+  ],
+  "notes": "Standalone signal from a personal founder post-mortem. Weaker on its own but reinforces the AI MVP scoping cluster above. The pain is real (months of wasted effort) but buyer willingness-to-pay for a tool is not explicit here. Kept separate because the solution space differs \u2014 this points to ongoing validation tooling rather than pre-build scoping.",
+  "status": "candidate"
+}

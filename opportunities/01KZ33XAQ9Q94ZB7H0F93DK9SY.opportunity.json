@@ -1,0 +1,25 @@
+{
+  "id": "01KZ33XAQ9Q94ZB7H0F93DK9SY",
+  "discovered_at": "2026-08-03T09:10:23+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439717/how-can-i-access-email-bounce-information",
+    "snippet": "I have Bounce Management turned on. IsEmailBounced is not working in a formula and while the other two fields are working in the SOQL statement and are working in a formula field, the whole field is not displayed after adding it to a record page. What is happening here? Is this one of those fields that Salesforce just doesn't support on record pages?"
+  },
+  "problem_statement": "Salesforce admins and RevOps teams managing bounce data cannot surface email bounce status directly on Contact record pages despite the data existing in the system, forcing them to rely on SOQL queries or reports instead of inline visibility during sales workflows.",
+  "target_segment": "Salesforce admins, RevOps analysts, and marketing operations teams at SMB-to-mid-market B2B companies",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "revops",
+    "email-bounce",
+    "crm",
+    "admin-tools",
+    "marketing-ops",
+    "no-code",
+    "data-visibility"
+  ],
+  "notes": "Buyer is a business operator (Salesforce org admin) hitting a platform limitation. Pain is operational: bounce data exists but isn't actionable in daily workflow. Potential product angle: a Salesforce-native AppExchange component or LWC that surfaces bounce data inline. Salesforce ecosystem buyers regularly pay for AppExchange solutions ($50\u2013$500/org/month range). Single signal but concrete and professional.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZ33XAQ1J24XRWWZD36VPGGX",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [],
+  "total": 4.8,
+  "recommended_stage": "drop",
+  "rationale": "The technical pain is real and concrete \u2014 Docker Compose with multi-VPN network modes is genuinely tricky \u2014 but self-hosters are notoriously resistant to paying for tooling they believe should be free or solved by documentation. Buyer clarity is weak: 'self-hosting developers' skew heavily toward hobbyists who expect free tools, and the segment lacks budget authority or a business spending motive. Willingness to pay is very low (no paid substitutes exist; this niche is served by free blog posts and GitHub issues). Total falls below the validate threshold.",
+  "solution_plan": "Not recommended as a paid product. A free open-source Docker Compose config generator for multi-VPN topologies could build audience (and potentially convert to paid for an advanced version), but that's a content/community play, not a micro-SaaS. The factory could generate the config generator as a lead magnet, but there is no validated path to revenue here.",
+  "notes": "Total 4.8 below min_total_to_validate (5.5). willingness_to_pay=3 fails the build_gate (min 5) and buyer_clarity=4 fails (min 6) \u2014 both gates unmet. Self-hoster market structurally resists payment for this type of tooling.",
+  "scored_at": "2026-08-03T09:11:24+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

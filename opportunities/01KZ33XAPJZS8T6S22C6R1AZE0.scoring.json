@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZ33XAPJZS8T6S22C6R1AZE0",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A meaningful 'AI MVP scoping' service that delivers real value to a pre-Series A founder almost certainly requires Claude-generated analysis that a human (Youval) must QA before delivery \u2014 the output is consequential strategic advice affecting runway decisions, not a commodity report. Async automation alone would produce low-trust output at this price point."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "Early-stage SaaS founders are a real, nameable buyer and do spend on productivity tooling, but the purchase decision for 'scoping help' is typically made once per project and the market is fragmented \u2014 founders rarely seek a paid tool for architecture advice when free content (blog posts, advisors, communities) is abundant. The penalty applies because delivering genuinely useful scoping output would require human QA of Claude's recommendations before sending to founders making runway-critical decisions. Total falls below the validate threshold after the penalty.",
+  "solution_plan": "Not recommended for build at this time. If revisited: a $49 'AI MVP Scope Audit' report \u2014 founder fills an intake form, Claude generates a single-workflow recommendation with rationale, Youval reviews and sends. But the human QA requirement and low purchase frequency make this a consulting product, not a scalable micro-SaaS. Validate by posting a manual offer in one founder community first.",
+  "notes": "Total 4.2 after penalty is below min_total_to_validate (5.5). The requires_human_fulfillment penalty reflects the consequential nature of strategic advice to founders. Drop unless a fully automated version (no human QA) can be designed.",
+  "scored_at": "2026-08-03T09:11:24+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

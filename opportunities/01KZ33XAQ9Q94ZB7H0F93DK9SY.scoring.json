@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZ33XAQ9Q94ZB7H0F93DK9SY",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building an AppExchange-listed Salesforce component (LWC or Flow solution) requires Salesforce packaging, security review submission, and org-specific configuration \u2014 none of which can be automated by Claude + this repo's standard tooling. Each install requires validation against the customer's specific Salesforce metadata setup."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Salesforce AppExchange distribution requires passing Salesforce's formal Security Review process, which is a compliance gating procedure. This is not a regulated industry per se, but the platform's certification requirement acts as a structural barrier equivalent to a compliance moat."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is excellent \u2014 a Salesforce admin or RevOps analyst at an SMB/mid-market B2B company, with a clear budget and demonstrated willingness to pay for AppExchange solutions at $50\u2013$500/org/month. However, the delivery mechanism requires building and maintaining a Salesforce-native AppExchange package, which demands Salesforce developer expertise, a formal security review process, and org-specific installation support. This is entirely outside what Claude + this factory's standard tooling can build or maintain autonomously. Operational autonomy (3) and buildability (4) are both critically low, and both build gates fail. Even if the commercial signal is strong, this is structurally the wrong opportunity for a non-technical solo operator using this factory.",
+  "solution_plan": "Not recommended for this factory. The Salesforce AppExchange pathway requires a certified Salesforce developer, which Youval is not, and the delivery cannot be automated by Claude. A workaround \u2014 selling a PDF guide or a SOQL query snippet to Salesforce admins \u2014 exists but would not command the $50\u2013$500/mo price point and would deliver minimal value versus free community answers. If Youval has access to a Salesforce developer partner, this could be revisited as a productized partnership, but not as a solo Claude-factory build.",
+  "notes": "Total 2.8 after penalties. Fails build_gates: operational_autonomy=3 (min 7), buildability_with_ai=4 (min 6). The commercial signal is the strongest in today's batch, but the build/run requirements make it incompatible with this factory's capabilities. Drop unless a non-AppExchange delivery mechanism is identified.",
+  "scored_at": "2026-08-03T09:11:24+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

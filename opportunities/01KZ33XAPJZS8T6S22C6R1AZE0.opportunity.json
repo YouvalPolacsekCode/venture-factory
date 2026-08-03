@@ -1,0 +1,25 @@
+{
+  "id": "01KZ33XAPJZS8T6S22C6R1AZE0",
+  "discovered_at": "2026-08-03T09:10:23+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://dev.to/6sensehq/why-most-ai-mvps-should-start-with-one-workflow-not-multiple-agents-2eid",
+    "snippet": "AI agents are exciting. They can research, write, reason, call tools, use APIs, summarize data, and... [12 score, 15 comments on scoping AI MVPs to single workflows]"
+  },
+  "problem_statement": "Founders and product teams building AI-powered SaaS products consistently over-engineer their initial architecture with multiple agents, wasting runway and delaying launch \u2014 there is no lightweight scoping or pre-build validation tool that helps them identify the single highest-value workflow to automate first.",
+  "target_segment": "Early-stage SaaS founders and product managers building AI-native products, typically pre-Series A",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-product",
+    "mvp",
+    "saas",
+    "product-scoping",
+    "founder-tools",
+    "agent-architecture",
+    "validation",
+    "startup"
+  ],
+  "notes": "Corroborated by dev.to post 'I Understood the Problem. I Still Built the Wrong Product.' (7 score, 13 comments). Both posts signal repeated execution mistakes founders are paying for with runway and time. Buyer profile: founders spending on product development who would pay for a scoping/validation service or checklist tool. Willingness to pay implied by 'costs us runway' framing.",
+  "status": "candidate"
+}

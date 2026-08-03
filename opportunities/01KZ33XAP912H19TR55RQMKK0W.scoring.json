@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZ33XAP912H19TR55RQMKK0W",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a real, identifiable person \u2014 a developer paying $1\u20135/day on LLM APIs who actively optimizes spend \u2014 and they do pay for tooling in adjacent spaces (evals, dev tools). However, this niche is small and the pain ('which model tier is best for my workflow?') is a genuine but intermittent decision problem rather than a daily blocker. Willingness to pay for a standalone benchmarking micro-service specifically for this is unproven; most devs would expect a free open-source tool or a simple script. The segment is reachable via HN and dev communities but the market may be too thin to sustain even a micro-SaaS without broader validation.",
+  "solution_plan": "WHAT: A self-serve 'LLM Tier ROI Calculator' \u2014 a web tool where a developer describes their workflow and paste in API cost logs, and Claude returns a model-tier recommendation with projected cost/quality tradeoffs. BUILD: The factory builds it as a Claude prompt chain + a simple Typeform-style intake form + a static results page + a Stripe link for a $9 one-time report; no coding by Youval. SELL: Reach developers on HN, indie hackers communities, and dev.to via a single outreach post + targeted replies in existing threads \u2014 Youval approves before any post goes live. MAINTAIN: Intake \u2192 Claude analysis \u2192 email delivery is fully automated; Stripe handles billing; Claude handles basic support FAQs; Youval only approves batched outreach sends. CAVEAT: The market is narrow; validate with 5\u201310 paid purchases before investing further.",
+  "notes": "Build gates met (operational_autonomy=7, buildability_with_ai=7, buyer_clarity=6, willingness_to_pay=5), but total 5.6 is below min_total_to_build (6.5). Staged as validate. The segment is real but small \u2014 needs demand confirmation before building.",
+  "scored_at": "2026-08-03T09:11:24+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

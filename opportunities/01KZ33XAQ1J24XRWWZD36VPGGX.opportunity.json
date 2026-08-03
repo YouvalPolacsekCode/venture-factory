@@ -1,0 +1,25 @@
+{
+  "id": "01KZ33XAQ1J24XRWWZD36VPGGX",
+  "discovered_at": "2026-08-03T09:10:23+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199599/a-container-having-access-to-the-containers-that-are-behind-gluetun-those-behin",
+    "snippet": "Is there a way in a compose file for a container to reach containers in the same compose that are behind gluetun, those that are behind tailscale and also a service running on host? containers to be behind gluetun have a network_mode: service:gluetun. containers to be behind tailscale have a network_mode: service:tailscale and the container that can access all of them not sure how to do it"
+  },
+  "problem_statement": "Self-hosting developers and small DevOps teams running Docker Compose stacks with multiple VPN network modes (e.g., Gluetun + Tailscale simultaneously) have no straightforward way to route traffic between all container groups and the host, forcing complex manual workarounds or architectural compromises.",
+  "target_segment": "Self-hosted infrastructure operators, indie developers, and small-team DevOps engineers running Docker Compose with VPN overlays",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "tailscale",
+    "vpn",
+    "self-hosting",
+    "networking",
+    "devops",
+    "container-networking"
+  ],
+  "notes": "Single signal but from a professional/operator context \u2014 someone running a multi-VPN homelab or small business stack. Pain is concrete and technical. Monetization angle: a managed config generator or Docker Compose template service for complex VPN topologies. Willingness to pay not explicit, but self-hosters increasingly pay for tools that save hours of debugging.",
+  "status": "candidate"
+}

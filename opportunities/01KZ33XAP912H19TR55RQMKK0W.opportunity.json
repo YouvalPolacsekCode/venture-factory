@@ -1,0 +1,25 @@
+{
+  "id": "01KZ33XAP912H19TR55RQMKK0W",
+  "discovered_at": "2026-08-03T09:10:23+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49149599",
+    "snippet": "I've been using DeepSeek v4 flash for guided agent workflows (in-IDE, prompt/review diffs) and have found no noticeable benefit to using Haiku, Opus, Sonnet in this workflow. For around a dollar a day, I am able to more than double my own productivity. What are the frontier models for / what are they trying to solve? Are they designed to one shot applications? Is the expectation that we want to be able to 'yolo' prompt LLMs and have them complete work unsupervised?"
+  },
+  "problem_statement": "Developers running cost-optimized LLM agent workflows (spending real money daily) lack clear guidance on when and why to upgrade to frontier models, and have no tooling to benchmark their specific workflow's ROI across model tiers before committing to higher spend.",
+  "target_segment": "Software developers and indie hackers running AI-assisted coding workflows, paying $0.50\u2013$5/day on LLM APIs",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm",
+    "ai-workflow",
+    "developer-tools",
+    "model-benchmarking",
+    "cost-optimization",
+    "coding-assistant",
+    "agent",
+    "roi"
+  ],
+  "notes": "Buyer is explicit: paying ~$1/day on LLM APIs and actively optimizing. Pain is around model selection ROI \u2014 no tool helps them decide 'is frontier worth it for my workflow?' Adjacent to eval tooling but framed around spend justification. Second HN thread (Ask HN: Have LLMs Plateaued?) reinforces the confusion around model capability vs cost tradeoffs.",
+  "status": "candidate"
+}

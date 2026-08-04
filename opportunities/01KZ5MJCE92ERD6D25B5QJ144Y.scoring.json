@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZ5MJCE92ERD6D25B5QJ144Y",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [],
+  "total": 5.1,
+  "recommended_stage": "drop",
+  "rationale": "The SSO logout gap is a real security pain for IT teams running Apache + Entra ID, but it is a one-time configuration problem rather than a recurring workflow \u2014 once fixed, the customer has no reason to pay again. The buyer (IT/infra engineer at a mid-market company) is a nameable role, but purchasing decisions for security tooling typically go through procurement and legal, making the sales cycle long and incompatible with a solo operator. Buildability is moderate at best: a correct OIDC logout flow with Entra ID requires server-side config templates, edge-case handling per Apache version, and potentially a lightweight proxy \u2014 beyond a simple Claude + Stripe solution. Both `operational_autonomy` (5) and `buildability_with_ai` (5) fail build gates, and the total (5.1) falls below the validate threshold.",
+  "solution_plan": "Not recommended for build or active validation at this time. The core offer would be a 'Entra ID SSO Logout Fix Kit' \u2014 a tested Apache mod_auth_openidc configuration template plus a walkthrough guide sold as a one-time download. While the factory could draft and package the documentation, the monetisation model is a one-time purchase with no recurring revenue, the addressable audience is narrow and hard to reach at scale via allowed channels, and the per-unit price ceiling is low (IT teams won't pay more than $50\u2013100 for a config template). If pursued, a simpler alternative is publishing a free detailed blog post to capture SEO traffic and attach a paid 'done-for-you audit' upsell \u2014 but that audit requires synchronous human work (a call or async review per client), which conflicts with factory constraints.",
+  "notes": "Total 5.1 is below min_total_to_validate (5.5). Failing build gates if promoted: operational_autonomy (5 < 7), buildability_with_ai (5 < 6). One-time fix nature limits LTV and recurring revenue potential.",
+  "scored_at": "2026-08-04T08:42:00+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

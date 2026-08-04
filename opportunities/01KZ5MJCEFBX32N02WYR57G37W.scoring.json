@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZ5MJCEFBX32N02WYR57G37W",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [],
+  "total": 4.9,
+  "recommended_stage": "drop",
+  "rationale": "DFS Namespace service instability is a genuine operational pain for Windows sysadmins, but the buyer is a mid-market IT ops employee (not a budget holder), reachability via allowed channels is poor, and there is no strong evidence this segment pays for lightweight point solutions \u2014 they typically rely on vendor support or established monitoring platforms (SolarWinds, PRTG). Buildability is moderate (a monitoring + auto-restart script wrapped with alerting is doable), but ongoing operational autonomy is hampered by the need for agent installation on Windows servers and per-environment configuration that requires human setup. Total (4.9) falls below the validate threshold.",
+  "solution_plan": "Not recommended for active investment. A theoretical offer would be a Windows service watchdog agent that monitors DFS Namespace health, auto-restarts on failure, and sends an alert with a root-cause summary \u2014 but deploying a Windows agent to customer servers requires trust, security review, and per-environment setup that makes it neither fast to build nor hands-off to operate. If this space is revisited, the better angle is a hosted monitoring SaaS with a lightweight agent install, which is a 6\u201312 month build, not a solo factory sprint. Drop and monitor for higher-signal confirmation.",
+  "notes": "Total 4.9 is below min_total_to_validate (5.5). Failing build gates if promoted: operational_autonomy (5 < 7), buyer_clarity (5 < 6). Segment reachability and willingness to pay for point solutions are the core weak signals.",
+  "scored_at": "2026-08-04T08:42:00+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

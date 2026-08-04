@@ -1,0 +1,25 @@
+{
+  "id": "01KZ5MJCEFBX32N02WYR57G37W",
+  "discovered_at": "2026-08-04T08:39:59+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199610/dfs-namespace-service-getting-stopped",
+    "snippet": "In my organisation we have the dfs setup for the domain based for our nas servers. The dfs namespace service is getting stopped and we have to start it manually... I want to know the root cause why it is getting stopped and fix the problem."
+  },
+  "problem_statement": "Windows DFS Namespace service on NAS-backed file servers randomly stops, requiring manual restarts and causing file share outages for the org, with no clear root cause surfaced by standard Windows tooling.",
+  "target_segment": "Windows sysadmins and IT ops staff at SMB and mid-market companies relying on DFS for shared network storage",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "dfs",
+    "windows-server",
+    "nas",
+    "sysadmin",
+    "file-server",
+    "uptime-monitoring",
+    "it-ops",
+    "infrastructure"
+  ],
+  "notes": "Business context clear: organisation with production NAS and DFS. Service outages have direct business cost (employees can't access files). Manual intervention implies no automated recovery. Monitoring and auto-remediation tooling for Windows infrastructure services is a known paid category (e.g., SolarWinds, PRTG). Single question but represents a class of recurring Windows infrastructure pain.",
+  "status": "candidate"
+}

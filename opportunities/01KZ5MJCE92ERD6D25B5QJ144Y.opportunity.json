@@ -1,0 +1,27 @@
+{
+  "id": "01KZ5MJCE92ERD6D25B5QJ144Y",
+  "discovered_at": "2026-08-04T08:39:59+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199608/how-can-i-implement-a-basic-simple-logout-with-an-apache-httpd-2-4-setup-with",
+    "snippet": "I have successfully implemented an SSO logon using Microsoft Entra ID (formerly Azure AD) SSO and OpenID in Apache HTTPD (2.4)... [seeking help implementing logout that actually invalidates the Entra ID session, not just the local OIDC cookie]"
+  },
+  "problem_statement": "Implementing proper SSO logout with Microsoft Entra ID (Azure AD) via Apache mod_auth_openidc is poorly documented and non-trivial, leaving many orgs with a broken logout experience that only clears the local session cookie but leaves the upstream IdP session active \u2014 a security gap.",
+  "target_segment": "IT/infrastructure engineers and sysadmins at mid-market companies self-hosting internal web apps behind Apache with Entra ID SSO",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "sso",
+    "entra-id",
+    "azure-ad",
+    "apache",
+    "oidc",
+    "logout",
+    "identity-management",
+    "sysadmin",
+    "security",
+    "mod-auth-openidc"
+  ],
+  "notes": "Business context is clear: org running internal apps with Entra ID SSO. Incomplete logout is a compliance/security issue that IT teams must resolve. Single question but the gap (no canonical working example) implies many orgs hit this silently. A documented solution, configuration template, or managed proxy product could be sold to SMB/mid-market IT teams. Willingness to pay inferred from Entra ID licensing context.",
+  "status": "candidate"
+}

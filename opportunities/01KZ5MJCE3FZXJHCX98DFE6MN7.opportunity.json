@@ -1,0 +1,25 @@
+{
+  "id": "01KZ5MJCE3FZXJHCX98DFE6MN7",
+  "discovered_at": "2026-08-04T08:39:59+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/priya__008/i-interviewed-50-freelancers-about-late-payments-almost-everyone-was-solving-the-wrong-problem-22o4",
+    "snippet": "I Interviewed 50 Freelancers About Late Payments. Almost Everyone Was Solving the Wrong Problem. If... [article based on 50 freelancer interviews about late payment pain, arguing the root cause is misdiagnosed]"
+  },
+  "problem_statement": "Freelancers across disciplines lose significant income to late or non-payment from clients, and existing invoicing and follow-up tools fail to address the real root cause \u2014 lack of payment commitment mechanisms upfront and at contract stage.",
+  "target_segment": "Independent freelancers and small agencies in web development, design, and creative services billing clients on net terms",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "freelance",
+    "late-payments",
+    "invoicing",
+    "payment-recovery",
+    "contract-management",
+    "cash-flow",
+    "accounts-receivable",
+    "freelancer-tools"
+  ],
+  "notes": "Author interviewed 50 freelancers \u2014 breadth of signal is above average for a single source. Late payment is a documented recurring cost (lost revenue, cash flow gaps). Freelancers actively pay for invoicing tools (Wave, HoneyBook, Bonsai, FreshBooks) indicating willingness to pay. The framing 'wrong problem' suggests an underserved angle: upfront payment commitment or deposit enforcement tooling rather than post-invoice chasing.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01KZ5MJCDWMC7CZQ1GP9FYRSA3",
+  "discovered_at": "2026-08-04T08:39:59+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439721/prevent-email-to-case-from-creating-multiple-cases-when-an-email-lists-several-r",
+    "snippet": "I have Email-to-Case set up with several routing addresses, each mapped to its own queue/case record type. The problem: if someone sends (or CCs) an email to more than one of these routing addresses at the same time, Salesforce creates a separate case for each matching address \u2014 so one email can spawn 2, 3, or more duplicate cases, all referencing the same message. What I'd like is one of the following: Only create a case from the first matching address, or merge all created cases into one, or detect and suppress the duplicate after creation."
+  },
+  "problem_statement": "Salesforce Email-to-Case creates duplicate cases when a single inbound email is addressed to multiple routing addresses, causing support queue pollution and agent confusion that requires manual deduplication effort.",
+  "target_segment": "Salesforce admins and support operations managers at B2B companies running Email-to-Case for customer support",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "email-to-case",
+    "duplicate-cases",
+    "support-ops",
+    "crm",
+    "case-management",
+    "salesforce-admin",
+    "customer-support"
+  ],
+  "notes": "Business buyer is clear: Salesforce-using support org spending agent time on duplicate triage. No explicit 'I'd pay' but Salesforce ecosystem has high willingness-to-pay for AppExchange solutions. Single question but precise and technical, suggesting practitioner with real production pain.",
+  "status": "candidate"
+}

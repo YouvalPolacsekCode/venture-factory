@@ -1,0 +1,25 @@
+{
+  "id": "01KZ5MJCEMRCXGKZP4BX9GPAH4",
+  "discovered_at": "2026-08-04T08:39:59+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148816/search-console-reports-page-as-indexed-and-crawlable-but-it-doesnt-appear-for",
+    "snippet": "Migrated a small Next.js web app to a new domain about a month ago. It used to show up when searching its brand name or exact URL directly. Now it doesn't appear at all for those same queries, not lower-ranked, just absent. What Search Console shows: 235 impressions, 3 clicks, 1.3% CTR over the last 28 days. Average position 60.7... No manual actions, robots.txt has no dis[allow issues]."
+  },
+  "problem_statement": "After a domain migration, websites disappear entirely from branded search queries despite Search Console showing the pages as indexed and crawlable with no manual actions, leaving site owners unable to diagnose or fix the issue with standard tooling.",
+  "target_segment": "Small business owners, indie developers, and early-stage startup founders who manage their own SEO after a domain or platform migration",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "domain-migration",
+    "google-search-console",
+    "branded-search",
+    "nextjs",
+    "indexing",
+    "search-visibility",
+    "webmaster"
+  ],
+  "notes": "Business impact is direct: losing branded search traffic post-migration means lost customers. Owner is technical (Next.js) but not an SEO specialist, indicating a gap for diagnostic tooling or migration audit services. Single question but migration-related ranking loss is a highly recurring and frequently discussed category. A productized migration audit checklist or monitoring service could find buyers among bootstrapped founders \u2014 they pay for SEO tools (Ahrefs, Semrush at $99\u2013$449/mo).",
+  "status": "candidate"
+}

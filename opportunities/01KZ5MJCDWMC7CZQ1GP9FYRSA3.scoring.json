@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZ5MJCDWMC7CZQ1GP9FYRSA3",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is clear and well-funded \u2014 Salesforce admins and support-ops managers at B2B companies are a named role with real budget, and the Salesforce AppExchange ecosystem has demonstrated high willingness to pay for point solutions. However, the solution is not buildable as a simple Claude + Stripe setup: it requires a Salesforce-connected app, Apex triggers or Flow customisation, and AppExchange security review \u2014 all of which exceed standard factory tooling and demand platform-specific engineering. Operational autonomy is low because any fix must live inside each customer's Salesforce org, making per-customer setup manual. Both `buildability_with_ai` (4) and `operational_autonomy` (4) fail build gates, capping stage at validate.",
+  "solution_plan": "The micro-service would be a Salesforce Email-to-Case deduplication tool \u2014 likely a managed package or a guided configuration recipe \u2014 that detects when a single inbound email spawns multiple cases and suppresses or merges duplicates automatically. Building it requires native Salesforce skills (Apex, Flow, or connected-app APIs) that go beyond what the Claude factory can generate and ship without a Salesforce developer partner; this is not a Claude-prompt-plus-landing-page problem. If Youval has or can recruit a Salesforce ISV partner, validation is worth running: reach out to 20\u201330 Salesforce admins via Salesforce StackExchange, Trailblazer Community, and LinkedIn with a 'would you pay $X/mo for a one-click fix?' message (all outreach approved before sending). Realistically, a solo non-technical operator cannot build and maintain this without either a Salesforce-native developer or an existing AppExchange product to white-label. Recommend validating demand only and parking build until a technical co-builder is identified.",
+  "notes": "Failing build gates: operational_autonomy (4 < 7 min), buildability_with_ai (4 < 6 min). Core constraint is Salesforce platform lock-in \u2014 solution must live inside each customer's org.",
+  "scored_at": "2026-08-04T08:42:00+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZ86V2YZ87AZBD62HA1PB9EC",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, named professional \u2014 Salesforce ISV developers and AppExchange partners at small-to-mid software companies \u2014 who demonstrably pays for developer tooling (Gearset charges $150+/user/month). The pain is concrete: dependency resolution failures during managed package migrations block development workflows and waste hours per incident. However, this is a migration/migration-adjacent task that occurs periodically rather than daily, and the market segment is relatively narrow (there are ~10,000 AppExchange partners globally). The total of 6.5 hits the build threshold, but this should enter validate first given zero responsiveness signal and the need to confirm how often ISVs face this specific migration scenario versus other Salesforce pain points. No build gate fails, but validate will confirm market depth.",
+  "solution_plan": "WHAT: A pre-flight dependency checker and sequencer for Salesforce managed package metadata migrations \u2014 you paste in your org metadata manifest, it identifies dependency conflicts and outputs a sequenced deployment order with fix suggestions. BUILD: The factory builds a web form intake (what components, source org type, target org type), a Claude prompt that parses the Salesforce metadata dependency graph and outputs a sequenced plan with conflict explanations, a results page, and a Stripe link for a one-time report ($49-99) or a monthly subscription ($79/mo). No operator coding required. SELL: Reach Salesforce ISV developers via the Salesforce Partner Community, the r/salesforce subreddit, and AppExchange Partner Slack channels \u2014 the factory drafts outreach messages and posts, which go out only after Youval approves. MAINTAIN: Delivery is fully automated (form \u2192 Claude \u2192 report \u2192 email). Billing via Stripe. Support queries go to a Claude-backed email responder that handles common Salesforce metadata questions; only genuinely novel issues get escalated. Youval's only recurring task is approving outreach batches. CAVEAT: Market is narrow \u2014 validate that enough ISVs hit this specific problem frequently enough to sustain a product versus a one-time consulting engagement.",
+  "notes": "All build gates pass (operational_autonomy=7, buildability_with_ai=8, buyer_clarity=8, willingness_to_pay=7). Recommended validate over build due to narrow market size and zero responsiveness signal \u2014 run a small outreach test to 20-30 Salesforce ISVs before committing to build.",
+  "scored_at": "2026-08-05T08:40:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

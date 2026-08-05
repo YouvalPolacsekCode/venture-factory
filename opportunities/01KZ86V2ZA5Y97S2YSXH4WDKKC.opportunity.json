@@ -1,0 +1,25 @@
+{
+  "id": "01KZ86V2ZA5Y97S2YSXH4WDKKC",
+  "discovered_at": "2026-08-05T08:37:48+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://travel.stackexchange.com/questions/204314/tourist-visa-after-moving-from-regular-job-to-freelancer",
+    "snippet": "I have been travelling across globe for many years as Tourist however all this while I was working as a regular employee of companies. I have now moved to freelancing and I am wondering if this will have any impact while applying for Visa... strong ties to home country is one of criteria evaluated by Visa officers and I believe having a regular job shows ties to home country, and if freelancing..."
+  },
+  "problem_statement": "Freelancers and independent contractors from high-scrutiny passport countries (e.g., India) lack clear, reliable guidance on how to document proof of ties to their home country when applying for tourist or Schengen visas, leading to visa rejections or excessive time spent compiling documentation.",
+  "target_segment": "Freelancers and independent contractors based in India and other high-scrutiny countries who travel frequently for business or leisure and need to apply for Schengen or other complex visas.",
+  "geo": "IN",
+  "signal_strength": 2,
+  "keywords": [
+    "visa-documentation",
+    "freelancer-visa",
+    "schengen-visa",
+    "remote-work",
+    "digital-nomad",
+    "india",
+    "travel-compliance",
+    "visa-application"
+  ],
+  "notes": "Question scored 3 and attracted 2 comments on Travel SE, indicating this is a recurring concern among the growing freelancer/remote-work population in India. The problem repeats across many similar questions on the same site. Opportunity: a document-preparation service or checklist tool specifically for freelancers applying for visas\u2014either as a one-time paid service (~$20-50) or a subscription for frequent travelers. Comparable services exist for employment-based visa prep. Buyer willingness to pay is moderate; the cost of a rejection (wasted airline tickets, missed business) creates real motivation.",
+  "status": "candidate"
+}

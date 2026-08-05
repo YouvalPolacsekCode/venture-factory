@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-08-04T05:42:04+00:00",
-    "idt": "2026-08-04T08:42:04+03:00"
+    "utc": "2026-08-05T05:40:13+00:00",
+    "idt": "2026-08-05T08:40:13+03:00"
   },
   "funnel": {
-    "candidates": 186,
-    "scored": 186,
+    "candidates": 191,
+    "scored": 191,
     "validated": 21,
     "build_decisions": {
       "defer_1_week": 19,
@@ -334,6 +334,35 @@
       "source_type": "other",
       "source_url": "https://github.com/verbb/formie/issues/2891",
       "discovered_at": "2026-07-23T08:45:04+03:00"
+    },
+    {
+      "topics": [
+        "salesforce",
+        "managed-package",
+        "isv-development"
+      ],
+      "id": "01KZ86V2YZ87AZBD62HA1PB9EC",
+      "problem_statement": "Salesforce ISV developers migrating managed package orgs to Partner Developer Editions face complex, manually resolved dependency errors during metadata deployment, with no automated tooling to detect and sequence component dependencies before deployment—wasting hours of developer time per migration.",
+      "target_segment": "Salesforce ISV developers and AppExchange partners at small-to-mid-size software companies managing managed package migrations and org restructuring.",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, named professional — Salesforce ISV developers and AppExchange partners at small-to-mid software companies — who demonstrably pays for developer tooling (Gearset charges $150+/user/month). The pain is concrete: dependency resolution failures during managed package migrations block development workflows and waste hours per incident. However, this is a migration/migration-adjacent task that occurs periodically rather than daily, and the market segment is relatively narrow…",
+      "solution_plan": "WHAT: A pre-flight dependency checker and sequencer for Salesforce managed package metadata migrations — you paste in your org metadata manifest, it identifies dependency conflicts and outputs a sequenced deployment order with fix suggestions. BUILD: The factory builds a web form intake (what components, source org type, target org type), a Claude prompt that parses the Salesforce metadata dependency graph and outputs a sequenced plan with conflict explanations, a results page, and a Stripe link for a one-time report ($49-99) or a monthly subscription ($79/mo). No operator coding required. SELL: Reach Salesforce ISV developers via the Salesf…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439723/creating-a-pde-with-an-orgs-metadata",
+      "discovered_at": "2026-08-05T08:37:47+03:00"
     },
     {
       "topics": [
@@ -723,50 +752,15 @@
       "source_type": "other",
       "source_url": "https://dev.to/thegdsks/the-portfolio-math-when-30-small-apps-beat-1-big-one-41ai",
       "discovered_at": "2026-06-11T10:23:43+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "metadata-api",
-        "permissions"
-      ],
-      "id": "01KXADWPA1PG54C71BG4PHAQ0W",
-      "problem_statement": "Salesforce admins and developers cannot reliably manage permission dependencies when deploying Profiles via the Metadata API — the UI cascades permissions forward but does not roll them back, and it is unclear whether the API enforces the same rules, creating security and compliance risk in enterprise orgs.",
-      "target_segment": "Salesforce administrators and DevOps engineers at mid-to-large enterprises managing permission sets and profile deployments via CI/CD",
-      "total": 5.9,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is sharply defined — Salesforce admins and release managers at compliance-sensitive enterprises — and the pain is serious: permission misconfiguration from API/UI divergence can cause audit failures with real legal and financial consequences. The existing market for Salesforce governance tools (e.g., OwnBackup, Certinia, Strongpoint) confirms willingness to pay at the enterprise level. However, building a reliable pre-deployment permission auditor requires deep Salesforce Metadata API…",
-      "solution_plan": "The micro-service would be a Salesforce Permission Pre-Flight Checker: an operator-approved outreach campaign identifies Salesforce admins and release managers on LinkedIn and the Trailblazer Community, offering a paid audit report. The factory builds a form-based intake (org URL, permission set XML upload or API token), Claude analyzes the permission dependency graph against known Salesforce cascade rules, and outputs a PDF/HTML risk report flagging dangerous cascades before deployment. Stripe handles a one-time report fee ($49–$149) or a monthly subscription. Delivery is automated (Claude generates the report, emails it); the operator's on…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 6,
-        "Will pay": 6,
-        "Buildable": 6,
-        "Pain": 8
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439629/deploying-a-profile-via-metadata-api-with-debug-apex-enabled-but-modify-all-data",
-      "discovered_at": "2026-07-12T08:48:05+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2162,
-    "last_7_days_usd": 1.6193,
-    "all_time_usd": 13.5619,
+    "today_usd": 0.2547,
+    "last_7_days_usd": 1.6719,
+    "all_time_usd": 13.8166,
     "by_day": [
-      {
-        "date": "2026-07-29",
-        "usd": 0.2021
-      },
       {
         "date": "2026-07-30",
         "usd": 0.1823
@@ -790,20 +784,24 @@
       {
         "date": "2026-08-04",
         "usd": 0.2162
+      },
+      {
+        "date": "2026-08-05",
+        "usd": 0.2547
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5824
+        "usd": 0.6027
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3628
+        "usd": 0.3655
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3313
+        "usd": 0.3612
       },
       {
         "agent": "build_decisions",
@@ -811,46 +809,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0335
+        "usd": 0.0332
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-29",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-30",
       "agents": {
@@ -1060,12 +1023,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-05",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-04.md",
-    "date": "2026-08-04",
-    "text": "# Daily Summary — 2026-08-04 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 186 |\n| Opportunities validated past threshold | 41 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments tracked in current state.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS communities.\n2. `pain_validation` probes top 15 candidates from today's 186 surfaced opportunities.\n3. `opportunity_scoring` re-ranks candidates as validation signals arrive.\n4. `build_decisions` evaluates candidates reaching validation threshold for MVP viability.\n5. `cost_gain` computes weekly ROI metrics on validated opportunities.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-08-05.md",
+    "date": "2026-08-05",
+    "text": "# Daily Summary — 2026-08-05 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 191 |\n| Opportunities validated past threshold | 41 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or services in discovery/validation/build/live/scaling stages today.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS and SMB verticals.\n2. `opportunity_scoring` ranks today's 191 candidate opportunities; top scorers move to validation queue.\n3. `pain_validation` runs targeted probes on highest-ranked candidates.\n4. `lead_research` assembles contact lists for validated opportunities above threshold.\n5. `build_decisions` evaluates next experiment cohort based on 41 validated signals.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

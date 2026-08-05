@@ -1,0 +1,25 @@
+{
+  "id": "01KZ86V2YZ87AZBD62HA1PB9EC",
+  "discovered_at": "2026-08-05T08:37:47+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439723/creating-a-pde-with-an-orgs-metadata",
+    "snippet": "I am trying to create a new PDE with an org which is a packaging org of a managed package. So I need to move all of the components over to the PDE in raw form. The package can't just be installed into the PDE because the namespace will be added automatically and the developers will not be able to edit it and deploy updates in the future. So I've made a git and am moving all of the components to the PDE from the git, but I'm running into dependent problems during my deploying..."
+  },
+  "problem_statement": "Salesforce ISV developers migrating managed package orgs to Partner Developer Editions face complex, manually resolved dependency errors during metadata deployment, with no automated tooling to detect and sequence component dependencies before deployment\u2014wasting hours of developer time per migration.",
+  "target_segment": "Salesforce ISV developers and AppExchange partners at small-to-mid-size software companies managing managed package migrations and org restructuring.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "managed-package",
+    "isv-development",
+    "metadata-deployment",
+    "appexchange",
+    "salesforce-dx",
+    "dependency-management",
+    "org-migration"
+  ],
+  "notes": "Professional Salesforce developer context (ISV/AppExchange partner, not a hobbyist admin). The pain is concrete: dependency resolution failures during metadata deployment block development workflows. Existing tools (Salesforce CLI, sf) do not auto-resolve or sequence component dependencies across namespace boundaries. Opportunity: a dependency-aware Salesforce metadata deployment tool or pre-flight checker specifically for managed package migrations. Buyers are Salesforce ISVs who pay for developer tooling (e.g., Gearset at ~$150+/mo per user is a comparable comp).",
+  "status": "candidate"
+}

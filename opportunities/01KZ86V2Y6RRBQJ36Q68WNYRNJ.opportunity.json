@@ -1,0 +1,25 @@
+{
+  "id": "01KZ86V2Y6RRBQJ36Q68WNYRNJ",
+  "discovered_at": "2026-08-05T08:37:47+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49152873",
+    "snippet": "Having worked in COBOL extensively in the 80s and 90s, as well as working for a software house that did migrations... I do wonder how an ambitious AI would handle the maths. COBOL is renowned for its fixed no rounding maths, utterly rigid and defined in the code. Java on the other hand is not (e.g., 0.1 + 0.2 becomes 0.30000000000000004), unless they are extensively using BigDecimal, then it's already a broken migration. I've seen projects proclaim [success] but..."
+  },
+  "problem_statement": "AI-assisted COBOL-to-Java (and similar legacy language) migrations silently introduce numeric precision bugs and semantic errors that are extremely costly to detect post-migration, because the AI optimizes for syntactic equivalence rather than behavioral correctness, especially for fixed-point arithmetic and edge-case business logic.",
+  "target_segment": "Enterprise IT teams and migration consultancies running AI-assisted legacy COBOL/RPG/assembler-to-modern-language migration projects, typically at banks, insurers, and government agencies.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "cobol-migration",
+    "legacy-modernization",
+    "ai-code-migration",
+    "numeric-precision",
+    "enterprise-it",
+    "migration-testing",
+    "behavioral-equivalence",
+    "financial-software"
+  ],
+  "notes": "Commenter has decades of professional COBOL and migration experience at a software house; identifies a concrete class of silent bugs that AI migration tools produce. Enterprises pay large sums for migration projects\u2014cost of a precision bug in financial logic is enormous. Opportunity: a validation/regression harness specifically for AI-generated legacy migrations that checks numeric and behavioral equivalence, not just syntax. Buyer is the migration consultancy or enterprise IT department running the project. Willingness to pay is high given liability exposure.",
+  "status": "candidate"
+}

@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KZ86V2Y6RRBQJ36Q68WNYRNJ",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 6,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a behavioral-equivalence validation harness for COBOL-to-Java migrations requires deep per-engagement customization: ingesting the legacy codebase, mapping business rules, configuring numeric precision tests. This is professional services work, not a self-serve product."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling into enterprise IT/consultancy requires discovery calls, scoping, and proposal cycles \u2014 no self-serve path at this price point."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Interpreting edge-case test failures in financial logic requires expert human judgment on an ongoing basis."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and expensive \u2014 a precision bug in migrated banking COBOL can cost millions \u2014 and enterprise IT departments running migration projects clearly have budget. However, this is emphatically not an autonomous micro-service: every engagement requires loading a specific legacy codebase, understanding its numeric semantics, and customizing a test harness, which is irreducibly per-customer expert work. Operational autonomy scores 2 because delivery is effectively consulting. The build gate for operational_autonomy (min 7) is far unmet, and buildability_with_ai scores 3 because this genuinely requires specialized tooling beyond Claude prompts.",
+  "solution_plan": "This opportunity does not pass the autonomy test for a solo non-technical operator running an AI factory. Building a behavioral-equivalence validator for COBOL-to-Java requires ingesting proprietary legacy codebases, writing custom numeric regression tests, and interpreting domain-specific financial logic \u2014 work that demands a skilled engineer on every engagement. Even if Claude could assist with parts of the analysis, selling to enterprise banks and consultancies requires sales cycles, NDAs, and expert delivery. A solo operator without a COBOL/Java engineering background cannot realistically build, sell, or maintain this. Recommended action: drop this candidate; revisit only if a strategic partnership with a migration consultancy is established.",
+  "notes": "Fails operational_autonomy_min (scored 2, need 7) and buildability_with_ai_min (scored 3, need 6). This is a consulting/professional-services play, not an autonomous micro-service.",
+  "scored_at": "2026-08-05T08:40:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

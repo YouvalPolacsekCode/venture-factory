@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZ86V2YR8V14D8ATV1N2D7R5",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Configuring retry/rollback policies for specific IoT platform architectures (hawkbit, AWS IoT, Azure IoT Hub) requires per-customer integration engineering that cannot be automated generically."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling to IoT platform engineering teams at industrial/automotive companies requires technical discovery, architecture review, and sales calls \u2014 no plausible self-serve path at the contract sizes needed."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "IoT fleet operators genuinely suffer when transient OTA failures require manual recovery at scale, and companies deploying firmware to thousands of devices have budget to solve this. However, building a managed layer that sits above arbitrary device management platforms (hawkbit, AWS IoT, etc.) requires deep per-customer integration work \u2014 each customer's platform, device types, and failure semantics differ. Operational autonomy scores 3 because this is effectively a managed services play. Buildability with Claude/standard tooling scores 3 because it requires real infrastructure integration, not prompts and a Stripe link.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator with an AI factory. A managed retry/rollback layer for IoT OTA deployments requires integrating with each customer's specific device management platform via its API, understanding their device fleet topology, and configuring failure-handling logic \u2014 this is infrastructure engineering work. Even with Claude assisting, the operator would need to perform per-customer setup, monitor deployments, and support incidents. Reaching IoT engineering teams requires navigating long enterprise sales cycles. Drop this candidate unless a very specific, narrow wedge is identified (e.g. a one-click Stripe-purchased hawkbit plugin with fixed retry presets).",
+  "notes": "Fails operational_autonomy_min (scored 3, need 7) and buildability_with_ai_min (scored 3, need 6). Infrastructure/integration-heavy play incompatible with autonomous factory model.",
+  "scored_at": "2026-08-05T08:40:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

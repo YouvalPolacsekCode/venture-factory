@@ -1,0 +1,25 @@
+{
+  "id": "01KZ86V2YR8V14D8ATV1N2D7R5",
+  "discovered_at": "2026-08-05T08:37:47+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/eclipse-hawkbit/hawkbit/issues/3251",
+    "snippet": "Introduce first-class retry policies for failed deployment actions, including delay/backoff behavior, status code matching rules, and support in rollouts plus auto-assignments. Goal: Improve success rates for transient failures while keeping resource usage controlled and observable. Device-side installations can fail for transient reasons (for example unstable connectivity, temporary service issues). In many cases, a retry succeeds, but today recovery is mostly manual."
+  },
+  "problem_statement": "IoT and edge device management platforms lack configurable, first-class retry and backoff policies for failed OTA deployments, forcing operations teams to manually recover from transient failures at scale\u2014an expensive and error-prone process when managing thousands of devices.",
+  "target_segment": "IoT platform engineers and DevOps teams at companies deploying OTA firmware/software updates to fleets of edge devices, using open-source or commercial device management platforms.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "iot-deployment",
+    "ota-updates",
+    "device-management",
+    "retry-policy",
+    "edge-computing",
+    "firmware-updates",
+    "fleet-management",
+    "devops-automation"
+  ],
+  "notes": "Feature request filed against hawkbit (Eclipse Foundation IoT project), widely used in industrial and automotive IoT. The requester describes a detailed, well-scoped engineering problem with explicit business impact (manual recovery cost, transient failure rates). Professional context: this is a company engineering team, not a hobbyist. Opportunity: a managed layer on top of existing device management platforms providing configurable retry/rollback/observability policies, sold as SaaS to IoT platform operators. Buyer willingness to pay is tied directly to fleet size and failure rate cost savings.",
+  "status": "candidate"
+}

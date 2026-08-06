@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-08-05T05:40:13+00:00",
-    "idt": "2026-08-05T08:40:13+03:00"
+    "utc": "2026-08-06T05:42:14+00:00",
+    "idt": "2026-08-06T08:42:14+03:00"
   },
   "funnel": {
-    "candidates": 191,
-    "scored": 191,
+    "candidates": 197,
+    "scored": 197,
     "validated": 21,
     "build_decisions": {
       "defer_1_week": 19,
@@ -131,6 +131,35 @@
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148726/how-can-i-recover-a-recent-historical-version-of-a-webpage-when-wayback-machine",
       "discovered_at": "2026-06-27T09:22:12+03:00"
+    },
+    {
+      "topics": [
+        "sso",
+        "entra-id",
+        "azure-ad"
+      ],
+      "id": "01KZASB3HXYTCJKDHZZNE7VR0X",
+      "problem_statement": "IT consultants and sysadmins integrating Microsoft Entra ID (Azure AD) SSO with non-Microsoft web servers like Apache face extremely poor documentation and no guided setup tooling, causing billable hours to be wasted.",
+      "target_segment": "IT consultants and sysadmins managing web infrastructure for SMB/enterprise clients using Microsoft Entra ID",
+      "total": 6.7,
+      "recommended_stage": "build",
+      "rationale": "The buyer is concrete and identifiable — IT consultants and sysadmins billing hours for enterprise SSO integrations — and they are already in a paid context (working for clients with Microsoft Entra ID licenses, which start at ~$6/user/month). The problem is highly specific, well-documented by a real practitioner (929-line config file), and an interactive Apache+Entra ID SSO config generator is a near-perfect Claude use case: takes structured inputs and outputs a validated, annotated config fil…",
+      "solution_plan": "The micro-service is an interactive Apache + Microsoft Entra ID SSO configuration generator: the consultant fills in a short form (tenant ID, redirect URI, Apache version, module), and Claude produces a complete, annotated `mod_auth_openidc` config file with step-by-step instructions — taking a 929-line opaque sample down to a working 50-line config. BUILD: the factory creates a web form with ~8 fields, a Claude prompt that generates the config with inline comments, and a Stripe payment link ($29 one-time per generated config, or $49/mo unlimited). No coding by Youval — factory handles the form, prompt, PDF/text output, and payment. SELL: th…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 9,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199620/how-can-i-implement-a-basic-simple-login-with-microsoft-entra-id-sso-formerly-a",
+      "discovered_at": "2026-08-06T08:39:36+03:00"
     },
     {
       "topics": [
@@ -721,50 +750,15 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199553/how-to-add-a-new-secondary-powerdns-server-and-transfer-all-existing-zones-from",
       "discovered_at": "2026-07-27T09:18:05+03:00"
-    },
-    {
-      "topics": [
-        "indie-hacker",
-        "portfolio-apps",
-        "micro-saas"
-      ],
-      "id": "01KTTS1G8WVPAMD0QFKWVFZG0H",
-      "problem_statement": "Indie hackers and solo founders building a portfolio of small apps lack tooling to manage, monitor revenue/metrics, and cross-promote multiple micro-products from a single dashboard, forcing them to juggle many separate admin panels and spreadsheets.",
-      "target_segment": "Indie hackers and solo operators running 3-30 small SaaS or digital products simultaneously, typically generating $500–$10k MRR across the portfolio.",
-      "total": 5.9,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a nameable, reachable ICP — indie hackers running 3-30 small SaaS products, active on IndieHackers, Twitter/X, and ProductHunt — who already pay per-product for analytics and hosting tools, giving real willingness-to-pay signal. The service (unified portfolio dashboard with revenue aggregation, renewal alerts, and cross-promotion scheduling) is mostly automatable: Claude can pull and summarise data from connected APIs, and Stripe/billing can run hands-off. The deciding factor holdi…",
-      "solution_plan": "WHAT: A lightweight portfolio-management dashboard for indie hackers that aggregates MRR, key metrics, and renewal dates across all their small products in one place, with weekly digest emails and cross-promotion scheduling. BUILD: The factory creates a simple onboarding form where users connect their Stripe/Paddle accounts via OAuth or API key; Claude pulls and normalises the data, generates a weekly summary email, and schedules cross-promotion nudges; a Stripe subscription link handles billing — no coding by the operator. SELL: Reach founders directly on IndieHackers 'Products' pages, Twitter/X #indiehackers hashtag, and the 'Show HN' crow…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 6,
-        "Will pay": 6,
-        "Buildable": 6,
-        "Pain": 6
-      },
-      "verdict": "rejected",
-      "source_type": "other",
-      "source_url": "https://dev.to/thegdsks/the-portfolio-math-when-30-small-apps-beat-1-big-one-41ai",
-      "discovered_at": "2026-06-11T10:23:43+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2547,
-    "last_7_days_usd": 1.6719,
-    "all_time_usd": 13.8166,
+    "today_usd": 0.2462,
+    "last_7_days_usd": 1.7358,
+    "all_time_usd": 14.0627,
     "by_day": [
-      {
-        "date": "2026-07-30",
-        "usd": 0.1823
-      },
       {
         "date": "2026-07-31",
         "usd": 0.3489
@@ -788,20 +782,24 @@
       {
         "date": "2026-08-05",
         "usd": 0.2547
+      },
+      {
+        "date": "2026-08-06",
+        "usd": 0.2462
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6027
+        "usd": 0.6126
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3655
+        "usd": 0.4115
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3612
+        "usd": 0.3692
       },
       {
         "agent": "build_decisions",
@@ -809,46 +807,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0333
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-30",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-07-31",
       "agents": {
@@ -1058,12 +1021,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-06",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-05.md",
-    "date": "2026-08-05",
-    "text": "# Daily Summary — 2026-08-05 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 191 |\n| Opportunities validated past threshold | 41 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or services in discovery/validation/build/live/scaling stages today.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS and SMB verticals.\n2. `opportunity_scoring` ranks today's 191 candidate opportunities; top scorers move to validation queue.\n3. `pain_validation` runs targeted probes on highest-ranked candidates.\n4. `lead_research` assembles contact lists for validated opportunities above threshold.\n5. `build_decisions` evaluates next experiment cohort based on 41 validated signals.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-08-06.md",
+    "date": "2026-08-06",
+    "text": "# Daily Summary — 2026-08-06 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 197 |\n| Opportunities validated past threshold | 42 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. All focus today on opportunity discovery and validation pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning for fresh pain signals across target cohorts.\n2. `pain_validation` validates high-scoring opportunities from today's 197 candidates.\n3. `opportunity_scoring` re-ranks validated opportunities for next phase.\n4. `build_decisions` reviews top-scored opportunities for experiment viability.\n5. `cost_gain` prepares weekly analysis of discovery velocity and conversion funnel.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

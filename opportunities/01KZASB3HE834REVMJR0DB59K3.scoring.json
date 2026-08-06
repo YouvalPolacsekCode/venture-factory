@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KZASB3HE834REVMJR0DB59K3",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A credible E2E encryption audit or certification requires actual cryptographic review by qualified engineers \u2014 Claude cannot produce a legally or commercially credible security certification autonomously."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Security audit and certification services touch compliance and legal representations; false or misleading certification claims carry regulatory and liability risk."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling a trust/certification product to enterprise IT buyers involves sales conversations and scoping calls \u2014 not self-serve."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The underlying buyer pain is real but narrow \u2014 procurement teams occasionally stall on vendor trust \u2014 and the purchase frequency is low (one-time vendor evaluation, not recurring). More critically, issuing a credible security certification requires qualified cryptographers and carries legal liability that a solo non-technical operator with Claude cannot fulfill; a fake or shallow certification badge would be commercially worthless and potentially deceptive. Operational autonomy is near zero by definition for this category.",
+  "solution_plan": "Not recommended to build. A meaningful E2E encryption certification service requires actual cryptographic expertise and carries legal accountability \u2014 a solo operator with an AI factory cannot credibly or safely deliver this. An 'AI-generated trust report' with no qualified auditor behind it would not be trusted by enterprise buyers (who are the only viable paying segment) and could constitute misleading security claims. This is a pass.",
+  "notes": "Fails operational_autonomy_min (score 2, floor 7), buildability_with_ai_min (score 3, floor 6), willingness_to_pay_min (score 4, floor 5), and buyer_clarity_min (score 5, floor 6). Penalties for regulated_industry and requires_human_fulfillment also applied.",
+  "scored_at": "2026-08-06T08:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZ33XAP912H19TR55RQMKK0W",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "monthly",
+  "rationale": "The pain is real but intermittent: model-tier selection is a periodic decision, not a daily blocker, and the HN thread shows intellectual curiosity more than operational suffering. No willingness-to-pay signal exists for a standalone benchmarking tool in this niche\u2014developers expect free OSS scripts or built-in eval dashboards from their existing tooling. The market is too thin (indie devs spending $1\u20135/day on APIs) to sustain even a micro-SaaS at meaningful revenue.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49149599"
+  ],
+  "evaluated_at": "2026-08-06T08:40:39+03:00"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZASB3JDTHZQD90M4Z49QKRG",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Resolving VPN compatibility issues for enterprise customers requires reading specific config files, diagnosing environment-specific network setups, and iterating on fixes \u2014 this is inherently per-customer manual technical work, not a standardized automated delivery."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise sysadmins debugging VPN issues will have follow-up questions, edge cases, and escalations that require ongoing human-judgement support rather than fully automated responses."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real, identifiable person (IT sysadmin at an SMB or enterprise using Sophos + OpenVPN) and the pain is genuine \u2014 being forced to choose between a paid security product and a security hardening standard is a real blocker. However, this opportunity scores poorly on the two axes that matter most: willingness to pay is marginal (sysadmins typically expect free community answers on ServerFault, and the market is too fragmented to command recurring SaaS pricing), and operational autonomy is low because every engagement requires diagnosing a unique customer environment with no standardized automated delivery path. With a total of 2.8 after penalties, this is a consulting opportunity masquerading as a product, which is exactly the wrong shape for a solo autonomous factory.",
+  "solution_plan": "This idea does not have a viable product shape for a solo non-technical operator running an autonomous Claude factory. The core deliverable \u2014 diagnosing why a specific Sophos client cannot handshake with a specific OpenVPN server config \u2014 depends on reading customer-specific logs, iterating on config changes, and validating results in a live environment. That is per-customer manual technical consulting work. Even wrapping it in a 'compatibility report generator' tool would require every customer to correctly capture and submit the right diagnostic data, and Claude's output would need expert review before a sysadmin trusts it in a production environment. There is no realistic self-serve, fully-automated delivery here. The operator (Youval) would need deep network/VPN expertise to verify outputs and handle support \u2014 this is not a candidate for this factory.",
+  "notes": "Fails operational_autonomy build_gate (scored 4, minimum 7): every customer engagement requires per-customer manual technical diagnosis. Fails buildability_with_ai build_gate (scored 5, minimum 6): the solution is not shippable as a Claude prompt + page + Stripe within a week at the quality level enterprise sysadmins require for production security infrastructure. Score of 2.8 is well below the 5.5 validate threshold \u2014 drop.",
+  "scored_at": "2026-08-06T08:42:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZASB3HXYTCJKDHZZNE7VR0X",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 9,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.7,
+  "penalties_applied": [],
+  "total": 6.7,
+  "recommended_stage": "build",
+  "rationale": "The buyer is concrete and identifiable \u2014 IT consultants and sysadmins billing hours for enterprise SSO integrations \u2014 and they are already in a paid context (working for clients with Microsoft Entra ID licenses, which start at ~$6/user/month). The problem is highly specific, well-documented by a real practitioner (929-line config file), and an interactive Apache+Entra ID SSO config generator is a near-perfect Claude use case: takes structured inputs and outputs a validated, annotated config file. All four build gates are met (operational_autonomy 8, buildability_with_ai 9, buyer_clarity 8, willingness_to_pay 7), and the service can be delivered fully self-serve. The main gap is zero responsiveness signal \u2014 one validation round with 20 outbound messages to sysadmin forums is advised before full launch.",
+  "solution_plan": "The micro-service is an interactive Apache + Microsoft Entra ID SSO configuration generator: the consultant fills in a short form (tenant ID, redirect URI, Apache version, module), and Claude produces a complete, annotated `mod_auth_openidc` config file with step-by-step instructions \u2014 taking a 929-line opaque sample down to a working 50-line config. BUILD: the factory creates a web form with ~8 fields, a Claude prompt that generates the config with inline comments, and a Stripe payment link ($29 one-time per generated config, or $49/mo unlimited). No coding by Youval \u2014 factory handles the form, prompt, PDF/text output, and payment. SELL: the factory drafts targeted posts in r/sysadmin, ServerFault answers, and Microsoft Entra ID community forums (linking to the tool as a solution to a common question); each post draft is approved by Youval before publishing. MAINTAIN: user fills the form, pays via Stripe, Claude generates and emails the config file \u2014 fully automated. Youval's only recurring involvement is approving outreach drafts and monitoring for edge-case failures (e.g. unexpected Apache versions). This is genuinely viable for a solo non-technical operator.",
+  "notes": "All build gates met. Responsiveness signal is 0 (untested) \u2014 recommend 20 targeted posts/DMs before scaling spend. Frequency is moderate (consultants encounter this once per client engagement, not daily), which caps long-term MRR unless expanded to other SSO providers (Okta, Google Workspace) or other web servers (nginx, Tomcat).",
+  "scored_at": "2026-08-06T08:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

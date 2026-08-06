@@ -1,0 +1,25 @@
+{
+  "id": "01KZASB3HXYTCJKDHZZNE7VR0X",
+  "discovered_at": "2026-08-06T08:39:36+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199620/how-can-i-implement-a-basic-simple-login-with-microsoft-entra-id-sso-formerly-a",
+    "snippet": "A consultant setting up Microsoft Entra ID SSO for an Apache HTTPD client: 'there is no clear and concise instructions on how to do this... the sample config file is about 929 lines and is not [helpful].' Client is actively trying to implement paid enterprise SSO."
+  },
+  "problem_statement": "IT consultants and sysadmins integrating Microsoft Entra ID (Azure AD) SSO with non-Microsoft web servers like Apache face extremely poor documentation and no guided setup tooling, causing billable hours to be wasted.",
+  "target_segment": "IT consultants and sysadmins managing web infrastructure for SMB/enterprise clients using Microsoft Entra ID",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "sso",
+    "entra-id",
+    "azure-ad",
+    "apache",
+    "identity-management",
+    "devops",
+    "enterprise-auth",
+    "openid-connect"
+  ],
+  "notes": "Explicit business context: consultant working for a paying client. Microsoft Entra ID is a paid enterprise product \u2014 this is firmly in the professional/billable-hours space. A guided setup wizard or config generator for Apache+Entra SSO could be sold as a tool or service. Pain is concrete and the 929-line config file is a memorable friction point.",
+  "status": "candidate"
+}

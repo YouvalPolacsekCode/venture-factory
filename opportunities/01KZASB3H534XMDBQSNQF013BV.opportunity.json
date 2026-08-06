@@ -1,0 +1,23 @@
+{
+  "id": "01KZASB3H534XMDBQSNQF013BV",
+  "discovered_at": "2026-08-06T08:39:36+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49190911",
+    "snippet": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery. Comment: 'Yeah, like $5 per unique ad would be basically nothing but it would pay for plenty of review.' \u2014 suggesting willingness to pay for ad content moderation/review tooling at scale."
+  },
+  "problem_statement": "Ad platforms and brands need affordable, scalable pre-publication review of AI-generated ad creatives to catch policy-violating or brand-unsafe content before it goes live, but no cheap per-unit review service exists.",
+  "target_segment": "Digital advertising agencies, brand safety teams at mid-to-large advertisers, ad network compliance teams",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ad-moderation",
+    "brand-safety",
+    "ai-generated-content",
+    "content-review",
+    "ad-compliance",
+    "policy-enforcement"
+  ],
+  "notes": "Commenter explicitly frames $5/ad as trivially affordable for review \u2014 implicit buyer signal from someone in the ad ecosystem. Pain is real (major platform incident) but only a single data point here.",
+  "status": "candidate"
+}

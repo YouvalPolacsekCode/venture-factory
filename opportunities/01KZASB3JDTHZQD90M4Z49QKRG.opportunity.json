@@ -1,0 +1,24 @@
+{
+  "id": "01KZASB3JDTHZQD90M4Z49QKRG",
+  "discovered_at": "2026-08-06T08:39:36+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199616/sophos-connect-vpn-client-and-tls-auth-tls-crypt",
+    "snippet": "Sysadmin: 'we tried to connect a Sophos Connect Client to a OpenVPN Server with tls-auth/tls-crypt enabled... Sophos Connect Client seems not to be able to connect to a server with this security feature enabled.' \u2014 enterprise VPN product incompatibility blocking a security hardening initiative."
+  },
+  "problem_statement": "Enterprise sysadmins using Sophos Connect VPN clients cannot enable standard OpenVPN tls-auth/tls-crypt security hardening because the client silently fails, forcing a choice between security and compatibility with no clear resolution path.",
+  "target_segment": "IT security teams and sysadmins at SMB/enterprise organizations using Sophos firewall + OpenVPN infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vpn",
+    "sophos",
+    "openvpn",
+    "enterprise-security",
+    "network-security",
+    "tls",
+    "sysadmin"
+  ],
+  "notes": "Business security context \u2014 Sophos is a paid enterprise product. The friction of incompatibility between paid security tools creates consulting and tooling opportunities (compatibility shims, migration guides, alternative config generators).",
+  "status": "candidate"
+}

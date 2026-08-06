@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZASB3J5APBGBGM5VNQBBP78",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce CDC permission-leakage is a real and costly pain for integration engineers, and this segment works in high-value enterprise contexts where debugging time is expensive. However, the total of 5.5 lands exactly at the validate floor with no margin, and critically the problem is narrow and episodic \u2014 developers hit it once per integration, fix it, and move on. The viable product form (a diagnostic tool or guide) struggles to generate recurring revenue, and competing with Salesforce's own documentation and Stack Overflow answers for a niche edge case is a weak commercial position. Buildability is plausible but the addressable paying population is small.",
+  "solution_plan": "Not recommended to build at this stage. The problem is real but the market is a thin slice of Salesforce developers who hit one specific edge case \u2014 the total addressable paying audience is too small for a standalone micro-service at viable revenue. A better path would be to package this as a $49 one-time 'Salesforce CDC Quirks' PDF guide or a detailed blog post with a paid consultation upsell \u2014 but that is a content product, not a factory-run service. Validate whether 50+ developers would pay $29-49 for a definitive fix guide before investing further.",
+  "notes": "Total 5.5 is at the minimum validate threshold with no build-gate failures per se, but recommended_stage is drop due to extremely narrow TAM and episodic purchase frequency. If future research surfaces broader Salesforce integration pain (not just CDC edge cases), reconsider as a wider Salesforce developer tooling play.",
+  "scored_at": "2026-08-06T08:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

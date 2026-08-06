@@ -1,0 +1,24 @@
+{
+  "id": "01KZASB3HE834REVMJR0DB59K3",
+  "discovered_at": "2026-08-06T08:39:36+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49189897",
+    "snippet": "Ask HN: 'For an app claiming end-to-end encryption, what evidence would earn your trust?' \u2014 3 points, 3 comments, recent (2026-08-05). Question implies users and buyers of secure-messaging or data tools cannot evaluate E2E encryption claims independently."
+  },
+  "problem_statement": "Businesses and security-conscious users buying or evaluating apps that claim end-to-end encryption have no standardized, accessible way to verify those claims, leading to distrust and stalled purchasing decisions.",
+  "target_segment": "IT/security buyers at SMBs and enterprises evaluating secure communication or data storage SaaS tools",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "end-to-end-encryption",
+    "security-audit",
+    "trust-verification",
+    "e2e",
+    "infosec",
+    "saas-evaluation",
+    "compliance"
+  ],
+  "notes": "Business buyer angle: procurement teams blocked on vendor trust. A certification or third-party audit badge service (like SOC2 but focused on E2E claims) could command subscription fees from vendors seeking buyer trust.",
+  "status": "candidate"
+}

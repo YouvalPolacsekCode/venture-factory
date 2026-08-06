@@ -1,0 +1,24 @@
+{
+  "id": "01KZASB3J5APBGBGM5VNQBBP78",
+  "discovered_at": "2026-08-06T08:39:36+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439731/change-data-capture-changeeventheader-changedfields-doesnt-contain-fields-that",
+    "snippet": "Salesforce developer: 'I'm using CDC with an Apex Trigger on the CDC object... the fields that show up in ChangeEventHeader.changedFields are affected by the commitUser... the commitUser doesn't have access to field x, but there's a trigger that runs in system context.' \u2014 undocumented platform behavior causing integration failures."
+  },
+  "problem_statement": "Salesforce developers building CDC-based integrations hit undocumented permission-leakage behavior where field visibility in change events is unexpectedly constrained by the committing user's permissions, causing silent data loss in downstream systems.",
+  "target_segment": "Salesforce developers and integration engineers at companies running Salesforce Enterprise/Unlimited",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "change-data-capture",
+    "apex",
+    "integration",
+    "crm",
+    "enterprise-software",
+    "data-pipeline"
+  ],
+  "notes": "Salesforce CDC is used in paid enterprise orgs. Integration failures here have real business cost. A diagnostic tool or documented workaround guide for CDC permission edge cases could be sold as a premium resource or consultancy offering.",
+  "status": "candidate"
+}

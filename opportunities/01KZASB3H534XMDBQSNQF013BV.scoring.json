@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZASB3H534XMDBQSNQF013BV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Reliable ad moderation at commercial scale \u2014 especially for CSAM-adjacent content \u2014 requires human review layers for edge cases; purely automated output is legally and reputationally insufficient for brand-safety buyers."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Detection and handling of CSAM-adjacent content is a legally regulated area in most jurisdictions; a solo operator running automated review faces serious legal exposure and mandatory reporting obligations."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "The pain is very real \u2014 a major platform incident confirms the stakes \u2014 and ad agencies/brand-safety teams do have budget for compliance tooling. However, the moment this service touches AI-generated content that could be policy-violating or CSAM-adjacent, a solo non-technical operator faces mandatory-reporting obligations, legal liability, and the need for certified human reviewers; this cannot be run hands-off. Penalties around regulated industry and required human fulfillment push the total below the validate threshold, and no single data point from an HN comment constitutes a commercial signal.",
+  "solution_plan": "Not recommended to build. A solo operator cannot compliantly build and maintain an ad-content moderation service that handles potentially illegal imagery \u2014 the legal exposure (CSAM reporting obligations, liability for misclassification) makes this unsuitable regardless of the technical feasibility. Even if the factory could build the AI pipeline, the operator would need certified trust-and-safety staff, legal counsel, and formal platform partnerships. This is a pass.",
+  "notes": "Fails regulated_industry (legal exposure around CSAM-adjacent content); requires_human_fulfillment penalty applied because compliant moderation at this sensitivity level cannot be fully automated by a solo operator.",
+  "scored_at": "2026-08-06T08:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

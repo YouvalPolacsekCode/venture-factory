@@ -1,0 +1,23 @@
+{
+  "id": "01KZASB3HPZ5EDXRMDHM1RN369",
+  "discovered_at": "2026-08-06T08:39:36+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=27249443",
+    "snippet": "HN comment on Postgres 14 monitoring improvements: 'I use it frequently - but I wish there was a tool which went into the semantics somewhat.' \u2014 expressing desire for deeper semantic query analysis beyond surface-level performance metrics."
+  },
+  "problem_statement": "Database engineers and backend developers using PostgreSQL lack a tool that goes beyond query timing to explain the semantic meaning and logical intent of complex queries, making optimization and debugging slower.",
+  "target_segment": "Backend engineers and DBAs at software companies running PostgreSQL in production",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "postgresql",
+    "database-tooling",
+    "query-analysis",
+    "developer-tools",
+    "db-monitoring",
+    "semantic-analysis"
+  ],
+  "notes": "Commenter says 'I use it frequently' \u2014 active user of Postgres monitoring tools, implying existing paid tool usage. Desire for semantic layer is a recurring theme in DB tooling discussions. Single data point but from an active practitioner.",
+  "status": "candidate"
+}

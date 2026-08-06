@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZASB3HPZ5EDXRMDHM1RN369",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "Backend engineers and DBAs hit this pain frequently \u2014 complex Postgres queries are a daily reality in production shops \u2014 and this segment demonstrably pays for tools like DataDog, pganalyze, and Metabase. The service (paste a query, get a plain-English semantic explanation + optimization suggestions) is highly buildable with Claude and can run fully self-serve with automated delivery, hitting the autonomy bar. The blocking factor for 'build' is the total sitting at 6.0 (just below the 6.5 build threshold) and zero responsiveness signal; a short landing-page test or cold outreach to Postgres-heavy developer communities would confirm or kill it quickly.",
+  "solution_plan": "The micro-service is a self-serve Postgres semantic query analyzer: a developer pastes a SQL query and gets back a plain-English explanation of what it does, why it might be slow, and concrete optimization suggestions \u2014 delivered instantly by Claude. BUILD: the factory creates a simple web form (no login initially), a Claude prompt that parses the query and returns structured analysis, and a Stripe link for per-use ($3\u20135/query) or a monthly seat subscription ($19/mo). No coding needed from Youval \u2014 factory handles the prompt, page, and payment flow. SELL: the factory drafts cold outreach to Postgres-focused Slack communities (e.g. Postgres Slack, r/PostgreSQL, dev.to), and posts a 'free first analysis' offer; each outreach batch goes out only after Youval approves it. MAINTAIN: users submit queries via the form, Claude processes and emails results automatically, Stripe handles billing \u2014 Youval's only recurring touch is approving outreach batches and reviewing the weekly payment summary. One honest caveat: early adoption may be slow because free alternatives (ChatGPT, etc.) exist; the value prop needs to be sharper than 'it's Claude but a form.'",
+  "notes": "Total 6.0 is below the 6.5 min_total_to_build threshold; responsiveness_signal is untested. Validate with a landing page + 20 cold DMs to Postgres community members before committing to build.",
+  "scored_at": "2026-08-06T08:41:50+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

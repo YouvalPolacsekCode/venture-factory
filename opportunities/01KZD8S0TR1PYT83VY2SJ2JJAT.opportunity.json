@@ -1,0 +1,25 @@
+{
+  "id": "01KZD8S0TR1PYT83VY2SJ2JJAT",
+  "discovered_at": "2026-08-07T07:47:49+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199632/nginx-dynamically-resolve-multicast-dns",
+    "snippet": "User attempting to configure nginx to load-balance across LAN nodes using .local mDNS hostnames with the 'resolve' keyword, but nginx stops resolving multicast DNS when 'resolve' is active. Needs to prevent nginx crashing on startup if hosts are down."
+  },
+  "problem_statement": "Developers and DevOps engineers running nginx on local/edge networks cannot use mDNS (.local) hostnames with nginx's dynamic DNS resolution feature, forcing manual workarounds and fragile configurations for LAN-based load balancing.",
+  "target_segment": "DevOps engineers and self-hosted infrastructure operators running nginx on LAN or edge environments",
+  "geo": "GLOBAL",
+  "signal_strength": 1,
+  "keywords": [
+    "nginx",
+    "mdns",
+    "load-balancing",
+    "devops",
+    "self-hosted",
+    "lan",
+    "edge-computing",
+    "dns"
+  ],
+  "notes": "Single technical signal. Weak buyer intent on its own, but reflects a recurring gap in nginx+mDNS documentation that a paid configuration auditing or managed nginx service could address. Low priority vs. other candidates.",
+  "status": "candidate"
+}

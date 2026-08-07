@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZD8S0T7Z3QC8ZK0A6V0RDKE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is concrete and reachable: marketing ops managers and Salesforce admins at B2B companies paying $1,250\u2013$15,000/month for Pardot \u2014 they demonstrably have budget and a compliance-driven reason to pay for clarity. Pain is real (GDPR compliance errors carry regulatory cost) and recurs whenever rule logic changes. Willingness to pay is plausible given the existing spend level, but no direct payment signal exists yet; validation is needed before building. Operational autonomy just meets the gate \u2014 a Claude-powered Q&A service answering Pardot/GDPR automation questions could be mostly automated, but edge cases may require human judgment.",
+  "solution_plan": "The micro-service is a Pardot/Account Engagement GDPR automation advisory: operators paste their automation rule configuration and describe their GDPR scenario, and Claude returns a plain-English explanation of how the rule will behave on existing records, plus a compliance risk flag. Build: the factory creates a Claude prompt trained on Pardot documentation + GDPR rule logic, wires it to a simple intake form (Typeform or similar) and a Stripe link for pay-per-query or a $49/month subscription. Sell: the factory drafts cold outreach to Salesforce admins identifiable via LinkedIn (search 'Pardot admin' + 'GDPR') and via Salesforce Stack Exchange answerers \u2014 Youval approves the outreach batch before it sends. Maintain: query intake, Claude analysis, and email delivery are all automated; Youval's only recurring touch is approving outreach batches and reviewing the occasional flagged edge-case response. Validate first by posting a free answer on Salesforce Stack Exchange and linking to a waitlist page to gauge click-through.",
+  "notes": "Total of 6.4 meets min_total_to_build (6.5) only barely and falls short; keeping at validate. All build gates technically met at the gate floors, but responsiveness_signal is untested and buyer's direct willingness to pay for a standalone tool (vs. consultant time) is unconfirmed.",
+  "scored_at": "2026-08-07T07:49:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZD8S0TR1PYT83VY2SJ2JJAT",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 4,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a self-hosted infrastructure operator or DevOps engineer \u2014 a category that strongly expects free solutions (Stack Overflow, GitHub issues, official docs) and rarely pays for nginx configuration help. Willingness to pay is very low: this is a configuration quirk with a workaround (use IP addresses instead of hostnames, or a custom resolver), not a compliance or revenue-critical blocker. The signal is a single forum post with no upvotes cited, and there is no identifiable channel to reach this audience at scale for a paid product.",
+  "solution_plan": "This is not viable as a paid product. The problem is a narrow nginx configuration edge case affecting self-hosted operators who will find a free Stack Overflow answer before they'd pay for anything. Even if a Claude-powered nginx configuration advisor could be built cheaply, there is no realistic monetization path \u2014 the ICP expects free tooling and the pain is too mild and infrequent to justify a subscription. Do not build.",
+  "notes": "Fails willingness_to_pay (2 < 5), buyer_clarity (3 < 6). Signal strength is 1 and the problem has free workarounds readily available. Drop.",
+  "scored_at": "2026-08-07T07:49:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

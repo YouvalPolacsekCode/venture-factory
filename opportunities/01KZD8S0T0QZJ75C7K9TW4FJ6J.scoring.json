@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZD8S0T0QZJ75C7K9TW4FJ6J",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 6,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.4,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "A community/forum platform only creates value at scale \u2014 it needs hundreds to thousands of active participants before it has any network effect or retention. A solo operator cannot manufacture this."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a vague 'finance enthusiast' population \u2014 there is no specific business role with budget authority, and individual consumers rarely pay for discussion forums when Reddit and Twitter are free. Willingness to pay is essentially unproven (the HN thread just asks if something exists, not if anyone would pay). Critically, building a community platform is a massive cold-start problem that requires human community management, moderation, and seeding \u2014 it cannot run autonomously and is not buildable with Claude + a landing page in a week.",
+  "solution_plan": "This is not viable for a solo non-technical operator running an automated factory. A curated investing community requires constant human moderation, content seeding, and trust-building over months or years before anyone pays. Even if a basic forum could be scaffolded quickly, there is no autonomous delivery mechanism, no clear monetization path at small scale, and no defensibility against Reddit or established niche forums. Do not build.",
+  "notes": "Fails buyer_clarity (3 < 6), willingness_to_pay (3 < 5), buildability_with_ai (3 < 6), and operational_autonomy (3 < 7). All four build gates unmet.",
+  "scored_at": "2026-08-07T07:49:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

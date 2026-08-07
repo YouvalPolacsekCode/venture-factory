@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZ5MJCDWMC7CZQ1GP9FYRSA3",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Pain is real and the Salesforce ecosystem has documented willingness to pay for AppExchange solutions, but the solution requires Salesforce-native engineering (Apex, Flow, managed package, AppExchange security review) that exceeds factory tooling. Both buildability_with_ai (4) and operational_autonomy (4) fail build gates, and evidence depth (single StackExchange question, no competitor pricing confirmation, no explicit WTP quotes) falls short of the 5-distinct-pain-quotes threshold required for a pass verdict.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439721/prevent-email-to-case-from-creating-multiple-cases-when-an-email-lists-several-r"
+  ],
+  "evaluated_at": "2026-08-07T07:48:52+03:00"
+}

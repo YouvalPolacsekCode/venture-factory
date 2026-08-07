@@ -1,0 +1,25 @@
+{
+  "id": "01KZD8S0TDVAQE1Z1269GQ7QNY",
+  "discovered_at": "2026-08-07T07:47:49+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439727/do-apex-triggers-always-run-in-system-mode-at-api-v67-or-do-trigger-body-dml-op",
+    "snippet": "Salesforce developer asking about API v67 Summer '26 change to Apex execution mode (system mode vs user mode) inside triggers \u2014 conflicting documentation causing uncertainty about security/sharing behavior in production orgs."
+  },
+  "problem_statement": "Salesforce developers and architects cannot quickly determine the security implications of the Summer '26 API v67 Apex user-mode change for their existing trigger code, risking data exposure or broken automation in production orgs.",
+  "target_segment": "Salesforce developers and technical architects at companies running custom Apex on API v67+",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "api-version",
+    "security",
+    "enterprise-software",
+    "release-migration",
+    "devops",
+    "compliance"
+  ],
+  "notes": "Salesforce orgs upgrading API versions is a recurring paid-consultant engagement. A tool or service that automatically audits Apex triggers for mode-related breaking changes post-upgrade has clear enterprise buyer. Single signal but high-value context.",
+  "status": "candidate"
+}

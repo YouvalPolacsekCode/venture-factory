@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-08-06T05:42:14+00:00",
-    "idt": "2026-08-06T08:42:14+03:00"
+    "utc": "2026-08-07T04:50:00+00:00",
+    "idt": "2026-08-07T07:50:00+03:00"
   },
   "funnel": {
-    "candidates": 197,
-    "scored": 197,
+    "candidates": 202,
+    "scored": 202,
     "validated": 21,
     "build_decisions": {
       "defer_1_week": 19,
@@ -395,6 +395,35 @@
     },
     {
       "topics": [
+        "salesforce",
+        "apex",
+        "api-version"
+      ],
+      "id": "01KZD8S0TDVAQE1Z1269GQ7QNY",
+      "problem_statement": "Salesforce developers and architects cannot quickly determine the security implications of the Summer '26 API v67 Apex user-mode change for their existing trigger code, risking data exposure or broken automation in production orgs.",
+      "target_segment": "Salesforce developers and technical architects at companies running custom Apex on API v67+",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is well-defined — Salesforce developers and architects at companies running custom Apex, who already pay enterprise Salesforce licenses and routinely spend on consultant engagements for exactly this kind of breaking-change audit. Pain severity is high: a misunderstood security mode change in production Apex triggers can expose data or break automations, and the Summer '26 API v67 change creates an immediate, time-bounded reason to buy. Buildability is plausible (Claude can read Apex c…",
+      "solution_plan": "The micro-service is an Apex API v67 security-mode audit: a Salesforce developer pastes their trigger code into an intake form, and Claude analyzes it against the Summer '26 system-mode vs. user-mode change, returning a flagged report of affected triggers with plain-English risk descriptions and recommended fixes. Build: the factory creates a Claude prompt loaded with the v67 release notes + Apex security model docs, connects it to a simple form and Stripe ($99–$299 per org audit, or $49/month for ongoing monitoring), and emails the report automatically. Sell: the factory drafts outreach to Salesforce developers identifiable on Stack Exchang…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 6,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439727/do-apex-triggers-always-run-in-system-mode-at-api-v67-or-do-trigger-body-dml-op",
+      "discovered_at": "2026-08-07T07:47:49+03:00"
+    },
+    {
+      "topics": [
         "ai-spend",
         "cost-optimization",
         "saas-management"
@@ -510,6 +539,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48942806",
       "discovered_at": "2026-07-17T08:33:10+03:00"
+    },
+    {
+      "topics": [
+        "salesforce",
+        "pardot",
+        "marketing-automation"
+      ],
+      "id": "01KZD8S0T7Z3QC8ZK0A6V0RDKE",
+      "problem_statement": "Salesforce/Pardot admins managing GDPR compliance workflows cannot reliably predict how edited automation rules behave on existing prospect records, creating compliance risk and requiring expensive consultant time to validate.",
+      "target_segment": "Marketing operations managers and Salesforce admins at mid-size to enterprise B2B companies using Pardot/Account Engagement for GDPR compliance",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is concrete and reachable: marketing ops managers and Salesforce admins at B2B companies paying $1,250–$15,000/month for Pardot — they demonstrably have budget and a compliance-driven reason to pay for clarity. Pain is real (GDPR compliance errors carry regulatory cost) and recurs whenever rule logic changes. Willingness to pay is plausible given the existing spend level, but no direct payment signal exists yet; validation is needed before building. Operational autonomy just meets the…",
+      "solution_plan": "The micro-service is a Pardot/Account Engagement GDPR automation advisory: operators paste their automation rule configuration and describe their GDPR scenario, and Claude returns a plain-English explanation of how the rule will behave on existing records, plus a compliance risk flag. Build: the factory creates a Claude prompt trained on Pardot documentation + GDPR rule logic, wires it to a simple intake form (Typeform or similar) and a Stripe link for pay-per-query or a $49/month subscription. Sell: the factory drafts cold outreach to Salesforce admins identifiable via LinkedIn (search 'Pardot admin' + 'GDPR') and via Salesforce Stack Excha…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439730/account-engagement-pardot-automation-rules-behavior-on-repeat",
+      "discovered_at": "2026-08-07T07:47:49+03:00"
     },
     {
       "topics": [
@@ -692,77 +750,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48669496",
       "discovered_at": "2026-06-25T09:41:14+03:00"
-    },
-    {
-      "topics": [
-        "invoice-reconciliation",
-        "timesheet-sync",
-        "freelance-billing"
-      ],
-      "id": "01KW3VWCEDJJ9QXHR9A3ZK7RW3",
-      "problem_statement": "Independent contractors and freelancers working with clients who use proprietary time-tracking or billing systems struggle with invoice-to-timesheet reconciliation errors, leading to late or disputed payments and power imbalances with clients.",
-      "target_segment": "Independent contractors and freelancers (especially in IT/MSP services) billing clients who use custom or proprietary time-tracking systems",
-      "total": 6.0,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is an independent contractor in IT/MSP services — a specific, nameable professional who already pays for invoicing tools (FreshBooks, Harvest, QuickBooks) and has clear financial pain from disputed or delayed payments. Willingness to pay is real: the ROI is direct (even one recovered disputed invoice justifies months of subscription). The service is buildable with Claude: upload a timesheet export (CSV/PDF), upload or describe your invoice, Claude reconciles them and flags discrepanci…",
-      "solution_plan": "WHAT: An AI-powered timesheet-to-invoice reconciliation service — contractors upload their timesheet export and invoice draft, Claude finds discrepancies and returns a clean, corrected invoice PDF. BUILD: Factory creates a simple intake form (Tally or Typeform), a Claude prompt that parses both documents and produces a line-item reconciliation report plus a formatted invoice, and a Stripe payment link for a per-use fee (~$9) or monthly plan (~$29/mo); output delivered via email. No coding by the operator. SELL: Reach IT contractors and MSP freelancers via r/msp, r/freelance, LinkedIn groups for IT consultants, and cold email to freelancers l…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 6,
-        "Runs alone": 7,
-        "Will pay": 6,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://workplace.stackexchange.com/questions/203501/client-frequently-paying-late-manager-claiming-i-make-mistakes-but-doesnt-prov",
-      "discovered_at": "2026-06-27T09:22:12+03:00"
-    },
-    {
-      "topics": [
-        "dns",
-        "powerdns",
-        "zone-transfer"
-      ],
-      "id": "01KYH3JCTC976FKMFZQ8P05KJ7",
-      "problem_statement": "DNS administrators scaling PowerDNS to multiple secondaries have no built-in bulk zone transfer mechanism — every workaround requires manual per-zone handling, creating operational toil proportional to zone count.",
-      "target_segment": "Sysadmins and DevOps engineers at SMBs or hosting providers managing PowerDNS with 50+ zones",
-      "total": 6.0,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is specific and nameable — sysadmins and DevOps engineers at DNS-heavy SMBs or hosting providers — and they have demonstrated budget authority for infrastructure tooling that saves operational time; willingness to pay clears the gate. The build is plausible: a Claude-backed script generator or managed bulk-sync microservice (Claude generates the PowerDNS API calls, a simple web UI collects credentials and zone lists, Stripe handles a one-time or annual license) is within factory reach…",
-      "solution_plan": "The micro-service is a PowerDNS Bulk Zone Sync tool — a hosted script or lightweight web app that automates transferring all zones from a primary to one or more new secondaries in a single operation, replacing the painful one-zone-at-a-time manual process. BUILD: The factory creates a Claude-powered script generator (user inputs their PowerDNS API endpoint and credentials via a secure intake form; Claude generates and validates the bulk axfr/notify configuration or API calls); a simple landing page explains the tool; a Stripe payment link gates download/access at a one-time price (~$49–$149) or an annual subscription for the hosted version.…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 6,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://serverfault.com/questions/1199553/how-to-add-a-new-secondary-powerdns-server-and-transfer-all-existing-zones-from",
-      "discovered_at": "2026-07-27T09:18:05+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2462,
-    "last_7_days_usd": 1.7358,
-    "all_time_usd": 14.0627,
+    "today_usd": 0.2306,
+    "last_7_days_usd": 1.6175,
+    "all_time_usd": 14.2934,
     "by_day": [
-      {
-        "date": "2026-07-31",
-        "usd": 0.3489
-      },
       {
         "date": "2026-08-01",
         "usd": 0.2309
@@ -786,67 +782,36 @@
       {
         "date": "2026-08-06",
         "usd": 0.2462
+      },
+      {
+        "date": "2026-08-07",
+        "usd": 0.2306
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6126
+        "usd": 0.5975
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4115
+        "usd": 0.4492
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3692
+        "usd": 0.3836
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3093
+        "usd": 0.1547
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0333
+        "usd": 0.0326
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-07-31",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-01",
       "agents": {
@@ -1056,12 +1021,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-07",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-06.md",
-    "date": "2026-08-06",
-    "text": "# Daily Summary — 2026-08-06 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 197 |\n| Opportunities validated past threshold | 42 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. All focus today on opportunity discovery and validation pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning for fresh pain signals across target cohorts.\n2. `pain_validation` validates high-scoring opportunities from today's 197 candidates.\n3. `opportunity_scoring` re-ranks validated opportunities for next phase.\n4. `build_decisions` reviews top-scored opportunities for experiment viability.\n5. `cost_gain` prepares weekly analysis of discovery velocity and conversion funnel.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-08-07.md",
+    "date": "2026-08-07",
+    "text": "# Daily Summary — 2026-08-07 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 202 |\n| Opportunities validated past threshold | 43 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily sweep for B2B SaaS and vertical-specific pain signals.\n2. `pain_validation` processes highest-scoring opportunities from today's 43 verdicts.\n3. `opportunity_scoring` re-ranks candidates as new signals arrive.\n4. `build_decisions` evaluates validation outcomes for build-readiness.\n5. `cost_gain` analyzes experiment ROI trends (weekly cycle).\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

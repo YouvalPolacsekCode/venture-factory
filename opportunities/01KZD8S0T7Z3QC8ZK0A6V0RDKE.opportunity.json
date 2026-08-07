@@ -1,0 +1,25 @@
+{
+  "id": "01KZD8S0T7Z3QC8ZK0A6V0RDKE",
+  "discovered_at": "2026-08-07T07:47:49+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439730/account-engagement-pardot-automation-rules-behavior-on-repeat",
+    "snippet": "Salesforce/Pardot admin asking: 'If I update an existing automation rule which is on repeat, will it match and update all existing prospects that are mapped?' \u2014 confusion about GDPR compliance automation behavior after rule edits in Account Engagement (Pardot)."
+  },
+  "problem_statement": "Salesforce/Pardot admins managing GDPR compliance workflows cannot reliably predict how edited automation rules behave on existing prospect records, creating compliance risk and requiring expensive consultant time to validate.",
+  "target_segment": "Marketing operations managers and Salesforce admins at mid-size to enterprise B2B companies using Pardot/Account Engagement for GDPR compliance",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "pardot",
+    "marketing-automation",
+    "gdpr",
+    "compliance",
+    "account-engagement",
+    "b2b-marketing",
+    "martech"
+  ],
+  "notes": "Business context: Pardot licenses are $1,250\u2013$15,000+/month. Compliance errors carry regulatory cost. Buyer is a company paying for Salesforce. Signal is a single question but represents a recurring class of confusion for paid platform users.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZD8S0TKDKNQB61YM9WGMRAV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 3,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A validated runbook or configuration guide for Cisco UCS Boot-from-SAN requires hands-on environment testing and expert review to be credible and safe \u2014 Claude cannot autonomously generate reliable, production-safe infrastructure runbooks for this stack without human validation."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling a $500\u2013$5k engagement to an enterprise infrastructure team realistically requires a discovery call or at minimum asynchronous back-and-forth scoped to their specific UCS/SAN configuration \u2014 not a self-serve click-and-pay flow."
+    }
+  ],
+  "total": 1.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and expensive (boot failures blocking production deployments in large IT environments), and the buyer has budget. However, this is an extremely narrow, infrequent problem \u2014 most sysadmins encounter it once per deployment project, not repeatedly. More critically, the solution cannot be automated: generating a reliable Boot-from-SAN runbook for a specific Cisco UCS + XtremIO configuration requires hands-on environment knowledge, vendor-specific testing, and expert review that Claude cannot safely provide autonomously. Lead reachability is also very poor \u2014 there is no public list of Cisco UCS admins to cold-outreach at scale.",
+  "solution_plan": "This is not viable for an autonomous factory. The problem is too narrow, too infrequent, and too environment-specific for a self-serve automated product. Selling an infrastructure runbook into a large enterprise requires scoped discovery and human credibility that a solo non-technical operator cannot manufacture without domain expertise. Do not build.",
+  "notes": "Fails buildability_with_ai (3 < 6) and operational_autonomy (3 < 7). Extremely low lead reachability. Drop.",
+  "scored_at": "2026-08-07T07:49:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

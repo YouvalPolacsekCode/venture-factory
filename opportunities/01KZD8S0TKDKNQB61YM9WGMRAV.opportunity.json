@@ -1,0 +1,25 @@
+{
+  "id": "01KZD8S0TKDKNQB61YM9WGMRAV",
+  "discovered_at": "2026-08-07T07:47:49+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199631/windows-boot-from-san-fails-on-first-boot-due-to-duplicate-fc-paths-cisco-ucs",
+    "snippet": "Enterprise sysadmin: 'During Windows Setup I load the Cisco VIC vHBA driver. Because two paths are active, setup detects the target LUN twice as separate disks... Windows fails to boot... Constraint: No administrative access to MDS SAN switches or storage array.' Cisco UCS + XtremIO environment."
+  },
+  "problem_statement": "Enterprise sysadmins configuring Windows Boot-from-SAN on Cisco UCS with multi-path FC storage face boot failures caused by duplicate LUN detection, and lack tooling or documentation to resolve this without SAN switch admin access.",
+  "target_segment": "Enterprise infrastructure engineers and sysadmins managing Cisco UCS blade environments with FC SAN storage",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cisco-ucs",
+    "san",
+    "windows-server",
+    "multipath",
+    "enterprise-infra",
+    "storage",
+    "fc",
+    "boot-from-san"
+  ],
+  "notes": "Enterprise environment \u2014 Cisco UCS + Dell EMC XtremIO implies large IT budget. Pain is a deployment blocker with real downtime cost. Niche but high-value: a runbook service or validated configuration guide could command $500\u2013$5k per engagement.",
+  "status": "candidate"
+}

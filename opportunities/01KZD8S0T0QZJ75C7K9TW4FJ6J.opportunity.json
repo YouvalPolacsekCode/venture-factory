@@ -1,0 +1,25 @@
+{
+  "id": "01KZD8S0T0QZJ75C7K9TW4FJ6J",
+  "discovered_at": "2026-08-07T07:47:49+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49201546",
+    "snippet": "Ask HN: Is there any Hacker News but for investing/trading/economics etc.? (4 points, 7 comments, Aug 2026) \u2014 community asking for a curated, high-signal forum for investing and trading discussion, similar to HN's format but focused on finance/economics."
+  },
+  "problem_statement": "Investors, traders, and economics enthusiasts lack a high-quality, curated community platform (like Hacker News) for substantive discussion of investing, trading, and economics \u2014 existing options are either too noisy (Reddit) or too niche/closed.",
+  "target_segment": "Retail and semi-professional investors, traders, quant hobbyists, and finance professionals seeking peer discourse",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "investing",
+    "trading",
+    "community",
+    "forum",
+    "finance",
+    "economics",
+    "curated-content",
+    "news-aggregator"
+  ],
+  "notes": "Multiple commenters engaged (7 comments). Implicit willingness to use a paid or freemium platform given HN's own model. Demand is for quality curation, not free content per se. Weak buyer signal \u2014 no explicit pay intent stated, but finance audiences are known high-LTV.",
+  "status": "candidate"
+}

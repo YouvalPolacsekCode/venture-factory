@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZD8S0TDVAQE1Z1269GQ7QNY",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is well-defined \u2014 Salesforce developers and architects at companies running custom Apex, who already pay enterprise Salesforce licenses and routinely spend on consultant engagements for exactly this kind of breaking-change audit. Pain severity is high: a misunderstood security mode change in production Apex triggers can expose data or break automations, and the Summer '26 API v67 change creates an immediate, time-bounded reason to buy. Buildability is plausible (Claude can read Apex code and cross-reference the v67 changelog), but operational autonomy sits at the gate floor \u2014 complex org configurations may surface edge cases requiring human review. Validate by offering a free audit to 10 orgs to confirm Claude can reliably handle real-world Apex trigger code.",
+  "solution_plan": "The micro-service is an Apex API v67 security-mode audit: a Salesforce developer pastes their trigger code into an intake form, and Claude analyzes it against the Summer '26 system-mode vs. user-mode change, returning a flagged report of affected triggers with plain-English risk descriptions and recommended fixes. Build: the factory creates a Claude prompt loaded with the v67 release notes + Apex security model docs, connects it to a simple form and Stripe ($99\u2013$299 per org audit, or $49/month for ongoing monitoring), and emails the report automatically. Sell: the factory drafts outreach to Salesforce developers identifiable on Stack Exchange (the question itself has answerers and commenters) and via LinkedIn searches for 'Salesforce developer API v67' \u2014 Youval approves each batch. Maintain: intake, analysis, and report delivery are fully automated; Youval's only touch is approving outreach and spot-checking flagged high-severity reports before they send. Time-sensitivity of the v67 window makes early validation critical.",
+  "notes": "Hits min_total_to_build at exactly 6.5 but responsiveness is untested and the offer is time-sensitive to the Summer '26 release cycle. Keeping at validate until a reply signal is confirmed. All build gates met at their floors.",
+  "scored_at": "2026-08-07T07:49:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

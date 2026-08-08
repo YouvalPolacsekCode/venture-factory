@@ -1,0 +1,24 @@
+{
+  "id": "01KZFRPTTCPFYBXYGJBSA2TCTZ",
+  "discovered_at": "2026-08-08T07:04:43+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439732/journey-builder-custom-activity-configuration-lost-after-copying-versioning-a",
+    "snippet": "I have a Journey Builder Custom Activity with a configuration UI (dropdowns, checkboxes, etc.). When I create a new Journey version or copy the Journey, the configuration is lost. How is a Custom Activity supposed to pass its saved configuration to the new version/copy? Is there any way to persist and restore the configuration, or should this happen automatically if the Custom Activity is implemented correctly?"
+  },
+  "problem_statement": "Salesforce Marketing Cloud Journey Builder custom activities silently lose their configuration when journeys are versioned or copied, forcing developers and admins to manually reconfigure complex setups and introducing error risk in production campaigns.",
+  "target_segment": "Salesforce Marketing Cloud developers and marketing ops teams at mid-to-large enterprises running complex automated customer journeys.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "journey-builder",
+    "custom-activity",
+    "marketing-automation",
+    "configuration-management",
+    "martech"
+  ],
+  "notes": "Professional Salesforce developer hitting a platform limitation that causes real production risk for paying Marketing Cloud customers (licenses typically $15k+/year). Opportunity: developer tooling or managed package that handles configuration persistence/migration for SFMC custom activities.",
+  "status": "candidate"
+}

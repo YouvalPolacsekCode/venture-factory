@@ -1,0 +1,25 @@
+{
+  "id": "01KZFRPTSTD7R839T7XZBXXWTX",
+  "discovered_at": "2026-08-08T07:04:43+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49213500",
+    "snippet": "Received a notice from tally.so notifying that someone accessed their user database. I asked which 'hash' they used and whether passwords were salted. I have not heard back yet. On August 3, an attacker gained unauthorized access to Metabase, the analytics service we use to see how Tally is used. Through that they reached your email address, and your password as a cryptographic hash."
+  },
+  "problem_statement": "SaaS tools (e.g. form builders, no-code platforms) are exposing user data through poorly secured internal analytics dashboards (Metabase, etc.), creating breach risk for their paying customers who have no visibility into the vendor's internal security posture.",
+  "target_segment": "SMB SaaS founders and operators who use no-code/form tools and need vendor security monitoring or breach notification intelligence.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "saas-security",
+    "data-breach",
+    "vendor-risk",
+    "metabase",
+    "no-code",
+    "form-builder",
+    "security-monitoring",
+    "third-party-risk"
+  ],
+  "notes": "Tally.so breach via Metabase analytics tool is a concrete, recent (Aug 3 2026) paid-product incident. Paying Tally users affected. Pattern of analytics tooling as attack vector is repeatable across many SaaS vendors. Opportunity: vendor security posture monitoring / continuous third-party risk scanning sold to SMB operators.",
+  "status": "candidate"
+}

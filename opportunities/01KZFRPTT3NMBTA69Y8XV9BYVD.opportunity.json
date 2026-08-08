@@ -1,0 +1,26 @@
+{
+  "id": "01KZFRPTT3NMBTA69Y8XV9BYVD",
+  "discovered_at": "2026-08-08T07:04:43+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199635/azure-weekly-vm-offload-to-local-site",
+    "snippet": "Bossman has a customer wanting a solution to fit their wants... the customer is interested in new features available in our new app version, but wants control over their data, and they're willing to pay. The end result is the customer wanting a copy of our application, and their data, available locally in case of..."
+  },
+  "problem_statement": "Enterprise SaaS customers increasingly demand local data residency or hybrid on-prem/cloud deployments for compliance or resilience, but most SaaS vendors have no cost-effective way to offer a self-hosted or local-sync option without rebuilding their entire delivery model.",
+  "target_segment": "SaaS vendors serving mid-market or regulated enterprise customers who face data sovereignty or business-continuity objections to pure-cloud deployments.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "data-sovereignty",
+    "on-prem",
+    "hybrid-cloud",
+    "saas-self-hosting",
+    "azure",
+    "enterprise",
+    "data-residency",
+    "vm-offload",
+    "compliance"
+  ],
+  "notes": "Explicit buyer signal: customer 'willing to pay' for local copy of SaaS app and data. IT/MSP professional asking on behalf of a paying client. Pattern is widespread in regulated industries (finance, healthcare, government). Opportunity: tooling or managed service that enables SaaS vendors to offer compliant local-sync or offline bundles without full re-architecture.",
+  "status": "candidate"
+}

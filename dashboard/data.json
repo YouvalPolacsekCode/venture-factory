@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-08-07T04:50:00+00:00",
-    "idt": "2026-08-07T07:50:00+03:00"
+    "utc": "2026-08-08T04:07:32+00:00",
+    "idt": "2026-08-08T07:07:32+03:00"
   },
   "funnel": {
-    "candidates": 202,
-    "scored": 202,
-    "validated": 21,
+    "candidates": 208,
+    "scored": 208,
+    "validated": 22,
     "build_decisions": {
-      "defer_1_week": 19,
+      "defer_1_week": 20,
       "kill": 2
     },
     "build_now": 0,
@@ -163,6 +163,35 @@
     },
     {
       "topics": [
+        "salesforce",
+        "marketing-cloud",
+        "journey-builder"
+      ],
+      "id": "01KZFRPTTCPFYBXYGJBSA2TCTZ",
+      "problem_statement": "Salesforce Marketing Cloud Journey Builder custom activities silently lose their configuration when journeys are versioned or copied, forcing developers and admins to manually reconfigure complex setups and introducing error risk in production campaigns.",
+      "target_segment": "Salesforce Marketing Cloud developers and marketing ops teams at mid-to-large enterprises running complex automated customer journeys.",
+      "total": 6.7,
+      "recommended_stage": "build",
+      "rationale": "Salesforce Marketing Cloud developers and marketing ops admins at enterprises are a narrow, named B2B buyer who demonstrably has budget (SFMC licenses run $15k+/year) and faces a concrete, production-risk bug every time they version or copy a journey. Buyer clarity is high: 'Salesforce Marketing Cloud developer or SFMC admin at a company running automated campaigns' is a specific, reachable role with clear pain. The fix — a managed package or configuration backup/restore tool — is well-scoped a…",
+      "solution_plan": "WHAT: A configuration backup and restore tool for Salesforce Marketing Cloud Journey Builder custom activities — it snapshots activity configs before any version/copy operation and restores them automatically, eliminating the silent data-loss bug. BUILD: The factory builds a Claude-assisted code generation layer that produces a lightweight SFMC managed package (declarative AppExchange-style installation); a Stripe payment link at $99–199/month per org; a simple onboarding form collecting the customer's SFMC instance details; Claude generates the config serialization/restore logic and documentation. SELL: Target SFMC developers and marketing…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 7,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439732/journey-builder-custom-activity-configuration-lost-after-copying-versioning-a",
+      "discovered_at": "2026-08-08T07:04:43+03:00"
+    },
+    {
+      "topics": [
         "accessibility",
         "wcag",
         "web-compliance"
@@ -272,7 +301,7 @@
         "Buildable": 8,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "other",
       "source_url": "https://dev.to/priya__008/i-interviewed-50-freelancers-about-late-payments-almost-everyone-was-solving-the-wrong-problem-22o4",
       "discovered_at": "2026-08-04T08:39:59+03:00"
@@ -718,51 +747,15 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
       "discovered_at": "2026-06-07T09:59:46+03:00"
-    },
-    {
-      "topics": [
-        "llm-cost",
-        "token-optimization",
-        "agentic-ai"
-      ],
-      "id": "01KVYR5SF9QEAV3SWBYH6HZJ2W",
-      "problem_statement": "Teams running multi-turn agentic AI loops struggle to control token consumption and costs, with no clear tooling to identify which loop phases waste the most tokens before they burn budget.",
-      "target_segment": "AI/ML engineers and startup CTOs at companies running production agentic workflows on LLM APIs",
-      "total": 6.0,
-      "recommended_stage": "validate",
-      "rationale": "Engineering teams at AI-native startups with active LLM API spend are a real, paying buyer — the $4,200/month burn story confirms budget and willingness to pay for observability tooling. However, the core product (loop-phase token profiler) requires meaningful integration work — SDK instrumentation or proxy insertion — which pushes buildability below the build gate floor of 6, and ongoing delivery likely needs per-customer setup assistance that reduces operational autonomy below the 7 floor. Th…",
-      "solution_plan": "A token-phase profiler micro-service that wraps an existing agentic loop and reports per-turn token consumption with a cost breakdown by loop phase. The factory builds a lightweight proxy/middleware as a set of Claude prompts plus a simple dashboard page (static HTML + Chart.js), a Stripe subscription link, and an intake form for API key + loop config — no operator coding required. Sell by posting in AI/ML Slack communities (Latent Space, AI Tinkerers), relevant HN 'Show HN' threads, and cold outreach to founders of AI-native startups visible on LinkedIn/X — all outreach batches go out only after operator approval. Delivery is automated: the…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 6,
-        "Will pay": 7,
-        "Buildable": 5,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48669496",
-      "discovered_at": "2026-06-25T09:41:14+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2306,
-    "last_7_days_usd": 1.6175,
-    "all_time_usd": 14.2934,
+    "today_usd": 0.4127,
+    "last_7_days_usd": 1.7993,
+    "all_time_usd": 14.7061,
     "by_day": [
-      {
-        "date": "2026-08-01",
-        "usd": 0.2309
-      },
       {
         "date": "2026-08-02",
         "usd": 0.2777
@@ -786,67 +779,36 @@
       {
         "date": "2026-08-07",
         "usd": 0.2306
+      },
+      {
+        "date": "2026-08-08",
+        "usd": 0.4127
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5975
+        "usd": 0.5902
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4492
+        "usd": 0.4655
       },
       {
         "agent": "pain_validation",
-        "usd": 0.3836
+        "usd": 0.4054
       },
       {
         "agent": "build_decisions",
-        "usd": 0.1547
+        "usd": 0.3058
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0326
+        "usd": 0.0324
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-08-01",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-02",
       "agents": {
@@ -1056,12 +1018,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-08",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-07.md",
-    "date": "2026-08-07",
-    "text": "# Daily Summary — 2026-08-07 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 202 |\n| Opportunities validated past threshold | 43 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily sweep for B2B SaaS and vertical-specific pain signals.\n2. `pain_validation` processes highest-scoring opportunities from today's 43 verdicts.\n3. `opportunity_scoring` re-ranks candidates as new signals arrive.\n4. `build_decisions` evaluates validation outcomes for build-readiness.\n5. `cost_gain` analyzes experiment ROI trends (weekly cycle).\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-08-08.md",
+    "date": "2026-08-08",
+    "text": "# Daily Summary — 2026-08-08 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 208 |\n| Opportunities validated past threshold | 44 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes; will enrich top 44 validated opportunities with contact data.\n2. `product_design` runs; will assess build feasibility for highest-scoring candidates.\n3. `pain_validation` runs targeted validation probes on fresh opportunity cohorts.\n4. `responsiveness_test` re-runs on any live service endpoints.\n5. `cost_gain` produces updated ROI projections for the weekly review.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

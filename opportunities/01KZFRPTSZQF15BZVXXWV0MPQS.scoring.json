@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZFRPTSZQF15BZVXXWV0MPQS",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 3,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Target segment is individual knowledge workers (consumers/employees), not businesses with budget authority; sustainable revenue requires acquiring a large number of low-ARPU individual subscribers."
+    }
+  ],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real but episodic \u2014 it surfaces sharply at job transitions, which happen once every few years per person, making frequency low and urgency fleeting. Buyers are individual consumers (employees) who already have free or cheap options like Obsidian (free/local) and personal Notion tiers; demonstrated willingness to pay for a portability-focused tool is thin. Reaching enough individuals to build meaningful recurring revenue requires broad B2C acquisition at scale, which is penalized and at odds with the solo-operator constraint. The idea as framed doesn't reach validate threshold.",
+  "solution_plan": "Not recommended for build. If exploring anyway: WHAT: A one-time note-migration service that converts OneNote/Notion exports into a portable Obsidian/Markdown vault with AI-assisted cleanup of formatting and de-identification of company-confidential content. BUILD: Claude prompt pipeline processes uploaded exports, strips PII/company references flagged by the user, outputs a clean zip; Stripe for a one-time $19\u201339 fee. SELL: Reddit communities (r/ObsidianMD, r/productivity) and job-change forums; all posts queued for approval. MAINTAIN: Fully automated delivery; operator just approves payment and outreach. REALITY CHECK: This is a one-shot transaction, not recurring SaaS; LTV is too low and acquisition cost too high for a solo operator to build a sustainable business without B2C scale.",
+  "notes": "Total 3.4 is below min_total_to_validate (5.5). buyer_clarity (4) and willingness_to_pay (4) also below build_gate floors. Primary issue: episodic B2C pain with no recurring revenue driver.",
+  "scored_at": "2026-08-08T07:07:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

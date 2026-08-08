@@ -1,0 +1,25 @@
+{
+  "id": "01KZFRPTT8BEZR9TC9M019CT11",
+  "discovered_at": "2026-08-08T07:04:43+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49206893",
+    "snippet": "Do think about b2b. Companies are already paying much more for AI. A new K3 (or similar model) every 6 months for a monthly rate of ~100$ per month is something MANY businesses would pay for. Then they could even sell them at half the price to consumers."
+  },
+  "problem_statement": "Businesses paying for AI inference at scale face unpredictable cost and performance cliffs as models rapidly iterate every 6 months, with no good mechanism to lock in performance SLAs or cost predictability across model generations.",
+  "target_segment": "B2B SaaS companies and AI-heavy startups that budget $100\u2013$1000/month on AI API costs and need cost/performance stability.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-inference",
+    "llm-cost",
+    "b2b-ai",
+    "model-versioning",
+    "ai-budget",
+    "inference-cost",
+    "ai-api",
+    "cost-management"
+  ],
+  "notes": "Commenter explicitly references businesses paying 'much more' for AI and a $100/month price point many businesses would accept. AMD/Taalas acquisition context implies hardware-level cost compression is coming, which creates arbitrage opportunity for AI cost management or model-version hedging services.",
+  "status": "candidate"
+}

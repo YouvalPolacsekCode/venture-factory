@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZFRPTTHBEE8FQTKJ1DE6KFP",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [],
+  "total": 4.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable \u2014 marketing ops leads and Salesforce admins at enterprise companies \u2014 and they do have real budget, but willingness-to-pay evidence is weak: the pain appears as confusion and delay rather than documented spend on observability tooling. The deciding factor is buildability and autonomy: an explainability layer for SFMC Einstein requires deep API access to Salesforce's proprietary internals (which Salesforce does not expose meaningfully), making this essentially impossible to build as a Claude-prompt-plus-page stack without either a Salesforce ISV partnership or a custom ML integration; operational autonomy is equally low because diagnosing model behavior requires per-customer context and ongoing Salesforce admin interaction. Signal strength is 2 (single forum post), total scores below the 5.5 validate threshold.",
+  "solution_plan": "This opportunity does not meet the validate threshold and should be dropped. The core blocker is that Salesforce Marketing Cloud's Einstein Decisions model internals are opaque and not accessible via public API \u2014 any 'observability layer' would be limited to surface-level campaign metrics already visible in SFMC's native UI. Building a meaningful explainability tool would require either Salesforce AppExchange certification (a lengthy, regulated process) or bespoke per-client Salesforce integrations that demand hands-on admin work for every customer. That means per-customer manual delivery and synchronous onboarding, which is the opposite of the autonomous factory model. A solo non-technical operator could not realistically build or maintain this without deep Salesforce partnerships. Revisit only if Salesforce opens relevant APIs or a strong community signal (10+ similar posts with stated budget) emerges.",
+  "notes": "Fails build_gates: buildability_with_ai=3 (below min 6), operational_autonomy=3 (below min 7). Total 4.5 also below min_total_to_validate 5.5 \u2014 stage is drop regardless of gates.",
+  "scored_at": "2026-08-08T07:07:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

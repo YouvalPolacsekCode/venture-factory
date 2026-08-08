@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZFRPTTCPFYBXYGJBSA2TCTZ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.7,
+  "penalties_applied": [],
+  "total": 6.7,
+  "recommended_stage": "build",
+  "rationale": "Salesforce Marketing Cloud developers and marketing ops admins at enterprises are a narrow, named B2B buyer who demonstrably has budget (SFMC licenses run $15k+/year) and faces a concrete, production-risk bug every time they version or copy a journey. Buyer clarity is high: 'Salesforce Marketing Cloud developer or SFMC admin at a company running automated campaigns' is a specific, reachable role with clear pain. The fix \u2014 a managed package or configuration backup/restore tool \u2014 is well-scoped and buildable with Claude generating the config serialization logic and a simple UI, deliverable as a Stripe-billed SaaS. All build_gates clear their floors (operational_autonomy 7, buildability_with_ai 7, buyer_clarity 8, willingness_to_pay 7), and the total of 6.7 exceeds min_total_to_build. Proceed to build with a targeted outreach test to SFMC developers first.",
+  "solution_plan": "WHAT: A configuration backup and restore tool for Salesforce Marketing Cloud Journey Builder custom activities \u2014 it snapshots activity configs before any version/copy operation and restores them automatically, eliminating the silent data-loss bug. BUILD: The factory builds a Claude-assisted code generation layer that produces a lightweight SFMC managed package (declarative AppExchange-style installation); a Stripe payment link at $99\u2013199/month per org; a simple onboarding form collecting the customer's SFMC instance details; Claude generates the config serialization/restore logic and documentation. SELL: Target SFMC developers and marketing ops leads via Salesforce community forums (Trailblazer Community, Salesforce Stack Exchange where the signal originated), LinkedIn with 'have you lost Journey Builder configs after versioning?' copy, and AppExchange listing discovery; all outreach batches approved by operator before sending. MAINTAIN: The package runs inside the customer's SFMC org; billing via Stripe; support handled by Claude with canned responses to common SFMC config questions and escalation flags for operator review; no per-customer manual delivery work after onboarding. OPERATOR NOTE: The package itself requires some initial Apex/JavaScript code generation \u2014 the factory can draft this, but a one-time review by a contract Salesforce developer (~2\u20134 hours) is recommended before the first customer install to ensure AppExchange compliance and no TOS risk.",
+  "notes": "All build_gates met. Lowest dimension is responsiveness_signal (2) \u2014 untested; recommend a 20-lead cold outreach test to SFMC developers before full build commitment. Salesforce AppExchange listing review process adds a one-time compliance step the operator should be aware of.",
+  "scored_at": "2026-08-08T07:07:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

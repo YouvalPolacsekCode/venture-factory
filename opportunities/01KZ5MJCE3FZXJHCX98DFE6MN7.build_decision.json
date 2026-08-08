@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01KZ5MJCE3FZXJHCX98DFE6MN7",
+  "decided_at": "2026-08-08T07:07:28+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.6,
+      "threshold": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates meet their floors and the weighted total (6.6) clears min_total_to_build (6.5), but recommended_stage is 'validate' \u2014 not 'build' or 'scale' \u2014 so build_now is structurally blocked. The scoring agent explicitly flagged that responsiveness_signal is untested (scored 3) and recommended a 50-outreach demand probe before committing. Additionally, the cost_to_gain_ratio of 3.48 far exceeds the kill threshold of 0.6, and even the optimistic sensitivity scenario (1.74) remains well above it \u2014 meaning the economics do not yet support a build commitment. Deferring one week to run the responsiveness probe and reassess unit economics is the correct move.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "Reddit r/freelance + cold email to 50 freelancers from Contra/Toptal public profiles"
+}

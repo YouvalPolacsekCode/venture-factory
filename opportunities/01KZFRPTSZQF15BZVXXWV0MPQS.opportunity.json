@@ -1,0 +1,25 @@
+{
+  "id": "01KZFRPTSZQF15BZVXXWV0MPQS",
+  "discovered_at": "2026-08-08T07:04:43+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203617/moving-personal-notes-second-brain-between-companies",
+    "snippet": "Joe, an employee at Company A, makes a personal knowledge base using OneNote through the company's Microsoft subscription. A few years later, Joe decides to move to Company B. What happens to that collection of knowledge? Would Joe be allowed to export those notes and use them at Company B? That seems questionable since..."
+  },
+  "problem_statement": "Knowledge workers who build personal knowledge bases (second brains) inside employer-provided tools like OneNote or Notion lose access to years of accumulated notes when changing jobs, with no clear legal or technical path to portability.",
+  "target_segment": "Knowledge workers, developers, analysts, and consultants who change employers and need to preserve personal (non-proprietary) work notes.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "second-brain",
+    "knowledge-portability",
+    "personal-knowledge-base",
+    "note-taking",
+    "onenote",
+    "notion",
+    "employee-offboarding",
+    "productivity"
+  ],
+  "notes": "Recurring pain for mobile professionals. Buyer signal is moderate \u2014 workers who pay for personal productivity tools (Obsidian, Roam, Notion personal tier) to avoid this lock-in. A portable, employer-agnostic second-brain with clean export/import and IP boundary tooling could charge subscription fees.",
+  "status": "candidate"
+}

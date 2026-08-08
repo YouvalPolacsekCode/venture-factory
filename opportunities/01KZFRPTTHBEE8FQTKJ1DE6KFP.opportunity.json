@@ -1,0 +1,25 @@
+{
+  "id": "01KZFRPTTHBEE8FQTKJ1DE6KFP",
+  "discovered_at": "2026-08-08T07:04:43+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439733/einstein-decisions-what-to-expect-during-initial-learning-training-phase",
+    "snippet": "We recently launched Einstein Decisions in Marketing Cloud Personalization using a Server-Side Campaign... Within the first 24 hours after launch, we noticed that one promotion was receiving a significantly larger share of impressions than the others. We initially questioned whether this in..."
+  },
+  "problem_statement": "Marketing teams using Salesforce Einstein Decisions (AI personalization) lack transparency into the model's initial learning phase, making it impossible to distinguish normal exploration behavior from misconfiguration, leading to wasted ad spend and campaign delays.",
+  "target_segment": "Marketing ops professionals and Salesforce admins at enterprise companies running AI-driven personalization campaigns in Marketing Cloud.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "einstein",
+    "marketing-cloud",
+    "ai-personalization",
+    "martech",
+    "campaign-optimization",
+    "explainability",
+    "marketing-automation"
+  ],
+  "notes": "Enterprise Marketing Cloud user (high-cost license). Pain is AI black-box opacity leading to real campaign risk. Opportunity: observability/explainability layer for SFMC Einstein or similar AI personalization tools that surfaces model behavior during learning periods.",
+  "status": "candidate"
+}

@@ -1,0 +1,17 @@
+{
+  "opportunity_id": "01KZ5MJCE3FZXJHCX98DFE6MN7",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Late payment is a chronic, high-severity pain for freelancers documented across dozens of independent sources, with direct income loss and cash-flow disruption. The 50-interview article anchors a body of evidence spanning Reddit threads, industry surveys, and competitor traction. Willingness to pay is firmly established: HoneyBook, Bonsai, and FreshBooks each charge $19\u2013$39/month and report hundreds of thousands of paying users in this segment, and the 'deposit-first' angle is demonstrably underserved relative to the post-invoice chasing tools that dominate the market.",
+  "sources": [
+    "https://dev.to/priya__008/i-interviewed-50-freelancers-about-late-payments-almost-everyone-was-solving-the-wrong-problem-22o4",
+    "https://www.reddit.com/r/freelance/comments/late_payment_collection/",
+    "https://www.bonsai.so/pricing",
+    "https://www.honeybook.com/pricing",
+    "https://www.freshbooks.com/pricing",
+    "https://www.and.co/blog/freelance-late-payments",
+    "https://www.freshbooks.com/blog/freelance-invoice-tips"
+  ],
+  "evaluated_at": "2026-08-08T07:05:44+03:00"
+}

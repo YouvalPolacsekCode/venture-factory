@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KZFRPTT3NMBTA69Y8XV9BYVD",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Each customer deployment requires bespoke technical architecture work \u2014 configuring local VM sync, network setup, data replication \u2014 that cannot be automated by Claude prompts alone."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise/mid-market SaaS vendor sales and scoping require discovery calls, security reviews, and stakeholder alignment before any deployment can begin."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "End buyers are in regulated sectors (finance, healthcare, government) \u2014 compliance requirements (HIPAA, SOC 2, data residency laws) create legal/liability exposure and add significant delivery complexity."
+    }
+  ],
+  "total": 1.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and buyers genuinely pay (enterprise compliance deals are large-ticket), but this is fundamentally a technical consulting and professional services engagement \u2014 not a product a solo non-technical operator can build and run hands-off. Every customer deployment requires custom infrastructure work, enterprise sales cycles, and ongoing compliance support. Operational autonomy (2) and buildability_with_ai (3) are both critically low, and three penalties apply simultaneously. This is the wrong shape for this factory.",
+  "solution_plan": "Not recommended for build by a solo non-technical operator. The problem requires deep DevOps/infrastructure expertise (Azure VMs, data replication, network config), enterprise sales motions, and ongoing compliance management \u2014 none of which Claude can automate end-to-end. A solo operator without a technical co-founder or prior enterprise infrastructure experience cannot credibly deliver this. If the operator has a technical partner, this could be a consulting engagement, not a productized micro-service.",
+  "notes": "operational_autonomy (2) and buildability_with_ai (3) critically below build_gate floors. Total 1.0 after penalties is well below min_total_to_validate. Three compounding penalties (requires_human_fulfillment, requires_synchronous_human, regulated_industry) reflect the genuine delivery reality.",
+  "scored_at": "2026-08-08T07:07:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

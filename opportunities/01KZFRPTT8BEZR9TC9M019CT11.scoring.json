@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZFRPTT8BEZR9TC9M019CT11",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "B2B SaaS teams and AI-heavy startups are identifiable buyers who provably pay for AI API access and related cost management tooling \u2014 the pain is real and ongoing, not hypothetical. Buildability is solid: a Claude-based cost monitoring and model-version alerting service fits within standard tooling. However, responsiveness is untested (score 2), this space is moving fast (OpenAI, Anthropic, and third parties already offer cost dashboards), and defensibility is low as a thin wrapper. The total of 5.8 clears validate but not build \u2014 run a cold outreach test to 50 AI-spending startups before committing to build.",
+  "solution_plan": "WHAT: An AI cost-monitoring and model-change alert service \u2014 a lightweight dashboard + weekly email digest that tracks a company's OpenAI/Anthropic/etc. spend, flags model deprecations, and recommends when to switch versions to maintain cost/performance. BUILD: Claude processes spend export CSVs (via API or manual upload), generates plain-English cost breakdowns and migration recommendations; a simple web UI or email report; Stripe at $49\u201399/month per workspace. SELL: Target heads of engineering and CTOs at 10\u2013100-person AI startups via LinkedIn and communities like Latent Space or AI Tinkerers Slack; send a personalised 'we noticed OpenAI just deprecated X \u2014 here's what it means for your stack' hook; all outreach batches approved by operator before sending. MAINTAIN: Claude runs weekly cost analysis jobs automatically; billing via Stripe; support handled by Claude with escalation flags for operator review \u2014 operator only approves outreach and reviews edge-case support tickets. REALITY CHECK: Viable as a lightweight alerting service, but the core value (cost visibility) is increasingly built into provider dashboards; the differentiating angle must be model-version migration advice, not raw spend tracking.",
+  "notes": "All build_gate dimensions meet minimums individually (operational_autonomy 7, buildability_with_ai 7, buyer_clarity 6, willingness_to_pay 6), but total 5.8 is below min_total_to_build (6.5) \u2014 validate stage is correct. Key risk: defensibility is low and the space is crowded.",
+  "scored_at": "2026-08-08T07:07:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

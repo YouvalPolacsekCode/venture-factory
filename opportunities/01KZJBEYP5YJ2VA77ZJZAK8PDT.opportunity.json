@@ -1,0 +1,25 @@
+{
+  "id": "01KZJBEYP5YJ2VA77ZJZAK8PDT",
+  "discovered_at": "2026-08-09T07:10:57+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439715/sf-mcp-trying-to-recommend-articles-based-on-category-of-anchor-in-marketing-cl",
+    "snippet": "I am trying to set up a very simple Einstein Recipe in MCP and it doesn't seem to be working when I run the test simulation. We have various articles that have 1 or more categories associated to them. I am just trying to do a test simulation so that if the Anchor page has Category = A, the recommendations show Articles that also have Category = A. I am finding when I run the simulation, this is only working for SOME categories."
+  },
+  "problem_statement": "Marketers and Salesforce admins configuring Marketing Cloud Personalization (Einstein Recipes) find that category-based article recommendations work inconsistently \u2014 only firing for some categories \u2014 with no clear debugging path or tooling to diagnose the root cause.",
+  "target_segment": "Marketing operations teams and Salesforce developers at mid-market and enterprise companies using Marketing Cloud Personalization",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "personalization",
+    "einstein",
+    "recommendations",
+    "debugging",
+    "martech",
+    "enterprise"
+  ],
+  "notes": "Paid enterprise context (SFMC licenses are expensive). Einstein Recipes misconfiguration is a recurring pain point for Salesforce partners. Opportunity for a diagnostic/audit tool or managed service for SFMC Personalization setup. Single signal but strong buyer profile.",
+  "status": "candidate"
+}

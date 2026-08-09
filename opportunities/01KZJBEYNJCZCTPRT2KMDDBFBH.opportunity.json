@@ -1,0 +1,25 @@
+{
+  "id": "01KZJBEYNJCZCTPRT2KMDDBFBH",
+  "discovered_at": "2026-08-09T07:10:57+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49227024",
+    "snippet": "Been doing hardcode agent driven coding for the past year. I feel like I now have to test all my code locally with agents reviewing them and ideally testing them. Unfortunately I feel like the traditional CI/CD testing is starting to feel like a formality. Would love to know what everyone is doing, and if I'm not the only one making a mistake. (7 points, 7 comments, Aug 2026)"
+  },
+  "problem_statement": "Developers using AI coding agents find that traditional CI/CD pipelines no longer fit their workflow \u2014 tests feel like a formality, and there is no established toolchain for agent-driven code review, local agent testing, and deployment that replaces or augments existing CI/CD.",
+  "target_segment": "Software developers and engineering teams at companies adopting AI-agent-driven coding workflows",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agents",
+    "ci-cd",
+    "developer-tools",
+    "code-testing",
+    "agent-driven-development",
+    "deployment",
+    "workflow-automation",
+    "devops"
+  ],
+  "notes": "Active HN thread (7 pts, 7 comments, very recent Aug 2026) showing real practitioner confusion about adapting CI/CD to agent workflows. Work/professional context strong \u2014 these are employed engineers. Existing CI/CD tooling is a paid category (GitHub Actions, CircleCI, etc.), so there is clear precedent for buyers paying for this layer. Opportunity: agent-aware CI/CD orchestration or testing layer that integrates with LLM coding agents.",
+  "status": "candidate"
+}

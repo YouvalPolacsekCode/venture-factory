@@ -1,0 +1,25 @@
+{
+  "id": "01KZJBEYNZM5JFTZM9CPXR511J",
+  "discovered_at": "2026-08-09T07:10:57+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439722/experience-site-guest-user-unable-to-retrieve-contentversion-id-after-omniscript",
+    "snippet": "I'm facing an issue with an OmniScript File Upload on an Experience Cloud site. The file uploads successfully and a ContentVersion record is created. However, the Experience Site (guest/external) user is unable to retrieve or access the returned ContentVersion Id after the upload completes. In some cases, the upload appears successful, but the vId is blank or unavailable for subsequent steps."
+  },
+  "problem_statement": "Salesforce Experience Cloud developers repeatedly hit broken guest-user file upload flows in OmniScript \u2014 files upload but ContentVersion IDs are inaccessible to guest users, blocking downstream automation steps with no clear fix in the platform.",
+  "target_segment": "Salesforce developers and admins at enterprises building self-service portals on Experience Cloud with OmniStudio",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "experience-cloud",
+    "omnistudio",
+    "file-upload",
+    "contentversion",
+    "guest-user",
+    "enterprise-saas",
+    "platform-bug"
+  ],
+  "notes": "Enterprise Salesforce context \u2014 these teams have paid Salesforce licenses and pay consultants/developers. Recurring class of OmniScript guest-user permission bugs. Opportunity for a diagnostic/fix tool, managed package, or consulting productized service targeting Salesforce partners and ISVs. Single signal but high-value buyer segment.",
+  "status": "candidate"
+}

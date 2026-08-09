@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZJBEYNS14B9X96HZKYMGXF4",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [],
+  "total": 5.7,
+  "recommended_stage": "validate",
+  "rationale": "Solo and small-team website operators suffering real, ongoing infrastructure cost from AI scrapers are a clear and reachable buyer \u2014 the anti-bot market (Cloudflare, DataDome) demonstrates this segment absolutely pays, and the pain is daily and financial. The core problem with this as a factory opportunity is buildability: a credible bot-detection and mitigation product requires infrastructure-level access (CDN/reverse proxy, traffic analysis, rate-limit enforcement) that cannot be assembled from Claude prompts and a Stripe link. Operational autonomy is also limited because each site's traffic pattern and scraper behavior differs, demanding per-customer tuning. Validate whether a narrow deliverable \u2014 e.g. a diagnostic report or an AI-crawler policy configuration guide \u2014 can command payment before investing further.",
+  "solution_plan": "The full vision (an always-on anti-scraper shield) is not buildable solo without infrastructure. However, a narrower productized service IS possible: a one-time 'AI Scraper Cost Audit' \u2014 the operator submits their server logs or a Cloudflare analytics export via a form, Claude analyzes the traffic patterns, identifies the top offending bot user-agents and IPs, and returns a plain-English report with specific robots.txt and rate-limit config recommendations they can implement in Cloudflare for free. Build: intake form (Typeform or similar) + Claude analysis prompt + automated PDF/email report delivery + Stripe link at ~$49-99 one-time. Sell: reach operators via webmaster communities (HN, r/webdev, IndieHackers) with a free sample analysis; outreach goes out only after operator approves. Maintain: fully automated \u2014 form submission triggers Claude, report emails automatically. The only human step is approving outreach batches. Caveat: this is a one-time purchase, not recurring SaaS, so validate that enough buyers exist before building.",
+  "notes": "buildability_with_ai (4) fails the 6-floor build_gate; operational_autonomy (4) fails the 7-floor build_gate. Stage capped at validate. Narrowing to a report/audit product could raise both scores significantly on re-score.",
+  "scored_at": "2026-08-09T07:13:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

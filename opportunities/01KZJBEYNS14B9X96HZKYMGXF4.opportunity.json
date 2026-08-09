@@ -1,0 +1,25 @@
+{
+  "id": "01KZJBEYNS14B9X96HZKYMGXF4",
+  "discovered_at": "2026-08-09T07:10:57+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49219696",
+    "snippet": "A year of fighting scrapers on my 1.5 million-page website. For the age of the Internet, running a website metered is a pretty new phenomenon. 20 years ago maybe you would pay for your monthly 95th percentile bandwidth use. Not saying that was great either, but it was certainly more managable than what's common now."
+  },
+  "problem_statement": "Website operators running large content sites face runaway infrastructure costs from AI and bot scrapers that aggressively crawl millions of pages, consuming bandwidth and compute budget in ways that are hard to meter, block, or charge back.",
+  "target_segment": "Solo operators and small teams running large content or media websites (1M+ pages) on metered cloud infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "bot-detection",
+    "scraper-protection",
+    "bandwidth-cost",
+    "content-site",
+    "rate-limiting",
+    "ai-crawlers",
+    "infrastructure-cost",
+    "web-security"
+  ],
+  "notes": "HN post title signals a year-long pain with real infrastructure cost attached ('metered' hosting, large scale). Solo/small-team operator context. Existing anti-bot market (Cloudflare, DataDome) is paid, confirming buyer willingness. Signal is a single thread but the topic (AI scraper cost) is broadly recurring across webmaster communities in 2026.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZJBEYNZM5JFTZM9CPXR511J",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Salesforce OmniScript/Experience Cloud debugging requires hands-on investigation of each customer's org configuration, permissions, and data model \u2014 per-customer manual work is unavoidable for a proper fix or diagnosis."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise Salesforce customers expect back-and-forth clarification and follow-up on complex platform bugs \u2014 automated support alone is insufficient for this ICP."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce developers and admins at enterprises are excellent buyers \u2014 they have budget, pay for tooling, and their orgs are already spending heavily on Salesforce licenses. The problem, however, is that a real solution requires per-customer org access and manual debugging of permissions, data models, and OmniScript configurations \u2014 there is no way to automate this meaningfully with Claude alone. A generic diagnostic guide or checklist can be built easily, but it would not command enterprise pricing and could not be sold as a recurring service. The mandatory per-customer human work tanks both the autonomy score and the penalty-adjusted total. Drop unless a narrow self-serve diagnostic tool (no org access needed, just a structured questionnaire) can be validated.",
+  "solution_plan": "As a full consulting or managed-fix service this is not viable for a solo non-technical operator \u2014 each case requires Salesforce org access and platform expertise. A narrower self-serve product might work: a 'Salesforce OmniScript Guest User Diagnostic Checklist' \u2014 a structured intake form that walks the developer through the 8-10 known root causes (sharing rules, guest profile permissions, ContentVersion visibility settings), Claude generates a prioritized fix list, and they get a PDF. Build: a detailed Claude prompt trained on Salesforce docs + a form + automated email delivery + Stripe at ~$29. Sell: target Salesforce Stack Exchange and Salesforce developer forums with a free version of the checklist; paid version gives a detailed, org-specific action plan. Maintain: fully automated once built. Honest caveat: the market for a $29 PDF checklist in this niche is probably very small (dozens, not thousands of buyers), so validate demand before building.",
+  "notes": "operational_autonomy (5) fails the 7-floor build_gate. Total after penalties (3.7) falls well below min_total_to_validate. The per-customer manual fulfillment is the decisive disqualifier.",
+  "scored_at": "2026-08-09T07:13:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

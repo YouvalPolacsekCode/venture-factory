@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZ5MJCEMRCXGKZP4BX9GPAH4",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "Post-migration SEO invisibility is a real and high-stakes pain, but the evidence base is too thin to meet the pass bar: the primary signal is a single Stack Exchange question with no corroborating pain quotes, no willingness-to-pay signal beyond the general existence of SEO tools like Ahrefs/Semrush, and no competitor charging specifically for domain-migration diagnostics. The episodic nature of domain migrations (once per site, not recurring) further limits TAM depth. Marking inconclusive rather than dead-fail \u2014 re-queue with broader search for migration-specific Reddit/IH threads.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148816/search-console-reports-page-as-indexed-and-crawlable-but-it-doesnt-appear-for"
+  ],
+  "evaluated_at": "2026-08-09T07:11:58+03:00"
+}

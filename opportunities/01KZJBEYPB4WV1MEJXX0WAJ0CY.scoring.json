@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZJBEYPB4WV1MEJXX0WAJ0CY",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "YouTube playlist importers serve individual consumers and students \u2014 the business model requires thousands of paying users at low price points (~$5-15/mo) to generate meaningful revenue, which is impractical for a solo operator to acquire."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "The target users \u2014 content creators, researchers, and students \u2014 are individual consumers who rarely pay for niche browser utilities, and the PKM/notebook market (Notion, Obsidian) is dominated by free tiers that condition users against paying for add-ons. Buyer clarity is very weak: 'content creators and students' is a vague, broad consumer segment with low and unpredictable willingness to pay at any price that would sustain a business. Even if technically buildable, reaching and converting enough users to generate meaningful revenue would require a consumer marketing operation that a solo non-technical operator cannot run. Drop.",
+  "solution_plan": "This is not a viable factory opportunity. The product (a YouTube playlist importer) could technically be built as a small web app or browser extension using Claude for metadata extraction plus a Stripe payment link, but the go-to-market is the fatal flaw: you need thousands of individual consumers paying $5-10 each, and the only realistic acquisition channels (app stores, Product Hunt, SEO) require sustained marketing effort that a solo operator with this factory cannot execute. There is also no clear B2B angle \u2014 no specific business role pays for this. The builder described in the source post is already building this themselves and their own tool took multiple iterations to work; the problem is a reliability engineering challenge, not a gap a new service can fill profitably. Not recommended.",
+  "notes": "buyer_clarity (3) fails the 6-floor build_gate; willingness_to_pay (4) fails the 5-floor build_gate. Total after penalties (3.3) is well below min_total_to_validate. Fundamentally a B2C consumer utility with no clear path to sustainable solo revenue.",
+  "scored_at": "2026-08-09T07:13:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

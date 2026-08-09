@@ -1,0 +1,25 @@
+{
+  "id": "01KZJBEYPB4WV1MEJXX0WAJ0CY",
+  "discovered_at": "2026-08-09T07:10:57+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/shaojie/a-playlist-has-124-videos-my-tool-imported-15-then-100-then-finally-124-1e9d",
+    "snippet": "A playlist has 124 videos. My tool imported 15, then 100, then finally 124. One of my extension's features imports a whole YouTube playlist into your notebook in one click. (score: 9, 1 comment, Aug 2026, tags: buildinpublic, startup, sass, webdev)"
+  },
+  "problem_statement": "Users want to reliably import entire YouTube playlists (and their metadata) into note-taking or knowledge management tools in one click, but existing browser extensions and tools fail silently or partially import content, requiring multiple retries and manual fixes.",
+  "target_segment": "Content creators, researchers, students, and knowledge workers who use YouTube heavily and maintain digital notebooks or PKM tools",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "youtube",
+    "playlist",
+    "import",
+    "pkm",
+    "browser-extension",
+    "knowledge-management",
+    "content-tools",
+    "saas"
+  ],
+  "notes": "Dev.to builder post describing a real reliability problem with a paying-user product (tagged 'sass'). Score of 9 suggests resonance. Buyer signal moderate \u2014 notebook/PKM tools are paid category (Notion, Obsidian Sync, Roam). The reliability gap (15 \u2192 100 \u2192 124 videos) is a concrete, recurring engineering pain that the market hasn't fully solved.",
+  "status": "candidate"
+}

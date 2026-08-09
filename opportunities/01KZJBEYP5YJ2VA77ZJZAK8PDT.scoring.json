@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZJBEYP5YJ2VA77ZJZAK8PDT",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Diagnosing and fixing Einstein Recipe misconfiguration requires access to the specific Marketing Cloud org, data schema, and recipe settings \u2014 per-customer manual investigation is necessary for any meaningful deliverable beyond generic documentation."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Marketing ops teams in enterprise SFMC environments expect iterative back-and-forth to resolve configuration issues \u2014 a one-shot automated output is insufficient."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "Marketing operations professionals at mid-market and enterprise companies using SFMC are strong buyers \u2014 SFMC licenses are expensive and these teams have budgets for consulting and tooling. However, like the OmniScript opportunity, meaningful help requires hands-on access to each customer's specific MCP configuration, data categories, and recipe settings; Claude cannot autonomously debug this from the outside. A generic troubleshooting guide exists (Salesforce docs), so the value of an automated checklist is limited. The penalty-adjusted total drops well below the validate threshold. Drop unless a very narrow self-serve audit tool (no org access, pure questionnaire-driven) can realistically surface value.",
+  "solution_plan": "This is not viable as a fully automated service \u2014 debugging Einstein Recipes requires org access and iterative testing that a non-technical operator cannot do. A self-serve 'SFMC Personalization Diagnostic Guide' (structured questionnaire \u2192 Claude-generated action plan \u2192 PDF, ~$49) is the closest viable form, similar to the OmniScript opportunity above. Build: Claude prompt covering known Einstein Recipe category-filter failure modes + intake form + automated delivery + Stripe. Sell: target SFMC-focused communities (Salesforce Trailblazer, MarTech forums) with a free sample. Maintain: automated. Honest caveat: the addressable market for this specific niche is small and the willingness to pay $49 for a checklist (vs just asking on Stack Exchange for free) is unproven. Only worth building if the OmniScript variant validates first and shows cross-sell potential.",
+  "notes": "operational_autonomy (5) fails the 7-floor build_gate. Total after penalties (3.6) falls well below min_total_to_validate. Near-identical structure to 01KZJBEYNZM5JFTZM9CPXR511J \u2014 these two Salesforce opportunities could be combined into a single 'Salesforce configuration diagnostic' product if either validates.",
+  "scored_at": "2026-08-09T07:13:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

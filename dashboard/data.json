@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-08-09T04:13:17+00:00",
-    "idt": "2026-08-09T07:13:17+03:00"
+    "utc": "2026-08-10T04:23:58+00:00",
+    "idt": "2026-08-10T07:23:58+03:00"
   },
   "funnel": {
-    "candidates": 213,
-    "scored": 213,
+    "candidates": 214,
+    "scored": 214,
     "validated": 22,
     "build_decisions": {
       "defer_1_week": 20,
@@ -417,7 +417,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439723/creating-a-pde-with-an-orgs-metadata",
       "discovered_at": "2026-08-05T08:37:47+03:00"
@@ -752,14 +752,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2503,
-    "last_7_days_usd": 1.7719,
-    "all_time_usd": 14.9563,
+    "today_usd": 0.1948,
+    "last_7_days_usd": 1.8055,
+    "all_time_usd": 15.1511,
     "by_day": [
-      {
-        "date": "2026-08-03",
-        "usd": 0.1612
-      },
       {
         "date": "2026-08-04",
         "usd": 0.2162
@@ -783,20 +779,24 @@
       {
         "date": "2026-08-09",
         "usd": 0.2503
+      },
+      {
+        "date": "2026-08-10",
+        "usd": 0.1948
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6113
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.542
+        "usd": 0.5956
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4344
+        "usd": 0.5208
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.5047
       },
       {
         "agent": "build_decisions",
@@ -804,46 +804,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.033
+        "usd": 0.0332
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-08-03",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-04",
       "agents": {
@@ -1053,12 +1018,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-10",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-09.md",
-    "date": "2026-08-09",
-    "text": "# Daily Summary — 2026-08-09 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 213 |\n| Opportunities validated past threshold | 45 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in build, live, scaling, or winding-down stages. Factory is in discovery mode.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | nominal | 1 run, 0 errors |\n| opportunity_scoring | nominal | 1 run, 0 errors |\n| pain_validation | nominal | 1 run, 0 errors |\n\nAll other agents nominal (skipped per schedule).\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues pain signal collection across B2B SaaS communities.\n2. `pain_validation` runs targeted validation on highest-scoring opportunities from today's batch.\n3. `opportunity_scoring` re-scores the full candidate pool for ranking shifts.\n\n## Operator action items\n",
+    "file": "reports/daily/2026-08-10.md",
+    "date": "2026-08-10",
+    "text": "# Daily Summary — 2026-08-10 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 214 |\n| Opportunities validated past threshold | 46 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n<!--\nNo active experiments recorded in aggregated state.\n-->\n\nAll experiments currently archived or in planning phase. No live or discovery-stage work in progress.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `build_decisions` evaluates validated opportunities (46 candidates) for experiment feasibility and resource fit.\n2. `cost_gain` computes cost-per-lead and lead-to-customer ratios for the weekly review.\n3. `lead_research` generates outreach lists from the highest-scoring 46 validated opportunities.\n4. `market_radar` continues radar sweeps for emerging pain signals in target verticals.\n5. `pain_validation` probes remaining candidate pool for threshold-crossing signals.\n\n## Operator action items\n",
     "truncated": true
   },
   "analytics": null

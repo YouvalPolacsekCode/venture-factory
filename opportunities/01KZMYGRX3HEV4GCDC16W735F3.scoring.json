@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZMYGRX3HEV4GCDC16W735F3",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [],
+  "total": 4.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 solo founders do waste time on LLC registrations and compliance forms \u2014 but the buyer pool is narrow and largely price-sensitive: 1-5 person pre-revenue startups rarely have discretionary SaaS budgets, and single-user consumer-like behavior makes this structurally weak on buyer_clarity (score 5, below the 6 build_gate floor). Willingness to pay is unproven at 4 \u2014 there are adjacent tools (Clerky, Stripe Atlas, Doola) but they bundle the legal service itself, not a standalone AI automation layer, so substitute pricing doesn't directly validate a pure automation micro-product. Operational autonomy is capped at 5 because document workflows vary wildly per jurisdiction and form type, meaning Claude would require frequent per-customer prompt tuning or correction \u2014 this is not yet a hands-off service. The signal_strength of 2 from a single dev.to post is insufficient to commit resources; validate further on Reddit/IH before reconsidering.",
+  "solution_plan": "WHAT: A done-for-you AI document extraction and form-fill micro-service \u2014 the operator submits a business document (PDF or URL), and Claude returns structured data or a pre-filled form ready for filing. BUILD: The factory builds a simple intake form (Tally or Typeform) linked to a Claude prompt chain that parses uploaded PDFs, extracts key fields, and returns a structured JSON or pre-filled template; a Stripe payment link ($29-49 per document batch) sits in front. SELL: Outreach to solo founders on Indie Hackers 'What are you working on' threads and r/startups \u2014 but given the weak buyer signal and narrow ICP, outreach batches should be approved by the operator before sending. MAINTAIN: Claude handles ingestion and extraction automatically; the only recurring human step is approving outreach batches and monitoring for edge-case document failures. REALITY CHECK: The service is technically buildable but the market is thin \u2014 solo pre-revenue founders are poor paying customers, and the use case is episodic (you register an LLC once). Without evidence of a higher-volume, repeat-use version of this pain (e.g. compliance teams at small agencies doing this monthly), this does not reach sustainable MRR. Do not build until corroborating signals emerge.",
+  "notes": "Fails buyer_clarity build_gate (scored 5, floor is 6): buyer is vague 'solo founders' with no clear budget authority or repeat purchase cycle. Fails willingness_to_pay build_gate (scored 4, floor is 5): no direct paid substitute for the standalone AI-automation layer at a validatable price point. Fails operational_autonomy build_gate (scored 5, floor is 7): document variety across jurisdictions requires per-case human review. Total 4.9 also falls below min_total_to_validate (5.5), placing this in 'drop'. Recommend re-evaluating if signal_strength reaches 4+ with Reddit/IH corroboration and a pivot toward a higher-frequency buyer (e.g. small accountants or paralegals processing documents monthly).",
+  "scored_at": "2026-08-10T07:23:53+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

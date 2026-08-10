@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZ86V2YZ87AZBD62HA1PB9EC",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real and technically specific, but evidence is thin: a single Stack Exchange question from one practitioner, with no corroborating threads, competitor pricing signals, or community volume to confirm this is a recurring, paid-for problem. The AppExchange ISV population is small (~10,000 partners globally), migrations happen infrequently per ISV, and no willingness-to-pay signal beyond an analogous competitor (Gearset) exists. Fails the 5-distinct-pain-quotes threshold.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439723/creating-a-pde-with-an-orgs-metadata"
+  ],
+  "evaluated_at": "2026-08-10T07:23:30+03:00"
+}

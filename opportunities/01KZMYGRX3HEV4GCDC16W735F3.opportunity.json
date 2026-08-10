@@ -1,0 +1,27 @@
+{
+  "id": "01KZMYGRX3HEV4GCDC16W735F3",
+  "discovered_at": "2026-08-10T07:22:29+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/tryclicked/what-i-got-wrong-building-a-browser-extension-with-an-ai-assistant-3n8d",
+    "snippet": "First hour with Claude's browser extension: I pointed it at our LLC registration and watched it work... [score: 7, comments: 12, tags: ai, webdev, startup, productivity] \u2014 solo operator building AI-assisted browser tooling to automate document-heavy business workflows, describing friction in getting AI assistants to reliably handle real business documents like LLC registrations."
+  },
+  "problem_statement": "Solo operators and small startup founders waste significant time on repetitive document-heavy business tasks (entity registration, compliance forms, structured data extraction from PDFs) and struggle to get AI browser tools to handle these reliably end-to-end without manual correction.",
+  "target_segment": "Solo founders and 1-5 person startups doing their own legal/compliance/admin document work",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-browser-extension",
+    "document-automation",
+    "llc-registration",
+    "compliance-forms",
+    "solo-founder",
+    "startup-admin",
+    "ai-assistant",
+    "pdf-extraction",
+    "business-automation",
+    "webdev"
+  ],
+  "notes": "Author is a paying-product builder (tryclicked product implied), 12 comments suggests resonance among peers. Buyer signal is moderate: startup context, productivity framing, existing tool investment. Pain is real but signal is a single dev.to post with limited volume. Would need corroboration from Reddit/IH to raise signal_strength.",
+  "status": "candidate"
+}

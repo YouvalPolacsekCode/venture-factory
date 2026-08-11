@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZQG9WFNCETB0BW64R67Q3JV",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "SFMC debugging requires expert-level diagnosis of each specific customer's configuration, AMPscript code, and platform state \u2014 this is inherently per-customer manual work that Claude cannot fully automate without significant human triage."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Customers hitting obscure platform bugs will expect interactive back-and-forth support to validate whether a suggested fix actually resolved their specific issue."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and named \u2014 marketing ops managers and email developers at enterprise SFMC accounts who are clearly in a paid, high-stakes context \u2014 and they do pay for adjacent tooling. However, the core problem (debugging specific, undocumented SFMC edge cases) is inherently per-incident and per-configuration: each debugging session requires understanding a unique setup, inspecting live data, and iterating on fixes, which demands human expert judgment that Claude cannot reliably automate end-to-end. The operational_autonomy score of 4 and the resulting -1.5 penalty for requires_human_fulfillment correctly sink the total to 3.3, well below the validate threshold.",
+  "solution_plan": "This idea would be a Claude-assisted SFMC debugging knowledge base or triage service \u2014 customers submit their SFMC bug symptoms and receive a structured diagnostic report and suggested fixes. The factory could build a simple intake form, a Claude prompt trained on SFMC documentation and known edge cases, and a Stripe link for per-incident ($150\u2013$300) or monthly retainer ($500+) pricing. Sell via targeted outreach to SFMC Trailblazer Community members, LinkedIn marketing ops groups, and Stack Exchange SFMC regulars \u2014 all outreach requires operator approval before sending. However: delivery cannot be automated. Each SFMC issue is unique to the customer's org, data extensions, and live campaign state; Claude can provide general guidance but cannot actually inspect the customer's SFMC instance, run queries, or verify fixes. This means every ticket requires Youval or a hired expert to do real diagnostic work, making it a consulting business, not a software product. A solo non-technical operator cannot build and maintain a genuinely autonomous version of this \u2014 it would consume per-customer time indefinitely. Do not build.",
+  "notes": "Fails operational_autonomy build gate (scored 4, floor is 7) and buildability_with_ai build gate (scored 5, floor is 6). The core deliverable \u2014 resolving undocumented SFMC platform bugs for a specific customer configuration \u2014 cannot be automated by Claude without direct access to the customer's SFMC org. This is a consulting/agency service disguised as a product opportunity. Total of 3.3 is also below the validate threshold of 5.5, so drop is the correct stage.",
+  "scored_at": "2026-08-11T07:13:08+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

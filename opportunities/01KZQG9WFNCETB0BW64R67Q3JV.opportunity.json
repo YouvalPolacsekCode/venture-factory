@@ -1,0 +1,26 @@
+{
+  "id": "01KZQG9WFNCETB0BW64R67Q3JV",
+  "discovered_at": "2026-08-11T07:11:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439741/why-is-sfmc-sometimes-losing-the-alias-during-one-of-its-processing-paths-for-dy",
+    "snippet": "Why would a link in Tracking > Click Activity > Link View be showing as the alias and as %%=redirectTo(@location_url)=%%? The link name was Null for 4405 clicks and \"logo\" alias for 2100 clicks. Why might this be happening? ... We have internally used CloudPages we share with our marketing teams which act as templates to create email messages from. We need them to display personalisation strings so that staff can see where they are used."
+  },
+  "problem_statement": "Salesforce Marketing Cloud (SFMC) professionals routinely hit undocumented platform edge cases\u2014broken click-alias tracking and CloudPage personalisation rendering\u2014that require expert debugging time and are not covered by Salesforce documentation or support, causing lost data and slow marketing operations.",
+  "target_segment": "Marketing operations managers and email developers at mid-to-large companies using Salesforce Marketing Cloud",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce-marketing-cloud",
+    "email-marketing",
+    "ampscript",
+    "click-tracking",
+    "marketing-ops",
+    "sfmc",
+    "cloudpage",
+    "debugging",
+    "enterprise-saas"
+  ],
+  "notes": "Two independent SFMC questions on the same day (Aug 10 2026) from professional users hitting distinct but equally obscure platform bugs. Both are in a paid enterprise context (SFMC licenses run $1,500\u2013$50,000+/month). A service offering expert SFMC debugging, monitoring, or a curated knowledge base of undocumented edge cases could charge per-incident or via retainer. Buyer willingness-to-pay is implied by existing SFMC spend and cost of bad tracking data on live campaigns.",
+  "status": "candidate"
+}

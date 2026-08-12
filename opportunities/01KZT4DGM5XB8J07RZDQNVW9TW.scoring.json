@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01KZT4DGM5XB8J07RZDQNVW9TW",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Generating a working Transaction Security policy that correctly distinguishes CPQ internal calls from user bulk exports requires deep org-specific analysis of API call patterns, user profiles, and CPQ configuration \u2014 per-customer manual work."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise security/compliance buyers at Shield-tier Salesforce accounts will require scoping calls, security review, and stakeholder sign-off before purchasing any policy tooling."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Target segment explicitly includes finance, healthcare, and manufacturing \u2014 regulated industries where security policy tooling carries compliance and liability risk."
+    }
+  ],
+  "total": 1.1,
+  "recommended_stage": "drop",
+  "rationale": "While the buyer has demonstrated willingness to pay (Shield + CPQ = significant Salesforce spend), the solution is inherently consulting-shaped: every enterprise org's API call profile, user permission structure, and CPQ configuration is different, making a generic automated tool unreliable or even dangerous in a compliance context. Regulated industry penalties and the per-customer fulfillment requirement drop the total far below validate threshold. Operational autonomy (3) is critically low \u2014 this is a professional services engagement, not an autonomous SaaS product.",
+  "solution_plan": "This would be a Transaction Security policy template generator or consulting playbook for Salesforce admins at Shield + CPQ orgs. Claude could draft policy logic templates and documentation, but applying them correctly to a specific enterprise org requires a Salesforce security architect to validate \u2014 otherwise a misconfigured policy could block CPQ operations or expose data. The regulated-industry context (finance, healthcare) adds compliance liability. This cannot be built and delivered hands-off by a solo non-technical operator; it is fundamentally an enterprise consulting engagement that requires Salesforce expertise and security credentials to sell credibly.",
+  "notes": "Fails operational_autonomy build gate (scored 3, minimum 7). Also fails buildability_with_ai (4, minimum 6). Regulated industry penalty applied. Drop.",
+  "scored_at": "2026-08-12T07:43:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

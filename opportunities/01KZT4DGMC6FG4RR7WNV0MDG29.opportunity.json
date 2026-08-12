@@ -1,0 +1,27 @@
+{
+  "id": "01KZT4DGMC6FG4RR7WNV0MDG29",
+  "discovered_at": "2026-08-12T07:41:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148833/why-sudden-changes-in-direct-traffic-in-2026",
+    "snippet": "Just need to understand if someone else is also seeing an increase in direct traffic in past couple of months. I have seen a 30%+ incremental direct traffic in Adobe Analytics when checked URLs based data. In GA4, there is more 120%+ increase in direct traffic. If someone here is also seeing that and comparing that with Google Search Console impressions incremental, please share your experience and how you are planning to see the share % of this incoming direct traffic."
+  },
+  "problem_statement": "Digital marketers and SEO professionals are seeing large, unexplained spikes in 'direct' traffic in both GA4 and Adobe Analytics in 2026, with no clear tooling to diagnose whether this is AI-driven unattributed traffic, dark social, or analytics misconfiguration \u2014 making budget and channel decisions unreliable.",
+  "target_segment": "Digital marketing managers, SEO analysts, and web analytics professionals at e-commerce and content businesses using GA4 or Adobe Analytics.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "web-analytics",
+    "ga4",
+    "adobe-analytics",
+    "direct-traffic",
+    "attribution",
+    "seo",
+    "ai-traffic",
+    "dark-social",
+    "traffic-analysis",
+    "marketing-analytics"
+  ],
+  "notes": "Buyer signal: poster is comparing Adobe Analytics (paid, expensive) and GA4, suggesting a professional or agency context with active analytics spend. The 2026 direct traffic surge is likely related to AI-generated summaries reducing click-through (zero-click AI results), which is a growing systemic issue for businesses dependent on organic traffic. Opportunity: a traffic attribution diagnostic tool or analytics overlay that helps marketers identify and categorize unattributed direct traffic sources, especially AI-referral traffic.",
+  "status": "candidate"
+}

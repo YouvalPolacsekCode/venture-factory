@@ -1,0 +1,25 @@
+{
+  "id": "01KZT4DGM5XB8J07RZDQNVW9TW",
+  "discovered_at": "2026-08-12T07:41:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439742/how-can-i-exempt-salesforce-cpq-api-calls-while-blocking-other-api-queries-that-process-more-than-200-records-using-transaction-security",
+    "snippet": "I'm implementing an API Export Restriction using Salesforce Shield Transaction Security Policy. The requirement is to block user API operations that process more than 200 records, while allowing certain internal/managed-package operations such as Salesforce CPQ to continue working. My current Transaction Security Policy uses conditions: Operation = QueryAll, Rows Processed >= 200, etc. The challenge is distinguishing CPQ's internal API calls from user-initiated bulk exports in Transaction Security policy logic."
+  },
+  "problem_statement": "Salesforce Shield Transaction Security Policies cannot easily distinguish CPQ or other managed-package internal API calls from user bulk-export operations, forcing admins into complex workarounds or accepting security gaps to keep CPQ functional.",
+  "target_segment": "Salesforce admins and architects at mid-to-large enterprises running both Salesforce Shield and Salesforce CPQ, typically in regulated industries (finance, healthcare, manufacturing).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "salesforce-shield",
+    "cpq",
+    "transaction-security",
+    "api-governance",
+    "data-loss-prevention",
+    "enterprise-security",
+    "salesforce-admin"
+  ],
+  "notes": "Buyer signal: Salesforce Shield is a paid add-on (~$50/user/month); customers paying for Shield are typically enterprise accounts with active security/compliance budgets. CPQ is also a paid product. The friction here occurs at the intersection of two expensive paid products, meaning the customer has already demonstrated willingness to pay. Opportunity: a consulting playbook, automated policy template generator, or a lightweight managed package that injects traceable headers into CPQ API calls to make them distinguishable in Transaction Security rules.",
+  "status": "candidate"
+}

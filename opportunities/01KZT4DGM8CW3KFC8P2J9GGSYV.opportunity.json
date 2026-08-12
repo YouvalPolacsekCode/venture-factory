@@ -1,0 +1,26 @@
+{
+  "id": "01KZT4DGM8CW3KFC8P2J9GGSYV",
+  "discovered_at": "2026-08-12T07:41:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/35989/troubleshooting-unexpected-dates-and-float-changes-in-primavera-p6",
+    "snippet": "I updated a project schedule in Primavera P6. After entering the Actual Start, Actual Finish, and Remaining Duration, some activities are showing unexpected dates, even though the relationships and calendars appear to be correct. The Total Float of some activities has also changed significantly. I don't want to fix the issue by manually changing dates because that could compromise the schedule logic. If you were in my position, what would you check step by step in Primavera P6 to identify the root cause?"
+  },
+  "problem_statement": "Construction and engineering project managers using Primavera P6 frequently encounter unexpected schedule date and float changes after progress updates, and lack a systematic, reliable diagnostic workflow to identify root causes without corrupting schedule logic.",
+  "target_segment": "Project schedulers and project managers at construction, engineering, and infrastructure firms using Oracle Primavera P6 (mid-to-large projects, often $10M+ in value).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "primavera-p6",
+    "project-scheduling",
+    "construction",
+    "engineering",
+    "schedule-analysis",
+    "float-analysis",
+    "oracle-primavera",
+    "project-management",
+    "diagnostic-tooling"
+  ],
+  "notes": "Buyer signal: P6 is expensive enterprise software (~$2,000+/license); users are professionals on active construction or infrastructure projects where schedule errors have real financial consequences (liquidated damages, rework). Single data point here but the problem is well-documented across P6 user forums. Opportunity: a structured P6 schedule health-check tool or guided diagnostic SaaS that catches common misconfiguration patterns (retained logic vs. progress override, calendar mismatches, out-of-sequence progress).",
+  "status": "candidate"
+}

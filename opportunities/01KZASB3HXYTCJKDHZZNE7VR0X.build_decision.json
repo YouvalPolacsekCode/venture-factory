@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01KZASB3HXYTCJKDHZZNE7VR0X",
+  "decided_at": "2026-08-12T07:44:02+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "passed": true
+    },
+    "buildability_with_ai": {
+      "score": 9,
+      "floor": 6,
+      "passed": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "passed": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "passed": true
+    },
+    "total": {
+      "score": 6.7,
+      "min_to_build": 6.5,
+      "passed": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "qualifies": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the total score (6.7) clears the 6.5 threshold, so the opportunity is technically eligible for build_now. However, the cost-to-gain ratio is 2.727 \u2014 far above the kill threshold of 0.6, and even the optimistic scenario (1.364) exceeds it. Responsiveness signal is 1 (effectively untested), meaning there is zero empirical evidence that the target segment will engage or pay. With no portfolio pressure (0/3 slots filled) there is no urgency to commit operator time before validating demand. Deferring one week to run a lightweight responsiveness probe (20-30 targeted posts/DMs on r/sysadmin, ServerFault, relevant Microsoft communities) will either confirm buying intent or save a week of wasted build effort.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "r/sysadmin + ServerFault targeted answers"
+}

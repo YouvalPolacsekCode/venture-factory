@@ -1,0 +1,26 @@
+{
+  "id": "01KZT4DGM1GB8F1THS6ES56CGP",
+  "discovered_at": "2026-08-12T07:41:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439744/recommended-approach-for-packaging-and-distributing-agentforce-agents-in-a-manag",
+    "snippet": "We have built an Agentforce agent using AiAuthoringBundle metadata. However, while creating a second-generation managed package (2GP), we found that the .agent component cannot be included in the package. Based on our understanding, the managed package can include the supporting components, such as Apex classes, Flows, custom metadata, permissions, and agent actions, while the Agentforce agent must be deployed, configured, activated, and published separately in the subscriber org after package installation. This creates a painful post-install manual step for ISVs distributing AI agents to customers."
+  },
+  "problem_statement": "Salesforce ISV developers cannot include Agentforce (.agent) components in 2GP managed packages, forcing manual post-install deployment and configuration steps in every subscriber org, breaking the automated install flow they rely on for distribution.",
+  "target_segment": "Salesforce ISV developers and consulting partners building and distributing Agentforce AI agents via managed packages (AppExchange / enterprise B2B SaaS on Salesforce).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "managed-package",
+    "2gp",
+    "isv",
+    "ai-agent",
+    "appexchange",
+    "deployment-automation",
+    "packaging"
+  ],
+  "notes": "Buyer signal: Salesforce ISVs pay platform fees and invest significant engineering in managed packages; broken packaging directly blocks revenue-generating product distribution. Agentforce is Salesforce's current flagship AI push (2025-2026), making this pain timely and widespread among the ISV community. Opportunity: tooling, documentation generators, or post-install automation scripts that bridge the gap until Salesforce natively supports .agent in 2GP.",
+  "status": "candidate"
+}

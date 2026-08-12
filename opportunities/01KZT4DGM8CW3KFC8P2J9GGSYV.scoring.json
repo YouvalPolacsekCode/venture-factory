@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZT4DGM8CW3KFC8P2J9GGSYV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Actual P6 schedule diagnosis requires access to the customer's .xer or .xml project file and knowledge of their specific project structure \u2014 not fully automatable without direct file ingestion and org-specific context."
+    }
+  ],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "Project schedulers at large construction firms are a specific, identifiable buyer with real financial pain (schedule errors cause liquidated damages), and P6 users demonstrably pay for expensive software. However, meaningful diagnostic value requires ingesting the customer's actual schedule file and applying P6-specific logic that Claude cannot reliably execute without deep Primavera integration work. The penalty for per-customer fulfillment (each schedule analysis is unique) drops the total below validate. Operational autonomy at 6 is borderline but the human fulfillment penalty reflects the reality that a generic checklist won't satisfy professional schedulers dealing with project-specific issues.",
+  "solution_plan": "The service would be a P6 schedule health-check tool: a customer uploads their .xer or .xml file, Claude analyzes it against common misconfiguration patterns (retained logic vs. progress override, out-of-sequence progress, calendar mismatches, float anomalies), and returns a structured diagnostic report. Building a file-upload form + Claude analysis pipeline is feasible for the factory. The challenge is that P6 .xer parsing requires specialized XML/database handling, and each report needs to be accurate enough for professionals staking project outcomes on it \u2014 a generic analysis risks being dismissed or wrong. Selling via P6 user communities and LinkedIn construction/engineering groups is realistic, but each analysis is a one-time transaction unless bundled into a subscription. A solo operator could attempt this, but the technical parsing complexity and the need for domain-credible output make it genuinely difficult without Primavera expertise.",
+  "notes": "Fails total threshold for validate (4.3 < 5.5). Requires_human_fulfillment penalty applied because each project schedule is unique and meaningful diagnosis requires file-level access and project-specific context. Drop unless a credible fully-automated file-parsing approach can be scoped.",
+  "scored_at": "2026-08-12T07:43:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

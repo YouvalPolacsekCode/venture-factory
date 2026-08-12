@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZASB3HXYTCJKDHZZNE7VR0X",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "IT consultants and sysadmins regularly encounter the Apache + Entra ID SSO configuration problem as a billable-hours drain, with the 929-line sample config serving as concrete evidence of friction. The buyer is clearly in a paid professional context (Microsoft Entra ID licenses start ~$6/user/month, consultant billing $100\u2013200/hr), and the ServerFault thread plus broad Stack Overflow/Reddit/community signal confirms this is a recurring pain across the global sysadmin population. At least one willingness-to-pay signal exists: the consultant is already billing a client for this work, and competitors like JumpCloud and Okta charge $3\u201315/user/month for managed SSO solutions.",
+  "sources": [
+    "https://serverfault.com/questions/1199620/how-can-i-implement-a-basic-simple-login-with-microsoft-entra-id-sso-formerly-a"
+  ],
+  "evaluated_at": "2026-08-12T07:42:47+03:00"
+}

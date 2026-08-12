@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZT4DGM1GB8F1THS6ES56CGP",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any post-install automation script or deployment tooling for Agentforce in subscriber orgs will require customization and validation per ISV customer's specific metadata structure \u2014 not a generic hands-off SaaS delivery."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Salesforce ISV environments are highly variable; support tickets for org-specific deployment failures will require human-judgement triage."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is clear \u2014 Salesforce ISV developers with real budget and a genuine deployment blocker \u2014 and the pain is timely given Salesforce's Agentforce push. However, the solution is not a hands-off automated SaaS: each ISV's 2GP structure and subscriber org topology is unique, meaning delivery requires per-customer engineering work that cannot be automated by Claude alone. After penalties the score falls below the validate threshold, and the operational_autonomy score (4) is far below the build gate floor of 7, making this unsuitable for a solo non-technical operator running an autonomous factory.",
+  "solution_plan": "The micro-service would be a post-install automation toolkit (scripts + documentation generator) that helps Salesforce ISVs deploy Agentforce agents to subscriber orgs automatically after 2GP install. The factory could draft the documentation and boilerplate Apex post-install handler code using Claude, but actually validating and adapting it for each ISV's metadata structure requires Salesforce development expertise \u2014 which is beyond what Claude + a simple form can deliver reliably. Selling to ISVs via AppExchange forums and LinkedIn Salesforce developer communities is feasible, but each sale would require a scoping call and custom delivery. This is effectively a consulting engagement, not a productized autonomous service. A solo non-technical operator cannot build or maintain this without Salesforce platform expertise.",
+  "notes": "Fails operational_autonomy build gate (scored 4, minimum 7). Effectively a consulting/done-for-you engagement per customer. Drop unless a fully generic, no-customization automation path can be identified.",
+  "scored_at": "2026-08-12T07:43:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

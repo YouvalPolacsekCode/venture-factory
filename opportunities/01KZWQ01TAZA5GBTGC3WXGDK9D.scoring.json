@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZWQ01TAZA5GBTGC3WXGDK9D",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is very clear \u2014 dev teams at startups and SMBs with Claude API in production \u2014 and the pain (revenue-impacting downtime from 529 overload errors) is real and they already pay for API access, indicating genuine willingness to pay for reliability tooling. The fatal constraint is buildability and autonomy: a production-grade multi-provider LLM proxy with circuit-breaker logic, reliable failover, latency management, and the trust required for teams to route API keys through it is a serious infrastructure product, not a Claude-prompt-plus-Stripe-link. It is not shippable by a solo non-technical operator in a week, and maintaining it requires ongoing DevOps vigilance \u2014 this is squarely in engineer/infra territory. Several well-funded competitors (LiteLLM, Portkey, OpenRouter) already occupy this space.",
+  "solution_plan": "Realistically, a solo non-technical operator could NOT build and maintain a production LLM proxy service \u2014 this requires server infrastructure, API key security, latency SLAs, and ongoing incident response that go well beyond Claude prompts and a landing page. A narrower adjacent angle that IS buildable: a 'Claude API Health Monitor' \u2014 a simple status dashboard and email/SMS alert service that watches the Anthropic status page and known error patterns and immediately notifies subscribers when degradation is detected, giving teams a heads-up to switch manually. Factory builds this as a Claude-driven monitoring script + a simple landing page + Stripe ($9/mo) + SendGrid alerts. Outreach to Claude API developers via HN, Twitter/X dev communities, and the Anthropic Discord \u2014 batches approved by Youval. Delivery and billing are automated; the only human step is approving outreach. However even this narrower version competes with free status-page tools, so validate the $9/mo price point with 10 DMs before building.",
+  "notes": "buildability_with_ai scored 3 and operational_autonomy scored 4 for the full proxy concept \u2014 both fail build gates (mins of 6 and 7 respectively). The narrower monitoring/alert angle is more buildable but has lower defensibility and WTP. Stage capped at validate pending both broader corroboration of the pain and a scoped solution that a solo operator can actually ship.",
+  "scored_at": "2026-08-13T07:46:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

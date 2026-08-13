@@ -1,0 +1,26 @@
+{
+  "id": "01KZWQ01TJQ8DDHNPYRQV23CY0",
+  "discovered_at": "2026-08-13T07:44:56+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439746/is-hosting-an-lwc-on-external-website-and-internally-a-good-use-of-lightning-out",
+    "snippet": "I'm an Admin/Jr Developer and never used or looked at Lightning Out 2.0 other than summary. I have a Salesforce client that is taking Opportunities through a regular form on their website and then making phone calls back to get payment info. Same process internally when a sales rep adds an Opportunity. They use Forte for payments and Sedona for the billing stuff. They now want to add the ability for each of these parties to enter the credit card info and get a response."
+  },
+  "problem_statement": "Small Salesforce implementation shops and solo admin-developers lack a clear, secure, documented pattern for embedding payment capture (credit card entry) into both external websites and internal Salesforce flows, forcing fragile workarounds like phone-back collection.",
+  "target_segment": "Salesforce admins and junior developers at small SI/consultancy firms building custom payment workflows for SMB clients on Salesforce.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "payment-integration",
+    "lightning-web-components",
+    "lwc",
+    "credit-card",
+    "forte-payments",
+    "crm-payments",
+    "no-code",
+    "salesforce-consulting"
+  ],
+  "notes": "Client is already paying for Salesforce, Forte, and Sedona \u2014 real commercial context. The gap is a prebuilt LWC payment component or integration guide that handles PCI-safe card capture across internal and external surfaces. Buyer is the Salesforce consulting shop; willingness to pay for a productized component or template is plausible. Single data point, signal_strength 2.",
+  "status": "candidate"
+}

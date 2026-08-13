@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZASB3J5APBGBGM5VNQBBP78",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The Salesforce CDC permission-leakage problem is technically real and carries integration-failure consequences, but the evidence base is a single Stack Exchange question with no corroborating threads, no competitor products targeting this exact edge case, and no willingness-to-pay signal. The problem is episodic \u2014 developers hit it once per integration project and then move on \u2014 making it structurally unsuitable for recurring revenue. The scoring system's own recommendation is 'drop', the signal_strength is 2, and the TAM of developers who hit this specific CDC behavior is too thin to justify promotion.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439731/change-data-capture-changeeventheader-changedfields-doesnt-contain-fields-that"
+  ],
+  "evaluated_at": "2026-08-13T07:46:01+03:00"
+}

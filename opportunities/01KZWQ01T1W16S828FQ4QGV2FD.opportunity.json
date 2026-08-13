@@ -1,0 +1,25 @@
+{
+  "id": "01KZWQ01T1W16S828FQ4QGV2FD",
+  "discovered_at": "2026-08-13T07:44:56+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49276538",
+    "snippet": "We've got a CEO who has suddenly learned how to vibe code and the stuff he's coming up with is... kind of horrendous. He's coming up with new 'products' and proclaiming them the next big thing for us to work on and we're kind of over here scratching our heads asking who would want this? Who would pay for it? With AI, 'bad' engineers can now amplify their 'bad' engineering x10 across the organization."
+  },
+  "problem_statement": "Non-technical executives using AI coding tools are generating low-quality, unvalidated product ideas that engineering teams are then forced to evaluate or build, wasting engineering time and organisational focus.",
+  "target_segment": "Engineering managers and CTOs at SMBs (20-500 employees) where AI-empowered non-technical founders or executives are producing vibe-coded prototypes without structured product validation.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-governance",
+    "vibe-coding",
+    "product-validation",
+    "engineering-management",
+    "technical-debt",
+    "ai-tools",
+    "non-technical-founders",
+    "org-process"
+  ],
+  "notes": "Single HN comment but captures a pattern surfacing repeatedly in 2026 AI-adoption discourse. Potential buyer: CTOs/VPs Eng paying for process tooling or consulting to gate AI-generated work before it hits the sprint board. Weak on explicit willingness-to-pay; signal_strength capped at 2 until corroborated by multiple sources.",
+  "status": "candidate"
+}

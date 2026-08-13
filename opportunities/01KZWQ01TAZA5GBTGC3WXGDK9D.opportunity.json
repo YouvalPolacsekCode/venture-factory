@@ -1,0 +1,25 @@
+{
+  "id": "01KZWQ01TAZA5GBTGC3WXGDK9D",
+  "discovered_at": "2026-08-13T07:44:56+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49281152",
+    "snippet": "I am getting frequent overload errors (http 529) in two separate sessions. 10/10 attempts failing. I am on Eastern US time. (Thread: 'Looks like Claude is down anyone else')"
+  },
+  "problem_statement": "Developers and businesses relying on the Claude API as a production dependency face unplanned outages and overload errors (HTTP 529) with no in-band fallback or automated rerouting, causing revenue-impacting downtime.",
+  "target_segment": "Software developers and product teams at startups and SMBs that use Claude API as a core inference layer in paid products.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "claude-api",
+    "llm-reliability",
+    "api-fallback",
+    "ai-infrastructure",
+    "uptime",
+    "llm-ops",
+    "multi-provider",
+    "failover"
+  ],
+  "notes": "Paying API customers (Pro/API tiers) are the explicit buyer. Pain is lost revenue during outages. A multi-provider LLM proxy or circuit-breaker-as-a-service that auto-routes between Anthropic, OpenAI, Gemini when one returns 529/overload could address this. Single thread; signal_strength 2 pending broader corroboration.",
+  "status": "candidate"
+}

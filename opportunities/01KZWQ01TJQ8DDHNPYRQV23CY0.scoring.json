@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01KZWQ01TJQ8DDHNPYRQV23CY0",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Delivering a working LWC payment component requires per-client customisation, integration testing against the client's specific Salesforce org, and PCI-compliance verification \u2014 this is per-customer manual work that cannot be automated away."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Credit card capture and PCI-DSS compliance requirements apply; any component handling or transmitting card data touches a regulated domain with certification and liability implications."
+    }
+  ],
+  "total": 2.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 Salesforce admins and junior devs at small SI shops \u2014 and they do have paying clients, suggesting budget exists. However, the solution (a PCI-safe LWC payment component) sits inside a regulated domain (card data handling) and inherently requires per-client customisation and integration work against specific orgs, payment processors, and Salesforce editions. This cannot be delivered as a hands-off automated service. Additionally, buildability with Claude + standard tooling is very low: Salesforce Lightning Web Components require Salesforce-specific development knowledge and deployment tooling well outside a Claude-prompt-plus-landing-page stack. The combination of regulated industry, per-customer manual fulfillment, and low buildability makes this a drop under the current model.",
+  "solution_plan": "A solo non-technical operator could NOT realistically build, sell, or maintain a Salesforce LWC payment component \u2014 it requires Salesforce developer credentials, org-specific deployment, PCI compliance knowledge, and ongoing per-client support. The only viable adjacent angle would be a paid guide or template document (e.g. 'The Salesforce Payment Integration Playbook') that Claude writes and sells as a one-time PDF download \u2014 but even then, the audience is narrow (Salesforce admins), the content would be outdated quickly, and willingness to pay for documentation is low given free Stack Exchange answers. This opportunity is better left to Salesforce-specialist ISVs. Drop and do not pursue.",
+  "notes": "Fails on buildability_with_ai (4, min 6), operational_autonomy (3, min 7), and the regulated_industry + requires_human_fulfillment penalties bring total to 2.1 \u2014 well below the validate threshold of 5.5. Drop.",
+  "scored_at": "2026-08-13T07:46:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

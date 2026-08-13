@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZWQ01T1W16S828FQ4QGV2FD",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is identifiable \u2014 CTOs and engineering managers at 20\u2013500-person SMBs \u2014 and the pain (engineering time wasted evaluating unvalidated AI-generated prototypes) is real and recurring. However, there is no hard willingness-to-pay evidence: the problem is more of an organisational process irritant than a line-item budget pain, so willingness to pay a SaaS fee is speculative. The product could be partially automated (a structured validation scorecard/form + async Claude analysis delivered by email), but the core value delivery likely involves human judgment or consulting framing, which constrains operational autonomy below the build gate floor of 7.",
+  "solution_plan": "The micro-service is a 'Vibe Code Validator' \u2014 a lightweight form where a CEO or exec submits their AI-generated idea, and Claude produces a structured validation report (market size, buyer clarity, build cost proxy, top 3 objections) delivered to the engineering manager within minutes. The factory builds it as a Claude prompt chain + a Tally/Typeform intake form + a Stripe payment link ($49\u2013$99 per report) hosted on a simple landing page \u2014 no coding by Youval. Outreach targets engineering managers and CTOs via LinkedIn and HN communities, framing it as 'a polite way to filter exec ideas before they hit the sprint board' \u2014 outreach batches go out only after Youval approves. Delivery is fully automated: Claude generates the report on form submission and emails it via SendGrid; billing is handled by Stripe. The only recurring human step is approving outreach batches. However, this is a hard sell without clearer WTP evidence \u2014 validate with 5 cold LinkedIn DMs offering a free first report before committing to build.",
+  "notes": "operational_autonomy scored 5 \u2014 the service can be largely automated, but the value proposition edges toward consulting/advisory, and buyers may expect human-crafted analysis. Build gate for operational_autonomy (min 7) is not met, capping stage at validate. Recommend testing price sensitivity and async-only delivery acceptance before building.",
+  "scored_at": "2026-08-13T07:46:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

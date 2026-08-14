@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-08-13T04:46:53+00:00",
-    "idt": "2026-08-13T07:46:53+03:00"
+    "utc": "2026-08-14T04:44:33+00:00",
+    "idt": "2026-08-14T07:44:33+03:00"
   },
   "funnel": {
-    "candidates": 222,
-    "scored": 222,
+    "candidates": 227,
+    "scored": 227,
     "validated": 23,
     "build_decisions": {
       "defer_1_week": 21,
@@ -593,7 +593,7 @@
         "Buildable": 7,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "rejected",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439730/account-engagement-pardot-automation-rules-behavior-on-repeat",
       "discovered_at": "2026-08-07T07:47:49+03:00"
@@ -687,6 +687,35 @@
     },
     {
       "topics": [
+        "ai-subscriptions",
+        "spend-tracking",
+        "developer-tools"
+      ],
+      "id": "01KZZ97W2PKEC8ZHKHE1FMTTM5",
+      "problem_statement": "Developers and knowledge workers are paying out-of-pocket for multiple overlapping AI model subscriptions and lack a clear way to consolidate, compare, or optimize their AI spend across providers.",
+      "target_segment": "Software engineers, freelancers, and indie developers who actively subscribe to multiple AI services (Claude, GPT, Gemini, etc.) and want to track or reduce redundant spend.",
+      "total": 6.3,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, nameable individual — a dev or indie hacker paying $50–200/month across multiple AI subscriptions — who already pays for software tools and would plausibly pay $5–10/month for a tracker/optimizer. The service (connect your accounts, get a consolidated view and routing recommendations) is genuinely buildable as a Claude-powered form + dashboard + Stripe, and delivery is fully automatable once connected. The deciding factor holding it at 'validate' rather than 'build' is…",
+      "solution_plan": "What it is: a lightweight AI subscription tracker that shows a developer all their active AI tool costs in one dashboard and recommends which to cut or consolidate. Build: the factory creates a simple intake form where users paste their subscription costs manually (no OAuth required to start), Claude analyzes the stack and generates a personalized optimization report, delivered via email — landing page + Stripe ($9/month or $5 one-time report) + Claude prompt, shippable in under a week. Sell: post in HN, Indie Hackers, and relevant Discord/Slack communities (devs openly discuss AI spend); outreach goes out only after Youval approves each bat…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 5
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=49290713",
+      "discovered_at": "2026-08-14T07:42:16+03:00"
+    },
+    {
+      "topics": [
         "email-deliverability",
         "spam-filter",
         "dns-configuration"
@@ -715,51 +744,15 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder",
       "discovered_at": "2026-07-30T08:31:29+03:00"
-    },
-    {
-      "topics": [
-        "email-deliverability",
-        "powermta",
-        "ip-warming"
-      ],
-      "id": "01KTGE2S00FDMP0Y3E0X4TD9G9",
-      "problem_statement": "Email infrastructure operators using PowerMTA face opaque and inconsistent temporary deferrals (TSS04/TSS05) from Yahoo/AOL on freshly warmed IPs, with no clear diagnostic tooling to identify root cause or predict when deliverability will recover.",
-      "target_segment": "Email deliverability engineers and marketing operations teams at mid-to-large companies running dedicated email infrastructure (PowerMTA, Postfix) with high-volume sending requirements",
-      "total": 6.1,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a specific, named professional — an email deliverability engineer or marketing ops lead at a company running PowerMTA or Postfix — with a demonstrated budget (PowerMTA licenses run $10k+/year). The pain is real and business-critical: deferral errors during IP warming directly impact revenue-generating email campaigns. However, the build gate for operational_autonomy (6, just at the floor of 7) is not met and buildability_with_ai is only moderate (5, below the 6 floor) because meani…",
-      "solution_plan": "The micro-service is an 'Email Deliverability Deferral Audit' — a structured diagnostic report that tells a PowerMTA operator exactly why Yahoo/AOL is returning TSS04/TSS05 codes and what remediation steps to take, prioritized by likely root cause. The factory builds it as: a Typeform intake (client submits their MTA config, sending volume, deferral logs, IP ages) + a Claude prompt that analyzes the inputs against a curated knowledge base of ISP deferral patterns and generates a PDF-format report. Outreach targets email ops communities (Email Geeks Slack, deliverability subreddits, ServerFault/StackExchange email tags) with the factory draft…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off",
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 6,
-        "Will pay": 7,
-        "Buildable": 5,
-        "Pain": 8
-      },
-      "verdict": "validated",
-      "source_type": "forum",
-      "source_url": "https://serverfault.com/questions/1199150/powermta-yahoo-aol-tss04-and-tss05-on-freshly-warmed-ips-since-last-2-days-an",
-      "discovered_at": "2026-06-07T09:59:46+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.211,
-    "last_7_days_usd": 1.8896,
-    "all_time_usd": 15.9524,
+    "today_usd": 0.2315,
+    "last_7_days_usd": 1.8905,
+    "all_time_usd": 16.1838,
     "by_day": [
-      {
-        "date": "2026-08-07",
-        "usd": 0.2306
-      },
       {
         "date": "2026-08-08",
         "usd": 0.4127
@@ -783,20 +776,24 @@
       {
         "date": "2026-08-13",
         "usd": 0.211
+      },
+      {
+        "date": "2026-08-14",
+        "usd": 0.2315
       }
     ],
     "by_agent": [
       {
-        "agent": "pain_validation",
-        "usd": 0.5726
+        "agent": "market_radar",
+        "usd": 0.5705
       },
       {
-        "agent": "market_radar",
-        "usd": 0.5661
+        "agent": "pain_validation",
+        "usd": 0.568
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.416
+        "usd": 0.4172
       },
       {
         "agent": "build_decisions",
@@ -804,46 +801,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0334
+        "usd": 0.0333
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-08-07",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-08",
       "agents": {
@@ -1053,12 +1015,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-14",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-13.md",
-    "date": "2026-08-13",
-    "text": "# Daily Summary — 2026-08-13 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 222 |\n| Opportunities validated past threshold | 49 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS channels.\n2. `pain_validation` processes the 49 validated verdicts from today's scoring run.\n3. `opportunity_scoring` evaluates new candidates in queue.\n4. `cost_gain` computes weekly metrics (scheduled for end-of-week).\n5. `build_decisions` queues next round of opportunity prioritization.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-08-14.md",
+    "date": "2026-08-14",
+    "text": "# Daily Summary — 2026-08-14 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 227 |\n| Opportunities validated past threshold | 50 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues pain signal sweeps across B2B communities.\n2. `pain_validation` validates the 227 candidate opportunities surfaced today.\n3. `opportunity_scoring` re-ranks validated opportunities by market fit.\n4. Pending experiment activation once validation phase completes.\n\n## Operator action items\n\nNone — process the opportunity pipeline and move on.",
     "truncated": false
   },
   "analytics": null

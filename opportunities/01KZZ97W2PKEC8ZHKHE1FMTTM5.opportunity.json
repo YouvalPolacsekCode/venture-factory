@@ -1,0 +1,23 @@
+{
+  "id": "01KZZ97W2PKEC8ZHKHE1FMTTM5",
+  "discovered_at": "2026-08-14T07:42:16+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49290713",
+    "snippet": "Monthly total for all AI model subscriptions for personal use, with a breakdown of which models you use and for what purpose (coding side projects, AI assistants, etc.). You can also mention how much you spend monthly on AI tools for professional work that your company pays for."
+  },
+  "problem_statement": "Developers and knowledge workers are paying out-of-pocket for multiple overlapping AI model subscriptions and lack a clear way to consolidate, compare, or optimize their AI spend across providers.",
+  "target_segment": "Software engineers, freelancers, and indie developers who actively subscribe to multiple AI services (Claude, GPT, Gemini, etc.) and want to track or reduce redundant spend.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-subscriptions",
+    "spend-tracking",
+    "developer-tools",
+    "saas-consolidation",
+    "ai-tools",
+    "cost-optimization"
+  ],
+  "notes": "Thread with 22 comments and 8 points signals active community interest. Users are explicitly paying for multiple AI subscriptions monthly\u2014clear paying buyers. Opportunity: a subscription tracker/optimizer for AI tools, or a unified API proxy that replaces multiple subscriptions. Similar to how 'Truebill' worked for SaaS\u2014could work for AI. Recurring cost with money attached.",
+  "status": "candidate"
+}

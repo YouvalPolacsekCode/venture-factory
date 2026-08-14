@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZZ97W2PKEC8ZHKHE1FMTTM5",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, nameable individual \u2014 a dev or indie hacker paying $50\u2013200/month across multiple AI subscriptions \u2014 who already pays for software tools and would plausibly pay $5\u201310/month for a tracker/optimizer. The service (connect your accounts, get a consolidated view and routing recommendations) is genuinely buildable as a Claude-powered form + dashboard + Stripe, and delivery is fully automatable once connected. The deciding factor holding it at 'validate' rather than 'build' is responsiveness_signal: the HN thread shows community interest but no one has paid yet, and the market has free competitors (spreadsheets, manual tracking) plus the barrier of users sharing AI account credentials.",
+  "solution_plan": "What it is: a lightweight AI subscription tracker that shows a developer all their active AI tool costs in one dashboard and recommends which to cut or consolidate. Build: the factory creates a simple intake form where users paste their subscription costs manually (no OAuth required to start), Claude analyzes the stack and generates a personalized optimization report, delivered via email \u2014 landing page + Stripe ($9/month or $5 one-time report) + Claude prompt, shippable in under a week. Sell: post in HN, Indie Hackers, and relevant Discord/Slack communities (devs openly discuss AI spend); outreach goes out only after Youval approves each batch. Maintain: report generation is fully automated via Claude; billing runs on Stripe; support questions are handled by a Claude-powered email responder; Youval's only recurring touch is approving outreach batches and reviewing the weekly revenue summary.",
+  "notes": "All build gates met (operational_autonomy=8, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=7). Held at validate because total (6.3) is below min_total_to_build (6.5) and responsiveness_signal is untested. Run a landing page with 50 signups before building the full product.",
+  "scored_at": "2026-08-14T07:44:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

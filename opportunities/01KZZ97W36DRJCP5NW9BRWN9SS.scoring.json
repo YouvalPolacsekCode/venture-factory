@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZZ97W36DRJCP5NW9BRWN9SS",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A scanning/digitization service where quality matters requires human QA or at minimum human-guided mobile app usage per job; an automated Claude pipeline cannot correct physical book curvature from a distance."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a vague mix of individuals, archivists, and small businesses \u2014 not a specific role with a budget line \u2014 and the pain is infrequent (a digitization project happens once, not weekly). The real technical challenge is computer vision and mobile-native image processing for page-curve correction, which is well outside Claude + simple-page tooling; existing apps (Adobe Scan, Microsoft Lens, Genius Scan) already partially address this, making differentiation hard. A solo non-technical operator cannot build a meaningful mobile app or reliable CV pipeline without significant engineering resources.",
+  "solution_plan": "This is not a viable build for a solo non-technical operator using a Claude factory. The core feature (page-curve correction for bound books) requires mobile computer vision \u2014 not a Claude prompt + landing page. The closest viable pivot would be a 'document digitization concierge' service where customers mail documents and receive digitized files, but that introduces physical logistics and per-customer manual fulfillment, which the factory model explicitly penalizes. Do not pursue.",
+  "notes": "Total 2.3 well below all thresholds. buildability_with_ai (3) and operational_autonomy (3) both fail build gates badly. requires_human_fulfillment penalty applied.",
+  "scored_at": "2026-08-14T07:44:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

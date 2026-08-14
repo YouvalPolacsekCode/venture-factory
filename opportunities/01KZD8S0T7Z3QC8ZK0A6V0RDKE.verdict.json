@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZD8S0T7Z3QC8ZK0A6V0RDKE",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "While GDPR compliance risk in Pardot is real and the buyer segment is identifiable, the evidence base is a single Stack Exchange question with no corroborating pain signals, no willingness-to-pay evidence for a standalone advisory tool (as distinct from consultant time), and no proof that admins would pay for AI-generated compliance guidance rather than escalating to a Salesforce partner. The minimum evidence threshold (5 distinct pain quotes, 1 WTP signal) is not met.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439730/account-engagement-pardot-automation-rules-behavior-on-repeat"
+  ],
+  "evaluated_at": "2026-08-14T07:43:20+03:00"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "01KZZ97W3D4KM0Y6PNRDTK42WH",
+  "discovered_at": "2026-08-14T07:42:16+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=21450411",
+    "snippet": "I wish there was a tool that regularly nuked my Facebook history as well, from comments in random groups to likes across the site. I have no use for things I commented 10 years ago."
+  },
+  "problem_statement": "Users who want to regularly and automatically delete their old social media activity (comments, likes, posts) across platforms like Facebook lack a reliable, automated tool that works at scale across multiple platforms.",
+  "target_segment": "Privacy-conscious individuals and professionals (lawyers, executives, job seekers) who want ongoing automated cleanup of their public social media history.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "privacy",
+    "social-media-cleanup",
+    "data-deletion",
+    "facebook",
+    "automation",
+    "digital-privacy"
+  ],
+  "notes": "Older signal (2019) but the pain is perennial and growing with AI-driven reputation research. Tools like TweetDelete exist for Twitter/X but cross-platform automated social history deletion remains underserved. Privacy-conscious professionals (legal, finance, political) represent a paying segment. Recurring subscription model fits. Weak buyer signal but strong structural demand.",
+  "status": "candidate"
+}

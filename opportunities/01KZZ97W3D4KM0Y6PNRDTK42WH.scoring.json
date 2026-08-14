@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01KZZ97W3D4KM0Y6PNRDTK42WH",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Automated social media history deletion requires maintaining working scrapers/browser automations per platform (Facebook, LinkedIn, etc.) that break constantly with platform UI changes \u2014 each breakage requires human debugging and repair, constituting per-platform manual fulfillment work."
+    }
+  ],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "Privacy-conscious professionals (lawyers, executives, job seekers) represent a real paying segment, and tools like TweetDelete prove willingness to pay for this category. However, the fatal operational issue is platform fragility: automated social media deletion tools break constantly as Facebook, LinkedIn, and others change their UIs and actively block scrapers \u2014 this creates a recurring human maintenance burden that kills the autonomy model. The buyer is also somewhat vague ('privacy-conscious individuals') rather than a tight B2B ICP, making targeted outreach harder. Without the penalty, it would be a borderline validate candidate; with the operational reality of constant scraper maintenance, it drops out.",
+  "solution_plan": "The operational model for cross-platform social history deletion is fundamentally incompatible with a hands-off Claude factory: every platform update breaks the automation, requiring constant human engineering attention. A narrower, safer pivot \u2014 a 'social media audit report' that uses Claude to analyze publicly visible profiles and flags high-risk posts for manual deletion \u2014 would be buildable (no scraping required), but then it becomes a one-time report product at a low price point, not a recurring subscription. That pivot could be validated cheaply: a $19 one-time audit report, sold via a landing page, with Claude generating the report from a user-submitted profile URL. However, this is a significant scope reduction from the original opportunity.",
+  "notes": "requires_human_fulfillment penalty applied due to scraper maintenance burden. buyer_clarity (5) would also fail the build gate floor of 6 if the total were high enough to consider building. The narrower 'audit report' pivot is worth a quick test if Youval is interested, but do not build a full automated deletion product.",
+  "scored_at": "2026-08-14T07:44:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

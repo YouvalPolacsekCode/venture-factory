@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZZ97W2E01J2QJR1JY6BMENB",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [],
+  "total": 4.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is an engineer at a mid-to-large company who genuinely wants the tool and has AI budget \u2014 but the actual purchasing decision still sits with their company's procurement team, not the individual. The core insight (package as API/token consumption instead of SaaS) is clever but unproven, and building a diagramming tool with AI-assisted layout correction is non-trivial integration work, not a simple Claude prompt. Operational autonomy is low because the real challenge is sales and enterprise onboarding, not delivery \u2014 this is essentially an enterprise SaaS sales problem in disguise.",
+  "solution_plan": "A diagramming-as-API micro-service that companies consume via token billing rather than per-seat SaaS would theoretically sidestep procurement cycles. Build: Claude would need to integrate with or wrap an existing diagramming library (Mermaid, D3), plus expose an API endpoint with usage-based billing via Stripe \u2014 this is several weeks of integration work, not a one-week launch. Sell: reaching engineers with purchasing authority or convincing their budget holders requires enterprise outreach, not a simple cold-email campaign. Maintain: API delivery can be automated, but enterprise support, contract questions, and debugging customer-specific diagram issues would require Youval's hands-on time. Realistically, a solo non-technical operator cannot build, sell, or maintain this without substantial engineering help \u2014 do not proceed as framed.",
+  "notes": "Scores below min_total_to_validate (5.5). Build gates for operational_autonomy (4 < 7) and buildability_with_ai (5 < 6) also fail. The core opportunity insight is interesting but requires a pivot to validate first \u2014 e.g., test whether engineers will expense an API-billed tool differently than a SaaS license before building anything.",
+  "scored_at": "2026-08-14T07:44:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

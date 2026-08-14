@@ -1,0 +1,23 @@
+{
+  "id": "01KZZ97W2E01J2QJR1JY6BMENB",
+  "discovered_at": "2026-08-14T07:42:16+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49294399",
+    "snippet": "Oh I'm not saying I don't want it. If the company would pay for it I certainly would use it. Just yesterday I was dealing with overlapping edge labels and at a loss for how I would futz my way to fix it since I did not want to push the nodes around. It's just that they will pay whatever I want to use in tokens with no questions, but if I ask for a simple time saver like this it has to go through a whole purchasing lifecycle with layers of approvals."
+  },
+  "problem_statement": "Engineers at companies can expense AI token usage freely but face bureaucratic procurement barriers when trying to buy small SaaS productivity tools, meaning useful diagram/dev tools go unbought even when there is clear willingness to pay.",
+  "target_segment": "Software engineers and technical leads at mid-to-large companies who use diagramming tools (Mermaid, draw.io, etc.) and have AI spend approved but struggle to get standalone tool licenses approved.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "diagramming",
+    "procurement-friction",
+    "developer-tools",
+    "mermaid",
+    "enterprise-tooling",
+    "saas-licensing"
+  ],
+  "notes": "Buyer is explicit: commenter says 'the company would pay for it' and notes AI tokens get expensed with zero friction. Pain is procurement process, not budget. Opportunity may be in packaging dev tools as API/token-consumption rather than per-seat SaaS to bypass approval cycles. Single signal but very clear buyer intent and budget context.",
+  "status": "candidate"
+}

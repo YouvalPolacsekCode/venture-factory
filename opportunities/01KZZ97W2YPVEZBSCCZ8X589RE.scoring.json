@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01KZZ97W2YPVEZBSCCZ8X589RE",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "Mid-to-senior engineers experiencing AI-driven skill atrophy are real, but the buyer is ambiguous: individual engineers rarely spend their own money on learning platforms (they expect their employer to pay), and selling to employers requires an enterprise sales cycle a solo operator cannot manage. Adjacent paid markets (Pluralsight, Leetcode Premium) exist, confirming some willingness to pay, but those are established brands with institutional relationships \u2014 the willingness_to_pay signal here is weak for an unknown entrant. The pain is real and frequent, but the monetization path requires either individual B2C at scale (needs thousands of subscribers) or B2B sales (needs human sales reps).",
+  "solution_plan": "What it is: a daily 'coding sharpness drill' service \u2014 personalized practice problems that mirror what an engineer would have solved without AI, delivered daily via email or Slack. Build: Claude generates the drills, a simple form collects the engineer's tech stack, Stripe handles a $9/month subscription \u2014 technically straightforward and shippable in a week. Sell: the realistic channel is HN/Twitter/dev communities, but individual engineers converting at $9/month is a high-volume B2C play; selling to companies as a team tool requires demos and procurement \u2014 neither fits a solo operator well. Maintain: delivery is fully automated, but growth requires constant content freshness and community presence. This is buildable but the monetization model doesn't fit the solo factory constraint \u2014 do not build without first validating that 20+ engineers will pay individually.",
+  "notes": "Total 5.4 is below min_total_to_validate (5.5) \u2014 borderline drop. buyer_clarity (5) fails the build gate floor of 6. The idea is technically sound but commercially unclear for a solo operator.",
+  "scored_at": "2026-08-14T07:44:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

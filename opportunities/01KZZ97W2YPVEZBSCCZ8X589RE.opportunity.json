@@ -1,0 +1,23 @@
+{
+  "id": "01KZZ97W2YPVEZBSCCZ8X589RE",
+  "discovered_at": "2026-08-14T07:42:16+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49294529",
+    "snippet": "Full time software engineer of around 6 years here. I'm using Claude Code half of the day now at work, I just can't keep up with my team if I were to stop coding with AI. I'm more 'productive' but my brain feels less sharp and am curious how others are staying sharp."
+  },
+  "problem_statement": "Professional software engineers using AI coding tools daily feel their core technical skills and problem-solving sharpness atrophying, and there is no structured product to help them maintain or rebuild those skills alongside AI-assisted work.",
+  "target_segment": "Mid-to-senior software engineers at companies with mandatory or competitive AI tool adoption who fear skill degradation.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding",
+    "skill-atrophy",
+    "developer-training",
+    "coding-practice",
+    "claude-code",
+    "professional-development"
+  ],
+  "notes": "4 comments, some engagement. Engineer explicitly uses AI at work (company-paid tool). Pain is real but monetization path requires employer purchase (learning platform) or individual subscription. Willingness to pay not explicit here, but adjacent markets (Pluralsight, Leetcode Premium) show engineers and companies do pay for skill maintenance. Signal is moderate.",
+  "status": "candidate"
+}

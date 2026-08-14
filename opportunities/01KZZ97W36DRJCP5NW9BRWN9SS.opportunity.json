@@ -1,0 +1,24 @@
+{
+  "id": "01KZZ97W36DRJCP5NW9BRWN9SS",
+  "discovered_at": "2026-08-14T07:42:16+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95524/android-app-for-digitizings-books-photo-albums",
+    "snippet": "I have several 'book-like' analog documents that I want to digitize (books, photo albums, folders with clear plastic sleeves). Since I've seen that decent book scanners are very expensive, I'm looking for an Android app that lets me photograph the pages and then enhances the photos (e.g., automatically straightens wavy pages in books and photo albums)."
+  },
+  "problem_statement": "Individuals and small businesses with large volumes of bound physical documents (books, photo albums, archival folders) cannot afford professional book scanners and lack a mobile app that reliably corrects page curvature and enhances scan quality.",
+  "target_segment": "Small business owners, archivists, genealogists, and individuals digitizing personal or business document collections on Android.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "document-scanning",
+    "mobile-app",
+    "ocr",
+    "book-digitization",
+    "android",
+    "photo-enhancement",
+    "archiving"
+  ],
+  "notes": "Single question but reflects a recurring need in document management. Expensive hardware alternatives ($300-$3000 book scanners) signal willingness to pay for a software solution. Apps like Adobe Scan and Microsoft Lens exist but don't fully solve page-curve correction for bound books. Moderate opportunity for a niche paid app or B2B scanning service.",
+  "status": "candidate"
+}

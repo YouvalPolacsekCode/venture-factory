@@ -1,0 +1,27 @@
+{
+  "id": "01M01QHWMXXA2G6VD8F9FBJHPC",
+  "discovered_at": "2026-08-15T06:30:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439751/ampscript-createsobject-error-field-integrity-exception-required-field-is-m",
+    "snippet": "I am trying to upsert/create a record in Salesforce Sales Cloud directly from a CloudPage using AMPscript. I am using the CreateSObject (or UpdateSingleSalesforceObject) function to log a custom request record into a custom Salesforce Object (Service_Ticket__c). However, when I submit the CloudPage form, the process fails with a 500 error. Upon enabling debugging, the specific error returned from the Salesforce API call is: FIELD_INTEGRITY_EXCEPTION: field integrity exception: unknown (Required field is missing). [Second signal] My goal is to use a value calculated in Apex to pre-filter Knowledge articles in Prompt Builder. I created a custom retriever with a dynamic filter condition... I attempted to fill the Pre-filter field on the left with a name of an Apex class: {!$Apex:LEXAI_KnowledgeLanguageService} which [failed]."
+  },
+  "problem_statement": "Salesforce Marketing Cloud and Sales Cloud developers repeatedly hit opaque runtime errors when integrating AMPscript with Sales Cloud objects and when wiring Apex logic into AI Prompt Builder retrievers \u2014 debugging requires deep cross-cloud expertise that most teams lack, and errors surface only at runtime with minimal actionable guidance.",
+  "target_segment": "Salesforce Marketing Cloud and Sales Cloud developers at mid-to-large enterprises building customer-facing automations and AI-assisted support flows.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "ampscript",
+    "prompt-builder",
+    "apex",
+    "ai-integration",
+    "debugging",
+    "enterprise-saas",
+    "no-code-low-code",
+    "sales-cloud"
+  ],
+  "notes": "Two independent Salesforce developer questions on the same day (2026-08-13 and 2026-08-14) about cross-cloud integration failures. Both involve enterprise Salesforce setups (Sales Cloud + Marketing Cloud + AI), implying salaried or consulting developers whose time is billed. Pain is reproducible runtime errors with no clear error messages. A diagnostic/debugging assistant or pre-flight validator for Salesforce cross-cloud integrations could command SaaS pricing in enterprise context. Buyer is the Salesforce admin/developer or their agency.",
+  "status": "candidate"
+}

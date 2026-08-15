@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M01QHWN9NPYAWXXGYKDQX86V",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Individual developers at $10\u201320/mo requires hundreds to thousands of paying users to generate meaningful revenue; LTV is low and churn is high in this segment, making unit economics fragile for a solo operator."
+    }
+  ],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The market demand signal is real \u2014 2.4k GitHub stars confirms developers want a managed Claude UI \u2014 but the original builder is ALREADY building the hosted version, meaning Youval would be entering a market with a motivated, technically capable incumbent who has the existing user base and brand. The buyer (individual developers at ~$15/mo) is identifiable but the business model requires hundreds of paying customers to matter financially, and defensibility is near-zero: this is a UI wrapper that any competent developer can clone. Total falls below the validate threshold after the scale penalty, and the competitive dynamics make this a poor bet for a solo non-technical operator.",
+  "solution_plan": "This opportunity is not recommended for pursuit. The space is already being built by the person with the organic community advantage (HolyClaude's founder), and the product is a UI commodity \u2014 Claude.ai, OpenRouter, and numerous open-source projects directly compete. Even if built, acquiring and retaining individual developers at $10\u201315/mo requires volume marketing and continuous feature development that a solo factory cannot sustain. Youval should monitor whether the HolyClaude hosted launch leaves a gap (e.g., team/workspace features for small agencies) rather than competing head-on today.",
+  "notes": "b2c_at_scale_needed penalty applied. Total 4.7 below validate threshold. Defensibility (2) is critically weak. Primary drop reason: well-funded/motivated incumbent (original OSS builder) already serving this exact niche.",
+  "scored_at": "2026-08-15T06:32:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

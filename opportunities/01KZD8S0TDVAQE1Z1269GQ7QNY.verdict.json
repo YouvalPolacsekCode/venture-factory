@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZD8S0TDVAQE1Z1269GQ7QNY",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "The Summer '26 API v67 Apex user-mode change creates an immediate, time-bounded security risk for every Salesforce org running custom Apex triggers. Enterprise buyers already pay consultants for exactly this kind of breaking-change audit, and the Salesforce Stack Exchange signal shows real developer confusion about production security implications. Willingness-to-pay is supported by the established market for Salesforce security audits at $99\u2013299/engagement.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439727/do-apex-triggers-always-run-in-system-mode-at-api-v67-or-do-trigger-body-dml-op"
+  ],
+  "evaluated_at": "2026-08-15T06:31:54+03:00"
+}

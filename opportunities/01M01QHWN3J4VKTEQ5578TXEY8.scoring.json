@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M01QHWN3J4VKTEQ5578TXEY8",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The core problem \u2014 broken state management in local LLM UIs \u2014 is a real daily frustration for ML practitioners, but fixing it requires a native desktop application or OS-level daemon that tracks GPU memory state and model file paths across multiple inference processes. This is emphatically NOT buildable with Claude + prompts + a form + Stripe: it requires custom system-level software, GPU driver integration, and distribution infrastructure that a non-technical solo operator cannot ship. Willingness to pay is also weak: this segment heavily skews toward open-source-or-nothing, and no paid substitutes for local LLM session management currently exist at meaningful price points. Drop unless a technical co-founder joins.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using a Claude-based factory. The fix requires a desktop app or background daemon that hooks into local GPU state \u2014 something that needs compiled code, OS-specific installers, and likely AMD ROCm / NVIDIA CUDA integration. There is no honest path to building, selling, or maintaining this with Claude prompts and a landing page. Youval should drop this and not invest further validation time.",
+  "notes": "buildability_with_ai (3) and operational_autonomy (3) both fail build_gates hard. buyer_clarity (5) and willingness_to_pay (4) also fail gates. Multiple gate failures; total 4.1 is below validate threshold.",
+  "scored_at": "2026-08-15T06:32:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

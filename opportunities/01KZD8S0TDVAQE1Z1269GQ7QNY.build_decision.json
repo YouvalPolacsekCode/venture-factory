@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01KZD8S0TDVAQE1Z1269GQ7QNY",
+  "decided_at": "2026-08-15T06:32:47+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.5,
+      "threshold": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build_now": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates are met at or above their floors, and the weighted total equals the min_total_to_build threshold of 6.5. However, the scoring agent set recommended_stage to 'validate' \u2014 not 'build' or 'scale' \u2014 because responsiveness_signal is only 2 (untested) and the cost-to-gain ratio is 4.45, far above the 0.6 kill threshold. Per the hard rule, build_now is only permitted when recommended_stage \u2208 {build, scale}, so the maximum decision is defer_1_week. The opportunity should run a responsiveness probe this week targeting Salesforce developers on Stack Exchange and LinkedIn to confirm real demand before committing build resources.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Stack Exchange comment + LinkedIn DM to Salesforce developers discussing API v67"
+}

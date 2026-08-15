@@ -1,0 +1,27 @@
+{
+  "id": "01M01QHWN3J4VKTEQ5578TXEY8",
+  "discovered_at": "2026-08-15T06:30:53+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/unslothai/unsloth/issues/8893",
+    "snippet": "Unsloth Studio doesn't keep track of locally loaded model, thinks I have to stop generation to load the model that is loaded. GPU 0: AMD Radeon PRO W7900 \u00b7 45 GiB, GPU 1: AMD Radeon PRO W7500 \u00b7 8 GiB. If I have a chat that was loaded with a cloud model and then I go to 'on Device' and try to select the model that is currently loaded locally (that I know is loaded), it still prompts me to stop generation to load the model. [Second issue] Model in Coding scope thinks its absolute path is /tmp when it isn't \u2014 asked a model to do pwd after asking another model to edit code and it couldn't tell me where it was looking."
+  },
+  "problem_statement": "Users running local LLM inference on high-end workstation GPUs face broken state management in local LLM UIs \u2014 the tool loses track of which model is loaded and where files are located, causing repeated interruptions and wasted GPU spin-up time in multi-model workflows.",
+  "target_segment": "ML practitioners and AI engineers running local LLM inference on workstation-class GPUs (AMD/NVIDIA), typically at small companies or as independent consultants.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "local-llm",
+    "llm-tooling",
+    "model-management",
+    "gpu",
+    "amd-rocm",
+    "inference",
+    "developer-tools",
+    "ai-workflow",
+    "unsloth",
+    "workstation"
+  ],
+  "notes": "Single user but with AMD Radeon PRO W7900 (~$3,500 GPU) + W7500 setup \u2014 clear capital investment signals a serious practitioner or small studio, not a hobbyist. Two distinct bugs filed same day suggest active daily use and paid workflow dependency. Pain: multi-model switching in local UIs is unreliable, forcing manual intervention. A reliable local LLM session manager / state tracker could be a paid tool for this segment. Buyer evidence: hardware investment implies professional use context.",
+  "status": "candidate"
+}

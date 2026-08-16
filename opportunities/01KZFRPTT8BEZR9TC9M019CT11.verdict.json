@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZFRPTT8BEZR9TC9M019CT11",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain of AI inference cost unpredictability is real and ongoing for B2B SaaS teams, and there is clear willingness to pay for cost management tooling. However, the evidence base is too thin for validation: the primary signal is a single HN comment, the space is already served by provider-native dashboards (Anthropic Console, OpenAI usage dashboard) and third-party tools (LangSmith, Helicone, Portkey), and the differentiating angle (model-version migration advice) lacks any documented demand. With only one source signal, fewer than 5 distinct pain quotes available from public sources, and no willingness-to-pay evidence beyond the commenter's speculation, this candidate fails the minimum evidence bar and should be re-queued for Market Radar to surface corroborating threads.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49206893"
+  ],
+  "evaluated_at": "2026-08-16T06:40:27+03:00"
+}

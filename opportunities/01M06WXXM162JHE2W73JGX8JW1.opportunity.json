@@ -1,0 +1,26 @@
+{
+  "id": "01M06WXXM162JHE2W73JGX8JW1",
+  "discovered_at": "2026-08-17T06:41:02+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49324078",
+    "snippet": "Claude Seems Down \u2014 'Throwing \"Authentication service was unavailable.\", no updates on their status page, but there are on downdetector.' 49 points, 46 comments. Paying API users and teams dependent on Claude unable to work, with no timely official status communication."
+  },
+  "problem_statement": "When major AI API providers (e.g. Claude/Anthropic) go down, paying business users have no reliable, fast alert channel \u2014 the official status page lags or shows nothing, leaving teams to discover outages via social media or trial-and-error.",
+  "target_segment": "Software teams and solo developers paying for AI API access (Claude, OpenAI, etc.) who have production workloads dependent on uptime.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-api",
+    "uptime-monitoring",
+    "status-page",
+    "incident-alerting",
+    "claude",
+    "openai",
+    "api-reliability",
+    "developer-tools",
+    "saas-monitoring"
+  ],
+  "notes": "49 upvotes and 46 comments on a single outage report indicates broad paying-user frustration. Buyers are developers/companies paying for API tiers \u2014 explicit paying context. Gap: official status page did not reflect reality; users resorted to downdetector. A lightweight monitoring + alert service (SMS/Slack/webhook) that independently probes major AI APIs and notifies subscribers faster than official status pages could command a small recurring fee from API-dependent teams. Comparable: IsItDownRightNow, but AI-API-specific with proactive push alerts.",
+  "status": "candidate"
+}

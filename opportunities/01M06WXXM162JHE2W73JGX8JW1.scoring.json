@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M06WXXM162JHE2W73JGX8JW1",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, identifiable person \u2014 a solo developer or engineering lead at a company paying for Claude/OpenAI API access \u2014 and they demonstrably pay for developer tooling (API subscriptions, monitoring SaaS). Willingness to pay is real: Datadog, Better Uptime, and PagerDuty all command recurring fees for exactly this category of alerting, so the paid-substitute signal exists. The deciding factor holding this at 'validate' rather than 'build' is that the weighted total lands at 6.4, just below the 6.5 build threshold; one strong validation signal (even a 10-reply cold outreach batch with a couple of upgrade-intent responses) would push it over, so the next step is a small probe before committing build resources.",
+  "solution_plan": "WHAT: A lightweight SaaS that independently probes the Claude, OpenAI, Gemini, and Mistral APIs every 60\u201390 seconds and pushes instant Slack/webhook/email alerts when a probe fails \u2014 faster and more reliable than the providers' own status pages. BUILD: The factory builds a scheduled Claude-driven probe loop (or simple HTTP pinger) that checks each API endpoint, writes results to a SQLite log, and triggers an alert via a pre-configured Slack webhook or email when failure thresholds are met; a minimal landing page (Carrd or similar) with a Stripe subscription link ($9\u2013$19/mo) and an onboarding form collecting the user's preferred alert channel \u2014 zero coding required from Youval. SELL: Target developers complaining about AI API outages on HN, Reddit r/LocalLLaMA, and X/Twitter; the factory drafts outreach to a curated list of active HN commenters on outage threads (a public, high-intent list) and queues the messages for Youval's one-time approval before sending. MAINTAIN: New subscribers trigger an automated onboarding email, their alert endpoint is written to config, the probe loop runs continuously, billing renews via Stripe \u2014 Youval's only recurring touch is approving outreach batches and reviewing any support escalations the factory flags as ambiguous. CAVEAT: The core probe logic is simple, but standing out against free alternatives (UptimeRobot, isitdownrightnow) requires a strong 'AI-API-specific with faster alerts' narrative \u2014 validate that paying developers will pay $9+/mo before investing in full build.",
+  "notes": "Build gates all pass: operational_autonomy=8 (\u22657), buildability_with_ai=7 (\u22656), buyer_clarity=8 (\u22656), willingness_to_pay=6 (\u22655). Stage is 'validate' solely because weighted_total 6.4 is just below the 6.5 build threshold \u2014 a small validation round (cold outreach or a waitlist landing page) is the right next step.",
+  "scored_at": "2026-08-17T06:42:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

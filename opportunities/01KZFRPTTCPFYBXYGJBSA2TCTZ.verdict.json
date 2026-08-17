@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZFRPTTCPFYBXYGJBSA2TCTZ",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "SFMC developers and marketing ops teams face a documented, reproducible platform bug \u2014 configuration silently dropped on journey version/copy \u2014 that introduces direct production risk on a $15k+/year licensed platform. Stack Exchange evidence confirms real developers hitting this in production; the SFMC ecosystem has a clear AppExchange paid-tool culture demonstrating willingness to pay for gap-filling packages. Pain is concrete, buyer is named, and existing spend is proven.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439732/journey-builder-custom-activity-configuration-lost-after-copying-versioning-a"
+  ],
+  "evaluated_at": "2026-08-17T06:42:04+03:00"
+}

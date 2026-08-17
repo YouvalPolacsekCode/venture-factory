@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-08-16T03:40:32+00:00",
-    "idt": "2026-08-16T06:40:32+03:00"
+    "utc": "2026-08-17T03:42:45+00:00",
+    "idt": "2026-08-17T06:42:45+03:00"
   },
   "funnel": {
-    "candidates": 230,
-    "scored": 230,
-    "validated": 24,
+    "candidates": 231,
+    "scored": 231,
+    "validated": 25,
     "build_decisions": {
-      "defer_1_week": 22,
+      "defer_1_week": 23,
       "kill": 2
     },
     "build_now": 0,
@@ -185,7 +185,7 @@
         "Buildable": 7,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439732/journey-builder-custom-activity-configuration-lost-after-copying-versioning-a",
       "discovered_at": "2026-08-08T07:04:43+03:00"
@@ -600,6 +600,35 @@
     },
     {
       "topics": [
+        "ai-api",
+        "uptime-monitoring",
+        "status-page"
+      ],
+      "id": "01M06WXXM162JHE2W73JGX8JW1",
+      "problem_statement": "When major AI API providers (e.g. Claude/Anthropic) go down, paying business users have no reliable, fast alert channel — the official status page lags or shows nothing, leaving teams to discover outages via social media or trial-and-error.",
+      "target_segment": "Software teams and solo developers paying for AI API access (Claude, OpenAI, etc.) who have production workloads dependent on uptime.",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, identifiable person — a solo developer or engineering lead at a company paying for Claude/OpenAI API access — and they demonstrably pay for developer tooling (API subscriptions, monitoring SaaS). Willingness to pay is real: Datadog, Better Uptime, and PagerDuty all command recurring fees for exactly this category of alerting, so the paid-substitute signal exists. The deciding factor holding this at 'validate' rather than 'build' is that the weighted total lands at 6.4,…",
+      "solution_plan": "WHAT: A lightweight SaaS that independently probes the Claude, OpenAI, Gemini, and Mistral APIs every 60–90 seconds and pushes instant Slack/webhook/email alerts when a probe fails — faster and more reliable than the providers' own status pages. BUILD: The factory builds a scheduled Claude-driven probe loop (or simple HTTP pinger) that checks each API endpoint, writes results to a SQLite log, and triggers an alert via a pre-configured Slack webhook or email when failure thresholds are met; a minimal landing page (Carrd or similar) with a Stripe subscription link ($9–$19/mo) and an onboarding form collecting the user's preferred alert channel…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 8,
+        "Will pay": 6,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=49324078",
+      "discovered_at": "2026-08-17T06:41:02+03:00"
+    },
+    {
+      "topics": [
         "stripe",
         "account-closure",
         "fintech-risk"
@@ -713,50 +742,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=49290713",
       "discovered_at": "2026-08-14T07:42:16+03:00"
-    },
-    {
-      "topics": [
-        "email-deliverability",
-        "spam-filter",
-        "dns-configuration"
-      ],
-      "id": "01KYRR37C4VZPTA1F4C3G8N6Q3",
-      "problem_statement": "Small business operators launching a new domain find their transactional and outreach email consistently landing in spam due to IP blacklists, misconfigured mail headers, and missing authentication records — costing them leads and revenue while they lack expertise to diagnose and fix it.",
-      "target_segment": "Small business owners and solo operators who recently acquired a new domain and outsource their email hosting, without in-house technical staff.",
-      "total": 6.2,
-      "recommended_stage": "validate",
-      "rationale": "Small business owners with a broken email deliverability setup face real, immediate revenue loss — a legitimately severe pain with a named, reachable buyer (new-domain operators, solo founders, small agency owners) who already pay for hosting and tools. Willingness to pay is backed by the existence of paid competitors (MXToolbox Pro, GlockApps, Postmark's deliverability tools at $10–$99/mo). However, the operational_autonomy score sits at 6, which just misses the build_gate floor of 7: the core…",
-      "solution_plan": "This is an automated email deliverability audit and fix-guidance service: a user enters their domain, the service checks SPF/DKIM/DMARC records, blacklist status, and mail header patterns via APIs (MXToolbox, Google Postmaster, Spamhaus), and delivers a plain-language report with a prioritised fix checklist — no coding by Youval. BUILD: the factory sets up a Claude-powered diagnosis prompt that parses DNS lookup results and blacklist API responses into a structured report, pairs it with a simple intake form (domain name + email), a Stripe payment link (~$29 one-time or $19/mo), and an email delivery step — all wired together in this repo; Yo…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "run it hands-off"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 6,
-        "Will pay": 7,
-        "Buildable": 8,
-        "Pain": 8
-      },
-      "verdict": "validated",
-      "source_type": "forum",
-      "source_url": "https://serverfault.com/questions/1199571/why-does-sending-an-email-go-to-the-spam-folder",
-      "discovered_at": "2026-07-30T08:31:29+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1356,
-    "last_7_days_usd": 1.7347,
-    "all_time_usd": 16.691,
+    "today_usd": 0.338,
+    "last_7_days_usd": 1.8779,
+    "all_time_usd": 17.029,
     "by_day": [
-      {
-        "date": "2026-08-10",
-        "usd": 0.1948
-      },
       {
         "date": "2026-08-11",
         "usd": 0.1924
@@ -780,67 +774,36 @@
       {
         "date": "2026-08-16",
         "usd": 0.1356
+      },
+      {
+        "date": "2026-08-17",
+        "usd": 0.338
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5542
+        "usd": 0.5554
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5493
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3006
+        "usd": 0.5356
       },
       {
         "agent": "build_decisions",
-        "usd": 0.2977
+        "usd": 0.4543
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0327
+        "usd": 0.0326
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-08-10",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-11",
       "agents": {
@@ -1050,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-17",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-16.md",
-    "date": "2026-08-16",
-    "text": "# Daily Summary — 2026-08-16 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 230 |\n| Opportunities validated past threshold | 52 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues surface scanning for B2B pain signals.\n2. `pain_validation` validates top-ranked opportunities from today's candidate batch.\n3. `opportunity_scoring` re-ranks the 230 candidates as validation results arrive.\n4. `build_decisions` evaluates validated opportunities for experiment launch.\n5. `cost_gain` prepares the weekly cost–gain summary (due Sunday).\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-08-17.md",
+    "date": "2026-08-17",
+    "text": "# Daily Summary — 2026-08-17 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 231 |\n| Opportunities validated past threshold | 53 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes collection on the 53 validated opportunities.\n2. `pain_validation` probes high-scoring candidates for pain confirmation.\n3. `build_decisions` evaluates prototyping feasibility for top 10 scorers.\n4. `market_radar` continues weekly sweep for emerging pain signals.\n5. `cost_gain` analyzes yesterday's run efficiency metrics.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

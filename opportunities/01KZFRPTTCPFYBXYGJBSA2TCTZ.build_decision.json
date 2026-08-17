@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01KZFRPTTCPFYBXYGJBSA2TCTZ",
+  "decided_at": "2026-08-17T06:42:41+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 78,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.7,
+      "threshold": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "qualifies": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates clear and the scoring total (6.7) exceeds the 6.5 build threshold, so the opportunity technically qualifies for build_now. However, the cost-to-gain ratio of 3.588 massively exceeds the kill threshold of 0.6 from cost_gain_model.yaml \u2014 even the optimistic scenario (1.794) is nearly 3\u00d7 the kill line. This signals that at expected conversion rates and ARPU, the economics are deeply unfavorable in the near term. Additionally, responsiveness_signal sits at 2 (no real outreach data), meaning we have zero validation that SFMC developers will actually respond to or pay for this. Building now would commit a week of operator time against a cost-to-gain ratio that the model's own rules flag for kill. The correct move is to defer for one week, run a 20\u201330 lead cold outreach probe to SFMC developers on LinkedIn and Salesforce community channels, and re-evaluate once we have actual responsiveness data. If responsiveness comes back strong (>8%), the high buyer_clarity and willingness_to_pay scores could justify a build; if it stays flat, the opportunity should be killed.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn + Salesforce Trailblazer Community DMs targeting SFMC developers/admins"
+}

@@ -1,0 +1,27 @@
+{
+  "opportunity_id": "01KZJBEYNS14B9X96HZKYMGXF4",
+  "computed_at": "2026-08-18T06:36:41+03:00",
+  "model_version": "cost_gain_model.yaml@v1",
+  "build_cost_usd": 1344.0,
+  "monthly_run_cost_usd": 32.0,
+  "expected_arpu_usd": 40.18,
+  "expected_conversion_rate": 0.033,
+  "break_even_customers": 45,
+  "cost_to_first_paid_usd": 1344.03,
+  "expected_gain_30d_usd": 166.89,
+  "expected_gain_90d_usd": -246.65,
+  "cost_to_gain_ratio": 6.919,
+  "sensitivity": {
+    "pessimistic": 13.839,
+    "base": 6.919,
+    "optimistic": 3.46
+  },
+  "assumptions": [
+    "build_hours=16.8 (buildability_with_ai=4.0) @ $80.0/h => build_cost=$1344.0",
+    "monthly_run_cost=$32.0 (api $8.0/wk*4 + hosting $0.0)",
+    "expected_arpu=$40.18 (target $49.0 scaled by willingness_to_pay=7.0)",
+    "conversion=0.033 (from buyer_clarity=7.0); gross_margin=0.75",
+    "reachable sends: 30d=200, 90d=600 (under per_day_outreach_sends cap, approval-gated)",
+    "cost_to_gain_ratio=6.919 = 4wk cost $1376.2 / 4wk gross $198.89"
+  ]
+}

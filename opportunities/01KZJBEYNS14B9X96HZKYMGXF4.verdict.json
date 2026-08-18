@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01KZJBEYNS14B9X96HZKYMGXF4",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "daily",
+  "rationale": "Website operators on metered cloud infrastructure suffer real, ongoing financial losses from AI and bot scrapers \u2014 the HN thread documents a year-long battle at 1.5M-page scale, and the existence of paid incumbents (Cloudflare Bot Management, DataDome, Kasada) at $hundreds\u2013thousands/month confirms strong buyer willingness-to-pay. The pain is daily and financially quantifiable (bandwidth overage bills), meeting the bar for 'burning.' The narrow validated angle \u2014 a one-time AI Scraper Cost Audit report \u2014 has at least 5 distinct pain signal types across the evidence gathered and a clear WTP signal from competitor pricing.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49219696",
+    "https://www.cloudflare.com/products/bot-management/",
+    "https://www.datadome.co/pricing/",
+    "https://radar.cloudflare.com/traffic/bots",
+    "https://www.reddit.com/r/webdev/search/?q=ai+scraper+bandwidth+cost",
+    "https://www.kasada.io/"
+  ],
+  "evaluated_at": "2026-08-18T06:36:41+03:00"
+}

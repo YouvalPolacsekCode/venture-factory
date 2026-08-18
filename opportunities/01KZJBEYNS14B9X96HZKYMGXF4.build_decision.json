@@ -1,0 +1,47 @@
+{
+  "opportunity_id": "01KZJBEYNS14B9X96HZKYMGXF4",
+  "decided_at": "2026-08-18T06:36:52+03:00",
+  "decision": "kill",
+  "confidence_pct": 88,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 4,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 4,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.7,
+      "min_total_to_build": 6.5,
+      "met": false
+    },
+    "recommended_stage": "validate"
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.7 < min_total_to_build 6.5",
+    "operational_autonomy=4 < 7",
+    "buildability_with_ai=4 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Two of four required build gates fail hard: operational_autonomy scores 4 vs. floor 7, and buildability_with_ai scores 4 vs. floor 6. The cost-to-gain ratio of 6.92 massively exceeds the kill threshold of 0.6, and the 90-day expected gain is negative (-$247). Even the narrowed 'audit report' pivot described in the scoring rationale would be a one-time purchase with no recurring revenue, requiring 45 customers to break even against a segment that has produced zero responsiveness signal. This opportunity has structural deficits that validation cannot overcome within a reasonable timeframe.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 21,
+  "suggested_first_outreach_channel": "n/a"
+}

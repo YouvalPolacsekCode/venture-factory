@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0C1HZER7QZYJW644V7YJEQD",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Compliance middleware touching SSO, SCIM provisioning, and audit log pipelines requires significant per-customer setup, configuration, and ongoing validation \u2014 not fully automatable via Claude + a simple form."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "SOC-2 compliance tooling is directly tied to security audit and certification workflows; misdelivery has legal/reputational consequences and buyers expect vendor accountability, increasing support and liability burden."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real, named person with budget authority \u2014 IT/security leads at SMBs paying for SOC-2 audits \u2014 and willingness to pay is stated explicitly. However, building a functioning compliance middleware layer for Fastmail (SSO, SCIM, audit log aggregation) requires deep API integration work that goes well beyond Claude + prompts + Stripe, and per-customer onboarding/configuration would be unavoidable. Combined penalties for regulated-industry liability and per-customer manual fulfillment bring the total to 3.0, well below the validate threshold.",
+  "solution_plan": "This is not a viable solo factory build at this time. The core product \u2014 a compliance overlay enforcing 2FA, SCIM provisioning, and audit-log aggregation on top of Fastmail's APIs \u2014 requires custom OAuth/SAML plumbing, real-time event ingestion, and per-customer configuration that cannot be delivered via Claude prompts alone. Each customer would also need hands-on onboarding to connect their identity provider and validate compliance controls, which breaks the autonomy model entirely. If Fastmail ever exposes richer APIs, this could be revisited as a productized checklist or self-audit report tool \u2014 but in its current form it is not buildable or deliverable by a non-technical solo operator.",
+  "notes": "Failing build gates: buildability_with_ai (4, min 6) and operational_autonomy (4, min 7). Strong pain and WTP signal \u2014 worth monitoring if Fastmail releases enterprise APIs or a partner program.",
+  "scored_at": "2026-08-19T06:39:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

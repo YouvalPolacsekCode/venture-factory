@@ -1,0 +1,26 @@
+{
+  "id": "01M0C1HZF0B5HXBYMCW3C5V9SG",
+  "discovered_at": "2026-08-19T06:38:06+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49355352",
+    "snippet": "ServiceNow are pushing enterprise towards self-hosted for their next renewals. The main driver is an inability to service the necessary compute to deal with the avalanche of agents hitting their APIs. Kind of an interesting turn given that the main driver for many large enterprise to get off Remedy was the promise of removing multi-million dollar upgrade cycles because 'dw it's saas, you cant customise and screw it up'."
+  },
+  "problem_statement": "Large enterprises currently on ServiceNow SaaS are being pushed toward self-hosted deployments at renewal, reversing years of migration away from on-premise ITSM and reintroducing costly upgrade cycles \u2014 creating urgent demand for migration planning, cost analysis, and alternative ITSM evaluation tooling.",
+  "target_segment": "Enterprise IT operations and procurement teams at companies with ServiceNow contracts facing forced migration decisions at renewal",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "servicenow",
+    "itsm",
+    "enterprise-software",
+    "self-hosted",
+    "saas-migration",
+    "it-operations",
+    "vendor-lock-in",
+    "renewal",
+    "cloud-repatriation"
+  ],
+  "notes": "Signal from a practitioner with inside knowledge (5 points, 4 comments on recent 2026-08-19 post). Buyer context is clear: multi-million dollar enterprise contracts under renegotiation. Opportunity is advisory/tooling for ITSM migration assessment or a lighter-weight SaaS ITSM alternative positioning against ServiceNow's self-hosting push. Not yet a paid signal but market disruption is imminent and high-value.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0C1HZF0B5HXBYMCW3C5V9SG",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise ITSM migration decisions are high-stakes, multi-stakeholder processes; buyers at this level expect live discovery calls, workshops, and presentations \u2014 async-only delivery won't close."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Migration planning and cost analysis for ServiceNow environments requires bespoke analysis of the customer's contract, architecture, and org context \u2014 not automatable via a generic Claude pipeline."
+    }
+  ],
+  "total": 2.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the dollar amounts are large \u2014 multi-million dollar renewals under renegotiation \u2014 but the buyer is an enterprise IT/procurement team that cannot be sold to asynchronously or at scale by a solo operator. Reaching and closing enterprise buyers requires live engagement (calls, RFPs, procurement cycles), and the analysis work is inherently bespoke per customer. Operational autonomy scores 3 because every deliverable would require Youval's direct involvement; this is consulting, not a product.",
+  "solution_plan": "This is not a viable solo factory build. The opportunity is real at the enterprise level, but enterprise ITSM migration advisory is a professional services engagement \u2014 it requires discovery calls to understand each company's ServiceNow configuration, custom cost modeling, and stakeholder presentations. None of that can be automated by Claude + a landing page. A lighter version (e.g. a self-serve 'ServiceNow self-host cost estimator' tool) could be explored as a lead-gen asset, but on its own it would not generate meaningful revenue without the consulting engagement behind it, which is beyond the factory's model.",
+  "notes": "Failing build gates: operational_autonomy (3, min 7). Signal worth monitoring \u2014 if a lightweight SaaS ITSM alternative emerges as the framing, rescope and re-score.",
+  "scored_at": "2026-08-19T06:39:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

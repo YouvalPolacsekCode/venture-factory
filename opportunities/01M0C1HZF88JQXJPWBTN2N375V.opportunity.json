@@ -1,0 +1,26 @@
+{
+  "id": "01M0C1HZF88JQXJPWBTN2N375V",
+  "discovered_at": "2026-08-19T06:38:06+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95532/what-is-the-best-all-in-one-tool-to-ssh-into-a-vps-transfer-files-and-manage-d",
+    "snippet": "I manage a single Linux VPS (Ubuntu) and I am currently juggling several separate tools for everyday tasks, which is slowing me down. My daily tasks: SSH into the server to run shell commands. Upload and download files over SFTP or SCP. Manage databases (MySQL and PostgreSQL): running queries, browsing tables, and doing quick backups. Right now I use one client for the terminal, another for file transfer, and a third for the database, and switching between them constantly is tedious."
+  },
+  "problem_statement": "Developers and freelancers managing Linux VPS servers must switch between three separate tools for SSH terminal access, SFTP file transfer, and database management, creating friction and lost time that a unified GUI client could eliminate.",
+  "target_segment": "Solo developers, freelancers, and small agencies who self-manage Linux VPS instances and run MySQL/PostgreSQL databases",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vps-management",
+    "ssh-client",
+    "sftp",
+    "database-gui",
+    "developer-tools",
+    "mysql",
+    "postgresql",
+    "all-in-one",
+    "server-management"
+  ],
+  "notes": "Single signal but represents a well-known and persistent friction point in the solo-dev/freelancer market. Tool-shopping behavior (actively seeking a product) is a positive indicator. Competing products (TablePlus, Beekeeper Studio, Termius) exist but none fully unify all three workflows. A paid tier for this segment is plausible. Signal strength kept at 2 pending corroboration from additional sources.",
+  "status": "candidate"
+}

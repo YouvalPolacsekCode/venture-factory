@@ -1,0 +1,26 @@
+{
+  "id": "01M0C1HZER7QZYJW644V7YJEQD",
+  "discovered_at": "2026-08-19T06:38:06+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49344997",
+    "snippet": "Absolutely love Fastmail. I badly wish that they added a few key enterprise features: mandatory 2FA, SSO, provisioning, and more robust audit logs. If you're reading we would pay for this! Fastmail makes SOC-2 a bit tedious for us to maintain."
+  },
+  "problem_statement": "Small and mid-size businesses using Fastmail as their email provider cannot achieve SOC-2 compliance easily because Fastmail lacks mandatory 2FA enforcement, SSO integration, user provisioning APIs, and robust audit logs \u2014 features standard in enterprise email platforms.",
+  "target_segment": "SMB and startup IT/security administrators using Fastmail who must maintain SOC-2 or similar compliance certifications",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "email-compliance",
+    "soc2",
+    "fastmail",
+    "sso",
+    "2fa-enforcement",
+    "audit-logs",
+    "email-security",
+    "provisioning",
+    "smb-it"
+  ],
+  "notes": "Explicit willingness-to-pay stated ('we would pay for this'). Business context confirmed (SOC-2 maintenance). Gap: a compliance middleware or overlay layer for Fastmail \u2014 enforcing 2FA, providing SCIM provisioning, and aggregating audit logs \u2014 could be sold as a SaaS add-on to Fastmail customers locked out of enterprise-grade controls.",
+  "status": "candidate"
+}

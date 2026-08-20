@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01KZZ97W2PKEC8ZHKHE1FMTTM5",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "monthly",
+  "rationale": "The HN thread shows genuine curiosity about AI subscription spend, but with only 8 points and 22 comments the signal is thin. Multiple free alternatives (spreadsheets, manual tracking, existing SaaS spend-trackers like Ramp or Notion templates) already absorb this pain at zero marginal cost, and the thread yields no willingness-to-pay signal \u2014 users are sharing spend figures, not asking for a paid tool to manage it. The 5-distinct-pain-quotes bar and at least 1 WTP signal cannot be met from available evidence.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49290713"
+  ],
+  "evaluated_at": "2026-08-20T06:39:53+03:00"
+}

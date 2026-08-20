@@ -1,0 +1,27 @@
+{
+  "id": "01M0EKZXP5PBCKP163BS43ZX06",
+  "discovered_at": "2026-08-20T06:38:46+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/Bilbycast/bilbycast-edge/issues/124",
+    "snippet": "Add a thumbnail track to the CMAF output \u2014 sprite sheets plus a WebVTT index, PUT to the same ingest as the media segments \u2014 so a browser player can show a scrub preview across a long DVR window... Coarse scrubbing across a 60-minute window cannot decode arbitrary positions in real time. Without a preview, dragging the scrub bar is blind: the operator sees nothing until they release and the player seeks. [Issue #123]: Add a configurable DVR window to the CMAF output so browser clients can seek back over a long history \u2014 including to points before the client joined the stream."
+  },
+  "problem_statement": "Browser-based live video players using CMAF/HLS lack built-in support for long DVR windows with scrub preview (sprite sheet thumbnails + WebVTT), forcing engineering teams to build custom solutions from scratch for every streaming product.",
+  "target_segment": "Streaming infrastructure engineers and media tech companies building browser-based DVR or live replay players on top of CMAF/HLS pipelines",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "video-streaming",
+    "cmaf",
+    "dvr",
+    "hls",
+    "thumbnail-sprites",
+    "webvtt",
+    "live-video",
+    "media-tech",
+    "browser-player",
+    "scrub-preview"
+  ],
+  "notes": "Two related GitHub issues on the same project (bilbycast-edge) both filed the same day, indicating active engineering investment in browser DVR. The pain \u2014 blind scrubbing and capped DVR history \u2014 is well-known in streaming infrastructure. A hosted CMAF thumbnail/DVR window generation service or open-source library with commercial support could serve media tech teams. Buyer evidence is implicit (engineering time cost, existing paid streaming infra). Signal strength kept at 2 as this is a single project's internal tracker.",
+  "status": "candidate"
+}

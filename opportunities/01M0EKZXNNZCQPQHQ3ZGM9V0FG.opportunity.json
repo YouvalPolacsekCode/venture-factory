@@ -1,0 +1,27 @@
+{
+  "id": "01M0EKZXNNZCQPQHQ3ZGM9V0FG",
+  "discovered_at": "2026-08-20T06:38:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439759/external-credential-with-google-auth-provider-stops-refreshing-oauth-token-after",
+    "snippet": "I have a Salesforce \u2192 Google Calendar integration built on a 2nd-gen External Credential / Named Credential, and the stored OAuth token silently stops refreshing anywhere from ~1.5 hours to ~2 days after a successful authentication, even though everything appears correctly configured and Google's own audit log shows no revocation event. Setup Auth Provider: Provider Type = Google, PKCE enabled, Default Scopes = openid profile email https://www.googleapis.com/auth/calendar..."
+  },
+  "problem_statement": "Salesforce integrations using 2nd-gen External Credentials with Google OAuth silently lose their refresh tokens after hours to days, breaking calendar and other Google Workspace integrations with no clear error or audit trail.",
+  "target_segment": "Salesforce admins and developers at companies integrating Salesforce with Google Workspace (Calendar, Drive, etc.)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "oauth",
+    "google-workspace",
+    "integration",
+    "token-refresh",
+    "crm",
+    "enterprise",
+    "authentication",
+    "named-credential",
+    "google-calendar"
+  ],
+  "notes": "Professional business context: developer/admin at a company maintaining a live Salesforce-Google Calendar integration. The silent failure mode (no error, no audit event) makes debugging extremely time-consuming \u2014 a monitoring or auto-remediation tool for Salesforce OAuth credential health could have recurring B2B value. Single signal; score capped at 2 pending corroboration.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0EKZXNNZCQPQHQ3ZGM9V0FG",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is specific and named \u2014 Salesforce admins and developers at companies running live Salesforce-Google Workspace integrations \u2014 and they demonstrably pay for integration tooling (Zapier, Workato, custom dev time). However, this is a single forum signal with no corroboration, so responsiveness is untested and the market size of orgs using 2nd-gen External Credentials with Google OAuth specifically is narrow. The operational autonomy is decent: a monitoring agent that polls credential health and fires alerts or triggers re-auth can run hands-off, but the auth remediation flow may require an operator approval step per customer. This is a validate, not build, because buyer willingness to pay for a dedicated tool (vs. fixing Salesforce config once) needs proof.",
+  "solution_plan": "A Salesforce OAuth Credential Health Monitor: a lightweight SaaS agent that connects to a customer's Salesforce org via a read-only connected app, polls Named Credential / External Credential token health on a schedule, and sends Slack/email alerts the moment a silent token expiry is detected \u2014 before their integration breaks. The factory builds this as a Claude-driven diagnostic prompt + a simple sign-up page + Stripe subscription ($49/mo per org) + an automated email alert pipeline; no coding by the operator. To sell, the factory drafts outreach to Salesforce developers visible on Stack Exchange, the Salesforce Trailblazer community, and LinkedIn (filtering for 'Salesforce Admin' + 'Google Workspace'); outreach batches go out only after operator approval. Once a customer connects their org, monitoring runs automatically \u2014 alerts fire, billing recurs via Stripe, and support queries are handled by a Claude-powered help responder; the only recurring operator touch is approving outreach batches and reviewing any flagged anomalies weekly. Before building, validate by posting a solution thread on the StackExchange question and asking if 5 admins would pay $49/mo for automated monitoring.",
+  "notes": "build_gate: responsiveness_signal is untested (scored 1). Validate first with a direct forum offer or a waitlist page. buyer_clarity and operational_autonomy meet build floors, but willingness_to_pay evidence is thin \u2014 one forum post, no stated budget. Single signal; corroboration needed.",
+  "scored_at": "2026-08-20T06:40:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M0EKZXNXJ5SNHG8G328F4G5Y",
+  "discovered_at": "2026-08-20T06:38:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199689/is-it-possible-to-enroll-a-domain-joined-windows-device-into-intune-and-microsof",
+    "snippet": "We have a Windows 11 device that is joined to our on-premises Active Directory. Our goal is to have the device appear in both Microsoft Entra ID and Intune, without using Windows Autopilot. Current situation: Device is joined to on-premises Active Directory. dsregcmd /status shows: DomainJoined: YES AzureAdJoined: NO. The device does not appear in Intune. We do not currently have access to the Entra Connect (Azure AD Connect) server, so we cannot verify whether Hybrid Microsoft Entra ID Join is configured."
+  },
+  "problem_statement": "IT admins at companies with on-premises Active Directory struggle to enroll existing domain-joined Windows devices into Microsoft Intune and Entra ID without Autopilot or access to Entra Connect, creating compliance and management gaps during hybrid-cloud migrations.",
+  "target_segment": "IT administrators and sysadmins at mid-market companies migrating from on-prem AD to hybrid Microsoft Entra ID / Intune environments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "intune",
+    "entra-id",
+    "active-directory",
+    "hybrid-join",
+    "device-management",
+    "enterprise-it",
+    "windows",
+    "mdm",
+    "migration",
+    "microsoft"
+  ],
+  "notes": "Clear professional/business context: IT admin at a company managing a fleet of domain-joined devices, blocked during a hybrid cloud migration. No Autopilot access and no Entra Connect access creates a common enterprise migration bottleneck. A guided remediation tool or step-by-step SaaS diagnostic for hybrid Entra join scenarios could serve IT MSPs and internal IT teams. Single signal; needs corroboration.",
+  "status": "candidate"
+}

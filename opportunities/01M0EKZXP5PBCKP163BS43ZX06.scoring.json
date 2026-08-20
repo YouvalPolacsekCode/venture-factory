@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0EKZXP5PBCKP163BS43ZX06",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "The technical pain is real \u2014 blind scrubbing over a long DVR window is a known streaming infrastructure problem \u2014 but the buyer is a streaming infrastructure engineer at a media tech company, a small and highly technical ICP that typically builds in-house, contributes to open source, or uses existing CDN-level tooling (Cloudflare Stream, Mux, AWS MediaLive) that already bundles thumbnail sprites. Willingness to pay for a standalone service on top of their existing CMAF pipeline is weak. More critically, the solution itself requires deep media processing infrastructure (real-time sprite sheet generation, CMAF segment inspection, WebVTT indexing) that goes well beyond Claude prompts + a web form \u2014 this needs custom backend code, media pipeline expertise, and significant ongoing compute, none of which a solo non-technical operator can build or maintain with this factory's tooling. The autonomy and buildability scores both fail their build gate floors decisively.",
+  "solution_plan": "A solo non-technical operator using this factory cannot realistically build or maintain this service. It requires real-time video segment processing, sprite sheet generation from decoded frames, CMAF muxing logic, and CDN integration \u2014 none of which Claude or standard web tooling handles. The buyer (streaming infrastructure engineers) would expect a robust, low-latency media processing backend, and would not pay for a wrapper around general AI capabilities. Dropping this opportunity is the correct call; if the operator has a specific media-tech background or partnership, revisit with a co-founder who can own the infrastructure layer.",
+  "notes": "Fails multiple build gates: buildability_with_ai=3 (below min 6), operational_autonomy=4 (below min 7), buyer_clarity=5 (below min 6), willingness_to_pay=4 (below min 5). Recommended stage: drop. This is an engineering infrastructure problem, not an AI-augmented service problem.",
+  "scored_at": "2026-08-20T06:40:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

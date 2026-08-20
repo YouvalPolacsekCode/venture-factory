@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0EKZXNXJ5SNHG8G328F4G5Y",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is an IT admin or MSP engineer at a mid-market company mid-migration \u2014 a real, identifiable role with budget authority for tooling \u2014 and the pain (compliance gaps, devices stuck out of Intune during migration) is genuine and blocks work. However, this is a niche intersection of specific Microsoft stack conditions (hybrid join, no Autopilot, limited Entra Connect access), making the addressable pool small, and there is no paid substitute signal beyond general Microsoft consulting. Operational autonomy is moderate: a guided diagnostic wizard can run hands-off, but the remediation steps often require actual IT admin action on infrastructure, so Claude can guide but cannot fully execute. Total falls just below the validate threshold; corroboration needed before investing further.",
+  "solution_plan": "A Hybrid Entra Join Diagnostic Wizard: a web-based step-by-step troubleshooter that asks an IT admin questions about their environment (dsregcmd output, Entra Connect status, GPO settings) and returns a precise, prioritised remediation checklist \u2014 no guessing, no 3-hour forum trawls. The factory builds this as a Claude prompt chain + a minimal form-based web page + a Stripe payment link ($29 one-time or $19/mo for MSPs with multiple clients); no coding by the operator. To sell, the factory drafts outreach targeting IT admin communities on Reddit (r/sysadmin, r/Intune), ServerFault, and LinkedIn (filtering 'IT Administrator' + 'Intune' + 'Active Directory'); all outreach batches require operator approval before sending. Once live, the wizard runs fully automated \u2014 users submit their environment details, Claude returns a remediation plan, Stripe handles billing, and a Claude responder handles follow-up questions; the operator's only recurring task is approving new outreach rounds. Validate first by posting a 'free diagnostic' offer on the ServerFault thread to gauge reply rate before building.",
+  "notes": "Total 5.4 is just below min_total_to_validate (5.5); treating as borderline validate given the professional buyer context and real pain, but a single forum signal is insufficient. operational_autonomy scored 6 because Claude guides but cannot execute infrastructure changes \u2014 human IT admin must implement steps. No build gates are met yet; validate by testing demand on the forum thread.",
+  "scored_at": "2026-08-20T06:40:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

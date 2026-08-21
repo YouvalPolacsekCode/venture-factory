@@ -1,0 +1,25 @@
+{
+  "id": "01M0H6JY7XM4S2SBWKJK0B227R",
+  "discovered_at": "2026-08-21T06:42:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49381127",
+    "snippet": "\"it's crazy that this type of service exists (in a good way obviously). I just never thought you would pay for someone to do this\" \u2014 comment in Ask HN thread about quitting six different illness-tracking systems."
+  },
+  "problem_statement": "People managing chronic illness or complex health conditions cycle through multiple tracking systems and tools without finding one that sticks, yet express surprise and willingness to pay for a managed/done-for-you health tracking service.",
+  "target_segment": "Chronic illness patients and caregivers who have tried and abandoned multiple self-tracking tools and would pay for a concierge or managed-tracking service.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "chronic-illness",
+    "health-tracking",
+    "patient-data",
+    "done-for-you",
+    "symptom-logging",
+    "caregiver",
+    "health-management",
+    "willingness-to-pay"
+  ],
+  "notes": "Buyer signal: commenter explicitly notes surprise that people pay for this service \u2014 implies an existing market and validates willingness-to-pay. Thread context is 'I've quit six systems', indicating high churn and unmet need. Single data point but from a recent (2026-08-20) active thread.",
+  "status": "candidate"
+}

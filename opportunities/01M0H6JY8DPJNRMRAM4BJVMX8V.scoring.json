@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M0H6JY8DPJNRMRAM4BJVMX8V",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A Salesforce OAuth migration-readiness checker can produce a report autonomously, but actual migration execution and validation typically requires a human Salesforce engineer to interpret results, apply changes in the org, and confirm behavior \u2014 especially with Client Credentials flows involving org-wide settings that need Salesforce Support involvement."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce developers and integration engineers at consultancies are a clearly named buyer with real budget \u2014 migration work is billable and their employers pay for tools. However, the actual service needed (migration execution and validation) requires human engineering judgement that cannot be automated, and the 'report' portion of the product (a readiness checker) is commoditised by Salesforce's own tooling and community resources. The penalty for human fulfillment reflects that the output of any automated checker must still be acted on by a skilled engineer, limiting the standalone value.",
+  "solution_plan": "A standalone Salesforce OAuth migration-readiness checker could theoretically be built as a Claude-powered form that asks the consultant a series of questions about their org setup and returns a structured checklist. However, the tool's value is limited because Salesforce's own documentation and community already cover this ground, and the actual fix (enabling org-wide settings) requires Salesforce Support or admin access \u2014 not a third-party tool. A solo non-technical operator cannot practically distribute or support this in the Salesforce ecosystem without existing consultant relationships.",
+  "notes": "Total falls below validate threshold (4.2 < 5.5) after human-fulfillment penalty. Fails operational_autonomy floor (6 = borderline, but total disqualifies first). Even without penalty, weighted total of 5.7 only barely clears validate threshold.",
+  "scored_at": "2026-08-21T06:44:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M01QHWMXXA2G6VD8F9FBJHPC",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Pain is real and recurring \u2014 Salesforce cross-cloud integration errors are a well-documented developer frustration with genuine time cost \u2014 but the evidence base is thin (two Stack Exchange questions, single-source discovery) and willingness-to-pay for a report-based diagnostic product specifically is unproven. The market segment (developers who will pay $49\u201399 per diagnostic report rather than posting on Stack Exchange for free) is narrow, and free alternatives (Trailblazer Community, official Salesforce support, Stack Exchange itself) absorb most demand. Rejecting pending corroboration of paid demand signal.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439751/ampscript-createsobject-error-field-integrity-exception-required-field-is-m"
+  ],
+  "evaluated_at": "2026-08-21T06:43:20+03:00"
+}

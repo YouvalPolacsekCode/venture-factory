@@ -1,0 +1,25 @@
+{
+  "id": "01M0H6JY8WH12K664TQ9CPENPD",
+  "discovered_at": "2026-08-21T06:42:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199699/can-intermittent-5xx-errors-affect-googlebot-crawling-and-indexing",
+    "snippet": "\"I'm troubleshooting a website that occasionally returns 5xx errors during traffic spikes. Googlebot is still crawling the site, but some URLs are taking longer to be discovered and indexed. How should I diagnose whether these intermittent errors are affecting Googlebot's crawl rate or causing indexing delays?\""
+  },
+  "problem_statement": "SEO practitioners and site owners lack clear tooling to correlate intermittent server-side 5xx errors with measurable drops in Googlebot crawl rate and indexing delays, forcing manual log analysis and guesswork when organic traffic suffers.",
+  "target_segment": "Technical SEO consultants and in-house SEO managers at SMBs and agencies running sites with variable traffic loads.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "technical-seo",
+    "googlebot",
+    "crawl-budget",
+    "indexing",
+    "5xx-errors",
+    "seo-diagnostics",
+    "server-monitoring",
+    "agency-seo"
+  ],
+  "notes": "Buyer signal: two questions from the same author (Ali Raza) on serverfault and webmasters.SE within 24 hours on related crawl/indexing topics suggests an agency or consultant actively billing a client for this diagnostic work. SEO agencies routinely pay for tools (Screaming Frog, Sitebulb, etc.) \u2014 a lightweight crawl-health-to-indexing-correlation monitor would fit existing paid-tool buying patterns. Signal is thin (two posts, one author) but topical cluster is well-established.",
+  "status": "candidate"
+}

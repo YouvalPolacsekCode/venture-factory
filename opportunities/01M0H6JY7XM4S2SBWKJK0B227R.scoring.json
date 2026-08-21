@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M0H6JY7XM4S2SBWKJK0B227R",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Managed/concierge health tracking is inherently a done-for-you service requiring ongoing human judgement to review symptoms, synthesize records, and communicate with patients \u2014 per-customer manual work that cannot be fully automated by Claude."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Health data management touches HIPAA (US), GDPR health data (EU), and similar regimes globally. Even as a non-clinical service, handling chronic illness patient data carries significant regulatory exposure."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Chronic illness patients and caregivers in distress require responsive, empathetic, human-quality support \u2014 not an automated ticketing bot."
+    }
+  ],
+  "total": 0.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyers here are individual consumers managing personal health \u2014 a vague, hard-to-reach, low-budget segment that rarely pays for software tools at meaningful price points. Even if willingness to pay exists at the margins, the service is fundamentally a concierge/done-for-you model requiring per-customer human involvement (reviewing symptom logs, synthesising across appointments, fielding patient questions), which makes autonomous delivery impossible. The regulated-industry exposure around health data processing adds compliance risk that a solo non-technical operator cannot absorb.",
+  "solution_plan": "This idea cannot realistically be built and maintained by a solo non-technical operator. A viable chronic illness tracking service would require clinical oversight, HIPAA-compliant data infrastructure, and per-patient human attention that cannot be automated away. Even a lighter 'AI health diary' product would sit in a regulated grey zone and require ongoing human support that negates the autonomy requirement. Do not pursue.",
+  "notes": "Fails operational_autonomy (2 < 7), buildability_with_ai (3 < 6), buyer_clarity (3 < 6), and willingness_to_pay (5 = floor but total is below validate threshold after penalties). Regulated industry and human-fulfillment penalties push total below 1.0.",
+  "scored_at": "2026-08-21T06:44:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

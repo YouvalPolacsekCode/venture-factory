@@ -1,0 +1,25 @@
+{
+  "id": "01M0H6JY8DPJNRMRAM4BJVMX8V",
+  "discovered_at": "2026-08-21T06:42:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439758/allow-oauth-username-password-flows",
+    "snippet": "\"We are performing a migration from a legacy Salesforce Username-Password OAuth integration to an External Client App using Client Credentials. To validate migration behavior, we need the org-wide setting 'Allow OAuth Username-Password Flows' enabled.\""
+  },
+  "problem_statement": "Salesforce orgs undergoing legacy OAuth to Client Credentials migrations face opaque org-wide settings, feature flags, and edition restrictions that block migration validation and force support escalations, adding cost and delay to enterprise integration projects.",
+  "target_segment": "Salesforce developers and integration engineers at consultancies or enterprise IT teams migrating legacy connected apps.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "oauth",
+    "migration",
+    "enterprise-integration",
+    "connected-apps",
+    "client-credentials",
+    "legacy-modernization",
+    "saas-migration"
+  ],
+  "notes": "Buyer signal: migration work is billable \u2014 the organization is paying consultants or internal engineers to perform this. The friction (needing Salesforce Support confirmation for a settings change) implies repeated cost across many orgs facing the same transition. A migration-readiness checker or guided migration tool for Salesforce OAuth transitions would have enterprise buyers.",
+  "status": "candidate"
+}

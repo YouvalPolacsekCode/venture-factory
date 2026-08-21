@@ -1,0 +1,25 @@
+{
+  "id": "01M0H6JY855V7WH9K3NSN8X336",
+  "discovered_at": "2026-08-21T06:42:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439757/new-to-salesforce-prm-partner-ecosystem-management-need-urgent-help-restorin",
+    "snippet": "\"I've been asked to help recover a client environment after a critical issue. A client's PRM setup was accidentally wiped/reset, and we need to restore functionality as quickly as possible. Used by partners to manage Opportunities and related business processes.\""
+  },
+  "problem_statement": "Salesforce PRM / Partner Ecosystem Management configurations can be accidentally wiped with no clear recovery path, leaving agencies and consultants scrambling to restore client environments urgently with no documented rollback procedure.",
+  "target_segment": "Salesforce consultants and system integrators managing PRM implementations for mid-market clients.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "prm",
+    "partner-portal",
+    "disaster-recovery",
+    "crm",
+    "salesforce-consultant",
+    "configuration-backup",
+    "enterprise-saas"
+  ],
+  "notes": "Buyer signal: 'client environment' and 'urgent' language indicates a paid consulting engagement. Consultant is billing hours to recover this. A backup/snapshot or configuration audit service for Salesforce orgs (especially PRM) would have a clear B2B paying buyer. Pairs with Salesforce OAuth migration complexity item below.",
+  "status": "candidate"
+}

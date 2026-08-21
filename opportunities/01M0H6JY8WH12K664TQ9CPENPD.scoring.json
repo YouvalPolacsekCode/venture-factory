@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0H6JY8WH12K664TQ9CPENPD",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "Technical SEO consultants and in-house SEO managers at agencies are a specific, nameable buyer who already pay for tools (Screaming Frog, Sitebulb, Ahrefs at $99-399/month) \u2014 willingness to pay for diagnostic tooling is well-established. A service that correlates server error logs with Google Search Console crawl/indexing data is technically feasible with Claude + standard API integrations and could run largely autonomously once a site is connected. The key gap is responsiveness: this idea is untested and the signal is thin (two posts, one author), so the validate gate is correct. The build gates for autonomy (7), buildability (7), buyer clarity (7), and willingness to pay (7) all clear their floors, but the total of 6.0 is below the 6.5 build threshold \u2014 rightfully, since we have no outreach data yet.",
+  "solution_plan": "The micro-service is a crawl-health correlation monitor: it ingests a site's server logs (or error rate data) alongside Google Search Console data and produces a weekly report showing whether 5xx spikes correlate with drops in crawl rate or indexing. BUILD: the factory creates a Claude-powered analysis pipeline \u2014 the operator connects GSC via API and uploads a log sample via a simple intake form, Claude analyses the data and generates a plain-English diagnostic report, delivery is automated by email. A Stripe subscription link ($49-99/month) gates access. SELL: reach technical SEO consultants via cold email sourced from agency directories (e.g. Clutch, BuiltWith agency lists) and LinkedIn; the factory drafts the outreach, the operator approves each batch before it sends. MAINTAIN: weekly report generation runs automatically; billing is handled by Stripe; support queries are triaged by Claude with a simple escalation path. The ONLY recurring human touch is approving outreach batches and reviewing any escalated support tickets. Validate first: send 20 cold emails to SEO agency owners describing the tool before building anything.",
+  "notes": "All four build gates pass their minimums (operational_autonomy=7, buildability_with_ai=7, buyer_clarity=7, willingness_to_pay=7), but total (6.0) is below min_total_to_build (6.5). Stage is correctly validate. Responsiveness_signal (2) is the key unknown \u2014 a small outreach test is the next step.",
+  "scored_at": "2026-08-21T06:44:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

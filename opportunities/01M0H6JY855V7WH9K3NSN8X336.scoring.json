@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0H6JY855V7WH9K3NSN8X336",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 4,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Actual PRM configuration restoration after a wipe requires hands-on Salesforce expertise to audit, rebuild, and validate settings \u2014 this is skilled consulting work, not something Claude can execute autonomously against a live org."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Disaster-recovery engagements are inherently urgent and synchronous \u2014 the client needs a human expert available immediately, not an async automated report."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is excellent \u2014 Salesforce consultants billing client hours have real budget and a specific urgent pain. However, the service being requested (restoring a wiped PRM configuration) is hands-on expert consulting work that cannot be automated: Claude cannot log into a Salesforce org, inspect its state, and rebuild complex PRM configurations autonomously. The disaster-recovery framing also demands synchronous human availability. A lighter adjacent product (e.g. automated config-snapshot or audit reports) scores better on autonomy but loses much of the urgency signal.",
+  "solution_plan": "This specific disaster-recovery framing cannot be built and maintained autonomously by a solo non-technical operator. The adjacent idea \u2014 an automated Salesforce org configuration snapshot/audit service \u2014 is more viable but requires Salesforce API integration work beyond standard Claude + Stripe tooling. A non-technical operator cannot set this up without engineering help. If Youval has a Salesforce-savvy developer partner, the adjacent snapshot product is worth a separate evaluation.",
+  "notes": "Fails operational_autonomy (4 < 7) and buildability_with_ai (5 < 6) build gates. Human-fulfillment and synchronous-human penalties correctly reflect the consulting nature of the service.",
+  "scored_at": "2026-08-21T06:44:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M0H6JY8MBGN94D93A1SETBWT",
+  "discovered_at": "2026-08-21T06:42:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148856/block-bots-looking-for-wordpress-vulnerabilities",
+    "snippet": "\"My website is getting thousands of hits a day from bots searching for WordPress vulnerabilities. I do NOT run WordPress, and the site is on shared hosting, so I don't have backend access. I added RedirectMatch 301 /wp to my .htaccess... but the attempts still fill my log with tons of crap.\""
+  },
+  "problem_statement": "Small website owners on shared hosting are inundated with bot traffic probing for WordPress vulnerabilities they don't even use, polluting logs, inflating analytics, and wasting server resources \u2014 with no easy backend firewall access to stop it.",
+  "target_segment": "Small business owners and independent webmasters on shared hosting plans who lack server-level access to configure firewalls or bot-blocking rules.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "bot-blocking",
+    "shared-hosting",
+    "wordpress-bots",
+    "web-security",
+    "htaccess",
+    "log-pollution",
+    "small-business-website",
+    "crawler-abuse"
+  ],
+  "notes": "Moderate buyer signal: shared-hosting customers do pay monthly for hosting and pay for tools/plugins that solve security problems. The frustration is clear and repeated (also echoed in the serverfault iptables item about BingBot alerting 'AI friends and hackers'). A managed bot-blocking service or .htaccess rule generator tuned for non-WordPress shared-hosting sites could command a small SaaS fee. Pain is real but individual ticket volume is low \u2014 combined signal from two independent posts raises confidence slightly.",
+  "status": "candidate"
+}

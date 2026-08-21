@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M0H6JY8MBGN94D93A1SETBWT",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Shared-hosting customers are individual consumers or tiny businesses paying $5\u201315/month for hosting. A bot-blocking micro-SaaS at any meaningful price point ($5-20/mo) would need hundreds of paying customers to generate viable revenue, requiring B2C scale that a solo operator cannot achieve through targeted outreach."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and recurring, and the technical solution (generating htaccess rules or a Cloudflare config) is very buildable with Claude. The problem is commercial: shared-hosting customers are individual consumers who already pay very little for hosting and have low willingness to pay for security add-ons, especially when free alternatives (Cloudflare's free tier, Wordfence for WordPress users) exist. The buyer is too vague \u2014 'small business owner on shared hosting' spans millions of people with wildly different contexts and no single reachable channel \u2014 and the business model requires consumer scale that a solo operator cannot drive.",
+  "solution_plan": "The technical build is genuinely easy: a Claude-powered form where a user describes their hosting setup and gets a tailored .htaccess bot-blocking ruleset emailed to them, paid via a one-time Stripe link ($9-19). The factory could build this in days. However, reaching paying customers is the unsolvable problem: there is no B2B channel, no high-intent list, and no clear reason for shared-hosting customers (who already have free options) to pay. Without a distribution edge, this sits as a free blog post or a tiny Gumroad product, not a sustainable micro-SaaS. Not recommended for this factory.",
+  "notes": "Fails willingness_to_pay floor (4 < 5) and buyer_clarity floor (4 < 6). Total also below validate threshold after penalty.",
+  "scored_at": "2026-08-21T06:44:30+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

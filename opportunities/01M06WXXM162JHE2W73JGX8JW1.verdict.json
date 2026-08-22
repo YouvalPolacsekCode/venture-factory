@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M06WXXM162JHE2W73JGX8JW1",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The HN thread (49 upvotes, 46 comments) demonstrates real, paying-user frustration with AI API outages and lagging official status pages. Willingness-to-pay is indirectly evidenced by the existence of paid uptime monitoring SaaS (Better Uptime, PagerDuty, Datadog) and the fact that the affected users are explicitly on paid API tiers. The pain is real and recurring, but outages happen monthly rather than daily, so severity is moderate rather than burning.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49324078",
+    "https://downdetector.com/status/anthropic/",
+    "https://status.anthropic.com/",
+    "https://betteruptime.com/pricing",
+    "https://www.pagerduty.com/pricing/"
+  ],
+  "evaluated_at": "2026-08-22T06:36:05+03:00"
+}

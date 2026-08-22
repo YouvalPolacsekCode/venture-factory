@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M0KRJH04C1Z72NBNSZE8020A",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A PCF custom grid control or AppSource add-in must be built, tested, and deployed by someone with Power Apps Component Framework development skills \u2014 this is not a Claude-prompt deliverable."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and daily: D365 users hit this 'begins with' limitation every time they search large record sets, and enterprise D365 licenses confirm willingness to pay for productivity tools. The buyer is a nameable role (CRM admin, power user in an enterprise) with access to IT budget. However, the actual solution is a PCF (Power Apps Component Framework) custom control \u2014 a TypeScript/React component built against Microsoft's SDK \u2014 which cannot be generated or operated by Claude and requires specialized developer skills and Microsoft AppSource certification to distribute. This is a legitimate market gap but the wrong build for this factory.",
+  "solution_plan": "This is not viable for this factory in its current form. Building a PCF control for Dynamics 365 requires TypeScript development, testing against the Dataverse API, and AppSource certification \u2014 well beyond Claude prompts and a landing page. A solo non-technical operator cannot build or maintain this. If Youval partners with a D365 developer, this could be revisited as a productized add-in, but as a solo Claude-factory play it does not work.",
+  "notes": "Fails buildability_with_ai (4 < 6 floor) and operational_autonomy (5 < 7 floor) build gates. After penalty, total is 3.6, below the validate threshold of 5.5. Drop.",
+  "scored_at": "2026-08-22T06:36:42+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

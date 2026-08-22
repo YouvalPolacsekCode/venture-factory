@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0KRJH0BKKWGT2JY39H2WDRW",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "An LWC managed package or AppExchange utility requires Salesforce-certified development, deployment to scratch orgs, and per-customer installation support \u2014 not automatable by Claude."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "ISV and enterprise Salesforce sales cycles involve demos, security reviews, and procurement conversations that require human involvement."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce developers hit this multi-parentId wire API ceiling regularly and the workaround (custom Apex) is a genuine recurring cost in every affected org, making the pain real and the buyer identifiable (Salesforce developer/architect). However, the solution is a Salesforce managed package or LWC utility \u2014 requiring Apex/JavaScript development, Salesforce DX tooling, AppExchange security review, and governor-limit expertise \u2014 none of which Claude can build or deliver. Ongoing support for a Salesforce package also requires platform-certified human judgment per deployment. This is a developer-tools infrastructure play, not a Claude-factory play.",
+  "solution_plan": "This is not viable for this factory. Building a Salesforce LWC utility/managed package requires certified Salesforce development skills (Apex, LWC, SOQL), AppExchange security review, and per-org deployment support. Claude cannot generate or maintain production Salesforce packages autonomously. A solo non-technical operator cannot build or sell this without a Salesforce-certified developer partner. File as market validation for a future collaboration opportunity and do not invest further.",
+  "notes": "Fails buildability_with_ai (3 < 6 floor) and operational_autonomy (3 < 7 floor) build gates. Penalties bring total to 2.2, well below validate threshold. Drop.",
+  "scored_at": "2026-08-22T06:36:42+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

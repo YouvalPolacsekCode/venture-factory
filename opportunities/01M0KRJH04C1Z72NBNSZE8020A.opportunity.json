@@ -1,0 +1,26 @@
+{
+  "id": "01M0KRJH04C1Z72NBNSZE8020A",
+  "discovered_at": "2026-08-22T06:35:02+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182552/how-can-i-search-with-contains-on-all-columns-instead-of-begins-with-in-a-dy",
+    "snippet": "I'm using a Microsoft Dynamics 365 model-driven app (Power Apps / Dataverse). At the top-right of a table view there is a \"Filter by keyword\" box. When I type a term, its tooltip says \"Apply begins with filter on these columns\" and it only matches values that start with what I type. For example, on a list of paper titles, typing \"Graph\" finds \"Graph Neural Networks: a survey\" but does not find \"Unifying Graph Neural Networks Through a Common Layer Equation\", because \"Graph\" isn't at the beginning."
+  },
+  "problem_statement": "Dynamics 365 / Power Apps model-driven app grids only support 'begins with' keyword filtering, forcing business users to know exact record prefixes. There is no native 'contains' search across all columns, creating daily friction for users managing large datasets like document libraries or contact lists.",
+  "target_segment": "Business analysts, CRM administrators, and power users in mid-to-large enterprises running Microsoft Dynamics 365 or Power Apps model-driven apps",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "dynamics-365",
+    "power-apps",
+    "crm",
+    "enterprise-search",
+    "dataverse",
+    "microsoft",
+    "search-ux",
+    "b2b-saas",
+    "productivity"
+  ],
+  "notes": "User is in a paid enterprise Microsoft platform context (D365 licenses are expensive). The limitation is a known platform constraint \u2014 this is a recurring pain point across D365 deployments. Potential product: a PCF (Power Apps Component Framework) custom grid control or add-in that enables full-text 'contains' search, sold via AppSource. Single signal here but the D365 community consistently reports this gap. Willingness to pay is implied by enterprise context.",
+  "status": "candidate"
+}

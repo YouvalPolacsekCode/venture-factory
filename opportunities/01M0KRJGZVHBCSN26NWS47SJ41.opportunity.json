@@ -1,0 +1,25 @@
+{
+  "id": "01M0KRJGZVHBCSN26NWS47SJ41",
+  "discovered_at": "2026-08-22T06:35:02+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95538/etl-software-to-copay-database-and-consolidate-it",
+    "snippet": "I am currently looking for a solution to copy vast amounts of data. A ETL Framework. We are a subsidy and copy via odbc part of a big database from our parent company on our own servers to work with it. The old software we are using is at the end of it's life-cycle. It was never the best piece of software and we built a lot of workarounds within and around it. Now I would like to set us up for the future. I am looking for a piece of software with which I can copy tables from a database into a new target database."
+  },
+  "problem_statement": "Small subsidiary companies running legacy ETL pipelines over ODBC need to replace end-of-life data-copy software but struggle to find modern tools that handle their specific pattern (parent-company DB \u2192 local server, table-level sync, ODBC source) without expensive enterprise contracts or heavy custom engineering.",
+  "target_segment": "IT managers and data engineers at subsidiary or mid-market companies running ODBC-based ETL pipelines on aging software",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "etl",
+    "odbc",
+    "data-pipeline",
+    "legacy-migration",
+    "database-sync",
+    "b2b-software",
+    "data-engineering",
+    "mid-market"
+  ],
+  "notes": "Buyer is clearly in a business/corporate context (subsidiary of a larger company, production data workflows). They are actively searching for a paid replacement \u2014 existing vendor is EOL. Pain is real: accumulated workarounds indicate long-term friction. Single signal but strong business intent. Opportunity: niche ETL SaaS or managed service targeting ODBC-source subsidiary setups, priced between DIY open-source complexity and full enterprise cost.",
+  "status": "candidate"
+}

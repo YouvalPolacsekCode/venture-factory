@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0KRJGZVHBCSN26NWS47SJ41",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "ETL pipeline setup and configuration for ODBC-source environments requires per-customer engineering work to map schemas, test sync jobs, handle edge cases \u2014 not automatable by Claude alone."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling a data infrastructure replacement to IT managers at mid-market companies realistically requires discovery calls and scoping conversations before any deal closes."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 an IT manager at a subsidiary company with a genuine production need and implied budget \u2014 and they're already in purchase mode replacing EOL software, which is a meaningful willingness-to-pay signal. However, building an actual ETL product that handles ODBC sources, schema mapping, incremental sync, and failure recovery requires substantial custom infrastructure engineering far beyond Claude prompts and a Stripe link, scoring it very low on buildability. More critically, every customer deployment is bespoke, making autonomous delivery impossible and requiring human engineering involvement per engagement. This is a legitimate B2B problem but the wrong shape for a solo non-technical Claude factory.",
+  "solution_plan": "This is not viable for this factory. An ODBC-based ETL service is a software infrastructure product that requires database drivers, connection management, schema introspection, and per-customer configuration \u2014 none of which Claude can build or operate autonomously. A solo non-technical operator could not build, sell, or maintain this without hiring engineers. Consider passing this signal to a developer-focused acquirer or filing it as market validation for a future pivot, but do not invest further now.",
+  "notes": "Fails buildability_with_ai (3 < 6 floor) and operational_autonomy (3 < 7 floor) build gates. Penalties bring total well below validate threshold. Drop.",
+  "scored_at": "2026-08-22T06:36:42+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

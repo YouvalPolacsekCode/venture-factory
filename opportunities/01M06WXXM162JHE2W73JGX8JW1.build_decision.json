@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01M06WXXM162JHE2W73JGX8JW1",
+  "decided_at": "2026-08-22T06:36:54+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.4,
+      "min": 6.5,
+      "pass": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "pass": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.4 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass their per-dimension floors, but the weighted total of 6.4 falls below the 6.5 min_total_to_build threshold and the scoring agent's recommended_stage is 'validate', not 'build' or 'scale'. Both conditions independently block a build_now decision. The cost-to-gain ratio of 3.87 is also well above the 0.6 kill threshold from cost_gain_model, signaling weak near-term economics \u2014 however, the scoring rationale notes that a single validation probe (cold outreach to HN commenters on outage threads) could tip the total over 6.5, so killing prematurely would be wasteful given that all structural gates pass and the portfolio is empty.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Direct outreach to HN commenters on AI-API outage threads"
+}

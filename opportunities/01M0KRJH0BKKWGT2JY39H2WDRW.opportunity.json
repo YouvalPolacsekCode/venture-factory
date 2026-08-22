@@ -1,0 +1,26 @@
+{
+  "id": "01M0KRJH0BKKWGT2JY39H2WDRW",
+  "discovered_at": "2026-08-22T06:35:02+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439766/wire-service-lightning-uirelatedlistapi-any-way-to-use-multiple-parentids",
+    "snippet": "Salesforce LWC developer asking: uiRelatedListApi getRelatedListRecords only supports a single parentId; getRelatedListRecordsBatch doesn't solve multi-parent-same-object queries, forcing devs into custom Apex \u2014 adding complexity, testing burden, and governor-limit risk."
+  },
+  "problem_statement": "Salesforce LWC developers cannot batch-query related list records across multiple parent IDs using the standard wire API, forcing them into custom Apex code that adds engineering overhead, governor limit risk, and maintenance burden on every Salesforce org that needs this pattern.",
+  "target_segment": "Salesforce developers and architects at ISVs and enterprise Salesforce orgs building Lightning Web Components",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "lwc",
+    "lightning-web-components",
+    "apex",
+    "crm",
+    "enterprise",
+    "b2b-saas",
+    "developer-tools",
+    "api-limitations"
+  ],
+  "notes": "Salesforce developer in a paid enterprise platform context. Hitting a hard platform API ceiling. The forced Apex workaround is a recurring cost \u2014 every org with this pattern must rebuild it. Opportunity: an open-source or paid LWC utility / managed package that provides a clean multi-parentId related list wire adapter abstraction, distributed via AppExchange. ISV distribution model possible. Single signal but the pattern is a well-known Salesforce platform gap.",
+  "status": "candidate"
+}

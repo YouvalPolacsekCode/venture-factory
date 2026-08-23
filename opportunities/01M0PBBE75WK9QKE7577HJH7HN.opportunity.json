@@ -1,0 +1,25 @@
+{
+  "id": "01M0PBBE75WK9QKE7577HJH7HN",
+  "discovered_at": "2026-08-23T06:41:41+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49403759",
+    "snippet": "Is it just me or is GPU capacity surprisingly hard to find right now, even in Spot pools? I've been trying to get H100s and the Spot pools I've checked are pretty much always full. I ended up trying MI350/MI355s on DigitalOcean Spot and have been running them for about a week without getting interrupted. Curious if anyone else has tried them? How often are you actually getting reclaimed? Also, where are you guys finding capacity these days?"
+  },
+  "problem_statement": "AI teams and startups cannot reliably find available H100 GPU Spot capacity across major cloud providers; Spot pools are consistently full, forcing engineers to manually evaluate alternative hardware and providers to keep workloads running.",
+  "target_segment": "AI/ML engineers and startup founders running GPU-intensive workloads on cloud infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "gpu-availability",
+    "cloud-gpu",
+    "h100",
+    "spot-instances",
+    "ai-infrastructure",
+    "ml-ops",
+    "capacity-planning",
+    "cloud-cost"
+  ],
+  "notes": "Buyer context clear: operator is actively spending on GPU compute and burning engineering time hunting capacity across providers. Pain is operational and recurring. Single HN thread but topic (GPU scarcity) is a known sustained market condition in 2026. Potential to productize as a GPU capacity aggregator, availability monitor, or broker service. Solo operator angle: a lightweight real-time GPU availability tracker/alert service with a small subscription fee. Willingness to pay is implicit (already spending on H100s). Signal kept at 2 because only one data point here; broader corroboration needed.",
+  "status": "candidate"
+}

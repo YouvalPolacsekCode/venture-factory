@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M0EKZXNNZCQPQHQ3ZGM9V0FG",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and technically well-documented \u2014 silent OAuth token expiry in Salesforce 2nd-gen External Credentials is a genuine, time-consuming debugging burden. However, evidence remains a single forum thread with no corroborating signals, no willingness-to-pay evidence for a dedicated monitoring tool, and the affected population (orgs using specifically 2nd-gen External Credentials with Google OAuth) is a narrow technical niche within an already small universe. The pain does not meet the 5-distinct-quote threshold and has zero willingness-to-pay signal beyond the general observation that Salesforce admins use tooling.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439759/external-credential-with-google-auth-provider-stops-refreshing-oauth-token-after"
+  ],
+  "evaluated_at": "2026-08-23T06:42:46+03:00"
+}

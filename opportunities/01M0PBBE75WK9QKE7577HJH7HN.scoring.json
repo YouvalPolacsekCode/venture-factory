@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0PBBE75WK9QKE7577HJH7HN",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a real, identifiable person \u2014 an ML engineer or startup CTO actively spending five-to-six figures monthly on cloud GPU compute \u2014 and the pain (wasted engineering hours hunting Spot capacity across providers) is recurring and operationally costly, giving genuine willingness to pay for a monitoring/alert service. However, the core product is a real-time availability tracker, which requires polling cloud-provider APIs (some undocumented or rate-limited), handling provider-specific auth, and continuous uptime \u2014 meaning 'Claude + a landing page' is not sufficient; the backend engineering is real. Operational autonomy scores low because keeping live availability data accurate demands persistent infrastructure Youval cannot ship in a week without code, making this a validate-then-partner/outsource-build scenario rather than a solo factory build.",
+  "solution_plan": "The micro-service is a GPU Spot availability monitor: users subscribe to real-time alerts when H100 (or MI350/A100) Spot capacity opens up across AWS, GCP, Azure, Lambda Labs, and DigitalOcean. To build it without Youval writing code, the factory would need to commission a lightweight polling service (a simple cron script hitting public or documented provider APIs) via a freelance developer or a no-code tool like Pipedream/Make, then wrap it with a Claude-powered alert-summariser and a Stripe subscription page ($29\u2013$79/mo). Sell by posting in the HN thread itself, the MLOps Slack communities (Hugging Face, Weights & Biases Discord), and targeted cold outreach to ML engineers identifiable on LinkedIn who list GPU infrastructure in their bio \u2014 outreach goes out only after Youval approves each batch. Delivery is automated (alerts fire via email/webhook when capacity opens); support is handled by a Claude-powered FAQ bot; Stripe handles billing. The recurring human touch is approving outreach batches and reviewing weekly delivery logs. Honest caveat: the polling backend is the hard part \u2014 without a developer or a pre-built API aggregator (e.g. SkyPilot, Vast.ai), this stalls at the infrastructure layer, so the first validate step is confirming a no-code or low-code path actually covers the provider APIs before committing.",
+  "notes": "build_gates not met: buildability_with_ai (4, below floor of 6) and operational_autonomy (5, below floor of 7). The product requires persistent polling infrastructure and real-time data pipelines that exceed what Claude + standard factory tooling can ship alone. Stage capped at validate pending a confirmed no-code/low-code build path or a technical co-builder.",
+  "scored_at": "2026-08-23T06:43:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M0H6JY8WH12K664TQ9CPENPD",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "monthly",
+  "rationale": "The pain is real but narrow and episodic: site owners encounter 5xx-related crawl issues infrequently, and existing tools (GSC crawl stats, server log analysis via Screaming Frog/Sitebulb, and Cloudflare analytics) already address this workflow with moderate effort. Evidence is extremely thin \u2014 a single author's two posts \u2014 and no distinct willingness-to-pay signal exists beyond the general pattern that SEO agencies buy tools. The minimum bar of 5 distinct pain quotes and at least 1 explicit WTP signal is not met.",
+  "sources": [
+    "https://serverfault.com/questions/1199699/can-intermittent-5xx-errors-affect-googlebot-crawling-and-indexing"
+  ],
+  "evaluated_at": "2026-08-24T06:46:07+03:00"
+}

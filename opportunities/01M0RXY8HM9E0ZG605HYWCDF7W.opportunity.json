@@ -1,0 +1,25 @@
+{
+  "id": "01M0RXY8HM9E0ZG605HYWCDF7W",
+  "discovered_at": "2026-08-24T06:45:02+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://freelancing.stackexchange.com/questions/11039/building-reputation",
+    "snippet": "I want to start working as a freelancer and I'm willing to begin with small projects to gain experience and build my portfolio. My current skills include Excel (data analysis and automation), Python, SQL, and QGIS. I'm especially interested in projects related to data handling, reporting, automation, or geospatial work. Considering that I'm still at the beginning of my career, what practical strategies would you recommend for landing the first paid jobs?"
+  },
+  "problem_statement": "Early-career freelancers with technical skills (Python, SQL, data analysis) cannot break into paid work because they lack a portfolio and reputation on platforms like Upwork, creating a cold-start catch-22 that existing platforms do not resolve.",
+  "target_segment": "Early-career technical freelancers (data analysts, developers, automation specialists) trying to land their first paid clients on platforms like Upwork or Toptal.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "freelancing",
+    "cold-start",
+    "portfolio",
+    "upwork",
+    "reputation-building",
+    "data-analyst",
+    "technical-freelancer",
+    "client-acquisition"
+  ],
+  "notes": "Recurring theme (also appears in a second freelancing question about Upwork challenges). The buyer here is the freelancer themselves \u2014 they would pay for a service that credibly bridges the reputation gap (e.g., curated micro-project matching, portfolio-building SaaS, or a 'first client' guarantee service). Moderate signal; both questions are low-scored but describe a genuine structural problem with measurable cost (lost income).",
+  "status": "candidate"
+}

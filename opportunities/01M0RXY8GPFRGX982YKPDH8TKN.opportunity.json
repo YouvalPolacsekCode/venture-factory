@@ -1,0 +1,25 @@
+{
+  "id": "01M0RXY8GPFRGX982YKPDH8TKN",
+  "discovered_at": "2026-08-24T06:45:01+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49388579",
+    "snippet": "I would pay for Brave or Kagi for like $2-3 per month if one of them supported private payments (actually that's exactly what Brave costs). Paying should get you more privacy not less. I'm not paying for Kagi because it's expensive and also doesn't support private payments and Brave has better UI for me."
+  },
+  "problem_statement": "Privacy-conscious users want to pay for search or browser products anonymously (without linking payment to identity), but current paid search/browser products like Kagi do not support private/anonymous payment methods, creating a trust contradiction.",
+  "target_segment": "Privacy-focused individual consumers and professionals who pay for premium internet tools (search engines, browsers) and want anonymous billing.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "private-payments",
+    "anonymous-billing",
+    "privacy-tools",
+    "search-engine",
+    "browser",
+    "subscription",
+    "kagi",
+    "brave"
+  ],
+  "notes": "Explicit willingness-to-pay stated ('I would pay for... $2-3 per month'). Single signal but highly specific buyer intent. Product gap: no major privacy-focused search/browser currently supports anonymous payment. Solo operator angle: could be a payment proxy/anonymous subscription service for privacy SaaS.",
+  "status": "candidate"
+}

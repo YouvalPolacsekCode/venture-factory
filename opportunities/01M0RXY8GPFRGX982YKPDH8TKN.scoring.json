@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M0RXY8GPFRGX982YKPDH8TKN",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.7,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Acting as an anonymous payment proxy for third-party services (Kagi, Brave) almost certainly violates those services' terms of service, which prohibit account sharing or resale. It also creates serious AML/KYC legal exposure when deliberately obscuring the identity of payers from merchants. This is legally and operationally grey at best, and likely not viable."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The underlying desire \u2014 paying for privacy tools without linking one's identity \u2014 is real, but any solo-operator service that acts as a payment intermediary to obscure buyer identity from the merchant violates those merchants' ToS and triggers AML/KYC regulatory obligations that a solo operator cannot legally bear. Even if the idea were clean, the buyer is a diffuse global consumer segment paying $2\u20133/month, which requires B2C scale to be viable. The not_legitimate_or_grey penalty applies, effectively disqualifying this.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator. Building a payment proxy that anonymises subscribers from Kagi or Brave would violate those services' terms of service and potentially money-transmission laws. There is no compliant, buildable version of this micro-service.",
+  "notes": "Fails not_legitimate_or_grey gate (ToS violation + AML exposure). Also fails operational_autonomy (2), buildability_with_ai (3), and buyer_clarity (4) build gates. Drop.",
+  "scored_at": "2026-08-24T06:47:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

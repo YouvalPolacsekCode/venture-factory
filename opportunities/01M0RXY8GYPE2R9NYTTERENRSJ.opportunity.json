@@ -1,0 +1,25 @@
+{
+  "id": "01M0RXY8GYPE2R9NYTTERENRSJ",
+  "discovered_at": "2026-08-24T06:45:01+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49406926",
+    "snippet": "I just released a new tool that would create your Cornell notes on any given video on YouTube. I would like to get you some feedback, give me a try on the tool and get honest reviews for me."
+  },
+  "problem_statement": "Students and knowledge workers who learn from YouTube videos lack a fast way to convert video content into structured notes (e.g. Cornell format) for study and retention, requiring manual effort or switching between tools.",
+  "target_segment": "Students (university and professional certification) and self-directed learners who regularly use YouTube for educational content.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "youtube",
+    "note-taking",
+    "cornell-notes",
+    "ai-summarization",
+    "student-tools",
+    "edtech",
+    "video-to-notes",
+    "study-tools"
+  ],
+  "notes": "Founder post showing a live tool at pelicantools.app. Signal is early-stage (3 points, 3 comments) but shows active builder/market validation attempt. Buyer context is students \u2014 willingness to pay is moderate; edtech tools in this space (e.g. Notion AI, Otter.ai) charge $8-15/mo. Weak direct buyer signal but clear recurring pain.",
+  "status": "candidate"
+}

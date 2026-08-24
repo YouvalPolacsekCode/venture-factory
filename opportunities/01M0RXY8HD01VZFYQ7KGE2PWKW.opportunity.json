@@ -1,0 +1,25 @@
+{
+  "id": "01M0RXY8HD01VZFYQ7KGE2PWKW",
+  "discovered_at": "2026-08-24T06:45:01+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148862/indexed-landing-page-suddenly-stopped-ranking-for-its-target-keyword-homepage",
+    "snippet": "One of my landing pages was ranking normally for its main target keyword. Since August 18, the page has disappeared from the normal keyword results. The page is still indexed in Google Search Console. When I search the target keyword + my brand name, Google shows my homepage instead of the relevant landing page."
+  },
+  "problem_statement": "Small business owners and SEO practitioners struggle to diagnose and resolve sudden Google ranking drops where indexed pages are displaced by the homepage for target keywords, with Google Search Console providing insufficient diagnostic data to distinguish algorithm changes from technical issues.",
+  "target_segment": "Small business owners, indie web operators, and freelance SEO practitioners managing content or landing page SEO without a dedicated technical team.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "google-ranking",
+    "landing-page",
+    "search-console",
+    "keyword-cannibalization",
+    "technical-seo",
+    "indexing",
+    "serp-monitoring"
+  ],
+  "notes": "Recurrent class of problem (sudden ranking drops / page cannibalization) posted by site owner. Buyer context: people spend money on SEO tools (Ahrefs ~$99/mo, SEMrush ~$129/mo) precisely for this. Single signal, moderate strength. A monitoring/alert service that proactively detects and explains ranking displacement would fit the solo-operator model.",
+  "status": "candidate"
+}

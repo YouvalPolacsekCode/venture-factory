@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M0RXY8GYPE2R9NYTTERENRSJ",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 3,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Students and self-directed learners are individual consumers at low price points ($3\u20138/mo realistic); reaching break-even requires hundreds to thousands of paying users, which is beyond what a solo operator can drive without a significant acquisition budget or viral loop."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "Students who watch YouTube for learning encounter this problem frequently, but they are notoriously price-sensitive and rarely pay for note-taking tools when free alternatives (ChatGPT, Notion AI free tier, browser extensions) exist. The buyer is an individual consumer (not a business), willingness to pay is weak, and the space is already crowded with free-to-cheap competitors. The total falls well below the 5.5 validate threshold.",
+  "solution_plan": "This opportunity is not recommended for pursuit. While the factory could build a Claude-powered YouTube-to-Cornell-notes tool in a week (transcript extraction + Claude formatting prompt + a simple web page + Stripe), the student consumer market is too price-sensitive and crowded to generate meaningful revenue without large-scale paid acquisition. A solo operator cannot win this market economically.",
+  "notes": "Total 3.7 is below min_total_to_validate (5.5). buyer_clarity (3) and willingness_to_pay (4) are the key weaknesses. Drop.",
+  "scored_at": "2026-08-24T06:47:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

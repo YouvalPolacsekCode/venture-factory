@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0RXY8H5VC2QX25Q4HVB5F41",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "DevOps/security teams at software companies are real buyers with real budgets (Snyk, Anchore, Chainguard all demonstrate paid demand in this space), and the pain of insecure or operationally painful container signing on ephemeral CI runners is genuine and recurring. However, building a credible container signing solution requires deep integration with CI platforms, key-management infrastructure, and trust-chain tooling that is far beyond a Claude prompt + Stripe page \u2014 buildability_with_ai (4) and operational_autonomy (4) both fail. The total narrowly misses the 5.5 validate threshold and the build gates are far from met.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator. A legitimate container-signing service requires custom infrastructure (key storage, webhook integrations with GitHub Actions/GitLab CI, binary signing tooling) that cannot be assembled from Claude prompts and a landing page. This is a VC-backed DevSecOps product, not a micro-service.",
+  "notes": "Total 5.4 just below min_total_to_validate (5.5). Also fails buildability_with_ai (4 < 6) and operational_autonomy (4 < 7) build gates. Drop.",
+  "scored_at": "2026-08-24T06:47:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

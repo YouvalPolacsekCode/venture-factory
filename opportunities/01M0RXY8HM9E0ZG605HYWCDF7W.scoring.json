@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0RXY8HM9E0ZG605HYWCDF7W",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 4,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any credible 'first client' or portfolio-building service for freelancers requires human curation of project matches, quality review of deliverables, or trust-building interactions that cannot be fully automated \u2014 especially when the value proposition is 'get your first real paid client.'"
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Early-career freelancers seeking coaching or guidance generate ongoing support questions about their specific situation that require human judgement, not Claude boilerplate."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "Early-career technical freelancers face a genuine cold-start problem, but they are themselves the buyer (individuals, not companies), and willingness to pay for a portfolio/reputation-building service is very low \u2014 they are already cash-constrained and skeptical of services that promise client acquisition. Delivery requires real human curation (matching projects, vetting clients, vouching for quality), and the operational autonomy is poor. Total of 2.2 is well below any threshold.",
+  "solution_plan": "This opportunity is not recommended. While a Claude-powered portfolio-builder or micro-project matcher is technically constructible, the buyer (a broke early-career freelancer) has very low willingness to pay, and delivering genuine value requires human curation of project matches that cannot be automated. A solo operator would be doing consultative matchmaking work for low-fee customers \u2014 exactly the wrong model for this factory.",
+  "notes": "Total 2.2 well below min_total_to_validate (5.5). Fails willingness_to_pay (3 < 5), operational_autonomy (4 < 7), and buyer_clarity (4 < 6) build gates. Drop.",
+  "scored_at": "2026-08-24T06:47:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

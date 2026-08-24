@@ -1,0 +1,26 @@
+{
+  "id": "01M0RXY8H5VC2QX25Q4HVB5F41",
+  "discovered_at": "2026-08-24T06:45:01+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95540/alternative-to-docker-content-trust-and-cosign",
+    "snippet": "By default, docker security is a nightmare -- especially on ephemeral CI runners, where DCT is 100% security theater. We've been using DOCKER_CONTENT_TRUST=1 and rsync to manually pin the keys for the debian image layers we download with docker pull. This had the effect of disabling TOFU."
+  },
+  "problem_statement": "DevOps and security engineers running containerized workloads on ephemeral CI/CD infrastructure find Docker Content Trust and Cosign inadequate or operationally painful for supply-chain signing, and lack a practical alternative where developers hold their own private release keys.",
+  "target_segment": "DevOps engineers and platform/security teams at software companies using Docker + CI/CD pipelines (GitHub Actions, GitLab CI, etc.).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "docker-security",
+    "supply-chain",
+    "ci-cd",
+    "container-signing",
+    "devops",
+    "cosign",
+    "image-signing",
+    "devsecops",
+    "ephemeral-runners"
+  ],
+  "notes": "Business context: team managing CI security pipelines, describing an active workaround ('manually pin keys via rsync') implying real operational cost. Companies pay for tools like Snyk, Anchore, Chainguard \u2014 this is a paid-buyer segment. Pain is specific and technical. Moderate signal strength: single question but well-articulated recurring operational problem.",
+  "status": "candidate"
+}

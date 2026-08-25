@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0VG2980BQXGTPP6MHRMHTZ0",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer \u2014 a technical SEO manager or consultant at a content-heavy site or agency \u2014 is a real, identifiable person with budget for tools (Screaming Frog, Sitebulb, and Ahrefs all have paid subscribers in this exact audience). The crawl-vs-index diagnostic gap is a recurring professional pain, and buildability is plausible (Claude + GSC API + a simple dashboard). However, the total falls just below the 5.5 validate threshold, existing tools partially cover this space already, signal strength is weak (single forum post), and willingness to pay for yet another SEO diagnostic layer \u2014 on top of established incumbents \u2014 is unproven. The market is crowded enough that differentiation needs validation before any investment.",
+  "solution_plan": "The closest viable product would be a Claude-powered GSC log analyzer: the operator sets up a page where SEO managers paste their GSC data export or connect via API, Claude interprets crawl patterns and flags indexing anomalies in plain English, and a Stripe link charges a one-time or monthly fee. The factory could build the intake form, Claude prompt, and delivery email in roughly a week. However, before building, the operator should validate that SEO professionals will pay for this on top of their existing tool stack \u2014 a simple landing page with a waitlist email and outreach to SEO Slack communities (e.g. Traffic Think Tank, SEOFOMO audience) would confirm or kill this in days. Do not build until at least 10 email signups or 3 stated-intent responses are collected.",
+  "notes": "Total 5.4 is just below the 5.5 validate threshold. No penalties applied. If additional signals bring this above 5.5, the main build_gate risk is operational_autonomy (currently 6, right at the floor) \u2014 delivery automation needs to be verified before promotion to validate/build.",
+  "scored_at": "2026-08-25T06:42:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

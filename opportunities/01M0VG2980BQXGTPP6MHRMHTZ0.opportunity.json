@@ -1,0 +1,25 @@
+{
+  "id": "01M0VG2980BQXGTPP6MHRMHTZ0",
+  "discovered_at": "2026-08-25T06:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148871/how-does-google-determine-crawl-priority-for-newly-published-urls",
+    "snippet": "For a site with a clean technical setup, valid XML sitemaps, and a strong internal linking structure, what factors have the most influence on how quickly Google discovers and crawls a newly published URL? How significant are factors such as internal PageRank, URL depth, sitemap lastmod, historical crawl patterns, and external links? Is there a reliable way to distinguish slow crawl prioritization from a technical indexing issue using Google Search Console or server logs?"
+  },
+  "problem_statement": "Website operators and SEO professionals cannot reliably distinguish slow Google crawl prioritization from actual technical indexing failures, leading to wasted diagnostic time and delayed content performance \u2014 they need clearer tooling or signals to diagnose crawl vs. index gaps.",
+  "target_segment": "SEO managers and technical SEO consultants at content-heavy websites, e-commerce stores, and digital agencies",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "technical-seo",
+    "crawl-budget",
+    "google-search-console",
+    "indexing",
+    "content-operations",
+    "site-audit",
+    "agency-tools"
+  ],
+  "notes": "Operator is clearly business-oriented (XML sitemaps, internal PageRank, GSC). Pain is real but Google Search Console tooling gap is well-known; existing tools like Screaming Frog, Sitebulb, and IndexNow partially address this. Opportunity may lie in a specialized crawl-vs-index diagnostic layer on top of GSC log data. Needs more signals to justify building.",
+  "status": "candidate"
+}

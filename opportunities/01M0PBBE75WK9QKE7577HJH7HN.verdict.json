@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M0PBBE75WK9QKE7577HJH7HN",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "GPU Spot capacity scarcity is a real and recurring pain for ML engineers, and the source thread shows genuine operational frustration with multi-provider hunting. However, the evidence base is a single HN thread with no independent corroboration of willingness-to-pay for a monitoring tool specifically, the build path requires persistent polling infrastructure that exceeds factory tooling, and competitive solutions (SkyPilot, Vast.ai, existing cloud dashboards) are already addressing parts of this space. The pain does not meet the minimum 5 distinct pain quotes threshold and lacks a concrete willingness-to-pay signal for this specific product category.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49403759"
+  ],
+  "evaluated_at": "2026-08-25T06:41:26+03:00"
+}

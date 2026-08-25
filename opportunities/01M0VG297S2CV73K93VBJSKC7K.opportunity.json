@@ -1,0 +1,25 @@
+{
+  "id": "01M0VG297S2CV73K93VBJSKC7K",
+  "discovered_at": "2026-08-25T06:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439770/rate-limiting-on-public-rest-resource",
+    "snippet": "I have a @RestResource endpoint that is available for guest users on a Digital Experience Site. Should I worry about users making lots of requests and implement rate limiting? Are there any mechanisms in Salesforce/Apex that are already preventing this from happening? If not, are there any known patterns for how to go about implementing such a mechanism in Salesforce?"
+  },
+  "problem_statement": "Salesforce developers exposing public REST endpoints on Experience Cloud sites lack built-in rate limiting primitives in Apex, forcing them to hand-roll abuse-prevention logic or leave guest-facing APIs unprotected \u2014 a security and cost risk on a paid enterprise platform.",
+  "target_segment": "Salesforce developers and architects at companies running public-facing Digital Experience Sites with guest user API access",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "rate-limiting",
+    "api-security",
+    "experience-cloud",
+    "guest-user",
+    "rest-api",
+    "enterprise-security"
+  ],
+  "notes": "Single signal but enterprise context is strong \u2014 Salesforce orgs are expensive and abuse of guest APIs can blow through governor limits with real cost consequences. A managed AppExchange component or documented pattern service could sell. Needs more signals to validate breadth of pain.",
+  "status": "candidate"
+}

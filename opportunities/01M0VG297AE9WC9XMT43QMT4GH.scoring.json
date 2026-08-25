@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M0VG297AE9WC9XMT43QMT4GH",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "ETL/ODBC pipeline setup and migration almost always requires per-customer technical configuration, schema mapping, and onboarding that cannot be fully automated by Claude + a prompt."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise IT buyers at subsidiaries expect scoping calls, demos, and implementation support before purchasing data integration tooling."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Ongoing support for database connectivity, driver compatibility, and schema drift requires human technical judgment."
+    }
+  ],
+  "total": 2.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real corporate IT person with genuine pain and clear willingness to pay for ETL tooling \u2014 that part is solid. However, building a credible ODBC ETL product requires custom infrastructure, driver compatibility layers, and deep integration work that is far beyond what Claude + prompts + a Stripe link can deliver in a week or a month. Operational autonomy is critically low: every customer deployment requires hands-on technical configuration, making this a consulting engagement, not an automated micro-service.",
+  "solution_plan": "This cannot realistically be built and run as an autonomous micro-service by a solo non-technical operator. A functioning ODBC ETL product requires database driver engineering, schema introspection, incremental replication logic, and per-customer setup \u2014 none of which Claude can automate end-to-end. Attempting to sell this without that infrastructure would result in either overpromising to enterprise buyers or delivering a glorified consulting arrangement that consumes Youval's time on every deal. Drop this opportunity.",
+  "notes": "Fails buildability_with_ai (score 3, floor 6), operational_autonomy (score 3, floor 7). Even without penalties the weighted total is modest; with penalties it is effectively disqualified.",
+  "scored_at": "2026-08-25T06:42:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

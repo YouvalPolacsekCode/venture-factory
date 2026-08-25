@@ -1,0 +1,25 @@
+{
+  "id": "01M0VG297JVSGKEP8FFZB3BS47",
+  "discovered_at": "2026-08-25T06:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439775/salesforce-marketing-cloud-with-firebase-for-android-regular-push-notification",
+    "snippet": "MC messages with OpenDirect link are not showing up at all. Any help will be highly appreciated. I implemented FirebaseMessagingService to pass messages to MC and also pass new token to MC. Is OpenDirect link from MC push being handled by Firebase service and not passing it to the app? Do I need to remove FirebaseMessagingService altogether and let MC take care of it."
+  },
+  "problem_statement": "Mobile developers integrating Salesforce Marketing Cloud push notifications with Firebase on Android encounter silent failures when using OpenDirect links, with no clear debugging path due to the dual-SDK conflict \u2014 costing engineering hours and breaking paid campaign delivery.",
+  "target_segment": "Mobile engineers and marketing technologists at companies using Salesforce Marketing Cloud for push campaign delivery on Android",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "firebase",
+    "push-notifications",
+    "android",
+    "sdk-integration",
+    "mobile-marketing",
+    "campaign-delivery"
+  ],
+  "notes": "Single signal but strong business context: Salesforce MC is an expensive paid platform; broken push delivery has direct revenue impact for marketing teams. A focused integration guide, debugging tool, or managed SDK wrapper could command a premium. Weak on volume \u2014 needs corroboration from similar SFMC/Firebase threads.",
+  "status": "candidate"
+}

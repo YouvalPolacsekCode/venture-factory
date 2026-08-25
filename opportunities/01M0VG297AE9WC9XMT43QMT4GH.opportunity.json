@@ -1,0 +1,25 @@
+{
+  "id": "01M0VG297AE9WC9XMT43QMT4GH",
+  "discovered_at": "2026-08-25T06:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95538/etl-software-to-copy-odbc-database-and-consolidate-it",
+    "snippet": "We are a subsidy and copy via ODBC part of a big database from our parent company on our own servers to work with it. The old software we are using is at the end of its life-cycle. It was never the best piece of software and we built a lot of workarounds within and around it. Now I would like to set us up for the future. I am looking for a piece of software with which I can copy tables from a database into a new one and consolidate it."
+  },
+  "problem_statement": "Business subsidiaries running legacy ETL pipelines over ODBC face end-of-life software with accumulated workarounds and no clear modern replacement that handles ODBC sources, table-level replication, and consolidation without heavy engineering lift.",
+  "target_segment": "IT leads and data engineers at mid-size subsidiaries or franchise operations that sync data from a parent company database via ODBC",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "etl",
+    "odbc",
+    "database-replication",
+    "data-pipeline",
+    "legacy-migration",
+    "b2b-saas",
+    "data-integration",
+    "enterprise-data"
+  ],
+  "notes": "Buyer is a corporate IT person actively shopping for replacement software \u2014 classic paid-tool replacement motion. End-of-life incumbent + workaround debt = strong willingness to pay for a clean solution. Segment likely includes franchise chains, holding companies, and subsidiaries with partial database access from parent.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0VG297S2CV73K93VBJSKC7K",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A managed rate-limiting component for Salesforce Experience Cloud requires Apex code deployment, org-specific configuration, and AppExchange review \u2014 all of which require per-customer technical work."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling into Salesforce orgs typically involves demo calls and security review conversations with admins/architects before any purchase."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "The underlying pain is legitimate \u2014 guest-facing Apex REST APIs without rate limiting are a real security and cost risk on a paid enterprise platform \u2014 but the path to a solo-operated autonomous product is blocked at multiple points. An AppExchange component requires Salesforce's ISV program, security review, and Apex development; a documentation/pattern service faces stiff free competition (Salesforce Trailhead, Stack Exchange itself); and delivery in either form requires per-customer technical setup. Signal is a single forum post with no corroboration.",
+  "solution_plan": "This cannot realistically be built and run autonomously by a solo non-technical operator. Publishing an AppExchange component requires ISV certification and Apex expertise. A paid documentation product competes with free official Salesforce resources. Drop this opportunity unless substantial additional signals surface and a truly automatable delivery format is identified.",
+  "notes": "Fails operational_autonomy (score 5, floor 7) and buildability_with_ai (score 5, floor 6). Single signal with no corroboration.",
+  "scored_at": "2026-08-25T06:42:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

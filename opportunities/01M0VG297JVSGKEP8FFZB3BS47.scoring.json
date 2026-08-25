@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0VG297JVSGKEP8FFZB3BS47",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Debugging SDK integration failures in a specific customer's Android codebase is inherently per-customer manual work; a generic guide helps but cannot automate the diagnostic process."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Salesforce MC + Firebase integration issues are highly environment-specific; support queries will require human-judgment triage."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the business context (broken push delivery on a $$$-per-month Salesforce MC contract) creates genuine urgency, but the signal is a single forum thread \u2014 breadth is unvalidated. More critically, the actual value delivery (diagnosing a dual-SDK conflict in a specific Android codebase) is per-customer manual work that Claude cannot automate; a written guide would be free content, not a paid service. The buyer (mobile engineer) may not have purchase authority and the company count paying for this niche is probably very small.",
+  "solution_plan": "This cannot reliably be packaged as an autonomous micro-service. A static integration guide or PDF could be produced by Claude but would not command recurring revenue. A \"managed SDK debugging\" service would devolve into per-customer consulting. Drop this opportunity unless multiple additional signals emerge validating that dozens of teams hit this exact problem and have budget to pay for a specialized tool.",
+  "notes": "Fails operational_autonomy (score 5, floor 7). Signal strength is very weak (single forum post). Drop recommended.",
+  "scored_at": "2026-08-25T06:42:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

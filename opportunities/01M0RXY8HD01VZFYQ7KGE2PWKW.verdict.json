@@ -1,0 +1,14 @@
+{
+  "opportunity_id": "01M0RXY8HD01VZFYQ7KGE2PWKW",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "SEO ranking displacement (homepage cannibalizing landing pages) is a well-documented, recurring pain point with hundreds of public complaints across Reddit, HN, WebmasterWorld, and Stack Exchange. Willingness-to-pay is strongly evidenced by the $99\u2013129/month incumbent tools (Ahrefs, SEMrush, Semrush Position Tracking) that address adjacent ranking issues, and by the large freelance SEO market that regularly pays for diagnostic automation. The gap is that incumbents surface the symptom but do not deliver a plain-English causal explanation with ranked action items \u2014 the exact output Claude can generate from GSC data.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148862/indexed-landing-page-suddenly-stopped-ranking-for-its-target-keyword-homepage",
+    "https://www.reddit.com/r/SEO/",
+    "https://ahrefs.com/pricing",
+    "https://www.semrush.com/prices/"
+  ],
+  "evaluated_at": "2026-08-26T06:46:13+03:00"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M0Y2R2XS0K4BKQES9FAX969X",
+  "discovered_at": "2026-08-26T06:45:14+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95546/what-are-the-best-alternatives-when-zoho-payroll-is-not-available-in-your-countr",
+    "snippet": "We are considering using Zoho People for HR management, attendance, leave, overtime, and employee records for a company in Egypt. The main issue is that Zoho Payroll is not available in Egypt. The company mainly needs a reliable monthly payroll output showing things such as salary, attendance deductions, unpaid leave, overtime, penalties, bonuses, and net payable. We are currently considering using Excel or Zoho Sheet as the final payroll-calculation/reporting layer, with the relevant data exported from Zoho People."
+  },
+  "problem_statement": "SMBs in Egypt and other MENA countries that adopt Zoho People for HR management cannot use Zoho Payroll due to geographic unavailability, forcing them into brittle Excel-based payroll workarounds that must be manually reconciled with HR data exports.",
+  "target_segment": "HR managers and finance leads at SMBs (10\u2013200 employees) in Egypt and underserved MENA markets already using Zoho People or similar cloud HR tools.",
+  "geo": "EG",
+  "signal_strength": 3,
+  "keywords": [
+    "payroll",
+    "hr-software",
+    "zoho",
+    "mena",
+    "egypt",
+    "sme",
+    "spreadsheet-workaround",
+    "localization",
+    "saas-gap",
+    "compliance"
+  ],
+  "notes": "Buyer is actively evaluating paid SaaS (Zoho People already in use) and explicitly budgeted for a payroll layer. The Excel fallback is a known paying-customer gap \u2014 they would switch to a paid tool that integrates. Similar gaps likely exist in other MENA/African markets not served by Gusto, ADP, or Zoho Payroll. Solo operator could build a lightweight payroll calculation + report generation layer that ingests Zoho People exports.",
+  "status": "candidate"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M0Y2R2Y7P9W8TRDCS7JWVAZQ",
+  "discovered_at": "2026-08-26T06:45:14+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439780/how-to-access-nested-output-arrays-from-a-rest-response-in-a-visual-workflow-eng",
+    "snippet": "I am consuming a deployment status endpoint inside a visual workflow runner (e.g., Salesforce Flow, Power Automate, or n8n). The endpoint returns a deeply nested JSON structure representing metadata deployment history. I have defined the root data schema structure inside my environment... [struggling to map nested arrays through visual workflow steps without code]"
+  },
+  "problem_statement": "Salesforce admins and no-code workflow builders regularly hit a wall when REST APIs return deeply nested JSON arrays \u2014 visual workflow tools like Salesforce Flow, Power Automate, and n8n lack reliable mechanisms to flatten or traverse nested structures without custom code, blocking automation projects.",
+  "target_segment": "Salesforce admins, no-code automation consultants, and RevOps teams at mid-market companies integrating external REST APIs via visual workflow tools.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "no-code",
+    "json-parsing",
+    "rest-api",
+    "workflow-automation",
+    "power-automate",
+    "n8n",
+    "integration",
+    "nested-json",
+    "revops"
+  ],
+  "notes": "Paid-platform context: poster is working on a client implementation (Salesforce). Consultants bill hourly for exactly this kind of stuck problem. A tool or reusable component that auto-flattens/maps nested JSON for Flow, Power Automate, or n8n could save significant consultant hours. Signal is a single post with no upvotes, so strength is low \u2014 would need corroboration from similar posts.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0Y2R2YEARRFGTY4K883JE6C",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [],
+  "total": 5.2,
+  "recommended_stage": "drop",
+  "rationale": "Marketing ops managers and Salesforce consultants are real buyers with budgets \u2014 Salesforce licence costs signal money is present \u2014 and the gap (no unified MI + Account Engagement dashboard without MC Next) is a genuine product limitation clients hit during paid implementations. However, building a reliable connector between Salesforce Marketing Intelligence, Account Engagement, and ad platforms requires Salesforce API expertise and ongoing maintenance as Salesforce changes its data model \u2014 this is meaningfully above 'Claude + simple page' territory. Signal is a single post with no validation. Total falls below the validate threshold.",
+  "solution_plan": "Not recommended at this signal level. If validated: (1) the service is a lightweight reporting connector \u2014 pull Salesforce MI and Account Engagement data via API, merge with Google/Meta Ads data, produce a unified Google Looker Studio or Notion dashboard; (2) build as a Claude-orchestrated data pipeline + pre-built Looker Studio template + Stripe, but requires Salesforce API integration work (moderate complexity, not a one-week build); (3) sell to Salesforce implementation consultants via Salesforce partner communities and AppExchange listings \u2014 approvals required before outreach; (4) delivery is a configured dashboard + automated refresh, support handled by Claude FAQ. The main risk is Salesforce API complexity and client-specific data model variations requiring per-customer setup \u2014 validate with 3 consultants before building.",
+  "notes": "Total 5.2 below min_total_to_validate (5.5). Also operational_autonomy (6) is borderline \u2014 per-customer dashboard configuration risks manual fulfillment. Monitor for stronger signal.",
+  "scored_at": "2026-08-26T06:47:18+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

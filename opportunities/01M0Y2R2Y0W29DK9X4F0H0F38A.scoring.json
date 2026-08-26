@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M0Y2R2Y0W29DK9X4F0H0F38A",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Fine-tuning or training specialized models requires GPU infrastructure, dataset curation, evaluation loops, and iterative work \u2014 none of which Claude + this repo's standard tooling can execute autonomously."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 developers hit reproducible LLM failure modes \u2014 and they already pay for API access, giving a plausible willingness-to-pay signal. However, the proposed solution (specialized fine-tuned models) cannot be built or delivered with Claude + prompts + Stripe; it requires GPU training infrastructure, dataset labelling, and ongoing model evaluation that are far outside this factory's capabilities. Operational autonomy is near-zero: every new specialized model needs custom training work. The HN post itself is exploratory idea-gathering, not validated demand, and responsiveness signal is untested.",
+  "solution_plan": "Not recommended for build in this form. The problem (LLM failure modes) is real but the implied solution (fine-tuned models) is not buildable by a solo non-technical operator using Claude + simple tooling. A narrower reformulation \u2014 e.g., a 'prompt hardening' micro-service where developers submit their failing prompt + test cases and Claude returns a hardened version with structured output constraints \u2014 could be built with Claude + a form + Stripe. But that is a different, much more modest product. The current opportunity as stated requires ML infrastructure and should be dropped or significantly reframed before validation.",
+  "notes": "Failing build gates: buildability_with_ai (3, floor 6), operational_autonomy (3, floor 7). Total also below validate threshold after penalty.",
+  "scored_at": "2026-08-26T06:47:18+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

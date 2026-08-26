@@ -1,0 +1,25 @@
+{
+  "id": "01M0Y2R2Y0W29DK9X4F0H0F38A",
+  "discovered_at": "2026-08-26T06:45:14+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49443820",
+    "snippet": "Ask HN: What is one simple thing LLMs are insanely bad at? \u2014 I am looking for ideas on what to train a specialized model for! What is one simple thing you repeatedly ask ChatGPT, Claude, or another model to do that it still somehow messes up? (7 points, 10 comments, captured 2026-08-26)"
+  },
+  "problem_statement": "Developers and power users repeatedly encounter the same narrow failure modes in general-purpose LLMs (e.g. counting, formatting, structured extraction, domain-specific reasoning) and have no practical path to a cheap, reliable specialized model that fixes just that one thing.",
+  "target_segment": "Developers and technical founders who use LLM APIs in production and hit consistent, reproducible failure modes that degrade their product quality.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "llm",
+    "fine-tuning",
+    "specialized-model",
+    "ai-reliability",
+    "prompt-failure",
+    "developer-tools",
+    "model-training",
+    "ai-api"
+  ],
+  "notes": "Post is recent (2026-08-26) and gathering active responses. Buyer signal is moderate: developers using paid LLM APIs (OpenAI, Anthropic) are already spending money and seeking a cheaper or more reliable alternative for specific sub-tasks. The opportunity is a marketplace or service for narrow fine-tuned models, but the signal is still early-stage idea exploration rather than explicit willingness-to-pay evidence.",
+  "status": "candidate"
+}

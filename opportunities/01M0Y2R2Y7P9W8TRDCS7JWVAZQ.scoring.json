@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0Y2R2Y7P9W8TRDCS7JWVAZQ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is nameable \u2014 Salesforce admins and no-code consultants at mid-market companies \u2014 and they do pay for tools that save billable hours. The core service (paste a nested JSON schema, get a flattened mapping or auto-generated Flow/n8n steps) is buildable with Claude in a week. However, the signal is extremely thin: a single zero-upvote post with no corroborating evidence of demand breadth. Total sits just below the validate threshold of 5.5. Worth revisiting if two or more corroborating signals emerge from similar forums.",
+  "solution_plan": "Not yet recommended \u2014 signal too thin. If validated: (1) the micro-service is a Claude-powered JSON-to-workflow mapper \u2014 paste a nested REST API response, get a ready-to-import mapping for Salesforce Flow or n8n; (2) build as a simple web form + Claude API + Stripe ($19 one-time or $29/month), no coding by the operator; (3) sell via targeted posts in Salesforce Trailblazer Community, r/salesforce, and n8n forums \u2014 outreach only after operator approves; (4) delivery is instant (Claude generates the mapping), billing is Stripe, support is a Claude-powered FAQ bot \u2014 operator only approves outreach batches. Defensibility is low (any developer could replicate), so validate demand before building.",
+  "notes": "Total 5.3 is below min_total_to_validate (5.5). Recommend monitoring for corroborating signals before promoting to validate.",
+  "scored_at": "2026-08-26T06:47:18+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M0Y2R2YEARRFGTY4K883JE6C",
+  "discovered_at": "2026-08-26T06:45:14+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439777/marketing-inteligence-connect-ads-data-with-crm-data",
+    "snippet": "The client using Salesforce Marketing Intelligence (on implementation stage) and Account Engagement. Is it possible to connect and see within one dashboard marketing platforms data (Google Ads, Meta etc.) that is fetched with MI and Account Engagement/Salesforce Data? Found something similar but it's related to MC Next which client is not using."
+  },
+  "problem_statement": "Salesforce Marketing Intelligence customers on non-MC-Next plans cannot unify paid ad platform data (Google Ads, Meta) with Account Engagement (Pardot) CRM data in a single dashboard, leaving marketing teams with fragmented reporting across multiple tools.",
+  "target_segment": "Marketing ops managers and Salesforce implementation consultants at B2B companies running paid campaigns and using Account Engagement alongside Salesforce Marketing Intelligence.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-intelligence",
+    "account-engagement",
+    "pardot",
+    "google-ads",
+    "meta-ads",
+    "dashboard",
+    "marketing-analytics",
+    "crm",
+    "revops"
+  ],
+  "notes": "Active paid implementation project \u2014 client is spending on Salesforce licenses and a consultant. The gap is a Salesforce product limitation (MC Next required for unified semantic model). Opportunity: a connector or middleware dashboard that bridges MI + Account Engagement data without requiring MC Next upgrade. Buyers are consultants who resell or companies paying for Salesforce implementations.",
+  "status": "candidate"
+}

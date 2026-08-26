@@ -1,0 +1,25 @@
+{
+  "id": "01M0Y2R2YNFYARWSAX6STRTD08",
+  "discovered_at": "2026-08-26T06:45:14+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148877/google-postmaster-tools-domain-submission-not-working",
+    "snippet": "Google Postmaster Tools is not working and there doesn't seem to be any way to get help. The core issue is trying to add my sending host SEND.PATTR.LIVE. The proper DNS records exist. When I go to postmaster.google.com to set up the domain, it has been failing consistently for days, returning a toast that says 'Adding domain unsuccessful'. For good measure, I've also tried 'PATTR.LIVE' but neither work. More..."
+  },
+  "problem_statement": "Businesses setting up transactional or marketing email domains cannot complete Google Postmaster Tools domain verification due to silent, unexplained failures \u2014 with no support channel available \u2014 leaving them blind to Gmail deliverability metrics at a critical setup stage.",
+  "target_segment": "Email marketers, startup founders, and growth engineers at small businesses who rely on Google Postmaster Tools to monitor sender reputation and Gmail inbox placement.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "google-postmaster",
+    "dns",
+    "sender-reputation",
+    "email-infrastructure",
+    "saas-tooling",
+    "smtp",
+    "inbox-placement"
+  ],
+  "notes": "Single post, zero upvotes, but the pain is operational and time-sensitive (days of failure before seeking help). Businesses that depend on transactional email already pay for ESP infrastructure (SendGrid, Postmark, etc.) and would pay for a monitoring/diagnostic service that works around Postmaster gaps. Broader opportunity: an independent email deliverability health checker that doesn't rely solely on Google's tooling.",
+  "status": "candidate"
+}

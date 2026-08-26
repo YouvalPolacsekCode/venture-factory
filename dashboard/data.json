@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-08-25T03:42:21+00:00",
-    "idt": "2026-08-25T06:42:21+03:00"
+    "utc": "2026-08-26T03:47:35+00:00",
+    "idt": "2026-08-26T06:47:35+03:00"
   },
   "funnel": {
-    "candidates": 255,
-    "scored": 255,
-    "validated": 27,
+    "candidates": 260,
+    "scored": 260,
+    "validated": 28,
     "build_decisions": {
-      "defer_1_week": 24,
+      "defer_1_week": 25,
       "kill": 3
     },
     "build_now": 0,
@@ -651,7 +651,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148862/indexed-landing-page-suddenly-stopped-ranking-for-its-target-keyword-homepage",
       "discovered_at": "2026-08-24T06:45:01+03:00"
@@ -747,14 +747,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2097,
-    "last_7_days_usd": 1.6209,
-    "all_time_usd": 18.9262,
+    "today_usd": 0.388,
+    "last_7_days_usd": 1.807,
+    "all_time_usd": 19.3142,
     "by_day": [
-      {
-        "date": "2026-08-19",
-        "usd": 0.2019
-      },
       {
         "date": "2026-08-20",
         "usd": 0.2158
@@ -778,67 +774,36 @@
       {
         "date": "2026-08-25",
         "usd": 0.2097
+      },
+      {
+        "date": "2026-08-26",
+        "usd": 0.388
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6024
+        "usd": 0.6325
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4515
+        "usd": 0.4364
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3811
+        "usd": 0.4024
       },
       {
         "agent": "build_decisions",
-        "usd": 0.1528
+        "usd": 0.3022
       },
       {
         "agent": "daily_summary",
-        "usd": 0.033
+        "usd": 0.0334
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-08-19",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-20",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-08-26",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-08-25.md",
-    "date": "2026-08-25",
-    "text": "# Daily Summary — 2026-08-25 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 255 |\n| Opportunities validated past threshold | 61 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stages. All discovery-phase work flows through the opportunity pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for new pain signals across monitored channels.\n2. `pain_validation` runs targeted validation probes on today's 61 qualified opportunities.\n3. `opportunity_scoring` re-ranks the candidate pool as new signals arrive.\n4. `build_decisions` evaluates top-ranked opportunities for experiment launch.\n5. `cost_gain` computes cumulative metrics for weekly review.\n\n## Operator action items\n\nNone — process the approval queue and move on. The factory is in discovery mode with healthy signal flow (255 → 61 qualification rate = 24%). Monitor tomorrow's validation outcomes and watch for patterns that suggest a cohort ready for experiment launch.",
+    "file": "reports/daily/2026-08-26.md",
+    "date": "2026-08-26",
+    "text": "# Daily Summary — 2026-08-26 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 260 |\n| Opportunities validated past threshold | 62 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently running. Factory is in discovery phase, surfacing and validating opportunities ahead of experiment launch.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues monitoring for new pain signals across platforms.\n2. `pain_validation` validates top 10–15 candidates from the 62 validated opportunities.\n3. `opportunity_scoring` scores incoming leads as they arrive.\n4. `build_decisions` evaluates readiness of validated opportunities for experiment launch.\n5. `cost_gain` refreshes cost/gain projections on the validation cohort.\n\n## Operator action items\n\n1. **Review the 62 validated opportunities** — decide which 3–5 are strongest candidates for the next experiment cycle. Output list to `reviews/opportunity_prioritization_2026-08-26.json`.\n2. **Confirm discovery focus** — no outreach, leads, or replies yet; factory is accumulating signal before launch. Confirm this posture is correct for the week.",
     "truncated": false
   },
   "analytics": null

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M0Y2R2XS0K4BKQES9FAX969X",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 6
+  },
+  "weighted_total": 6.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Payroll calculation for MENA markets requires handling local tax rules, labour law compliance (Egypt social insurance, overtime calculation rules), and likely per-customer configuration of salary structures \u2014 non-trivial manual setup per client that cannot be fully automated without building a compliant rules engine."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Payroll processing in Egypt touches labour law, social insurance contributions, and tax withholding \u2014 regulated financial/employment domain. Any errors expose the operator to liability and clients to compliance risk."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 HR/finance leads at Egyptian SMBs already paying for Zoho People \u2014 and the pain of manual Excel reconciliation is genuine and recurring. However, Egyptian payroll compliance (social insurance, tax brackets, overtime rules) makes this impossible to deliver reliably without per-customer manual configuration and ongoing regulatory maintenance, collapsing operational autonomy to ~5. The double penalty for regulated-industry risk and manual fulfillment brings the total below the validate threshold. This is the wrong problem for a solo non-technical operator running an autonomous AI factory.",
+  "solution_plan": "Not recommended for build. The core issue is that payroll compliance in Egypt requires a continuously updated rules engine covering local tax law, social insurance, and labour regulations \u2014 this cannot be safely approximated by Claude prompts alone. A solo operator would be liable for any payroll errors clients rely on for staff payments. If pursued, the minimum viable path would be: (1) build a Claude-powered report formatter that ingests Zoho People CSV exports and produces a payroll summary sheet; (2) sell it as a formatting tool (NOT a compliance tool) to Egyptian SMB admins via LinkedIn or Zoho user communities; (3) price at $29\u201349/month on Stripe; (4) be explicit in marketing that the operator is not a licensed payroll provider. Even then, per-customer salary structure setup is manual work that undermines autonomy. Drop unless a local compliance partner can own the regulatory layer.",
+  "notes": "Failing build gates: operational_autonomy (5, floor 7) and willingness_to_pay meets floor but regulated_industry + requires_human_fulfillment penalties reduce total below validate threshold.",
+  "scored_at": "2026-08-26T06:47:18+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

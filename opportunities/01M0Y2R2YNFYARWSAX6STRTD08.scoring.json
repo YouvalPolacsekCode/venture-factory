@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M0Y2R2YNFYARWSAX6STRTD08",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [],
+  "total": 5.2,
+  "recommended_stage": "drop",
+  "rationale": "Email deliverability monitoring is a space with existing paid tools (MXToolbox, GlockApps, Postmark's inbox checker), confirming some willingness to pay, but the buyer is vague \u2014 'startup founders and growth engineers' covers too wide a range and lacks a specific ICP with a clear budget line. The specific pain (Google Postmaster Tools verification failure) is operational and time-sensitive when it occurs, but infrequent per user \u2014 a one-time DNS setup problem, not a recurring daily need. Buildability and autonomy are strong (DNS/email health checks can be fully automated via API), but thin signal and weak buyer clarity keep this below the validate threshold.",
+  "solution_plan": "Not recommended at current signal strength. If corroborated: (1) the micro-service is an independent email deliverability health dashboard \u2014 run DNS validation, DMARC/SPF/DKIM checks, blacklist lookups, inbox placement tests, and sender reputation scoring without relying on Google Postmaster Tools; (2) build as a Claude-powered diagnostic engine + a simple web form + automated report email + Stripe ($19/month), shippable in under a week; (3) sell to email infrastructure buyers via communities like r/emailmarketing, Product Hunt, and cold outreach to founders using ESPs \u2014 operator approves each outreach batch; (4) fully automated: user enters domain, gets a report, receives weekly re-checks, billing runs via Stripe \u2014 operator only approves outreach and monitors anomalies. The blocker is differentiating from MXToolbox and GlockApps, which are already free or cheap. Validate with 10 cold outreaches before building.",
+  "notes": "Total 5.2 below min_total_to_validate (5.5). buyer_clarity (5) is borderline weak \u2014 needs a sharper ICP definition. Pain_frequency (4) is the other drag: Postmaster setup failure is episodic, not a recurring daily pain that justifies a subscription.",
+  "scored_at": "2026-08-26T06:47:18+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

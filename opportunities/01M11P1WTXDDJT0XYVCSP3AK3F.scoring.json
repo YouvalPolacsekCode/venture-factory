@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M11P1WTXDDJT0XYVCSP3AK3F",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 0,
+      "reason": "No TOS or legitimacy issue \u2014 building a GitHub App to score PRs is fully within GitHub's API terms."
+    }
+  ],
+  "total": 5.3,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and loudly expressed \u2014 maintainers of commercially-backed OSS projects waste hours weekly on AI-slop PRs \u2014 but the buyer identity is murky: individual open-source maintainers operate under a strong 'tooling should be free' cultural norm, and the real paying buyers (GitHub/GitLab the platforms, or corporate OSS teams) are neither clearly reachable nor proven to have a budget line for this. Willingness to pay sits at 4 because there are no established paid substitutes and the most natural buyer (the platform itself) would likely build this internally. Total of 5.3 falls below the 5.5 validate threshold, so the stage is drop.",
+  "solution_plan": "The micro-service would be a GitHub App: when a new PR is opened, Claude analyses the diff and commit message for AI-slop signals (generic variable names, boilerplate comments, suspiciously uniform style, no issue linkage) and posts an automated label or review comment. A solo operator could register a GitHub App, wire it to a Claude prompt via a webhook endpoint (deployable on a free-tier serverless host), and charge via a Stripe subscription tied to repo count. The build is plausible in a week. The blocking problem is the commercial model: individual maintainers won't pay, GitHub would block or clone it, and reaching corporate OSS teams at the budget-holder level requires a sales motion this factory can't run. Validate only if you can get three corporate OSS teams to commit to paying before building.",
+  "notes": "Total 5.3 is below min_total_to_validate (5.5). willingness_to_pay (4) also fails the build_gate floor of 5. Primary risk is absence of a paying buyer \u2014 the segment with the pain (individual maintainers) won't pay; the segment that might pay (platform/corporate) has unclear reachability and unproven demand.",
+  "scored_at": "2026-08-27T16:21:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

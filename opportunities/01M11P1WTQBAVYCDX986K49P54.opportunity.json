@@ -1,0 +1,27 @@
+{
+  "id": "01M11P1WTQBAVYCDX986K49P54",
+  "discovered_at": "2026-08-27T16:20:22+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439781/aggregate-only-metrics-without-tracking-pixel-is-it-achievable",
+    "snippet": "We run Marketing Cloud (Email Studio) for several EU clients. Following recent guidance from the French and Italian supervisory authorities on the use of tracking pixels in commercial email, some of these clients' legal teams would like to keep data regarding those who will not have tracking pixel consent still part of the aggregated data, so their campaign metrics are not 'falsified'. The request that keeps coming back from the business side is essentially: 'Can we keep aggregate open/click rates without individual-level tracking for non-consenting recipients?'"
+  },
+  "problem_statement": "EU marketing agencies running Salesforce Marketing Cloud cannot produce GDPR-compliant aggregate email campaign metrics (open/click rates) without individual tracking pixels, causing campaign reporting to be 'falsified' and creating legal exposure for clients under French and Italian DPA guidance.",
+  "target_segment": "Email marketing agencies and in-house CRM teams serving EU clients on Salesforce Marketing Cloud or similar ESPs, 5\u2013200 employees.",
+  "geo": "EU",
+  "signal_strength": 3,
+  "keywords": [
+    "gdpr",
+    "email-marketing",
+    "tracking-pixel",
+    "privacy-compliance",
+    "marketing-cloud",
+    "aggregate-analytics",
+    "email-deliverability",
+    "eu-privacy",
+    "consent-management",
+    "salesforce"
+  ],
+  "notes": "Buyer is clear: agencies already paying for Salesforce Marketing Cloud (enterprise spend) facing a legal mandate from supervisory authorities. Multiple EU clients mentioned, indicating recurrence across accounts. The gap is a privacy-safe analytics layer that aggregates metrics without per-recipient pixel fires. Competitors like Mailchimp, HubSpot also lack this. Willingness to pay implied by the legal risk of non-compliance. Similar signals have appeared around Apple MPP but this is a distinct regulatory angle.",
+  "status": "candidate"
+}

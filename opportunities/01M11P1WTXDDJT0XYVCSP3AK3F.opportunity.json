@@ -1,0 +1,27 @@
+{
+  "id": "01M11P1WTXDDJT0XYVCSP3AK3F",
+  "discovered_at": "2026-08-27T16:20:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://lobste.rs/s/rzvdqo",
+    "snippet": "Please stop flooding our projects with AI slop to furnish your CV. OSS maintainers are spending significant uncompensated time reviewing and rejecting low-quality AI-generated pull requests submitted by people trying to pad their GitHub contribution history."
+  },
+  "problem_statement": "Open source project maintainers are overwhelmed by a surge of AI-generated low-quality pull requests, wasting hours of review time per week and degrading contributor community health \u2014 with no automated tooling to detect or filter AI-slop contributions before they enter the review queue.",
+  "target_segment": "Maintainers of mid-to-large open source projects, especially those backed by companies or foundations with paid engineering staff reviewing contributions.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-generated-code",
+    "open-source",
+    "pull-request-review",
+    "developer-tools",
+    "github",
+    "contribution-quality",
+    "maintainer-tools",
+    "vibecoding",
+    "code-review-automation",
+    "ai-detection"
+  ],
+  "notes": "Pain is real and recent (2026, score 8 on Lobsters). Time waste is the core cost \u2014 maintainers describe this as an ongoing burden. Paying buyer would be companies sponsoring OSS projects or platform hosts (GitHub, GitLab) rather than individual maintainers. Solo operator could build a GitHub App that scores PRs for AI-slop likelihood and auto-labels/flags them before human review. Buyer intent is moderate \u2014 commercial OSS teams are the strongest prospect. Signal strength kept at 2 because it's a single source and the audience partially overlaps with 'should be free' sentiment.",
+  "status": "candidate"
+}

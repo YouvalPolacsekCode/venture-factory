@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M11P1WTQBAVYCDX986K49P54",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "GDPR/DPA compliance tooling sits squarely in regulated EU data-protection space; any output the service produces could be cited in a legal or supervisory context, raising liability and compliance overhead for the operator."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a privacy-safe analytics layer that correctly integrates with Salesforce Marketing Cloud, handles EU consent strings, and produces legally defensible aggregate reports requires significant per-client configuration and ongoing technical validation \u2014 not automatable by Claude alone."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Clients are legal/compliance-facing; any ambiguity in the output will trigger support escalations requiring human judgement."
+    }
+  ],
+  "total": 2.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 EU agencies on Salesforce Marketing Cloud with active legal pressure from French and Italian DPAs \u2014 and they genuinely have budget. However, the solution requires building a technically complex, legally defensible privacy-analytics middleware layer that integrates with a proprietary enterprise ESP (Salesforce Marketing Cloud has a closed, credentialed API ecosystem), which is well beyond what Claude + a simple page + Stripe can deliver without deep per-client integration work. Both the build and the ongoing delivery require human involvement per customer, and the regulated-industry penalty reflects the legal exposure of producing compliance-adjacent output for enterprise clients. This is a consulting engagement or a funded SaaS, not a solo AI-factory micro-service.",
+  "solution_plan": "This cannot realistically be built and maintained as a solo non-technical operator micro-service. The core deliverable \u2014 a GDPR-compliant aggregate analytics layer sitting between Salesforce Marketing Cloud and a reporting dashboard \u2014 requires an accredited ESP integration, EU data-residency decisions, and per-client legal review of what 'aggregate' means under each client's DPA guidance. There is no version of this that Claude + a landing page + Stripe can ship and run hands-off. A realistic path would be a productised consultancy (human-delivered) or a VC-backed SaaS with compliance counsel \u2014 both out of scope for this factory.",
+  "notes": "Fails operational_autonomy_min (scored 4, floor is 7) and buildability_with_ai_min (scored 4, floor is 6). Even without penalties the weighted total (5.6) barely clears validate threshold, and penalties push total to 2.1. Drop.",
+  "scored_at": "2026-08-27T16:21:15+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

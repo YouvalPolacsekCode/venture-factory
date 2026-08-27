@@ -1,0 +1,27 @@
+{
+  "id": "01M11P1WV1J5A0EAV9CX23B6AH",
+  "discovered_at": "2026-08-27T16:20:22+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148876/how-can-i-get-my-domain-into-google-postmaster-tools",
+    "snippet": "I want to use Google Postmaster Tools to reduce emails from my domain going to spam. The primary domain is [redacted]. The sending domain is SEND.[redacted]. The problem I'm experiencing seems to be that Google Postmaster Tools is not working and there doesn't seem to be any way to get help. The core issue is trying to add my sending host. The proper DNS records exist. When I go to postmaster.google.com to set up the domain, it has been failing consistently for days, returning a [error]."
+  },
+  "problem_statement": "Small business operators and startup founders running transactional or marketing email on custom sending subdomains cannot onboard to Google Postmaster Tools due to persistent verification failures, leaving them blind to deliverability reputation and causing revenue-impacting email delivery problems with no support channel.",
+  "target_segment": "SaaS founders, indie operators, and small business email senders using custom sending domains for transactional or marketing email, typically 1\u201320 person teams.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "google-postmaster-tools",
+    "dns",
+    "spam-reputation",
+    "transactional-email",
+    "sender-reputation",
+    "email-infrastructure",
+    "saas-ops",
+    "domain-verification",
+    "email-monitoring"
+  ],
+  "notes": "Operator appears to be running a product (sending domain for a live service). Email deliverability directly affects revenue \u2014 failed email = failed transactions. Google Postmaster Tools is free but broken/unsupported, creating an opening for a paid deliverability monitoring and diagnostics service. Existing players (MXToolbox, GlockApps, Postmark's analytics) serve this space but onboarding friction and GPT failure create a wedge. Buyer willingness-to-pay is high when deliverability affects sales. Signal strength kept at 2 \u2014 single source, low engagement, but the underlying problem is well-documented across many similar posts in the broader ecosystem.",
+  "status": "candidate"
+}

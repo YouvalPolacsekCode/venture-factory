@@ -1,0 +1,24 @@
+{
+  "id": "01M14D5A61CAE01GQEMXN2G7WS",
+  "discovered_at": "2026-08-28T17:42:40+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148877/how-can-i-get-my-domain-into-google-postmaster-tools",
+    "snippet": "I want to use Google Postmaster Tools to reduce emails from my domain going to spam. The primary domain is [redacted]. The sending domain is [redacted]. The problem I'm experiencing seems to be that Google Postmaster Tools is not working and there doesn't seem to be any way to get help. The core issue is trying to add my sending host. The proper DNS records exist. When I go to postmaster.google.com to set up the domain, it has been failing consistently for days, returning a [error]."
+  },
+  "problem_statement": "Business operators running transactional or marketing email cannot get Google Postmaster Tools to accept their sending subdomain, leaving them with no deliverability visibility and emails landing in spam \u2014 a direct revenue impact.",
+  "target_segment": "Founders and operators of small SaaS products or online businesses managing their own email sending infrastructure.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "google-postmaster-tools",
+    "spam",
+    "dns",
+    "transactional-email",
+    "sender-reputation",
+    "saas"
+  ],
+  "notes": "Business operator context is clear \u2014 a live product domain trying to protect deliverability. Email going to spam = lost revenue. Market already has paid players (Postmark, SendGrid, MXroute) but there is a gap in affordable Postmaster Tools setup assistance / monitoring for solo operators. Single post; signal is moderate.",
+  "status": "candidate"
+}

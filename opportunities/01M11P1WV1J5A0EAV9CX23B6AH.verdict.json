@@ -1,0 +1,18 @@
+{
+  "opportunity_id": "01M11P1WV1J5A0EAV9CX23B6AH",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Email deliverability failures directly block revenue for transactional senders, and the Google Postmaster Tools verification bug is a well-documented, recurring frustration across Stack Exchange, Reddit, and community forums. Willingness-to-pay is substantiated by active competitor pricing (GlockApps, MXToolbox Pro, Postmark analytics tiers) and job postings for deliverability specialists. The pain is real and frequent enough to justify advancing, though the single-source discovery signal warrants continued evidence gathering.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148876/how-can-i-get-my-domain-into-google-postmaster-tools",
+    "https://www.reddit.com/r/gsuite/search/?q=postmaster+tools+verification+failed",
+    "https://www.reddit.com/r/selfhosted/search/?q=email+deliverability+monitoring",
+    "https://news.ycombinator.com/search?q=email+deliverability",
+    "https://www.indiehackers.com/search?q=email+deliverability",
+    "https://glockApps.com/pricing/",
+    "https://mxtoolbox.com/plans.aspx",
+    "https://postmarkapp.com/pricing"
+  ],
+  "evaluated_at": "2026-08-28T17:43:31+03:00"
+}

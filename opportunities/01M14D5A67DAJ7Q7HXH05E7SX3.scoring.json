@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M14D5A67DAJ7Q7HXH05E7SX3",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 3,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Migration audits and framework compatibility work require per-customer human technical judgement \u2014 Claude can assist but cannot deliver a complete Electron-to-Tauri (or Tauri-to-Electron) migration or compatibility audit without substantial per-engagement human involvement."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Technical consulting or migration scoping for engineering teams nearly always requires discovery calls or demos to understand the specific codebase and architecture before scoping work."
+    }
+  ],
+  "total": 1.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is vague \u2014 'engineering teams at startups' is a category, not a specific role with a budget line and a reason to buy now. The pain is real but episodic (a migration happens once, not weekly), willingness to pay for tooling versus consulting is unclear, and the signal is extremely thin (a single 4-point HN comment). Critically, any viable offering in this space \u2014 migration tooling, compatibility shims, or audit services \u2014 requires per-customer technical work and likely scoping calls, which the factory cannot run autonomously. The combination of very low total score and failing autonomy gates makes this a clear drop.",
+  "solution_plan": "Not recommended for this factory. The problem is too episodic (teams migrate frameworks rarely), the buyer is not clearly identifiable at scale, and any useful solution requires per-customer technical judgement that cannot be automated by Claude alone. A solo non-technical operator could not realistically build, sell, or maintain a Tauri/Electron migration service without deep Rust and web-app expertise and per-client consulting work. Drop and monitor \u2014 if a pattern of demand emerges across many more signals, revisit with a tighter ICP.",
+  "notes": "Fails operational_autonomy (3 < 7), buildability_with_ai (4 < 6), buyer_clarity (5 < 6), and willingness_to_pay (4 < 5) build gates. Signal is too thin and the problem is inherently consulting-shaped. Drop.",
+  "scored_at": "2026-08-28T17:44:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

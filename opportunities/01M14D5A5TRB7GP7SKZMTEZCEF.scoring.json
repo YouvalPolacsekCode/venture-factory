@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M14D5A5TRB7GP7SKZMTEZCEF",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "Salesforce developers at SMB-to-enterprise shops are the buyer \u2014 a specific named role with real budget authority and a willingness to pay for tooling (Salesforce ecosystem has a strong AppExchange/paid-tool culture). The pain is real and recurrent: LWC metadata gaps block daily VS Code workflows and version-diff audits. However, operational_autonomy scores only 6 because the solution likely requires a VS Code extension or CLI integration \u2014 delivery is downloadable/automated, but ongoing compatibility maintenance against Salesforce API changes will require periodic human intervention beyond simple approval gates. This, combined with no responsiveness signal yet, keeps it at validate.",
+  "solution_plan": "The micro-service is a hosted LWC metadata exporter: a lightweight web service (or VS Code extension backend) that uses Salesforce's Tooling API and Metadata API to pull LWC source files into a local repo-friendly structure. The factory builds this as a Claude-assisted code-generation pipeline: a set of API call templates, a simple landing page explaining the tool, a Stripe subscription link ($29\u201349/mo), and a short intake form asking for the org's connected-app credentials. Youval approves each outreach batch; the factory handles the rest. Sell to Salesforce developer communities: Trailblazer Community forums, the Salesforce Developers Slack, and LinkedIn searches for 'Salesforce LWC developer'. Delivery is fully automated \u2014 the service runs on a schedule, pushes metadata to a user-configured GitHub repo, and Claude handles support queries. Youval's only recurring touch is approving outreach sends and monitoring for Salesforce API deprecation notices that need a config update (a few times a year). Realistic caveat: Salesforce API auth and org permissions add meaningful integration complexity \u2014 the factory can scaffold it but Youval should expect a few iteration cycles before it's production-stable.",
+  "notes": "build_gate marginal: operational_autonomy=6 is below the 7 floor. The VS Code/Salesforce API integration complexity means ongoing compatibility maintenance cannot be fully automated. Validate first with a waitlist or early-access offer to confirm willingness to pay before committing to build.",
+  "scored_at": "2026-08-28T17:44:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

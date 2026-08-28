@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01M11P1WV1J5A0EAV9CX23B6AH",
+  "decided_at": "2026-08-28T17:44:34+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_to_build": {
+      "total": 6.3,
+      "min": 6.5,
+      "pass": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "pass": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.3 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass their per-dimension floors, but the weighted total of 6.3 falls below the 6.5 min_total_to_build threshold, and recommended_stage is 'validate' (not 'build' or 'scale'). The scoring agent explicitly capped the stage because responsiveness_signal is untested (scored 2). Additionally, the cost_to_gain_ratio of 3.299 far exceeds the kill threshold of 0.6, signaling that even at build the unit economics are unfavorable without validated demand. The right next step is a 20\u201330 contact outreach probe to test reply rates; if responsiveness_signal rises to 5+ and the total lifts above 6.5, this becomes a legitimate build candidate next week.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "cold email to SaaS founders on Indie Hackers / recent Show HN posts who mention transactional email issues"
+}

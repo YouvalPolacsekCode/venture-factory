@@ -1,0 +1,24 @@
+{
+  "id": "01M14D5A5TRB7GP7SKZMTEZCEF",
+  "discovered_at": "2026-08-28T17:42:40+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439786/salesforce-will-not-download-metadata-for-lightning-components",
+    "snippet": "Salesforce will not download metadata for lightning components. The most obvious use-case is to search the metadata in Visual Studio code. Also, it may allow version comparisons, if you keep histories locally. Is there anyone with a known workaround? Does anyone know of a roadmap for Salesforce to fix this?"
+  },
+  "problem_statement": "Salesforce developers cannot download metadata for Lightning Web Components, blocking local code search in VS Code and preventing version-diff workflows that teams rely on for audit and change management.",
+  "target_segment": "Salesforce developers and admins at SMB-to-enterprise orgs using Lightning Web Components and VS Code tooling.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "lwc",
+    "metadata",
+    "developer-tooling",
+    "vs-code",
+    "version-control",
+    "lightning-web-components"
+  ],
+  "notes": "Work context is explicit (VS Code dev environment, version comparison for team workflows). Single post but represents a class of blocker that Salesforce ISVs and consulting shops encounter regularly; tooling gaps in Salesforce ecosystem have historically supported paid AppExchange products and third-party dev tools.",
+  "status": "candidate"
+}

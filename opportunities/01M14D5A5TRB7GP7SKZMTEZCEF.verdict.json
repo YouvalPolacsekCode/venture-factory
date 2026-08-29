@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M14D5A5TRB7GP7SKZMTEZCEF",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real and recurrent for Salesforce LWC developers \u2014 metadata download gaps genuinely block VS Code search and version-diff workflows \u2014 but the evidence base is thin: a single Stack Exchange post with limited engagement, no community upvotes, comments, or corroborating threads surfaced. The willingness-to-pay signal is inferred from ecosystem norms (AppExchange culture) rather than documented, and no competitor pricing or paid-workaround evidence was found. With only one source URL and no quotes meeting the 5-distinct-pain-signals threshold, the verdict cannot reach 'pass'.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439786/salesforce-will-not-download-metadata-for-lightning-components"
+  ],
+  "evaluated_at": "2026-08-29T12:34:48+03:00"
+}

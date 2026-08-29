@@ -1,0 +1,24 @@
+{
+  "id": "01M16DWD2KCJDGBKCDXXS9Z66Y",
+  "discovered_at": "2026-08-29T12:33:45+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://github.com/ollama/ollama/issues/18122",
+    "snippet": "Ollama on Windows already downloads updates automatically in the background, but installing them still requires the user to manually click 'Restart to update' in the tray menu. I would like this final step to also happen automatically, with the restart deferred while a model is currently loaded."
+  },
+  "problem_statement": "Local AI inference tools on Windows require manual intervention to complete updates, interrupting workflows and leaving non-technical users on stale, potentially less secure versions.",
+  "target_segment": "Windows-based knowledge workers and small business users running Ollama or similar local AI tools without dedicated IT support",
+  "geo": "GLOBAL",
+  "signal_strength": 1,
+  "keywords": [
+    "ollama",
+    "local-ai",
+    "windows",
+    "auto-update",
+    "deployment",
+    "managed-ai",
+    "devops"
+  ],
+  "notes": "Single feature request; weak standalone signal. Combined with the concurrency issue above, points to a broader gap: managed local LLM deployment tooling for non-DevOps users. Low buyer signal on its own.",
+  "status": "candidate"
+}

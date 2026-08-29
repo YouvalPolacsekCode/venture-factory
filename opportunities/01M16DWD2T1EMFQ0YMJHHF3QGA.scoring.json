@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M16DWD2T1EMFQ0YMJHHF3QGA",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [],
+  "total": 6.2,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, named professional role \u2014 Salesforce developers and ISV partners at agencies and SaaS companies \u2014 who already have a budget for tooling and whose time is billed at $100\u2013200/hr, meaning a single debugging session costs more than a year of a $49/mo tool subscription. The pain (silent deploy success with runtime schema failures) is severe, reproducible, and costs real developer hours. The build is plausible: a Claude-powered CLI/webhook that runs post-deploy smoke tests against the runtime schema, detects mismatches, and surfaces a plain-language diagnosis \u2014 all doable with Claude + a simple form/Stripe + webhook integration. Operational autonomy is solid (run on demand, report async), but the responsiveness signal is completely untested (one StackExchange post), which keeps it at validate. Build gate for willingness_to_pay is marginally met (Salesforce devs do pay for tooling like Gearset, Copado, etc.); operational_autonomy and buildability_with_ai both clear their floors.",
+  "solution_plan": "WHAT: A Salesforce post-deployment smoke-test micro-service \u2014 the operator pastes a deployment manifest or org credentials, Claude runs automated schema verification checks and returns a plain-language report of any runtime mismatches. BUILD: The factory sets up a Claude-powered webhook that accepts a Salesforce org URL + session token, queries the Metadata API and runtime EntityParticle API, compares them, and emails/Slacks a diff report; a Stripe payment link ($49\u201399/mo) and a short intake form are the only UI needed \u2014 no coding by the operator. SELL: Target Salesforce developer communities (Salesforce Stack Exchange, Trailblazer Community, developer-focused Slack groups like SF Dev/Ohana Slack, LinkedIn search for 'Salesforce developer agency'); Claude drafts outreach messages that go out only after operator approval. MAINTAIN: New orgs self-onboard via the form, Claude runs checks on a schedule or on webhook trigger, billing is automated via Stripe \u2014 the only recurring operator task is approving outreach batches and reviewing flagged anomaly reports. VALIDATE FIRST: Before building, run 10 cold outreach messages to Salesforce agency developers and confirm at least 2 express interest in a paid beta.",
+  "notes": "All build_gates met at current scores (operational_autonomy=7, buildability_with_ai=7, buyer_clarity=7, willingness_to_pay=6). Stage is 'validate' because total=6.2 is below the 6.5 build threshold, and responsiveness_signal is completely untested. One confirmed paying beta customer would likely push this to build.",
+  "scored_at": "2026-08-29T12:35:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M16DWD243M4FZ90XD3FXKD15",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The target buyer \u2014 'non-programmer knowledge workers' who want local, private AI \u2014 is too vague to sell to reliably, and the willingness-to-pay signal is thin (a single HN post from a builder, no confirmed revenue). More critically, the product itself is a desktop client with local inference, which Claude + this repo cannot build or deliver: it requires native OS packaging, local model management, and per-device installation, making both buildability and operational autonomy near-zero. The problem exists, but this is not something a solo non-technical operator can build or run hands-off.",
+  "solution_plan": "This opportunity is not viable for this factory. A local desktop AI client requires native application development (OS packaging, signed installers, local model downloads) that goes far beyond what Claude + a landing page + Stripe can deliver. Even if built, distribution and support would be per-device, per-user manual work. Drop and do not pursue.",
+  "notes": "Fails build_gates: operational_autonomy=3 (below 7 floor), buildability_with_ai=3 (below 6 floor), buyer_clarity=4 (below 6 floor), willingness_to_pay=4 (below 5 floor). Total also below validate threshold.",
+  "scored_at": "2026-08-29T12:35:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

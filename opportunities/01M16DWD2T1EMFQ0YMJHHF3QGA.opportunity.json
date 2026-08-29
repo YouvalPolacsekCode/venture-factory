@@ -1,0 +1,25 @@
+{
+  "id": "01M16DWD2T1EMFQ0YMJHHF3QGA",
+  "discovered_at": "2026-08-29T12:33:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439789/custom-fields-deployed-successfully-to-scratch-org-but-missing-from-runtime-sche",
+    "snippet": "Custom fields deployed successfully to scratch org but missing from runtime schema. Deployed fields appear in CustomField, FieldDefinition, and metadata retrieve. Do not appear in EntityParticle, REST sObject describe, or Apex Schema.describe. Produce 'Field does not exist' during Apex compilation. A field created manually through Setup \u2192 New Field appears immediately."
+  },
+  "problem_statement": "Salesforce Metadata API deployments silently succeed but fields are not actually usable at runtime in scratch orgs, causing developer hours lost to debugging phantom deployment failures with no clear error or resolution path.",
+  "target_segment": "Salesforce developers and ISV partners building on scratch orgs, at agencies and SaaS companies",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "metadata-api",
+    "scratch-org",
+    "deployment",
+    "dx",
+    "enterprise-dev",
+    "devops",
+    "apex"
+  ],
+  "notes": "Buyer signal: Salesforce developers are paid professionals; debugging time is billed or has direct business cost. Agencies and ISVs pay for Salesforce licenses and developer time. Opportunity: automated Salesforce deployment validation/smoke-test tool that catches runtime schema mismatches post-deploy. Weak signal \u2014 single post but describes a reproducible, costly pain.",
+  "status": "candidate"
+}

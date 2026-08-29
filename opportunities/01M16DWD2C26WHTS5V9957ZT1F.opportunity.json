@@ -1,0 +1,25 @@
+{
+  "id": "01M16DWD2C26WHTS5V9957ZT1F",
+  "discovered_at": "2026-08-29T12:33:45+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://github.com/unslothai/unsloth/issues/9955",
+    "snippet": "When performing the local browser translation task the high concurrency issue encountered actually means that only one concurrent process is always running, despite the queue being one quarter full. The concurrency of the model page was set, but it had no effect. There was always only one request being processed. This issue does not exist on LM Studio."
+  },
+  "problem_statement": "Self-hosted local LLM inference frameworks fail to deliver true concurrency \u2014 users set concurrency limits but only one request executes at a time, blocking production workloads and forcing fallback to commercial alternatives.",
+  "target_segment": "Developers and small teams running self-hosted LLM inference (Unsloth, Ollama, llama.cpp) for production or high-volume batch tasks",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "local-llm",
+    "inference",
+    "concurrency",
+    "self-hosted-ai",
+    "ollama",
+    "unsloth",
+    "performance",
+    "batch-processing"
+  ],
+  "notes": "Buyer signal: user is running production-level translation workloads locally, implying cost avoidance vs. paid APIs. Concurrency failure means lost throughput \u2014 real business cost. Opportunity: managed local inference proxy or scheduler that reliably handles concurrent requests. Weak signal \u2014 single issue report.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M16DWD243M4FZ90XD3FXKD15",
+  "discovered_at": "2026-08-29T12:33:45+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49486912",
+    "snippet": "I built an AI desktop client specifically designed for non-programmers, which has the capabilities of Codex/Claude Desktop, but it is localized, protects all your privacy, and supports any model call. Would you like to try using it?"
+  },
+  "problem_statement": "Non-technical users need a localized, privacy-preserving AI desktop client that supports multiple models without requiring programming knowledge, but existing tools like Claude Desktop and Codex are designed for developers.",
+  "target_segment": "Non-programmer knowledge workers and small business owners who want AI assistance locally without cloud privacy concerns",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-desktop-client",
+    "local-ai",
+    "privacy",
+    "non-technical-users",
+    "multi-model",
+    "llm-client",
+    "no-code-ai"
+  ],
+  "notes": "Builder is already paying to develop and distribute this; implies a paying market of non-programmers who want AI but are privacy-conscious. Weak signal \u2014 single post, no confirmed paying buyers yet, but product already exists suggesting some validation.",
+  "status": "candidate"
+}

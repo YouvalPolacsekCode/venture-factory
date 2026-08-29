@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M16DWD2KCJDGBKCDXXS9Z66Y",
+  "per_dimension": {
+    "pain_severity": 3,
+    "pain_frequency": 4,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 2.6,
+  "penalties_applied": [],
+  "total": 2.6,
+  "recommended_stage": "drop",
+  "rationale": "This is a single GitHub feature request for an auto-update UX improvement in Ollama \u2014 it is a thin standalone signal, not a business problem with a paying buyer. The 'buyer' is a vague Windows home/office user who is already using free open-source software; willingness to pay for a separate update-management tool is essentially zero. Even if this were a real gap, the solution requires Windows system-level programming (tray apps, process management, MSI packaging) well outside what this factory can build. Drop immediately.",
+  "solution_plan": "This opportunity is not viable for this factory. It describes a UX improvement request for an open-source tool, not a paid product gap. There is no identifiable paying buyer, no buildable solution within this stack, and no defensible business. Drop.",
+  "notes": "Fails all build_gates by wide margins. Total far below validate threshold. Weakest signal of the batch.",
+  "scored_at": "2026-08-29T12:35:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

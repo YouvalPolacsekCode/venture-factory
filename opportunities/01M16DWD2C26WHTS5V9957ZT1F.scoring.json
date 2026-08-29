@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M16DWD2C26WHTS5V9957ZT1F",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 a broken concurrency layer on self-hosted LLM inference directly blocks production batch workloads and wastes developer time. However, the buyers are technical developers and small engineering teams who expect to self-solve infrastructure problems or use open-source fixes; willingness to pay for a managed proxy/scheduler tool is unvalidated and likely low in this audience. More decisively, building a reliable local inference concurrency proxy requires deep systems/networking work that goes well beyond Claude + a landing page, and ongoing delivery requires per-deployment support that is inherently hands-on. Not viable for this factory.",
+  "solution_plan": "This opportunity is not viable for this factory. A local inference concurrency proxy is a systems-level product (thread pools, request queuing, inter-process communication) that cannot be built with Claude + prompts + Stripe. The target buyers (self-hosting developers) also have a strong bias toward open-source self-service and would be unlikely to pay for a managed wrapper. Drop.",
+  "notes": "Fails build_gates: buildability_with_ai=3 (below 6), operational_autonomy=3 (below 7), buyer_clarity=5 (below 6). Total also below validate threshold.",
+  "scored_at": "2026-08-29T12:35:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

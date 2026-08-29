@@ -1,0 +1,25 @@
+{
+  "id": "01M16DWD31JHCHKAR3S8T6HDGW",
+  "discovered_at": "2026-08-29T12:33:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439782/why-does-the-field-service-mobile-schedule-card-show-us-date-format-aug-25-d",
+    "snippet": "In the Field Service mobile app (iOS), the Schedule tab appointment card shows the date month-first ('Tuesday, Aug 25, 2026') instead of UK day-first ('25 Aug 2026'). The times on the same card are fine (24-hour), so it's just the date ordering. Org Default Locale, the mobile user's Locale, and the device Region are all English (United Kingdom). There's no date-format option in Field Service Mobile Settings."
+  },
+  "problem_statement": "Salesforce Field Service mobile app ignores locale settings and displays US date format to non-US field workers, causing scheduling confusion and compliance friction for enterprise customers outside North America.",
+  "target_segment": "Field service operations managers and Salesforce admins at UK and European enterprises using Salesforce Field Service",
+  "geo": "GB",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "field-service",
+    "localization",
+    "enterprise",
+    "mobile-app",
+    "locale",
+    "uk",
+    "compliance"
+  ],
+  "notes": "Buyer signal: enterprise Salesforce Field Service customers pay significant licensing fees; localization bugs create compliance and operational risk. Opportunity: Salesforce consulting/admin service specializing in locale configuration and FSL mobile fixes, or a managed component overlay. Weak individual signal but points to recurring enterprise localization pain in Salesforce ecosystem.",
+  "status": "candidate"
+}

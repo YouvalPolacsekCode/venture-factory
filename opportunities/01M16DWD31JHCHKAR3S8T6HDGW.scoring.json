@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M16DWD31JHCHKAR3S8T6HDGW",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Salesforce locale/FSL consulting or admin configuration is inherently per-customer manual work \u2014 diagnosing and fixing org-specific config requires hands-on access to each customer's Salesforce instance."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Salesforce admin/consulting engagements require discovery calls, org access, and coordinated configuration sessions with the client."
+    }
+  ],
+  "total": 1.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer \u2014 UK/EU enterprise Salesforce Field Service ops managers and admins \u2014 is identifiable and does have budget, but the root cause here is a Salesforce platform bug (locale not respected by FSL mobile), not a solvable product gap. The only realistic 'solution' is a consulting/admin service that touches each customer's org manually, which directly violates the autonomy requirement. Even if framed as a managed component overlay, Salesforce ISV/AppExchange development requires significant Salesforce-specific certification, security review, and compliance overhead. This is consulting work, not a scalable product, and it lands outside the factory's buildable scope.",
+  "solution_plan": "This opportunity is not viable for this factory. The pain is real but the 'solution' is either (a) waiting for Salesforce to fix their platform bug, or (b) per-org consulting work to implement workarounds \u2014 both are manual, non-scalable, and require direct Salesforce admin access to each customer's environment. A solo non-technical operator cannot build or run this hands-off. Drop.",
+  "notes": "Fails build_gates: operational_autonomy=3 (well below 7 floor \u2014 this is consulting). Total after penalties=1.9, far below validate threshold.",
+  "scored_at": "2026-08-29T12:35:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

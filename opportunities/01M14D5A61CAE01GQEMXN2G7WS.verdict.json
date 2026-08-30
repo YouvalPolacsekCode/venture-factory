@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M14D5A61CAE01GQEMXN2G7WS",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real and financially consequential when it occurs, but evidence is too thin to pass validation: a single StackExchange post, no distinct pain quotes from 5 or more sources, and no direct willingness-to-pay signal specific to a Postmaster Tools setup/monitoring service. Adjacent paid solutions (GlockApps, MxToolbox, Postmark) address deliverability broadly but the specific GPT onboarding gap lacks documented recurring demand. The one-time-fix nature of most GPT issues also undermines recurring revenue potential.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148877/how-can-i-get-my-domain-into-google-postmaster-tools"
+  ],
+  "evaluated_at": "2026-08-30T11:41:19+03:00"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M18X76FA7TBDGBNWNFW6JXNP",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Delivering a governor-limit workaround pattern or consulting service requires per-engagement code review and custom Apex architecture work that cannot be automated by Claude alone at sufficient quality for a paid product."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce governor-limit pain is real and recurring for devs with large data volumes, and the buyer (a dedicated Salesforce developer at a mid-market company) has organizational budget. However, the solution space is either a documentation/pattern guide (low WTP, free substitutes exist on Trailhead and Stack Exchange) or a consulting engagement (requires per-customer human work). Neither can be delivered autonomously at scale by Claude. Signal strength is low (single instance), and the operational autonomy is too low for the factory model.",
+  "solution_plan": "This does not fit the factory model. The problem demands either a reference guide (essentially free content that competes with Salesforce's own documentation) or custom Apex code review and architecture consulting \u2014 both require per-customer human judgment. Claude could assist a developer in solving this, but not deliver a productized, self-serve service to Salesforce developers autonomously. Pass.",
+  "notes": "operational_autonomy score of 4 fails the build gate (min: 7). buildability_with_ai score of 5 fails the build gate (min: 6). Total below validate threshold of 5.5 after penalties.",
+  "scored_at": "2026-08-30T11:42:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M18X76FWK1NKQJD6165BRNYE",
+  "discovered_at": "2026-08-30T11:40:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://serverfault.com/questions/1199738/anyone-know-who-to-contact-in-google",
+    "snippet": "I've been developing in Google for a few years... the technical side is absolute crap and there is ZERO customer support on technical issues with google... I've attempted with Sales at least 8 separate times to PURCHASE enterprise access of support. Each time, Sales refuses to sell me anything and just says they can't help."
+  },
+  "problem_statement": "Developers and small businesses on Google Cloud Platform cannot purchase or access adequate technical support through official channels, leaving them unable to resolve blocking infrastructure issues and costing them significant engineering time.",
+  "target_segment": "SMB and independent developers running production workloads on Google Cloud Platform",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-cloud",
+    "cloud-support",
+    "developer-support",
+    "gcp",
+    "infrastructure",
+    "enterprise-support",
+    "technical-support",
+    "cloud-operations"
+  ],
+  "notes": "Explicit attempted purchase ('PURCHASE enterprise access') blocked by Google's own sales process \u2014 very strong buyer intent signal. Pain is recurring ('annoying and constant'). Third-party GCP support brokerage or managed support service is a viable productized offering. Score kept at 2 due to single source, but intent quality is high.",
+  "status": "candidate"
+}

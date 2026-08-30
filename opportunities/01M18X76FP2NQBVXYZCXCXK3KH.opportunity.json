@@ -1,0 +1,25 @@
+{
+  "id": "01M18X76FP2NQBVXYZCXCXK3KH",
+  "discovered_at": "2026-08-30T11:40:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49488605",
+    "snippet": "I would pay for an app that allows me to explore any city in the world in a similar matter [as a video-game-style city explorer]."
+  },
+  "problem_statement": "Travelers and urban explorers want an immersive, game-like interface to virtually explore cities around the world before or during travel, but no product combines street-level spatial navigation with the engagement of a video game.",
+  "target_segment": "Frequent international travelers, remote workers planning relocation, and travel enthusiasts aged 25\u201345",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "travel-tech",
+    "city-exploration",
+    "virtual-travel",
+    "maps",
+    "gamification",
+    "consumer-app",
+    "tourism",
+    "urban-discovery"
+  ],
+  "notes": "Explicit 'I would pay for' statement on HN is a direct buyer signal. Single data point keeps strength at 2, but the statement is unambiguous. Market exists: Google Street View, Airbnb Experiences, and travel apps don't scratch this itch. A solo operator could build a curated version for a single city vertical first.",
+  "status": "candidate"
+}

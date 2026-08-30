@@ -1,0 +1,26 @@
+{
+  "id": "01M18X76F4V2DAR3J0PTH1W3AP",
+  "discovered_at": "2026-08-30T11:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439769/salesforce-simultaneous-pushes-into-he-org",
+    "snippet": "We are team of 6 members using the single org we are facing the difficulties like: We don't know who is pushing the code into the org. If Someone pushes the code the older version is being pushed. How to rectify the above scenario."
+  },
+  "problem_statement": "Small Salesforce development teams sharing a single org have no lightweight tooling to track who pushed code changes, prevent overwrite collisions, or audit change history \u2014 leading to lost work and broken deployments.",
+  "target_segment": "Small Salesforce development teams (2\u201310 devs) at agencies or SMB ISVs without enterprise DevOps budgets",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "devops",
+    "code-deployment",
+    "version-control",
+    "org-management",
+    "team-collaboration",
+    "change-tracking",
+    "sf-dev"
+  ],
+  "notes": "Paid Salesforce org users experiencing recurring productivity loss. Enterprise solutions (Gearset, Copado) exist but are expensive; a lightweight audit/lock layer for small teams is a clear gap. Team of 6 implies a company context with a budget. Similar complaints appear repeatedly in Salesforce SE and community forums.",
+  "status": "candidate"
+}

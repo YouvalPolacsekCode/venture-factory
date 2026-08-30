@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M18X76FGX07RZ5GFBAJWV6AN",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "Early-stage startup founders and marketing leads are a nameable buyer segment who demonstrably pay for web presence tools, and the pain (AI-generated sites that hurt conversions) is real and growing. The service \u2014 an automated performance audit and fix report for vibe-coded sites \u2014 is genuinely buildable with Claude (analyze HTML/CSS/Lighthouse output, generate a prioritized fix report, deliver as PDF or email) and can run with minimal operator involvement after a self-serve intake form. The total clears the validate threshold, all build gates are met, but with zero responsiveness signal and a fairly weak defensibility story, validate (not build) is the right next step.",
+  "solution_plan": "WHAT: An automated web performance audit service for AI-generated startup marketing sites \u2014 the operator submits a URL, gets back a scored report with specific fixes ranked by conversion impact. BUILD: The factory sets up a Typeform (or simple HTML form) intake, a Stripe payment link (~$49/audit), and a Claude pipeline that runs Lighthouse-equivalent checks (via a headless browser API like Browserless or PageSpeed Insights API), then generates a plain-English fix report with prioritized recommendations. No coding by Youval. SELL: Reach founders via HN Show HN posts, Indie Hackers, and Twitter/X threads about vibe-coding \u2014 a targeted cold-email or post campaign goes out only after Youval approves the batch. MAINTAIN: Stripe handles billing, the intake form triggers the Claude pipeline automatically, the report is emailed to the customer \u2014 Youval's only recurring touch is approving outreach batches. VALIDATE FIRST: Before building, post a landing page with a Stripe link and drive 50 targeted visits to see if anyone converts at $49.",
+  "notes": "All build gates technically met (operational_autonomy=7, buildability_with_ai=8, buyer_clarity=6, willingness_to_pay=5), but responsiveness_signal=2 (untested) and defensibility=3 mean validate is the right stage. The headless browser API dependency adds minor integration friction worth confirming is automatable before committing to build.",
+  "scored_at": "2026-08-30T11:42:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

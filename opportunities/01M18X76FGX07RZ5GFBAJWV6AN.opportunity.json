@@ -1,0 +1,25 @@
+{
+  "id": "01M18X76FGX07RZ5GFBAJWV6AN",
+  "discovered_at": "2026-08-30T11:40:17+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49495392",
+    "snippet": "STOP making Vibe Slop websites that LAG on my MBP and workstation. I get it, you want to show off how 'cool' you are with your hijacked scrolling and 50 million animations... If it lags, I'm closing the tab. Nobody gives a shit. I'm not impressed... the AI agent [reads your site too]"
+  },
+  "problem_statement": "AI-generated and vibe-coded marketing websites increasingly ship with janky scroll-jacking, excessive animations, and layout bloat that degrades performance on real hardware and drives potential customers away before conversion.",
+  "target_segment": "Founders and marketing teams at early-stage startups shipping AI-assisted websites; web performance agencies serving them",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "web-performance",
+    "landing-page",
+    "ai-generated-sites",
+    "core-web-vitals",
+    "conversion-optimization",
+    "vibe-coding",
+    "startup-marketing",
+    "page-speed"
+  ],
+  "notes": "Growing frustration signal (3 points, comments) on HN around AI-slop websites hurting UX. A B2B performance audit/fix service or a Lighthouse-style automated 'vibe site health checker' could sell to founders who paid to build these sites and now want to fix them. Buyer intent indirect but present \u2014 founders paying for web presence are the natural buyers.",
+  "status": "candidate"
+}

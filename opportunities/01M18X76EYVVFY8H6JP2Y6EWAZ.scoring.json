@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M18X76EYVVFY8H6JP2Y6EWAZ",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building and maintaining a CRM feature layer on top of a third-party niche helpdesk (Lolodesk) requires ongoing integration work and custom per-platform delivery that cannot be fully automated by Claude alone."
+    }
+  ],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real paying user of a specific rental management tool (Lolodesk), which is a decent signal, but the opportunity is tightly coupled to a third-party platform's roadmap and API \u2014 not a standalone product Youval can build and own. Willingness to pay is moderate (active SaaS customer), but the addressable market of Lolodesk users is tiny and the build requires deep integration with an external system. The total falls well below the validate threshold after penalties, making this a drop.",
+  "solution_plan": "This is not a viable standalone micro-service for a solo operator. The feature requests are enhancements to an existing niche product (Lolodesk), not a standalone problem. Building a CRM overlay on top of a third-party rental helpdesk would require constant API integration maintenance, platform dependency risk, and a tiny addressable market of that product's users. Youval could not build, sell, or maintain this without significant platform risk and manual integration work. Pass.",
+  "notes": "operational_autonomy score of 4 fails the build gate (min: 7). buildability_with_ai score of 5 fails the build gate (min: 6). Total also below validate threshold of 5.5.",
+  "scored_at": "2026-08-30T11:42:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

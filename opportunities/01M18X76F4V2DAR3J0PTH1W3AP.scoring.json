@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M18X76F4V2DAR3J0PTH1W3AP",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Setting up meaningful Salesforce org change-tracking, collision detection, and audit tooling requires per-customer Salesforce org access, configuration, and ongoing integration maintenance \u2014 not automatable by Claude prompts alone."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and recurring \u2014 small Salesforce dev teams regularly lose work from uncoordinated deployments \u2014 and the buyer (a dev team at an agency or SMB ISV) has budget (they're paying for Salesforce). However, building a meaningful Salesforce change-tracking or org-lock layer requires deep Salesforce API integration, Metadata API knowledge, and per-customer org configuration that cannot be delivered autonomously by Claude. Enterprise alternatives (Gearset, Copado) already exist, and the gap is in price/simplicity, not in the problem being unsolved. Total collapses below validate after the required-human-fulfillment penalty.",
+  "solution_plan": "This is not buildable as a Claude-first micro-service without substantial custom Salesforce integration engineering. The solution requires Salesforce Metadata API access, org authentication per customer, and real-time deployment hooks \u2014 none of which Claude + a Stripe link can deliver. A solo non-technical operator cannot build or maintain this without a Salesforce developer. Pass.",
+  "notes": "operational_autonomy score of 4 fails the build gate (min: 7). buildability_with_ai score of 4 fails the build gate (min: 6). Total below validate threshold of 5.5 after penalties.",
+  "scored_at": "2026-08-30T11:42:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

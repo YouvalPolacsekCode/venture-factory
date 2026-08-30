@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M18X76FWK1NKQJD6165BRNYE",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Providing actual GCP technical support requires domain-expert human engineers to diagnose infrastructure issues, read logs, and resolve blockers \u2014 Claude cannot reliably substitute for a GCP-certified engineer on production incidents."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Technical support engagements \u2014 especially for blocking production issues \u2014 require real-time or near-real-time back-and-forth, screenshares, or ticket triage by a human who understands the environment."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Each customer engagement is inherently a high-judgment, context-heavy interaction; support load scales linearly with customers and cannot be meaningfully automated away."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The target buyer is real and identifiable \u2014 SMB engineering leads and solo developers running production workloads on GCP who have actively tried to purchase support and been refused \u2014 and the willingness to pay is clearly demonstrated by that attempted purchase behaviour. However, the core delivery is bespoke, expert-level cloud infrastructure consulting, which requires a human GCP engineer per engagement; Claude cannot substitute here without creating serious quality and liability risk. The fatal constraint is operational_autonomy (scored 3): every customer ticket demands human expert judgement, synchronous communication, and per-case manual work, meaning this would function as a consulting practice rather than a productised micro-service.",
+  "solution_plan": "This idea cannot realistically be built and maintained by a solo non-technical operator running an autonomous Claude factory. The core value \u2014 resolving blocking GCP infrastructure issues \u2014 requires a credentialed human cloud engineer to diagnose environments, interpret logs, and implement fixes. Even if intake and triage were automated via Claude, fulfilment is irreducibly manual and synchronous. A brokerage or reseller model (connecting buyers to GCP support partners) is structurally possible but thin-margin, requires maintaining a vetted engineer network, and still involves per-deal human coordination. This is a consulting/staffing play, not a micro-SaaS. Recommend dropping unless a narrow, fully-automatable sub-problem is identified (e.g. a self-serve GCP quota-increase guide, or an automated audit report) \u2014 but that would be a different opportunity.",
+  "notes": "Fails operational_autonomy build gate (scored 3, floor is 7) and buildability_with_ai build gate (scored 4, floor is 6). Even at the validate stage the underlying business model is consulting-shaped, not product-shaped. The pain and buyer intent are genuine and high-quality; the problem is that autonomous delivery is not feasible. Total after penalties (2.3) falls well below the validate threshold (5.5), so the stage is drop.",
+  "scored_at": "2026-08-30T11:42:37+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

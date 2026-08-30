@@ -1,0 +1,26 @@
+{
+  "id": "01M18X76EYVVFY8H6JP2Y6EWAZ",
+  "discovered_at": "2026-08-30T11:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/jackunsworth96/Lolas-Rentals-Management/issues/172",
+    "snippet": "- the hot lead badge, to be able to click on this and select other options (cold lead, customer, past customer) - add a export button that can pull the CSV data from conversations for faster KB improvements - the closed/open badge at the top, make this clickable so we don;t need to scroll on the right side everytime - to be able to add customer notes on the right side, so we can flag VIP or difficult people etc - the reserve here link takes you to the generic reserve page, not a pre filled basket"
+  },
+  "problem_statement": "Small rental business operators using lightweight helpdesk tools lack CRM-grade lead lifecycle management: they cannot transition leads through stages (hot/cold/customer/past customer), annotate VIP or difficult customers, or export conversation data for knowledge-base improvement without manual workarounds.",
+  "target_segment": "Small rental business owners and operators (vacation rentals, equipment rentals) using niche helpdesk/CRM hybrids",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "rental-management",
+    "crm",
+    "lead-management",
+    "helpdesk",
+    "customer-notes",
+    "csv-export",
+    "small-business",
+    "property-rental",
+    "lifecycle-tracking"
+  ],
+  "notes": "Active paying user filing detailed enhancement requests on a live rental management product (Lolodesk). Multiple friction points in a single ticket suggest this is a retained, engaged customer \u2014 strong buyer signal. Features requested map directly to upsell tier: lead lifecycle + VIP tagging + data export are classic CRM add-on revenue.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M18X76FA7TBDGBNWNFW6JXNP",
+  "discovered_at": "2026-08-30T11:40:17+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439792/how-to-process-aggregateresult-with-over-50k-records-in-sum-in-batch",
+    "snippet": "I have a requirement where I have to aggregate the sum of amount for all opportunities under each account and aggregate the result on a field on the account. I used a batch for this... [hits Salesforce governor limits on AggregateResult with 50k+ records]"
+  },
+  "problem_statement": "Salesforce developers hitting governor limits when running aggregate queries (SUM, COUNT) over large datasets in batch jobs have no simple pattern or tooling to work around the 50k record cap without complex custom chunking logic.",
+  "target_segment": "Salesforce developers and architects at mid-market to enterprise companies with large data volumes",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "governor-limits",
+    "batch-processing",
+    "aggregateresult",
+    "large-data",
+    "enterprise-crm",
+    "data-aggregation"
+  ],
+  "notes": "Recurring class of Salesforce developer pain. Company context (dedicated dev, custom objects, active Opportunity pipeline) implies paid org. Workaround tooling or a consulting productized service could monetize here. Single signal so strength kept at 2.",
+  "status": "candidate"
+}

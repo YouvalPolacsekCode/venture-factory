@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M18X76FP2NQBVXYZCXCXK3KH",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 3,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.1,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "A city-exploration consumer app requires thousands of paying individual users to generate meaningful revenue; the model depends on B2C scale that a solo operator cannot reach without significant marketing spend."
+    }
+  ],
+  "total": 2.1,
+  "recommended_stage": "drop",
+  "rationale": "One HN commenter saying 'I would pay for this' is a weak signal \u2014 it expresses a preference, not a demonstrated willingness to pay a specific price for a specific product. The buyer is an individual consumer (travelers/enthusiasts), which is the weakest buyer type: low LTV, high churn, and the business model requires thousands of paying users to work. The build itself requires street-level map data (Google Maps API costs), 3D/spatial rendering, and ongoing content curation \u2014 none of which is deliverable as a Claude prompt + Stripe link by a solo non-technical operator. This is a consumer app requiring real engineering, not a factory micro-service.",
+  "solution_plan": "This is not viable for a solo non-technical operator running a Claude factory. The product requires proprietary map data licensing (expensive), 3D spatial rendering (not a Claude capability), ongoing city content curation, and a large consumer user base to generate revenue. There is no path from 'Claude prompt + Stripe link' to a working game-like city explorer. Pass.",
+  "notes": "operational_autonomy score of 3 fails the build gate (min: 7). buildability_with_ai score of 2 fails the build gate (min: 6). buyer_clarity score of 3 fails the build gate (min: 6). willingness_to_pay score of 3 fails the build gate (min: 5). Total far below validate threshold of 5.5.",
+  "scored_at": "2026-08-30T11:42:17+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

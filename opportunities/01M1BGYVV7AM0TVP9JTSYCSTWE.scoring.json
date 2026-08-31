@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1BGYVV7AM0TVP9JTSYCSTWE",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "NTFRS-to-DFSR migration must be executed in the customer's specific AD environment \u2014 scripted guidance alone is not deliverable; an engineer must run the steps against real domain controllers, validate replication health, and handle failures. Each engagement is per-customer manual work."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "MSP onboarding engagements involve scoping calls, environment assessment, and go/no-go decisions that require live interaction with the client's sysadmin."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable and reachable \u2014 MSP owners and sysadmins who bill onboarding hours are a real, nameable segment active on r/msp and Spiceworks \u2014 but the service cannot run hands-off. Every migration touches a unique live Active Directory environment; Claude can generate a step-by-step runbook but cannot execute PowerShell against a customer's domain controllers, validate DFSR replication convergence, or recover from journal-wrap errors without a human engineer on-site or in a remote session. Operational autonomy (4) and buildability (5) both fall below build gates, and the penalties for per-customer fulfillment and synchronous engagement drop the total to 2.2, well below even the validate floor.",
+  "solution_plan": "No viable hands-off plan exists for a solo non-technical operator. The deliverable \u2014 safely migrating a production Active Directory environment from NTFRS to DFSR \u2014 requires executing privileged commands against live infrastructure, monitoring replication, and responding to failures in real time. Claude can produce a high-quality runbook or checklist (a one-time document product), but that is a commodity that MSPs can find for free on Microsoft Docs. A paid, managed migration service would require a Windows Server engineer as the actual fulfillment layer, making this a staffing/consulting business, not a factory-compatible micro-service Youval can run alone.",
+  "notes": "Failing build gates: operational_autonomy (4 < 7 required), buildability_with_ai (5 < 6 required). Post-penalty total of 2.2 is well below the 5.5 validate threshold. Drop. A potential adjacent idea worth a separate signal: a self-serve AD health-check report (read-only, no execution) could be more automatable \u2014 but that is a different opportunity.",
+  "scored_at": "2026-08-31T12:05:23+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M1BGYVV7AM0TVP9JTSYCSTWE",
+  "discovered_at": "2026-08-31T12:03:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199740/active-directory-ntfrs-journal-wrap-error",
+    "snippet": "We onboarded a new customer and inherited an on-premises active directory domain with some obsolete stuff going on... domain still uses NTFRS for SYSVOL / NETLOGON replication. As a first step in onboarding their environment, I want to migrate NTFRS to DFSR, upgrade the forest / domain functional level to 2016..."
+  },
+  "problem_statement": "IT managed service providers regularly inherit legacy Windows Server environments still running deprecated NTFRS replication, requiring time-consuming manual migration procedures to DFSR before they can safely modernize the domain \u2014 a recurring onboarding cost with no automated tooling.",
+  "target_segment": "IT managed service providers (MSPs) and sysadmins onboarding SMB clients with legacy Windows Server / Active Directory environments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "active-directory",
+    "ntfrs",
+    "dfsr",
+    "windows-server",
+    "msp",
+    "legacy-migration",
+    "sysadmin",
+    "domain-controller",
+    "it-services",
+    "automation"
+  ],
+  "notes": "Buyer context: MSP billing clients for onboarding hours; legacy AD remediation is a known recurring cost. A scripted/automated NTFRS-to-DFSR migration tool or managed assessment service could save MSPs hours per client engagement. Single data point \u2014 needs corroboration from MSP forums or Reddit r/msp.",
+  "status": "candidate"
+}

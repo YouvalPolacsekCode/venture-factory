@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1BGYVTZGXRZS56AYE6M9X28",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Salesforce Revenue Cloud / CPQ configuration work requires deep domain expertise per customer \u2014 each engagement involves custom rule logic that Claude cannot reliably deliver without a human Salesforce expert validating and deploying the output."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise CPQ customers will need iterative Q&A and troubleshooting that requires human judgement on Salesforce-specific edge cases."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and has budget \u2014 Salesforce Revenue Cloud admins at mid-market/enterprise companies are paid professionals whose employers spend heavily on Salesforce \u2014 but the solution cannot be built or delivered autonomously. Generating correct Business Rules Engine / Constraints Engine configuration requires hands-on Salesforce expertise to validate and deploy; Claude cannot reliably produce and ship production-safe CPQ logic without a human expert in the loop for every engagement. The operational_autonomy score (3) reflects this hard ceiling, which both disqualifies it from build and pulls the total well below the validate threshold after penalties.",
+  "solution_plan": "No viable hands-off plan exists for a solo non-technical operator. This would require either a Salesforce-certified partner doing the actual configuration work (making it a consulting/done-for-you play with heavy human fulfillment) or a deep Salesforce integration that goes far beyond Claude prompts and a Stripe link. A Claude-generated 'template' for CPQ rules would need expert review before any customer could safely apply it in production. Youval could not build, sell, or maintain this without a Salesforce domain expert as a co-founder or subcontractor \u2014 at which point it is no longer a factory-compatible micro-service.",
+  "notes": "Failing build gates: operational_autonomy (3 < 7 required), buildability_with_ai (4 < 6 required). Even before penalties, operational_autonomy and buildability floors are unmet. Post-penalty total of 2.7 is well below the 5.5 validate threshold. Drop.",
+  "scored_at": "2026-08-31T12:05:23+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

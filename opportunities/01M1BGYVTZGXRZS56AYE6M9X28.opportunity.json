@@ -1,0 +1,27 @@
+{
+  "id": "01M1BGYVTZGXRZS56AYE6M9X28",
+  "discovered_at": "2026-08-31T12:03:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439794/how-can-account-assets-drive-bundle-discounts-and-required-products-in-revenue-c",
+    "snippet": "We are using Salesforce Revenue Cloud Advanced with Product Configurator... We need existing Assets related to the Quote's Account to affect the Quote in two scenarios. Scenario 1: Make a bundle child component free [when the account already owns a particular Asset product]. The following settings are enabled: Set Up Configuration Rules with Business Rules Engine, Set Up Configuration Rules and Constraints with Constraints Engine..."
+  },
+  "problem_statement": "Salesforce Revenue Cloud Advanced CPQ admins and developers cannot easily configure asset-aware bundle discounts and conditional required products without deep expertise in the Business Rules Engine and Constraints Engine, leading to expensive consulting hours or stalled deals.",
+  "target_segment": "Salesforce admins and developers at mid-market to enterprise companies running Revenue Cloud Advanced / CPQ",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "cpq",
+    "revenue-cloud",
+    "bundle-discount",
+    "configuration-rules",
+    "asset-management",
+    "product-configurator",
+    "b2b-sales",
+    "no-code-config",
+    "enterprise-software"
+  ],
+  "notes": "Buyer context is strong: Revenue Cloud Advanced is a high-cost Salesforce product; users are paid admins/devs at companies with active Salesforce contracts. Pain is configuration complexity that typically requires expensive consultants. Opportunity: guided configuration templates, diagnostic tooling, or a managed service layer for asset-driven pricing rules. Single data point \u2014 needs corroboration.",
+  "status": "candidate"
+}

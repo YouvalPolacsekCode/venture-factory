@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M16DWD2T1EMFQ0YMJHHF3QGA",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and reproducible \u2014 Salesforce metadata deployments that silently succeed but fail at runtime are a documented, costly problem. However, the evidence base is too thin to meet the pass threshold: only a single source post is available, there are no 5 distinct pain quotes from separate users, and no direct willingness-to-pay signal specific to this problem (general Salesforce tooling spend from Gearset/Copado is adjacent but not dispositive). The opportunity should be re-queued after Market Radar locates at least four more corroborating threads.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439789/custom-fields-deployed-successfully-to-scratch-org-but-missing-from-runtime-sche"
+  ],
+  "evaluated_at": "2026-08-31T12:04:51+03:00"
+}

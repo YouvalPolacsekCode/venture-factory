@@ -1,0 +1,26 @@
+{
+  "id": "01M1E02WYSD5Q6TPPCT5DFN4CV",
+  "discovered_at": "2026-09-01T11:06:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439798/can-i-rely-on-createddate-for-history-records-within-same-hour-same-day",
+    "snippet": "I have a flow that updates a large group of records of various tables and moves them from one Asset to another. I want the user to be able to 'undo' this at a later time, possibly much later but no later than the agreed upon 18 months. I want to do so without a new field to all the tables. One idea I cooked up is to use history tracking. To make sure the History records I find were part of the same update I want to look at the CreatedDate. I know the docs say: 'Salesforce doesn't guarantee that...'"
+  },
+  "problem_statement": "Salesforce developers need reliable bulk-operation undo/rollback capabilities spanning 18 months, but native history tracking timestamps are not guaranteed to be precise enough to correlate batched changes \u2014 forcing fragile workarounds instead of a proper audit-and-rollback mechanism.",
+  "target_segment": "Salesforce developers and architects at companies running complex bulk data operations and asset migrations",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "audit-trail",
+    "rollback",
+    "history-tracking",
+    "bulk-operations",
+    "data-migration",
+    "enterprise-crm",
+    "salesforce-flow",
+    "data-integrity"
+  ],
+  "notes": "Developer is building a business-critical undo feature for bulk record moves across multiple objects, with an 18-month retention requirement agreed upon with users \u2014 indicating a formal business requirement, not a hobby project. The workaround involves fragile timestamp correlation against a platform that explicitly does not guarantee ordering. Existing Salesforce deployment/data tools (Gearset, Copado, OwnBackup) charge enterprise rates, confirming buyers pay for data-safety tooling in this ecosystem.",
+  "status": "candidate"
+}

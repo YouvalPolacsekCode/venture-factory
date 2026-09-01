@@ -1,0 +1,26 @@
+{
+  "id": "01M1E02WYMC0YVPFR61CS45ZVF",
+  "discovered_at": "2026-09-01T11:06:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439800/salesforce-flow-send-email-element-set-input-values-for-recipientaddresses-and-c",
+    "snippet": "When deploying a flow that contains a sendemail element the deployment yields an error to set input values for recipientAddresses and composeEmailContent when opening the sendemail element. So I have to manually create a new version of the flow, delete these (2) input values then have to manually set the recipient address (formula resource) onto the Recipient Address List field. The Recipient Address List field is set with a formula resource prior to deployment. Is this an API [issue]?"
+  },
+  "problem_statement": "Salesforce Flow deployments containing SendEmail elements silently corrupt email recipient configuration, forcing admins to manually recreate flow versions after every deployment \u2014 a recurring, time-consuming manual fix in production CI/CD pipelines.",
+  "target_segment": "Salesforce admins and developers at SMB-to-enterprise companies managing automated flows and deployments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "flow-deployment",
+    "devops",
+    "ci-cd",
+    "salesforce-flow",
+    "email-automation",
+    "salesforce-admin",
+    "no-code",
+    "enterprise-automation"
+  ],
+  "notes": "Professional Salesforce admin hitting a reproducible deployment bug that breaks automation workflows. Business context is clear (enterprise CRM automation). Pain is real and recurring per the description ('have to manually create a new version'). Single data point so far but Salesforce admin communities frequently surface this class of issue. Buyer context: Salesforce orgs pay for licenses and tooling; ISV solutions for Salesforce deployment tooling (e.g., Copado, Gearset) command $50-200+/user/month, indicating willingness to pay for deployment reliability.",
+  "status": "candidate"
+}

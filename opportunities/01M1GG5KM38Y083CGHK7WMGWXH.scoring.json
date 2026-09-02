@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1GG5KM38Y083CGHK7WMGWXH",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Each Squarespace fix is a bespoke per-customer debugging task. Even with Claude doing the CSS diagnosis, a human must review, test in the live site context, and iterate \u2014 this is not automatable end-to-end at the per-ticket level."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Non-technical customers will need back-and-forth clarification on what 'fixed' looks like, screenshot sharing, and follow-up iterations \u2014 ongoing human judgement support load."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable \u2014 a paying Squarespace small business owner whose revenue form is broken \u2014 and they demonstrably pay for website tools and have tried multiple AI platforms without success, confirming real unmet demand. The fatal flaw is operational autonomy: every fix is a unique CSS/platform debugging task that requires per-customer human iteration (screenshot intake, live-site testing, back-and-forth on what 'done' looks like). Claude can assist significantly but cannot fully automate delivery for arbitrary Squarespace layout problems. This is a consulting/done-for-you service disguised as a product, which the factory cannot run hands-off. The penalties correctly sink the score below validate.",
+  "solution_plan": "This opportunity does not clear the autonomy bar for autonomous factory operation. The closest viable shape would be a fixed-menu 'Squarespace CSS Fix' service (e.g. a Typeform intake + Claude prompt that generates a code snippet + a Loom-style walkthrough) \u2014 but even then, each ticket needs a human to verify the fix works in the customer's live site before delivery. A non-technical solo operator would personally become the support queue. The honest path: this is a good freelance gig, not a scalable micro-service. Drop from the factory pipeline; consider instead as a validated niche for a human-operated micro-agency outside this system.",
+  "notes": "Fails operational_autonomy_min (scored 5, floor is 7). Total of 3.3 is also well below min_total_to_validate (5.5). Drop. The per-customer bespoke nature of CSS debugging is the structural blocker.",
+  "scored_at": "2026-09-02T10:27:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M1GG5KKWSTCXTBXDNGFFEQ85",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any meaningful 'managed local inference' or cost-optimization service requires per-customer setup, hardware configuration, or bespoke API routing work that cannot be automated by Claude prompts alone."
+    }
+  ],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 developers are paying $10+ per agentic task and doing explicit ROI math on local hardware \u2014 and there is clear willingness to pay for solutions. However, the product space this points toward (managed local inference, cost calculators, API routing optimization) either requires significant infrastructure engineering well beyond Claude-prompt tooling, or lands as a trivially copyable wrapper with no retention. Operational autonomy is the decisive failure: anything involving local hardware advice, bespoke inference setup, or per-customer cost auditing requires hands-on human work per customer, not an autonomous Claude-powered service. The idea does not fit the factory's build constraints.",
+  "solution_plan": "This opportunity does not clear the autonomy or buildability gates for this factory. A cost-calculator landing page (e.g. 'paste your OpenRouter bill, get a local-hardware ROI estimate') could be built quickly, but it would be a one-shot free tool with no recurring revenue and no defensibility \u2014 essentially a blog post. A managed local-inference service requires physical hardware, devops, and per-customer onboarding that a solo non-technical operator cannot deliver hands-off. The honest answer is: the pain is real but the product the market needs cannot be built and run autonomously here. Drop and do not invest further.",
+  "notes": "Fails operational_autonomy_min (scored 3, floor is 7) and buildability_with_ai_min (scored 4, floor is 6). Even before penalties, weighted_total of 4.9 is below min_total_to_validate (5.5). Drop.",
+  "scored_at": "2026-09-02T10:27:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

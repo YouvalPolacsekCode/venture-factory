@@ -1,0 +1,25 @@
+{
+  "id": "01M1GG5KM38Y083CGHK7WMGWXH",
+  "discovered_at": "2026-09-02T10:26:09+03:00",
+  "source": {
+    "type": "review_site",
+    "url": "https://webmasters.stackexchange.com/questions/148903/need-help-fixing-layout-on-squarespace-request-a-quote-form-textarea-won-t-sp",
+    "snippet": "I'm trying to adjust the layout of my Squarespace Request a Quote form... I need the Requirement Details textarea to span both columns, and I need the Upload Requirements field to sit directly below it... I've been using AI to create this quote form and it looks great but none of the 5 AI platforms can figure out how to fix this. I have a feeling th[at it's a Squarespace-specific CSS limitation]."
+  },
+  "problem_statement": "Small business owners using no-code website builders like Squarespace cannot resolve platform-specific CSS and form layout issues even after trying multiple general-purpose AI tools, leaving their lead-capture forms broken and costing them potential revenue.",
+  "target_segment": "Small business owners and freelancers managing their own Squarespace (or similar no-code platform) websites without a dedicated developer",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "squarespace",
+    "no-code",
+    "form-builder",
+    "css-customization",
+    "small-business",
+    "website-builder",
+    "lead-capture",
+    "ai-limitations"
+  ],
+  "notes": "Buyer signal: user is a paying Squarespace customer whose revenue-generating quote form is broken. Tried 5 different AI platforms and failed \u2014 indicates genuine unmet need for platform-specific no-code fix services or specialized tools. Single data point but representative of a broad segment of non-technical business owners stuck on no-code platform quirks.",
+  "status": "candidate"
+}

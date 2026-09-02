@@ -1,0 +1,20 @@
+{
+  "opportunity_id": "01M18X76FGX07RZ5GFBAJWV6AN",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real and well-documented: HN threads, Reddit communities, and web performance forums repeatedly surface founder and visitor frustration with bloated, janky AI-generated marketing sites. At least one willingness-to-pay signal exists via the established web performance audit market (competitors charge $99\u2013$500+ per audit or $99\u2013$299/month for automated monitoring). The target buyer \u2014 founders who paid to vibe-code a site and now need it to convert \u2014 is nameable and reachable. Severity is moderate (not burning) because most founders tolerate poor performance until a conversion drop is noticed, but the frequency of new AI-generated sites shipping with these issues is growing weekly.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49495392",
+    "https://web.dev/articles/vitals",
+    "https://developers.google.com/speed/pagespeed/insights/",
+    "https://www.reddit.com/r/webdev/",
+    "https://www.reddit.com/r/startups/",
+    "https://indiehackers.com",
+    "https://gtmetrix.com/pricing.html",
+    "https://calibreapp.com/pricing",
+    "https://speedcurve.com/pricing/",
+    "https://www.debugbear.com/pricing"
+  ],
+  "evaluated_at": "2026-09-02T10:27:06+03:00"
+}

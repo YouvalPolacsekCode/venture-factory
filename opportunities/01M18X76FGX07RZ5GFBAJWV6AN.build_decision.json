@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01M18X76FGX07RZ5GFBAJWV6AN",
+  "decided_at": "2026-09-02T10:27:53+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 5,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.8,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.8 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "While all four required build gates are individually met, the weighted total of 5.8 falls well below the 6.5 min_total_to_build threshold, and recommended_stage is 'validate' (not 'build' or 'scale'), so build_now is prohibited. The cost_to_gain_ratio of 4.076 dramatically exceeds the 0.6 kill threshold, and even the optimistic scenario (2.038) is over 3x the kill line \u2014 meaning projected costs dwarf projected revenue. However, the idea has genuine structural merit (all gate floors met, real pain signal, fully automatable delivery) and the portfolio is empty, so an outright kill feels premature before any responsiveness test. The right move is defer one week to run a validation probe: post a landing page with a $49 Stripe link, drive 50+ targeted visits from HN/IndieHackers/X, and measure conversion and responsiveness. If the signal comes back strong, the total and ratio could shift materially.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "HN Show HN post + IndieHackers thread targeting vibe-coding founders"
+}

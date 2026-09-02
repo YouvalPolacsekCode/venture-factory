@@ -1,0 +1,25 @@
+{
+  "id": "01M1GG5KKWSTCXTBXDNGFFEQ85",
+  "discovered_at": "2026-09-02T10:26:09+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49531259",
+    "snippet": "They're not cheap at all. I did one xhigh Qwen 3.8 27B agentic coding task last week via OpenRouter and it cost me like $10. 99% of the cost was in input tokens, I only used like 100k ish output tokens. It was a one shot task asking the agent to implement proxy injection to Guice. It did a pretty amazing job. If you were to use hosted LLMs for a lot of agentic coding, a maxed out M5 Ultra Mac Studio would pay for itself in under a year."
+  },
+  "problem_statement": "Developers running agentic coding workloads on hosted LLMs face unpredictable and rapidly escalating per-task costs ($10+ per single task), making sustained use financially unsustainable without significant upfront hardware investment.",
+  "target_segment": "Software developers and indie hackers using hosted LLMs (OpenRouter, Anthropic, OpenAI) for agentic coding tasks at scale",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "agentic-coding",
+    "llm-cost",
+    "openrouter",
+    "local-llm",
+    "ai-inference",
+    "developer-tools",
+    "cost-optimization",
+    "self-hosted-ai"
+  ],
+  "notes": "Buyer signal: user is actively paying for hosted LLM inference ($10/task via OpenRouter) and explicitly calculating ROI of local hardware vs. hosted spend. Implies willingness to pay for tools that reduce or predict LLM API costs, or managed local inference services. Single strong anecdote but represents a pattern visible across HN/dev communities as agentic workloads grow.",
+  "status": "candidate"
+}

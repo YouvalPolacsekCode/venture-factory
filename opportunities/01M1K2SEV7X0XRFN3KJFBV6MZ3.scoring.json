@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M1K2SEV7X0XRFN3KJFBV6MZ3",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Architectural consulting and implementation guidance for Salesforce Agentforce + Data Cloud almost certainly requires live discovery calls, Q&A sessions, and iterative back-and-forth with client teams \u2014 cannot be fully asynchronous."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Delivering a meaningful, client-specific reference architecture or implementation review requires human expert judgment per engagement; a generic guide has low value and won't command consulting rates."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise Salesforce buyers expect ongoing support, clarification, and iteration \u2014 this is not a one-and-done automated delivery."
+    }
+  ],
+  "total": 1.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 Salesforce architects and senior developers at licensed enterprises with active Agentforce budgets \u2014 and the pain is genuine and recurring as teams hit architectural dead-ends during implementation. However, this opportunity is fundamentally a consulting engagement: the value is in tailored, expert human judgment applied to a specific client's Salesforce org, Data Cloud configuration, and use case, which cannot be meaningfully automated by Claude. Operational autonomy scores 2 because every engagement requires per-customer human work, live calls, and iterative delivery. After penalties for human fulfillment, synchronous delivery, and support load, the total collapses to 1.7 \u2014 well below the validate threshold. A solo non-technical operator without deep Salesforce expertise cannot credibly sell or deliver this.",
+  "solution_plan": "This is not buildable as an autonomous micro-service by a solo non-technical operator. The closest viable version \u2014 a Claude-generated decision-framework guide or reference architecture PDF sold as a digital product \u2014 would need to be generic enough to automate, but generic Salesforce architecture advice has minimal value to enterprise architects who need org-specific answers. A paid guide at $99-299 could be tested as a lead magnet, but it would not command consulting rates and would not solve the core problem. Realistically, this opportunity requires a Salesforce-certified consultant to deliver; the factory cannot substitute for that expertise. Recommend dropping unless the operator has direct Salesforce/Agentforce domain expertise and is willing to do consulting work personally.",
+  "notes": "Fails operational_autonomy build_gate (score 2, floor 7) and buildability_with_ai build_gate (score 4, floor 6). Total after penalties (1.7) is far below min_total_to_validate (5.5). Drop.",
+  "scored_at": "2026-09-03T10:30:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

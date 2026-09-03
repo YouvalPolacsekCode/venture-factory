@@ -1,0 +1,26 @@
+{
+  "id": "01M1K2SEVDWCJXJ586R2D86030",
+  "discovered_at": "2026-09-03T10:30:02+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199761/proxmox-linux-kvm-with-single-nvidia-l40s-gpu",
+    "snippet": "How to configure both Q-Series and C-Series vGPU profiles on Proxmox Host with single Nvidia L40s GPU. Need to run docker container with gpu and assign Q-series vGPU profile to Windows Server on same host. (score 3, 1 comment, captured 2026-09-02)"
+  },
+  "problem_statement": "ML/AI infrastructure operators running Proxmox with high-end Nvidia GPUs (L40s, A100) struggle to configure vGPU profiles so a single physical GPU can simultaneously serve GPU-accelerated containers and Windows VMs \u2014 forcing them to either buy additional cards or leave expensive capacity idle.",
+  "target_segment": "DevOps engineers and self-hosted ML infrastructure operators at small AI labs, agencies, or startups running Proxmox with enterprise-grade Nvidia GPUs.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "proxmox",
+    "vgpu",
+    "nvidia-l40s",
+    "gpu-partitioning",
+    "kvm",
+    "ml-infrastructure",
+    "self-hosted-ai",
+    "gpu-virtualization",
+    "devops"
+  ],
+  "notes": "The Nvidia L40s is a ~$10,000+ GPU card \u2014 this operator has already made a significant hardware investment and is trying to maximize utilization. Pain is real and technical. Opportunity: a step-by-step setup guide/service or a managed Proxmox vGPU configuration tool. Single signal, moderate engagement \u2014 signal strength kept at 2 pending corroboration from other sources.",
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M1K2SEV0CMEB0VPEEW6K3VHQ",
+  "discovered_at": "2026-09-03T10:30:02+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49546432",
+    "snippet": "I just found out that 1Password is donating $300,000 to a project founded by a very controversial person, and I'm looking to move to a different password manager. Has anyone migrated from 1Password recently to another tool/platform? Have you had a good experience with any tools in particular? Any advice, tips? I'm also interested in the corporate-use context; if I can convince my company to switch to an alternative with business controls, I'll surely try. (21 points, 11 comments, captured 2026-09-03)"
+  },
+  "problem_statement": "Teams and companies paying for 1Password want to migrate to an alternative password manager that offers equivalent business controls (SSO, audit logs, user provisioning, admin policies), but the migration path and feature parity are unclear, making it hard to build an internal business case for switching.",
+  "target_segment": "IT admins and security-conscious employees at SMB-to-mid-market companies currently paying for 1Password Business or Teams subscriptions.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "password-manager",
+    "1password-migration",
+    "enterprise-security",
+    "sso",
+    "business-controls",
+    "team-credentials",
+    "saas-switching",
+    "it-admin",
+    "credential-management"
+  ],
+  "notes": "Poster is an existing paying 1Password customer actively seeking to migrate and explicitly wants to pitch the switch to their company \u2014 clear B2B buyer intent. 21 upvotes + 11 comments on HN suggests this resonates beyond one person. Opportunity: a structured migration guide/tool or a managed-migration service that handles vault export, mapping to alternatives (Bitwarden Teams, Dashlane Business, etc.), and SSO reconfiguration. Willingness to pay is implied by current paid subscription and corporate context.",
+  "status": "candidate"
+}

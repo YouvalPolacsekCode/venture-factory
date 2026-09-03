@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M1K2SEVDWCJXJ586R2D86030",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any 'managed Proxmox vGPU configuration service' requires hands-on system access and per-customer technical work; even a guide product needs significant expert curation per GPU model and driver version combination."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 operators with $10k+ GPU cards want to maximize utilization \u2014 but the buyer is poorly defined (DevOps engineers at small AI labs are a heterogeneous, hard-to-reach audience who skew toward solving problems themselves via forums rather than paying for guides), and there is almost no willingness-to-pay signal for this type of niche infrastructure documentation. Lead reachability is weak: this audience lives on Reddit, ServerFault, and Discord but is resistant to paid products for configuration help. Operational autonomy is moderate at best for a static guide, but any service component collapses it. The deciding factor is that after the human fulfillment penalty, total drops to 2.7 \u2014 well below the validate threshold \u2014 and the audience size for 'Proxmox + L40s vGPU' is extremely small.",
+  "solution_plan": "This is not a viable standalone micro-service for a solo non-technical operator. The closest viable version would be a highly specific technical guide (PDF or web page) on configuring mixed vGPU profiles on Proxmox with Nvidia L40s, sold for $29-79 on Gumroad. However: the audience is tiny and self-sufficient (they debug on forums for free), willingness to pay for documentation is low, and producing an accurate, trustworthy guide requires genuine hands-on Proxmox/Nvidia expertise the factory cannot fabricate. If the operator has direct experience with this stack, a Gumroad guide could be worth a small experiment, but it is unlikely to generate meaningful revenue. Recommend dropping.",
+  "notes": "Fails buyer_clarity build_gate (score 4, floor 6), willingness_to_pay build_gate (score 4, floor 5), operational_autonomy build_gate (score 5, floor 7), and buildability_with_ai build_gate (score 5, floor 6). Total after penalties (2.7) is far below min_total_to_validate (5.5). Drop. Signal strength of 2 from a single low-engagement forum post reinforces this.",
+  "scored_at": "2026-09-03T10:30:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

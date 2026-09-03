@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1K2SEV0CMEB0VPEEW6K3VHQ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 3,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is identifiable \u2014 IT admins or security-conscious employees at SMB/mid-market companies on paid 1Password Business plans \u2014 and they demonstrably spend on password management already, so willingness to pay is plausible. However, this is an episodic pain (a one-time migration event driven by a PR controversy, not a recurring daily workflow problem), which keeps pain_frequency low and threatens long-term revenue if framed as a done-for-you service rather than a reusable SaaS. Operational autonomy is moderate: a structured migration guide or decision-matrix PDF/tool can be delivered automatically, but any hands-on vault export or SSO reconfiguration assistance starts pulling in human fulfillment. The deciding factor is that the demand signal is thin (21 HN upvotes from a single thread) and the controversy-driven switching intent may fade quickly \u2014 validate demand volume before investing in a build.",
+  "solution_plan": "WHAT: A self-serve '1Password Business Migration Kit' \u2014 a structured, automatically delivered guide + interactive comparison checklist helping IT admins evaluate and migrate to Bitwarden Teams, Dashlane Business, or Keeper. BUILD: The factory creates a Claude-powered intake form (company size, current 1Password tier, SSO provider, compliance needs) that auto-generates a tailored migration report (PDF + web page) and a feature-parity comparison; a Stripe payment link gates the full report at ~$49 one-time, with a free teaser version for lead capture \u2014 no coding by the operator, just prompt + Typeform/Tally + Stripe + email delivery via Claude. SELL: Reach IT admins via targeted posts in r/sysadmin, r/netsec, and relevant Slack/Discord communities, plus Google Ads on 'migrate from 1Password business'; outreach copy is drafted by the factory and sent only after operator approval. MAINTAIN: Stripe billing and report delivery are automated; Claude handles support queries via a simple email parser; the operator's only recurring touch is approving the occasional outreach batch or refund. CAVEAT: Demand is controversy-driven and may be short-lived \u2014 the operator should validate with a free landing page and waitlist before paying for ads.",
+  "notes": "Does not fail any build_gate on dimension scores alone, but total of 5.5 is below min_total_to_build (6.5). Stage correctly set to validate. Key risk: episodic, event-driven demand rather than recurring pain.",
+  "scored_at": "2026-09-03T10:30:54+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

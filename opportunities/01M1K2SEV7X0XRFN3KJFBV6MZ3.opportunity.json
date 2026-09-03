@@ -1,0 +1,26 @@
+{
+  "id": "01M1K2SEV7X0XRFN3KJFBV6MZ3",
+  "discovered_at": "2026-09-03T10:30:02+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439802/what-is-the-recommended-architecture-for-using-data-cloud-data-with-agentforce",
+    "snippet": "We're evaluating Agentforce for customer-facing use cases and are trying to understand the recommended architecture for making Data Cloud data available to an agent. When should Data Cloud be used as the source of context versus querying Salesforce objects directly? What is the recommended approach for grounding an agent with customer and product data? (captured 2026-09-01)"
+  },
+  "problem_statement": "Enterprise teams evaluating Salesforce Agentforce lack clear architectural guidance on integrating Data Cloud as a grounding layer \u2014 specifically when to use Data Cloud vs. direct CRM object queries \u2014 slowing down deployments and forcing expensive trial-and-error with consultant time.",
+  "target_segment": "Salesforce architects and senior developers at mid-market and enterprise companies actively evaluating or implementing Agentforce with Data Cloud.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "agentforce",
+    "salesforce",
+    "data-cloud",
+    "ai-agent",
+    "enterprise-architecture",
+    "crm-integration",
+    "llm-grounding",
+    "implementation-consulting",
+    "salesforce-dx"
+  ],
+  "notes": "Poster is on a team actively evaluating Agentforce \u2014 this implies an existing Salesforce contract and budget for Data Cloud, both paid products. The architectural confusion around Data Cloud + Agentforce grounding is a recurring theme in Salesforce communities (multiple related questions exist). Opportunity: a concise decision-framework guide, a reference architecture template, or a boutique consulting offer for Data Cloud + Agentforce implementation. Buyer: Salesforce-licensed enterprise with active AI deployment budget.",
+  "status": "candidate"
+}

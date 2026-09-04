@@ -1,0 +1,27 @@
+{
+  "id": "01M1NNACXQY7TTQHHHRF6DAKGS",
+  "discovered_at": "2026-09-04T10:32:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439809/any-recent-changes-to-oauth-authorization-code-flowweb-server-flow-related-to",
+    "snippet": "This was working as recently as last week but now when attempting to use a client id/secret from a connected app with the OAuth authorization code flow using a sandbox account it fails. When attempting to use OAuth authorization_code flow to obtain a code, it results in: error: OAUTH_AUTHORIZATION_BLOCKED error_description: Cross-org OAuth flows are not supported for this external client app. When attempting to retrieve a token using a refresh_token from a previously successful authorization, it [fails]."
+  },
+  "problem_statement": "Salesforce developers and ISV partners face sudden, undocumented breaking changes to OAuth sandbox flows that block integration pipelines without warning, wasting engineering hours diagnosing platform-side policy changes.",
+  "target_segment": "Salesforce ISV developers, integration engineers, and consulting firms maintaining Salesforce-connected apps",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "oauth",
+    "sandbox",
+    "integration",
+    "isv",
+    "api-breakage",
+    "developer-tooling",
+    "connected-app",
+    "platform-changes",
+    "devops"
+  ],
+  "notes": "Recent post (2026-09-03) describing a live production breakage. Business context clear: integration pipelines stopped working after a silent Salesforce platform change. Engineering time is expensive; companies pay for monitoring or changelog services to avoid this. Opportunity for a Salesforce change-monitoring/alert service or a managed OAuth proxy that abstracts platform quirks.",
+  "status": "candidate"
+}

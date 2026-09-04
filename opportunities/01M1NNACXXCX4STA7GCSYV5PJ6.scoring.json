@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1NNACXXCX4STA7GCSYV5PJ6",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 losing inbound emails to Gmail rate limits is an operational risk \u2014 but the buyer is weakly defined (DevOps engineers and SREs is broad, and most companies in this situation either build an internal queue or switch off Gmail for this use case), and there is minimal evidence anyone pays for a standalone email buffering proxy today. Willingness to pay is low (4): the companies affected either self-solve with cloud pub/sub queues (cheap) or move off Gmail entirely, and no clear paid substitute exists at the target price point. Buildability is also constrained \u2014 a reliable inbound email buffer that integrates with Gmail requires MX record changes, SMTP relay infrastructure, and deliverability guarantees that go beyond Claude + a form. The signal is a single forum post with no broader demand pattern. Drop.",
+  "solution_plan": "The service would be a managed SMTP inbound buffer that accepts high-volume email bursts, queues them, and trickles delivery into a Gmail/Google Workspace inbox at a rate under the API limits. To build it you need an SMTP server (e.g. Postfix or a hosted relay), a message queue (Redis or SQS), and rate-limiting logic \u2014 none of which the Claude factory can assemble without real infrastructure work. Even if built, selling it requires finding DevOps engineers at companies with this specific problem (not easily addressable via public lists) and convincing them to change MX records \u2014 a high-trust, high-friction sale. A solo non-technical operator cannot realistically build or maintain the email infrastructure required, and the buyer pool is too narrow and hard to reach to justify the effort. Recommend dropping this opportunity entirely.",
+  "notes": "Signal strength is weak (single post). Willingness_to_pay scored 4 (below build_gate floor of 5). Buildability_with_ai scored 4 (below build_gate floor of 6). Buyer_clarity scored 5 (below build_gate floor of 6). Multiple build_gates would fail even if total were higher.",
+  "scored_at": "2026-09-04T10:34:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

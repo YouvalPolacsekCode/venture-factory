@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1NNACXHA3MYS2FAHFM785RH",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Salesforce attribution setup is inherently a per-client configuration project: each org has different campaign structures, Lead Source picklists, and Campaign Influence models. Getting it right requires hands-on Salesforce access and judgement calls per customer, not a one-size-fits-all automated delivery."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Scoping and onboarding a Salesforce attribution engagement almost certainly requires a discovery call to understand the client's existing data model and campaign taxonomy before any configuration work can begin."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "The target buyer is a real, named role (marketing ops manager, RevOps lead) at digital agencies and mid-market B2B companies, and they genuinely pay for attribution tooling \u2014 AppExchange apps like Bizible/Marketo Measure cost $2k+/mo. However, the actual solution is Salesforce consulting: every client org is different, setup requires direct CRM access and expert judgement, and delivery cannot be automated. Operational autonomy scores 3 because this is per-customer hands-on professional services, not a self-serve product \u2014 and the penalties drop the total to 3.0, firmly in drop territory for this factory.",
+  "solution_plan": "This is a Salesforce multi-touch attribution consulting or managed-setup service: you'd audit a client's Salesforce org, design their Campaign Member / Campaign Influence structure, and configure it correctly. The problem is real and the buyers pay \u2014 but every engagement is unique, requires Salesforce admin access, and cannot be delivered by Claude without a human reviewing each org's data model. There is no way to build a self-serve, hands-off product here given the current tooling. A solo non-technical operator cannot realistically deliver this without Salesforce expertise and direct client involvement. Consider instead: a one-page diagnostic prompt (Claude reads a client's SF field export and recommends a data structure), sold as a $99 async audit \u2014 but even that requires a manual intake step and is hard to scale. Drop as a factory opportunity; redirect to a Salesforce partner or AppExchange product vendor.",
+  "notes": "Dropped due to requires_human_fulfillment and requires_synchronous_human penalties. Operational autonomy scored 3 \u2014 per-client Salesforce config is professional services, not a scalable automated product.",
+  "scored_at": "2026-09-04T10:34:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

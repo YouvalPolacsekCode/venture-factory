@@ -1,0 +1,27 @@
+{
+  "id": "01M1NNACXHA3MYS2FAHFM785RH",
+  "discovered_at": "2026-09-04T10:32:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439808/how-should-i-structure-salesforce-lead-data-when-leads-come-from-multiple-market",
+    "snippet": "We are working on improving lead tracking for a digital marketing workflow at Mind Mingles. Leads can come from sources such as organic search, paid campaigns, social media, referral traffic, and landing pages. The challenge is keeping the source information consistent when a lead interacts with multiple campaigns before becoming an opportunity. What would be the recommended Salesforce data structure for this type of setup? Should we rely mainly on Lead Source, Campaign Members, and Campaign Influence?"
+  },
+  "problem_statement": "Marketing operations teams at digital agencies and SMBs struggle to maintain consistent multi-touch attribution data in Salesforce when leads interact with multiple campaigns before converting, leading to inaccurate ROI reporting and budget misallocation.",
+  "target_segment": "Marketing ops managers and RevOps professionals at digital marketing agencies and mid-market B2B companies using Salesforce",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "lead-attribution",
+    "multi-touch-attribution",
+    "marketing-ops",
+    "revops",
+    "crm",
+    "campaign-tracking",
+    "lead-source",
+    "digital-marketing",
+    "b2b"
+  ],
+  "notes": "Posted by someone at a named digital marketing agency ('Mind Mingles'), indicating a real business workflow problem. Companies pay consultants and buy AppExchange tools to solve Salesforce attribution gaps. Recurring pain point across many similar posts in Salesforce and RevOps communities. Opportunity for a lightweight attribution layer or managed service on top of Salesforce.",
+  "status": "candidate"
+}

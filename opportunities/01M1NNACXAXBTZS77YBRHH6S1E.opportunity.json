@@ -1,0 +1,27 @@
+{
+  "id": "01M1NNACXAXBTZS77YBRHH6S1E",
+  "discovered_at": "2026-09-04T10:32:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95562/web-based-document-sharing-tool-with-page-level-analytics-and-data-room-controls",
+    "snippet": "I'm looking for a browser-based SaaS tool for securely sharing documents with investors, clients and external stakeholders. Required features: Support for PDF, DOCX, PPTX, XLSX, images and video. Email verification, password protection and NDA acceptance. Download controls, link expiration and dynamic watermarking. Page-by-page viewing analytics and time spent. Returning-visitor and engagement tracking. Multi-document data rooms or branded microsites. Analytics export. Custom branding, custom domains."
+  },
+  "problem_statement": "Sales and business development teams need a secure document-sharing tool with granular per-page engagement analytics, NDA gating, dynamic watermarking, and branded data rooms \u2014 existing options either lack analytics depth or are priced for enterprise only.",
+  "target_segment": "Sales reps, founders, and BD professionals at SMBs sharing proposals, decks, and due-diligence documents with investors or clients",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "document-sharing",
+    "data-room",
+    "page-analytics",
+    "secure-sharing",
+    "nda-gating",
+    "watermarking",
+    "saas",
+    "sales-enablement",
+    "investor-relations",
+    "deal-room"
+  ],
+  "notes": "Buyer is explicit: they enumerate a detailed feature list typical of someone who has already evaluated competitors (Docsend, Pitch, Notion) and found gaps. Business context is clear \u2014 sharing with investors and external stakeholders. Willingness to pay implied by framing as a SaaS tool search with enterprise-grade requirements. Strong signal despite being a single post because the specificity of requirements indicates active vendor evaluation.",
+  "status": "candidate"
+}

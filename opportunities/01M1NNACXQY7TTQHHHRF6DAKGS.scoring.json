@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1NNACXQY7TTQHHHRF6DAKGS",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, reachable role \u2014 Salesforce ISV developers and integration engineers at companies with live SF-connected apps \u2014 and the pain is acute: a silent platform breaking change that costs real engineering hours to diagnose is a high-severity, recurring-enough problem (SF releases three times a year plus unannounced sandbox changes). Willingness to pay is real but moderate (6): teams pay for Salesforce monitoring tools and changelog services like Salesforce Release Monitor, though the market is thin. Buildability and autonomy both pass their gates \u2014 a Claude-powered monitoring service that watches SF release notes, community posts, and Stack Exchange for breaking changes, then emails subscribers a weekly digest, is genuinely shippable \u2014 but there is no validated demand signal yet, so validate before building.",
+  "solution_plan": "The micro-service is a Salesforce breaking-change alert newsletter + RSS monitor: Claude watches Salesforce release notes, trust.salesforce.com, and relevant Stack Exchange/community posts daily, extracts breaking changes and OAuth/API updates, and emails a curated digest to subscribers. Build: the factory sets up a Claude prompt pipeline that fetches and summarizes Salesforce change feeds daily, with a simple landing page (e.g. Carrd or a static HTML page), a Stripe subscription link at $19/mo, and an email delivery via a service like Postmark or Resend \u2014 Youval approves the first batch of outreach emails and each new subscriber confirmation, then delivery runs hands-off. Sell: post in Salesforce Developer Community forums, Trailblazer Community, and relevant Slack groups (SF Partners Slack); cold-email ISV partner technical contacts listed in the AppExchange directory \u2014 all outreach queued for operator approval before sending. Maintain: Claude runs the daily scrape-and-summarize on schedule; billing is automated via Stripe; support queries are handled by a Claude-powered email responder with a flag-for-human escalation on edge cases; the only recurring operator touch is approving the weekly send and any unusual support escalations. Reality check: this is genuinely buildable and runnable by a solo non-technical operator using this factory.",
+  "notes": "No build_gates failing. Validate first: post in Salesforce ISV Slack and email 30 SF integration engineers to confirm they would pay $19/mo for a breaking-change alert digest. If 3+ express intent to pay, proceed to build.",
+  "scored_at": "2026-09-04T10:34:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

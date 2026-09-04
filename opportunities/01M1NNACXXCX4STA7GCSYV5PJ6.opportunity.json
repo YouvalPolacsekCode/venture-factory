@@ -1,0 +1,27 @@
+{
+  "id": "01M1NNACXXCX4STA7GCSYV5PJ6",
+  "discovered_at": "2026-09-04T10:32:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199769/how-do-you-buffer-bulk-inbound-email-when-the-sender-cant-rate-limit",
+    "snippet": "Google has a documented receive limit for Gmail of 60/min, 3,600/hour, 86,400/day. After any of these limits are reached, messages may be rejected. Is there recommended architectures for absorbing this kind of burst before it hits the inbox, that may trickle delivery into the mailbox at a controlled rate?"
+  },
+  "problem_statement": "Engineering and ops teams receiving high-volume inbound email bursts (e.g. alerts, notifications, transactional messages) hit Gmail rate limits and lose messages, but lack a simple managed buffering/throttling layer between the sender and the inbox.",
+  "target_segment": "DevOps engineers and SREs at companies relying on email-based alerting or transactional inbound flows into Gmail or Google Workspace",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-infrastructure",
+    "rate-limiting",
+    "gmail",
+    "inbound-email",
+    "devops",
+    "sre",
+    "email-queue",
+    "google-workspace",
+    "email-delivery",
+    "alerting"
+  ],
+  "notes": "Single recent post but describes a real infra gap: no off-the-shelf managed inbound email buffer exists for Google Workspace. Companies in this situation have ongoing operational risk (lost messages). Potential for a lightweight SaaS email proxy service. Buyer signal is moderate \u2014 business context clear but only one data point.",
+  "status": "candidate"
+}

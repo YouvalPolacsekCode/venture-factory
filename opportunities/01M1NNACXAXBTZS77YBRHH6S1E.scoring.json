@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1NNACXAXBTZS77YBRHH6S1E",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, named business role (sales reps, founders, BD professionals at SMBs) who clearly pays for solutions \u2014 DocSend costs $45-150/user/mo and Pitch/Notion are widely adopted \u2014 making willingness to pay the strongest signal here. However, this is NOT a Claude-prompt-plus-a-form build: dynamic watermarking, per-page view analytics, NDA gating, branded data rooms, and multi-format rendering (PDF/DOCX/PPTX/XLSX/video) require significant infra (document rendering pipeline, analytics event capture, CDN delivery) that is far beyond what the Claude factory can ship in a week. The build_gate on buildability_with_ai (scored 3, floor is 6) is the deciding factor \u2014 this is a well-validated market with real paying buyers, but the product is too technically complex for a solo non-technical operator using this tooling.",
+  "solution_plan": "This is a document-sharing analytics platform (think lightweight DocSend): secure links, page-level engagement tracking, NDA gating, and branded data rooms. To build it properly you would need a document rendering service (e.g. PDF.js or a hosted renderer), a real-time analytics event pipeline, CDN-hosted delivery with access controls, and dynamic watermarking \u2014 none of which the Claude factory can assemble without significant engineering. A Claude prompt alone cannot render PPTX or embed per-page tracking pixels. The honest answer: a solo non-technical operator using this factory CANNOT build a credible version of this product; what you could do instead is validate demand by building a stripped-down MVP (PDF-only, page analytics via a third-party embed like Tally/Typeform + a Notion-hosted data room) and charge $49/mo to 5 pilot customers before commissioning a proper build. Outreach: post in relevant Slack communities (RevOps Co-op, Pavilion) and cold-email sales directors at 50-person B2B companies \u2014 approval needed before any sends go out.",
+  "notes": "Failing build_gate: buildability_with_ai scored 3 (floor: 6). Dynamic watermarking, multi-format rendering, and real-time page-analytics are outside Claude+form+Stripe tooling. Validate demand first with a stripped-down manual/third-party MVP.",
+  "scored_at": "2026-09-04T10:34:04+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

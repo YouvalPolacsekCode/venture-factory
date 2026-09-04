@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M1K2SEV0CMEB0VPEEW6K3VHQ",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "rare",
+  "rationale": "The pain signal originates from a single HN thread with 21 upvotes and 11 comments tied to a specific PR controversy (1Password's $300K donation). This is episodic, event-driven switching intent rather than a recurring, persistent pain \u2014 the moment the controversy fades, so does the demand. Despite the presence of paying B2B customers (willingness-to-pay plausible by proxy), there is no evidence of 5 distinct pain quotes, no willingness-to-pay signal for a migration tool specifically, and no competitor charging for this service at scale, failing the minimum bar set in config/pain_validation.yaml.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49546432"
+  ],
+  "evaluated_at": "2026-09-04T10:32:57+03:00"
+}

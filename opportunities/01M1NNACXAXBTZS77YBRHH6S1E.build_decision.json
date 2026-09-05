@@ -1,0 +1,47 @@
+{
+  "opportunity_id": "01M1NNACXAXBTZS77YBRHH6S1E",
+  "decided_at": "2026-09-05T10:15:05+03:00",
+  "decision": "kill",
+  "confidence_pct": 88,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 5,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 3,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 8,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.8,
+      "min_total_to_build": 6.5,
+      "met": false
+    },
+    "recommended_stage": "validate"
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.8 < min_total_to_build 6.5",
+    "operational_autonomy=5 < 7",
+    "buildability_with_ai=3 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "This opportunity fails three independent hard gates: buildability_with_ai (3 vs floor 6), operational_autonomy (5 vs floor 7), and total score (5.8 vs 6.5 minimum). The product requires a document rendering pipeline, real-time per-page analytics, dynamic watermarking, and multi-format support \u2014 none of which are achievable with Claude + prompts + simple web tooling. Even a stripped-down MVP would demand significant ongoing human fulfillment. The cost-to-gain ratio of 6.55 is over 10\u00d7 the kill threshold of 0.6, and the 90-day expected gain is negative (-$196). While the market is real and buyers clearly pay (DocSend $45-150/user/mo), this is fundamentally the wrong product for this factory's capabilities. Killing rather than deferring because no realistic timeline resolves the buildability gap without external engineering resources.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": null,
+  "suggested_first_outreach_channel": null
+}

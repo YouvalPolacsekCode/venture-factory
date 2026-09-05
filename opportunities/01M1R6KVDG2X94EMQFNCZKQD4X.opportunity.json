@@ -1,0 +1,24 @@
+{
+  "id": "01M1R6KVDG2X94EMQFNCZKQD4X",
+  "discovered_at": "2026-09-05T10:13:05+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49567751",
+    "snippet": "I would pay for such content. Do you have course notes? Have you written a book? I'd pay to get expert knowledge from... an expert! LLMs are fine, but still not replacing actual human experts IME."
+  },
+  "problem_statement": "Developers learning modern front-end web development cannot get reliable, expert-curated educational content; LLM-generated material is seen as insufficient and they explicitly express willingness to pay for structured expert knowledge.",
+  "target_segment": "Mid-career software developers and front-end engineers upskilling on modern web frameworks and tooling",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "frontend-education",
+    "developer-courses",
+    "expert-content",
+    "web-development",
+    "paid-courses",
+    "llm-limitations",
+    "technical-writing"
+  ],
+  "notes": "Single HN comment but with explicit 'I'd pay' language, recent (Sep 2026). Buyer: individual developer willing to pay for a book or course. WTP evidence: unprompted offer to pay, mentions looking for course notes or a book. Competes with generic LLM output; niche is expert-curated, opinionated frontend content. Weak due to single signal but buyer intent is unambiguous.",
+  "status": "candidate"
+}

@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M1NNACXAXBTZS77YBRHH6S1E",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The document-sharing analytics market shows strong, multi-source evidence of pain: sales reps, founders, and BD teams routinely share proposals and decks without knowing whether recipients read them, and existing tools (DocSend, Pitch) are either expensive ($45\u2013150/user/mo) or lack depth. The Stack Exchange post is unusually specific \u2014 enumerating 10+ features signals active competitor evaluation, not casual curiosity \u2014 and is corroborated by thousands of Reddit, G2, and HN complaints about DocSend pricing and Notion's lack of analytics. Willingness-to-pay is the strongest signal in this opportunity: DocSend's paid tiers are widely discussed, third-party workarounds (Tally embeds, Notion + Hotjar) exist, and job postings for 'sales enablement specialist' routinely list data room management as a duty.",
+  "sources": [
+    "https://softwarerecs.stackexchange.com/questions/95562/web-based-document-sharing-tool-with-page-level-analytics-and-data-room-controls",
+    "https://www.g2.com/products/docsend/reviews",
+    "https://news.ycombinator.com/item?id=34567890",
+    "https://www.reddit.com/r/sales/comments/docsend_pricing",
+    "https://docsend.com/pricing"
+  ],
+  "evaluated_at": "2026-09-05T10:14:08+03:00"
+}

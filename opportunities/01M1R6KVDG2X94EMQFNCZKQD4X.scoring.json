@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1R6KVDG2X94EMQFNCZKQD4X",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Expert-curated frontend education content requires ongoing human expert authorship \u2014 the very thing the buyer is paying for. Claude can assist but cannot replace the expert credibility signal the market explicitly demands."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Course/content products typically attract questions, corrections, and community interaction that require human judgment to maintain credibility."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is an individual developer paying out of pocket (~$50-200 range for a course or book), which is a real but low-value, high-churn consumer segment. The core problem \u2014 'LLMs are insufficient, I want a human expert' \u2014 is a direct contradiction of what this factory can autonomously produce: Claude-generated content will not satisfy buyers who are explicitly rejecting AI-generated material. Operational autonomy is critically low because the product's value proposition depends on ongoing human expert authorship.",
+  "solution_plan": "This opportunity is not viable for this factory. The buyer explicitly wants human expert knowledge over LLM output, which means the factory's core advantage (Claude-generated content at scale) becomes a liability rather than an asset. A solo non-technical operator could not credibly author opinionated expert frontend content at the quality level that would differentiate from free LLM outputs. Recommend dropping and watching for a signal where AI-assisted content is acceptable to the buyer.",
+  "notes": "Fails operational_autonomy gate (score 3, min 7) and buildability_with_ai gate (score 4, min 6). The product's value proposition is structurally opposed to AI automation.",
+  "scored_at": "2026-09-05T10:14:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

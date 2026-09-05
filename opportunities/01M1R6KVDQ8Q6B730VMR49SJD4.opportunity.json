@@ -1,0 +1,25 @@
+{
+  "id": "01M1R6KVDQ8Q6B730VMR49SJD4",
+  "discovered_at": "2026-09-05T10:13:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439811/integrating-sf-messaging-into-custom-chat-application",
+    "snippet": "We're exploring options to enable a handover to SF messaging channel (for human agent transfer) from a custom chatbot application. BYOB using Interaction Service APIs Enhanced Chat APIs for custom clients seem to be the two potential solutions. Does it limit the opportunities for customising the use case on the client side?"
+  },
+  "problem_statement": "Businesses running custom AI chatbots struggle to implement reliable human-agent handover into Salesforce messaging channels; the available integration paths (BYOB Interaction Service vs Enhanced Chat APIs) are poorly documented and their tradeoffs for external clients are unclear, creating costly engineering research loops.",
+  "target_segment": "Software engineers and solution architects at companies using Salesforce Service Cloud with custom-built chatbot applications, typically mid-market to enterprise",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "chatbot-handover",
+    "human-in-the-loop",
+    "customer-service",
+    "api-integration",
+    "conversational-ai",
+    "live-agent",
+    "enterprise-saas"
+  ],
+  "notes": "Business/enterprise context: 'we're exploring' signals a team decision, not a hobbyist. Pain is integration complexity and unclear documentation for a production use case. Potential product: a pre-built connector or guide service that abstracts BYOB vs Enhanced Chat API decision for custom chatbot builders. Single signal but work context is clear.",
+  "status": "candidate"
+}

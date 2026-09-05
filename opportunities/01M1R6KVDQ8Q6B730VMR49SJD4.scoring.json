@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1R6KVDQ8Q6B730VMR49SJD4",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [],
+  "total": 5.7,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a software engineer or solutions architect at a mid-market/enterprise company using Salesforce Service Cloud \u2014 a specific, nameable business role with a real engineering budget and a production pain (failed chatbot handovers create customer-service incidents). Willingness to pay is plausible given adjacent Salesforce consulting rates and the cost of engineering hours lost to bad documentation. However, the signal is a single forum post and the idea has not been tested; responsiveness is unknown and the SF ecosystem is large enough that a validated connector or decision-guide service could earn recurring B2B revenue. Needs a validation probe before committing to build.",
+  "solution_plan": "The micro-service is a Salesforce chatbot handover decision kit: a structured guide plus a configuration template (or lightweight connector scaffold) that tells engineering teams exactly which API path (BYOB Interaction Service vs Enhanced Chat API) to use for their use case, with working code snippets. The factory builds this by having Claude synthesize the Salesforce documentation, Stack Exchange threads, and known edge cases into a definitive decision tree document + a set of copy-paste configuration templates, packaged as a PDF/Notion doc sold via Gumroad or a simple landing page with a Stripe link. To sell, the factory drafts targeted outreach to SF developer communities (Trailblazer Community, Salesforce Stack Exchange answerers, LinkedIn searches for 'Salesforce Solutions Architect') \u2014 Youval approves each outreach batch before it goes out. Delivery is instant (automated file download on payment), support is Claude-answered FAQ, and billing is Stripe. The only recurring human touch is approving outreach batches and reviewing any support escalations Claude flags as outside its confidence.",
+  "notes": "total 5.7 meets validate threshold (5.5) but not build threshold (6.5). Responsiveness signal is 2 (untested) \u2014 run a probe on Trailblazer Community or LinkedIn before committing further.",
+  "scored_at": "2026-09-05T10:14:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

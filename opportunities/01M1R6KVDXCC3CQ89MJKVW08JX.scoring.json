@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1R6KVDXCC3CQ89MJKVW08JX",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is an early-stage startup founder or developer who has real financial skin in the game (personal credit card being charged despite $25k GCP credits), making this a genuine acute pain rather than a theoretical one. Buyer clarity is moderate: startup founders using GCP for Startups is a nameable cohort reachable through YC/accelerator communities, but individual willingness to pay for a one-time audit/guide is uncertain \u2014 the pain is acute but episodic, and once resolved the customer has no reason to return. Operational autonomy is viable if the product is a self-serve guide or automated diagnostic, but needs validation that founders will pay rather than just Google the answer.",
+  "solution_plan": "The micro-service is a Firebase/GCP billing migration checklist + automated billing-account diagnostic: a step-by-step guide that walks startup founders through verifying their Firebase project is correctly linked to their startup billing account and that credits are applied, plus a simple web form where they input their project ID and get back a Claude-generated diagnostic report. The factory builds this as a Claude prompt that interprets pasted GCP billing screenshots or exported billing data, wrapped in a minimal form page (Typeform or similar) with a Stripe payment link ($29-49 one-time). To sell, the factory drafts posts/replies in relevant communities (HN, Reddit r/googlecloud, GCP for Startups Slack, YC alumni networks) pointing to the tool \u2014 Youval approves each post before it goes live. Delivery is instant (automated report emailed on payment), support is Claude-answered FAQ, and billing is Stripe. The only recurring operator touch is approving community posts and reviewing any edge-case support tickets Claude flags. Key risk: this pain is episodic (one-time per startup migration), so LTV is low and the market needs volume to work \u2014 validate that enough founders hit this problem monthly before investing further.",
+  "notes": "total 5.5 exactly meets the validate threshold. Pain is episodic (low pain_frequency at 4) which limits LTV; validate whether the GCP for Startups program generates enough monthly new entrants to sustain volume. Defensibility is low (3) \u2014 easily copied \u2014 so speed to validate matters.",
+  "scored_at": "2026-09-05T10:14:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M1R6KVDXCC3CQ89MJKVW08JX",
+  "discovered_at": "2026-09-05T10:13:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199775/transferring-project-firebase-from-one-billing-account-to-another-but-still-bein",
+    "snippet": "I created a Firebase project in a personal billing account with my credit card attached. We recently got accepted into the GCP for Startup project and were granted $25k cloud credit. I migrated the Firebase project from the personal account to the startup account, however I am still being billed to the personal account."
+  },
+  "problem_statement": "Startups migrating Firebase projects between GCP billing accounts continue to be charged to the original personal credit card even after migration, and cannot determine whether GCP startup credits cover Firebase usage, leading to unexpected personal financial exposure.",
+  "target_segment": "Early-stage startup founders and developers managing GCP/Firebase infrastructure, particularly those transitioning to startup credit programs",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "firebase",
+    "gcp",
+    "billing",
+    "cloud-cost",
+    "startup-credits",
+    "infrastructure",
+    "devops",
+    "cloud-migration"
+  ],
+  "notes": "Real financial stakes: personal credit card being charged despite $25k GCP credit grant. Work context clear (startup with GCP for Startups acceptance). Pain is GCP/Firebase billing opacity during account migration. Potential product angle: cloud billing audit/migration service or automated billing-account validator for Firebase projects. Single signal; pattern likely recurs given GCP for Startups program scale.",
+  "status": "candidate"
+}

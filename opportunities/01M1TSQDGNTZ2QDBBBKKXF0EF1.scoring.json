@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1TSQDGNTZ2QDBBBKKXF0EF1",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is an IT or email admin at an SMB or mid-market company \u2014 a specific, named role with clear budget authority for email security tooling. Willingness to pay is strongly confirmed: Dmarcian ($199+/mo), Valimail, and EasyDMARC all charge real money for exactly this problem, so there is zero doubt the market pays. The total hits the build threshold (6.5) and all build gates pass: operational_autonomy is 7 (a monitoring + guided-enforcement tool can run automated), buildability is 7 (DMARC reporting data is parse-able via Claude, no custom ML needed), buyer_clarity is 8, and willingness_to_pay is 8. However, responsiveness_signal is 0 \u2014 no probe has been run \u2014 so the prudent call is to validate buyer acquisition cost before committing to build, since the incumbents (Dmarcian, Valimail) have strong SEO and brand recognition. The stage is validate because the signal source is researcher-framed, not a direct buyer complaint with intent to purchase.",
+  "solution_plan": "This is a DMARC enforcement migration assistant: connect your domain, the tool reads your current DMARC/SPF/DKIM DNS records and your DMARC aggregate reports (via email forwarding or RUA parsing), then Claude generates a plain-English risk assessment and a step-by-step enforcement plan (p=none \u2192 p=quarantine \u2192 p=reject) with a weekly email digest showing progress. The factory builds it as a Claude pipeline + a lightweight form/dashboard (Youval approves the initial build spec, no coding required by Youval directly). Sell by targeting IT admins on LinkedIn (search by title + 'email security' or 'M365 admin'), posting in r/sysadmin and r/msp, and answering DMARC questions on ServerFault \u2014 outreach batches need Youval's approval before sending. Pricing: $49/domain/month (well below Dmarcian), billed via Stripe automatically. Delivery, weekly digests, and billing all run via Claude + this repo; the only human step is approving new outreach campaigns.",
+  "notes": "All build gates technically pass at this score. Held at 'validate' because responsiveness_signal is untested and incumbents are well-entrenched \u2014 confirm a reachable acquisition channel before building.",
+  "scored_at": "2026-09-06T10:27:32+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

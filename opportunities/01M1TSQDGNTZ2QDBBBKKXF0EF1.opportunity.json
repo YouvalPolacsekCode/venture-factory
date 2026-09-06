@@ -1,0 +1,25 @@
+{
+  "id": "01M1TSQDGNTZ2QDBBBKKXF0EF1",
+  "discovered_at": "2026-09-06T10:25:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199774/why-are-so-many-domains-still-using-p-none-for-dmarc-despite-having-spf-and-dkim",
+    "snippet": "I've been analyzing DNS records for email authentication across the Tranco Top-1M over the past ten years. The data shows a clear trend: SPF and DKIM adoption has grown significantly, but the percentage of domains with an enforced DMARC policy (p=quarantine or p=reject) has barely moved in years \u2014 most remain at p=none."
+  },
+  "problem_statement": "The vast majority of businesses that have set up SPF and DKIM still leave DMARC at p=none, meaning their domains remain spoofable despite partial setup \u2014 likely due to fear of breaking legitimate email flows when moving to enforcement.",
+  "target_segment": "IT and email administrators at SMBs and mid-market companies managing their own email infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "dmarc",
+    "email-security",
+    "spf",
+    "dkim",
+    "dns",
+    "email-deliverability",
+    "cybersecurity",
+    "compliance"
+  ],
+  "notes": "The post author has a decade of data showing a stubborn gap between SPF/DKIM adoption and DMARC enforcement. The implied pain: companies want enforcement but are afraid to break legitimate mail flows. Opportunity: a safe DMARC enforcement migration service or tool that monitors reporting data and guides step-by-step promotion from p=none to p=reject. Buyers exist \u2014 email security is a paid-for concern; competing tools like Valimail and Dmarcian already charge for this, confirming willingness to pay. Signal is research-framed rather than a direct buyer complaint, hence rating of 2.",
+  "status": "candidate"
+}

@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M1NNACXQY7TTQHHHRF6DAKGS",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "Salesforce's three annual release cycles plus unannounced sandbox policy changes create a recurring, high-severity pain for ISV developers: integration pipelines break silently, engineering hours are consumed diagnosing platform-side changes, and the pain recurs with every release window. Multiple Stack Exchange threads, Salesforce community posts, and the existence of paid changelog/monitoring tools (Salesforce Release Monitor, Salto, etc.) confirm both the frequency and willingness to pay. At least one direct willingness-to-pay signal exists: teams are already paying for release monitoring SaaS and Salesforce consulting hours to handle this.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439809/any-recent-changes-to-oauth-authorization-code-flowweb-server-flow-related-to",
+    "https://trust.salesforce.com/en/",
+    "https://developer.salesforce.com/docs/atlas.en-us.238.0.change_management.meta/change_management/changemanagement_intro.htm",
+    "https://www.salto.io/",
+    "https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FYF6OUAX"
+  ],
+  "evaluated_at": "2026-09-06T10:26:35+03:00"
+}

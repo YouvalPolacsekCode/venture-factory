@@ -1,0 +1,24 @@
+{
+  "id": "01M1TSQDGX3WF9PAHX58CMY1ZP",
+  "discovered_at": "2026-09-06T10:25:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148915/how-to-optimise-a-google-business-profile-for-multiple-cities-including-a-main",
+    "snippet": "I run a workwear and uniform business based in Manchester, serving both the city and surrounding areas in the North West. My Google Business Profile is currently optimised for Manchester, but I want to improve visibility for nearby towns like Bolton, Stockport, and Salford. I've added service areas to my profile, but I'm unsure if this is enough to rank well in these locations. Should I create separate listings for each town, or is there a better way to optimise my existing profile?"
+  },
+  "problem_statement": "Local SMB owners serving multiple cities or regions don't know how to correctly optimize a single Google Business Profile to rank across all service areas without creating duplicate or policy-violating listings.",
+  "target_segment": "Local service-area business owners (trade, retail, professional services) serving multiple towns or cities",
+  "geo": "GB",
+  "signal_strength": 2,
+  "keywords": [
+    "local-seo",
+    "google-business-profile",
+    "multi-location",
+    "smb",
+    "service-area",
+    "gbp-optimization",
+    "search-visibility"
+  ],
+  "notes": "Poster is a real business owner (workwear/uniform company) with a clear commercial problem: lost revenue from poor multi-city visibility. They are already investing in GBP optimization, implying willingness to pay for a service or tool that gets it right. Opportunity: a done-for-you local SEO service or auditing tool for service-area businesses. Single post keeps signal at 2, but the pain pattern is very common for trade and service businesses.",
+  "status": "candidate"
+}

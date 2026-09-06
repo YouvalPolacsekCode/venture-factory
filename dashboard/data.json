@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-09-05T07:15:10+00:00",
-    "idt": "2026-09-05T10:15:10+03:00"
+    "utc": "2026-09-06T07:27:50+00:00",
+    "idt": "2026-09-06T10:27:50+03:00"
   },
   "funnel": {
-    "candidates": 293,
-    "scored": 293,
-    "validated": 31,
+    "candidates": 297,
+    "scored": 297,
+    "validated": 32,
     "build_decisions": {
-      "defer_1_week": 27,
+      "defer_1_week": 28,
       "kill": 4
     },
     "build_now": 0,
@@ -453,6 +453,35 @@
     },
     {
       "topics": [
+        "dmarc",
+        "email-security",
+        "spf"
+      ],
+      "id": "01M1TSQDGNTZ2QDBBBKKXF0EF1",
+      "problem_statement": "The vast majority of businesses that have set up SPF and DKIM still leave DMARC at p=none, meaning their domains remain spoofable despite partial setup — likely due to fear of breaking legitimate email flows when moving to enforcement.",
+      "target_segment": "IT and email administrators at SMBs and mid-market companies managing their own email infrastructure",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is an IT or email admin at an SMB or mid-market company — a specific, named role with clear budget authority for email security tooling. Willingness to pay is strongly confirmed: Dmarcian ($199+/mo), Valimail, and EasyDMARC all charge real money for exactly this problem, so there is zero doubt the market pays. The total hits the build threshold (6.5) and all build gates pass: operational_autonomy is 7 (a monitoring + guided-enforcement tool can run automated), buildability is 7 (DMARC…",
+      "solution_plan": "This is a DMARC enforcement migration assistant: connect your domain, the tool reads your current DMARC/SPF/DKIM DNS records and your DMARC aggregate reports (via email forwarding or RUA parsing), then Claude generates a plain-English risk assessment and a step-by-step enforcement plan (p=none → p=quarantine → p=reject) with a weekly email digest showing progress. The factory builds it as a Claude pipeline + a lightweight form/dashboard (Youval approves the initial build spec, no coding required by Youval directly). Sell by targeting IT admins on LinkedIn (search by title + 'email security' or 'M365 admin'), posting in r/sysadmin and r/msp,…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 8,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://serverfault.com/questions/1199774/why-are-so-many-domains-still-using-p-none-for-dmarc-despite-having-spf-and-dkim",
+      "discovered_at": "2026-09-06T10:25:34+03:00"
+    },
+    {
+      "topics": [
         "ai-spend",
         "cost-optimization",
         "saas-management"
@@ -713,48 +742,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48624574",
       "discovered_at": "2026-06-22T11:49:39+03:00"
-    },
-    {
-      "topics": [
-        "tech-news",
-        "content-filtering",
-        "ai-fatigue"
-      ],
-      "id": "01KW943KM7B2BP8S9SCRR3Z4MD",
-      "problem_statement": "Tech professionals who rely on industry news for work can no longer efficiently find non-AI tech stories because major outlets like Techmeme and HN are saturated with AI content, making it costly in time to stay informed on topics relevant to their actual work.",
-      "target_segment": "Software engineers, indie developers, and tech-focused knowledge workers who follow industry news as part of their professional practice",
-      "total": 6.3,
-      "recommended_stage": "validate",
-      "rationale": "The audience — software engineers and indie devs who follow tech news professionally — does demonstrably pay for curated newsletters (TLDR, The Pragmatic Engineer), confirming willingness_to_pay at a moderate level. However, buyer_clarity lands at 6 rather than higher because this is a prosumer/individual-consumer mix with real 'should be free' sentiment, and there is no named business role with a budget line. The build_gate for buyer_clarity (floor: 6) is met but barely, and responsiveness_sig…",
-      "solution_plan": "The micro-service is a weekly or twice-weekly curated email digest of non-AI tech news, filtered and summarised by Claude from RSS/HN/lobste.rs feeds. BUILD: the factory sets up a Claude prompt pipeline that ingests feeds, filters out AI-tagged stories, summarises the remainder into a scannable digest, and sends via a transactional email provider (e.g. Resend or Buttondown); a simple landing page with a Stripe subscription link ($8–12/mo) and an email sign-up form is the entire storefront — no coding by Youval. SELL: reach 300–500 potential subscribers by posting in HN threads (like the source thread), relevant subreddits (r/programming, r/w…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 6,
-        "Runs alone": 8,
-        "Will pay": 6,
-        "Buildable": 8,
-        "Pain": 6
-      },
-      "verdict": "validated",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48713041",
-      "discovered_at": "2026-06-29T10:22:10+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3651,
-    "last_7_days_usd": 1.6884,
-    "all_time_usd": 21.7092,
+    "today_usd": 0.381,
+    "last_7_days_usd": 1.8316,
+    "all_time_usd": 22.0903,
     "by_day": [
-      {
-        "date": "2026-08-30",
-        "usd": 0.2378
-      },
       {
         "date": "2026-08-31",
         "usd": 0.198
@@ -778,24 +774,28 @@
       {
         "date": "2026-09-05",
         "usd": 0.3651
+      },
+      {
+        "date": "2026-09-06",
+        "usd": 0.381
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6442
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.3791
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.3277
+        "usd": 0.6544
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3042
+        "usd": 0.4552
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.358
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.331
       },
       {
         "agent": "daily_summary",
@@ -804,41 +804,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-08-30",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-08-31",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-06",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-05.md",
-    "date": "2026-09-05",
-    "text": "# Daily Summary — 2026-09-05 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 293 |\n| Opportunities validated past threshold | 69 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across tracked sources.\n2. `pain_validation` probes high-scoring candidates from today's 69 verdicts.\n3. `opportunity_scoring` re-ranks candidates as new market signals arrive.\n4. `cost_gain` updates weekly ROI snapshots for the Sunday ritual.\n5. `build_decisions` evaluates validation results for experiment entry points.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-09-06.md",
+    "date": "2026-09-06",
+    "text": "# Daily Summary — 2026-09-06 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 297 |\n| Opportunities validated past threshold | 70 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in the factory. Discovery and validation phase running at full capacity.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `pain_validation` continues vetting the 70 high-scoring opportunities from yesterday's market radar sweep.\n2. `lead_research` collects contact details for validated opportunities (currently skipped; will resume Monday).\n3. `opportunity_scoring` refines scoring model on the 297 candidate opportunities.\n4. `cost_gain` analyzes margins and TAM on moving candidates.\n5. `build_decisions` recommends which validated opportunities warrant experiment setup.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

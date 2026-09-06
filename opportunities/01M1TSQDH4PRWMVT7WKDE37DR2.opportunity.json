@@ -1,0 +1,25 @@
+{
+  "id": "01M1TSQDH4PRWMVT7WKDE37DR2",
+  "discovered_at": "2026-09-06T10:25:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148911/web-performance-core-web-vitals",
+    "snippet": "Given that my Next.js + Strapi website receives about 286,000 page views per year and currently scores ~70\u2013100 on desktop and ~60\u201390 on mobile in PageSpeed Insights (with GTM as the main bottleneck), how can I determine whether these performance scores are already sufficient for real users and business impact, or whether migrating to server-side GTM would meaningfully improve outcomes?"
+  },
+  "problem_statement": "Business website operators with meaningful traffic cannot determine whether investing in server-side tag management migration is worth the cost and complexity, leaving them stuck with client-side GTM that degrades Core Web Vitals and potentially SEO rankings.",
+  "target_segment": "Marketing and web ops teams at SMBs and agencies running Next.js or similar sites with 100k+ annual page views",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "core-web-vitals",
+    "google-tag-manager",
+    "server-side-gtm",
+    "web-performance",
+    "next-js",
+    "seo",
+    "analytics",
+    "conversion-optimization"
+  ],
+  "notes": "Poster has a real commercial site (286k page views/year), is already considering a paid infrastructure upgrade (server-side GTM has hosting costs), and is trying to make an ROI decision. Buyer context is clear. Opportunity: a ROI calculator or audit service for GTM migration decisions; or a managed server-side GTM migration service. Single post keeps signal low, but the question pattern is common across webmaster/SEO communities.",
+  "status": "candidate"
+}

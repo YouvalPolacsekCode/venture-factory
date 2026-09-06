@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1TSQDGX3WF9PAHX58CMY1ZP",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Done-for-you local SEO optimization requires per-client manual work (creating content, managing GBP listings, monitoring rankings) that cannot be fully automated by Claude without significant human judgement per account."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Local SMB clients typically require ongoing hand-holding, status updates, and explanations \u2014 high support load per customer."
+    }
+  ],
+  "total": 2.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a local SMB owner (e.g. a Manchester workwear shop) \u2014 an individual consumer-adjacent buyer who rarely pays recurring SaaS fees for SEO tools and has low budget authority. Willingness to pay is weak: free tools (Google's own GBP interface, free SEO audits) dominate this space, and paid local SEO services are typically agency-sold at low margins with high churn. Critically, operational_autonomy scores 4 \u2014 any meaningful service requires per-client manual GBP management, content creation for multiple city landing pages, and ongoing rank monitoring that demands human judgement. Combined with a low buyer_clarity score (SMB owners are a broad, hard-to-target cohort) and heavy penalties for human fulfillment and support, the total drops to 2.8. This is a drop.",
+  "solution_plan": "Not recommended to build or validate. The core problem is that meaningful local SEO help for multi-city service-area businesses requires per-client manual work (reviewing GBP, writing location pages, monitoring competitors) that cannot run autonomously. Even an audit tool would need constant updates as Google changes its GBP algorithm, and the SMB buyer segment is notoriously price-sensitive and high-churn. A solo non-technical operator using a Claude factory cannot realistically deliver and maintain this at a margin worth pursuing.",
+  "notes": "build_gate operational_autonomy unmet (scored 4, floor is 7). buyer_clarity unmet (scored 5, floor is 6). Total 2.8 is well below min_total_to_validate (5.5).",
+  "scored_at": "2026-09-06T10:27:32+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

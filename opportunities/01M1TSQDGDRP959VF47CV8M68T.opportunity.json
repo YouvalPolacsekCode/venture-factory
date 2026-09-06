@@ -1,0 +1,25 @@
+{
+  "id": "01M1TSQDGDRP959VF47CV8M68T",
+  "discovered_at": "2026-09-06T10:25:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199776/how-to-get-user-read-all-permissions-in-microsoft-graph-to-be-seen-on-the-pc-end",
+    "snippet": "Very confused with Microsoft Graph permissions... First provided App based permissions (as I understand that doesn't require periodic approvals of access), but then realised one can't send Teams messages with that way of getting permissions (as if there would be never a need for this Microsoft!). Then pivoted to delegated permissions, but can't seem to get User.Read.All to be seen, or usable on the PC side."
+  },
+  "problem_statement": "Developers and IT admins integrating Microsoft Graph struggle to understand and correctly configure permission scopes (app vs. delegated), leading to wasted hours and blocked automation projects inside companies.",
+  "target_segment": "IT admins and developers at SMB-to-enterprise companies building M365/Teams integrations",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "microsoft-graph",
+    "azure-ad",
+    "permissions",
+    "api-integration",
+    "m365",
+    "teams",
+    "developer-tools",
+    "identity"
+  ],
+  "notes": "Single post but reflects a widely-documented, recurring pain across StackOverflow/ServerFault/Reddit. Business context is clear: the user is building a company integration and is blocked. Time-waste is implicit (multi-step failed attempts). Opportunity: a plain-language Graph permissions configurator/validator tool. Buyer would be a dev or IT team at a company paying for M365.",
+  "status": "candidate"
+}

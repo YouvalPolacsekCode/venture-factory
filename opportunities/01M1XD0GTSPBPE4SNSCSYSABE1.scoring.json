@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M1XD0GTSPBPE4SNSCSYSABE1",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Salesforce Life Sciences Cloud configuration requires per-client hands-on admin/architect work \u2014 each implementation is custom and cannot be templated or delivered fully by Claude without a certified Salesforce practitioner reviewing and deploying org-specific metadata."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Pharmaceutical and life sciences companies operate under FDA, EMA, and 21 CFR Part 11 compliance requirements; any system tracking field rep coaching visits may need validation documentation and audit trails that require human compliance sign-off."
+    }
+  ],
+  "total": 1.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyers are Salesforce admins and solution architects at pharma companies \u2014 real people with budget \u2014 but the solution inherently requires certified Salesforce implementation work that Claude cannot autonomously deliver; buildability_with_ai (3) and operational_autonomy (2) both fail their build_gate floors by a wide margin. Layered on top are regulated-industry obligations and per-customer manual fulfillment, driving the total to 1.1. This is a professional services / ISV consulting play, not a solo Claude-factory micro-service.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator running an autonomous Claude factory. Each engagement would require a certified Salesforce Health Cloud architect to design, build, and deploy org-specific metadata, plus compliance documentation for pharma validation \u2014 neither can be handled by Claude prompts alone. Drop and do not pursue.",
+  "notes": "Failing build_gates: operational_autonomy (2, floor 7), buildability_with_ai (3, floor 6). Penalties: requires_human_fulfillment (-1.5), regulated_industry (-1.5). This is a consulting/ISV play requiring Salesforce certification and pharma compliance expertise.",
+  "scored_at": "2026-09-07T10:42:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

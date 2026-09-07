@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M1R6KVDQ8Q6B730VMR49SJD4",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real but extremely narrow: only companies simultaneously running custom-built chatbots AND Salesforce Service Cloud AND attempting human-agent handover face this exact integration decision. A single forum signal with no corroborating paid-tool demand, no competitor pricing evidence, and no volume of complaints across StackExchange, GitHub, or Trailblazer Community is insufficient to meet the pass threshold of 5 distinct pain quotes and 1 willingness-to-pay signal. The engineering cost is real but the addressable population is too small and dispersed to justify promotion.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439811/integrating-sf-messaging-into-custom-chat-application"
+  ],
+  "evaluated_at": "2026-09-07T10:42:07+03:00"
+}

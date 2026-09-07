@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M1XD0GTYTTZP6ETY5JF4T1AJ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Server-side GTM migration involves reviewing each client's existing tag configuration, testing tracking accuracy post-migration, and debugging broken tags \u2014 work that requires per-client human technical judgment and cannot be fully automated by Claude."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer \u2014 technical founders and developers at real businesses with SEO stakes \u2014 is plausible and agencies already charge $500\u2013$3k for this work, confirming willingness to pay. However, each server-side GTM migration requires hands-on review of a client's unique tag setup, post-migration QA, and debugging, making per-customer human fulfillment unavoidable and dropping operational_autonomy to 5 (below the 7 floor). The penalty for human fulfillment further reduces the total to 3.8. A fully informational product (guide/checklist) would score higher on autonomy but likely not command meaningful prices against free alternatives.",
+  "solution_plan": "This opportunity is not viable as an autonomous micro-service because every real migration engagement requires reviewing a client's specific GTM container, testing tracking accuracy, and debugging \u2014 Claude cannot reliably perform this per-client technical audit without human QA. A pure content/guide product (e.g. a $29 PDF checklist) is buildable autonomously but unlikely to generate meaningful recurring revenue against the volume of free tutorials already available. Drop in favor of higher-autonomy opportunities.",
+  "notes": "Failing build_gate: operational_autonomy (5, floor 7). Penalty: requires_human_fulfillment (-1.5) because actual migration delivery requires per-client human technical work. The informational-only variant avoids the penalty but faces a free-content ceiling.",
+  "scored_at": "2026-09-07T10:42:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

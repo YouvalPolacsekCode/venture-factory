@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1XD0GTM9DED49C3JFHWGJVJ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a named, reachable B2B persona \u2014 enterprise developers and IT engineers at mid-to-large orgs \u2014 who already spend money on adjacent automation tools (Power Automate, Workato), signaling real willingness to pay. The pain is structural and recurs across many orgs, but we have only one confirmed signal and no reply/booking data yet. The operational_autonomy and buildability_with_ai scores both clear their build_gate floors (7 each), and buyer_clarity (7) and willingness_to_pay (6) also clear their floors, so this is gated only by the low responsiveness_signal and thin corroboration \u2014 validate first by probing developer communities before committing to build.",
+  "solution_plan": "WHAT: A concise, always-current Microsoft Graph Teams Permission Guide & Troubleshooter \u2014 a Claude-powered web tool where a developer describes what they want to automate and receives the exact permission scope, consent flow, and working PowerShell/code snippet. BUILD: The factory creates a Claude system prompt trained on MS Graph docs, a simple single-page form (what you want to do \u2192 permission answer + code snippet), hosted on a lightweight static page with a Stripe payment link for a one-time or monthly access fee; no coding by Youval. SELL: Reach developers via targeted posts on ServerFault, Stack Overflow Developer Story, and DevTo; Youval approves outreach batches before they go out. MAINTAIN: Claude handles all query answering; Stripe handles billing; support questions go through a simple contact form answered by Claude \u2014 Youval's only recurring touch is approving outreach batches and reviewing weekly revenue dashboards. NOTE: The real risk is that free documentation and community answers already cover this adequately; the validation step must confirm developers will pay ($9\u2013$29/mo or $49 one-time) rather than just bookmark a free resource.",
+  "notes": "All four build_gates technically pass at current scores, but responsiveness_signal is untested (score 1) and the idea rests on a single forum post. Validate by posting a 'would you pay for X' probe in 2-3 developer communities before building.",
+  "scored_at": "2026-09-07T10:42:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M1XD0GTM9DED49C3JFHWGJVJ",
+  "discovered_at": "2026-09-07T10:41:04+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199776/how-to-send-a-teams-message-from-ms-graph-when-i-cant-get-user-read-all-and-ch",
+    "snippet": "Very confused with Microsoft Graph permissions... First provided App based permissions (as I understand that doesn't require periodic approvals of access), but then realised one can't send Teams messages with that way of getting permissions (as if there would be never a need for this Microsoft!). Then pivoted to delegated permissions, but can't seem to get User.Read.All to be seen, or usable on the PC side... Been a bit of a ride."
+  },
+  "problem_statement": "Enterprise developers building Teams automation via Microsoft Graph waste hours navigating contradictory permission scopes \u2014 app-only vs delegated \u2014 and cannot complete basic tasks like sending messages without hitting undocumented permission walls.",
+  "target_segment": "Enterprise developers and IT engineers at mid-to-large companies automating Microsoft Teams workflows via MS Graph API",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "microsoft-graph",
+    "teams-automation",
+    "api-permissions",
+    "enterprise-dev",
+    "powershell",
+    "workflow-automation",
+    "developer-tooling"
+  ],
+  "notes": "Business context is clear: developer at an org attempting to automate Teams notifications \u2014 a routine enterprise task. The frustration is structural (Microsoft permission model complexity) and recurs across many orgs. Competing paid tools exist (e.g. Workato, Power Automate) suggesting willingness to pay. Single data point here; signal strength capped at 2 pending corroboration.",
+  "status": "candidate"
+}

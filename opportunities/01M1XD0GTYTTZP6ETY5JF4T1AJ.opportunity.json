@@ -1,0 +1,24 @@
+{
+  "id": "01M1XD0GTYTTZP6ETY5JF4T1AJ",
+  "discovered_at": "2026-09-07T10:41:04+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148910/is-it-worth-implementing-server-side-google-tag-manager-to-improve-web-performan",
+    "snippet": "I have a Next.js + Strapi website with approximately 286,000 page views per year. I've spent considerable time optimizing the application itself... my testing indicates that Google Tag Manager (GTM) is one of the largest remaining performance bottlenecks. Desktop: approximately 70\u2013100, Mobile: approximately 60\u201390."
+  },
+  "problem_statement": "Growing businesses running Next.js sites find client-side Google Tag Manager is their primary remaining performance bottleneck but lack clear guidance or tooling to evaluate, implement, and validate a migration to server-side GTM without breaking analytics.",
+  "target_segment": "Technical founders, developers, and digital marketers at small-to-mid businesses running Next.js or similar modern web stacks with real traffic and SEO stakes",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-tag-manager",
+    "server-side-gtm",
+    "nextjs",
+    "web-performance",
+    "core-web-vitals",
+    "seo-tooling",
+    "analytics-migration"
+  ],
+  "notes": "Poster has a real business site (286k pageviews/yr), has already invested time in optimization, and is evaluating a non-trivial infrastructure change. This implies willingness to pay for a service or tool that reduces risk and saves implementation time. Server-side GTM migration services are charged at $500\u2013$3k by agencies. Single data point; corroboration needed.",
+  "status": "candidate"
+}

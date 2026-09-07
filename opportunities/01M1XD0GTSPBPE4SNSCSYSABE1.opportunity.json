@@ -1,0 +1,24 @@
+{
+  "id": "01M1XD0GTSPBPE4SNSCSYSABE1",
+  "discovered_at": "2026-09-07T10:41:04+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439812/coaching-feature-in-lifesciences-cloud-in-salesforce",
+    "snippet": "Is there a coaching feature in lifesciences cloud in Salesforce. The requirement is to teach a sales rep or msls about the visit feature and record that a coaching visit call is completed for reporting purposes. My proposed solution: Have a checkbox 'coaching call' on visit record... I have noticed engagement coaching as an object which is related to visit record as parent record."
+  },
+  "problem_statement": "Pharmaceutical sales operations teams using Salesforce Life Sciences Cloud lack a clear, configurable way to track coaching visits tied to field rep activity, forcing admins to build brittle workarounds on standard objects.",
+  "target_segment": "Salesforce admins and solution architects at pharmaceutical or life sciences companies using Health Cloud / Life Sciences Cloud",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "life-sciences-cloud",
+    "health-cloud",
+    "pharma-sales-ops",
+    "coaching-tracking",
+    "crm-customization",
+    "field-sales"
+  ],
+  "notes": "Salesforce ecosystem signals paid professional context \u2014 these admins or their employers pay Salesforce enterprise licensing. The gap between what Life Sciences Cloud provides and what regulated pharma sales ops requires is a recurring consulting and ISV opportunity. Single post; needs volume corroboration.",
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M1ZYZCH0BRAVKHCSTDZG8VNX",
+  "discovered_at": "2026-09-08T10:33:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182579/fixing-layout-on-squarespace-request-a-quote-form-textarea-won-t-span-columns",
+    "snippet": "I'm trying to adjust the layout of my Squarespace Request a Quote form. The only issue is with this form; my Contact form and everything else are fine. I need the Requirement Details textarea to span both columns, and I need the Upload Requirements field to sit directly below it, with the Submit Request button aligned to the right. I cannot get this to work through the Squarespace interface and need CSS help."
+  },
+  "problem_statement": "Small business owners using Squarespace hit hard limits on form layout customisation (multi-column spans, field ordering, file upload placement) that require CSS workarounds most non-developers cannot implement, blocking professional quote and intake form designs.",
+  "target_segment": "Small business owners and freelancers running service businesses on Squarespace who need custom intake or quote forms but lack front-end development skills",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "squarespace",
+    "form-builder",
+    "no-code",
+    "small-business",
+    "css-customisation",
+    "intake-form",
+    "quote-form",
+    "website-builder",
+    "service-business"
+  ],
+  "notes": "Buyer context: Squarespace users pay $23\u2013$65/month for their site. They are running a real business (Request a Quote form implies a service business). They are already paying for tooling and are clearly willing to pay more to solve this \u2014 a Squarespace form customisation micro-SaaS or done-for-you CSS snippet service (e.g. $29 one-time or $9/mo) could slot in here. The broader Squarespace customisation pain is well-documented on Reddit and YouTube. Single post; signal strength kept low for this batch.",
+  "status": "candidate"
+}

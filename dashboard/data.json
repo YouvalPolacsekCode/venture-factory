@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-09-07T07:42:52+00:00",
-    "idt": "2026-09-07T10:42:52+03:00"
+    "utc": "2026-09-08T07:35:51+00:00",
+    "idt": "2026-09-08T10:35:51+03:00"
   },
   "funnel": {
-    "candidates": 300,
-    "scored": 300,
+    "candidates": 304,
+    "scored": 304,
     "validated": 32,
     "build_decisions": {
       "defer_1_week": 28,
@@ -687,6 +687,37 @@
     },
     {
       "topics": [
+        "salesforce",
+        "agentforce",
+        "deployment"
+      ],
+      "id": "01M1ZYZCGQW669EP2TZ838E4XJ",
+      "problem_statement": "Salesforce developers and admins cannot reliably deploy Agentforce agents across orgs — cryptic CMS workspace permission errors block both package install and direct metadata deploy, with no clear remediation path from Salesforce documentation.",
+      "target_segment": "Salesforce developers, Salesforce admins, and ISV partners building Agentforce-based products on the Salesforce platform",
+      "total": 6.4,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a named, budget-holding professional — Salesforce developers and admins at companies or ISVs already paying $300–$1,500+/user/year for Gearset/Copado — and Agentforce deployment friction is a documented, unsolved pain point in the ecosystem right now, giving strong willingness-to-pay signals. The total of 6.4 clears the build threshold, but operational_autonomy sits at 6, just below the required floor of 7: a deployment validator can partially automate (Claude reads metadata, surfa…",
+      "solution_plan": "The service is an Agentforce Cross-Org Deployment Validator: a user pastes their deployment error log and metadata XML into a web form, and Claude analyses it against known Agentforce deployment constraints (CMS workspace permissions, org feature flags, metadata dependencies), then returns a plain-English diagnosis and a step-by-step remediation checklist — delivered instantly in the browser and via email. Build: the factory builds a Claude prompt chain trained on Salesforce deployment error patterns, a simple landing page with a Stripe payment link ($49 one-time report or $79/mo for unlimited), and a text/file intake form; no coding by Youv…",
+      "realistic": {
+        "verdict": "no",
+        "weak": [
+          "run it hands-off"
+        ]
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 6,
+        "Will pay": 8,
+        "Buildable": 6,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439813/why-both-agent-deployment-and-installation-fails-with-your-org-doesnt-have-acc",
+      "discovered_at": "2026-09-08T10:33:30+03:00"
+    },
+    {
+      "topics": [
         "stripe",
         "account-closure",
         "fintech-risk"
@@ -713,48 +744,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48432117",
       "discovered_at": "2026-06-07T09:59:46+03:00"
-    },
-    {
-      "topics": [
-        "github-actions",
-        "ci-cd",
-        "open-source"
-      ],
-      "id": "01KVQ8ARTKM1EM0KZKYZ9WA4FH",
-      "problem_statement": "Open-source GitHub organizations are having all CI/CD (GitHub Actions, including self-hosted runners) silently disabled due to abuse by drive-by contributors, with no clear remediation path or responsive support from GitHub.",
-      "target_segment": "Maintainers of active open-source GitHub organizations, particularly those at companies that rely on CI for security-critical or infrastructure projects.",
-      "total": 6.3,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a specific, identifiable person — an open-source org maintainer at a company with a paid GitHub account — and the pain (entire CI/CD going dark with no support path) is genuinely severe when it hits. However, this is a low-frequency event: most orgs experience it rarely or never, which limits recurring subscription value and urgency to act before the pain happens. Willingness to pay exists (GitHub App subscriptions in this space sell at $20–50/mo) but the problem is partly a platfo…",
-      "solution_plan": "This is a GitHub App that scans new contributors' profiles for abuse signals (brand-new accounts, no prior OSS activity, suspicious commit patterns) and flags or requires approval before they can trigger Actions workflows. The factory builds a Claude-powered risk-scoring prompt + a GitHub App manifest (no custom code needed for the webhook logic beyond a simple Cloudflare Worker) + a Stripe payment link for a monthly subscription; the landing page explains the one-click install. Sell to maintainers of active OSS orgs, reachable via GitHub itself (search for orgs with >50 contributors and open issues about Actions abuse), and communities like…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 8,
-        "Will pay": 6,
-        "Buildable": 8,
-        "Pain": 9
-      },
-      "verdict": "rejected",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48624574",
-      "discovered_at": "2026-06-22T11:49:39+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2159,
-    "last_7_days_usd": 1.8495,
-    "all_time_usd": 22.3062,
+    "today_usd": 0.2427,
+    "last_7_days_usd": 1.903,
+    "all_time_usd": 22.5489,
     "by_day": [
-      {
-        "date": "2026-09-01",
-        "usd": 0.1892
-      },
       {
         "date": "2026-09-02",
         "usd": 0.3378
@@ -778,12 +776,16 @@
       {
         "date": "2026-09-07",
         "usd": 0.2159
+      },
+      {
+        "date": "2026-09-08",
+        "usd": 0.2427
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6573
+        "usd": 0.6725
       },
       {
         "agent": "build_decisions",
@@ -791,54 +793,19 @@
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3661
+        "usd": 0.3925
       },
       {
         "agent": "pain_validation",
-        "usd": 0.338
+        "usd": 0.3495
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0329
+        "usd": 0.0334
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-01",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-02",
       "agents": {
@@ -1048,12 +1015,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-08",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-07.md",
-    "date": "2026-09-07",
-    "text": "# Daily Summary — 2026-09-07 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 300 |\n| Opportunities validated past threshold | 71 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently tracked in factory state.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B channels.\n2. `opportunity_scoring` processes queued candidates into verdict verdicts.\n3. `pain_validation` validates high-potential opportunities via targeted probes.\n4. `cost_gain` computes weekly cost/gain analysis for the weekly report.\n5. `build_decisions` evaluates next experiments to move into validation.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-09-08.md",
+    "date": "2026-09-08",
+    "text": "# Daily Summary — 2026-09-08 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 304 |\n| Opportunities validated past threshold | 72 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments. Factory is in discovery and validation phase only.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for pain signals across B2B SaaS communities.\n2. `pain_validation` runs targeted validation on today's 72 qualified opportunities.\n3. `opportunity_scoring` re-scores emerging candidates for threshold re-evaluation.\n4. `lead_research` activates once build decisions begin on validated opportunities.\n5. `build_decisions` prepares to stage first experiments from the validated cohort.\n\n## Operator action items\n\n1. **Review the 72 validated opportunities** — decide which 3–5 to move into build stage first. Cross-reference pain signal strength and estimated TAM in the scoring files.\n2. **Confirm experiment naming and success metrics** — before `build_decisions` stages them, ensure each has a clear slug, hypothesis, and win condition.\n3. **Monitor market_radar for outlier signals** — 304 candidates is healthy volume; flag any that appear in 3+ independent sources as high-confidence pain signals.",
     "truncated": false
   },
   "analytics": null

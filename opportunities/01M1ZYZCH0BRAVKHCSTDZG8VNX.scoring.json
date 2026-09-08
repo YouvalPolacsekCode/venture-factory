@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M1ZYZCH0BRAVKHCSTDZG8VNX",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Squarespace form customisation buyers are small-business owners paying $23\u2013$65/month for their site. At a $29 one-time or $9/month price point, this is effectively a consumer/micro-SMB product requiring high volume to generate meaningful revenue. No enterprise-scale buyer exists here."
+    }
+  ],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a small-business owner or freelancer who has hit a CSS limitation \u2014 they have a real problem and are already paying for Squarespace, but this is a micro-transaction consumer market where price points are low ($29 one-time), volume needs are high, and the problem is trivially solvable with a YouTube tutorial or a $50 Fiverr gig, which is the real competition. Buyer clarity is weak (5) \u2014 'Squarespace users' is broad and their budget authority for add-on tools is limited \u2014 and defensibility is near-zero since any developer can copy a CSS snippet service. The total of 4.0 is well below the 5.5 validate threshold. The pain is real but too shallow and too well-served by free/cheap alternatives to justify building a product.",
+  "solution_plan": "Not recommended for build or validate. The closest viable pivot would be a done-for-you Squarespace form customisation service at $149\u2013$299 per project, but that requires human fulfillment per job (which incurs the requires_human_fulfillment penalty and makes it a freelance gig, not a factory product). A Claude-powered CSS snippet generator with a Stripe paywall is technically buildable but faces a market where free tools (ChatGPT, Squarespace community forums) already solve 80% of the problem \u2014 paying customers would be very few. Youval's time is better directed at higher-scoring B2B opportunities.",
+  "notes": "Below validate threshold (4.0 < 5.5). Primary issues: buyer_clarity=5 (broad micro-SMB consumers, low price tolerance), defensibility=2 (trivially copyable), b2c_at_scale_needed penalty applied. Drop.",
+  "scored_at": "2026-09-08T10:35:45+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

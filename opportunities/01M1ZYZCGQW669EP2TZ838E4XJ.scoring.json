@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M1ZYZCGQW669EP2TZ838E4XJ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a named, budget-holding professional \u2014 Salesforce developers and admins at companies or ISVs already paying $300\u2013$1,500+/user/year for Gearset/Copado \u2014 and Agentforce deployment friction is a documented, unsolved pain point in the ecosystem right now, giving strong willingness-to-pay signals. The total of 6.4 clears the build threshold, but operational_autonomy sits at 6, just below the required floor of 7: a deployment validator can partially automate (Claude reads metadata, surfaces errors, proposes fixes), but the remediation steps \u2014 configuring CMS workspaces, adjusting org permissions, pushing corrected packages \u2014 still require human action in the Salesforce org, making this closer to a guided-troubleshooting tool than a fully hands-off service. Validate first to confirm that a report-and-recommend model (no hands-on org access needed) achieves sufficient customer value autonomously.",
+  "solution_plan": "The service is an Agentforce Cross-Org Deployment Validator: a user pastes their deployment error log and metadata XML into a web form, and Claude analyses it against known Agentforce deployment constraints (CMS workspace permissions, org feature flags, metadata dependencies), then returns a plain-English diagnosis and a step-by-step remediation checklist \u2014 delivered instantly in the browser and via email. Build: the factory builds a Claude prompt chain trained on Salesforce deployment error patterns, a simple landing page with a Stripe payment link ($49 one-time report or $79/mo for unlimited), and a text/file intake form; no coding by Youval. Sell: reach Salesforce developers via Salesforce Stack Exchange answers, the Trailblazer Community, and targeted LinkedIn outreach to Salesforce admins/devs at ISV companies; every outreach batch requires Youval's approval before sending. Maintain: form submission triggers Claude analysis and automated email delivery; billing is Stripe self-serve; the only recurring human step is approving outreach and monitoring for edge-case errors that need prompt refinement. Realistic ceiling: this works well as a diagnostic tool but customers will quickly want it to also push fixes \u2014 that requires Salesforce API integration and per-org credentials, which significantly raises complexity; set that expectation before building.",
+  "notes": "build_gate failure: operational_autonomy=6 (floor 7). If the product scope is limited to diagnosis + checklist (no automated fix push into the org), autonomy could plausibly reach 7 \u2014 validate this assumption with 3-5 paying customers before committing to build.",
+  "scored_at": "2026-09-08T10:35:45+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

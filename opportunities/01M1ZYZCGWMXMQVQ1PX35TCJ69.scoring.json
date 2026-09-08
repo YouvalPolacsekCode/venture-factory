@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M1ZYZCGWMXMQVQ1PX35TCJ69",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Freelancer budgeting tools are a consumer/prosumer product: at $99/year, reaching breakeven on a solo micro-SaaS requires hundreds to thousands of paying users. YNAB, Copilot, and Quickbooks Self-Employed all compete here and already have brand/distribution advantages; acquiring enough individual consumers to matter without a large marketing budget is the central risk."
+    }
+  ],
+  "total": 4.8,
+  "recommended_stage": "drop",
+  "rationale": "The target buyer is individual freelancers \u2014 single consumers who pay $8\u2013$99/year for personal finance tools \u2014 which is weak buyer clarity (score 5) and triggers the b2c_at_scale_needed penalty: a solo operator cannot acquire the volume of individual paying users required to generate meaningful revenue against well-funded incumbents. Willingness to pay exists (YNAB/Copilot prove it) but the competitive landscape is crowded and the differentiator (irregular income handling) is a narrow feature gap any of those incumbents could close. The total of 4.8 falls below the 5.5 validate threshold. Drop unless the ICP can be narrowed to a B2B buyer (e.g. agencies paying for their contractors, or accountants managing freelancer clients) which would materially change the buyer_clarity and scale dynamics.",
+  "solution_plan": "Not recommended for build or validate in its current framing. If reconceived as a B2B tool \u2014 for example, an accountant or bookkeeper dashboard that manages cash-flow planning across multiple freelancer clients \u2014 the buyer clarity and scale economics improve. In that form: the factory builds a Claude-powered cash-flow forecasting engine that takes irregular income history (CSV upload from any bank or invoicing tool), models a 90-day buffer recommendation, and emails the client a monthly plan; landing page + Stripe ($29/mo per accountant seat); accountants are reachable via LinkedIn and accounting forums. But in the current consumer-direct framing, a solo non-technical operator cannot realistically acquire enough individual users to compete with YNAB.",
+  "notes": "Below validate threshold (4.8 < 5.5). Primary issues: buyer_clarity=5 (consumers, not a named business role with budget authority) and b2c_at_scale_needed penalty applied. Revisit if ICP pivots to B2B.",
+  "scored_at": "2026-09-08T10:35:45+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

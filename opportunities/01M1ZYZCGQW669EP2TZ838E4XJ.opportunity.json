@@ -1,0 +1,26 @@
+{
+  "id": "01M1ZYZCGQW669EP2TZ838E4XJ",
+  "discovered_at": "2026-09-08T10:33:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439813/why-both-agent-deployment-and-installation-fails-with-your-org-doesnt-have-acc",
+    "snippet": "I have an Agentforce agent built in one org (Agentforce Builder with Agent Script). Installing the org-dependent unlocked package (or plain sf project deploy start of the same source) into another org fails before any component is processed: 'Your org doesn't have access to this type of CMS workspace' error. Both agent deployment and installation fails with this error."
+  },
+  "problem_statement": "Salesforce developers and admins cannot reliably deploy Agentforce agents across orgs \u2014 cryptic CMS workspace permission errors block both package install and direct metadata deploy, with no clear remediation path from Salesforce documentation.",
+  "target_segment": "Salesforce developers, Salesforce admins, and ISV partners building Agentforce-based products on the Salesforce platform",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "deployment",
+    "metadata-deploy",
+    "salesforce-dx",
+    "isv",
+    "cms-workspace",
+    "devops",
+    "salesforce-admin"
+  ],
+  "notes": "Salesforce ecosystem has a well-established paid tooling market (Gearset, Copado, AutoRABIT charge $300\u2013$1500+/user/year for deployment tooling). Agentforce is brand-new and deployment tooling has not caught up. A focused Agentforce cross-org deployment validator/fixer could command SaaS pricing. Buyer is clear: Salesforce developer or admin at a company or ISV paying for platform licences. Single post but the underlying Agentforce deployment friction is a known ecosystem pain point circa 2026.",
+  "status": "candidate"
+}

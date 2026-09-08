@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M1R6KVDXCC3CQ89MJKVW08JX",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real and financially acute for the individual experiencing it, but it is a one-time migration event rather than a recurring operational problem. Evidence across the open web shows this is a known GCP/Firebase quirk with Google's own support documentation and community answers already providing resolution steps at no cost, meaning willingness to pay for a paid diagnostic tool is not validated. The TAM is structurally limited: GCP for Startups accepts roughly 1,000\u20132,000 startups globally per year, and the migration billing confusion affects only a subset at a specific point in time, making volume too thin to sustain a product.",
+  "sources": [
+    "https://serverfault.com/questions/1199775/transferring-project-firebase-from-one-billing-account-to-another-but-still-bein"
+  ],
+  "evaluated_at": "2026-09-08T10:34:39+03:00"
+}

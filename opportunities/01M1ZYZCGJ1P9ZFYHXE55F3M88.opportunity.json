@@ -1,0 +1,26 @@
+{
+  "id": "01M1ZYZCGJ1P9ZFYHXE55F3M88",
+  "discovered_at": "2026-09-08T10:33:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199790/azure-entra-id-password-writeback-fails",
+    "snippet": "SSPR fails from the user end to unlock or reset password. Password writeback option on entra id - password options - shows network failure when entering into the function where one tick password writeback. Sometimes one can choose the tick, it saves the tick, but if you go back, the tick is gone. Or the ticks shows, but during sspr failure, audit log of user will shows password writeback has failed. Or, if password writeback is ticked, the user audit log will show nothing wrt a failed password reset."
+  },
+  "problem_statement": "Azure Entra ID Self-Service Password Reset (SSPR) with password writeback silently fails \u2014 IT admins get no reliable audit trail, the configuration toggle disappears, and end users cannot reset their own passwords, forcing helpdesk escalation.",
+  "target_segment": "IT administrators and sysadmins at mid-market enterprises running hybrid Active Directory + Azure Entra ID (formerly Azure AD)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "azure-entra-id",
+    "sspr",
+    "password-writeback",
+    "identity-management",
+    "helpdesk",
+    "active-directory",
+    "hybrid-identity",
+    "it-ops",
+    "enterprise-iam"
+  ],
+  "notes": "Enterprise IT pain: every failed SSPR forces a helpdesk ticket, directly costing IT labour. Buyer is the IT admin or IT manager at companies with hybrid AD. Existing paid market: tools like Cayosoft, Semperis, and AvePoint charge thousands/year for AD management and audit. A focused SSPR diagnostics / writeback health monitor SaaS could slot in here. Single post but pattern is well-known in the Entra ecosystem.",
+  "status": "candidate"
+}

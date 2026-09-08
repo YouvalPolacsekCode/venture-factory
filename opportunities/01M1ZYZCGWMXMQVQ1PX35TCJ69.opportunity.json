@@ -1,0 +1,26 @@
+{
+  "id": "01M1ZYZCGWMXMQVQ1PX35TCJ69",
+  "discovered_at": "2026-09-08T10:33:30+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/169983/how-do-i-budget-effectively-when-income-arrives-at-irregular-intervals-rather-th",
+    "snippet": "I'm trying to maintain a consistent monthly budget, but my income doesn't follow a predictable schedule \u2014 some months I earn more, some months less, and payments often arrive mid-month or late. Most budgeting advice assumes a fixed monthly paycheck, but that doesn't apply to me. I've tried: Budgeting based on last month's income; Setting a 'baseline' minimum income and ignoring anything above it; Rolling surplus from good months into a buffer account."
+  },
+  "problem_statement": "Freelancers and independent contractors cannot use mainstream budgeting tools because every tool assumes a fixed monthly salary; managing cash flow across feast-and-famine income cycles remains an unsolved, time-consuming problem.",
+  "target_segment": "Freelancers, independent contractors, and gig workers with variable monthly income, particularly those earning $3k\u2013$15k/month",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "freelance",
+    "budgeting",
+    "cash-flow",
+    "irregular-income",
+    "personal-finance",
+    "gig-economy",
+    "financial-tools",
+    "variable-income",
+    "contractor"
+  ],
+  "notes": "Existing paid market validates buyer willingness: YNAB ($99/yr), Copilot ($95/yr), Quickbooks Self-Employed ($15/mo) all have paying freelancer customers but none handle irregular income timing well \u2014 this is a recurring complaint on r/freelance, r/personalfinance, and money.stackexchange. Buyer is a freelancer actively losing money or stress to cash-flow uncertainty. Weak single signal here but corroborated by known pattern. Signal strength kept at 2 due to this batch having only one post.",
+  "status": "candidate"
+}

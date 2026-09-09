@@ -1,0 +1,25 @@
+{
+  "id": "01M22HSXQJ3BPKDWQ1RJ79ZSBZ",
+  "discovered_at": "2026-09-09T10:41:03+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49622554",
+    "snippet": "In work we use LLMs exclusively. Nobody writes code anymore. It's all hands off and we have a high level understanding of how things work but no more than that. When it comes to my side project, I was adding features at breakneck speed with Claude but I realized I have no clue how the new code works or what it changes or breaks. I spent many years [building this app]... (2026-09-09)"
+  },
+  "problem_statement": "Professional developers using LLMs to write code are losing comprehension of their own codebases \u2014 they ship fast but cannot explain, debug, or safely change what the AI wrote, creating hidden technical debt and fragility in production systems.",
+  "target_segment": "Software developers and small engineering teams (2\u201320 engineers) at startups and SMBs who rely heavily on AI coding assistants (Claude, Copilot) in their daily workflow.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm-code-comprehension",
+    "ai-coding",
+    "technical-debt",
+    "codebase-understanding",
+    "developer-tools",
+    "code-review",
+    "ai-assisted-development",
+    "software-quality"
+  ],
+  "notes": "Author has a production app with 'a solid user base' and is actively using Claude at work \u2014 clear professional buyer context. The pain is losing architectural understanding of code they ship, not just a learning complaint. Potential product angle: a tool that generates human-readable change summaries, dependency maps, or 'what did the AI actually do' audit trails after LLM-assisted coding sessions. Teams already paying for Copilot/Claude seats would be the natural buyers. Willingness-to-pay likely moderate-to-high given code quality and audit risk at work.",
+  "status": "candidate"
+}

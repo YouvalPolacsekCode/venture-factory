@@ -1,0 +1,27 @@
+{
+  "id": "01M22HSXQTWX85PBKZBYGH0EF0",
+  "discovered_at": "2026-09-09T10:41:03+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182584/how-do-i-bypass-the-google-com-goto-redirects-in-google-search-results",
+    "snippet": "In August 2026, Google Search rolled out a tracking parameter using passthrough URLs formatted as google.com/goto. According to reports from Search Engine Roundtable and Decodo, Google began testing this feature earlier in July to deter third-party tools and AI companies from scraping search results. Hovering over a link in Google Search results now reveals the goto URL instead the actual URL. (2026-09-09)"
+  },
+  "problem_statement": "Google's August 2026 rollout of /goto passthrough redirect URLs breaks SEO rank-tracking tools, SERP scrapers, and competitive intelligence platforms that rely on extracting clean destination URLs from search results, forcing costly re-engineering of data pipelines.",
+  "target_segment": "SEO agencies, rank-tracking SaaS vendors, competitive intelligence teams, and AI data companies that programmatically consume Google Search results.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "google-serp",
+    "seo-tools",
+    "rank-tracking",
+    "web-scraping",
+    "google-goto",
+    "search-data",
+    "competitive-intelligence",
+    "data-pipeline",
+    "anti-scraping",
+    "serp-api"
+  ],
+  "notes": "The /goto change is a fresh (August 2026) platform shift that breaks existing paid tooling. SEO agencies and SERP API vendors (e.g., DataForSEO, Bright Data customers) are professional buyers who already pay for search data infrastructure. A service or library that transparently resolves /goto redirects, or a SERP proxy that normalizes them, would have immediate commercial demand. Signal is a single question but references reporting from Search Engine Roundtable and Decodo, indicating broader industry awareness. Buyer willingness-to-pay is high \u2014 this is infrastructure for revenue-generating workflows.",
+  "status": "candidate"
+}

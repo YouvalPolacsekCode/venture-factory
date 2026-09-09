@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M1TSQDGDRP959VF47CV8M68T",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real and recurring \u2014 Microsoft Graph permission confusion is a well-documented developer frustration across StackOverflow, ServerFault, and Reddit \u2014 but willingness-to-pay for a standalone configurator tool is not confirmed. Microsoft's own (free) documentation, community answers, and GPT/Copilot already provide ad-hoc guidance, and no competitor charges specifically for permission-scope advice at a price point that validates a SaaS. The signal is thin (single post, score 2 signal strength, WTP scored 5 at the floor), and the total score of 6.0 sits below the 6.5 build threshold. Rejecting to avoid a wasted build cycle; re-queue if a paid competitor or clear WTP signal surfaces.",
+  "sources": [
+    "https://serverfault.com/questions/1199776/how-to-get-user-read-all-permissions-in-microsoft-graph-to-be-seen-on-the-pc-end"
+  ],
+  "evaluated_at": "2026-09-09T10:42:02+03:00"
+}

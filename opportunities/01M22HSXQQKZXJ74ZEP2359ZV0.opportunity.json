@@ -1,0 +1,27 @@
+{
+  "id": "01M22HSXQQKZXJ74ZEP2359ZV0",
+  "discovered_at": "2026-09-09T10:41:03+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199793/how-do-you-shrink-a-windows-10-bare-metal-image-below-5gb",
+    "snippet": "I'm working on a project that requires Windows 10 to be deployed on a bare-metal machine hundreds of times. The bottleneck is image size, currently sitting at ~14GB, which means each deployment cycle takes 20-25 minutes. Target: get the image below 5 GB so deployment time drops under 7 minutes. (2026-09-08)"
+  },
+  "problem_statement": "IT teams doing repeated large-scale Windows bare-metal deployments are bottlenecked by bloated OS images (14 GB+), making each deployment cycle 20\u201325 minutes and multiplying wasted labor and downtime at scale.",
+  "target_segment": "IT operations engineers and sysadmins at organizations doing high-volume Windows device provisioning (manufacturing, retail, kiosk deployments, labs, managed service providers).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "windows-deployment",
+    "bare-metal-imaging",
+    "image-optimization",
+    "it-operations",
+    "provisioning",
+    "mdt",
+    "wds",
+    "device-management",
+    "sysadmin",
+    "deployment-automation"
+  ],
+  "notes": "Deploying 'hundreds of times' with a 20-25 min bottleneck per cycle is a concrete, quantified time cost \u2014 strong buyer signal for an MSP or internal IT team. The asker has already done significant optimization work (disabled hibernation, removed pagefile, compacted OS, cleared update cache) and is still stuck, indicating real tool/service gap. Potential product: automated Windows image slimming service or a managed image build pipeline. MSPs and device-provisioning shops pay for tooling that cuts deployment time.",
+  "status": "candidate"
+}

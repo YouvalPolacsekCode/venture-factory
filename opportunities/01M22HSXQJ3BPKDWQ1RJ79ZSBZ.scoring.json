@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M22HSXQJ3BPKDWQ1RJ79ZSBZ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, nameable professional \u2014 software developers and small engineering teams at startups already paying for Claude/Copilot seats \u2014 who face a real, daily pain: shipping AI-written code they can't explain or safely modify. Willingness to pay is credible given existing spend on AI coding tools and code-review tooling (e.g. CodeClimate, Graphite), though no direct budget signal yet. The build_gate for operational_autonomy (7) is met at the minimum floor, but with no responsiveness signal tested yet and a crowded dev-tools market, validation of actual purchase intent should precede building.",
+  "solution_plan": "The micro-service is an AI-powered codebase comprehension digest: after each LLM-assisted coding session, it auto-generates a plain-English summary of what changed, what it affects, and what could break. The factory builds it as a Claude prompt pipeline that reads a git diff or a pasted code block and outputs a structured 'what-the-AI-did' report, delivered via a simple web form + email, with a Stripe payment link for a monthly subscription (~$19\u201349/mo). To sell, the factory targets posts on HN, r/ExperiencedDevs, and Twitter/X dev communities with a free-trial landing page; outreach batches go out only after Youval approves them. Once subscribed, users submit diffs via the form or a lightweight webhook; Claude processes and emails the report automatically \u2014 no manual involvement per customer. The only recurring human touch is approving outreach batches and monitoring for edge-case support requests. The risk is low differentiation from GitHub Copilot's own summaries if large vendors add this natively; validation should confirm developers will pay separately for it.",
+  "notes": "operational_autonomy meets the floor at exactly 7 (minimum). responsiveness_signal is untested \u2014 validate with a landing page or HN post before building. No build_gate formally failed, but low responsiveness signal warrants validate stage.",
+  "scored_at": "2026-09-09T10:42:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

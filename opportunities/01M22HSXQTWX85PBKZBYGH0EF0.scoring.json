@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M22HSXQTWX85PBKZBYGH0EF0",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 9,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "The core product \u2014 resolving or bypassing Google's /goto redirect tracking \u2014 is explicitly designed to circumvent a deliberate anti-scraping mechanism Google deployed to protect its data. Building and selling a service to defeat Google's TOS-level protections at scale is legally dubious (potential CFAA exposure), violates Google's Terms of Service for programmatic access, and is likely to be patched repeatedly in an adversarial cat-and-mouse dynamic. Selling this commercially to SEO/scraping customers amplifies the legal and reputational risk."
+    }
+  ],
+  "total": 1.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyers are real \u2014 SEO agencies and SERP API vendors who already pay for search data infrastructure \u2014 and the pain is acute and daily since Google's August 2026 /goto rollout. However, the proposed service is fundamentally a tool for circumventing Google's deliberate anti-scraping countermeasure, which violates Google's TOS and carries meaningful legal risk (CFAA, tortious interference) that makes it non-viable for a legitimate micro-service business. The `not_legitimate_or_grey` penalty of -5.0 drops the total to 1.2 and disqualifies it. Additionally, buildability and operational_autonomy are both low: maintaining a bypass against an actively adversarial platform requires constant re-engineering that Claude cannot automate.",
+  "solution_plan": "Not viable for this factory. Selling a Google /goto bypass service would put the business in direct conflict with Google's Terms of Service and creates ongoing legal exposure. The adversarial maintenance burden \u2014 Google will patch any bypass \u2014 also makes this operationally untenable without constant human re-engineering. Drop entirely; do not pursue.",
+  "notes": "Disqualified by not_legitimate_or_grey penalty (-5.0). Additional failing build_gates: operational_autonomy (scored 4, floor 7), buildability_with_ai (scored 4, floor 6). Even without the legitimacy penalty, this would be capped at validate. Drop.",
+  "scored_at": "2026-09-09T10:42:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

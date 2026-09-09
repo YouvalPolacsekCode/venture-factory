@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M22HSXQQKZXJ74ZEP2359ZV0",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Optimizing and delivering a Windows bare-metal image is hands-on technical work \u2014 running sysprep, MDT/WDS pipelines, testing deployments \u2014 that cannot be automated end-to-end by Claude. Each customer engagement requires real system access and manual validation."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "MSP and enterprise IT buyers expect scoping calls, environment-specific consultation, and handoff sessions before trusting a custom image pipeline \u2014 live interaction is effectively required to close and deliver."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyers \u2014 IT ops engineers and MSPs \u2014 are real and have budget, but this is fundamentally a hands-on technical services problem: producing a slimmed Windows image requires direct access to the target environment, toolchain-specific configuration (MDT, WDS, WIM tooling), and iterative testing that Claude cannot perform autonomously. Operational_autonomy scores 2 and buildability_with_ai scores 3, both far below build_gate floors, and penalties for per-customer manual work push the total to 2.3. This is a consulting engagement, not a factory-deliverable micro-service.",
+  "solution_plan": "Not viable for this factory. A solo non-technical operator cannot build or maintain a Windows image optimization service without direct system access, environment-specific tooling knowledge, and hands-on testing per client. Even framed as a guide or checklist product, the competitive landscape (free Microsoft documentation, DISM tools, MDT community) makes monetization implausible. Drop and redirect attention to software-deliverable opportunities.",
+  "notes": "Failing build_gates: operational_autonomy (scored 2, floor 7), buildability_with_ai (scored 3, floor 6). Penalties for requires_human_fulfillment and requires_synchronous_human compound the disqualification. Drop.",
+  "scored_at": "2026-09-09T10:42:48+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

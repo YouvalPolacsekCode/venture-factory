@@ -1,0 +1,25 @@
+{
+  "id": "01M25406NM2CNHWK8BVNCG6ZT5",
+  "discovered_at": "2026-09-10T10:37:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203699/keeping-an-employee-after-an-international-move-what-changes-with-an-eor",
+    "snippet": "One of our employees will be relocating to Germany, and we'd like to keep them in the same role rather than lose them or move them onto a contractor agreement. Since we don't have a legal entity there, we've been looking at the employer of record route. We've had a few demos with Globalization Partners, and the setup seems fine, but I'd be interested to hear from anyone who has actually managed an employee this way. I'm also unsure how things like existing tenure are usually handled."
+  },
+  "problem_statement": "Small and mid-sized companies retaining employees who relocate internationally lack practical, peer-sourced guidance on EOR mechanics \u2014 specifically how tenure, benefits continuity, and handoff from direct employment are handled \u2014 leaving HR managers to navigate expensive demos and sparse documentation before committing to costly EOR contracts.",
+  "target_segment": "HR managers and ops leads at SMBs (10\u2013500 employees) without foreign legal entities, managing cross-border employee retention.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "employer-of-record",
+    "eor",
+    "international-employment",
+    "hr-ops",
+    "employee-relocation",
+    "global-hiring",
+    "compliance",
+    "remote-work"
+  ],
+  "notes": "Buyer is clearly a company (HR/ops role), already in vendor evaluation (had demos with Globalization Partners \u2014 a paid EOR service). Pain is real: EOR contracts run $500\u2013$1500/employee/month. Gap is pre-sales decision support and peer benchmarking on EOR operations, not the EOR itself. Possible product: an independent EOR comparison/advisory service or structured Q&A community for HR ops. Single signal; needs more corroboration.",
+  "status": "candidate"
+}

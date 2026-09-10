@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01M1TSQDGNTZ2QDBBBKKXF0EF1",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The DMARC enforcement gap is extensively documented across a decade of DNS research, multiple competitor products charging real money, and recurring community complaints \u2014 confirming both pain frequency and willingness to pay. At least five distinct signals confirm the fear-of-breaking-email barrier, and three paid competitors (Dmarcian, Valimail, EasyDMARC) with published pricing provide hard willingness-to-pay evidence. Target audience (IT/email admins) is specific and reachable.",
+  "sources": [
+    "https://serverfault.com/questions/1199774/why-are-so-many-domains-still-using-p-none-for-dmarc-despite-having-spf-and-dkim",
+    "https://dmarcian.com/dmarc-tools/",
+    "https://valimail.com/pricing/",
+    "https://easydmarc.com/pricing/",
+    "https://www.reddit.com/r/sysadmin/search/?q=dmarc+p%3Dnone",
+    "https://mxtoolbox.com/dmarc.aspx"
+  ],
+  "evaluated_at": "2026-09-10T10:38:36+03:00"
+}

@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01M1TSQDGNTZ2QDBBBKKXF0EF1",
+  "decided_at": "2026-09-10T10:39:26+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 8,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.5,
+      "min": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build_now": [
+        "build",
+        "scale"
+      ],
+      "pass": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass and the weighted total meets the 6.5 minimum. However, recommended_stage is 'validate', not 'build' or 'scale', which is a hard blocker for build_now per the runtime contract. The scoring agent held the stage at validate because responsiveness_signal is only 2 (no real probe data) and incumbents like Dmarcian and Valimail are well-entrenched \u2014 acquisition cost is unproven. Additionally, the cost_to_gain_ratio of 3.344 far exceeds the kill threshold of 0.6 in cost_gain_model.yaml, signaling that even if built, the economics are unfavorable in the first 90 days without a validated acquisition channel. A responsiveness probe (LinkedIn outreach to IT admins, r/sysadmin post, ServerFault answers) should run this week to test whether reachable buyers respond at a rate that could bring the ratio down.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn outreach to IT/email admins with 'DMARC' or 'email security' in title"
+}

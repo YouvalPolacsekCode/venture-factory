@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M25406NXARK7QR12TFVZN5G8",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Multi-location GBP optimization done-for-you requires per-client manual work: auditing each business's profile, verifying citations, submitting updates, monitoring rankings. Even with Claude drafting content, meaningful human review and execution touches are needed per customer."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real business owner with commercial intent and a recurring pain (local SEO is ongoing), but the done-for-you fulfillment model is inherently labor-intensive \u2014 each client's GBP situation is unique, and accurate optimization requires manual verification of citations, categories, and location data that Claude cannot fully automate without human oversight. Willingness to pay exists (SMB SEO services are a sold market) but at a price point that doesn't justify per-client manual effort for a solo operator. A pure SaaS angle would need significant product development beyond Claude prompts. Total drops to 3.2 after the human-fulfillment penalty, firmly in drop territory.",
+  "solution_plan": "This opportunity does not pass the autonomy test for a solo non-technical operator at this stage. A done-for-you GBP optimization service requires reviewing each business's specific profile, manually updating categories and service areas, building local citations, and monitoring results \u2014 per-customer human work that Youval would need to do personally or hire for. A SaaS product that automates this would require integrations with Google Business Profile API, citation tools, and rank trackers that go well beyond Claude prompts and a Stripe link. The factory cannot realistically build and maintain this hands-off. Drop this opportunity unless a much narrower, purely informational product angle (e.g., a one-time audit report) is identified with clearer autonomy.",
+  "notes": "Fails operational_autonomy build gate (score 5, floor 7). The core service is a classic agency/done-for-you model that conflicts with the autonomy requirement. Defensibility is also very low (2) \u2014 this space is crowded with Yext, BrightLocal, and dozens of local SEO agencies. Drop.",
+  "scored_at": "2026-09-10T10:39:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

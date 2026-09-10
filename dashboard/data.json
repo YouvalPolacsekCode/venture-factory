@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-09-09T07:42:53+00:00",
-    "idt": "2026-09-09T10:42:53+03:00"
+    "utc": "2026-09-10T07:39:32+00:00",
+    "idt": "2026-09-10T10:39:32+03:00"
   },
   "funnel": {
-    "candidates": 307,
-    "scored": 307,
-    "validated": 32,
+    "candidates": 309,
+    "scored": 309,
+    "validated": 33,
     "build_decisions": {
-      "defer_1_week": 28,
+      "defer_1_week": 29,
       "kill": 4
     },
     "build_now": 0,
@@ -475,7 +475,7 @@
         "Buildable": 7,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199774/why-are-so-many-domains-still-using-p-none-for-dmarc-despite-having-spf-and-dkim",
       "discovered_at": "2026-09-06T10:25:34+03:00"
@@ -749,14 +749,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2263,
-    "last_7_days_usd": 1.7915,
-    "all_time_usd": 22.7752,
+    "today_usd": 0.3655,
+    "last_7_days_usd": 2.0124,
+    "all_time_usd": 23.1407,
     "by_day": [
-      {
-        "date": "2026-09-03",
-        "usd": 0.1446
-      },
       {
         "date": "2026-09-04",
         "usd": 0.2159
@@ -780,67 +776,36 @@
       {
         "date": "2026-09-09",
         "usd": 0.2263
+      },
+      {
+        "date": "2026-09-10",
+        "usd": 0.3655
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6805
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.4038
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.3715
+        "usd": 0.6884
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3024
+        "usd": 0.4577
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.445
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3878
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0333
+        "usd": 0.0335
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-03",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-04",
       "agents": {
@@ -1050,12 +1015,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-10",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-09.md",
-    "date": "2026-09-09",
-    "text": "# Daily Summary — 2026-09-09 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 307 |\n| Opportunities validated past threshold | 73 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B channels.\n2. `opportunity_scoring` ranks the 307 candidate opportunities by likelihood-to-close.\n3. `pain_validation` probes the top 20 validated opportunities for follow-up signals.\n4. `build_decisions` reviews scoring output and advances high-confidence candidates to design phase.\n5. `cost_gain` computes week-to-date efficiency metrics.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-09-10.md",
+    "date": "2026-09-10",
+    "text": "# Daily Summary — 2026-09-10 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 309 |\n| Opportunities validated past threshold | 74 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (No active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` collects contact details from the 74 validated opportunities.\n2. `pain_validation` probes top 20 scoring opportunities via DM or email.\n3. `cost_gain` recomputes experiment ROI metrics (if any experiments are live).\n4. `build_decisions` evaluates whether any validated signals warrant new experiment launch.\n5. `market_radar` scans for emerging pain signals in target verticals.\n\n## Operator action items\n\nNone — process is running cleanly. All 309 candidates are in the funnel; 74 have crossed validation threshold and await outreach. Check back this afternoon for lead contact results.",
     "truncated": false
   },
   "analytics": null

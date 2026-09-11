@@ -1,0 +1,24 @@
+{
+  "id": "01M27P99QWT2JYJF6J7B6C0FZZ",
+  "discovered_at": "2026-09-11T10:35:33+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49647409",
+    "snippet": "Kagi Translate has become my most used Kagi product. I would pay for API access"
+  },
+  "problem_statement": "Developers and technical users want API access to high-quality translation services but existing options (Google Translate API, DeepL) are seen as insufficient in quality or trust, and Kagi Translate has no API offering despite strong user demand.",
+  "target_segment": "Developers, SaaS builders, and technical users who already pay for Kagi and want to integrate quality translation into their products or workflows via API.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "translation-api",
+    "developer-tools",
+    "kagi",
+    "language",
+    "api-access",
+    "nlp",
+    "saas-integration"
+  ],
+  "notes": "Explicit 'I would pay for API access' from an HN commenter on a popular translation product thread. Buyer intent is clear. Opportunity: a translation API product positioned as privacy-respecting and high-quality, targeting devs already frustrated with Google/DeepL quality or privacy. Recurring revenue model likely.",
+  "status": "candidate"
+}

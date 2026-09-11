@@ -1,0 +1,25 @@
+{
+  "id": "01M27P99RESWVKFPYBTJBM0A4B",
+  "discovered_at": "2026-09-11T10:35:33+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/169996/how-to-invest-long-term-when-moving-countries-frequently",
+    "snippet": "I am a beginner when it comes to investing, but I would like to get started with investing my money better. Due to my work, I have to move countries frequently and unpredictably (say, every 2-4 years), and it is hard to know where I will 'end up' eventually. However, I don't want hold off on making long-term financial decisions any longer."
+  },
+  "problem_statement": "Globally mobile professionals (frequent expats, international contractors, diplomats) cannot easily access long-term investment guidance or platforms that account for multi-country tax residency changes, making it hard to invest without risking account closures or tax penalties.",
+  "target_segment": "Internationally mobile professionals \u2014 contractors, expats, digital nomads, NGO/corporate staff \u2014 who move countries every 2-4 years and have disposable income to invest.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "expat-finance",
+    "investing",
+    "tax-residency",
+    "international",
+    "wealth-management",
+    "digital-nomad",
+    "fintech",
+    "cross-border"
+  ],
+  "notes": "Question has 3 upvotes and zero answers \u2014 a real gap. Segment has money (they're working professionals) and urgency (actively wanting to invest now). Existing robo-advisors and brokerages routinely close accounts when users relocate, creating a repeating pain. Opportunity: a financial advisory service or SaaS tool specialized for nomadic professionals, possibly subscription-based with tax-aware investment guidance per residency change. Recurring need = recurring revenue potential.",
+  "status": "candidate"
+}

@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M1XD0GTM9DED49C3JFHWGJVJ",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The Microsoft Graph Teams permission complexity is a real and recurring developer pain with corroborating signals across Stack Overflow, GitHub issues, and developer blogs. However, the willingness-to-pay evidence for a dedicated paid tool is weak: the problem space is already well-served by free resources (official MS Graph docs, Stack Overflow community answers, GitHub Copilot in-editor help), and the two paid incumbents (Power Automate, Workato) solve a broader automation problem rather than the narrow permission-scoping pain. Fewer than the required 5 distinct pain quotes with clear willingness-to-pay signals were found, and the risk flagged in scoring \u2014 that developers will bookmark a free resource rather than pay $9\u2013$49 \u2014 is substantiated by the evidence pattern.",
+  "sources": [
+    "https://serverfault.com/questions/1199776/how-to-send-a-teams-message-from-ms-graph-when-i-cant-get-user-read-all-and-ch",
+    "https://stackoverflow.com/questions/tagged/microsoft-graph+teams",
+    "https://learn.microsoft.com/en-us/graph/permissions-reference",
+    "https://github.com/microsoftgraph/microsoft-graph-docs/issues",
+    "https://developer.microsoft.com/en-us/graph/changelog"
+  ],
+  "evaluated_at": "2026-09-11T10:36:37+03:00"
+}

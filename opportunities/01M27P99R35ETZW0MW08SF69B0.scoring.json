@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M27P99R35ETZW0MW08SF69B0",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 6
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "An agent orchestration layer that actually works for diverse solo SaaS operators requires per-customer setup, workflow customization, and debugging \u2014 each customer's stack is different, demanding hands-on configuration work that Claude alone cannot generalize away."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "When agents fail or produce unexpected outputs, solo founders escalate urgently; support requires human judgement about their specific codebase and context."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "Solo SaaS founders genuinely suffer from the gap between LLM marketing and practical agent operation, and they already pay for AI tooling \u2014 so the pain and buyer clarity are real. However, building a genuinely useful agent orchestration layer is a hard engineering product (it's what companies like Linear, Cursor, and Vercel are building with large teams), and the delivery model is inherently high-touch: each customer's backlog, tech stack, and acceptable risk tolerance differs, meaning per-customer manual setup and support are unavoidable. Operational autonomy scores very low because the factory cannot autonomously customize an agent pipeline for an unknown SaaS product \u2014 this would be consulting, not a productized micro-service. The penalties bring the total below the validate threshold.",
+  "solution_plan": "Not realistically buildable as a solo, hands-off micro-service. What a solo operator could offer is a templated 'agent task queue' document system \u2014 a Claude-powered Notion/Markdown workflow where customers paste their backlog and Claude breaks it into agent-executable subtasks with cost estimates. BUILD: factory builds a form intake + Claude prompt pipeline + a PDF/Markdown output + Stripe payment link. SELL: reach solo SaaS founders via Indie Hackers, HN, and X/Twitter; outreach approved by operator. MAINTAIN: delivery is automated (Claude processes intake, emails output), billing via Stripe. BUT: this is a one-time document product, not recurring SaaS \u2014 and it doesn't solve the actual orchestration problem the buyer wants. A solo non-technical operator cannot build a true agent orchestration platform; be honest that the simplified version (a planning document) is far weaker than what buyers need.",
+  "notes": "Total 3.6 falls below min_total_to_validate (5.5) \u2014 recommended drop. operational_autonomy gate also unmet (score 4, floor 7).",
+  "scored_at": "2026-09-11T10:37:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

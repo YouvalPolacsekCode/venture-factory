@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M27P99RESWVKFPYBTJBM0A4B",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Cross-border investment guidance and tax-residency advisory touches financial regulation in every jurisdiction the customer moves through \u2014 providing personalized investment or tax advice without licensure in each country creates significant legal exposure."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Genuinely useful multi-jurisdiction tax and investment guidance requires per-customer review of their specific residency history, asset types, and treaty coverage \u2014 this cannot be safely automated without professional oversight."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Financial advisory relationships at this complexity level typically require consultations to gather personal financial data, assess risk tolerance, and explain nuanced cross-border rules \u2014 not a fully async product flow."
+    }
+  ],
+  "total": 0.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and acute \u2014 globally mobile professionals routinely have investment accounts closed when they relocate and face genuine tax complexity \u2014 and these buyers have disposable income. However, the product required to actually solve this problem is a licensed financial advisory service (or a fintech with regulated status in multiple jurisdictions), not a Claude-powered micro-service. Any advice on cross-border investing and tax residency is regulated financial/tax advice in most jurisdictions; providing it without licensure exposes the operator to serious legal liability. The penalty stack brings the total to near zero, and operational autonomy is also very low because every customer's situation (country history, asset types, employer structure) requires individual human professional review.",
+  "solution_plan": "This cannot be responsibly built as a solo, hands-off micro-service. The only viable non-regulated version would be an educational content product \u2014 a guide or email course explaining the general landscape of expat investing (IBKR for expats, treaty considerations, platforms that don't close accounts) \u2014 but this doesn't solve the personalized advice problem and competes with free blog content. A solo non-technical operator should not attempt to build a financial advisory product without regulatory licenses; the legal risk is disqualifying. If Youval has a connection to a licensed financial advisor willing to partner, a lead-generation or content site that hands off to a licensed professional could work, but that's a different business model entirely.",
+  "notes": "Total 0.9 after penalties \u2014 far below validate threshold. regulated_industry penalty applied: cross-border investment and tax advice is regulated financial/professional advice in most jurisdictions. operational_autonomy gate unmet (score 3, floor 7). buildability_with_ai gate unmet (score 4, floor 6). buyer_clarity gate unmet (score 5, floor 6).",
+  "scored_at": "2026-09-11T10:37:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

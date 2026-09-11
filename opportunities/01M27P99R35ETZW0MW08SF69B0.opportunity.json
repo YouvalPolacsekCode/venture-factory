@@ -1,0 +1,26 @@
+{
+  "id": "01M27P99R35ETZW0MW08SF69B0",
+  "discovered_at": "2026-09-11T10:35:33+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49653369",
+    "snippet": "I run a SaaS business, but I feel like agents aren't really working for me as once the last large task finishes that I assign for the day. I have a huge backlog that I would like to automate but I'm str[uggling]... What are these agents actually doing? How close to the frontier are these models, and what does it cost?"
+  },
+  "problem_statement": "Solo SaaS operators and small technical teams want to run AI agents continuously against their product backlogs but lack practical workflows, cost visibility, and tooling to manage persistent agent tasks beyond one-off prompts.",
+  "target_segment": "Solo SaaS founders and small engineering teams (1-5 people) who are already paying for AI/LLM services but cannot operationalize agents for sustained autonomous work.",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "ai-agents",
+    "saas",
+    "automation",
+    "workflow",
+    "llm",
+    "devops",
+    "productivity",
+    "backlog-management",
+    "solo-founder"
+  ],
+  "notes": "Thread author explicitly identifies as a SaaS business owner paying for AI services but unable to convert agents into sustained value. Multiple commenters engage (num_comments: 2, points: 3 on a fresh post). Signals a real gap between LLM capability marketing and practical operator tooling. Opportunity: an agent orchestration layer or 'agent task manager' SaaS targeted at solo operators, with transparent cost tracking and task queue management. Willingness-to-pay implied by existing AI spend.",
+  "status": "candidate"
+}

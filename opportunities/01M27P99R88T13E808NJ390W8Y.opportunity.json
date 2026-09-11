@@ -1,0 +1,26 @@
+{
+  "id": "01M27P99R88T13E808NJ390W8Y",
+  "discovered_at": "2026-09-11T10:35:33+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95578/cli-tool-to-interactively-fill-a-json-yaml-schema-and-produce-a-project-local-to",
+    "snippet": "I want a Linux CLI tool that helps new contributors onboard to a repo. Desired workflow: Repo ships a JSON Schema (or YAML form of it). After git clone, a developer runs a single command that interactively prompts for values, validates them against the schema (including checking that any referenced files/dirs exist), and writes a per-project TOML config file... The same command should also make those configuration values available as environment variables..."
+  },
+  "problem_statement": "Engineering teams have no standard CLI tool to interactively onboard new contributors by prompting them to fill in a project config from a schema, validate inputs, and produce local environment files \u2014 forcing custom scripts or manual documentation per repo.",
+  "target_segment": "Platform/DevEx engineers and open-source maintainers at software companies who manage multi-contributor repos and spend time on onboarding friction.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "developer-experience",
+    "cli",
+    "onboarding",
+    "configuration-management",
+    "json-schema",
+    "yaml",
+    "devtools",
+    "repo-setup",
+    "env-management"
+  ],
+  "notes": "Highly specific, well-articulated unmet need posted on Software Recs SE with zero answers \u2014 indicating genuine gap not met by existing tools. Business context: DevEx tooling is a recurring spend category at engineering orgs. A productized CLI or VS Code extension with schema-driven onboarding could sell to platform teams. Related to mise/direnv ecosystem. Moderate signal strength \u2014 single post but very concrete spec suggests real pain.",
+  "status": "candidate"
+}

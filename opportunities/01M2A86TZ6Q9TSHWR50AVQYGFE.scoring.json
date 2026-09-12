@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2A86TZ6Q9TSHWR50AVQYGFE",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.8,
+  "penalties_applied": [],
+  "total": 6.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a performance marketing manager or agency already spending real money on Google Ads \u2014 one of the clearest willingness-to-pay signals possible, since attribution gaps directly translate to wasted ad spend and poor bidding decisions. The pain (GBRAID conversions being rejected by the legacy uploader, causing data loss) is specific, recurring every time an app campaign runs, and Google has not fully documented or solved the GBRAID upload workflow. Buildability is strong: a Claude-assisted pipeline that accepts GBRAID conversion data, formats it correctly for the Google Ads API (not the legacy uploader), and handles batch upload is achievable with prompts + a simple web form + Stripe. All build gates are met, but responsiveness is untested \u2014 validate first with a small outreach batch to performance marketers before committing to build.",
+  "solution_plan": "The micro-service is a GBRAID Offline Conversion Uploader \u2014 a web tool that accepts a CSV of GBRAID values + conversion metadata and correctly submits them to the Google Ads API, bypassing the broken legacy uploader. BUILD: the factory builds a Claude-assisted data transformer (validates GBRAID format, maps fields to the Ads API schema, handles error responses) fronted by a simple upload form and a Stripe checkout for a $49/mo subscription or $0.01/conversion row; operator approves the initial API credential setup and first batch run. SELL: reach performance marketers and PPC agencies via LinkedIn (filter: 'Google Ads', 'Performance Marketing', 'Paid Acquisition'), relevant Slack communities (e.g. PPC Chat, Traffic Think Tank alumni), and a targeted cold email sequence to boutique Google Ads agencies (public on agency directories); outreach goes out only after operator approves. MAINTAIN: customers upload CSVs or connect via a simple API key; Claude validates and submits; Stripe bills monthly; automated email alerts on upload errors; operator's only recurring touch is approving outreach batches and reviewing any Google API auth issues flagged by the system. Realistic caveat: Google Ads API access requires OAuth app verification and a developer token \u2014 the factory can build the logic, but the operator will need to complete Google's app review process once (a one-time manual step, not per-customer).",
+  "notes": "All build gates met: operational_autonomy=7\u22657, buildability_with_ai=7\u22656, buyer_clarity=8\u22656, willingness_to_pay=8\u22655. Capped at validate (not build) because total 6.8 meets the build threshold of 6.5, but responsiveness_signal is 2 (untested) \u2014 a short outreach probe is strongly recommended before building, given the niche is specific and Google's API policy could add friction. If 10+ agencies respond positively, this is a clear build candidate.",
+  "scored_at": "2026-09-12T10:29:26+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

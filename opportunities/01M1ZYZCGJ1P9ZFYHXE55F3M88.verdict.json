@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M1ZYZCGJ1P9ZFYHXE55F3M88",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real and recurring \u2014 every failed SSPR forces a helpdesk ticket with measurable labour cost \u2014 and the adjacent paid market (Cayosoft, Semperis, AvePoint) confirms enterprise willingness to pay at $thousands/year for AD management tooling. However, evidence is anchored to a single source thread, and the validation bar requires at least 5 distinct pain quotes with at least 1 direct willingness-to-pay signal for this specific gap. More critically, the scoring analysis identified that accurate SSPR diagnostics require live Azure/Entra telemetry and per-tenant configuration state, making a fully autonomous SaaS implausible without agent-level API integration \u2014 the product cannot be built to the factory's operational-autonomy floor without significant engineering. Recommend Market Radar re-scan for corroborating volume before re-queuing.",
+  "sources": [
+    "https://serverfault.com/questions/1199790/azure-entra-id-password-writeback-fails"
+  ],
+  "evaluated_at": "2026-09-12T10:28:17+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M2A86TYY81TD5PMF0V8AMKRP",
+  "discovered_at": "2026-09-12T10:27:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439830/what-is-the-1ps-key-prefix-partitionlevelscheme-and-can-it-be-managed-throug",
+    "snippet": "While automating sandbox management I ran into records with the key prefix 1ps, referenced by the TemplateId field on the Tooling API objects SandboxInfo and SandboxProcess. The prefix is absent from the usual community lists. Anonymous Apex resolves the type... A regular SOQL query fails..."
+  },
+  "problem_statement": "Salesforce admins and developers automating sandbox management hit undocumented API objects and key prefixes with no reliable reference, causing automation scripts to break and wasting engineering hours.",
+  "target_segment": "Salesforce developers and DevOps engineers at mid-to-large enterprises managing multiple sandboxes",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "sandbox-management",
+    "devops",
+    "api-automation",
+    "undocumented-api",
+    "developer-tools",
+    "crm"
+  ],
+  "notes": "Business context: engineering time spent debugging undocumented Salesforce internals. Salesforce orgs are expensive; teams that automate sandbox management are clearly paying for enterprise licenses. A tooling product (living reference + validation layer for Salesforce metadata/key prefixes) or an enhanced CLI could save hours per sprint. Adjacent to existing paid tools like Salesforce Inspector.",
+  "status": "candidate"
+}

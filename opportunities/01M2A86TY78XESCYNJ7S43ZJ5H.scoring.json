@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M2A86TY78XESCYNJ7S43ZJ5H",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 3,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 1,
+    "operational_autonomy": 1,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Hardware reselling, MVNO setup, and plan bundling all require substantial per-customer manual logistics, vendor negotiations, and fulfilment that Claude cannot execute."
+    },
+    {
+      "name": "requires_physical_logistics",
+      "deduction": 1.0,
+      "reason": "Any hardware bundle (watch/phone + SIM plan) involves physical shipping, inventory, or carrier relationships \u2014 not deliverable by a software-only factory."
+    }
+  ],
+  "total": 0.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a parent (consumer) hunting for a physical hardware+connectivity solution \u2014 this is not a software problem Claude can build or autonomously run. Willingness to pay exists (the parent is actively shopping), but the product is essentially an MVNO or hardware reseller play requiring carrier contracts, device inventory, and manual fulfilment per order. Operational autonomy and buildability scores are both near zero, and no Claude-deliverable software wedge is apparent.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using a Claude factory. The core need is a physical SIM-enabled device with carrier roaming agreements \u2014 something that requires hardware sourcing, inventory management, carrier partnerships, and ongoing customer support for connectivity issues. No amount of AI automation substitutes for those physical and contractual requirements. Pass on this one.",
+  "notes": "Fails build_gates on operational_autonomy (1 < 7), buildability_with_ai (1 < 6), buyer_clarity (5 < 6), and willingness_to_pay (6 meets gate but other gates fail). Fundamentally a hardware/MVNO play incompatible with this factory's tooling.",
+  "scored_at": "2026-09-12T10:29:26+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

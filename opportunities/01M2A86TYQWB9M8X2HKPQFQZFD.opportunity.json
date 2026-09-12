@@ -1,0 +1,23 @@
+{
+  "id": "01M2A86TYQWB9M8X2HKPQFQZFD",
+  "discovered_at": "2026-09-12T10:27:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95580/pdf-printer-on-windows-non-agpl-licensed",
+    "snippet": "I wonder if is there a virtual PDF printer for Windows with the following additional features: Free use for non-personal/commercial applications. Not AGPL licensed (e.g. not based on Ghostscript). Not the 'Microsoft print to PDF' solution."
+  },
+  "problem_statement": "Businesses and developers need a commercial-use virtual PDF printer for Windows that is not encumbered by AGPL licensing (ruling out Ghostscript-based tools) and goes beyond the basic Microsoft solution.",
+  "target_segment": "Windows software developers and IT teams at SMBs who need commercially licensable PDF generation tooling",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "pdf-generation",
+    "windows",
+    "virtual-printer",
+    "commercial-license",
+    "developer-tools",
+    "document-automation"
+  ],
+  "notes": "Clear commercial-use framing \u2014 the asker explicitly wants something legal for non-personal/commercial applications. Licensing friction is a known paid-software trigger. Existing commercial products (PDF995, Bullzip, etc.) have gaps here; a clean, affordable, MIT/commercial-licensed SDK or virtual printer could command a per-seat or per-call fee.",
+  "status": "candidate"
+}

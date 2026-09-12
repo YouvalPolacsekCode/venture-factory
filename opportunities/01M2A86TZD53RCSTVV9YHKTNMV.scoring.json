@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2A86TZD53RCSTVV9YHKTNMV",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is extremely diffuse \u2014 a mix of individual job seekers (who almost never pay for developer tooling), career coaches, and a tiny niche of indie devs building bots, none of whom represent a clean B2B ICP with budget authority. Willingness to pay is weak: there is no established paid market for 'job application bot observability,' and the signal source is a single dev.to post with 14 upvotes, not evidence of a paying segment. Operational autonomy is also middling because the core value (diagnosing whether an automation works) likely requires custom integration with each user's specific bot setup, making fully hands-off delivery difficult.",
+  "solution_plan": "This idea does not meet the bar for a solo non-technical operator to build, sell, and maintain hands-off. The target users \u2014 indie developers building job bots \u2014 are highly technical and expect to build their own observability tooling for free; there is no established pricing floor. Even if a lightweight dashboard or API wrapper were built using Claude + a simple web page + Stripe, the operator would face a tiny, fragmented, price-resistant audience with no clear outreach channel. The maintenance burden (supporting technical users debugging custom automation setups) would require ongoing human judgement calls. Recommend dropping this opportunity and redirecting research toward segments with demonstrated B2B willingness to pay.",
+  "notes": "Fails buyer_clarity gate (score 3, floor 6), willingness_to_pay gate (score 3, floor 5), and buildability_with_ai gate (score 4, floor 6). Would be capped at validate even if total were higher, but total of 3.8 falls below the 5.5 validate threshold, so recommended_stage is drop.",
+  "scored_at": "2026-09-12T10:29:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

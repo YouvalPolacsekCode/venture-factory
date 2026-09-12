@@ -1,0 +1,24 @@
+{
+  "id": "01M2A86TZ6Q9TSHWR50AVQYGFE",
+  "discovered_at": "2026-09-12T10:27:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148930/manually-upload-a-conversion-with-only-a-gbraid",
+    "snippet": "Trying to use the legacy uploader to upload a conversion with only a GBRAID. I don't have a GCLID. Is there a special format for this? I have a conversion that only has a GBRAID. I have tried putting the GBRAID into the Google Click ID field, but it says 'The imported gclid could not be decoded.'"
+  },
+  "problem_statement": "Advertisers running Google Ads campaigns cannot upload offline conversions when they only have a GBRAID (app click ID) and no GCLID, because the legacy uploader rejects the format \u2014 causing conversion data gaps and misinformed bidding.",
+  "target_segment": "Performance marketing managers and agencies running Google App campaigns with offline conversion tracking",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "google-ads",
+    "conversion-tracking",
+    "gbraid",
+    "offline-conversions",
+    "attribution",
+    "paid-search",
+    "marketing-ops"
+  ],
+  "notes": "Advertiser context \u2014 people spending real money on Google Ads are losing attribution data. Conversion tracking gaps directly cost money in poor bidding decisions. A SaaS tool or middleware that handles GBRAID-to-conversion-upload pipeline would have a clear ROI story and could charge % of ad spend or flat monthly fee.",
+  "status": "candidate"
+}

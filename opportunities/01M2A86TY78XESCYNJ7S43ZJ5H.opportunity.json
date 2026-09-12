@@ -1,0 +1,24 @@
+{
+  "id": "01M2A86TY78XESCYNJ7S43ZJ5H",
+  "discovered_at": "2026-09-12T10:27:15+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49668960",
+    "snippet": "Hard req: has to have cell connectivity & support roaming (US <> EU). Not for daily use, but for comms when they're out of the house in case they need to reach out. I looked at apple watch family and it's great, except that it doesn't allow roaming or plans abroad (it seems that BetterRoaming might work but it's unclear). The Garmin Bounce 2 looks like it fits the bill, but it has ZERO reviews and some comments make it look like it's crap. The Light Phone III..."
+  },
+  "problem_statement": "Parents cannot find a reliable semi-dumb phone or watch for kids that supports international roaming across US and EU, leaving a gap between full smartphones and non-roaming wearables.",
+  "target_segment": "Parents of school-age children who travel internationally or split time between US and EU",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "kids-phone",
+    "child-safety",
+    "roaming",
+    "dumb-phone",
+    "parental-controls",
+    "wearable",
+    "family-connectivity"
+  ],
+  "notes": "Explicit buyer intent: parent actively shopping, has evaluated Apple Watch Family, Garmin Bounce 2, Light Phone III. Willing to pay for a hardware/plan solution. Market gap is roaming support combined with limited functionality. Could be a reseller/MVNO play or curated hardware + plan bundle.",
+  "status": "candidate"
+}

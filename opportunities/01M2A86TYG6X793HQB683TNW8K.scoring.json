@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M2A86TYG6X793HQB683TNW8K",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Productizing video caching/downloading from YouTube circumvents YouTube's Terms of Service (which prohibit downloading content). A tool specifically designed to pre-cache or download YouTube video segments for users behind censorship/VPN infrastructure is legally and TOS-grey at best, and building a commercial product on top of it is effectively non-legitimate. Additionally, facilitating circumvention of country-level censorship controls creates legal risk in those jurisdictions."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent for users in censored regions, but any commercial product designed to pre-download or cache YouTube content violates YouTube's Terms of Service, creating an existential legal and platform risk. The buyer population (individual consumers in restricted countries) also has low willingness to pay and is extremely difficult to reach through legitimate channels. The legitimacy penalty alone disqualifies this.",
+  "solution_plan": "This opportunity is not viable. A commercial tool that works by caching YouTube videos to work around VPN drops would immediately violate YouTube's TOS and risk legal action or DMCA liability. No legitimate business can be built here without platform cooperation that does not exist. Drop entirely.",
+  "notes": "not_legitimate_or_grey penalty applied: YouTube ToS prohibit downloading/caching their content for playback; building a paid product on this mechanism is non-legitimate. Buyer clarity is also very weak (anonymous consumers in restricted regions).",
+  "scored_at": "2026-09-12T10:29:26+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

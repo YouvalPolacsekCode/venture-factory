@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2A86TYY81TD5PMF0V8AMKRP",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [],
+  "total": 6.2,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is specific and well-funded: Salesforce developers and DevOps engineers at mid-to-large enterprises, who are already paying for expensive Salesforce licenses and adjacent tooling like Salesforce Inspector or Metazoa. The pain \u2014 broken automation scripts caused by undocumented API objects and key prefixes \u2014 is real, recurring, and costs engineering hours. Buildability is solid: a Claude-powered reference tool that ingests Salesforce release notes, community threads, and Tooling API introspection to produce a living, queryable key-prefix registry is achievable with prompts + a web interface + Stripe. However, responsiveness signal is zero (untested), and the niche is narrow enough that demand validation is the right next step before committing to build.",
+  "solution_plan": "The micro-service is a searchable, always-current Salesforce API reference and key-prefix validator \u2014 essentially a 'Salesforce undocumented API decoder' that surfaces what the official docs omit. BUILD: the factory creates a Claude-powered pipeline that weekly ingests Salesforce release notes, Tooling API metadata, and community StackExchange/SFDC Answers threads, compiles a structured key-prefix registry, and serves it via a simple web app with a search box and a REST endpoint; operator approves the weekly data refresh batch. SELL: reach Salesforce developer communities \u2014 Trailblazer Community, SFDC-focused Slack groups (Salesforce Developers, Admin Evangelist), LinkedIn filtered to 'Salesforce DevOps Engineer' \u2014 with a free tier plus a $29/mo 'team plan' with API access and Slack alerts for new prefix discoveries; outreach goes out only after operator approves each batch. MAINTAIN: users query the web app or API autonomously; Claude handles support questions via a canned-response layer; Stripe handles billing; operator's only recurring touch is approving the weekly data refresh and outreach sends. Realistic caveat: the data pipeline requires careful prompt engineering to reliably extract structured data from unstructured community posts \u2014 plan for 2-3 weeks of factory iteration, not one.",
+  "notes": "All build gates met (operational_autonomy=7\u22657, buildability_with_ai=7\u22656, buyer_clarity=7\u22656, willingness_to_pay=6\u22655). Capped at validate because total 6.2 < 6.5 threshold for build, and responsiveness_signal is untested. Recommend a 2-week outreach probe to Trailblazer Community and SFDC Slack before committing to build.",
+  "scored_at": "2026-09-12T10:29:26+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

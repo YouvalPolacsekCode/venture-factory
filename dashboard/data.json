@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-09-11T07:37:46+00:00",
-    "idt": "2026-09-11T10:37:46+03:00"
+    "utc": "2026-09-12T07:29:45+00:00",
+    "idt": "2026-09-12T10:29:45+03:00"
   },
   "funnel": {
-    "candidates": 313,
-    "scored": 313,
+    "candidates": 319,
+    "scored": 319,
     "validated": 33,
     "build_decisions": {
       "defer_1_week": 29,
@@ -102,6 +102,35 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48825447",
       "discovered_at": "2026-07-08T08:42:28+03:00"
+    },
+    {
+      "topics": [
+        "google-ads",
+        "conversion-tracking",
+        "gbraid"
+      ],
+      "id": "01M2A86TZ6Q9TSHWR50AVQYGFE",
+      "problem_statement": "Advertisers running Google Ads campaigns cannot upload offline conversions when they only have a GBRAID (app click ID) and no GCLID, because the legacy uploader rejects the format — causing conversion data gaps and misinformed bidding.",
+      "target_segment": "Performance marketing managers and agencies running Google App campaigns with offline conversion tracking",
+      "total": 6.8,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a performance marketing manager or agency already spending real money on Google Ads — one of the clearest willingness-to-pay signals possible, since attribution gaps directly translate to wasted ad spend and poor bidding decisions. The pain (GBRAID conversions being rejected by the legacy uploader, causing data loss) is specific, recurring every time an app campaign runs, and Google has not fully documented or solved the GBRAID upload workflow. Buildability is strong: a Claude-assi…",
+      "solution_plan": "The micro-service is a GBRAID Offline Conversion Uploader — a web tool that accepts a CSV of GBRAID values + conversion metadata and correctly submits them to the Google Ads API, bypassing the broken legacy uploader. BUILD: the factory builds a Claude-assisted data transformer (validates GBRAID format, maps fields to the Ads API schema, handles error responses) fronted by a simple upload form and a Stripe checkout for a $49/mo subscription or $0.01/conversion row; operator approves the initial API credential setup and first batch run. SELL: reach performance marketers and PPC agencies via LinkedIn (filter: 'Google Ads', 'Performance Marketin…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 8,
+        "Buildable": 7,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webmasters.stackexchange.com/questions/148930/manually-upload-a-conversion-with-only-a-gbraid",
+      "discovered_at": "2026-09-12T10:27:15+03:00"
     },
     {
       "topics": [
@@ -715,48 +744,15 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439813/why-both-agent-deployment-and-installation-fails-with-your-org-doesnt-have-acc",
       "discovered_at": "2026-09-08T10:33:30+03:00"
-    },
-    {
-      "topics": [
-        "stripe",
-        "account-closure",
-        "fintech-risk"
-      ],
-      "id": "01KTGE2RZMDDCVTY4GP26Y1E3E",
-      "problem_statement": "Early-stage startups receiving pre-seed funding via Stripe invoices risk sudden account closure and funds being held for 90-120 days, because Stripe's fraud models flag large one-off payments from investors as suspicious — leaving founders without access to capital at a critical moment.",
-      "target_segment": "Pre-seed and seed-stage startup founders using Stripe for payment processing, especially those who also used Stripe Atlas for incorporation",
-      "total": 6.3,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a pre-seed or seed-stage founder who has already paid for Stripe Atlas and has live users — a specific, reachable person with demonstrated spending behavior. The pain is severe (six-figure funds frozen at a critical moment) even if it is a low-frequency event. The product — a plain-language guide + payment-rails advisory — is buildable as a Claude-authored document or short advisory workflow, but the willingness to pay for a one-time guide vs. finding the answer free on HN is uncer…",
-      "solution_plan": "The micro-service is a 'Stripe-safe Fundraising Rails' advisory pack: a structured guide + intake form that tells a founder exactly how to receive a pre-seed wire safely (Mercury direct, ACH from investor's bank, what NOT to run through Stripe), with a Claude-generated custom checklist based on their specific situation. The factory builds it as a Claude prompt + a Carrd/Typeform intake page + a Stripe payment link for a one-time $49-99 fee. Outreach goes to founders who post on Hacker News, Indie Hackers, or Reddit about Stripe account issues — the factory drafts those replies and queues them for Youval to approve before posting. Delivery is…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 6,
-        "Buildable": 8,
-        "Pain": 9
-      },
-      "verdict": "validated",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48432117",
-      "discovered_at": "2026-06-07T09:59:46+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2268,
-    "last_7_days_usd": 2.0233,
-    "all_time_usd": 23.3676,
+    "today_usd": 0.2493,
+    "last_7_days_usd": 1.9075,
+    "all_time_usd": 23.6169,
     "by_day": [
-      {
-        "date": "2026-09-05",
-        "usd": 0.3651
-      },
       {
         "date": "2026-09-06",
         "usd": 0.381
@@ -780,24 +776,28 @@
       {
         "date": "2026-09-11",
         "usd": 0.2268
+      },
+      {
+        "date": "2026-09-12",
+        "usd": 0.2493
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6617
+        "usd": 0.6547
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4829
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.4577
+        "usd": 0.4909
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3879
+        "usd": 0.4225
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.3063
       },
       {
         "agent": "daily_summary",
@@ -806,41 +806,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-05",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-06",
       "agents": {
@@ -1050,12 +1015,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-12",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-11.md",
-    "date": "2026-09-11",
-    "text": "# Daily Summary — 2026-09-11 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 313 |\n| Opportunities validated past threshold | 75 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for new pain signals across monitored sources.\n2. `opportunity_scoring` processes backlog of candidate opportunities.\n3. `pain_validation` runs targeted validation probes on high-scoring candidates.\n4. `lead_research` initiates outreach on validated opportunities meeting threshold.\n5. `build_decisions` reviews top candidates for experiment viability.\n\n## Operator action items\n\nNone — process is running clean. Review the 75 validated opportunities in today's verdict files and decide which to advance into experiment build.",
+    "file": "reports/daily/2026-09-12.md",
+    "date": "2026-09-12",
+    "text": "# Daily Summary — 2026-09-12 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 319 |\n| Opportunities validated past threshold | 76 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stage today. Discovery and validation phases are processing the opportunity pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning for new pain signals across monitored sources.\n2. `pain_validation` validates top-scoring candidates from today's 319 surfaced opportunities.\n3. `opportunity_scoring` re-scores the 319-candidate pool for prioritization.\n4. `build_decisions` evaluates which validated opportunities meet launch criteria.\n5. `cost_gain` computes weekly ROI metrics on active validation cohorts.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

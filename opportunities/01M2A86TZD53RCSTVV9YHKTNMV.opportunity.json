@@ -1,0 +1,24 @@
+{
+  "id": "01M2A86TZD53RCSTVV9YHKTNMV",
+  "discovered_at": "2026-09-12T10:27:15+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/whateverneveranywhere/i-built-a-robot-that-applies-for-jobs-the-hard-part-was-proving-it-worked-2e2a",
+    "snippet": "Twelve real experiments, eight hours, zero landed. The bug was in the instrument, not the robot. [Post about building an automated job application bot and the challenge of measuring whether it actually works]"
+  },
+  "problem_statement": "Job seekers and developers building automated job application tools have no reliable way to measure whether their automation is actually working \u2014 the feedback loop (callbacks, rejections) is too slow and noisy to debug the system.",
+  "target_segment": "Tech-savvy job seekers, career coaches, and indie developers building job search automation tools",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "job-search-automation",
+    "ai-agents",
+    "application-tracking",
+    "career-tools",
+    "resume",
+    "outreach-analytics",
+    "developer-tools"
+  ],
+  "notes": "Builder invested 8 hours in an experiment \u2014 real time cost. Recurring pain: anyone building or using job application automation faces the same measurement gap. A lightweight observability/testing harness for job application bots could be a paid SaaS or API. The dev.to post had 14 score and 6 comments suggesting community resonance.",
+  "status": "candidate"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "01M2A86TYG6X793HQB683TNW8K",
+  "discovered_at": "2026-09-12T10:27:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182587/how-to-make-youtube-buffer-an-entire-video",
+    "snippet": "Asking this in 2026 because the 2012 answers are now obsolete. In my country one can only access youtube with a VPN, but the connections drops every 3-5 minutes so I need a way to make youtube buffer the whole video instead of just the next 1 minute."
+  },
+  "problem_statement": "Users in countries with restricted or unstable internet access cannot reliably watch video content; VPN connections drop frequently and buffering workarounds are outdated, making video consumption painful.",
+  "target_segment": "Internet users in countries with censored or unreliable connectivity who rely on VPNs for video access",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vpn",
+    "video-buffering",
+    "internet-censorship",
+    "offline-video",
+    "slow-internet",
+    "content-access"
+  ],
+  "notes": "Recurring pain across restricted-internet regions (signal recurs across years). Could productize as a browser extension or desktop app that pre-caches/downloads video segments. Existing VPN users are already paying customers; upsell or companion tool opportunity.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M2CVP7EB1HF5X68ENMEE7X5W",
+  "discovered_at": "2026-09-13T10:46:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95572/extension-for-coloring-fixed-width-files",
+    "snippet": "In VS Code I'm dealing a lot with data files, some of them with separators (like CSV) and some with fixed-width fields. For CSV files I use Rainbow CSV to display the columns in my file in different colors. Is there a similar extension to color the columns of a fixed-width file? (captured 2026-09-08)"
+  },
+  "problem_statement": "Data analysts and developers who work with legacy fixed-width flat files in VS Code lack a column-coloring extension comparable to Rainbow CSV for CSVs, making it hard to visually parse and validate fixed-width records.",
+  "target_segment": "Data analysts, ETL developers, and backend engineers at enterprises or agencies who regularly handle legacy fixed-width data formats (COBOL, mainframe exports, government feeds).",
+  "geo": "GLOBAL",
+  "signal_strength": 1,
+  "keywords": [
+    "fixed-width",
+    "vscode-extension",
+    "data-processing",
+    "csv",
+    "etl",
+    "legacy-data",
+    "developer-tools",
+    "data-analyst"
+  ],
+  "notes": "Single post with no upvotes; signal is very weak. However, fixed-width file handling is a known pain in enterprise/government data pipelines where buyers exist (data teams at banks, insurers, government contractors). Rainbow CSV has 3M+ installs suggesting the broader category converts. Worth monitoring for recurrence before investing further. No explicit willingness-to-pay stated.",
+  "status": "candidate"
+}

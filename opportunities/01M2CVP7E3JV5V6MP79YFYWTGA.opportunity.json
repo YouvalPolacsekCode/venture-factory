@@ -1,0 +1,25 @@
+{
+  "id": "01M2CVP7E3JV5V6MP79YFYWTGA",
+  "discovered_at": "2026-09-13T10:46:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49677232",
+    "snippet": "Namecheap is having hosting issues again despite their promise to make things right after the incident a month ago. (4 points, captured 2026-09-12)"
+  },
+  "problem_statement": "Small business website owners and developers on shared/budget hosting providers like Namecheap experience repeated, unpredictable outages with no meaningful SLA enforcement or automatic failover, causing lost revenue and eroded customer trust.",
+  "target_segment": "Freelance web developers and small business owners running production sites on budget shared hosting providers.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "web-hosting",
+    "uptime-monitoring",
+    "shared-hosting",
+    "reliability",
+    "failover",
+    "sla",
+    "small-business",
+    "downtime"
+  ],
+  "notes": "Recurring complaint pattern \u2014 poster notes this is at least the second incident in ~30 days despite vendor promises. Buyers here are freelancers/agencies who pay for hosting and suffer client-facing consequences. Willingness-to-pay evidence is implicit (they are already paying Namecheap); upsell angle is a lightweight failover/redirect service or automated host-health alerting with one-click CDN fallback. Signal is thin (single recent post), score kept at 2.",
+  "status": "candidate"
+}

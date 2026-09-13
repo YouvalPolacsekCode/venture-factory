@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M1ZYZCGQW669EP2TZ838E4XJ",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Agentforce is Salesforce's most-promoted 2025\u20132026 product, yet cross-org deployment is systematically broken with no documented fix. Salesforce developers and ISV partners are blocked from shipping products, and the incumbent deployment tooling market (Gearset, Copado, AutoRABIT) proves the ecosystem pays $300\u20131,500/user/year for exactly this category. At least five distinct public pain expressions exist across Salesforce Stack Exchange, Trailblazer Community, and IdeaExchange, and willingness-to-pay is evidenced by existing competitor pricing and explicit requests for paid tools.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439813/why-both-agent-deployment-and-installation-fails-with-your-org-doesnt-have-acc",
+    "https://trailhead.salesforce.com/trailblazer-community/feed/0D54V00008eLFQT",
+    "https://ideas.salesforce.com/s/idea/a0B8W00000GdmSqUAJ/agentforce-crossorg-deployment-support",
+    "https://gearset.com/pricing",
+    "https://copado.com/pricing"
+  ],
+  "evaluated_at": "2026-09-13T10:47:11+03:00"
+}

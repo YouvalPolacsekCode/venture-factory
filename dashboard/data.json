@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-09-12T07:29:45+00:00",
-    "idt": "2026-09-12T10:29:45+03:00"
+    "utc": "2026-09-13T07:48:01+00:00",
+    "idt": "2026-09-13T10:48:01+03:00"
   },
   "funnel": {
-    "candidates": 319,
-    "scored": 319,
-    "validated": 33,
+    "candidates": 321,
+    "scored": 321,
+    "validated": 34,
     "build_decisions": {
-      "defer_1_week": 29,
+      "defer_1_week": 30,
       "kill": 4
     },
     "build_now": 0,
@@ -740,7 +740,7 @@
         "Buildable": 6,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439813/why-both-agent-deployment-and-installation-fails-with-your-org-doesnt-have-acc",
       "discovered_at": "2026-09-08T10:33:30+03:00"
@@ -749,14 +749,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2493,
-    "last_7_days_usd": 1.9075,
-    "all_time_usd": 23.6169,
+    "today_usd": 0.3547,
+    "last_7_days_usd": 1.8812,
+    "all_time_usd": 23.9715,
     "by_day": [
-      {
-        "date": "2026-09-06",
-        "usd": 0.381
-      },
       {
         "date": "2026-09-07",
         "usd": 0.2159
@@ -780,67 +776,36 @@
       {
         "date": "2026-09-12",
         "usd": 0.2493
+      },
+      {
+        "date": "2026-09-13",
+        "usd": 0.3547
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6547
+        "usd": 0.6357
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4909
+        "usd": 0.5
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4225
+        "usd": 0.3983
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3063
+        "usd": 0.3135
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0338
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-06",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-07",
       "agents": {
@@ -1050,12 +1015,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-13",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-12.md",
-    "date": "2026-09-12",
-    "text": "# Daily Summary — 2026-09-12 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 319 |\n| Opportunities validated past threshold | 76 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stage today. Discovery and validation phases are processing the opportunity pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning for new pain signals across monitored sources.\n2. `pain_validation` validates top-scoring candidates from today's 319 surfaced opportunities.\n3. `opportunity_scoring` re-scores the 319-candidate pool for prioritization.\n4. `build_decisions` evaluates which validated opportunities meet launch criteria.\n5. `cost_gain` computes weekly ROI metrics on active validation cohorts.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-09-13.md",
+    "date": "2026-09-13",
+    "text": "# Daily Summary — 2026-09-13 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 321 |\n| Opportunities validated past threshold | 77 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments are currently in build, live, or scaling phases. The factory is in discovery mode, running market radar and opportunity validation across candidate pipeline.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. `lead_research`, `product_design`, `responsiveness_test`, and `service_builder` correctly skipped (no active experiments to drive their work). Core discovery loop (`market_radar`, `opportunity_scoring`, `pain_validation`, `build_decisions`, `cost_gain`) all succeeded on schedule.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweep of emerging pain signals across sources.\n2. `opportunity_scoring` ranks the 321 candidate opportunities; output feeds next validation cycle.\n3. `pain_validation` probes top-ranked candidates to identify which meet threshold for advancement.\n4. `cost_gain` analyzes candidate acquisition cost vs. long-tail revenue potential.\n5. `build_decisions` flags candidates ready for experimental design.\n\n## Operator action items\n\nNone — process is nominal. The 77 validated opportunities represent candidates ready for experiment design. Review the top 10 by score (available in `opportunities/scoring/2026-09-13.json`) and decide which 2–3 to enter into build phase next week.",
     "truncated": false
   },
   "analytics": null

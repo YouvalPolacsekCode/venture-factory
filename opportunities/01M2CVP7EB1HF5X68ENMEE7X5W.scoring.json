@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2CVP7EB1HF5X68ENMEE7X5W",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real for a narrow slice of data engineers dealing with legacy fixed-width formats, but there is essentially no willingness-to-pay signal \u2014 VS Code extensions in this category are universally free (Rainbow CSV is free), so charging for this would face immediate rejection from the developer community that expects free tooling. Buyer clarity is weak (data analysts at enterprises are the end users but not the budget holders, and the purchase unit is a free extension marketplace download). The signal strength is critically thin (single zero-upvote post) and the solution is a VS Code extension \u2014 a specific artifact Claude cannot ship autonomously through this factory's standard tooling (prompts + landing page + Stripe), making it a poor fit structurally.",
+  "solution_plan": "This opportunity is not recommended for pursuit. A VS Code extension requires publishing to the VS Code Marketplace as a compiled artifact \u2014 outside the factory's standard Claude-prompt + landing-page + Stripe stack. Even if built, the entire VS Code extension ecosystem is free-to-install with no viable Stripe payment layer, meaning there is no realistic revenue path for a solo non-technical operator. If signal recurs strongly (multiple posts, GitHub issues, developer communities asking), reconsider as an open-source lead-gen asset rather than a paid micro-service.",
+  "notes": "Total 4.4 is below min_total_to_validate (5.5) \u2192 drop. Failing build gates if total were higher: willingness_to_pay (3, floor is 5), buyer_clarity (5, floor is 6), buildability_with_ai (4, floor is 6).",
+  "scored_at": "2026-09-13T10:47:40+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

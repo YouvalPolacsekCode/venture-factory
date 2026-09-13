@@ -1,0 +1,49 @@
+{
+  "opportunity_id": "01M1ZYZCGQW669EP2TZ838E4XJ",
+  "decided_at": "2026-09-13T10:47:54+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 6,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 8,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.4,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "eligible_for_build": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.4 < min_total_to_build 6.5",
+    "operational_autonomy=6 < 7"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Two hard gates block build_now: operational_autonomy scores 6 against a floor of 7, and the weighted total of 6.4 falls below the 6.5 min_total_to_build threshold. The scoring agent itself recommends 'validate' rather than 'build'. The opportunity has genuinely strong commercial signals \u2014 clear buyer (Salesforce devs/admins already paying for deployment tooling), proven willingness to pay, and a timely Agentforce deployment gap \u2014 but the cost-to-gain ratio of 4.15 is far above the 0.6 kill threshold, reflecting how hard it is to reach enough Salesforce developers through cold outreach alone. Defer one week to allow a validation probe: post a detailed answer on the original Stack Exchange thread and one Trailblazer Community post offering a free diagnostic, then measure inbound interest; if 3+ qualified replies arrive, operational_autonomy can be re-scored for the diagnosis-only scope and the opportunity re-evaluated.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "Salesforce Stack Exchange answer + Trailblazer Community post"
+}

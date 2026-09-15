@@ -1,0 +1,27 @@
+{
+  "id": "01M2J1VV4T9QDMSYFNYMZAZB38",
+  "discovered_at": "2026-09-15T11:10:19+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49706870",
+    "snippet": "I'm contemplating moving out of the US for personal reasons (to a place I am also a citizen) and would like to hear the stories of US citizens who live outside the US. The tax implications and reporting requirements seem daunting. In particular I plan to pursue primarily self-employment/entrepreneurship which gets hit by the GILTI tax. And increased reporting requirements with huge penalties."
+  },
+  "problem_statement": "US citizen entrepreneurs and self-employed professionals relocating abroad face an extremely complex web of tax obligations \u2014 GILTI, FBAR, foreign tax credits, self-employment tax \u2014 with severe penalties for errors, but no affordable specialized tooling or advisory service exists that covers this specific combination.",
+  "target_segment": "US citizen freelancers, founders, and self-employed professionals who are relocating or have relocated abroad and need ongoing compliance guidance for US extraterritorial tax obligations.",
+  "geo": "US",
+  "signal_strength": 3,
+  "keywords": [
+    "expat-tax",
+    "us-tax-abroad",
+    "gilti",
+    "fbar",
+    "self-employment",
+    "tax-compliance",
+    "entrepreneur",
+    "cross-border",
+    "tax-reporting",
+    "freelance"
+  ],
+  "notes": "Poster is explicitly an entrepreneur/self-employed person, mentions GILTI by name \u2014 showing sophistication and real research done. The penalty risk (mentioned explicitly) creates strong willingness-to-pay for a reliable solution. Recurring problem: US expat tax software market exists (TaxAct, Greenback, Bright!Tax) but none specialize in the self-employed/founder GILTI+FBAR combination. Fresh signal (2026-09-15), 4 comments. Buyer: solo operator or founder willing to pay for peace of mind on compliance.",
+  "status": "candidate"
+}

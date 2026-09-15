@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2J1VV50J2R3W0FKT51JJDXH",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is well-defined \u2014 Salesforce admins and developers at mid-to-enterprise companies managing compliance-sensitive approval workflows \u2014 and this segment demonstrably pays for AppExchange solutions, often in the $1,000\u2013$10,000/year range. The pain is real: broken mandatory-comment flows create audit trail gaps in business-critical processes. However, buildability_with_ai scores 3 because a proper solution requires Salesforce platform expertise, Apex/Flow development, AppExchange security review certification, and ongoing compatibility maintenance across Salesforce releases \u2014 none of which are achievable with Claude prompts and a landing page. Operational_autonomy also falls short (4) since AppExchange ISV products require developer-level maintenance. Both critical build gates (buildability_with_ai min 6, operational_autonomy min 7) fail, so the stage is capped at validate despite a borderline total.",
+  "solution_plan": "What it is: a Salesforce AppExchange micro-app that enforces mandatory rejection comments natively in any approval process, without brittle custom flows. The core problem is genuine and the market is proven \u2014 but this is not buildable by a solo non-technical operator using Claude + a landing page. Building even a minimal Salesforce managed package requires Apex code, Flow metadata, a Salesforce Partner account, passing AppExchange Security Review (a multi-week process), and ongoing compatibility updates with each Salesforce seasonal release. Claude can help draft the Apex logic and documentation, but a Salesforce-credentialed developer is needed to actually build, test, and certify the package. If Youval has access to a Salesforce developer partner, this could be validated first by posting in the Salesforce Trailblazer Community to gauge demand; only proceed to build with a technical co-builder. Otherwise, recommend dropping this specific execution path in favor of an opportunity the factory can build autonomously.",
+  "notes": "Fails buildability_with_ai build gate (score 3, floor 6) and operational_autonomy build gate (score 4, floor 7). Salesforce AppExchange requires certified managed packages \u2014 not achievable with standard Claude factory tooling alone. Validate demand first; only build with a Salesforce-credentialed developer.",
+  "scored_at": "2026-09-15T11:12:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M2J1VV4T9QDMSYFNYMZAZB38",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": -1.5,
+      "reason": "US tax law (GILTI, FBAR, self-employment tax) is a regulated professional domain requiring CPA/attorney licensure for advice; any service providing specific tax guidance risks unauthorized practice of law/accounting, creating material legal and compliance exposure."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": -1.5,
+      "reason": "Meaningful tax compliance guidance for complex cross-border situations (GILTI elections, FBAR filing strategies, foreign tax credit optimization) requires per-customer human review by a licensed professional \u2014 Claude alone cannot safely sign off on specific tax positions."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": -1.0,
+      "reason": "Clients with six-figure penalty exposure expect and require live consultation calls before acting on advice; async-only delivery is a liability, not a feature, in this category."
+    }
+  ],
+  "total": 1.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 a US founder or freelancer relocating abroad genuinely faces severe, financially consequential tax complexity and has demonstrated willingness to pay for peace of mind. However, delivering accurate, actionable guidance on GILTI, FBAR, and self-employment tax abroad requires licensed CPA or attorney involvement for each client; Claude cannot legally or safely substitute. The regulated_industry and human-fulfillment penalties are both fully warranted, collapsing the total to 1.3. Even before penalties, the operational_autonomy score (3) fails the build gate floor of 7 \u2014 this is fundamentally a high-touch professional services play, not an autonomous micro-service.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator running an autonomous Claude factory. While an AI-assisted intake form or educational content site could be built, any service that actually helps individuals make GILTI elections, file FBARs correctly, or optimize foreign tax credits must be reviewed and signed off by a licensed US CPA or tax attorney \u2014 per customer, per filing. The liability exposure for errors runs to five and six figures in IRS penalties. The only honest path would be to partner with or refer to a licensed expat tax firm (e.g., Bright!Tax, Greenback), potentially earning a referral fee \u2014 but that is not a buildable product for this factory. Recommend dropping and not pursuing.",
+  "notes": "Fails operational_autonomy build gate (score 3, floor 7) and regulated_industry penalty effectively disqualifies. Even as an educational/informational product the legal grey zone is significant. Pass.",
+  "scored_at": "2026-09-15T11:12:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

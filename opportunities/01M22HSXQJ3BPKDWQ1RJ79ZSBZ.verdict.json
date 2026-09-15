@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M22HSXQJ3BPKDWQ1RJ79ZSBZ",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Professional developers using AI coding assistants daily report losing comprehension of their own codebases \u2014 a recurring, well-documented pain with multiple corroborating HN threads, Reddit discussions, and industry commentary. Willingness-to-pay is evidenced by existing spend on code-review tooling (CodeClimate ~$20+/mo, Graphite ~$18+/mo, GitHub Copilot $19/mo) and explicit community requests for 'what did the AI actually change' audit trails. Target audience is clearly defined and reachable.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49622554",
+    "https://news.ycombinator.com/item?id=39443700",
+    "https://www.reddit.com/r/ExperiencedDevs/comments/1b2s3t4/losing_understanding_of_my_own_codebase/",
+    "https://graphite.dev/pricing",
+    "https://codeclimate.com/pricing"
+  ],
+  "evaluated_at": "2026-09-15T11:11:21+03:00"
+}

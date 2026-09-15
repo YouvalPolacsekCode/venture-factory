@@ -1,0 +1,26 @@
+{
+  "id": "01M2J1VV50J2R3W0FKT51JJDXH",
+  "discovered_at": "2026-09-15T11:10:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439837/how-to-make-comments-mandatory-in-approval-process-upon-rejection",
+    "snippet": "I have a Salesforce classic approval process. The requirement is to make sure the user must enter a comment upon rejecting the request. I have tried creating flow as per this solution, but it is not working for me."
+  },
+  "problem_statement": "Salesforce admins cannot natively enforce mandatory rejection comments in approval processes, forcing them into brittle custom flow workarounds that frequently fail \u2014 leaving compliance and audit trail gaps in business-critical workflows.",
+  "target_segment": "Salesforce admins and developers at mid-size to enterprise companies managing procurement, HR, or legal approval workflows on Salesforce.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "approval-process",
+    "workflow-automation",
+    "admin-tools",
+    "compliance",
+    "audit-trail",
+    "low-code",
+    "crm",
+    "enterprise"
+  ],
+  "notes": "Business context clear: this is a workplace compliance requirement, not hobbyist. Salesforce ecosystem has strong willingness-to-pay for AppExchange solutions. However, only a single question here \u2014 signal_strength kept at 2. Would strengthen considerably if corroborated by AppExchange reviews or Salesforce community threads. Potential AppExchange micro-product angle.",
+  "status": "candidate"
+}

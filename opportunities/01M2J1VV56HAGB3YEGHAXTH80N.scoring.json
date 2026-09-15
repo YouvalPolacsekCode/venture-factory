@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M2J1VV56HAGB3YEGHAXTH80N",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": -1.5,
+      "reason": "Resolving 2GP packaging failures for Data Cloud DMOs requires hands-on Salesforce CLI work, package metadata debugging, and potentially filing Salesforce Known Issues \u2014 per-ISV, per-engagement manual technical work that cannot be automated by Claude alone."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer exists and pays \u2014 Salesforce ISVs are businesses with budgets, and packaging blockers are expensive delays \u2014 but the solution requires deep Salesforce platform expertise (2GP package internals, Data Cloud DMO metadata structure, sf CLI tooling) that is entirely outside what Claude prompts and a landing page can deliver. Buildability_with_ai scores 2 because there is no way to build a useful product here without a Salesforce-certified developer writing and debugging actual package metadata. Operational_autonomy scores 3 because even if a consulting workaround were documented, every new ISV customer would need a hands-on engagement. After the human-fulfillment penalty the total drops to 3.6. Both critical build gates fail decisively.",
+  "solution_plan": "This is not buildable by a solo non-technical operator using the Claude factory. The problem is a very specific Salesforce platform limitation (Data Cloud DMO objects cannot currently be included in 2GP unlocked packages) that may require either a Salesforce platform bug fix or an undocumented workaround involving managed package metadata and org-shape configuration. A viable product would be either a consulting engagement (per-customer manual work \u2014 not autonomous) or a documentation/template bundle (very low willingness to pay, easily copied). The narrow technical specificity and the requirement for a Salesforce developer to actually test and validate any solution puts this firmly out of scope for this factory. Recommend dropping; revisit only if the factory acquires a Salesforce-credentialed technical collaborator.",
+  "notes": "Fails buildability_with_ai build gate (score 2, floor 6) and operational_autonomy build gate (score 3, floor 7). Extremely niche Salesforce ISV problem requiring platform-level developer expertise. Not viable for autonomous Claude factory delivery.",
+  "scored_at": "2026-09-15T11:12:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

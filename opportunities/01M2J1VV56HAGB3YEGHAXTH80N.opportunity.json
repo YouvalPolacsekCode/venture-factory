@@ -1,0 +1,27 @@
+{
+  "id": "01M2J1VV56HAGB3YEGHAXTH80N",
+  "discovered_at": "2026-09-15T11:10:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439835/can-a-data-cloud-dmo-custom-object-dlm-be-shipped-inside-a-salesforce-pack",
+    "snippet": "I'm trying to ship a Data Cloud Data Model Object (a CustomObject with mktDataModelAttributes, i.e. an object ending in __dlm) plus its fields and a DataPackageKitDefinition / DataPackageKitObject (a Data Kit) inside a second-generation Salesforce package, so it can be installed the same way as any other custom object. Building a regular unlocked package fails at sf package version create time."
+  },
+  "problem_statement": "Salesforce ISV developers cannot package Data Cloud DMO custom objects into second-generation (2GP) unlocked packages, blocking them from distributing Data Cloud-native solutions to customers through standard AppExchange mechanisms.",
+  "target_segment": "Salesforce ISVs and consulting partners building Data Cloud-native products or accelerators who need to distribute packaged solutions via AppExchange.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "data-cloud",
+    "isv",
+    "packaging",
+    "appexchange",
+    "2gp",
+    "unlocked-package",
+    "developer-tooling",
+    "crm",
+    "enterprise"
+  ],
+  "notes": "Clear ISV context \u2014 these are businesses building products on Salesforce for resale, i.e. confirmed paying buyers. Packaging failures are a known category of pain in the Salesforce ISV ecosystem and often drive consulting spend. Single data point here keeps signal at 2, but the specificity of the technical blocker (DMO + 2GP) suggests it will affect every ISV entering the Data Cloud space as it grows. Potential angle: consulting service, automated packaging tooling, or documentation/template product.",
+  "status": "candidate"
+}

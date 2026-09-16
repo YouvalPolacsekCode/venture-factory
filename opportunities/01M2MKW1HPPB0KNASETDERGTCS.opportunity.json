@@ -1,0 +1,26 @@
+{
+  "id": "01M2MKW1HPPB0KNASETDERGTCS",
+  "discovered_at": "2026-09-16T11:03:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439842/multiple-namespace-apex-language-server-functionality",
+    "snippet": "Is there any way to setup a Salesforce project in VSCode so that Apex Language Server can jump to definition for a project with multiple Unlocked Packages in different namespaces? I installed SOQLLib and DMLLib which are both namespaced to btcdev. I retrieved the source code of the unlocked packages into their own folders. The problem is that their source code isn't namespaced. So in my Apex without a namespace, I have to use btcdev.DML.logger but jump to definition only works without the namespace prefix."
+  },
+  "problem_statement": "Salesforce developers working across multiple Unlocked Packages in different namespaces cannot use Apex Language Server's jump-to-definition in VSCode, blocking standard IDE navigation in enterprise multi-package projects.",
+  "target_segment": "Salesforce developers and ISVs managing multi-namespace Unlocked Package projects at mid-to-large companies.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "apex",
+    "language-server",
+    "vscode",
+    "unlocked-packages",
+    "namespace",
+    "developer-tooling",
+    "ide",
+    "enterprise-dev"
+  ],
+  "notes": "Single recent signal (2026-09-15) but in a paid enterprise ecosystem \u2014 Salesforce licenses are expensive and developers working on multi-namespace Unlocked Packages are definitively in a commercial context. Pain is concrete and reproducible. Opportunity: a VSCode extension or Apex LSP patch that correctly resolves namespaced references across multi-package SFDX projects. Low competition, niche but high-value buyer segment.",
+  "status": "candidate"
+}

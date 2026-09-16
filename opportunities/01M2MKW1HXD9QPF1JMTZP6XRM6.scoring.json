@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2MKW1HXD9QPF1JMTZP6XRM6",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [],
+  "total": 4.5,
+  "recommended_stage": "drop",
+  "rationale": "IT admins at SMBs and non-profits self-hosting Bitwarden are identifiable buyers, but this segment is specifically cost-sensitive (they chose self-hosted precisely to avoid the paid tier), making willingness_to_pay weak at 4. More critically, the solution \u2014 adding granular access controls to a self-hosted Bitwarden instance \u2014 requires building a companion admin layer that interfaces with Bitwarden's internal API or modifying deployment configs, which is meaningful engineering work (buildability_with_ai=4) and requires per-deployment customization and support (operational_autonomy=4). Total of 4.5 falls below the validate threshold.",
+  "solution_plan": "This opportunity is not viable for the autonomous factory model at this stage. Adding policy controls to self-hosted Bitwarden requires either a custom reverse proxy layer with policy enforcement logic, or integration with Bitwarden's organization management API \u2014 both require real software engineering to build and per-deployment support to maintain. The buyer segment (non-profits, cost-sensitive SMBs) is also the segment least likely to pay for an add-on tool. This could theoretically be explored as a managed Bitwarden deployment service, but that would require ongoing infrastructure management, which is outside scope.",
+  "notes": "Failing build_gates: operational_autonomy=4 (below min 7), buildability_with_ai=4 (below min 6), willingness_to_pay=4 (below min 5). Total 4.5 below min_total_to_validate=5.5. Drop.",
+  "scored_at": "2026-09-16T11:05:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

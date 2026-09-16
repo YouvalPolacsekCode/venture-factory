@@ -1,0 +1,25 @@
+{
+  "id": "01M2MKW1HH42G8MNVVY9TNESJP",
+  "discovered_at": "2026-09-16T11:03:29+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49722980",
+    "snippet": "I've noticed the same failure mode across most coding agents. When an implementation runs into a problem, such as a function not meeting the requirement, the agent often writes a replacement. If the overall approach changes, it starts a new path. If only a detail needs adjustment, it may add another helper or class. What it rarely does is remove the code and data definitions added for the abandoned approach. After a few iterations, the result may work, but it contains stale branches, unused definitions, and dead imports."
+  },
+  "problem_statement": "AI coding agents accumulate dead code, stale branches, and unused definitions when changing implementation direction, leaving codebases progressively harder to maintain and audit even when the final output works.",
+  "target_segment": "Software developers and engineering teams using AI coding agents (Cursor, Copilot, Claude Code, etc.) in professional/commercial projects.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "coding-agent",
+    "dead-code",
+    "code-cleanup",
+    "ai-dev-tools",
+    "refactoring",
+    "technical-debt",
+    "llm-codegen",
+    "developer-productivity"
+  ],
+  "notes": "Fresh signal (2026-09-16), 3 points with comments, author describes a clear recurring failure mode across 'most coding agents' \u2014 implies broad experience with paid tools. Buyer context: professional devs paying for agent subscriptions (Cursor, GitHub Copilot, etc.). Opportunity: a post-agent cleanup tool or agent wrapper that diffs and prunes abandoned code paths. Could be a CLI, IDE extension, or agent plugin. Willingness-to-pay evidence is indirect but implied by the professional context and frustration with multiple paid tools.",
+  "status": "candidate"
+}

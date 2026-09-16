@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2MKW1HH42G8MNVVY9TNESJP",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "Professional developers paying $10\u2013$40/mo for Cursor, Copilot, or Claude Code are the clear buyer, and the pain \u2014 codebases cluttered with dead code after agent iterations \u2014 is real, frequent, and affects commercial output quality. Willingness to pay is plausible given existing paid-tool context but unproven for a separate cleanup add-on; this is the critical gap to close. Operational_autonomy reaches 7 (users submit a repo/diff, Claude analyzes and returns a pruned diff, no per-customer manual work), but buyer_clarity just misses the build_gate floor of 6 \u2014 it's 7, so gates are met. However, responsiveness_signal is 2 (untested) and total of 6.4 lands below the build threshold of 6.5, so validate is correct: run a landing-page test or post in a developer community before building.",
+  "solution_plan": "WHAT: A 'post-agent dead-code pruner' \u2014 a web service where a developer pastes or uploads a git diff/repo snapshot and receives a clean diff that removes unused imports, stale branches, and abandoned definitions. BUILD: The factory creates a Claude prompt that ingests a diff or file tree, identifies dead code introduced in recent agent sessions, and outputs a ready-to-apply patch; a simple intake form (file upload or GitHub URL) + Stripe payment link ($9 one-time or $19/mo) is the entire front end \u2014 no coding by you. SELL: Target developer communities (HN, r/LocalLLaMA, r/cursor, X/Twitter #AIcoding threads) with a free-tier demo on a sample repo; the factory drafts and queues outreach posts for your approval before publishing. MAINTAIN: Users upload \u2192 Claude processes \u2192 patch file returned via email or download; billing via Stripe, support questions answered by a Claude-powered FAQ bot; your only recurring task is approving outreach batches. CAVEAT: If the tool needs to handle private repos via GitHub OAuth or CI integration, that requires a developer to implement OAuth flows \u2014 validate demand first with the simple upload MVP.",
+  "notes": "All build_gates technically met at these scores (operational_autonomy=7, buildability_with_ai=7, buyer_clarity=7, willingness_to_pay=6), but weighted_total 6.4 is just below the 6.5 build threshold. Validate with a landing page or community post before investing in build.",
+  "scored_at": "2026-09-16T11:05:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

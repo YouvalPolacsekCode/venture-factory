@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M2MKW1HT4QMS5JGEPT7SA0J9",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A Quip bulk migration is inherently a project-scoped engagement: each customer has a unique document structure, folder hierarchy, and destination system. Configuring, running, monitoring, and validating the migration requires per-customer human involvement \u2014 at minimum reviewing outputs and handling edge cases. This is closer to a managed service engagement than a self-serve automated tool."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "IT admins and Salesforce consultants migrating Quip libraries are a real buyer type with a genuine time-cost pain, and they do operate in a paid enterprise context. However, each migration is a one-time, project-scoped engagement with highly variable data structures \u2014 the actual work cannot be fully automated without per-customer configuration and validation, scoring operational_autonomy at 5 before the penalty. After the requires_human_fulfillment penalty, total drops to 3.3, well below the validate threshold. This is a consulting engagement disguised as a tool opportunity.",
+  "solution_plan": "This opportunity is not viable for the autonomous factory model. A Quip migration service would require per-customer scoping (understanding their folder structure, target system, data mapping), running the migration with monitoring, and validating results \u2014 all of which are per-client manual work. Even a rate-limit-aware batching script would need to be customized and supervised for each client. This is better suited to a Salesforce consulting firm than a solo automated micro-service.",
+  "notes": "Failing build_gates: operational_autonomy=5 (below min 7). Total 3.3 also well below min_total_to_validate=5.5 after requires_human_fulfillment penalty. Drop.",
+  "scored_at": "2026-09-16T11:05:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M2MKW1HXD9QPF1JMTZP6XRM6",
+  "discovered_at": "2026-09-16T11:03:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199831/bitwarden-block-browser-extension-access",
+    "snippet": "I am thinking of deploying a self-hosted Bitwarden system multi-user with granular control for a non-profit, yet I want to prevent users from accessing the system from using it via browser extensions. If that is not possible, is it possible to write rules that prevent all sites except those specified for specific logins?"
+  },
+  "problem_statement": "IT administrators deploying self-hosted Bitwarden for organizations need granular access controls (e.g., restricting browser extension usage, allowlisting specific sites per credential) that the current self-hosted product does not support out of the box.",
+  "target_segment": "IT admins and security teams at SMBs and non-profits self-hosting Bitwarden for multi-user password management.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "bitwarden",
+    "password-management",
+    "self-hosted",
+    "access-control",
+    "enterprise-security",
+    "it-admin",
+    "browser-extension",
+    "credential-management"
+  ],
+  "notes": "Single signal (2026-09-15) from an IT admin actively planning an org-wide deployment \u2014 clear business buyer. Non-profit context suggests budget sensitivity but the underlying problem (granular policy enforcement for org password managers) is widely felt across SMBs that chose self-hosted Bitwarden over Bitwarden Teams/Enterprise to save cost. Opportunity: a Bitwarden policy management layer or companion admin tool that adds access controls without requiring upgrade to the paid cloud tier.",
+  "status": "candidate"
+}

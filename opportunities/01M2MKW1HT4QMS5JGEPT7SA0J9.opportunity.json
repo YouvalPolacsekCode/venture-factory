@@ -1,0 +1,25 @@
+{
+  "id": "01M2MKW1HT4QMS5JGEPT7SA0J9",
+  "discovered_at": "2026-09-16T11:03:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439833/quip-api-rate-limit-adjustment-request-for-quip-document-migration",
+    "snippet": "I want to perform bulk migration of Quip documents through the API. When using the Automation API and Admin API, I frequently encounter rate limit issues. Is it possible to remove the hourly rate limit and only keep the per-minute rate limit?"
+  },
+  "problem_statement": "Organizations migrating large Quip document libraries via the API are repeatedly blocked by rate limits, making bulk migration projects impractically slow or requiring manual workarounds.",
+  "target_segment": "Salesforce admins and IT/ops teams at companies needing to migrate or archive Quip document collections at scale.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "quip",
+    "salesforce",
+    "api-rate-limit",
+    "bulk-migration",
+    "document-migration",
+    "enterprise-ops",
+    "data-migration",
+    "admin-tooling"
+  ],
+  "notes": "Single signal (2026-09-14) but clearly in a paid enterprise context \u2014 Quip is a Salesforce-licensed product. Bulk document migration is a recurring need as companies onboard/offboard from Quip. Opportunity: a managed migration service or smart rate-limit-aware batching tool for Quip API exports. Buyers are IT admins or consultants billing time on migration projects \u2014 clear willingness to pay for time saved.",
+  "status": "candidate"
+}

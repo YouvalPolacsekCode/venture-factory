@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M25406NM2CNHWK8BVNCG6ZT5",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real \u2014 HR managers face genuine confusion when retaining internationally relocating employees via EOR \u2014 but it is structurally low-frequency (one trigger per relocation event per company), and a single forum post does not meet the minimum 5 distinct pain quotes required for a pass verdict. Willingness-to-pay is indirect: buyers are already spending on EOR contracts ($500\u2013$1,500/employee/month) but no signal exists of someone paying for pre-sales advisory guidance specifically. The narrow trigger frequency undermines recurring revenue potential and the evidence base is insufficient to advance.",
+  "sources": [
+    "https://workplace.stackexchange.com/questions/203699/keeping-an-employee-after-an-international-move-what-changes-with-an-eor"
+  ],
+  "evaluated_at": "2026-09-16T11:04:33+03:00"
+}

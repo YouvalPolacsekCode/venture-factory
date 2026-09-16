@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2MKW1HPPB0KNASETDERGTCS",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce/Apex developers at ISVs are real buyers in a paid enterprise ecosystem, but the solution here is a VSCode extension / Apex Language Server patch \u2014 a deeply technical build requiring IDE extension development, LSP protocol knowledge, and ongoing Salesforce platform compatibility maintenance, none of which Claude or this factory's standard tooling can produce autonomously. Buildability_with_ai scores 3 and operational_autonomy scores 3: this is not a prompt-plus-Stripe service; it's a specialized developer tool requiring code that integrates with the Apex LSP internals. With a total of 4.6 and two critical build_gates failing, this is below the validate threshold and should be dropped from this factory's pipeline.",
+  "solution_plan": "This is not buildable by a non-technical solo operator using the Claude factory. Delivering a working Apex LSP namespace-resolution fix requires writing TypeScript/Java extension code that hooks into VSCode's language server protocol, testing against multiple SFDX project configurations, and maintaining compatibility with Salesforce CLI updates \u2014 none of which can be done via Claude prompts and a landing page. If Youval had a Salesforce developer co-founder or contractor, this could be worth revisiting as a niche VSCode Marketplace extension, but it is outside the scope of this factory as currently defined.",
+  "notes": "Failing build_gates: operational_autonomy=3 (below min 7), buildability_with_ai=3 (below min 6). Total 4.6 also below min_total_to_validate=5.5. Drop.",
+  "scored_at": "2026-09-16T11:05:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

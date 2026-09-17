@@ -1,0 +1,27 @@
+{
+  "id": "01M2Q6M6S9CNRTF38B1ZN6GFVA",
+  "discovered_at": "2026-09-17T11:09:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199842/is-it-possible-to-run-spamassassin-eval-only-when-specific-condition-is-met",
+    "snippet": "I have seen a multitude of phishing mails originating from servers with valid DMARC records where they claim they are sending mails on behalf of [brand], but the sending email address is not an official brand email address. Therefore I want to go a bit further and test whether the sending email address is associated with the declared brand... SpamAssassin's eval() doesn't support conditional execution out of the box."
+  },
+  "problem_statement": "Self-hosted mail server operators need conditional, brand-aware spam filtering logic beyond what SPF/DKIM/DMARC provide\u2014specifically to catch phishing from domains with valid authentication records but mismatched brand-sender addresses\u2014but SpamAssassin and similar tools lack composable conditional rule execution.",
+  "target_segment": "Sysadmins and IT operators at SMBs and hosting providers running self-hosted mail servers (Postfix/SpamAssassin stacks) who manage email security without an enterprise email gateway budget.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "spam-filtering",
+    "spamassassin",
+    "phishing-detection",
+    "dmarc",
+    "email-security",
+    "self-hosted-mail",
+    "brand-impersonation",
+    "postfix",
+    "conditional-rules",
+    "sysadmin"
+  ],
+  "notes": "Operator is actively trying to build a custom rule, implying technical investment and existing infrastructure cost. The gap (no conditional eval in SpamAssassin) is a real limitation. Opportunity: a SpamAssassin plugin or milter that supports brand-sender association checking. Buyer is an SMB sysadmin or hosting provider already paying for server infrastructure. Signal is a single post; needs corroboration.",
+  "status": "candidate"
+}

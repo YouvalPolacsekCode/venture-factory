@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2Q6M6SFNQVPGRPTC2R265DY",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 3,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The core problem \u2014 Google's Outdated Content tool returning false negatives \u2014 is a Google-side bug that Google could fix at any time, making any tooling built around it ephemeral and unreliable as a business. The buyer (SEO agency or consultant) is identifiable and does pay for tools, but this specific problem is infrequent enough per client that willingness to pay for a dedicated solution is questionable; most would expect a workaround blog post rather than a paid service. At 4.1, it falls below the validate threshold of 5.5.",
+  "solution_plan": "Not recommended. The problem is entirely dependent on a Google tool that may be fixed or further broken at any time \u2014 there is no stable surface to build on. SEO practitioners would be the buyer, but the frequency is too low and the addressable market too diffuse for a viable micro-service. Pass.",
+  "notes": "Below validate threshold (4.1 < 5.5). No build gates tested.",
+  "scored_at": "2026-09-17T11:11:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

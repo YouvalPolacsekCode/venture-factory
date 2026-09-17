@@ -1,0 +1,25 @@
+{
+  "id": "01M2Q6M6SFNQVPGRPTC2R265DY",
+  "discovered_at": "2026-09-17T11:09:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148934/googles-update-outdated-content-tool-is-failing",
+    "snippet": "I type the URL, it asks me for a word that appears in the search result snippet but not the live version, and a couple seconds later, BOOM, Denied: Outdated content not in index [EVEN THOUGH IT IS]. The text or image that you described in your removal request does not seem to be present in Google's copy, so it seems that the outdated content is already gone from our index and results."
+  },
+  "problem_statement": "Website owners and SEO practitioners trying to remove outdated or incorrect content from Google's search index find the official 'Update Outdated Content' tool consistently rejects valid requests with a false-negative error, leaving stale content in SERPs with no alternative recourse.",
+  "target_segment": "SEO professionals, digital marketing agencies, and website owners managing content reputation and SERP accuracy for client or business sites.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "google-index",
+    "content-removal",
+    "serp-management",
+    "google-search-console",
+    "outdated-content",
+    "digital-marketing",
+    "agency-tooling"
+  ],
+  "notes": "SEO agencies and consultants bill clients for this work\u2014tool failure wastes billable hours. If this is a widespread and persistent Google bug, there may be demand for a workaround service or monitoring tool. Signal is a single post; buyer intent is implied (agencies paying staff to fix this) but not explicit. De-prioritized vs. bot-billing item.",
+  "status": "candidate"
+}

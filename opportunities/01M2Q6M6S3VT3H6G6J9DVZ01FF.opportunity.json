@@ -1,0 +1,25 @@
+{
+  "id": "01M2Q6M6S3VT3H6G6J9DVZ01FF",
+  "discovered_at": "2026-09-17T11:09:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439845/why-does-the-chatter-sender-address-stay-unverified-after-the-mailbox-owner-clic",
+    "snippet": "I'm changing the Chatter sender address in Setup to a shared mailbox that I don't personally receive mail at. A client monitors the mailbox. Saving the field sends a verification email. My client clicked the link and saw a confirmation that verification succeeded. She was then redirected to a Salesforce login screen prepopulated with my username. She tried to login using her own credentials and was rejected. Her failed attempts don't appear in her Login History."
+  },
+  "problem_statement": "Salesforce administrators managing shared or delegated mailboxes for Chatter email settings face a broken verification flow that conflates admin identity with the mailbox owner's identity, leaving email configurations stuck in an unverified state with no workaround documented.",
+  "target_segment": "Salesforce admins and consultants at companies using shared service mailboxes for Salesforce Chatter notifications.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "chatter",
+    "email-verification",
+    "shared-mailbox",
+    "admin-tooling",
+    "salesforce-setup",
+    "delegated-access",
+    "identity-management"
+  ],
+  "notes": "Paid-platform context: Salesforce orgs are expensive; admin is working on behalf of a client (consulting relationship implied). Pain is real and specific but a single instance\u2014signal_strength capped at 2 until more instances found. Could be addressed by a browser extension or documented script that automates the verification handoff for shared mailboxes.",
+  "status": "candidate"
+}

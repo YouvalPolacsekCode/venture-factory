@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M2Q6M6S9CNRTF38B1ZN6GFVA",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A SpamAssassin plugin or milter requires per-customer installation, server-level configuration, and debugging on self-hosted infrastructure \u2014 no automated delivery path exists."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "Self-hosted mail server operators are highly technical and notoriously resistant to paying for tooling they believe they can build themselves; willingness to pay for a SpamAssassin plugin is very low. The buyer (SMB sysadmin or hosting provider) is identifiable but dispersed and hard to reach at scale through allowed channels. Delivery requires per-customer server access and configuration, making autonomous operation impossible. After the fulfillment penalty, the total falls to 2.4, well below threshold.",
+  "solution_plan": "Not recommended. Delivering a working SpamAssassin plugin to self-hosted mail operators requires hands-on server access, compatibility testing across dozens of stack variants (Postfix versions, OS distributions, SpamAssassin configs), and ongoing maintenance as phishing techniques evolve. This cannot be productized as a hands-off micro-service by a solo non-technical operator. Pass.",
+  "notes": "Fails operational_autonomy (4 < 7 floor) and buildability_with_ai (4 < 6 floor). Total also below validate threshold. Drop.",
+  "scored_at": "2026-09-17T11:11:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

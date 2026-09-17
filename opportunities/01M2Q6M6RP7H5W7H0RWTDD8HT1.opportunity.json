@@ -1,0 +1,27 @@
+{
+  "id": "01M2Q6M6RP7H5W7H0RWTDD8HT1",
+  "discovered_at": "2026-09-17T11:09:44+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49732873",
+    "snippet": "I'm writing this after receiving a Vercel bill that was 10x higher than usual. The worst part: The increase wasn't caused by more users, but by +1M requests from meta-externalagent/1.1. The requests targeted a Vercel preview deployment that we had shared on WhatsApp to test whether its link-preview metadata was working correctly. We naively never bothered with bot calls; they had never caused any problems in the previous four years of our app on Vercel, but that changed when Meta's crawler..."
+  },
+  "problem_statement": "Businesses hosting apps on Vercel (and similar edge/serverless platforms) receive unexpectedly massive bills caused by aggressive crawl bots\u2014such as Meta's link-preview agent\u2014hammering preview deployments, with no built-in cost-cap or bot-filtering layer to prevent runaway spend.",
+  "target_segment": "Small-to-mid-size SaaS and product teams using Vercel, Netlify, or similar serverless/edge hosting who pay per-request and lack dedicated bot-management infrastructure.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "vercel",
+    "bot-traffic",
+    "crawler-protection",
+    "serverless-cost",
+    "edge-hosting",
+    "cost-spike",
+    "meta-crawler",
+    "preview-deployment",
+    "rate-limiting",
+    "cloud-billing"
+  ],
+  "notes": "Direct paying-customer pain: operator reports a 10x bill spike from a single bot user-agent on a platform they pay per request. Comments indicate others have experienced similar. Competing approaches (Cloudflare WAF, custom middleware) exist but require setup expertise. Opportunity: a lightweight, zero-config bot-shield layer or middleware package specifically for Vercel/edge deployments with a cost-cap alert tier. Buyer is a paying Vercel customer already spending money on hosting.",
+  "status": "candidate"
+}

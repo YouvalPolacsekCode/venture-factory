@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2Q6M6S3VT3H6G6J9DVZ01FF",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 2,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "This is a niche Salesforce admin edge case with very weak signal (single post, signal_strength 2) and no evidence of willingness to pay \u2014 Salesforce admins expect workarounds and documentation, not paid tools, for configuration bugs like this. The buyer is a Salesforce admin or consultant (a recognizable role), but the problem is narrow, infrequent, and would likely be fixed by Salesforce itself in a future release, making any investment ephemeral. The total of 3.6 is well below the validate threshold of 5.5.",
+  "solution_plan": "Not recommended. The addressable audience is tiny, the problem may be resolved by a Salesforce patch at any time, and there is no credible monetization path \u2014 admins hitting this would expect a free Stack Exchange answer, not a paid tool. Pass.",
+  "notes": "Below validate threshold (3.6 < 5.5). No build gates tested.",
+  "scored_at": "2026-09-17T11:11:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

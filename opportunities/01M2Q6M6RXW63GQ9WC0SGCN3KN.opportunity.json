@@ -1,0 +1,27 @@
+{
+  "id": "01M2Q6M6RXW63GQ9WC0SGCN3KN",
+  "discovered_at": "2026-09-17T11:09:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439843/what-is-the-correct-way-to-automate-migration-of-calculated-insights-from-one-da",
+    "snippet": "When I instructed my AI agent to unwrap Calculated Insights from a data kit installed or deployed to sandbox, it instead created it directly through the Connect API... There is no documented way to automate migration of Calculated Insights from one Data Cloud org to another using SFDX or metadata API."
+  },
+  "problem_statement": "Salesforce Data Cloud admins and developers have no reliable, documented way to automate migration of Calculated Insights between orgs (e.g., sandbox to production), forcing manual recreation or fragile workarounds via undocumented Connect API calls.",
+  "target_segment": "Salesforce architects, Data Cloud admins, and DevOps engineers at mid-to-large enterprises running Salesforce Data Cloud in multi-org setups.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "data-cloud",
+    "calculated-insights",
+    "devops",
+    "org-migration",
+    "sfdx",
+    "metadata-api",
+    "ci-cd",
+    "sandbox",
+    "enterprise-saas"
+  ],
+  "notes": "Enterprise context: person is using AI agents to automate Salesforce deployments, implying their org pays for Data Cloud licenses (expensive). The gap is a missing CI/CD primitive for a paid Salesforce product tier. A migration tool or SFDX plugin that handles Calculated Insights packaging would have clear willingness-to-pay from Salesforce consulting firms and enterprise DevOps teams managing Data Cloud orgs.",
+  "status": "candidate"
+}

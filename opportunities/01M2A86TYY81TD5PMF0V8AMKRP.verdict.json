@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M2A86TYY81TD5PMF0V8AMKRP",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real but hyper-niche: a single Stack Exchange question with no upvotes or competing threads is the only direct signal, and no willingness-to-pay evidence exists for a dedicated reference tool when free community workarounds (Anonymous Apex introspection, community-maintained key-prefix lists) already partially solve this. The segment is narrow enough that reaching the 5-distinct-pain-quote threshold is implausible without deep primary research, and no competitor is charging money for this specific reference layer.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439830/what-is-the-1ps-key-prefix-partitionlevelscheme-and-can-it-be-managed-throug"
+  ],
+  "evaluated_at": "2026-09-17T11:10:52+03:00"
+}

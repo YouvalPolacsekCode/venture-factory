@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M2Q6M6RXW63GQ9WC0SGCN3KN",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Migration tooling for Salesforce Data Cloud orgs requires per-customer configuration, environment access, and troubleshooting \u2014 not a hands-off automated delivery."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise Salesforce consulting engagements invariably involve scoping calls, sandbox access setup, and approval gates with client IT/security teams."
+    }
+  ],
+  "total": 2.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the buyers (Salesforce architects and enterprise DevOps teams) have genuine budget, but this is fundamentally a consulting/services play: every migration engagement requires bespoke configuration, access to customer orgs, and iterative troubleshooting that cannot be automated away. Operational autonomy scores a 3 because there is no plausible path to a self-serve, hands-off delivery model \u2014 each customer is a project. After penalties for per-customer fulfillment and synchronous sales requirements, the total collapses to 2.6, which is well below the validate threshold; this is the wrong shape of opportunity for a solo autonomous factory.",
+  "solution_plan": "Not recommended for build. This would require acting as a Salesforce consultant \u2014 scoping each client's org structure, writing custom SFDX scripts per environment, and troubleshooting migration failures live. A solo non-technical operator using an AI factory cannot realistically deliver or support this autonomously. If pursued, it would be a paid consulting engagement, not a productized micro-service.",
+  "notes": "Fails operational_autonomy (3 < 7 floor), buildability_with_ai (4 < 6 floor), and willingness_to_pay floor is met but moot given the autonomy failure. Drop.",
+  "scored_at": "2026-09-17T11:11:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

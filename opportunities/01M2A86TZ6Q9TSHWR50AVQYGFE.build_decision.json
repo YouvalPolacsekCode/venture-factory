@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01M2A86TZ6Q9TSHWR50AVQYGFE",
+  "decided_at": "2026-09-18T10:45:04+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 78,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 8,
+      "floor": 5,
+      "met": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.8,
+      "threshold": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build_now": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates are met and the weighted total of 6.8 clears the 6.5 build threshold. However, the scoring agent set recommended_stage to 'validate' (not 'build' or 'scale'), which is a hard prerequisite for build_now. The rationale is sound: responsiveness_signal is only 2 (untested), the cost-to-gain ratio is 3.34 (well above the 0.6 kill ceiling in cost_gain_model), and Google Ads API developer-token verification adds a non-trivial one-time manual step. An outreach probe to 50-100 PPC agencies this week would resolve the responsiveness uncertainty; if \u22658-10% reply positively and the scoring agent upgrades recommended_stage to 'build', this becomes a strong build_now candidate next cycle.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "LinkedIn cold DM to boutique Google Ads agency owners + PPC Chat Slack community post"
+}

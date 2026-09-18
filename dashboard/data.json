@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-09-17T08:11:52+00:00",
-    "idt": "2026-09-17T11:11:52+03:00"
+    "utc": "2026-09-18T07:45:10+00:00",
+    "idt": "2026-09-18T10:45:10+03:00"
   },
   "funnel": {
     "candidates": 333,
     "scored": 333,
-    "validated": 35,
+    "validated": 36,
     "build_decisions": {
-      "defer_1_week": 31,
+      "defer_1_week": 32,
       "kill": 4
     },
     "build_now": 0,
@@ -127,7 +127,7 @@
         "Buildable": 7,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/148930/manually-upload-a-conversion-with-only-a-gbraid",
       "discovered_at": "2026-09-12T10:27:15+03:00"
@@ -749,14 +749,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2537,
-    "last_7_days_usd": 1.85,
-    "all_time_usd": 24.9907,
+    "today_usd": 0.2915,
+    "last_7_days_usd": 1.9147,
+    "all_time_usd": 25.2821,
     "by_day": [
-      {
-        "date": "2026-09-11",
-        "usd": 0.2268
-      },
       {
         "date": "2026-09-12",
         "usd": 0.2493
@@ -780,67 +776,36 @@
       {
         "date": "2026-09-17",
         "usd": 0.2537
+      },
+      {
+        "date": "2026-09-18",
+        "usd": 0.2915
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6335
+        "usd": 0.6111
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5086
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.368
+        "usd": 0.5084
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3067
+        "usd": 0.4599
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.3016
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0336
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-11",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-12",
       "agents": {
@@ -1050,12 +1015,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-18",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "skipped": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-17.md",
-    "date": "2026-09-17",
-    "text": "# Daily Summary — 2026-09-17 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 333 |\n| Opportunities validated past threshold | 80 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments configured in the factory.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily subreddit and forum sweeps for pain signals.\n2. `opportunity_scoring` processes new candidate opportunities through ranking pipeline.\n3. `pain_validation` runs targeted validation probes on highest-scoring candidates.\n4. `lead_research` collects contact information for validated opportunities.\n5. `build_decisions` assembles outreach strategy for tomorrow's sends.\n\n## Operator action items\n\nNone — the factory is in steady discovery mode with healthy signal flow. 333 candidates are in the pipeline and 80 have passed validation threshold. No experiments are live yet, no decisions are waiting. Monitor the approval queue tomorrow when outreach begins.",
+    "file": "reports/daily/2026-09-18.md",
+    "date": "2026-09-18",
+    "text": "# Daily Summary — 2026-09-18 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 333 |\n| Opportunities validated past threshold | 81 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently running. Factory is in discovery and validation phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across target verticals.\n2. `pain_validation` validates top 10 opportunities from today's 81-verdict batch.\n3. `build_decisions` reviews qualified opportunities for feature viability.\n4. `cost_gain` computes signal strength and estimated ROI for validation cohort.\n5. `lead_research` profiles high-potential opportunity clusters for outreach readiness.\n\n## Operator action items\n\n1. **Review today's 81 validated opportunities** — 333 candidates were scored; 81 passed threshold. Decide: which verticals or pain signals warrant immediate lead research and outreach pilots? (Check `verdict_files/` for ranked list.)\n2. **Confirm market radar coverage** — `market_radar` completed today's sweep with zero errors. Verify the subreddits and forums scanned align with weekly plan.",
     "truncated": false
   },
   "analytics": null

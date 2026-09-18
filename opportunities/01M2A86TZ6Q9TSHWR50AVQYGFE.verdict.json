@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01M2A86TZ6Q9TSHWR50AVQYGFE",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Performance marketers running Google App campaigns face recurring, financially costly attribution gaps every time they attempt to upload GBRAID-only offline conversions \u2014 the legacy uploader rejects them outright, corrupting bidding signals on active ad spend. Multiple corroborating threads across Google Ads Help, Stack Overflow, and PPC communities confirm this is a documented, unsolved platform gap affecting agencies and in-house teams alike, with at least one competitor charging for adjacent Google Ads API tooling. Willingness to pay is structurally strong: buyers already spend thousands per month on Google Ads and will pay to protect attribution integrity.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/148930/manually-upload-a-conversion-with-only-a-gbraid",
+    "https://support.google.com/google-ads/thread/190956877/offline-conversion-import-with-gbraid-wbraid",
+    "https://stackoverflow.com/questions/74832953/google-ads-offline-conversion-import-with-gbraid",
+    "https://developers.google.com/google-ads/api/docs/conversions/upload-clicks",
+    "https://www.ppchero.com/offline-conversion-tracking-google-ads/",
+    "https://searchengineland.com/google-ads-gbraid-wbraid-attribution-286175"
+  ],
+  "evaluated_at": "2026-09-18T10:44:49+03:00"
+}

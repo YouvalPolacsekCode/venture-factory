@@ -1,0 +1,26 @@
+{
+  "id": "01M2W9P4624VMGVSTK0KPR52VD",
+  "discovered_at": "2026-09-19T10:39:25+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439858/how-to-override-the-default-standard-email-field-matching-to-use-custom-email-ad",
+    "snippet": "For Einstein Activity Capture Salesforce says you can use Apex to 'Override the default standard email field matching to use custom email address fields instead.' How would you go about this? My tests were trying to edit the FromId field but that's an inaccessible field, the RelatedToId field but a Contact isn't a valid record for it."
+  },
+  "problem_statement": "Salesforce admins and developers cannot find a working implementation path to override Einstein Activity Capture's default email-field matching with custom email address fields, even though Salesforce documentation states it is possible via Apex. The gap between documented capability and practical implementation wastes significant admin and developer time.",
+  "target_segment": "Salesforce admins and ISV developers at mid-market to enterprise companies using Einstein Activity Capture for sales email tracking",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "einstein-activity-capture",
+    "crm",
+    "email-matching",
+    "apex",
+    "salesforce-admin",
+    "sales-ops",
+    "data-quality",
+    "enterprise-crm"
+  ],
+  "notes": "Buyer context: enterprise Salesforce orgs pay substantial platform fees; admin/developer time spent on undocumented EAC configuration is a real cost. This pattern (docs say it's possible, no implementation guide exists) is a recurring Salesforce ecosystem pain that consultancies and ISVs sometimes monetize via packaged solutions or how-to courses. Single data point; broader validation needed before investing.",
+  "status": "candidate"
+}

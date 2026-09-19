@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2W9P4624VMGVSTK0KPR52VD",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is identifiable and has money \u2014 Salesforce admins and ops developers at mid-market/enterprise companies spend real budget on platform configuration, consulting, and packaged solutions, and the gap between 'docs say this is possible' and 'no working implementation exists' is a well-known monetization pattern in the Salesforce ecosystem (Trailhead courses, AppExchange mini-apps, implementation guides). However, this is a single forum signal on a highly specific technical configuration problem, and there is no evidence yet that enough people face it at scale or that they would pay for a packaged guide versus asking their SI partner. Validate first by posting a detailed working implementation (with a paywall for the full guide) and measuring clicks and purchases before building anything.",
+  "solution_plan": "The micro-service is a paid implementation guide (and optionally a packaged Apex snippet) that gives Salesforce admins the exact working code to override Einstein Activity Capture email-field matching with custom fields \u2014 solving the documented-but-broken gap. BUILD: the factory researches the Salesforce Apex documentation and community threads, drafts a step-by-step implementation guide with working code examples using Claude, and publishes it behind a Gumroad or Stripe payment link ($49\u201399 one-time) at a simple landing page; no operator coding required. SELL: the factory identifies Salesforce admin communities (Trailblazer Community, LinkedIn Salesforce Admin groups, r/salesforce) and drafts outreach posts and a cold DM sequence targeting Salesforce admins at 10\u2013500-person companies; outreach goes out only after Youval approves each batch. MAINTAIN: guide delivery is fully automated via Gumroad/Stripe email; if buyers have questions, Claude handles a support inbox with templated replies; billing is self-serve; the only recurring human touch is approving any new outreach batches. Realistic caveat: this is a thin information product in a niche; TAM is small and it is trivially copyable once published, so treat it as a one-time revenue experiment rather than a scalable business.",
+  "notes": "Passes all build gates numerically (operational_autonomy=7, buildability_with_ai=7, buyer_clarity=7, willingness_to_pay=6), but total of 5.8 falls below min_total_to_build (6.5), so stage is correctly 'validate'. Primary risk: single data point, unknown breadth of demand. Defensibility is low \u2014 once a guide exists, competitors can replicate it. Founder_fit is weak (no Salesforce domain background noted). Validate with a free teaser post measuring engagement before investing in a full guide.",
+  "scored_at": "2026-09-19T10:41:13+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

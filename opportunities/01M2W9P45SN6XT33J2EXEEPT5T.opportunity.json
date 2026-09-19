@@ -1,0 +1,27 @@
+{
+  "id": "01M2W9P45SN6XT33J2EXEEPT5T",
+  "discovered_at": "2026-09-19T10:39:25+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95595/offline-windows-ledger-for-a-one-person-microgreens-farm-trays-standing-order",
+    "snippet": "I run a one-person microgreens farm. I sow 10\u00d720 trays on an ~11-day cycle, harvest by ounce, and sell standing orders to kitchens plus a Saturday market. A spreadsheet lets me overwrite a harvest cell. The total still looks fine. That tray is already promised. Must have Windows desktop, one operator, no user account. Works with no internet after install (local file). Tray loop: sow, move to light, harvest by weight. Standing orders next to what is actually on the rack (promised vs sown). Money in / out."
+  },
+  "problem_statement": "Small-scale produce farmers (microgreens, market gardens) using spreadsheets risk double-promising harvests because nothing enforces that a committed standing order 'locks' a tray. They need an offline, single-operator desktop ledger that tracks crop cycles, standing-order commitments, and cash flow together without cloud dependency.",
+  "target_segment": "Solo urban/micro farm operators selling standing orders to restaurants and farmers markets, Windows users, no IT support",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "microgreens",
+    "farm-management",
+    "offline-software",
+    "standing-orders",
+    "crop-tracking",
+    "inventory",
+    "small-farm",
+    "windows-desktop",
+    "sqlite",
+    "cash-flow"
+  ],
+  "notes": "Buyer context: operator runs a real revenue-generating farm with restaurant kitchen clients. Pain is concrete (spreadsheet allows overwriting promised inventory, causing fulfillment errors). Explicitly wants offline Windows desktop app. Tagged 'gratis' suggesting price sensitivity, but the underlying workflow problem is real and recurring. A low-cost one-time-purchase desktop app ($29\u2013$79) could fit. Single data point; signal strength capped at 2.",
+  "status": "candidate"
+}

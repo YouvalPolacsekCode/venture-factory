@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M2CVP7E3JV5V6MP79YFYWTGA",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and recurring \u2014 shared-hosting outages affect freelancers and small businesses financially \u2014 but the evidence base is a single low-score HN post (4 points), and the market for uptime monitoring is saturated by well-funded incumbents (UptimeRobot free tier, Better Uptime, StatusCake) with no clear differentiated moat. The willingness-to-pay signal is entirely implicit (existing hosting spend), and there is no documented instance of users actively paying for a failover add-on over and above free-tier monitors. Fails the 5-distinct-pain-quotes threshold and the explicit WTP requirement.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49677232"
+  ],
+  "evaluated_at": "2026-09-19T10:40:39+03:00"
+}

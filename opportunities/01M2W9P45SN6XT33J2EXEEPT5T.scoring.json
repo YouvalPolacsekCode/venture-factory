@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M2W9P45SN6XT33J2EXEEPT5T",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and recurring \u2014 a solo microgreens farmer genuinely risks double-promising harvests every 11-day cycle \u2014 but the buyer profile is too narrow and price-sensitive to build a sustainable product around. The source explicitly tagged 'gratis' and the target segment (solo urban micro-farmers) rarely pays for niche desktop software beyond a one-time $29\u201379 purchase, which creates a tiny TAM with no recurring revenue and no path to autonomy. Critically, the required deliverable is a native offline Windows desktop app with local SQLite storage \u2014 this cannot be shipped as a Claude prompt plus a landing page plus Stripe; it requires actual software development, which a non-technical solo operator cannot commission from this factory.",
+  "solution_plan": "This idea does NOT pass the build gate for this factory. The user explicitly requires a native offline Windows desktop application with no internet dependency after install \u2014 that means compiled software (e.g. a Python/Tkinter or Electron app), not a Claude-powered web service. The factory cannot produce a shippable Windows .exe via Claude prompts and a Stripe link alone; it would require a developer. Even if the software could be built, the market is extremely narrow (solo microgreens farmers on Windows), the price point is low and likely one-time, and there is no recurring revenue model that supports ongoing maintenance. The honest assessment: a solo non-technical operator using this factory could NOT build, sell, or maintain this \u2014 do not pursue.",
+  "notes": "Fails buildability_with_ai gate (score 3, min 6): requires a native offline Windows desktop app, not buildable as Claude + web page + Stripe. Fails operational_autonomy gate (score 3, min 7): even if built, distribution, support, and updates for a desktop app require ongoing human effort. Fails buyer_clarity gate (score 4, min 6): solo micro-farmers are a tiny, price-sensitive consumer segment, not a B2B buyer with budget authority. Fails willingness_to_pay gate (score 3, min 5): 'gratis' tag and low-price-point market signal weak monetization.",
+  "scored_at": "2026-09-19T10:41:13+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

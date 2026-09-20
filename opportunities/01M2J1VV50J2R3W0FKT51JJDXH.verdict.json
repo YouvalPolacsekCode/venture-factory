@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M2J1VV50J2R3W0FKT51JJDXH",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and the buyer is well-defined, but evidence volume is insufficient: only a single source forum post corroborates the problem statement, and no willingness-to-pay signal (competitor pricing, AppExchange reviews, job postings) was locatable from available data. The build gates also fail on technical feasibility grounds \u2014 a proper Salesforce managed package requires Apex expertise, AppExchange Security Review, and ongoing Salesforce-release compatibility work that is outside the factory's autonomous build capability.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439837/how-to-make-comments-mandatory-in-approval-process-upon-rejection"
+  ],
+  "evaluated_at": "2026-09-20T11:04:15+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M31GXAGHTXGR8CF7RASWJPW7",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "DevOps engineers and sysadmins at SMBs are a nameable, software-buying audience with a real production pain: Docker disk bloat causes outages, and the segment has demonstrated willingness to pay $20\u201350/month for lightweight monitoring tools (Datadog is the paid substitute, too heavy for this segment). Operational autonomy is solid \u2014 once a lightweight agent is installed, usage data, alerts, and billing all flow automatically with no per-customer manual work. The deciding factor for keeping it at 'validate' rather than 'build' is that buildability scores 6 (meets the floor but is not trivial \u2014 a persistent disk-monitoring agent requires a daemon or cron job running on the customer's server, which is more than a Claude prompt + Stripe page), and there is no validated demand signal yet. Build gates are technically met, but the single-signal evidence base and moderate buildability make validation the right next step.",
+  "solution_plan": "The micro-service is a lightweight Docker disk health monitor: a small shell-script agent (one-liner install) that runs on the customer's Linux server, reports container/volume/log disk usage to a Claude-powered dashboard, and sends email alerts when thresholds are crossed. The factory builds it as: a Claude-generated install script + a minimal reporting endpoint (hosted on Railway or Render) + a Stripe subscription link at $29/mo + a public landing page with a one-click install command. No coding by the operator \u2014 the factory assembles the script, page, and alert templates. Selling means finding DevOps/sysadmin communities (r/devops, Hacker News, Docker forums, relevant Slack groups) and posting approved educational content plus a free-trial offer; outreach batches go out only after operator approval. Ongoing delivery is automated: the agent runs on the customer's server, reports roll in, Claude summarises and sends alerts, Stripe handles billing. The operator's only recurring task is approving outreach and reviewing monthly metrics. Caveat: the install step requires the customer to run a script on their server, which adds a trust/friction barrier \u2014 validating conversion on that step is the first priority before building.",
+  "notes": "All build gates met (operational_autonomy=7, buildability_with_ai=6, buyer_clarity=7, willingness_to_pay=6). Stage is 'validate' because total of 6.0 meets min_total_to_validate (5.5) and min_total_to_build (6.5) threshold is just met, but with no responsiveness signal and moderate buildability complexity, validation of demand before committing to build is the prudent call. Re-score after a landing-page traffic test.",
+  "scored_at": "2026-09-21T11:23:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

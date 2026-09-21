@@ -1,0 +1,26 @@
+{
+  "id": "01M31GXAGHTXGR8CF7RASWJPW7",
+  "discovered_at": "2026-09-21T11:21:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199868/docker-container-randomly-causes-high-disk-usage-how-can-i-identify-the-source",
+    "snippet": "I'm running Docker on an Ubuntu server, and occasionally the root filesystem suddenly starts filling up even though the application data is stored on a separate volume. What's the best way to identify exactly which container, log, or Docker resource is consuming the disk space? I've checked the filesystem with df -h, but I'd like to track the usage over time and determine what is causing the sudden increase. Should I focus on Docker container logs, volumes, or the Docker storage directory first?"
+  },
+  "problem_statement": "DevOps engineers running Docker in production lack easy, continuous visibility into which containers, logs, or storage layers are consuming disk space over time, leading to unexpected outages when root filesystems fill up.",
+  "target_segment": "DevOps engineers and sysadmins managing Docker workloads on Linux servers, typically at SMBs or startups without a dedicated observability stack.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "docker",
+    "disk-monitoring",
+    "observability",
+    "devops",
+    "linux",
+    "container-management",
+    "log-management",
+    "production-ops",
+    "sysadmin"
+  ],
+  "notes": "Recurring class of pain \u2014 Docker disk bloat from overlay layers, unused images, log accumulation is a well-known production hazard. Question framing ('track usage over time') implies need for a persistent monitoring tool, not just a one-time command. Business context: production server down = real cost. Existing tools (Datadog, Grafana) cover this but are expensive/complex for small teams; a lightweight, Docker-focused disk health monitor with alerting could command $20-50/mo per team. Signal strength kept at 2 because this is a single post; pattern is common but this batch has only one instance.",
+  "status": "candidate"
+}

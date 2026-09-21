@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M31GXAG1CGYZ2KX6PEJT7133",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Target mix includes many low-budget community groups (Boy Scout troops, AA, churches) that are unlikely to pay consistently; reaching meaningful revenue requires aggregating many such small-ticket organizers, pushing toward a b2c-at-scale dynamic."
+    }
+  ],
+  "total": 4.9,
+  "recommended_stage": "drop",
+  "rationale": "The organizers who would pay \u2014 local businesses, alumni associations, user groups \u2014 have a real recurring need and Meetup's ~$200/yr pricing anchors willingness to pay, but the segment is extremely heterogeneous and blends paying businesses with community groups that resist paying anything. Operational autonomy is decent (self-serve signup, automated RSVP emails, no per-customer manual work), but the b2c-at-scale penalty reflects that meaningful revenue requires aggregating hundreds of micro-customers. The deciding factor is the low total after penalty combined with no validated demand signal: this market is crowded (Luma, Eventbrite, Sched, NationBuilder) and differentiation is unclear.",
+  "solution_plan": "The micro-service would be a lightweight, invite-only event management tool: a Claude-powered landing page with a Stripe subscription link, an intake form to configure a group's recurring event, and automated RSVP/reminder emails sent by Claude. The factory builds it as a Claude prompt pipeline + a static page + Stripe + a Mailgun/Resend integration \u2014 no coding by the operator. Selling would mean identifying organizer communities (Facebook Group admins who hate Facebook, church admin forums, Meetup organizer forums) and sending approved cold outreach batches. Delivery and billing run fully automated; the operator's only touch is approving outreach batches and monthly Stripe reviews. However, the path to $1k MRR requires dozens of small-ticket subscribers, the market is crowded, and no demand has been validated \u2014 this is better shelved unless a specific paying niche (e.g. corporate user groups) is tested first.",
+  "notes": "b2c_at_scale_needed penalty applied. No build gates formally failed (autonomy=7, buildability=7, buyer_clarity=6, WTP=6 all meet floors), but total of 4.9 falls below min_total_to_validate threshold of 5.5, so stage is drop. Market crowding and lack of differentiation are the core concerns.",
+  "scored_at": "2026-09-21T11:23:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

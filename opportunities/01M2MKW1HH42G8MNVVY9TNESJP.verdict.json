@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M2MKW1HH42G8MNVVY9TNESJP",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The pain is real, recurring, and broadly acknowledged across multiple developer communities: AI coding agents leave dead code, stale imports, and abandoned branches after iteration, degrading codebase quality in professional contexts. Multiple HN threads, Reddit discussions, and developer blog posts corroborate the pattern. Willingness-to-pay is indirect but credible\u2014affected developers are already paying $10\u2013$40/month for the agents causing the problem, and adjacent paid tools (linters, code-review bots) demonstrate an established spend category. The gap is the absence of a purpose-built post-agent cleanup layer.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49722980",
+    "https://www.reddit.com/r/cursor/",
+    "https://www.reddit.com/r/LocalLLaMA/",
+    "https://github.com/features/copilot",
+    "https://cursor.sh/pricing"
+  ],
+  "evaluated_at": "2026-09-21T11:23:00+03:00"
+}

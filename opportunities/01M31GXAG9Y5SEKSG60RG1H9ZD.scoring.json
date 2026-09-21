@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M31GXAG9Y5SEKSG60RG1H9ZD",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Unblocking Salesforce 2GP namespace linking and AppExchange security review requires per-customer diagnosis, guided Salesforce org configuration, and potentially direct engagement with Salesforce support \u2014 each engagement needs hands-on human judgement."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "The core value proposition (diagnosing and resolving a platform bug in a customer's specific Salesforce org configuration) realistically requires synchronous sessions or at minimum async back-and-forth requiring human judgement at each step."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce ISVs are excellent B2B buyers \u2014 specific roles, clear revenue motivation, and a $500\u20132,000 unblocking fee has obvious ROI against AppExchange revenue. However, this is fundamentally a consulting/done-for-you engagement: each customer's Salesforce org has unique configuration, and resolving PKCE errors or security portal issues requires per-customer manual diagnosis and likely synchronous communication. Operational autonomy scores 4 because there is no way to automate per-customer Salesforce org access and debugging at this level. The penalties reduce the total to 3.3, reflecting that this is a high-value but human-intensive service that does not fit the autonomous-factory model.",
+  "solution_plan": "This cannot realistically be built and run by a solo non-technical operator using an automated Claude factory. The core task \u2014 diagnosing and resolving blocking bugs in a specific customer's Salesforce Developer Edition org, navigating Salesforce's security review process, and coordinating with Salesforce partner support \u2014 requires hands-on technical expertise and synchronous customer interaction for every engagement. A Claude-generated diagnostic guide or checklist could be sold as a one-time PDF/template, but that is a low-ticket information product with limited defensibility. Unless reframed as a purely documentation/template asset (no per-customer service), this should be dropped in favour of ideas that can run hands-off.",
+  "notes": "Failing build gates: operational_autonomy=4 (below floor of 7) and total of 3.3 is below min_total_to_validate. The opportunity has strong commercial signal but is structurally incompatible with the autonomous-factory model.",
+  "scored_at": "2026-09-21T11:23:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

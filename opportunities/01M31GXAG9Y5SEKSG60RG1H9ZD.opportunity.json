@@ -1,0 +1,27 @@
+{
+  "id": "01M31GXAG9Y5SEKSG60RG1H9ZD",
+  "discovered_at": "2026-09-21T11:21:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439857/is-there-a-supported-workaround-for-the-namespace-registry-pkce-error-in-a-newly",
+    "snippet": "I'm setting up a second-generation managed package using two separate, newly created Salesforce Developer Edition organizations: A Dev Hub organization with Dev Hub and second-generation managed packaging enabled. A namespace organization where the permanent namespace was successfully registered. When I go to Setup \u2192 Namespace Registries \u2192 Link Namespace in the Dev Hub, the Salesforce-generated authorization window immediately returns: error=invalid_request&error_description=missing%20required%20[PKCE parameter]."
+  },
+  "problem_statement": "Salesforce ISVs building second-generation managed packages (2GP) repeatedly hit blocking platform bugs \u2014 PKCE errors during namespace linking and packages not appearing in the Partner Security Portal \u2014 that stall AppExchange submission and delay revenue.",
+  "target_segment": "Independent software vendors (ISVs) and Salesforce development agencies building managed packages for the AppExchange marketplace.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "isv",
+    "2gp",
+    "managed-package",
+    "appexchange",
+    "developer-tooling",
+    "namespace",
+    "security-review",
+    "platform-bug",
+    "b2b-saas"
+  ],
+  "notes": "Two separate Stack Exchange posts from different users in the same week (namespace PKCE error + package missing from security portal) indicate a recurring, systemic friction point. ISVs are paying Salesforce partners \u2014 revenue is gated behind security review completion. A guided setup service, diagnostic tool, or consultancy that unblocks 2GP onboarding has clear willingness-to-pay: AppExchange listings generate significant recurring revenue so even a $500-2000 unblocking service has obvious ROI. Buyer intent is strong.",
+  "status": "candidate"
+}

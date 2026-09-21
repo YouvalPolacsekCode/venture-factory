@@ -1,0 +1,26 @@
+{
+  "id": "01M31GXAG1CGYZ2KX6PEJT7133",
+  "discovered_at": "2026-09-21T11:21:53+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49780959",
+    "snippet": "That matters for discovery, but lots of event organizers and hosts just need a consistent, simple UX for event signups, sharing details to attendees, and managing updates/invites/changes. If they have a mostly consistent or invite-only set of attendees, the network effects don't matter. Imagine a Boy Scout troop, Alcoholics Anonymous, pub trivia, blood drives, local alumni association, churches, user groups. Many businesses have this problem but don't use Facebook or discord becaus[e of brand/policy concerns]."
+  },
+  "problem_statement": "Recurring community groups and small businesses need a simple, private event management tool for signups, attendee updates, and invite management \u2014 without depending on Facebook, Discord, or Meetup's discovery-centric platform.",
+  "target_segment": "Event organizers at community groups, nonprofits, churches, local businesses, and alumni associations running recurring invite-only or closed-membership events.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "event-management",
+    "meetup-alternative",
+    "rsvp",
+    "community-events",
+    "invite-only",
+    "recurring-events",
+    "no-facebook",
+    "small-business",
+    "nonprofit"
+  ],
+  "notes": "Commenter explicitly names paying-context organizations (businesses, clubs) that avoid Facebook/Discord for brand/policy reasons. Implicit willingness to pay for a neutral, simple tool. Meetup charges organizers ~$200/yr \u2014 price anchor exists. Signal is a single HN comment but articulates a clear segment and use case.",
+  "status": "candidate"
+}

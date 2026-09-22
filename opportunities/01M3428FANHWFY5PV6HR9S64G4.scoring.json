@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3428FANHWFY5PV6HR9S64G4",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a nameable prosumer \u2014 a developer or knowledge worker already paying for 2+ AI subscriptions \u2014 who demonstrably has budget (they're spending $60\u2013$100+/month on AI already), giving meaningful willingness-to-pay signal. However, buildability is constrained because each AI provider's quota/usage data is siloed behind proprietary dashboards with no public API for consumption tracking, meaning data ingestion requires scraping or manual entry rather than a clean integration, which limits how autonomous the service can run. The deciding factor is the weak evidence base (single HN comment, signal_strength 2) and a crowded adjacent space (browser extensions, cost-tracker tools already exist as free utilities), so this must validate whether people will pay a SaaS fee before building anything.",
+  "solution_plan": "The micro-service is a multi-AI subscription tracker: users log their monthly spend and usage caps per provider, and Claude generates weekly digest emails with optimization recommendations (e.g. 'shift coding tasks to Gemini \u2014 Claude quota is 80% used'). BUILD: the factory creates a simple intake form (Typeform or similar) where users enter their providers and rough usage patterns; Claude runs analysis on a schedule and sends personalized digest emails via a transactional email tool \u2014 no coding by you. SELL: target HN, Reddit r/ChatGPT and r/MachineLearning, and Twitter/X #AItools threads where multi-subscription users already discuss quota frustration; a short post with a free-trial offer goes out only after you approve it. MAINTAIN: new subscribers fill the form, Claude processes their inputs and sends digests automatically; billing runs via Stripe subscription link; the only recurring human touch is approving the weekly outreach batch and reviewing any billing exceptions. CAVEAT: without provider APIs for live quota data, the product relies on user self-reporting, which limits accuracy and retention \u2014 validate that users will pay ($5\u2013$15/month) for AI-assisted advice on self-reported data before building further.",
+  "notes": "buyer_clarity passes at 6 (prosumer software buyers), but buildability_with_ai is 5 \u2014 below the build_gate floor of 6 \u2014 because live quota ingestion requires provider APIs that don't publicly exist, meaning a truly useful product needs scraping or OAuth integrations beyond simple prompt+page+Stripe. Stage capped at validate. Validate: (1) confirm there's no free tool already solving this well enough, (2) test willingness to pay with a landing page before building even the Claude digest layer.",
+  "scored_at": "2026-09-22T11:04:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

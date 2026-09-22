@@ -1,0 +1,24 @@
+{
+  "id": "01M3428FANHWFY5PV6HR9S64G4",
+  "discovered_at": "2026-09-22T11:03:33+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49794733",
+    "snippet": "I pay for GPT, Claude and Gemini. Last week I consumed all my quota on two of them, so I wondered which next subscription I would pay for if needed. One possible reason is that Grok Bot consumes more quota because it uses their infra instead of your computer."
+  },
+  "problem_statement": "Professionals paying for multiple AI subscriptions (GPT, Claude, Gemini) simultaneously struggle to track quota consumption across services, optimize which subscription to use for which task, and decide when to add or drop a subscription \u2014 leading to unexpected quota exhaustion and wasted spend.",
+  "target_segment": "Knowledge workers and developers who actively pay for 2+ AI assistant subscriptions and need to manage cost and quota across providers.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-subscriptions",
+    "quota-management",
+    "llm-cost",
+    "multi-provider-ai",
+    "saas-spend",
+    "ai-tools",
+    "productivity"
+  ],
+  "notes": "Buyer signal: commenter explicitly pays for GPT, Claude, and Gemini \u2014 3 concurrent paid subscriptions. Pain is quota exhaustion and uncertainty about which to keep. A dashboard or optimizer that tracks usage/quota/cost across AI providers could command a recurring fee from this segment. Single data point; needs corroboration from other sources before scoring high.",
+  "status": "candidate"
+}

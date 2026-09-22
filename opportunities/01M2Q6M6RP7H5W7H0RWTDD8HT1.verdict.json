@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M2Q6M6RP7H5W7H0RWTDD8HT1",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "Multiple independent accounts of 10x+ bill spikes from bot crawlers on Vercel and similar serverless platforms, with direct financial harm to paying customers. At least one named competitor (Cloudflare WAF) charges for bot protection, confirming willingness to pay. The HN thread and adjacent community posts surface 5+ distinct complainants describing the same failure mode.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49732873",
+    "https://vercel.com/docs/security/vercel-firewall",
+    "https://community.cloudflare.com/t/blocking-meta-externalagent/",
+    "https://www.reddit.com/r/vercel/",
+    "https://www.reddit.com/r/nextjs/"
+  ],
+  "evaluated_at": "2026-09-22T11:04:36+03:00"
+}

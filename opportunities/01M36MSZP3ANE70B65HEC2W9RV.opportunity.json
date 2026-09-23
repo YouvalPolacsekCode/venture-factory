@@ -1,0 +1,25 @@
+{
+  "id": "01M36MSZP3ANE70B65HEC2W9RV",
+  "discovered_at": "2026-09-23T11:06:10+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49812392",
+    "snippet": "Agentic coding is amazing at getting you 90% of the way to \"finished\", but getting products to feel really polished seems to take monumental effort if you're just \"vibing\". Yet engineers working on world-class products have ample access to plenty of frontier LLM tokens. Products like Linear, Instagram, Google Docs, Figma, etc. This class of products were super polished before LLMs took over, and they've stayed polished in the post-LLM era."
+  },
+  "problem_statement": "Engineering teams using agentic coding tools can reach ~90% completion quickly, but achieving production-quality polish on UI/UX and edge-case correctness requires disproportionate manual effort that current AI coding workflows do not address.",
+  "target_segment": "Software engineers and engineering leads at product-focused companies (10\u2013500 employees) actively using agentic/LLM coding tools and paying for frontier model API access.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "agentic-coding",
+    "code-quality",
+    "llm-tooling",
+    "developer-tools",
+    "polish",
+    "code-review",
+    "ai-assisted-development",
+    "product-engineering"
+  ],
+  "notes": "Buyer signal: poster explicitly notes teams have 'ample access to plenty of frontier LLM tokens' \u2014 implies active paid API spend. The gap identified is a workflow/tooling gap, not a capability gap, which is productizable. Single HN Ask post with low engagement so far (4 pts, 1 comment as of capture); signal is early but the framing is sharp and the audience is clearly professional engineers at companies, not hobbyists. Worth watching for follow-on discussion volume. Potential products: a polish/QA layer that wraps agentic coding output, automated visual regression + UX consistency checks, or a human-in-the-loop review service for agentic PRs.",
+  "status": "candidate"
+}

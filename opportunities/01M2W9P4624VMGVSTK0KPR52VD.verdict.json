@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M2W9P4624VMGVSTK0KPR52VD",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real but hyper-niche: Einstein Activity Capture custom email-field matching via Apex is a documented-but-broken capability that genuinely wastes developer time, yet the evidence base is a single Stack Exchange thread with limited engagement, and no willingness-to-pay signal exists. The Salesforce ecosystem does monetize implementation gaps, but this specific configuration problem is too narrow and too easily solved by a free community post or SI partner to justify a paid product. TAM arithmetic fails the minimum threshold: even assuming 5,000 affected Salesforce orgs globally, a $49\u201399 one-time guide yields a ceiling of ~$250K\u2013$500K with near-zero repeatability and trivial copyability.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439858/how-to-override-the-default-standard-email-field-matching-to-use-custom-email-ad"
+  ],
+  "evaluated_at": "2026-09-23T11:07:18+03:00"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M396PGQC0WZAHH8NXQHV2G18",
+  "discovered_at": "2026-09-24T10:57:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182600/power-automate-application-times-out-when-saving-an-email-attachment-to-a-networ",
+    "snippet": "How can I determine and resolve a power automate application from timing out when receiving an email application? I can confirm process begins when email is received as I can receive a confirmation email. I tried saving to a network or sharepoint with same results. I have a for each loop to send email and create file."
+  },
+  "problem_statement": "Business users and IT generalists building Power Automate workflows hit silent timeout failures when connecting to network shares or SharePoint \u2014 with no clear diagnostic path \u2014 causing business automation to silently break and wasting significant troubleshooting time.",
+  "target_segment": "IT generalists, operations staff, and business analysts at SMBs using Microsoft Power Automate to automate document and email workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "power-automate",
+    "microsoft-365",
+    "workflow-automation",
+    "sharepoint",
+    "email-attachment",
+    "timeout-error",
+    "business-automation",
+    "low-code",
+    "it-ops",
+    "smb-automation"
+  ],
+  "notes": "Power Automate is a paid Microsoft product; users encountering this are already in a paid ecosystem. Time-waste is explicit ('I tried... same results' \u2014 indicating hours of iteration). Opportunity: diagnostic tool or template library for common Power Automate failure patterns, or an audit/fix service. Adjacent to the M365 MFA signal \u2014 same buyer persona (SMB IT admin / ops person in a Microsoft shop).",
+  "status": "candidate"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M396PGQ5VF777YHHCFF14JG2",
+  "discovered_at": "2026-09-24T10:57:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199891/office-365-passkeys-and-retirement-of-sms-voice-mfa",
+    "snippet": "I'm trying to understand if I have a conditional access policy that only enforces MFA when a user authenticates remotely, will a user logging on the company network be forced to register a passkey after the Feb. 1st deadline if they haven't registered a passkey before the deadline and still have SMS/voice MFA as their only MFA authentication method?"
+  },
+  "problem_statement": "SMB IT admins face a hard Microsoft deadline (Feb 1) to migrate all users off SMS/voice MFA to passkeys or authenticator apps, but lack clear guidance on edge cases \u2014 conditional access policies, on-prem users, legacy devices \u2014 creating compliance risk and urgent need for migration tooling or advisory.",
+  "target_segment": "IT administrators at SMBs and mid-market companies running Microsoft 365 who must migrate MFA methods before the February 2027 retirement deadline.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "microsoft-365",
+    "mfa-migration",
+    "passkeys",
+    "conditional-access",
+    "azure-ad",
+    "compliance-deadline",
+    "sms-mfa-retirement",
+    "it-admin",
+    "smb-it",
+    "identity-management"
+  ],
+  "notes": "Hard regulatory/vendor deadline creates non-optional spend. IT admins at SMBs typically lack in-house identity expertise and will pay for a checklist tool, migration audit service, or managed runbook. The February 1 deadline is a real forcing function. Buyer: IT admin or MSP with a Microsoft 365 contract (already paying Microsoft). Willingness-to-pay evidence: compliance risk + time pressure.",
+  "status": "candidate"
+}

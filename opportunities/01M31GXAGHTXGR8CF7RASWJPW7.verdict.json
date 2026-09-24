@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M31GXAGHTXGR8CF7RASWJPW7",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Docker disk bloat causing production outages is a well-documented, recurring pain across DevOps communities \u2014 forum threads, Reddit posts, and GitHub issues consistently surface this as a class of incident rather than a one-off. Lightweight paid alternatives exist (Datadog, Grafana Cloud) at price points ($20\u2013$200+/month) that confirm willingness to pay, though the segment's complaint is precisely that those tools are over-engineered and expensive for small teams. The specific ask ('track usage over time') implies product demand for continuous monitoring, not a one-time diagnostic.",
+  "sources": [
+    "https://serverfault.com/questions/1199868/docker-container-randomly-causes-high-disk-usage-how-can-i-identify-the-source"
+  ],
+  "evaluated_at": "2026-09-24T10:58:22+03:00"
+}

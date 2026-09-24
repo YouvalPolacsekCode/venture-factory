@@ -1,0 +1,27 @@
+{
+  "id": "01M396PGPXDNZDB5FYYM3G3EHJ",
+  "discovered_at": "2026-09-24T10:57:19+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49826029",
+    "snippet": "I just had a talk with one of my first ongoing clients... He is one of those people who has a broad understanding of the tech out there... He wanted to show me, and get my opinion on a restaurant management app that he's been using Lovable to develop... [implying the output needed professional review and fix-up]"
+  },
+  "problem_statement": "Small business owners using AI no-code builders (Lovable, Bolt, etc.) to develop real business applications end up with broken or incomplete apps and no way to validate or fix them without hiring a developer \u2014 creating an unmet demand for lightweight QA and remediation services for vibe-coded business apps.",
+  "target_segment": "SMB owners (restaurant, retail, services) who have used AI app builders to create internal tools and need professional review, debugging, or handoff to production-quality code.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vibe-coding",
+    "no-code",
+    "ai-app-builder",
+    "lovable",
+    "app-qa",
+    "freelance-dev",
+    "smb-tools",
+    "restaurant-tech",
+    "remediation",
+    "ai-generated-code"
+  ],
+  "notes": "Client was actively paying for Lovable (a paid subscription product) and had built a meaningful restaurant management app \u2014 clear buyer who has already spent money on the problem. The freelancer was being consulted for professional judgment, suggesting willingness to pay for QA or handoff services. Signal is a single anecdote but the pattern (paid AI builder \u2192 quality gap \u2192 developer rescue) is plausible at scale. Buyer: SMB owner already spending on AI tooling.",
+  "status": "candidate"
+}

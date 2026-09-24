@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M396PGPXDNZDB5FYYM3G3EHJ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "QA review and code remediation of AI-generated apps is inherently per-customer manual work \u2014 each app is different and requires human (or heavy Claude) judgment to assess and fix. Even with Claude doing heavy lifting, the operator must review outputs before delivery."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "SMB owners using Lovable will expect at minimum a scoping call or async back-and-forth to understand their app's intent before any remediation can begin. Discovery is essentially a sales/consulting step."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer (SMB owner who paid for Lovable and got a broken app) is real and has already shown willingness to spend money, but this is fundamentally a freelance dev service dressed up as a product. Every engagement requires custom per-customer review of their unique AI-generated codebase \u2014 there is no repeatable, automatable delivery loop here. Operational autonomy scores very low (3) because each job needs human judgment, and that penalty stack (-2.5) drags the total below the validate threshold. This is a consulting gig, not a factory-compatible micro-service.",
+  "solution_plan": "Not recommended for this factory. A solo non-technical operator could not realistically build, sell, and maintain a code-QA-and-remediation service hands-off: each client's Lovable-generated app is unique, diagnosis requires reading code, and fixes require writing or approving code changes. Claude could assist with automated linting or pattern-matching reports, but the core value delivery (telling the client 'here is what's broken and here is the fix') requires per-customer human judgment that cannot be productised without significant tooling investment. If pursued, it would operate as a freelance consulting service \u2014 outside the scope of this factory.",
+  "notes": "Fails operational_autonomy gate (3 < 7) and buildability_with_ai gate (5 < 6). Combined penalties of -2.5 for per-customer manual fulfillment and synchronous human involvement drop total to 2.3. Drop.",
+  "scored_at": "2026-09-24T10:59:09+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

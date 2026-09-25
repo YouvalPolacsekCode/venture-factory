@@ -1,0 +1,26 @@
+{
+  "id": "01M3BTD3KGYZNNQ1P23R0QMGB9",
+  "discovered_at": "2026-09-25T11:20:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439878/ssis-salesforce-destination-gets-stuck-after-about-800-000-rows-rest-apiv2",
+    "snippet": "Using Kingswaysoft plugin v25.2 and sending rows from a database select to Salesforce via REST APIv2, Bulk API but with each select, the process gets stuck consistently at the same number of rows, around 800k-900k, after that the batches start going one row each. (2026-09-24)"
+  },
+  "problem_statement": "Enterprise data teams running large-scale Salesforce bulk data loads via SSIS hit silent stalls at high row counts (~800k), causing pipelines to effectively halt \u2014 a production-critical issue with no clear diagnostic tooling.",
+  "target_segment": "Data engineers and Salesforce admins at mid-to-large enterprises running ETL/ELT pipelines into Salesforce using SSIS and third-party connectors (e.g., KingswaySoft).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "ssis",
+    "etl",
+    "bulk-api",
+    "data-pipeline",
+    "enterprise-integration",
+    "kingswaysoft",
+    "data-engineering",
+    "crm-integration"
+  ],
+  "notes": "Buyer signal: KingswaySoft plugin is a paid enterprise product (~$1k-5k/year), so this user is already in a paying context. The stall at 800k rows is a production blocker for enterprise data ops teams. Pain is concrete, time-sensitive, and recurring across Salesforce integrations. A monitoring/diagnostic layer or a managed Salesforce bulk-load service with retry intelligence and progress visibility could address this. Similar complaints exist across Salesforce developer forums.",
+  "status": "candidate"
+}

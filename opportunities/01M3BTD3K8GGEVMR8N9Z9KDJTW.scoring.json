@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M3BTD3K8GGEVMR8N9Z9KDJTW",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 8,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Job seekers are individual consumers; the model requires large volume to generate meaningful revenue, and consumer churn in job-search is extremely high (people stop paying once they land a job)."
+    }
+  ],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is an individual job-seeker \u2014 a notoriously low-LTV, high-churn consumer segment that rarely pays for tools beyond a big-name platform like LinkedIn Premium. Willingness to pay for a niche job-search aggregator is weak: most job boards are free, and the market is saturated with well-funded competitors (Indeed, Glassdoor, Otta, Wellfound). Even if buildable as an automated alert/aggregation service, defensibility is near-zero \u2014 any determined competitor (or LinkedIn itself) can replicate the feature instantly. The b2c-at-scale penalty pushes this below the validate threshold.",
+  "solution_plan": "Not recommended for build. This would be a job-alert aggregation service that scrapes or APIs multiple job boards, filters by user criteria, and emails daily digests. However: the market is saturated with free alternatives, individual consumers churn immediately after landing a job, and any data-sourcing approach risks TOS violations with major job boards. A solo non-technical operator cannot realistically differentiate here at sustainable unit economics.",
+  "notes": "Fails buyer_clarity (individual consumers, not B2B) and willingness_to_pay (4 < floor of 5). Also requires b2c_at_scale to work. Drop.",
+  "scored_at": "2026-09-25T11:22:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

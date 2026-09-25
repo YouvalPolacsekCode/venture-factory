@@ -1,0 +1,25 @@
+{
+  "id": "01M3BTD3K8GGEVMR8N9Z9KDJTW",
+  "discovered_at": "2026-09-25T11:20:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49839405",
+    "snippet": "Since LinkedIn has \"revamped\" their job search functionality with AI my usual place to see what jobs are available is now pretty much gone. How do you look for jobs/new opportunities? (Ask HN, 2026-09-25, 3 points)"
+  },
+  "problem_statement": "LinkedIn's AI-driven job search revamp has degraded the usefulness of its search results, leaving professionals unable to efficiently discover relevant job openings and forcing them to hunt for alternative platforms.",
+  "target_segment": "Mid-to-senior professionals and tech workers actively job-seeking, who previously relied on LinkedIn job search as their primary discovery tool.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "job-search",
+    "linkedin",
+    "ai-search-degradation",
+    "recruiting",
+    "job-board",
+    "career",
+    "professional-networking",
+    "search-quality"
+  ],
+  "notes": "Buyer signal: professionals spend significant time on job hunting; some already pay for LinkedIn Premium (~$40-60/month). The complaint is about a paid-adjacent platform getting worse, implying willingness to switch to a paid alternative that delivers better signal-to-noise. Recurring theme across HN/Reddit \u2014 this Ask HN post is recent (2026-09-25) and echoes a broader pattern of LinkedIn product quality complaints. A focused job-search aggregator or alert service with clean filtering could capture these users.",
+  "status": "candidate"
+}

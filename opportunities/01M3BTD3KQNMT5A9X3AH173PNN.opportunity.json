@@ -1,0 +1,27 @@
+{
+  "id": "01M3BTD3KQNMT5A9X3AH173PNN",
+  "discovered_at": "2026-09-25T11:20:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/148956/core-web-vitals-failing-in-real-user-data-but-passing-in-lab-magento",
+    "snippet": "Our PDP and PLP pages are sometimes failing LCP or INP in real-user/field data. However, when we test the same pages using PageSpeed Insights/Lighthouse lab testing, the results show as Good/Passed. We have already made several performance optimizations, but we're still seeing the difference between the lab results and real-user data. (Magento, 2026-09-24)"
+  },
+  "problem_statement": "E-commerce developers and SEO agencies working on Magento sites struggle to reconcile lab performance test results with real-user Core Web Vitals field data, leading to SEO ranking risk and wasted optimization cycles.",
+  "target_segment": "Magento e-commerce developers, SEO agencies, and in-house digital teams at online retailers who are accountable for Core Web Vitals scores affecting Google search rankings.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "core-web-vitals",
+    "magento",
+    "seo",
+    "page-speed",
+    "lcp",
+    "inp",
+    "ecommerce",
+    "real-user-monitoring",
+    "lab-vs-field",
+    "web-performance"
+  ],
+  "notes": "Buyer signal: Magento agencies and e-commerce teams have direct revenue tied to search rankings \u2014 a CWV failure translates to lost organic traffic and lost sales. These teams pay for SEO tools (Ahrefs, Semrush, Screaming Frog at $100-500+/month). The lab-vs-field gap is a well-documented, recurring pain point with no dedicated tooling that bridges the two in an actionable way for Magento specifically. A Magento-native real-user monitoring + CWV fix-prioritization tool or managed performance audit service has clear paying buyers.",
+  "status": "candidate"
+}

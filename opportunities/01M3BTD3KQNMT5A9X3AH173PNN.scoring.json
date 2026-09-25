@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M3BTD3KQNMT5A9X3AH173PNN",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A genuine CWV performance audit and fix-prioritization report for a specific Magento site requires site-specific analysis, code-level investigation, and prioritized recommendations \u2014 per-customer work that cannot be fully automated to production quality for paying clients."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Magento agencies and developers will ask follow-up questions about specific fixes, implementation guidance, and re-testing \u2014 requiring ongoing human judgment."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "Magento agencies and e-commerce digital teams are legitimate B2B buyers with real budget (they pay $100\u2013500+/month for SEO tooling), and the lab-vs-field CWV gap is a documented, revenue-linked pain. However, the actionable deliverable \u2014 telling a specific site owner WHY their INP or LCP is failing in field data and WHAT to fix \u2014 requires site-specific RUM data instrumentation and per-site code analysis. This cannot run autonomously at the required quality level; each engagement is effectively a performance consulting project. The penalties for per-customer fulfillment and support drop this below validate.",
+  "solution_plan": "Not recommended for build in current form. The idea would be a Magento-specific CWV monitoring + fix-prioritization micro-service. The buildability challenge: meaningful field data (RUM) requires a JavaScript snippet installed on the client's site, and the resulting diagnostics require per-site interpretation. A Claude-generated generic audit report would not be differentiated enough for agencies who already know the basics. Without a proprietary RUM data layer, this is either a thin commodity or a consulting engagement \u2014 neither suits the autonomous factory model.",
+  "notes": "Fails operational_autonomy (4 < floor of 7) and buildability_with_ai (5 < floor of 6). The core deliverable is inherently per-site manual work. Drop.",
+  "scored_at": "2026-09-25T11:22:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

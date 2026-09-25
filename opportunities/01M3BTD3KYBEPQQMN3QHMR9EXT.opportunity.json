@@ -1,0 +1,25 @@
+{
+  "id": "01M3BTD3KYBEPQQMN3QHMR9EXT",
+  "discovered_at": "2026-09-25T11:20:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49794276",
+    "snippet": "Various pharmacies in Canada will accept a US prescription and send you the medication via mail, usually at far cheaper than what you would pay for the same in the US. This prevents it. [re: de minimis exemption suspension for imports $800 or less] (2026-09-21)"
+  },
+  "problem_statement": "The suspension of the US de minimis import exemption is cutting off American patients from affordable cross-border prescription medications, previously shipped legally from Canadian pharmacies at a fraction of US retail prices.",
+  "target_segment": "US patients with chronic conditions who rely on cross-border mail-order pharmacies (primarily Canadian) for affordable medications not covered or unaffordable under their insurance.",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "prescription-drugs",
+    "cross-border-pharmacy",
+    "de-minimis",
+    "drug-pricing",
+    "healthcare-cost",
+    "medication-affordability",
+    "regulatory-change",
+    "import-rules"
+  ],
+  "notes": "Buyer signal: these individuals are already paying out-of-pocket for medications \u2014 willingness to pay is demonstrated. The regulatory change creates urgent displacement demand. However, the path to a compliant productized service here is complex (regulatory, licensing). Signal strength kept at 2 because this is a single comment thread, not multiple independent confirmations of the specific product gap, and legal/regulatory barriers are high for a solo operator.",
+  "status": "candidate"
+}

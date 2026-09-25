@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-09-24T07:59:25+00:00",
-    "idt": "2026-09-24T10:59:25+03:00"
+    "utc": "2026-09-25T08:22:19+00:00",
+    "idt": "2026-09-25T11:22:19+03:00"
   },
   "funnel": {
-    "candidates": 343,
-    "scored": 343,
+    "candidates": 347,
+    "scored": 347,
     "validated": 39,
     "build_decisions": {
       "defer_1_week": 35,
@@ -747,14 +747,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3641,
-    "last_7_days_usd": 1.8977,
-    "all_time_usd": 26.8884,
+    "today_usd": 0.2329,
+    "last_7_days_usd": 1.8391,
+    "all_time_usd": 27.1213,
     "by_day": [
-      {
-        "date": "2026-09-18",
-        "usd": 0.2915
-      },
       {
         "date": "2026-09-19",
         "usd": 0.2084
@@ -778,67 +774,36 @@
       {
         "date": "2026-09-24",
         "usd": 0.3641
+      },
+      {
+        "date": "2026-09-25",
+        "usd": 0.2329
       }
     ],
     "by_agent": [
       {
-        "agent": "build_decisions",
-        "usd": 0.61
-      },
-      {
         "agent": "market_radar",
-        "usd": 0.5773
+        "usd": 0.6169
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4677
+        "usd": 0.4602
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.4567
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.21
+        "usd": 0.272
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0328
+        "usd": 0.0333
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-18",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "skipped": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-19",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-25",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-24.md",
-    "date": "2026-09-24",
-    "text": "# Daily Summary — 2026-09-24 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 343 |\n| Opportunities validated past threshold | 87 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or validation stages. All agents are in discovery/analysis mode.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for emerging pain signals across B2B communities.\n2. `opportunity_scoring` re-scores candidate pool as new opportunities arrive.\n3. `pain_validation` validates high-scoring opportunities against market fit thresholds.\n4. `cost_gain` updates weekly cost/gain analysis for decision support.\n5. `build_decisions` reviews validation verdicts and recommends next experiments to prototype.\n\n## Operator action items\n\nNone — process is running cleanly. Review the 87 validated opportunities in verdicts/ to select your next experiment prototype.",
+    "file": "reports/daily/2026-09-25.md",
+    "date": "2026-09-25",
+    "text": "# Daily Summary — 2026-09-25 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 347 |\n| Opportunities validated past threshold | 88 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages. All discovery-phase work flows through the opportunity pipeline (see top-line metrics above).\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal. `market_radar`, `opportunity_scoring`, and `pain_validation` ran successfully this morning. Build-phase agents (`build_decisions`, `cost_gain`, `lead_research`, `product_design`, `responsiveness_test`, `service_builder`) are in skip state pending experiment initiation.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps new B2B SaaS and vertical-specific forums for emerging pain signals.\n2. `pain_validation` runs targeted validation on today's top-scored 88 opportunities to confirm fit.\n3. `opportunity_scoring` re-ranks the 347 candidates as new validation verdicts arrive.\n4. `build_decisions` waits for operator selection of next experiment to move into build.\n5. `cost_gain` stands by to compute ROI baseline once an experiment enters live stage.\n\n## Operator action items\n\n1. **Review and select next experiment to build** — 88 validated opportunities are ranked and ready. Run `python scripts/select_experiment.py` to see the top 5 candidates by pain + market size + build complexity. Pick one and commit to build phase.\n2. **Archive or shelve low-signal candidates** — of the 347 candidates, decide retention threshold. Recommend: archive any with pain score <0.3 to reduce weekly re-scoring overhead.",
     "truncated": false
   },
   "analytics": null

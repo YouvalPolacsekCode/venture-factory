@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M3BTD3KYBEPQQMN3QHMR9EXT",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Any service facilitating cross-border prescription drug imports from Canada to the US operates in legally grey-to-illegal territory for the operator: the FDA prohibits personal importation of prescription drugs in most circumstances, and the de minimis exemption suspension makes the regulatory landscape even more hostile. Building a productized service around this exposes the operator to serious legal liability."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Prescription pharmaceuticals and cross-border drug importation are among the most heavily regulated domains \u2014 FDA, DEA, state pharmacy boards, and now customs enforcement. No solo operator can navigate this compliantly."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Even an information/referral play requires careful, per-case judgment to avoid facilitating illegal activity; a matching or facilitation service requires licensed pharmacy relationships and compliance oversight."
+    }
+  ],
+  "total": -3.7,
+  "recommended_stage": "drop",
+  "rationale": "The underlying pain is real \u2014 Americans with chronic conditions paying enormous out-of-pocket drug costs are genuinely suffering, and the de minimis change makes this worse. However, any productized service in this space \u2014 whether facilitation, matching, or even information \u2014 operates in legally grey to outright prohibited territory under US federal law (FDA importation rules, DEA scheduling, state pharmacy licensing). The not_legitimate_or_grey penalty is decisive and appropriate. A solo non-technical operator building this would face serious legal exposure. The buyer segment is also individual consumers with complex, variable needs \u2014 not an autonomous B2B play.",
+  "solution_plan": "Not recommended under any circumstances. This opportunity involves cross-border prescription drug importation, which is federally prohibited or heavily restricted in the US regardless of cost savings. A solo operator cannot build a compliant service here without pharmacy licensure, FDA authorization, and legal counsel \u2014 none of which the factory can provide. The not_legitimate_or_grey penalty reflects real legal risk, not just regulatory inconvenience. Drop immediately.",
+  "notes": "Hard disqualification: not_legitimate_or_grey (-5.0) applies. Also fails regulated_industry, operational_autonomy (2), buildability_with_ai (2), and buyer_clarity (3). Do not pursue.",
+  "scored_at": "2026-09-25T11:22:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

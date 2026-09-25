@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M3BTD3KGYZNNQ1P23R0QMGB9",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Diagnosing and resolving a specific SSIS/Salesforce Bulk API stall at 800k rows requires deep hands-on investigation per customer \u2014 log analysis, connector config review, environment-specific debugging. This cannot be automated by Claude for each case."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise data engineers will have follow-up questions, edge cases, and escalations that require expert human judgment for each engagement."
+    }
+  ],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and production-critical \u2014 enterprise data teams running Salesforce ETL pipelines are clearly paying buyers (they already spend $1k\u20135k/year on KingswaySoft). However, the solution is inherently a consulting/professional-services engagement: each customer has a unique environment (SSIS version, SF org config, row volumes, network conditions) requiring bespoke diagnosis. Neither delivery nor support can be meaningfully automated, making this incompatible with the autonomy-first factory model. The penalties reflecting per-customer manual work bring this well below the validate threshold.",
+  "solution_plan": "Not recommended for build. This would be a diagnostic advisory service for Salesforce bulk-load failures. While the buyer is real and paying, solving their specific pipeline stall requires hands-on access to their environment, logs, and configurations \u2014 work a human expert must do per-engagement. A solo non-technical operator relying on Claude cannot realistically diagnose and fix production ETL failures at the required depth. This is a consulting play, not an autonomous micro-service.",
+  "notes": "Fails operational_autonomy (4 < floor of 7) and buildability_with_ai (4 < floor of 6). Per-customer manual work disqualifies this for the factory model. Drop.",
+  "scored_at": "2026-09-25T11:22:11+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

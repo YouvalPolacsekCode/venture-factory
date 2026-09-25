@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M36MSZP3ANE70B65HEC2W9RV",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "The '90% problem' in agentic coding is real and frequently discussed among professional engineers, but evidence of willingness to pay for a dedicated polish/QA layer is thin \u2014 the original signal is a single low-engagement HN post (4 pts, 1 comment). Competitor landscape shows the market is addressing this through general-purpose code review tools and LLM wrappers, not a specialized polish audit product, and no pricing signals for this specific niche were found. The pain is genuine but the productizable scope remains unvalidated and the segment may self-serve with prompt engineering rather than pay for a wrapper service.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49812392"
+  ],
+  "evaluated_at": "2026-09-25T11:21:17+03:00"
+}

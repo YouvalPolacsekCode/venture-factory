@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M396PGQ5VF777YHHCFF14JG2",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "daily",
+  "rationale": "A hard Microsoft vendor deadline (February 1, 2027) forces non-optional spend on MFA migration across every M365 tenant globally. Active forum threads on ServerFault, Reddit r/sysadmin, and Microsoft Tech Community show IT admins hitting real edge-case blockers daily \u2014 conditional access policy conflicts, legacy device exclusions, on-prem hybrid joins \u2014 with no consolidated guidance. Competitors charge $50\u2013$500 for adjacent compliance readiness tooling, confirming willingness to pay.",
+  "sources": [
+    "https://serverfault.com/questions/1199891/office-365-passkeys-and-retirement-of-sms-voice-mfa",
+    "https://www.reddit.com/r/sysadmin/",
+    "https://techcommunity.microsoft.com/",
+    "https://spiceworks.com/",
+    "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-additional-context"
+  ],
+  "evaluated_at": "2026-09-26T11:07:53+03:00"
+}

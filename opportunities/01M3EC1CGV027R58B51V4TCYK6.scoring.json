@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3EC1CGV027R58B51V4TCYK6",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 8,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.7,
+  "penalties_applied": [],
+  "total": 6.7,
+  "recommended_stage": "build",
+  "rationale": "Indie developers, agencies, and startups running LLM-dependent production services are a specific, nameable buyer who already pay for monitoring tools (PagerDuty, Better Uptime, Datadog) \u2014 the willingness-to-pay baseline exists. The service \u2014 polling major LLM API endpoints independently, detecting latency spikes and outages before status pages update, and alerting via webhook/email/Slack \u2014 is genuinely buildable with Claude + a lightweight polling script + a simple dashboard page + Stripe, and once live it runs fully automated with no per-customer human work. The HN thread with 64 upvotes and 70 comments confirms broad resonance among the exact target audience. Defensibility is modest (easily copied in principle), but speed-to-market and aggregated multi-provider historical latency data create growing lock-in.",
+  "solution_plan": "The micro-service is an independent LLM API uptime and latency monitor \u2014 it polls OpenAI, Anthropic, Google Gemini, Cohere, and others every 60 seconds and alerts subscribers before official status pages catch up. BUILD: the factory sets up a polling script (Claude + cron), a simple public status dashboard (static page or Vercel deploy), a Stripe subscription link ($19-49/mo tiers), and an intake form for webhook/email/Slack alert destinations \u2014 no coding by the operator, just configuration approvals. SELL: reach developers where they already are \u2014 post in HN (Show HN), tweet at the exact HN thread participants, post in relevant Discord/Slack communities (e.g. OpenAI developer Discord, Latent Space), and run a targeted LinkedIn post to 'AI startup CTO / indie developer' \u2014 outreach goes out only after operator approval. MAINTAIN: polling, alerting, billing, and basic support FAQs all run via Claude + code; the only recurring operator touch is approving new outreach batches and reviewing the weekly anomaly digest.",
+  "notes": "",
+  "scored_at": "2026-09-26T11:08:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

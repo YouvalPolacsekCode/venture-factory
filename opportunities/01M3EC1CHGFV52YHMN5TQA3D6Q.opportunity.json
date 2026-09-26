@@ -1,0 +1,27 @@
+{
+  "id": "01M3EC1CHGFV52YHMN5TQA3D6Q",
+  "discovered_at": "2026-09-26T11:06:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203745/recruiter-asks-for-id-and-cc-info-before-an-interview-also-falsifies-my-cv",
+    "snippet": "I'm looking for a job in the Gulf region and have sent some resumes through some sites. I was approached by a site ending in '.ai' saying that I'm being considered for a role in the UAE, and that I should respond to them with my resume if I can go there in about a month. Then, two days ago I heard [they were asking for ID and CC info before an interview, and also falsifying my CV]."
+  },
+  "problem_statement": "Job seekers targeting international markets (especially Gulf/MENA) cannot easily verify the legitimacy of recruiter outreach or job board contacts, leading to CV fraud, identity theft risk, and wasted time on scam 'opportunities'.",
+  "target_segment": "International job seekers and hiring managers at SMEs using third-party recruitment platforms in regions with lower regulatory oversight (Gulf, MENA, Southeast Asia)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "recruiter-fraud",
+    "job-search",
+    "verification",
+    "hiring",
+    "scam-detection",
+    "identity-verification",
+    "gulf",
+    "mena",
+    "recruitment",
+    "trust-and-safety"
+  ],
+  "notes": "Clear personal financial and safety harm (CC info demanded, CV falsified). However buyer willingness-to-pay is indirect \u2014 the victim is a job seeker, not a corporate buyer. A stronger angle would be selling recruiter/job-board vetting to HR teams or staffing agencies who bear reputational risk from scam affiliates. Single data point, low corroboration \u2014 signal strength 2.",
+  "status": "candidate"
+}

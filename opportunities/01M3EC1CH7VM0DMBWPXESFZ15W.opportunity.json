@@ -1,0 +1,25 @@
+{
+  "id": "01M3EC1CH7VM0DMBWPXESFZ15W",
+  "discovered_at": "2026-09-26T11:06:51+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49790423",
+    "snippet": "I mean I think if this is done well, lots of companies would pay for access to that data. Think like Enterprise subscriptions. Its similar to other data services I see around my F500 company."
+  },
+  "problem_statement": "Companies at F500 scale want to purchase curated, quantified data feeds on shifts in expert or market thinking (e.g. 'median thinking declined') but no commercial subscription data product exists for that niche signal category.",
+  "target_segment": "Strategy, research, and competitive intelligence teams at large enterprises and hedge funds who already buy data subscriptions",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "data-subscription",
+    "enterprise-data",
+    "competitive-intelligence",
+    "market-intelligence",
+    "b2b-data",
+    "f500",
+    "analyst-tools",
+    "trend-data"
+  ],
+  "notes": "Explicit willingness-to-pay stated ('lots of companies would pay', 'Enterprise subscriptions', 'similar to other data services'). However this is a single comment with no corroborating signals, and the underlying product concept (quantifying 'median thinking') is vague. Signal strength capped at 2 \u2014 needs further validation on what specific data is being requested and whether the source dataset is defensible.",
+  "status": "candidate"
+}

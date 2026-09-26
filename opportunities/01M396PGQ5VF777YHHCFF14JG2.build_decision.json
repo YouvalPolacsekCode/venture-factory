@@ -1,0 +1,48 @@
+{
+  "opportunity_id": "01M396PGQ5VF777YHHCFF14JG2",
+  "decided_at": "2026-09-26T11:09:09+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.7,
+      "threshold": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "is_build_or_scale": false,
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass and the weighted total (6.7) clears min_total_to_build (6.5). However, recommended_stage is 'validate', not 'build' or 'scale', which is a hard rule blocking build_now. The scoring agent flagged operational_autonomy as a marginal pass (exactly 7) and responsiveness_signal is untested at 3. The cost_to_gain_ratio of 2.73 far exceeds the kill threshold of 0.6 \u2014 the unit economics are poor at current assumptions. Deferring one week to allow a lightweight responsiveness probe (landing page + outreach to r/sysadmin, Spiceworks, MSP Slack groups) would either validate demand and lift the recommended_stage to 'build', or confirm the economics don't work and trigger a kill.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "r/sysadmin + Spiceworks forums (free quick-assessment offer to 20 IT admins)"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M3EC1CGMK5JY1V4G1MVVC9HV",
+  "discovered_at": "2026-09-26T11:06:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439881/how-to-handle-salesforce-cdc-events-when-object-schema-changes",
+    "snippet": "I use salesforce pub sub API to copy some data (account, contact and opportunity) to our data warehouse. For the first load I use Bulk API 2.0. After that CDC events for incremental updates. I use changedFields and nulledFields to update only fields which changed. When someone changes a custom field, new CDC event comes with a new schema id but sometimes our client still have the old schema in cache. Field positions in changefields bitmap don't match what our client expects. Yeah and the warehouse..."
+  },
+  "problem_statement": "Developers syncing Salesforce data to a warehouse via CDC (Change Data Capture) face silent data corruption or pipeline failures when Salesforce object schemas change, because cached schema IDs become stale and field bitmap positions shift unexpectedly.",
+  "target_segment": "Data engineers and backend developers at companies using Salesforce as a system of record with a downstream data warehouse (Snowflake, BigQuery, Redshift, etc.)",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "salesforce",
+    "cdc",
+    "data-warehouse",
+    "schema-drift",
+    "data-pipeline",
+    "etl",
+    "pub-sub-api",
+    "salesforce-integration",
+    "data-engineering",
+    "schema-evolution"
+  ],
+  "notes": "Business context is clear \u2014 this is a production data pipeline copying CRM records (accounts, contacts, opportunities) to a warehouse. Schema drift causing silent corruption is a recurring engineering cost. Several paid ETL/ELT tools (Fivetran, Airbyte) compete here but the Salesforce CDC pub/sub path is underserved. A specialized connector or monitoring layer that handles schema evolution automatically would have clear enterprise buyer.",
+  "status": "candidate"
+}

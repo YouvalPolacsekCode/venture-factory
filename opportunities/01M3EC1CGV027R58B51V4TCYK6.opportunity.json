@@ -1,0 +1,27 @@
+{
+  "id": "01M3EC1CGV027R58B51V4TCYK6",
+  "discovered_at": "2026-09-26T11:06:51+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49851032",
+    "snippet": "Shows an Incorrect API Key error...which is weird. Nothing on the status page. (EDIT: Added to incident page.) Per Twitter/X this appears to be widespread. [64 points, 70 comments on 'Tell HN: Codex Is Down']"
+  },
+  "problem_statement": "Developers and teams building products on top of LLM APIs (e.g. OpenAI Codex) suffer unannounced outages that look like credential errors, with status pages lagging incident reality by hours \u2014 there is no independent real-time reliability monitor or alerting layer for AI API providers.",
+  "target_segment": "Indie developers, agencies, and startups that have integrated LLM APIs into production products and sell or operate services dependent on API uptime",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "llm-api",
+    "api-reliability",
+    "uptime-monitoring",
+    "openai",
+    "codex",
+    "ai-ops",
+    "api-observability",
+    "status-page",
+    "incident-detection",
+    "developer-tooling"
+  ],
+  "notes": "64 points and 70 comments indicate broad resonance. The commenter in item 49850798 explicitly states they 'sell LLM API usage' \u2014 a paying commercial operator. Outages that masquerade as auth errors waste engineering time and erode customer trust. An independent multi-provider LLM API status and latency monitor (think StatusPage but AI-API-specific, with webhook/PagerDuty alerts) is a clear solo-operator SaaS. Recurring subscription model plausible. Signal boosted by recency (Sep 25 2026).",
+  "status": "candidate"
+}

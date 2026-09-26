@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3EC1CGMK5JY1V4G1MVVC9HV",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "validate",
+  "rationale": "Data engineers at Salesforce-connected companies are a real, named buyer with budget (they already pay Fivetran/Airbyte), and schema drift causing silent warehouse corruption is a genuine, documented production pain. However, building a robust Salesforce CDC schema-drift handler requires deep Salesforce Pub/Sub API integration, event schema registry logic, and warehouse-specific connectors \u2014 well beyond a Claude prompt + Stripe link in a week. Operational autonomy is also limited: schema drift incidents often require human investigation to validate correctness, and enterprise data pipeline customers have high support expectations. Fails `buildability_with_ai` (4 vs floor 6) and `operational_autonomy` (4 vs floor 7).",
+  "solution_plan": "This would be a schema-drift monitoring and auto-remediation layer for Salesforce CDC pipelines. The factory cannot build the actual Salesforce Pub/Sub + schema registry + warehouse connector stack without real engineering \u2014 this is beyond Claude + standard tooling for a solo non-technical operator. At validate stage: write a detailed problem + solution post on the Salesforce developer community and data engineering Slack groups (dbt Slack, Locally Optimistic), link to a waitlist page with a pricing signal ($199/mo), and see if 5+ data engineers express intent. If validated, this needs a technical co-founder or contractor.",
+  "notes": "Fails build_gates: buildability_with_ai=4 (floor 6), operational_autonomy=4 (floor 7). Salesforce Pub/Sub + schema registry integration requires engineering depth not achievable with Claude + standard tooling.",
+  "scored_at": "2026-09-26T11:08:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

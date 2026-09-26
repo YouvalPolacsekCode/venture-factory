@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M3EC1CHGFV52YHMN5TQA3D6Q",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 0,
+      "reason": "The opportunity is about detecting fraud, not perpetrating it \u2014 no penalty applicable here."
+    }
+  ],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The personal harm described (ID theft, CV falsification) is real and emotionally salient, but the victim \u2014 an individual job seeker in MENA \u2014 almost never pays for protective tools, and there is no clear corporate buyer with budget willing to pay for recruiter vetting at this level of specificity. HR teams and staffing agencies that might bear reputational risk are reachable in principle but require a B2B sales motion, and the trust-and-safety verification market is already served by larger identity verification players (Veriff, Persona, Onfido). The total score falls below the validate threshold, and the buyer clarity is too weak (individual consumers, not named B2B buyers with budget).",
+  "solution_plan": "No viable build plan for a solo non-technical operator exists at this stage. The harm is real but monetization requires either a B2C consumer who won't pay or a complex B2B enterprise trust-and-safety sale. If the operator is interested in the fraud-detection space, a more tractable angle would be a narrow recruiter legitimacy checker (paste a recruiter email/domain, get a risk score) sold to HR managers at SMEs \u2014 but that requires further validation research before any build commitment.",
+  "notes": "Dropped: total 4.1 below min_total_to_validate (5.5). Buyer clarity too weak (individual job seekers, willingness_to_pay=3). Fails willingness_to_pay build gate (3 vs floor 5) and buyer_clarity gate (3 vs floor 6).",
+  "scored_at": "2026-09-26T11:08:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

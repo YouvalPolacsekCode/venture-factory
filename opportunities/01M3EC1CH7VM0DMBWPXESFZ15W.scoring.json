@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3EC1CH7VM0DMBWPXESFZ15W",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 6,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [],
+  "total": 4.5,
+  "recommended_stage": "drop",
+  "rationale": "The signal here is a single HN comment expressing generic enthusiasm for enterprise data subscriptions \u2014 there is no defined product, no validated dataset, and no specific pain articulated beyond 'companies pay for data.' The buyer (F500 strategy/CI teams) is real and does pay for data feeds, but reaching them requires an enterprise sales motion (procurement, legal, long cycles) that is incompatible with a solo non-technical operator; the underlying data asset ('quantifying median thinking') is completely undefined. Without a concrete dataset and a named buyer problem, this cannot be built or sold in any near-term timeframe, and the single-comment basis is insufficient to justify even a validation sprint.",
+  "solution_plan": "No actionable build plan is possible at this stage \u2014 the product concept is undefined. If the operator wants to explore this space, the only sensible next step is to post a specific question back in the HN thread asking what data the commenter actually wants to buy and at what price point, then aggregate any replies into a concrete problem statement before revisiting. A solo non-technical operator cannot build a defensible enterprise data subscription product without first knowing what the data is.",
+  "notes": "Dropped: total 4.5 below min_total_to_validate (5.5). Product concept undefined; single data point with no corroboration.",
+  "scored_at": "2026-09-26T11:08:56+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

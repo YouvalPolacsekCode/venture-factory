@@ -1,0 +1,13 @@
+{
+  "opportunity_id": "01M396PGQC0WZAHH8NXQHV2G18",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Power Automate timeout/diagnostic pain is real and documented across multiple forums, but willingness-to-pay evidence is weak: the entire segment gravitates toward free community support (Stack Overflow, Microsoft Tech Community, Reddit). No competitor charges meaningfully for diagnostic tooling in this niche, and the one closest analogue (Microsoft's own documentation and community) is free. The signal-strength score of 2 and WTP score of 5 reflect a genuine gap between felt pain and purchasing intent \u2014 insufficient to justify a build cycle.",
+  "sources": [
+    "https://webapps.stackexchange.com/questions/182600/power-automate-application-times-out-when-saving-an-email-attachment-to-a-networ",
+    "https://www.reddit.com/r/PowerAutomate/",
+    "https://techcommunity.microsoft.com/t5/power-automate/bd-p/FlowCommunity"
+  ],
+  "evaluated_at": "2026-09-27T11:43:46+03:00"
+}

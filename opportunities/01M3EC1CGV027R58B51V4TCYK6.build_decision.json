@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01M3EC1CGV027R58B51V4TCYK6",
+  "decided_at": "2026-09-28T12:07:51+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.7,
+      "min": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the total of 6.7 clears the 6.5 threshold, so the opportunity is technically eligible for build_now. However, the cost_to_gain_ratio of 3.30 is extremely unfavorable \u2014 over 5\u00d7 the kill threshold of 0.60 in cost_gain_model.yaml, meaning projected 4-week costs vastly exceed projected 4-week gains. The responsiveness_signal is only 3 (no real outreach data yet), and the 30-day expected gain of $152 against a $576 build cost plus $32/mo run cost suggests this needs validation before committing build resources. With an empty portfolio and zero time pressure, the disciplined move is to defer one week, run a lightweight responsiveness probe (e.g. a Show HN post or targeted outreach to the thread participants), and revisit with actual signal data \u2014 a wrong build_now costs a full week of the operator's scarce time.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Show HN post linking a simple 'coming soon' landing page with email capture, plus direct replies to the original HN thread commenters"
+}

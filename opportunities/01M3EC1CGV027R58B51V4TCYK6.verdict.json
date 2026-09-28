@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M3EC1CGV027R58B51V4TCYK6",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Developers operating LLM-dependent production services face recurring, unannounced outages that surface as misleading credential errors, causing immediate customer-facing failures and wasted engineering triage time. The HN thread ('Tell HN: Codex Is Down', 64 points, 70 comments) demonstrates broad resonance among commercial operators, with at least one commenter explicitly noting they sell LLM API usage commercially. The pain is compounded by status pages that lag real incidents by hours, a gap no existing general-purpose uptime monitor closes adequately for AI API nuances.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49851032"
+  ],
+  "evaluated_at": "2026-09-28T12:07:38+03:00"
+}

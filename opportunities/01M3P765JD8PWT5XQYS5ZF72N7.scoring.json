@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3P765JD8PWT5XQYS5ZF72N7",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "Engineering managers and product leads at 5\u2013200 person AI-assisted dev shops are a nameable B2B buyer with real budget (they pay for GitHub Copilot, Linear, Jira), and the pain \u2014 AI-generated code drifting from spec \u2014 is frequent and genuinely costly. Willingness to pay sits at the minimum floor (5): there are adjacent paid tools (PR review bots, spec linters) but no dominant paid incumbent specifically for AI-drift detection, so the price signal is indirect. The total of 5.5 is just at the validate threshold; no build gates are triggered since stage is validate. The deciding factor is weak responsiveness signal \u2014 this HN thread is a single philosophical comment, not a chorus of buyers saying 'I need this now.' Run a 20-outreach test to eng managers on LinkedIn before investing further.",
+  "solution_plan": "The micro-service is a spec-drift checker: paste your user story / PRD snippet and your AI-generated code diff, get a structured report on what's aligned, what's missing, and what contradicts the spec. The factory builds a Claude prompt that takes (spec text + code diff) as input, a simple web form (no login required initially), and a Stripe pay-per-report link ($5-9 per check) or a $29/month subscription for teams \u2014 no coding by Youval. Sell by reaching engineering managers in AI-dev communities (Slack groups for Cursor/Copilot users, r/ExperiencedDevs, dev-focused LinkedIn) with a free first report offer; outreach batch goes out only after Youval approves it. Delivery is fully automated: user submits form \u2192 Claude runs the check \u2192 PDF/markdown report delivered by email within minutes; billing via Stripe. The only recurring human touch is approving outreach batches and monitoring for abuse. The weak point is defensibility \u2014 any competitor can clone the prompt \u2014 so speed-to-distribution and early data on what specs commonly drift matters.",
+  "notes": "No build gates fail at validate stage. If total rises above 6.5 in future scoring, re-check operational_autonomy (currently 6, at floor) before promoting to build.",
+  "scored_at": "2026-09-29T12:17:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

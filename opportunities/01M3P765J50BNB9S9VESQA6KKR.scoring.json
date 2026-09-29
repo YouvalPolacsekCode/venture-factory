@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3P765J50BNB9S9VESQA6KKR",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and acute \u2014 Firebase silently breaking production iOS apps costs companies revenue and on-call hours, and the buyer (a mobile dev team or indie studio with paying app users) clearly has budget since they're already paying Firebase bills and developer salaries. However, the core product \u2014 SDK health monitoring / canary alerting for third-party mobile SDKs \u2014 requires meaningful integration work (hooking into CI pipelines, crash reporters, or app telemetry) that pushes past a simple Claude + Stripe setup, and ongoing delivery cannot be fully automated without per-customer instrumentation. Build gates for both `buildability_with_ai` (5, below floor of 6) and `operational_autonomy` (5, below floor of 7) are unmet, capping this at validate. Validate by finding 20 Firebase-affected dev teams and asking what they'd pay for an early-warning alert service.",
+  "solution_plan": "The micro-service is a Firebase SDK health monitor: a lightweight canary that watches for SDK-level anomalies (crash spike, auth failure rate, Firestore error rate) and pages the team before users notice. The factory would build a landing page explaining the alert service, a Stripe subscription link ($29-49/month), and an intake form asking which Firebase services and alert channels (Slack, PagerDuty, email) the customer uses \u2014 no coding by Youval. The challenge is the actual monitoring layer: Claude can draft the integration docs and onboarding emails, but some lightweight data-collection agent (a script the customer drops in their CI or a webhook from their existing crash reporter) is needed, which requires at least one technical build sprint before this is hands-off. Sell by posting in the Firebase GitHub issue thread, r/iOSProgramming, and Firebase Slack communities \u2014 all free, targeted, high-intent channels \u2014 after Youval approves the outreach. Maintenance and billing run via Stripe + automated email; support queries go through a Claude-powered inbox. The honest constraint: this is NOT fully no-code out of the gate \u2014 the monitoring integration means Youval either needs a technical collaborator or a longer build window. Validate interest first before committing.",
+  "notes": "buildability_with_ai=5 (below floor 6) and operational_autonomy=5 (below floor 7) both fail build gates. Needs a technical build plan before promotion to build.",
+  "scored_at": "2026-09-29T12:17:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

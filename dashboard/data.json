@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-09-28T09:07:56+00:00",
-    "idt": "2026-09-28T12:07:56+03:00"
+    "utc": "2026-09-29T09:17:07+00:00",
+    "idt": "2026-09-29T12:17:07+03:00"
   },
   "funnel": {
-    "candidates": 352,
-    "scored": 352,
+    "candidates": 356,
+    "scored": 356,
     "validated": 41,
     "build_decisions": {
       "defer_1_week": 37,
@@ -569,6 +569,35 @@
     },
     {
       "topics": [
+        "salesforce",
+        "platform-events",
+        "external-credentials"
+      ],
+      "id": "01M3P765JW96XG9HSHFM40GYST",
+      "problem_statement": "Salesforce developers repeatedly hit undocumented permission walls when configuring automated integrations (Platform Events + External Credentials), wasting hours on trial-and-error with no clear official guidance.",
+      "target_segment": "Salesforce developers and admins at SMB and enterprise companies building automated integrations on the Salesforce platform",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "Salesforce developers and admins at companies paying $150-300/user/month in Salesforce licenses are a high-budget B2B buyer: their time is billed at $100-200/hour and they routinely pay for tooling (AppExchange apps, integration middleware, developer tools). The pain — undocumented permission walls wasting hours on Platform Events + External Credentials — is specific, recurs across the Salesforce ecosystem, and the buyer has clear budget authority. All four build gates pass (operational_autonom…",
+      "solution_plan": "The micro-service is a Salesforce integration diagnostic assistant: a Claude-powered tool where a Salesforce dev describes their integration problem (e.g. 'Platform Event trigger can't access External Credentials') and gets back a step-by-step permission checklist, the correct config sequence, and the known gotchas — in plain English, not Salesforce documentation maze. The factory builds a clean web form (problem description input), a Claude prompt trained on Salesforce permission patterns and common integration edge cases, and a Stripe link ($9 per diagnostic or $49/month for unlimited team access); no coding by Youval. Sell by posting targ…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 7,
+        "Will pay": 7,
+        "Buildable": 7,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access",
+      "discovered_at": "2026-09-29T12:16:00+03:00"
+    },
+    {
+      "topics": [
         "ai-spend",
         "cost-optimization",
         "saas-management"
@@ -713,48 +742,15 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439730/account-engagement-pardot-automation-rules-behavior-on-repeat",
       "discovered_at": "2026-08-07T07:47:49+03:00"
-    },
-    {
-      "topics": [
-        "ai-api",
-        "uptime-monitoring",
-        "status-page"
-      ],
-      "id": "01M06WXXM162JHE2W73JGX8JW1",
-      "problem_statement": "When major AI API providers (e.g. Claude/Anthropic) go down, paying business users have no reliable, fast alert channel — the official status page lags or shows nothing, leaving teams to discover outages via social media or trial-and-error.",
-      "target_segment": "Software teams and solo developers paying for AI API access (Claude, OpenAI, etc.) who have production workloads dependent on uptime.",
-      "total": 6.4,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a specific, identifiable person — a solo developer or engineering lead at a company paying for Claude/OpenAI API access — and they demonstrably pay for developer tooling (API subscriptions, monitoring SaaS). Willingness to pay is real: Datadog, Better Uptime, and PagerDuty all command recurring fees for exactly this category of alerting, so the paid-substitute signal exists. The deciding factor holding this at 'validate' rather than 'build' is that the weighted total lands at 6.4,…",
-      "solution_plan": "WHAT: A lightweight SaaS that independently probes the Claude, OpenAI, Gemini, and Mistral APIs every 60–90 seconds and pushes instant Slack/webhook/email alerts when a probe fails — faster and more reliable than the providers' own status pages. BUILD: The factory builds a scheduled Claude-driven probe loop (or simple HTTP pinger) that checks each API endpoint, writes results to a SQLite log, and triggers an alert via a pre-configured Slack webhook or email when failure thresholds are met; a minimal landing page (Carrd or similar) with a Stripe subscription link ($9–$19/mo) and an onboarding form collecting the user's preferred alert channel…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 8,
-        "Will pay": 6,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "validated",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=49324078",
-      "discovered_at": "2026-08-17T06:41:02+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2846,
-    "last_7_days_usd": 1.9292,
-    "all_time_usd": 27.9457,
+    "today_usd": 0.1508,
+    "last_7_days_usd": 1.7501,
+    "all_time_usd": 28.0965,
     "by_day": [
-      {
-        "date": "2026-09-22",
-        "usd": 0.3299
-      },
       {
         "date": "2026-09-23",
         "usd": 0.1779
@@ -778,67 +774,36 @@
       {
         "date": "2026-09-28",
         "usd": 0.2846
+      },
+      {
+        "date": "2026-09-29",
+        "usd": 0.1508
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6142
+        "usd": 0.6226
       },
       {
         "agent": "build_decisions",
-        "usd": 0.612
+        "usd": 0.4569
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4271
+        "usd": 0.3611
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2422
+        "usd": 0.276
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0337
+        "usd": 0.0336
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-22",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-23",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-09-29",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "skipped": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-09-28.md",
-    "date": "2026-09-28",
-    "text": "# Daily Summary — 2026-09-28 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 352 |\n| Opportunities validated past threshold | 91 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently in validation, build, live, or scaling stages. All experiments archived or dormant.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 8 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps technology and SaaS communities for emerging pain signals.\n2. `pain_validation` probes top 15 scored opportunities from today's candidate pool.\n3. `lead_research` collects contact details for validated opportunities.\n4. `opportunity_scoring` ranks candidates by fit and urgency.\n5. `build_decisions` analyzes cost/gain ratios for top 10 candidates.\n\n## Operator action items\n\nNone — process the opportunity pipeline and prepare weekly cost/gain report for Sunday ritual.",
+    "file": "reports/daily/2026-09-29.md",
+    "date": "2026-09-29",
+    "text": "# Daily Summary — 2026-09-29 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 356 |\n| Opportunities validated past threshold | 91 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments configured. The factory is in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across social and forum channels.\n2. `opportunity_scoring` re-ranks the 356 candidate opportunities from today's market radar run.\n3. `pain_validation` probes top-ranked candidates to confirm signal strength.\n4. `lead_research` begins outreach to validated opportunities pending experiment assignment.\n5. `build_decisions` flags candidates ready for experiment build-out or service launch.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

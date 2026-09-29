@@ -1,0 +1,25 @@
+{
+  "id": "01M3P765JD8PWT5XQYS5ZF72N7",
+  "discovered_at": "2026-09-29T12:16:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49878407",
+    "snippet": "I find myself agreeing with the author. Coding is not solved. Instead, what's closer to solved and what we're in the process of solving is product development. A while ago, I had a few programmers who were really, really fast [but] almost always missed the mark on the assignment... in the time my senior precise engineers could deliver a MVP, the fast [ones delivered wrong output]."
+  },
+  "problem_statement": "Engineering teams using AI coding tools frequently produce fast but misaligned output because there is no lightweight system to continuously check that implementation stays on track with the original product spec or user story intent.",
+  "target_segment": "Engineering managers and product leads at software companies using AI-assisted development (5\u2013200 person teams)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding",
+    "spec-alignment",
+    "product-development",
+    "engineering-management",
+    "ai-tools",
+    "code-review",
+    "requirement-drift",
+    "software-quality"
+  ],
+  "notes": "Hobbyist-adjacent but the framing is clearly from someone managing a team (paying for engineers). Weak buyer signal \u2014 no explicit price mention, but the cost framing ('senior precise engineers' vs 'fast wrong engineers') implies real dollar waste. Flagged as weak candidate; needs validation.",
+  "status": "candidate"
+}

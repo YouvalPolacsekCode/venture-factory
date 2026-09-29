@@ -1,0 +1,25 @@
+{
+  "id": "01M3P765JN87NQ26419A7SM3KZ",
+  "discovered_at": "2026-09-29T12:16:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://freelancing.stackexchange.com/questions/11057/how-long-should-a-clients-review-window-be-before-escrowed-payment-is-released",
+    "snippet": "When a freelance job is paid through escrow, the client usually gets a set period to approve the work or request changes before funds are released. Too short, and clients feel rushed. Too long, and freelancers wait weeks to get paid. What review period is reasonable for small projects (under $1,000), and does it make sense to scale it for larger, milestone-based projects? Are there legal or industry standards that apply in the US?"
+  },
+  "problem_statement": "Freelancers and clients on escrow-based platforms lack clear, enforceable, milestone-scaled review windows, causing payment delays and disputes that cost freelancers real income and time.",
+  "target_segment": "Independent freelancers and small agencies (especially web developers) billing clients via escrow platforms in the US",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "freelance",
+    "escrow",
+    "payment-dispute",
+    "milestone-billing",
+    "contract-management",
+    "freelance-platform",
+    "invoice",
+    "client-management"
+  ],
+  "notes": "Buyer signal present: freelancers earning real income are losing money to payment delays. Under-$1000 project framing suggests volume freelancers. Could support a contract/escrow tool or a smart milestone-timer SaaS. Weak in signal volume (single question, no upvotes) but recurring pain pattern across Upwork/similar platforms.",
+  "status": "candidate"
+}

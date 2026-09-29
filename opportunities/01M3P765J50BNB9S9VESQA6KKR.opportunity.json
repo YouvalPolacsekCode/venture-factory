@@ -1,0 +1,25 @@
+{
+  "id": "01M3P765J50BNB9S9VESQA6KKR",
+  "discovered_at": "2026-09-29T12:16:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49886890",
+    "snippet": "Tell HN: Firebase service causing iOS crashes across many apps. Seems like a server-side change. (7 points, captured 2026-09-29) \u2014 referenced GitHub issue firebase-ios-sdk#16728 confirming widespread impact across many production apps."
+  },
+  "problem_statement": "Mobile app developers using Firebase have no early-warning or fallback system when Firebase server-side changes silently break production iOS apps across many customers simultaneously, leaving teams scrambling reactively.",
+  "target_segment": "Mobile app developers and indie iOS/app studio operators relying on Firebase for backend services",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "firebase",
+    "ios",
+    "crash-monitoring",
+    "third-party-dependency",
+    "mobile-backend",
+    "incident-alerting",
+    "sdk-reliability",
+    "production-outage"
+  ],
+  "notes": "7 points on HN with multiple apps affected simultaneously \u2014 clear business pain for teams with paying users. Buyer signal: companies paying Firebase bills and losing revenue from crashes. Adjacent opportunity: dependency health monitoring / canary alerting for third-party SDKs in mobile apps.",
+  "status": "candidate"
+}

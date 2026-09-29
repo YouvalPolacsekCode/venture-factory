@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M3P765JW96XG9HSHFM40GYST",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "Salesforce developers and admins at companies paying $150-300/user/month in Salesforce licenses are a high-budget B2B buyer: their time is billed at $100-200/hour and they routinely pay for tooling (AppExchange apps, integration middleware, developer tools). The pain \u2014 undocumented permission walls wasting hours on Platform Events + External Credentials \u2014 is specific, recurs across the Salesforce ecosystem, and the buyer has clear budget authority. All four build gates pass (operational_autonomy=7 at floor, buildability_with_ai=7, buyer_clarity=8, willingness_to_pay=7), and the total of 6.5 technically reaches the build threshold. However, responsiveness_signal=1 (no probe data at all) means we have zero evidence of actual purchase intent, and the single-question signal is thin. Prudent call: stage at validate \u2014 run 20 targeted outreach messages to Salesforce devs before committing to build. This is the strongest opportunity in this batch.",
+  "solution_plan": "The micro-service is a Salesforce integration diagnostic assistant: a Claude-powered tool where a Salesforce dev describes their integration problem (e.g. 'Platform Event trigger can't access External Credentials') and gets back a step-by-step permission checklist, the correct config sequence, and the known gotchas \u2014 in plain English, not Salesforce documentation maze. The factory builds a clean web form (problem description input), a Claude prompt trained on Salesforce permission patterns and common integration edge cases, and a Stripe link ($9 per diagnostic or $49/month for unlimited team access); no coding by Youval. Sell by posting targeted answers in Salesforce Stack Exchange, the Trailblazer Community, and r/salesforce \u2014 link back to the tool with a free first diagnostic; outreach goes out only after Youval approves. Delivery is fully automated: form submission \u2192 Claude generates the diagnostic report \u2192 emailed within 60 seconds; Stripe handles billing and renewals. The only recurring human task is approving outreach batches and reviewing any support tickets that Claude flags as out-of-scope. Over time, each diagnostic submitted trains a richer prompt library, creating mild data lock-in.",
+  "notes": "All build gates technically pass at current scores, but responsiveness_signal=1 (no probe data) warrants a validate-first approach. If 20-outreach test yields >8% reply rate, promote directly to build.",
+  "scored_at": "2026-09-29T12:17:03+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

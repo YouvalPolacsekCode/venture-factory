@@ -1,0 +1,25 @@
+{
+  "id": "01M3P765JW96XG9HSHFM40GYST",
+  "discovered_at": "2026-09-29T12:16:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access",
+    "snippet": "I have a Platform Event trigger that needs to make a request to an authenticated API using Named/External Credentials. However, the Automated Process User, the default running user for Platform Event triggers, does not have access to External Credentials. I have found two possible solutions: Deploy PlatformEventSubscriberConfig... Assign a Permission set..."
+  },
+  "problem_statement": "Salesforce developers repeatedly hit undocumented permission walls when configuring automated integrations (Platform Events + External Credentials), wasting hours on trial-and-error with no clear official guidance.",
+  "target_segment": "Salesforce developers and admins at SMB and enterprise companies building automated integrations on the Salesforce platform",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "platform-events",
+    "external-credentials",
+    "permissions",
+    "integration",
+    "apex",
+    "enterprise-software",
+    "developer-tooling"
+  ],
+  "notes": "Business context strong \u2014 Salesforce work is paid professional/enterprise work. Buyer: companies paying Salesforce licenses and developer time. Pain is configuration complexity and undocumented permission edge cases. Possible product angle: Salesforce integration diagnostic/guided-setup tool. Single signal but highly specific technical pain that recurs across the Salesforce ecosystem.",
+  "status": "candidate"
+}

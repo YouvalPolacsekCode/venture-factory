@@ -1,0 +1,12 @@
+{
+  "opportunity_id": "01M3P765J50BNB9S9VESQA6KKR",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real but episodic: Firebase server-side regressions that silently break production iOS apps are severe when they happen, but they are infrequent enough (this is a single HN post with 7 points referencing one GitHub issue) that the frequency score does not support a recurring subscription product. Willingness-to-pay evidence is entirely indirect\u2014no competitor pricing, no 'is there a tool' requests, no paid workaround trail\u2014and the build gates for operational_autonomy and buildability_with_ai both fail their minimum thresholds, meaning even a validated pain cannot be served by this factory without a technical co-builder. Killing now avoids a wasted validate cycle on a problem that structurally cannot be delivered autonomously.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49886890",
+    "https://github.com/firebase/firebase-ios-sdk/issues/16728"
+  ],
+  "evaluated_at": "2026-09-30T12:09:35+03:00"
+}

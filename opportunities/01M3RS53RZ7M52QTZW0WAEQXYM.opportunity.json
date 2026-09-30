@@ -1,0 +1,27 @@
+{
+  "id": "01M3RS53RZ7M52QTZW0WAEQXYM",
+  "discovered_at": "2026-09-30T12:08:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199943/best-approach-to-recover-data-from-an-old-ost-file-after-exchange-mailbox-remova",
+    "snippet": "We have an old OST file from a previous Outlook profile where the original Exchange mailbox is no longer available. The OST file contains important mailbox data, but the original Outlook profile cannot be recreated. Is there any native Microsoft method to access an orphaned OST file? What checks should be performed before attempting OST to PST conversion? Are there any best practices for validating recovered data?"
+  },
+  "problem_statement": "IT admins and businesses regularly face orphaned OST files after Exchange mailbox removal or offboarding, with no reliable native Microsoft path to recover and validate the data, creating compliance and business continuity risk.",
+  "target_segment": "IT administrators and sysadmins at SMBs and enterprises using Microsoft 365 / Exchange Online",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ost-recovery",
+    "exchange",
+    "outlook",
+    "microsoft-365",
+    "email-recovery",
+    "pst-conversion",
+    "data-recovery",
+    "it-admin",
+    "offboarding",
+    "compliance"
+  ],
+  "notes": "Business context clear: 'important mailbox data' at risk, compliance implications for companies. OST-to-PST recovery tools already exist as a paid category (Stellar, Kernel, etc.), confirming willingness-to-pay. Signal is a professional asking for best practices, not a hobbyist. Recurring pain tied to employee offboarding cycles.",
+  "status": "candidate"
+}

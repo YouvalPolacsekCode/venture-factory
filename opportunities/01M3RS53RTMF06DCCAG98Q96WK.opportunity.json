@@ -1,0 +1,27 @@
+{
+  "id": "01M3RS53RTMF06DCCAG98Q96WK",
+  "discovered_at": "2026-09-30T12:08:29+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49898465",
+    "snippet": "OpenSEO got to 22k+ stars in <7 months. We were planning to opensource 4 tools (2 of which we have built but they are not opensource yet): Meltwater alternative for social listening (already taken: freesociallistening and getting some users from chatgpt), Gong alternative for sales roleplay (already setup dosalesroleplay), Podium alternative for Review collection and SMS, AgencyAnalytics alternative for agency reporting, we already have some sort of tool setup to run our own firm."
+  },
+  "problem_statement": "Agencies and SMBs pay high monthly fees for tools like AgencyAnalytics, Podium, Meltwater, and Gong but would switch to cheaper or open-source alternatives that cover reporting, review collection, social listening, and sales coaching in one stack.",
+  "target_segment": "Digital marketing agencies and SMB operators currently paying for AgencyAnalytics, Podium, Meltwater, or Gong",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "agency-reporting",
+    "social-listening",
+    "review-collection",
+    "sales-roleplay",
+    "open-source-saas",
+    "marketing-agency",
+    "smb-tools",
+    "gong-alternative",
+    "podium-alternative",
+    "meltwater-alternative"
+  ],
+  "notes": "Builder explicitly names paid incumbents they are replacing and reports early user traction (users from ChatGPT referrals). Multiple product lines suggest strong demand across the stack. Buyer context: agencies paying recurring SaaS fees. Willingness-to-pay implied by named paid competitors.",
+  "status": "candidate"
+}

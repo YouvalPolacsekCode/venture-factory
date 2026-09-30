@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M3RS53RTMF06DCCAG98Q96WK",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "An agency reporting + social listening + review collection + sales roleplay stack is not a single Claude prompt\u2014it requires ongoing data integrations, API connections to social platforms, CRM sync, and per-account configuration. Real setup and onboarding work per customer is unavoidable."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Agency clients have high expectations and complex environments; support load (connecting client accounts, debugging API pulls, custom report layouts) will require human judgment regularly."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyers are real and motivated\u2014digital marketing agencies already pay recurring fees to AgencyAnalytics, Podium, and Meltwater, confirming genuine willingness to pay. However, building even one of these tools (let alone the full stack) requires live integrations with Google Analytics, social APIs, review platforms, and telephony\u2014none of which can be delivered as a simple Claude prompt plus a Stripe link by a solo non-technical operator. Operational autonomy is critically low: every new agency client needs account connections, credential management, and per-client configuration that demands human involvement. The total collapses to 3.2 after penalties; this is the wrong thing to build in this factory.",
+  "solution_plan": "This opportunity is NOT buildable and maintainable by a solo non-technical operator using this factory as described. The product is a multi-integration SaaS platform requiring live API connections to a dozen third-party services (Google, Meta, Yelp, Twilio, Salesforce, etc.), per-client account provisioning, and ongoing data pipeline maintenance. No combination of Claude prompts, a landing page, and Stripe gets you there. The incumbent the HN post references (OpenSEO) is an open-source project built by a technical team. Recommending drop\u2014if Youval wants a slice of this market, a narrower single-deliverable (e.g., a one-time agency report generation service using uploaded CSVs) could be re-evaluated as a separate, scoped opportunity.",
+  "notes": "Fails operational_autonomy build gate (scored 3, floor is 7) and buildability_with_ai build gate (scored 4, floor is 6). Even without penalties the weighted total of 5.2 does not reach the 5.5 validate threshold; after penalties it is 3.2. Drop is the correct stage.",
+  "scored_at": "2026-09-30T12:10:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

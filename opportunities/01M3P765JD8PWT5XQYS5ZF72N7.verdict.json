@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M3P765JD8PWT5XQYS5ZF72N7",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain of AI-generated code drifting from spec is real and recurring in engineering teams using AI coding tools, supported by industry commentary and indirect signals. However, evidence falls short of the required 5 distinct pain quotes and the willingness-to-pay signal is entirely indirect \u2014 no competitor charges specifically for spec-drift detection, no job postings seek this role, and the single HN source is a philosophical observation rather than a buyer expressing urgency. The opportunity is not disproven but lacks sufficient documented evidence to pass validation thresholds; it should be re-queued for Market Radar with a targeted search for Cursor/Copilot Slack community threads and GitHub Copilot enterprise feedback forums.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=49878407"
+  ],
+  "evaluated_at": "2026-10-01T12:36:46+03:00"
+}

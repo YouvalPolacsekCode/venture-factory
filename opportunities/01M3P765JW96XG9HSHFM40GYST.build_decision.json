@@ -1,0 +1,51 @@
+{
+  "opportunity_id": "01M3P765JW96XG9HSHFM40GYST",
+  "decided_at": "2026-10-02T12:10:52+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total": {
+      "score": 6.5,
+      "threshold": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "pass": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass and the total of 6.5 meets the min_total_to_build threshold. However, recommended_stage is 'validate' \u2014 not 'build' or 'scale' \u2014 which is a hard blocker per the runtime contract: build_now is only permitted when recommended_stage \u2208 {build, scale}. The scoring agent correctly flagged that responsiveness_signal=1 (zero probe data) makes a build commitment premature, and the cost_to_gain_ratio of 3.588 far exceeds the kill threshold of 0.6, indicating very unfavorable unit economics at current assumptions. Defer one week to allow a 20-message outreach probe to Salesforce devs; if reply rate >8% the scoring agent can promote to 'build' stage and re-evaluate.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Salesforce Trailblazer Community DMs + targeted Stack Exchange answers linking to a free diagnostic landing page"
+}

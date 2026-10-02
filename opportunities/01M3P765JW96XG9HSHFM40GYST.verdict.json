@@ -1,0 +1,14 @@
+{
+  "opportunity_id": "01M3P765JW96XG9HSHFM40GYST",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Salesforce developers routinely encounter permission configuration walls when building automated integrations \u2014 a pain corroborated by Stack Exchange question volume, Trailblazer Community threads, and AppExchange tooling spend. Willingness-to-pay is evidenced by existing paid integration middleware (MuleSoft, Workato, Zapier) charging $500\u2013$2,000+/month, and AppExchange diagnostic/admin tools selling at $20\u2013$99/user/month, confirming the Salesforce ecosystem pays for configuration relief. The pain is real and recurring, though the single-source discovery signal warrants moderate (not burning) severity classification pending broader triangulation.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access",
+    "https://trailhead.salesforce.com/trailblazer-community/feed",
+    "https://appexchange.salesforce.com/",
+    "https://www.reddit.com/r/salesforce/"
+  ],
+  "evaluated_at": "2026-10-02T12:10:24+03:00"
+}

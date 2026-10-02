@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-10-01T09:36:51+00:00",
-    "idt": "2026-10-01T12:36:51+03:00"
+    "utc": "2026-10-02T09:10:56+00:00",
+    "idt": "2026-10-02T12:10:56+03:00"
   },
   "funnel": {
-    "candidates": 358,
-    "scored": 358,
-    "validated": 41,
+    "candidates": 359,
+    "scored": 359,
+    "validated": 42,
     "build_decisions": {
-      "defer_1_week": 37,
+      "defer_1_week": 38,
       "kill": 4
     },
     "build_now": 0,
@@ -591,7 +591,7 @@
         "Buildable": 7,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access",
       "discovered_at": "2026-09-29T12:16:00+03:00"
@@ -747,14 +747,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.1494,
-    "last_7_days_usd": 1.5442,
-    "all_time_usd": 28.4326,
+    "today_usd": 0.3183,
+    "last_7_days_usd": 1.6296,
+    "all_time_usd": 28.7509,
     "by_day": [
-      {
-        "date": "2026-09-25",
-        "usd": 0.2329
-      },
       {
         "date": "2026-09-26",
         "usd": 0.3876
@@ -778,67 +774,36 @@
       {
         "date": "2026-10-01",
         "usd": 0.1494
+      },
+      {
+        "date": "2026-10-02",
+        "usd": 0.3183
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6065
-      },
-      {
-        "agent": "pain_validation",
-        "usd": 0.3626
+        "usd": 0.5931
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3055
+        "usd": 0.4564
+      },
+      {
+        "agent": "pain_validation",
+        "usd": 0.346
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2359
+        "usd": 0.2013
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0337
+        "usd": 0.0328
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-09-25",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-09-26",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-10-02",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-10-01.md",
-    "date": "2026-10-01",
-    "text": "# Daily Summary — 2026-10-01 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 358 |\n| Opportunities validated past threshold | 93 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning B2B pain signals across discovery sources.\n2. `pain_validation` validates top 20 candidates from today's 358 opportunities.\n3. `opportunity_scoring` processes verdict backlog (93 validated opportunities).\n4. `build_decisions` evaluates candidates for product/service build recommendations.\n5. `cost_gain` computes cost-benefit on any experiments ready for next phase.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-10-02.md",
+    "date": "2026-10-02",
+    "text": "# Daily Summary — 2026-10-02 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 359 |\n| Opportunities validated past threshold | 94 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, or scaling stage. Factory is in discovery and validation phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning for emerging B2B pain signals across monitored sources.\n2. `opportunity_scoring` re-ranks the 359 candidate opportunities based on validation signals.\n3. `pain_validation` runs targeted validation on highest-scoring candidates.\n4. `cost_gain` computes ROI estimates for opportunities approaching build threshold.\n5. `build_decisions` evaluates readiness of top candidates for prototype phase.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

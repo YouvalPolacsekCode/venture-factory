@@ -1,0 +1,27 @@
+{
+  "id": "01M3XY0KSDT9KTP33F45QNBZ76",
+  "discovered_at": "2026-10-02T12:09:36+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49928454",
+    "snippet": "tl;dr: tilion is building the world's fastest and stealthiest browser infra for agents, so you can run millions of web agents successfully. today, we're releasing v3 of our engine, fortress, free for devs. before tilion, we were running thousands of web agents to collect multimodal school board data acr... (YC F26 launch post, 3 points, 2 comments)"
+  },
+  "problem_statement": "Businesses running web agents at scale (thousands to millions of agent sessions) are routinely blocked by anti-bot detection, causing failed automation pipelines, wasted compute spend, and the need to maintain brittle custom browser fingerprinting infrastructure.",
+  "target_segment": "Engineering teams and AI product companies running web automation or data-collection agents at scale; also solo developers building agent-powered SaaS products.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "web-agents",
+    "browser-automation",
+    "anti-bot",
+    "agent-infrastructure",
+    "headless-browser",
+    "scraping",
+    "fingerprinting",
+    "ai-agents",
+    "yc-startup",
+    "devtools"
+  ],
+  "notes": "YC F26 company (Tilion) launched a free stealth Chromium engine specifically because they personally burned time running thousands of blocked web agents. Buyer signal: teams paying for cloud compute to run agents, then losing that spend to blocks \u2014 a direct recurring cost. Competing products (Browserless, Playwright Cloud, Bright Data scraping browser) already have paying customers, validating the market. A solo operator could build a managed stealth-browser API on top of open infra and charge per-session or monthly to dev teams. Signal strength capped at 3 because this is a single YC launch post, not yet multiple independent complaints.",
+  "status": "candidate"
+}

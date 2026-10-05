@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M45QDEQ8KZ7XNQ2C82DTJCRA",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 6,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 2,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.0,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "A voice-first ambient desktop interface inherently requires ongoing configuration support, onboarding assistance, and troubleshooting that cannot be automated away \u2014 users with setup issues expect real-time help."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Ambient computing interfaces interact with each user's unique OS, app stack, and data sources; support load per customer would be high and largely requires human judgment."
+    }
+  ],
+  "total": 1.5,
+  "recommended_stage": "drop",
+  "rationale": "The signal here is a single HN comment expressing a general wish \u2014 romantic aspiration ('Star Trek computer'), not a specific paid-for problem. The buyer is defined only as 'tech-forward knowledge workers', which is the broadest possible non-buyer category; no specific role, company size, or budget exists. Building a quality ambient voice interface requires deep OS integration, real-time audio processing, and per-user data access \u2014 none of which is shippable as Claude + a landing page in a week, and none of which can run autonomously post-launch. This idea is drop-worthy at current evidence levels: one comment, zero corroboration, massive build complexity, and no path to autonomous operation.",
+  "solution_plan": "Not applicable \u2014 this opportunity does not meet the minimum threshold for even a validation experiment. The build complexity (OS-level voice integration, real-time audio, per-user environment wiring) is far beyond what this factory can ship without significant custom engineering. A solo non-technical operator could not build, sell, or maintain this without a full engineering team. If this space resurfaces with corroborated willingness-to-pay evidence and a narrower use case (e.g., 'voice-to-Notion for meeting notes' rather than 'ambient OS interface'), it should be re-submitted as a new, scoped opportunity.",
+  "notes": "Score 1.5 is well below the 5.5 validate threshold. Failing dimensions: buyer_clarity (2, needs \u22656 for build), willingness_to_pay (2, needs \u22655 for build), buildability_with_ai (3, needs \u22656 for build), operational_autonomy (3, needs \u22657 for build). Even setting gates aside, the weighted total before penalties (3.0) and after (1.5) both clearly indicate drop. The single 'I would pay' comment is insufficient signal \u2014 it describes a desire for a product category that has not been successfully commercialized at this scope.",
+  "scored_at": "2026-10-05T12:48:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M45QDEQ8KZ7XNQ2C82DTJCRA",
+  "discovered_at": "2026-10-05T12:48:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49865579",
+    "snippet": "Agreed, completely. I would pay for that Star Trek computer interface."
+  },
+  "problem_statement": "Knowledge workers want a natural-language, ambient voice interface to their computer and data \u2014 something that feels like a conversational assistant integrated into their workflow rather than a chat box \u2014 but no current product delivers this experience at a quality level worth paying for.",
+  "target_segment": "Tech-forward knowledge workers, developers, and productivity enthusiasts who use AI assistants daily and are willing to pay for premium tooling.",
+  "geo": "GLOBAL",
+  "signal_strength": 1,
+  "keywords": [
+    "voice-interface",
+    "ambient-computing",
+    "natural-language-ui",
+    "ai-assistant",
+    "conversational-computing",
+    "productivity",
+    "desktop-ai",
+    "llm-interface"
+  ],
+  "notes": "Explicit 'I would pay for' statement is a positive buyer signal, but this is a single comment with zero upvotes and the desire is extremely broad. Signal_strength 1 \u2014 needs significant corroboration before actioning. Included because explicit willingness-to-pay is rare in these feeds. Potential validation path: survey HN/reddit communities about specific use cases where a persistent voice-first interface would replace current tools.",
+  "status": "candidate"
+}

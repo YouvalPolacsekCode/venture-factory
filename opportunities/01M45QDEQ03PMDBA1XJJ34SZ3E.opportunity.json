@@ -1,0 +1,26 @@
+{
+  "id": "01M45QDEQ03PMDBA1XJJ34SZ3E",
+  "discovered_at": "2026-10-05T12:48:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=49959703",
+    "snippet": "So my one terabyte drive got full and I realized after months of CLI sessions I generated a lot of markdown files in a lot of images, all sort of other documents they all seem sorta kinda useful, and I too afraid to delete them because they might break something. How do you deal with that?"
+  },
+  "problem_statement": "Developers running AI coding assistants and LLM CLI tools accumulate large volumes of generated artifacts (markdown files, images, documents) that clutter their filesystem. They cannot confidently identify which files are safe to delete, leading to disk exhaustion and anxiety about accidental breakage.",
+  "target_segment": "Software developers and technical AI power-users who run LLM-based CLI tools, coding agents, or local AI pipelines daily.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "llm-artifacts",
+    "ai-generated-files",
+    "disk-cleanup",
+    "developer-tools",
+    "file-management",
+    "coding-agent",
+    "cli-tools",
+    "ai-clutter",
+    "local-ai"
+  ],
+  "notes": "Pain is real and likely growing as agentic coding tools proliferate \u2014 the poster hit 1 TB of LLM output. Buyer signal is moderate: technical users, but no explicit willingness-to-pay mentioned. Opportunity could be a CLI tool or desktop app that scans, classifies, and safely prunes LLM-generated artifacts with dependency awareness. Needs more signals to confirm willingness to pay; flagged for pain-validation follow-up on r/LocalLLaMA and similar communities.",
+  "status": "candidate"
+}

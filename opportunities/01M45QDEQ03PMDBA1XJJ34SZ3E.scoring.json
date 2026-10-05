@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M45QDEQ03PMDBA1XJJ34SZ3E",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [],
+  "total": 4.7,
+  "recommended_stage": "validate",
+  "rationale": "The pain is genuine and worsening as agentic coding tools proliferate \u2014 developers routinely fill terabyte drives with LLM-generated detritus and fear deleting anything. However, no willingness-to-pay signal exists: technical users in this space default to free/OSS tooling (dust, fdupes, custom shell scripts) and there's no paid substitute benchmarking our target price. The buyer is also underspecified \u2014 'developers' spans students to staff engineers, and the segment that would actually pay for a polished cleanup tool vs. writing their own is narrow and not yet identified. Validate with a paid-tier landing page or a direct Reddit/HN poll before building anything.",
+  "solution_plan": "WHAT: A Claude-powered CLI/web tool that scans a developer's working directory, classifies files as LLM-generated vs. project-critical, and produces a safe-delete manifest with dependency warnings. BUILD: The factory builds it as a Claude prompt pipeline (file-tree ingestion \u2192 classification \u2192 report) wrapped in a simple web form where users paste or upload a directory listing; payment via a one-time Stripe link ($9\u2013$19) before the report is returned \u2014 no coding by Youval. SELL: Post a free demo version on r/LocalLLaMA, r/ClaudeAI, and the HN 'Show HN' thread; Youval approves each outreach batch before it goes out; conversion from free demo to paid full report is the validation gate. MAINTAIN: Submissions arrive via form, Claude processes them automatically, Stripe handles billing, and results are emailed \u2014 no per-customer human work; Youval's only recurring touch is approving outreach batches. CAVEAT: Until at least 10 paid conversions are confirmed, this is a validation experiment, not a product \u2014 the technical community's strong DIY culture makes paid conversion far from certain.",
+  "notes": "buyer_clarity (5) and willingness_to_pay (3) both fall below build_gate floors (6 and 5 respectively). Stage is 'validate' both by total score (4.7 < 6.5 threshold) and gate logic. Primary risk: developers in this segment treat disk cleanup as a solved problem with free tools.",
+  "scored_at": "2026-10-05T12:48:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4893ZK7FDXVDFE6XPMT0815",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 6,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, nameable role \u2014 a software developer or engineering team lead at a company running multi-ecosystem mobile/backend projects \u2014 who has demonstrated budget intent by explicitly preferring a paid hosted option. Willingness to pay is moderate: adjacent paid tools (Snyk, Dependabot, Renovate) exist but none aggregate multi-ecosystem deprecation data via machine-readable feed in exactly this way. The critical blocker is buildability: ingesting live deprecation signals from npm, Maven, CocoaPods, and SPM registries, normalizing breaking-change metadata, and reliably serving a REST/RSS API requires substantial data-pipeline work well beyond Claude prompts and a landing page \u2014 this is a data-infrastructure product, not a wrapper service. Operational autonomy is also limited because the data pipelines need ongoing maintenance as registry formats shift. Build gate fails on both `buildability_with_ai` (4 < 6) and `operational_autonomy` (5 < 7).",
+  "solution_plan": "This is a multi-ecosystem library deprecation and breaking-change tracker delivered as a REST API and RSS feed. Building it properly requires scheduled scrapers against npm, Maven Central, CocoaPods, and SPM registries \u2014 that's real backend infrastructure that the Claude factory cannot assemble alone without a developer. A lightweight version (npm-only, Claude-extracted changelog summaries, simple API) could be validated: the factory can build a landing page with a Stripe payment link, an intake form asking which ecosystems and libraries to track, and a Claude prompt that parses changelogs on a schedule. Outreach would go to developer communities on Lobste.rs, Hacker News, and dev-focused newsletters \u2014 the factory drafts and queues the outreach for Youval's approval before anything sends. Ongoing delivery would be semi-automated: Claude processes changelogs, formats the feed, and emails subscribers, but Youval would need to approve any new integrations and monitor for registry format changes. Realistically, a solo non-technical operator cannot build the full multi-ecosystem version; the npm-only MVP is feasible for validation but the full product as specified requires engineering work.",
+  "notes": "Fails build_gates: buildability_with_ai=4 (min 6), operational_autonomy=5 (min 7). Validate with an npm-only MVP to test willingness to pay before committing to the full data-pipeline build.",
+  "scored_at": "2026-10-06T12:36:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

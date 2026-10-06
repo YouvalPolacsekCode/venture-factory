@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M4893ZKB9K0CX75WA1R0T3XD",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Actual file migration and sync tooling requires configuring, running, and troubleshooting software on the customer's Windows Server environment \u2014 this is per-customer manual work that cannot be automated by Claude prompts or a landing page."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "IT migration projects typically require scoping calls, environment assessment, and hands-on support \u2014 not self-serve, asynchronous delivery."
+    }
+  ],
+  "total": 2.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 IT administrators and MSPs managing Microsoft 365 migrations \u2014 and paid tools already exist (ShareGate, Mover), confirming willingness to pay at business prices. However, this is fundamentally a software-plus-services product: the actual migration tool must run inside the customer's Windows environment, which cannot be delivered by Claude prompts or a web service. Every customer engagement requires environment-specific configuration, long-path edge-case handling, and troubleshooting \u2014 this is per-customer manual fulfillment work. The factory cannot build or operate this without Youval doing hands-on technical work for each client, making it a consulting engagement disguised as a product. Drop and redirect attention to opportunities the factory can actually build and run autonomously.",
+  "solution_plan": "This is a Windows File Server to SharePoint Online migration/sync tool. Honestly, a solo non-technical operator cannot build or maintain this: the core product is a Windows application or agent that runs in the customer's server environment, handles edge cases like long file paths and timestamp preservation, and manages incremental sync state \u2014 none of which can be assembled from Claude prompts and a Stripe link. Existing competitors (ShareGate, Mover, Synology tools) require engineering teams to build and maintain. Even a reseller or affiliate model around an existing tool would require technical onboarding support per client. This opportunity does not fit the factory's autonomous-delivery model and should be dropped.",
+  "notes": "Fails build_gates: buildability_with_ai=2 (min 6), operational_autonomy=2 (min 7). Total after penalties is 2.0 \u2014 below validate threshold. Fundamental mismatch with autonomous factory model; this is a technical services product.",
+  "scored_at": "2026-10-06T12:36:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

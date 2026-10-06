@@ -1,0 +1,27 @@
+{
+  "id": "01M4893ZKB9K0CX75WA1R0T3XD",
+  "discovered_at": "2026-10-06T12:36:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95655/tool-recommendation-to-sync-backup-local-file-server-to-sharepoint-online",
+    "snippet": "I'm looking for a reliable tool to back up and migrate files from our local Windows File Server to SharePoint Online. We need something that preserves folder structure, timestamps, and handles long file paths well without crashing. Incremental sync support is essential for us."
+  },
+  "problem_statement": "IT teams at small and mid-sized businesses need a reliable, non-crashing tool to incrementally sync and migrate Windows File Server data to SharePoint Online while preserving folder structure, timestamps, and long file paths.",
+  "target_segment": "IT administrators and MSPs managing Windows Server environments migrating to Microsoft 365",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "sharepoint",
+    "file-sync",
+    "windows-server",
+    "backup",
+    "migration",
+    "microsoft-365",
+    "it-operations",
+    "incremental-sync",
+    "long-file-paths",
+    "msp"
+  ],
+  "notes": "Business context is clear ('our local Windows File Server' \u2014 organizational setting). Recurring operational pain: existing tools crash on long paths and lack incremental sync. Existing paid tools in this space (ShareGate, Mover) have known gaps, suggesting willingness to pay for something that simply works. Single source but concrete requirements signal a real procurement intent.",
+  "status": "candidate"
+}

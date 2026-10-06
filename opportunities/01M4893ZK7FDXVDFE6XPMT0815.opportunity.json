@@ -1,0 +1,28 @@
+{
+  "id": "01M4893ZK7FDXVDFE6XPMT0815",
+  "discovered_at": "2026-10-06T12:36:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95656/tool-or-service-that-tracks-deprecations-and-breaking-changes-per-library-versio",
+    "snippet": "I need a tool or service that tells me, for a given library and version, whether it has been deprecated or whether newer releases contain breaking changes, before I upgrade. Requirements: Ecosystems: npm and Maven/Gradle (Android) at least; CocoaPods and Swift Package Manager would be a big plus. Reports deprecations (with dates when available) and breaking changes, not only new versions. Machine-readable access: REST API, RSS/Atom feed or downloadable data. Free or open source preferred; a self-hosted option would be a big plus."
+  },
+  "problem_statement": "Software development teams have no reliable, machine-readable service to check whether a specific library version has been deprecated or introduces breaking changes before upgrading, across npm, Maven, CocoaPods, and Swift Package Manager ecosystems.",
+  "target_segment": "Mobile and backend developers at software companies and agencies managing multi-ecosystem dependency upgrades",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "dependency-management",
+    "breaking-changes",
+    "npm",
+    "maven",
+    "cocoapods",
+    "api",
+    "developer-tools",
+    "package-manager",
+    "deprecation-tracking",
+    "android",
+    "ios"
+  ],
+  "notes": "Buyer is a developer working in a business context (Android + iOS projects), explicitly requested REST API / RSS feed access \u2014 implies integration into CI pipelines. Preferred paid or self-hosted, suggesting willingness to pay for a reliable hosted option. Single signal but very specific requirements list; worth validating against other developer communities.",
+  "status": "candidate"
+}

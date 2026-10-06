@@ -1,0 +1,27 @@
+{
+  "id": "01M4893ZKEAH4AXVM8J3CB9QFY",
+  "discovered_at": "2026-10-06T12:36:05+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://lobste.rs/s/rwloew",
+    "snippet": "At the moment I self host using maddy for a bunch of domains that need a mailbox or catch all. There are some minor issues with it. The biggest bug bear is that the native email client on iOS takes an age to connect and download messages which causes some issues with OTP emails. So for those out there that do host their own email \u2014 what are you running, what would you change?"
+  },
+  "problem_statement": "Developers and technical operators self-hosting email face recurring reliability pain: slow iOS client sync, OTP delivery delays, and uncertainty about which server stack to trust \u2014 creating a fragmented, high-maintenance setup with no clear best-in-class managed alternative that preserves control.",
+  "target_segment": "Technical founders, indie developers, and ops engineers who self-host email for personal domains or small organizations",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-self-hosting",
+    "email-server",
+    "ios-mail",
+    "otp-delivery",
+    "deliverability",
+    "maddy",
+    "privacy",
+    "developer-tools",
+    "infrastructure",
+    "domain-email"
+  ],
+  "notes": "Thread has 17 comments \u2014 active community discussion suggesting repeated, shared pain. Users already pay for hosting infrastructure. OTP delay is a real operational cost. Potential product angle: a managed self-hosted email appliance or a lightweight hosted email service with bring-your-own-domain that preserves control. Buyer willingness-to-pay implied by existing infrastructure spend and frustration with free/DIY options.",
+  "status": "candidate"
+}

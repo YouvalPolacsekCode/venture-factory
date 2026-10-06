@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M4893ZKEAH4AXVM8J3CB9QFY",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A managed or semi-managed email hosting service requires ongoing infrastructure operations (server uptime, deliverability reputation, DNS configuration per customer) that cannot be automated by Claude alone."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Email deliverability issues, OTP delays, and iOS client quirks generate high-frequency, high-urgency support tickets requiring human judgment."
+    }
+  ],
+  "total": 2.5,
+  "recommended_stage": "drop",
+  "rationale": "The segment \u2014 technical founders and indie developers self-hosting email \u2014 is identifiable but weak as a buyer: this group skews strongly toward free/self-hosted solutions and has a high DIY tolerance, meaning willingness to pay for a managed service is uncertain and likely price-sensitive. The real pain (iOS sync latency, OTP delays) is genuine and recurring, but the product required to solve it is email infrastructure \u2014 SMTP servers, IMAP daemons, deliverability management, per-domain DNS setup \u2014 which is firmly outside what the Claude factory can build or operate autonomously. Running email infrastructure for others is a high-ops, high-support product where a single outage or spam-reputation event requires immediate human intervention. The factory cannot build or operate this without Youval becoming a sysadmin for every customer. Drop.",
+  "solution_plan": "This would be a managed or appliance-style email hosting service for technical users who want control without maintenance. The honest answer is that a solo non-technical operator cannot build or run this: managed email hosting requires server infrastructure, deliverability reputation management, abuse handling, and per-customer DNS configuration \u2014 none of which can be delivered via Claude prompts and a landing page. Even an affiliate or white-label arrangement around an existing provider (Fastmail, Migadu) would require technical support per customer. The segment also has a strong free-tool bias (they already self-host) that makes monetization difficult. This opportunity does not fit the autonomous factory model and should be dropped in favor of ideas where Claude can handle both building and ongoing delivery.",
+  "notes": "Fails build_gates: buildability_with_ai=3 (min 6), operational_autonomy=3 (min 7), willingness_to_pay=4 (min 5). Total after penalties is 2.5 \u2014 below validate threshold. Infrastructure product requiring ongoing sysadmin work; incompatible with autonomous delivery model.",
+  "scored_at": "2026-10-06T12:36:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

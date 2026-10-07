@@ -1,0 +1,25 @@
+{
+  "id": "01M4AV9387C19ZX1WQZEAM0ZNE",
+  "discovered_at": "2026-10-07T12:31:56+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/36002/we-agreed-one-finish-at-kickoff-each-person-delivered-a-different-one-how-do-w",
+    "snippet": "Eight of us are delivering one customer result: their new price list is live in the store system on 30 April, and the old list is switched off that day. We wrote that sentence on the first slide. Everyone nodded. Two weeks later 'done' had split. Sales treats done as a demo the sponsor has already seen. The analyst treats done as a signed specification. I keep watching the board, where 40 of 55 tasks are closed, and I have been calling that progress. None of those three is the switch-off on 30 April."
+  },
+  "problem_statement": "Cross-functional project teams routinely diverge on what 'done' means for a shared deliverable, causing false progress signals and last-minute delivery failures despite written alignment at kickoff.",
+  "target_segment": "Project managers and delivery leads at professional services firms, agencies, and enterprise IT teams running multi-stakeholder projects",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "project-management",
+    "definition-of-done",
+    "team-alignment",
+    "delivery-risk",
+    "scope-creep",
+    "stakeholder-management",
+    "cross-functional-teams",
+    "pm-tooling"
+  ],
+  "notes": "The question describes a concrete, recurring business failure mode \u2014 shared outcome, divergent completion criteria \u2014 that costs real money in missed deadlines and rework. However, this is a single forum post with no explicit willingness-to-pay signal. Existing tools (Jira, Linear, Monday.com) don't solve the semantic alignment problem, only task tracking. A lightweight 'outcome contract' or shared definition-of-done layer on top of existing PM tools could be sold to delivery leads. Signal is weak without corroborating data from other sources; treat as a hypothesis to validate.",
+  "status": "candidate"
+}

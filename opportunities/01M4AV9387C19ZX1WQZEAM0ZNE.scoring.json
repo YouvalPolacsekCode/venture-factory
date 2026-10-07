@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4AV9387C19ZX1WQZEAM0ZNE",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a nameable professional \u2014 delivery leads and PMs at agencies or enterprise IT teams \u2014 but willingness to pay is the weak link: existing PM tools (Jira, Monday, Linear) are already paid subscriptions and teams rarely add another tool unless the pain is acute and budget is available, and there is no hard evidence here of anyone paying for a 'definition-of-done' layer specifically. Buildability is genuinely strong (a Claude-powered structured commitment doc + shared checklist + email nudges is shippable in days), and operational autonomy is plausible once the workflow is defined, which is encouraging. The deciding factor holding this at validate is the absence of any willingness-to-pay signal and the single-data-point evidence base; the hypothesis needs cheaply testing before building anything.",
+  "solution_plan": "This is a 'shared outcome contract' micro-service \u2014 a lightweight tool where a PM pastes a project kickoff objective, and Claude generates a structured, unambiguous definition-of-done doc that each stakeholder signs off on digitally, with automated weekly check-ins that flag drift. The factory builds it as a Claude prompt chain + a simple intake form (Tally or similar) + email delivery via a transactional email service + Stripe for a monthly subscription; no coding by the operator, and the factory handles all the Claude wiring. Selling it means posting in PM communities (r/projectmanagement, PMI forums, LinkedIn groups for delivery leads) and running a 'paste your kickoff doc, get a free outcome contract' lead magnet \u2014 all outreach goes out only after the operator approves each batch. Delivery is fully automated: Claude processes each submission, sends the structured doc to the PM, and handles reminder emails; billing runs via Stripe; support is handled by a Claude-powered FAQ responder. The only recurring human touch is approving outreach batches and monitoring the weekly digest. Validate first by offering the free lead magnet to 50 PMs and measuring how many share it with their teams \u2014 that reveals real pain better than any survey.",
+  "notes": "No failing build gates at current score level (total 5.3 is below the build threshold of 6.5, so stage is validate on score alone). Key validation question: will PMs pay a separate subscription on top of their existing PM tool? Willingness_to_pay (4) is the dimension most likely to kill this \u2014 test it before building.",
+  "scored_at": "2026-10-07T12:33:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

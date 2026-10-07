@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4AV937YE3M6C5QDND0AKTN9",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is specific and identifiable \u2014 Salesforce admins and IT managers at mid-to-large enterprises who have real budget authority and a concrete pre-rollout cost-forecasting need \u2014 and they already pay for Salesforce licensing, making a paid add-on plausible. However, building this requires Salesforce platform integration (likely a managed package or connected app querying the GenAIGatewayRequest object and applying Salesforce's credit-mapping logic), which goes well beyond a Claude prompt + landing page and puts buildability below the build gate floor. Operational autonomy also scores low because the token-to-credit mapping logic depends on Salesforce's internal billing tables that may change, requiring periodic maintenance; additionally, enterprise sales into Salesforce orgs typically involves demo calls and IT security review, adding synchronous human steps. The deciding factor is the build gate: buildability_with_ai (4) is well below the required 6 floor.",
+  "solution_plan": "This is a Salesforce Agentforce credit-usage dashboard \u2014 a service that pulls token-consumption data from a Salesforce org and converts it into per-user Flex Credit burn forecasts that finance teams can actually act on. Building it properly requires writing a Salesforce connected app or managed package that queries the GenAIGatewayRequest object via REST/Bulk API, then applies Salesforce's published token-to-credit conversion rates \u2014 this is non-trivial integration work that cannot be assembled from Claude prompts and a landing page alone; a Salesforce developer would need to be contracted or the factory would need to rely on an existing ISV. Selling it means posting in the Trailblazer Community and Salesforce StackExchange, but enterprise IT buyers will expect a sandbox install, a security review, and likely a demo call \u2014 synchronous human involvement Youval would need to handle. Maintaining it means updating the credit-mapping table whenever Salesforce changes its pricing, which is unpredictable. As a solo non-technical operator, Youval could NOT realistically build and maintain this without contracting a Salesforce developer; validate the pain further first by posting a survey in Trailblazer Community before committing any resources.",
+  "notes": "Failing build gates: buildability_with_ai (scored 4, minimum 6) and operational_autonomy (scored 5, minimum 7). Stage capped at validate. Single data point \u2014 needs corroboration across Trailblazer Community threads before investing in validation outreach.",
+  "scored_at": "2026-10-07T12:33:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

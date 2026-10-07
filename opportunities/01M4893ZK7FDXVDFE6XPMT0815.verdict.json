@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M4893ZK7FDXVDFE6XPMT0815",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real and specific \u2014 developers do encounter breaking changes and deprecations when upgrading dependencies \u2014 but evidence remains thin (single forum post, signal_strength 2) and willingness-to-pay is undermined by robust free alternatives (Renovate, Dependabot, npm audit). The build gates fail on both buildability_with_ai (4/10) and operational_autonomy (5/10), and no evidence meets the minimum 5 distinct pain quotes or a clear willingness-to-pay signal beyond a single requester's preference for a paid option.",
+  "sources": [
+    "https://softwarerecs.stackexchange.com/questions/95656/tool-or-service-that-tracks-deprecations-and-breaking-changes-per-library-versio"
+  ],
+  "evaluated_at": "2026-10-07T12:32:44+03:00"
+}

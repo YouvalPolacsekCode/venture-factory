@@ -1,0 +1,25 @@
+{
+  "id": "01M4AV937YE3M6C5QDND0AKTN9",
+  "discovered_at": "2026-10-07T12:31:56+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439905/how-can-i-report-on-billable-flex-credit-consumption-per-user-for-agentforce-in",
+    "snippet": "I'm evaluating Agentforce Coworker in a sandbox and want to forecast Flex Credit consumption before a wider rollout. I built a Lightning report on the GenAIGatewayRequest report type, grouped by Timestamp (month) and Session Id, with Sum of Prompt Tokens, Sum of Total Tokens and Record Count. It shows token counts per request, but not the usage type, units or credits charged. Questions: Is GenAIGatewayRequest the right object for this, or is there a better source (for example the Ai Agent Generation Log)? How do I map token counts to Flex Credits so I can forecast costs per user before rollout?"
+  },
+  "problem_statement": "Salesforce admins evaluating Agentforce cannot get reliable per-user Flex Credit cost visibility from native reports before a wider rollout, making budget forecasting impossible and blocking adoption decisions.",
+  "target_segment": "Salesforce admins and IT managers at mid-to-large enterprises evaluating or rolling out Agentforce AI features",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "ai-cost-visibility",
+    "flex-credits",
+    "enterprise-ai",
+    "cost-forecasting",
+    "saas-spend-management",
+    "llm-usage-tracking"
+  ],
+  "notes": "Buyer context is clear: this person is a Salesforce admin at a company doing a controlled sandbox evaluation specifically to forecast costs before committing to a wider paid rollout. The pain is inability to map token usage to billed credits \u2014 a gap between native Salesforce reporting and what finance/procurement needs to approve spend. A tool or managed package that surfaces per-user Agentforce credit burn in a digestible dashboard could command a subscription fee from Salesforce orgs. Single data point; needs validation across more Salesforce community threads and the Trailblazer community.",
+  "status": "candidate"
+}

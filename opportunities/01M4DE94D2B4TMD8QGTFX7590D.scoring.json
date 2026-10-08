@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4DE94D2B4TMD8QGTFX7590D",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is severe and real \u2014 distributed state divergence at 15,000 concurrent workflows across 400 microservices represents genuine, expensive production failures at a company with significant infrastructure spend \u2014 and the buyer (platform/infrastructure engineers at mid-to-large tech companies) is identifiable. However, this problem is fundamentally a deep distributed systems architecture challenge: diagnosing and resolving cross-region Kafka/Redis/Postgres consistency failures requires bespoke analysis of the customer's specific topology, data models, and failure patterns, not a repeatable Claude-powered service. Buildability is very low (score 2) and operational autonomy is essentially zero \u2014 every engagement would require senior infrastructure expertise applied per customer, which is consulting, not a productized autonomous service. Weighted total of 4.6 falls well below the 5.5 validate threshold.",
+  "solution_plan": "There is no realistic path to a solo-operator-buildable, autonomously-delivered micro-service here. The problem requires expert distributed systems diagnosis and solution design specific to each customer's architecture \u2014 400 microservices, multi-region Kafka partitioning, Postgres replication lag, Redis TTL policies \u2014 none of which can be abstracted into a repeatable Claude prompt and a Stripe payment link. Even if one attempted a 'diagnostic report' product (Claude analyzes architecture docs and outputs recommendations), the output would need expert validation to be credible to the buyer, and buyers at this scale procure solutions from established vendors (Temporal, Confluent, AWS consultants) or hire senior engineers. Lead reachability is also difficult: these buyers are not on public high-intent lists and would require warm introductions or conference presence to reach. For a solo non-technical operator using this factory, this opportunity is not buildable or maintainable \u2014 do not pursue.",
+  "notes": "Fails min_total_to_validate threshold (4.6 < 5.5). Build gates would also block: operational_autonomy=2 < 7 floor, buildability_with_ai=2 < 6 floor, buyer_clarity=6 meets floor but is borderline. The problem demands bespoke expert consulting, not an autonomous product.",
+  "scored_at": "2026-10-08T12:43:53+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M4DE94D2B4TMD8QGTFX7590D",
+  "discovered_at": "2026-10-08T12:42:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1199985/kubernetes-pods-healthy-but-distributed-workflow-state-diverges-during-cross-reg",
+    "snippet": "We operate a multi-region AI workflow orchestration platform running on Kubernetes across three AWS regions: us-east-1 eu-west-1 ap-southeast-1. Architecture overview: Kubernetes clusters in each region, Apache Kafka for workflow events, gRPC for service-to-service communication, Redis for transient workflow state, PostgreSQL with a single write primary and regional read replicas. Approximately 400 microservices handling workflow execution. Under normal load (~15,000 concurrent workflows), the system b..."
+  },
+  "problem_statement": "Multi-region AI workflow orchestration platforms experience distributed state divergence under high concurrency when using Kafka + Redis + Postgres across regions, with pods appearing healthy but workflow execution producing inconsistent results.",
+  "target_segment": "Platform/infrastructure engineers at mid-to-large companies running multi-region Kubernetes-based workflow orchestration at scale (10k+ concurrent workflows)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "kubernetes",
+    "distributed-systems",
+    "kafka",
+    "multi-region",
+    "workflow-orchestration",
+    "state-management",
+    "consistency",
+    "aws",
+    "redis",
+    "grpc"
+  ],
+  "notes": "Company context is clear \u2014 400 microservices, 15k concurrent workflows, multi-region AWS. Real operational cost: state divergence in production AI workflows means incorrect automation outcomes. Buyer is an engineering team at a company with significant AWS spend. Single signal here, but the problem class (distributed state consistency in multi-region event-driven systems) recurs frequently in infrastructure communities. No explicit 'I'd pay' but the scale and professional context imply meaningful budget.",
+  "status": "candidate"
+}

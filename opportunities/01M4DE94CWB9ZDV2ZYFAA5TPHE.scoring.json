@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4DE94CWB9ZDV2ZYFAA5TPHE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [],
+  "total": 5.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a Salesforce developer or ISV DevOps engineer \u2014 a real, nameable professional who pays for tooling \u2014 and the pain is genuine and recurring: org-specific metadata IDs breaking multi-org CI/CD deployments is a well-understood class of problem in the Salesforce ecosystem. However, the solution requires deep Salesforce-specific tooling knowledge (SFDX, metadata API, Salesforce DX package versioning) to build reliably, and delivery would almost certainly require custom logic tailored per customer's pipeline configuration, pulling operational_autonomy well below the build gate floor. Willingness to pay is plausible but only at the boundary (Salesforce DevOps tooling exists commercially, e.g. Gearset, Copado), meaning we'd be entering a crowded, specialized niche without a clear autonomy advantage. Weighted total of 5.0 falls below the 5.5 validate threshold.",
+  "solution_plan": "A Salesforce CI/CD metadata sanitization micro-service is plausible in concept: a Claude-powered tool that scans retrieved flow metadata for org-specific ID patterns and rewrites them to environment-variable references or symbolic names before commit. However, building this correctly requires deep knowledge of Salesforce metadata schemas, org-specific ID formats, and SFDX pipeline conventions that go well beyond Claude prompts and a simple web page \u2014 integration with customers' version control systems and CI pipelines would be required. Selling to Salesforce ISV teams is achievable in principle (communities like Salesforce Stack Exchange, Trailblazer Community, and LinkedIn ISV groups exist), but the sales cycle would likely require demos and scoped onboarding conversations, not pure self-serve. Support and edge-case debugging would demand ongoing human judgement given the diversity of customer pipeline configurations. For a solo non-technical operator, this would not be independently buildable or maintainable in its current form \u2014 it needs a Salesforce platform specialist on the build and support side.",
+  "notes": "Fails min_total_to_validate threshold (5.0 < 5.5). Even if threshold were met, build_gates would block promotion: operational_autonomy=4 < 7 floor, buildability_with_ai=4 < 6 floor. The problem is real but the solution complexity and per-customer variability make autonomous delivery implausible.",
+  "scored_at": "2026-10-08T12:43:53+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

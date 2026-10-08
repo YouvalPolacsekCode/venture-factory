@@ -1,0 +1,26 @@
+{
+  "id": "01M4DE94CWB9ZDV2ZYFAA5TPHE",
+  "discovered_at": "2026-10-08T12:42:29+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439910/how-to-avoid-hardcoding-send-email-message-marketing-cloud-next-metadata",
+    "snippet": "I have an Automation Event-Triggered Flow that contains a Send Email Message element that sends a Marketing Cloud Next email. In this element, I set From Name and Address using a dropdown. When I retrieve this flow's metadata in my repo, the value of this setting becomes a hardcoded SenderId. This value is org-specific which means that it cannot be used when we deploy to other orgs. My first workaround was to have a Create Record element that gets this senderId and then I assign it to a variable..."
+  },
+  "problem_statement": "Salesforce Marketing Cloud Next flows produce org-specific hardcoded metadata (e.g. SenderId) that breaks CI/CD deployments to other orgs, forcing developers into brittle manual workarounds.",
+  "target_segment": "Salesforce developers and admins at companies shipping managed packages or maintaining multi-org CI/CD pipelines",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "ci-cd",
+    "metadata",
+    "devops",
+    "managed-package",
+    "deployment",
+    "org-specific",
+    "hardcoding"
+  ],
+  "notes": "Professional dev context \u2014 someone building and deploying managed packages commercially. Recurring pain in Salesforce DevOps: org-specific IDs leaking into source-controlled metadata is a well-known class of problem. Single question here but pattern is widespread in the Salesforce ISV/DevOps community. Buyer is a Salesforce developer or ISV team that pays for Salesforce licenses and DevOps tooling.",
+  "status": "candidate"
+}

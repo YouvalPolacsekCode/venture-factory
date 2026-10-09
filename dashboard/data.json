@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-10-08T09:43:57+00:00",
-    "idt": "2026-10-08T12:43:57+03:00"
+    "utc": "2026-10-09T09:49:18+00:00",
+    "idt": "2026-10-09T12:49:18+03:00"
   },
   "funnel": {
-    "candidates": 368,
-    "scored": 368,
+    "candidates": 369,
+    "scored": 369,
     "validated": 42,
     "build_decisions": {
       "defer_1_week": 38,
@@ -747,14 +747,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.186,
-    "last_7_days_usd": 1.1474,
-    "all_time_usd": 29.58,
+    "today_usd": 0.161,
+    "last_7_days_usd": 0.9901,
+    "all_time_usd": 29.741,
     "by_day": [
-      {
-        "date": "2026-10-02",
-        "usd": 0.3183
-      },
       {
         "date": "2026-10-03",
         "usd": 0.0862
@@ -778,67 +774,32 @@
       {
         "date": "2026-10-08",
         "usd": 0.186
+      },
+      {
+        "date": "2026-10-09",
+        "usd": 0.161
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6128
+        "usd": 0.611
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.2072
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.1509
+        "usd": 0.2093
       },
       {
         "agent": "pain_validation",
-        "usd": 0.1433
+        "usd": 0.1367
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0331
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-02",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-03",
       "agents": {
@@ -1048,12 +1009,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-10-09",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-10-08.md",
-    "date": "2026-10-08",
-    "text": "# Daily Summary — 2026-10-08 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 368 |\n| Opportunities validated past threshold | 95 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments in build, live, scaling, or winding-down stages at this time.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for new B2B pain signals across monitored sources.\n2. `pain_validation` probes top 10 scoring opportunities from today's candidate pool.\n3. `opportunity_scoring` re-ranks candidates as new validation verdicts arrive.\n4. `build_decisions` reviews highest-scoring candidates for experiment viability.\n5. `cost_gain` computes running cost/gain ratio for the week.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-10-09.md",
+    "date": "2026-10-09",
+    "text": "# Daily Summary — 2026-10-09 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 369 |\n| Opportunities validated past threshold | 96 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments running. Factory is in discovery mode.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for B2B pain signals across configured sources.\n2. `opportunity_scoring` processes new candidate opportunities discovered today.\n3. `pain_validation` validates high-scoring candidates against operator thresholds.\n4. `lead_research` collects contact details for validated opportunities (when triggered).\n5. `cost_gain` computes baseline metrics for upcoming experiment cohorts.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

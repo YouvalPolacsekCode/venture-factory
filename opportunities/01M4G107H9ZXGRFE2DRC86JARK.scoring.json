@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4G107H9ZXGRFE2DRC86JARK",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is real and specific \u2014 SFMC admins and marketing-ops leads at mid-to-large companies who already pay enterprise-tier Salesforce fees, so budget is not the obstacle. However, the core delivery mechanism (server-side HTML interception or an SFMC AppExchange integration) requires significant platform-specific engineering work \u2014 SFMC's API surface, AppExchange certification, and sandbox testing are not achievable with Claude prompts plus a landing page and Stripe link, which is why buildability and operational autonomy score low. The deciding factor is the build complexity: a legitimate, reliable solution here is an integration product, not a lightweight micro-service, and that is beyond what this factory can ship and run autonomously for per-customer delivery.",
+  "solution_plan": "The micro-service would be an HTML email pre-processor: a operator pastes their raw HTML email into a web form, the service auto-injects the SFMC tracking pixel into the correct location, and returns clean copy-paste-ready HTML. BUILD: the factory creates a simple web form (landing page + Claude prompt that parses HTML and injects the tracking snippet at the right location + Stripe payment link for a one-time or monthly subscription); no coding by the operator. SELL: reach SFMC admins via the Salesforce Stack Exchange community, SFMC Slack groups (e.g. #sfmc-help), and LinkedIn searches for 'SFMC admin' or 'marketing cloud specialist'; outreach goes out only after operator approval. MAINTAIN: form submissions are processed by Claude automatically and results emailed back; billing runs via Stripe; the operator's only recurring touch is approving outreach batches. IMPORTANT CAVEAT: this 'paste and get fixed HTML back' version is viable as a lightweight tool, but it does NOT solve the root problem (preventing humans from forgetting the step) \u2014 it just makes the manual step slightly easier. A real solution requires SFMC API integration or AppExchange certification, which this factory cannot build. Validate first whether buyers would pay for the simplified version before investing further.",
+  "notes": "build_gates not met: buildability_with_ai=4 (below floor of 6) and operational_autonomy=4 (below floor of 7). The lightweight 'paste-fixer' variant is buildable but likely insufficient to command real willingness-to-pay since it does not eliminate the human error risk \u2014 it just reduces friction. Validate whether SFMC admins would pay $29-99/mo for a paste-and-fix tool versus needing a true API-integrated solution.",
+  "scored_at": "2026-10-09T12:49:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

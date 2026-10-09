@@ -1,0 +1,27 @@
+{
+  "id": "01M4G107H9ZXGRFE2DRC86JARK",
+  "discovered_at": "2026-10-09T12:48:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439911/html-paste-email-automatically-add-tracking-code",
+    "snippet": "We are creating custom templates using a WYSIWYG editor. We find it easier then SFMC content builder. The challenge is adding in tracking code to the emails. I'm worried users will forget to paste in the tracking pixel. I cant add into my WYSIWYG editor - does anyone has any suggestions or is it just impossible to add the tracking code in when an email is fully paste HTML?"
+  },
+  "problem_statement": "Marketing teams using custom WYSIWYG editors with Salesforce Marketing Cloud cannot reliably enforce tracking pixel injection into HTML emails, causing analysts to lose open/click attribution data when senders forget to paste the snippet manually.",
+  "target_segment": "Email marketing ops teams and SFMC admins at mid-to-large companies using custom HTML email workflows outside of native SFMC Content Builder.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "email-tracking",
+    "tracking-pixel",
+    "html-email",
+    "marketing-ops",
+    "sfmc",
+    "email-automation",
+    "attribution",
+    "martech"
+  ],
+  "notes": "Buyer context is strong: SFMC is an enterprise paid platform, the poster is managing a team workflow (implying an ops/admin role at a company), and the pain is a recurring process risk (lost attribution on every send). The ask is for a tool or integration that auto-injects tracking code into paste-HTML emails. Existing workarounds are manual and error-prone. A lightweight middleware or SFMC app-exchange add-on that intercepts paste-HTML and appends tracking pixels server-side could solve this. Single signal; needs validation across SFMC community/forums.",
+  "status": "candidate"
+}

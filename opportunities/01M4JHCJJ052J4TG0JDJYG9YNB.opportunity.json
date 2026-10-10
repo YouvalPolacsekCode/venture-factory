@@ -1,0 +1,26 @@
+{
+  "id": "01M4JHCJJ052J4TG0JDJYG9YNB",
+  "discovered_at": "2026-10-10T12:13:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439912/any-workarounds-for-packaging-or-testing-agents-in-namespaced-orgs",
+    "snippet": "AFAIK, despite the agentic push, we just plain cannot use or package Agents using Agent Scripts since Summer '26. Really? I cannot even test our namespaced Agent Actions anymore whether it's a namespaced org or even just packaging those, deploying to non-namespaced org and creating agent there. Same issue. This Known Issue is why. The workaround is stupid and plain doesn't work."
+  },
+  "problem_statement": "Salesforce ISV developers building managed packages cannot package, deploy, or test Agentforce Agent Actions in namespaced orgs since Summer '26, blocking their ability to ship AI-enabled products to AppExchange customers.",
+  "target_segment": "Salesforce ISV developers and AppExchange partners building managed packages with Agentforce / AI agent features",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "agentforce",
+    "managed-package",
+    "namespace",
+    "isv",
+    "appexchange",
+    "ai-agents",
+    "developer-tools",
+    "salesforce-dx"
+  ],
+  "notes": "Clear business blocker for paid ISV products \u2014 AppExchange partners pay Salesforce for partner licenses and earn revenue from managed packages. The frustration is about inability to ship a product, not a hobbyist concern. Potential opportunity: tooling, consultancy, or workaround automation that bridges the packaging gap while Salesforce fixes the known issue. Single post but high commercial stakes per affected party.",
+  "status": "candidate"
+}

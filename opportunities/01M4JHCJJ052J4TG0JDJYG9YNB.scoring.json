@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M4JHCJJ052J4TG0JDJYG9YNB",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any viable solution \u2014 whether a workaround guide, a consulting engagement, or a deployment automation script \u2014 requires per-customer human judgment to assess the specific org configuration, namespace structure, and Salesforce DX setup. There is no one-size-fits-all automated delivery here."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Salesforce ISV clients expect scoping calls, onboarding discussions, and live troubleshooting \u2014 especially given the complexity of Salesforce packaging environments. A pure async self-serve product is implausible in this ecosystem."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and commercially severe \u2014 blocked AppExchange revenue directly affects ISV livelihoods \u2014 and the buyer (Salesforce AppExchange partner with a developer license) is a named business role with clear budget authority. However, the nature of the problem makes automation-first delivery essentially impossible: diagnosing and working around Salesforce namespace packaging bugs requires hands-on access to specific org configurations, and every engagement would demand a sales/scoping call and custom per-customer work. Operational_autonomy scores 3 and buildability_with_ai scores 4, both well below their build_gate floors, and the heavy human-fulfillment and synchronous penalties drop the total to 3.5. This is a legitimate consulting opportunity, not a factory-compatible product.",
+  "solution_plan": "The underlying opportunity is real: Salesforce ISV developers are blocked from shipping AI features and are actively searching for a fix. A consulting or 'done-for-you' workaround service could charge $500-2000 per engagement to audit a partner's namespace configuration and implement whatever manual bypass Salesforce's known-issue status allows. The factory could draft an outreach email to AppExchange partners (found via Salesforce AppExchange directory or LinkedIn) and a landing page describing the service \u2014 Youval approves the send. BUT: every delivery requires Youval (or a hired Salesforce developer) to do real hands-on Salesforce DX work per client. This is not a product the factory can run autonomously; it is a freelance consultancy that the factory can help market. A non-technical solo operator cannot fulfil this without a Salesforce expert, so the honest recommendation is to drop unless Youval has or can hire that expertise \u2014 and even then, it is time-bounded to the period before Salesforce patches the known issue.",
+  "notes": "operational_autonomy (3) and buildability_with_ai (4) both fail their build_gate floors (7 and 6 respectively). requires_human_fulfillment and requires_synchronous_human penalties applied. The opportunity is real but fundamentally a high-touch consulting play, incompatible with the factory's autonomy requirements. Also time-limited: Salesforce will likely patch this within 1-3 release cycles.",
+  "scored_at": "2026-10-10T12:13:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

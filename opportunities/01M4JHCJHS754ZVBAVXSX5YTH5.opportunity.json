@@ -1,0 +1,26 @@
+{
+  "id": "01M4JHCJHS754ZVBAVXSX5YTH5",
+  "discovered_at": "2026-10-10T12:13:00+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95677/web-push-notifications-server",
+    "snippet": "I've a few services that currently use a chat service and a cli client to generically send notifications from various apps. I'd like something similar without being tied to a chat client. Something self hosted I need to be able to run this behind nginx as a proxy... I can do docker if need be."
+  },
+  "problem_statement": "Self-hosting operators and small dev teams need a self-hosted web push notification server that decouples app notifications from third-party chat clients, runs behind a reverse proxy, and supports standard browser push APIs without vendor lock-in.",
+  "target_segment": "Independent developers, small SaaS operators, and self-hosters running multiple web services who want to own their notification infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "push-notifications",
+    "self-hosted",
+    "web-push",
+    "notifications",
+    "nginx",
+    "docker",
+    "developer-tools",
+    "infrastructure",
+    "open-source"
+  ],
+  "notes": "Single clear signal but from a technical operator with real infrastructure (multiple services, nginx, docker comfort). Existing paid options (OneSignal, Knock, Novu cloud) suggest willingness to pay for a managed self-hosted or SaaS alternative. Pain is operational dependency on a chat client for notifications. Moderate signal strength \u2014 one post, no explicit WTP stated, but professional context is clear.",
+  "status": "candidate"
+}

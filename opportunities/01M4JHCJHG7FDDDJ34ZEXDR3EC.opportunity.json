@@ -1,0 +1,25 @@
+{
+  "id": "01M4JHCJHG7FDDDJ34ZEXDR3EC",
+  "discovered_at": "2026-10-10T12:13:00+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50022196",
+    "snippet": "it was nice while it lasted. I guess my next step is a jev+cron to sort good from bad. Browser automation here we come. Someone want to write a Firefox extension that runs in your open browser tab? I would pay for this."
+  },
+  "problem_statement": "Developers and knowledge workers are drowning in AI-generated recruiter emails that look personalized but are not, and existing email clients provide no automated way to score or filter them; users are resorting to DIY cron jobs and browser automation.",
+  "target_segment": "Software engineers and tech professionals receiving high recruiter email volume, especially those actively managing inboxes on Gmail or Outlook",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "recruiter-email",
+    "email-filtering",
+    "inbox-management",
+    "browser-extension",
+    "ai-spam",
+    "job-search",
+    "developer-tools",
+    "automation"
+  ],
+  "notes": "Explicit 'I would pay for this' from the poster. DIY workaround (cron + browser automation) confirms real friction. Adjacent to existing tools like SaneBox but focused specifically on AI-generated recruiter spam classification. Buyer: employed/job-hunting developer willing to pay for a browser extension or email plugin.",
+  "status": "candidate"
+}

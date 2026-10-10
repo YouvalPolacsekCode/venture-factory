@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M4JHCJHG7FDDDJ34ZEXDR3EC",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Individual developers paying ~$5-10/mo for a browser extension or email plugin requires hundreds to thousands of paying users to generate meaningful revenue; the business model structurally depends on consumer-scale volume."
+    }
+  ],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is an individual software engineer \u2014 a consumer, not a business with a budget line \u2014 and one explicit 'I would pay' from a single HN commenter is a weak commercial signal at scale. While the pain is real and recurring (daily inbox noise), the tool would need hundreds of paying solo users to matter economically, and buyer_clarity is below the build_gate floor of 6. The space is crowded with free Gmail filters, SaneBox, and native Outlook rules, making willingness-to-pay hard to extract above $5-10/mo without a clear differentiation moat.",
+  "solution_plan": "The micro-service would be a browser extension or Gmail add-on that uses a Claude prompt to classify and score incoming recruiter emails (real vs. AI-generated spray-and-pray) and auto-labels or archives low-score ones. The factory builds it by writing the classification prompt, generating a Chrome Manifest V3 extension scaffold, and setting up a Stripe payment link for a $7/mo subscription \u2014 no coding by Youval. To sell, the factory would draft cold posts for HN 'Show HN', r/cscareerquestions, and targeted Twitter/X threads; outreach goes out only after Youval approves each batch. Delivery is fully automated once installed; support is handled by Claude responding to a support email alias. The hard reality: acquiring enough individual-developer subscribers to clear even $1k MRR requires a viral or SEO distribution engine that a solo operator without a public profile will struggle to build \u2014 this is a consumer app problem, not a B2B tool problem, so consider dropping unless a specific niche (e.g., Hebrew-speaking Israeli tech workers) can be targeted more precisely.",
+  "notes": "buyer_clarity (5) is below the build_gate floor of 6. b2c_at_scale_needed penalty applied. The 'I would pay' signal is genuine but isolated; no evidence of a reachable cohort willing to pay at SaaS prices.",
+  "scored_at": "2026-10-10T12:13:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

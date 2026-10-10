@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4JHCJHS754ZVBAVXSX5YTH5",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The core product is a self-hosted web push server \u2014 fundamentally an infrastructure component that must be installed, configured, and maintained by the buyer on their own servers. This is not buildable as a Claude prompt plus a landing page: it requires a real server daemon implementing the Web Push Protocol (RFC 8030), VAPID key management, and a persistent queue \u2014 well beyond what the factory's standard tooling can assemble in a week. Operational autonomy is also limited because the 'self-hosted' premise means the operator's value is in the software artifact itself, not a managed service, so ongoing delivery and support require real engineering. The buyer (indie devs, self-hosters) is nameable but has a strong preference for free/open-source solutions (Ntfy, Gotify, ntfy.sh all exist free), depressing willingness-to-pay.",
+  "solution_plan": "A managed SaaS spin on this could be a hosted web-push relay: the factory sets up a simple API endpoint (using a Claude-generated integration against an existing library like web-push for Node), a landing page, and a Stripe payment link for a $19/mo plan covering up to 10k push messages. Build involves configuring a cloud function, not writing the push protocol from scratch \u2014 but this still requires deploying real infrastructure (a server, a database for subscriptions), which a non-technical solo operator cannot do without a developer. Realistically, this is not a good fit for the factory's current tooling: the self-hosted segment wants open-source, and a managed SaaS competes against well-funded players (OneSignal free tier, Knock). Drop unless a very narrow niche (e.g., Israeli SaaS teams that want GDPR-local EU hosting) emerges with stronger WTP evidence.",
+  "notes": "buildability_with_ai (3) is below the build_gate floor of 6. operational_autonomy (5) is below the floor of 7. Both build_gates fail. The product category requires real infrastructure engineering beyond the factory's standard tooling.",
+  "scored_at": "2026-10-10T12:13:49+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

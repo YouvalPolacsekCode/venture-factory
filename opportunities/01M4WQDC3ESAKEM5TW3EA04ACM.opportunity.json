@@ -1,0 +1,27 @@
+{
+  "id": "01M4WQDC3ESAKEM5TW3EA04ACM",
+  "discovered_at": "2026-10-14T11:10:42+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439919/how-to-handle-gdpr-ccpa-right-to-be-forgotten-requests-and-meanwhile-keep-a-usable",
+    "snippet": "Our clients regularly get RTBF requests under GDPR and CCPA. At the same time we still need to be able to show what was deleted, when it was deleted, who approved it, and sometimes retain non-personal transaction history for legal reasons. A recent example: a person submitted an erasure request. The customer deleted the Contact and related Cases in production and confirmed the records left the Recycle Bin. A few months later the same person raised a billing dispute. By then the field history and [audit trail was gone]."
+  },
+  "problem_statement": "Businesses processing GDPR/CCPA right-to-be-forgotten requests in Salesforce lose the ability to maintain a legally defensible, anonymized audit trail after records are deleted, exposing them to compliance and litigation risk when disputes arise post-erasure.",
+  "target_segment": "Salesforce admins and compliance officers at B2C SaaS and e-commerce companies subject to GDPR and CCPA obligations, typically 50-500 employees.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "gdpr",
+    "ccpa",
+    "compliance",
+    "audit-trail",
+    "salesforce",
+    "data-erasure",
+    "right-to-be-forgotten",
+    "privacy",
+    "legal-risk",
+    "crm"
+  ],
+  "notes": "Business context is clear: company processes client erasure requests regularly, faces real legal exposure (billing dispute after deletion). This is a recurring operational pain with direct financial and regulatory consequences. Compliance tooling commands premium pricing. Buyer: Salesforce admin or VP of Compliance at a regulated B2C company. Willingness to pay implied by legal/compliance stakes.",
+  "status": "candidate"
+}

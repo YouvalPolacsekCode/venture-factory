@@ -1,0 +1,24 @@
+{
+  "id": "01M4WQDC2YEZWEWW38JA4PJAJS",
+  "discovered_at": "2026-10-14T11:10:42+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50077048",
+    "snippet": "I want this so badly. If Anthropic released this I would start using it on day one. If they launched a GitHub competitor built around it I would pay for it on day one."
+  },
+  "problem_statement": "Developers want source control tooling natively integrated with AI-assisted coding workflows; existing Git/GitHub paradigms were not designed for AI-generated diffs, multi-agent commits, or prompt-driven branching, leaving a gap that practitioners are actively willing to pay to fill.",
+  "target_segment": "Software engineers and engineering teams using AI coding assistants daily who find Git workflows mismatched to AI-generated code patterns.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "source-control",
+    "ai-coding",
+    "developer-tools",
+    "version-control",
+    "github-alternative",
+    "ai-workflow",
+    "code-review"
+  ],
+  "notes": "Explicit 'I would pay for it on day one' from an HN commenter on a post about Anthropic redesigning source control. Single signal but unusually direct buyer intent. Watch for corroborating signals from r/programming or dev.to. Buyer: individual software engineer with purchasing autonomy for SaaS tools.",
+  "status": "candidate"
+}

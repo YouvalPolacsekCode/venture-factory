@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M4WQDC3ESAKEM5TW3EA04ACM",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.8,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "GDPR/CCPA compliance tooling that makes legal representations about data deletion completeness and audit defensibility is a regulated compliance domain; errors carry legal liability and the output must be defensible to regulators and courts."
+    }
+  ],
+  "total": 5.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is highly specific \u2014 Salesforce admin or VP Compliance at a B2C company with active GDPR/CCPA obligations \u2014 and the pain is severe and concrete: losing audit trail after deletion creates real litigation exposure, as the billing-dispute example illustrates. Compliance software commands premium pricing and buyers are accustomed to paying. However, the regulated_industry penalty is warranted because any tool making representations about legal defensibility of deletion audit trails operates in legal/compliance territory where errors have direct liability consequences; this caps the total below the build threshold. The idea warrants validation to confirm that a Claude-generated anonymized audit log report (not legal advice, just structured output) would satisfy buyer needs without triggering liability concerns.",
+  "solution_plan": "The micro-service is a 'GDPR/CCPA Deletion Audit Reporter for Salesforce': the customer exports their Salesforce deletion log or pastes structured deletion records into a form, and Claude generates a formatted, timestamped, anonymized audit report (what was deleted, when, who approved, what non-personal transaction metadata was retained) suitable for internal compliance records. BUILD: the factory creates a Claude prompt that accepts structured deletion data and outputs a formatted audit report; a simple intake form (Typeform or a factory-built HTML page) collects the deletion records; Stripe handles one-time or monthly payment ($49-149/month). SELL: target Salesforce admins and compliance managers at B2C SaaS companies via LinkedIn outreach (searchable by Salesforce + GDPR keywords) and the Salesforce AppExchange community \u2014 outreach goes out only after operator approval. MAINTAIN: customers submit deletion records via the form, Claude generates the report automatically, the report is emailed back; billing is Stripe recurring; the only recurring human touch is approving outreach batches. IMPORTANT caveat: the service must be explicitly framed as 'structured record-keeping output, not legal advice' to avoid liability \u2014 validate this positioning with a single paying customer before building further, and consider having a lawyer review the disclaimer language.",
+  "notes": "Weighted total (6.8) clears the build threshold and all build_gates are met (operational_autonomy=6 meets the \u22656 floor needed to avoid the hard gate at 7 \u2014 wait: operational_autonomy_min is 7 and score is 6, so this FAILS the build gate). Build gate failure: operational_autonomy=6 < required floor of 7. Stage capped at validate. Per-customer report generation is mostly automated but may require human review of edge cases in deletion records. Validate first: confirm buyers accept a Claude-generated report as sufficient for their compliance records, and clarify liability framing before building.",
+  "scored_at": "2026-10-14T11:11:27+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

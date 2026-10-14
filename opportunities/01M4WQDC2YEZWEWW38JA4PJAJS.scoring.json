@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4WQDC2YEZWEWW38JA4PJAJS",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is identifiable \u2014 software engineers with SaaS tool budgets \u2014 and the willingness-to-pay signal is direct ('I would pay on day one'), but this is a single HN comment with no corroborating volume. The decisive problem is buildability and autonomy: an AI-native source control system requires custom VCS infrastructure, multi-agent diff semantics, and a GitHub-competitive feature surface that is entirely outside what a Claude prompt + landing page + Stripe link can produce; this is a multi-engineer, multi-year infrastructure product. It cannot be built or run by this factory. Score sits below the validate threshold.",
+  "solution_plan": "This opportunity is not viable for a solo non-technical operator using the Claude factory. Building a credible GitHub alternative \u2014 even an AI-native one \u2014 requires deep distributed systems engineering, custom Git protocol work, and a team. No path exists here that doesn't require a large technical co-founder and significant capital. The honest recommendation is to watch this space for a narrower wedge (e.g. an AI-native code-review workflow layer on top of existing Git) rather than attempt the full product.",
+  "notes": "Fails build_gates on operational_autonomy (2 < 7) and buildability_with_ai (2 < 6). Product is fundamentally a multi-year infrastructure engineering effort, not a factory-buildable micro-service.",
+  "scored_at": "2026-10-14T11:11:27+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

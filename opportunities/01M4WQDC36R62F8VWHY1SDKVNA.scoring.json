@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M4WQDC36R62F8VWHY1SDKVNA",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Generating accurate API regression tests from real traffic requires per-customer environment access, traffic recording setup, and review cycles; this cannot be fully automated hands-off from the factory without significant per-customer manual configuration work."
+    }
+  ],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a specific, named engineering team with tooling budget and explicit pain ('takes too much time', mocks 'drift from real behaviour'), and existing paid competitors (Keploy, Speedscale) confirm willingness to pay at real prices. The problem is autonomous delivery: capturing real HTTP traffic, generating semantically correct test assertions, and creating accurate mocks for Postgres/Redis/third-party APIs requires access to each customer's live infrastructure, per-customer configuration, and technical review \u2014 none of which can be handled hands-off by Claude + a form + Stripe. This is a strong B2B pain but requires a software product with an agent that installs into the customer's Docker/CI environment, which is beyond factory-buildable scope.",
+  "solution_plan": "This opportunity is not viable as a fully autonomous factory micro-service. The core value \u2014 recording real traffic and auto-generating tests + mocks \u2014 requires a network proxy/agent that runs inside each customer's infrastructure (Docker network, CI pipeline), which is custom software requiring engineering. A solo non-technical operator cannot build or support this without a technical co-founder. A narrower adjacent wedge worth exploring: a 'mock configuration reviewer' where the operator pastes their OpenAPI spec and gets a Claude-generated Postman collection / mock scaffold \u2014 that IS factory-buildable, though it addresses a smaller slice of the pain and faces strong free-tool competition.",
+  "notes": "Fails build_gates on operational_autonomy (3 < 7) and buildability_with_ai (4 < 6). The core product requires infrastructure software (a traffic-recording proxy agent) that cannot be built with Claude prompts + a landing page.",
+  "scored_at": "2026-10-14T11:11:27+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

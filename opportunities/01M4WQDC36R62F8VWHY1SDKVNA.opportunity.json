@@ -1,0 +1,27 @@
+{
+  "id": "01M4WQDC36R62F8VWHY1SDKVNA",
+  "discovered_at": "2026-10-14T11:10:42+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95686/open-source-tool-to-auto-generate-api-regression-tests-from-real-traffic-linux",
+    "snippet": "I maintain a set of REST microservices (Go and Node.js, running in Docker on Linux) and our API regression suite is mostly hand-written Postman collections. Keeping them updated as endpoints takes too much time, and our mocks for downstream services (Postgres, Redis, a couple of third-party APIs) drift from real behaviour. I'm looking for a tool that can: Generate API test cases automatically, ideally by recording real requests/responses rather than me writing each assertion. Create mocks/stubs..."
+  },
+  "problem_statement": "Engineering teams maintaining REST microservices spend excessive time hand-writing and updating API regression tests and mocks; as endpoints evolve, hand-crafted Postman collections drift from real service behavior, causing test gaps and wasted developer hours.",
+  "target_segment": "Backend engineers and DevOps teams at small-to-mid-size SaaS companies running microservice architectures on Linux/Docker with CI pipelines.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "api-testing",
+    "regression-testing",
+    "test-automation",
+    "microservices",
+    "mock-generation",
+    "postman",
+    "ci-cd",
+    "developer-tools",
+    "go",
+    "nodejs"
+  ],
+  "notes": "Poster is in a clear business/work context (maintaining production microservices, Docker, CI). Pain is explicit: 'takes too much time', mocks 'drift from real behaviour'. Tool-seeking behavior with detailed requirements suggests active evaluation and budget readiness. Existing paid competitors (Keploy, Speedscale, Hoverfly) confirm market exists. Buyer: engineering team with tooling budget.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M4Z8MRMEA7NTDE8VFDW7JTVQ",
+  "discovered_at": "2026-10-15T10:50:19+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50085840",
+    "snippet": "Show HN: Guitoro, a virtual guitar you strum with your keyboard. Comment: 'I would pay for this in a VST form'"
+  },
+  "problem_statement": "Musicians and music producers lack an affordable, keyboard-driven virtual guitar VST instrument that feels natural to play without a physical guitar, creating a gap between hobbyist web demos and professional DAW-ready plugins.",
+  "target_segment": "Music producers, bedroom beatmakers, and composers who use DAWs (Ableton, Logic, FL Studio) but do not play guitar",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "vst-plugin",
+    "virtual-instrument",
+    "music-production",
+    "daw",
+    "guitar-simulation",
+    "audio-software",
+    "midi"
+  ],
+  "notes": "Explicit willingness-to-pay: commenter stated 'I would pay for this in a VST form.' VST plugin market has established paid distribution channels (e.g., Plugin Boutique). Solo signal but direct buyer intent expressed.",
+  "status": "candidate"
+}

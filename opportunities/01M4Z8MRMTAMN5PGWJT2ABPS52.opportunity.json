@@ -1,0 +1,25 @@
+{
+  "id": "01M4Z8MRMTAMN5PGWJT2ABPS52",
+  "discovered_at": "2026-10-15T10:50:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439923/data-cloud-sftp-ingestion-fails-with-invalid-column-name-special-characters-a",
+    "snippet": "Salesforce Data Cloud SFTP ingestion fails with INVALID_COLUMN_NAME errors caused by UTF-8 BOM and Windows-1252 encoding artifacts in CSV first column. Business environment context. Captured 2026-10-15."
+  },
+  "problem_statement": "Data engineers using Salesforce Data Cloud's SFTP ingestion pipelines frequently encounter ingestion failures caused by invisible encoding artifacts (UTF-8 BOM, Windows-1252 characters) in CSV files, with no automated pre-flight validation or remediation tooling provided by the platform.",
+  "target_segment": "Salesforce Data Cloud administrators and data engineers at mid-market to enterprise companies running SFTP-based data pipelines",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce-data-cloud",
+    "sftp-ingestion",
+    "csv-encoding",
+    "utf8-bom",
+    "data-pipeline",
+    "data-quality",
+    "etl",
+    "salesforce"
+  ],
+  "notes": "Buyer signal: explicit business environment context. Companies paying for Salesforce Data Cloud (enterprise pricing) are losing engineering time to encoding bugs. A pre-flight CSV sanitizer or SFTP middleware that auto-detects/fixes BOM and encoding issues could be sold as a connector or managed service.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4Z8MRM77GZWBJZTRDD6P77K",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [],
+  "total": 5.1,
+  "recommended_stage": "drop",
+  "rationale": "SEO professionals actively paying for Ahrefs/SEMrush ($100\u2013$400/mo) confirm willingness to pay, and the buyer is reasonably specific (SEO managers, agency owners). However, this is an extremely crowded market \u2014 SERPSpur, Ubersuggest, Mangools, and dozens of others already compete on price, meaning buildability and defensibility are both near-zero for a solo operator: the core product requires real-time SERP crawling infrastructure, large keyword databases, and backlink data that cannot be assembled from Claude prompts and a Stripe link. Operational autonomy is also very low because keeping data fresh demands continuous crawling infrastructure, not a Claude workflow.",
+  "solution_plan": "This opportunity should be dropped. The underlying product (SEO keyword/rank tracking) requires proprietary crawl infrastructure and live data pipelines that are far beyond what a Claude factory can build or maintain. Even the cheapest entrants in this market (Mangools, Ubersuggest) spent years building their data layers. A solo non-technical operator cannot realistically build, sell, or maintain a credible SEO tool here \u2014 attempting to do so would produce an inferior product in a market that already has 10+ affordable alternatives. The signal source (one low-engagement HN post) does not justify the infrastructure investment.",
+  "notes": "Fails buildability_with_ai (3 < 6 floor) and operational_autonomy (3 < 7 floor). Market is saturated; no differentiation path available to a solo Claude-based factory.",
+  "scored_at": "2026-10-15T10:51:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

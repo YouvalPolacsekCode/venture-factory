@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M4Z8MRMM6ATSQRZRGF9Y9APA",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "US tax advice and tax calculation tooling is a regulated domain \u2014 even workflow guidance touching MACRS depreciation, IRS schedules, and business-use percentages carries legal and liability risk (unauthorized practice of law / tax advice). Requires explicit disclaimers and limits scope of what can be automated."
+    }
+  ],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 TurboTax genuinely fails multi-schedule mixed-use asset depreciation, and the user is an active taxpayer with real liability. However, this is a narrow, once-a-year pain (tax season) affecting a small niche (Turo+rental property operators), and the regulated_industry penalty applies: providing automated tax calculation guidance risks crossing into unauthorized tax practice. The buyer (solo operators with multi-schedule filings) does pay for tax software, but the audience is too small to find at scale via allowed channels, and the annual frequency severely limits LTV.",
+  "solution_plan": "This opportunity should be dropped after the penalty adjustment. While a Claude-powered guided worksheet for multi-schedule depreciation is technically feasible, the tax regulation risk makes it unviable without a CPA partnership or explicit legal structuring. The niche is also too small and too seasonal (once-a-year pain) to support a recurring revenue model, and lead reachability is low \u2014 there is no public list of 'Turo operators who also manage rental properties and use TurboTax.' Not a fit for this factory.",
+  "notes": "Regulated industry penalty applied (-1.5). Total drops below validate threshold. Even without the penalty (5.4), the once-a-year pain frequency and tiny addressable niche make this marginal. Fails on lead_reachability for a niche this specific.",
+  "scored_at": "2026-10-15T10:51:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M4Z8MRM77GZWBJZTRDD6P77K",
+  "discovered_at": "2026-10-15T10:50:19+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50099154",
+    "snippet": "Ask HN: Anyone used SERPSpur as an alternative to Ahrefs and SEMrush? 'as I see the old giants are replaced by new generation tools which seems faster and more affordable, please suggest if anyone used.' \u2014 3 points, 2 comments."
+  },
+  "problem_statement": "SEO professionals and small business owners find Ahrefs and SEMrush too expensive and slow, and are actively seeking faster, more affordable alternatives \u2014 signaling willingness to switch and pay for the right tool.",
+  "target_segment": "SEO professionals, digital marketers, and small business owners currently paying for Ahrefs/SEMrush subscriptions",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "keyword-research",
+    "serp-tracking",
+    "ahrefs-alternative",
+    "semrush-alternative",
+    "affordable-seo-tools",
+    "saas"
+  ],
+  "notes": "Buyer signal: poster is actively evaluating paid alternatives to Ahrefs/SEMrush, implying they currently pay or budget for such tools. Market is well-established with known price pain. Signal is weak (single post, low engagement) but buyer intent is clear.",
+  "status": "candidate"
+}

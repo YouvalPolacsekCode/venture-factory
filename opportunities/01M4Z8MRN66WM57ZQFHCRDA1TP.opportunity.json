@@ -1,0 +1,25 @@
+{
+  "id": "01M4Z8MRN66WM57ZQFHCRDA1TP",
+  "discovered_at": "2026-10-15T10:50:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200030/how-to-resolve-prismacloud-alert-aws-iam-groups-with-administrator-access-permi",
+    "snippet": "Business AWS team needs AdministratorAccess for core operations but PrismaCloud flags permanent IAM groups with that policy as medium-severity alerts. Team seeks a compliant architecture that satisfies the scanner without losing needed access. Captured 2026-10-14."
+  },
+  "problem_statement": "DevOps and cloud security teams in businesses using cloud security posture tools like PrismaCloud receive persistent medium/high alerts for necessary IAM admin access, but lack guided workflows to implement just-in-time or break-glass access patterns that satisfy scanners without disrupting operations.",
+  "target_segment": "DevOps engineers and cloud security teams at SMB-to-enterprise companies running AWS with compliance tooling (PrismaCloud, Wiz, etc.)",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "aws-iam",
+    "cloud-security",
+    "prismacloud",
+    "just-in-time-access",
+    "cspm",
+    "devops",
+    "compliance",
+    "aws"
+  ],
+  "notes": "Buyer signal: business environment explicitly stated; company pays for both AWS and PrismaCloud (neither is cheap). Pain is recurring compliance friction. Opportunity: a lightweight just-in-time IAM elevation service or Terraform module pattern that auto-resolves CSPM alerts while maintaining operational access.",
+  "status": "candidate"
+}

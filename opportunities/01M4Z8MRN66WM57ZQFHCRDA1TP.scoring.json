@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4Z8MRN66WM57ZQFHCRDA1TP",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a real, named business role (DevOps engineer or cloud security lead at a company already paying for AWS and PrismaCloud) with genuine recurring pain \u2014 CSPM alert noise is a compliance and audit headache that happens continuously. Willingness to pay is solid: companies already spend on tooling in this space and Terraform modules / SaaS jit-access tools like Sym, ConductorOne, and Indent charge $5\u201320k/year, so the segment clearly pays. However, the core blocker is autonomy: delivering a working just-in-time IAM elevation solution requires reading customer AWS environments, generating or reviewing Terraform configs, and validating against their specific CSPM rule set \u2014 this is per-customer, technically bespoke work that Claude cannot fully automate without meaningful integration and security review, meaning operational_autonomy (4) and buildability_with_ai (4) both fall below their build_gate floors (7 and 6 respectively). The idea validates well but cannot be built as a hands-off micro-service in its current framing.",
+  "solution_plan": "The micro-service would be a 'JIT IAM Advisor': a customer inputs their PrismaCloud alert JSON and their current IAM group/policy setup via a web form, and Claude produces a tailored, copy-paste-ready Terraform module or AWS CDK snippet implementing a break-glass/just-in-time access pattern that resolves the specific alert. BUILD: The factory builds a landing page with a file-upload/textarea intake form, a Claude prompt chain that parses the alert + IAM context and outputs the remediation template with explanations, and a Stripe payment link (one-time $49\u2013149 per remediation report). SELL: Target DevOps leads and cloud security engineers via Hacker News 'Ask HN', Reddit r/devops and r/aws, and direct outreach to companies posting CSPM-related questions on ServerFault/Stack Overflow; all outreach batches require Youval's approval before sending. MAINTAIN: Delivery is automated \u2014 the form triggers Claude, the report is emailed back; billing is Stripe self-serve; Claude handles FAQ support replies. The recurring human touch is approving outreach batches and reviewing any reports flagged as low-confidence by Claude. CAVEAT: The core problem here is that 'one-size' Terraform templates rarely fully satisfy a specific customer's CSPM configuration without iteration \u2014 if repeat revisions are needed per customer, operational autonomy breaks down and this becomes consulting. Validate first by selling 3\u20135 one-shot reports and measuring how much back-and-forth each requires before deciding whether to productize further.",
+  "notes": "Two build_gates fail: operational_autonomy=4 (below floor of 7) and buildability_with_ai=4 (below floor of 6). The solution inherently requires per-customer AWS environment context and iterative validation against the customer's specific CSPM ruleset, making fully automated, hands-off delivery difficult. Stage capped at 'validate'. Validate by selling a few one-shot paid reports to measure revision load before investing in a full product build.",
+  "scored_at": "2026-10-15T10:51:47+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

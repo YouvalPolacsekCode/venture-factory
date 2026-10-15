@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4Z8MRN0TSKQJ2KNZD0PJTY2",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "Email deliverability managers at companies with 100k+ subscriber lists on dedicated IPs are a specific, reachable B2B buyer with real spend context (dedicated IP licensing alone costs $1k+/mo on SFMC), and the pain \u2014 making IP warming decisions by guesswork against contradictory blog posts \u2014 is a genuine recurring operational risk during every new IP deployment or major list expansion. The product (a ramp calculator + monitoring dashboard) is very buildable with Claude: it's a calculation model plus a simple web interface and can run autonomously. However, responsiveness is untested and the total sits at 6.3 (below the 6.5 build threshold), making validate the right call \u2014 confirm two or three email managers would pay $49\u2013$99/mo before building.",
+  "solution_plan": "The micro-service is an IP warming ramp planner: the user inputs their list size, current send volume, bounce/complaint rates, and ESP, and gets back a day-by-day send schedule with volume ramp recommendations plus a plain-English explanation of the reasoning. BUILD: the factory builds a simple intake form, a Claude prompt that encodes IP warming best practices and deliverability math into a structured recommendation, and a Stripe link ($49\u2013$99/mo for ongoing monitoring with weekly re-recommendations as they paste in new metrics). No operator coding. SELL: target email marketing managers and deliverability engineers via LinkedIn outreach to 'email deliverability' and 'SFMC' job titles, posts in Email Geeks Slack, and answers on relevant Stack Exchange threads \u2014 all outreach batches need Youval approval before sending. MAINTAIN: users submit metrics via a form, Claude generates updated ramp recommendations and delivers them by email, billing runs via Stripe; the only recurring human touch is approving outreach batches and monitoring a weekly summary.",
+  "notes": "Total 6.3 is just below the 6.5 build gate. All build_gates are met (operational_autonomy=8, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=7). A single confirmed paid intent from an email deliverability manager would clear the build threshold. Prioritize alongside 01M4Z8MRMTAMN5PGWJT2ABPS52.",
+  "scored_at": "2026-10-15T10:51:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

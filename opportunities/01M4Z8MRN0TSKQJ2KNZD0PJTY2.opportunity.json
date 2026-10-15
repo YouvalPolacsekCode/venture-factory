@@ -1,0 +1,24 @@
+{
+  "id": "01M4Z8MRN0TSKQJ2KNZD0PJTY2",
+  "discovered_at": "2026-10-15T10:50:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439922/sfmc-ip-warming-can-we-start-with-5-000-recipients",
+    "snippet": "SFMC operator warming a new dedicated IP for ~900,000 members asks whether starting at 5,000 recipients 3x/week is safe vs. Salesforce's recommended 500/day ramp. Business context: large subscriber list, dedicated IP, marketing cloud license."
+  },
+  "problem_statement": "Email marketers running Salesforce Marketing Cloud dedicated IP warming lack a simple, data-driven ramp calculator that accounts for list size, send frequency, and deliverability signals \u2014 forcing reliance on contradictory blog posts and guesswork.",
+  "target_segment": "Email marketing managers and deliverability engineers at companies with 100k+ subscriber lists using Salesforce Marketing Cloud or other ESPs with dedicated IPs",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "ip-warming",
+    "salesforce-marketing-cloud",
+    "email-marketing",
+    "esp",
+    "saas",
+    "marketing-ops"
+  ],
+  "notes": "Buyer signal: operator manages 900k-member list on a paid SFMC dedicated IP license \u2014 significant spend context. Pain is decision uncertainty around IP warming schedules. Opportunity: a SaaS IP warming planner/monitor that reads deliverability metrics and recommends send volume adjustments.",
+  "status": "candidate"
+}

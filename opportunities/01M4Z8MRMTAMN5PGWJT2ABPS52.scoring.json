@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4Z8MRMTAMN5PGWJT2ABPS52",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.4,
+  "penalties_applied": [],
+  "total": 6.4,
+  "recommended_stage": "validate",
+  "rationale": "Data engineers at Salesforce Data Cloud shops are losing real engineering hours to invisible encoding bugs \u2014 companies paying enterprise Salesforce licenses ($150k+/yr) will spend $50\u2013$200/mo on a tool that reliably pre-validates and auto-fixes CSV encoding before SFTP ingestion. The buyer is a specific, named role (Salesforce Data Cloud admin / data engineer) at identifiable mid-market to enterprise companies, and they have budget authority for tooling at this price point. The build is feasible \u2014 a Claude-powered CSV pre-flight checker (detect BOM, encoding, special characters) with a simple upload UI and a Stripe subscription is shippable quickly. It misses the build threshold (6.4 vs 6.5 required) and responsiveness is untested, so validate first: reach out to Salesforce Data Cloud communities (Trailblazer, Stack Exchange, LinkedIn) to confirm willingness to pay before building.",
+  "solution_plan": "The micro-service is a CSV pre-flight validator and auto-fixer for Salesforce Data Cloud SFTP ingestion: users upload a CSV, Claude detects UTF-8 BOM, Windows-1252 artifacts, invalid column names, and other known ingestion-killers, then returns a clean file and a report. BUILD: the factory creates a simple upload form (no-code page), a Claude prompt that runs the encoding checks and produces a cleaned CSV + a plain-English report, and a Stripe subscription link ($49\u2013$99/mo per pipeline). No operator coding required. SELL: target Salesforce Data Cloud admins and data engineers via Salesforce Trailblazer Community posts, LinkedIn outreach to 'Salesforce Data Cloud' job-title holders, and answers on Salesforce Stack Exchange \u2014 outreach batches go out only after Youval approves them. MAINTAIN: file uploads trigger Claude automatically, cleaned files and reports are returned by email or download link, billing runs via Stripe, and support questions are handled by a Claude-powered inbox; the only recurring human touch is approving outreach batches and reviewing the weekly revenue summary.",
+  "notes": "Total is 6.4, just below the 6.5 build gate threshold, so validate stage is correct regardless. All build_gates would be met if validated (operational_autonomy=7, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=7). One strong validation conversation with a paying Data Cloud customer would push this to build.",
+  "scored_at": "2026-10-15T10:51:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

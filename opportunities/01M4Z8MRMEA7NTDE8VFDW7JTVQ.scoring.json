@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M4Z8MRMEA7NTDE8VFDW7JTVQ",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "A single commenter saying 'I would pay for this' is encouraging but extremely thin \u2014 the actual VST plugin market has thousands of competitors (Native Instruments, UJAM, Ample Sound, Strum GS, and free alternatives), and pricing pressure is severe. More critically, building a real VST plugin requires native C++ audio DSP programming (JUCE framework), a skill set that Claude and this factory cannot supply; this is not a 'Claude prompt + landing page' build. Music producers (the buyer) are a real, identifiable segment, but they skew toward free/pirated tools and $20\u2013$50 one-time purchases, making recurring revenue unlikely.",
+  "solution_plan": "This opportunity should be dropped. A VST plugin is a compiled native binary requiring audio DSP expertise and plugin SDK integration (JUCE/VST3) \u2014 it cannot be built with Claude prompts and standard web tooling. There is no viable path for a solo non-technical operator to build, distribute, or maintain this. Even if the product existed, distribution through Plugin Boutique or similar storefronts requires the compiled plugin to pass technical review. The single HN comment is an insufficient signal to justify investigating further.",
+  "notes": "Fails buildability_with_ai (2 < 6 floor) and operational_autonomy (3 < 7 floor). VST development is fundamentally incompatible with a Claude-based factory.",
+  "scored_at": "2026-10-15T10:51:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

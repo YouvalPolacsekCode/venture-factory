@@ -1,0 +1,25 @@
+{
+  "id": "01M4Z8MRMM6ATSQRZRGF9Y9APA",
+  "discovered_at": "2026-10-15T10:50:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/170088/combining-schedule-c-and-schedule-e-business-miles-for-the-50-business-use-test",
+    "snippet": "User managing a truck split between Turo rental income (Schedule C) and rental property management (Schedule E) finds TurboTax 2025 does not correctly handle combined business-use percentage across multiple schedules for MACRS depreciation. Score: 3."
+  },
+  "problem_statement": "Small business owners with mixed-use assets (personal vehicle used across multiple business activities like gig rentals and rental property management) cannot correctly calculate combined business-use percentages in consumer tax software, risking mis-depreciation and IRS exposure.",
+  "target_segment": "US-based solo operators and small landlords with multi-schedule tax situations (Schedule C + E) using TurboTax or similar DIY tax software",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "tax-software",
+    "schedule-c",
+    "schedule-e",
+    "depreciation",
+    "small-business",
+    "gig-economy",
+    "rental-property",
+    "turbotax-alternative"
+  ],
+  "notes": "Buyer signal: user is an active small business owner managing real assets (truck, Turo rentals, rental properties) with real tax liability. They use paid TurboTax. Pain is concrete: software fails on a multi-schedule edge case. Opportunity is niche tax tooling or guided workflow for multi-income solo operators.",
+  "status": "candidate"
+}

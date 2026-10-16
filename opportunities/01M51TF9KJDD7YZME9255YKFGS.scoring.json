@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M51TF9KJDD7YZME9255YKFGS",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 3,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [
+    {
+      "name": "not_legitimate_or_grey",
+      "deduction": 5.0,
+      "reason": "Building a workaround to sync Withings (or other device) data to Apple Health without paying the vendor's subscription fee circumvents the device maker's TOS and Apple's HealthKit partner agreements. Reverse-engineering proprietary health data APIs to bypass a paywall is legally dubious (CFAA/DMCA exposure) and violates platform terms \u2014 this is not a legitimate service to offer."
+    },
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Consumer health sync tools require thousands of paying users to generate meaningful revenue at typical B2C price points ($3\u2013$10/month); the business model only works at scale."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a vague consumer segment ('health-conscious people with wearables') with no demonstrated willingness to pay for a sync workaround \u2014 the HN comment explicitly expresses resistance to the $8/month fee, which is the opposite of a buy signal. More critically, any tool that bypasses Withings' or Apple's subscription paywall by reverse-engineering proprietary APIs violates platform TOS and carries CFAA/DMCA legal risk, triggering the not_legitimate_or_grey penalty (\u22125.0) and dropping the effective total to 0. Even setting legality aside, this is a consumer product needing scale, with low margins, high churn, and no clear autonomous delivery mechanism since each device integration requires custom API work. Drop without further investigation.",
+  "solution_plan": "Not applicable \u2014 this opportunity is dropped due to TOS/legal concerns and insufficient commercial viability. A legitimate version (officially partnered with device makers to offer a premium aggregation layer) would require business development agreements that are out of scope for a solo operator. No build path exists here.",
+  "notes": "not_legitimate_or_grey penalty applied: building an Apple Health sync bypass circumvents Withings' paid subscription model and likely violates Apple HealthKit partner terms and the device maker's API TOS. b2c_at_scale_needed penalty also applied. Total floored at 0.0.",
+  "scored_at": "2026-10-16T10:42:13+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

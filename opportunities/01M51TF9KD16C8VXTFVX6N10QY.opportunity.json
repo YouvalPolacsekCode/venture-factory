@@ -1,0 +1,27 @@
+{
+  "id": "01M51TF9KD16C8VXTFVX6N10QY",
+  "discovered_at": "2026-10-16T10:40:23+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439919/how-to-handle-gdpr-ccpa-right-to-be-forgotten-requests-and-meanwhile-keep-a-usab",
+    "snippet": "Our clients regularly get RTBF requests under GDPR and CCPA. We still need to show what was deleted, when, who approved it, and sometimes retain non-personal transaction history for legal reasons. A person submitted an erasure request; the customer deleted the Contact and related Cases. Months later the same person raised a billing dispute. By then the field history and related records were gone."
+  },
+  "problem_statement": "Companies using Salesforce must simultaneously honor GDPR/CCPA right-to-be-forgotten deletion requests and maintain legally defensible audit trails of what was deleted and why \u2014 but Salesforce's native tools do not support this combination, leaving businesses exposed in billing disputes and audits.",
+  "target_segment": "Salesforce admins and compliance officers at SMB-to-mid-market B2C companies subject to GDPR or CCPA, typically in SaaS, fintech, or e-commerce.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "gdpr",
+    "ccpa",
+    "right-to-be-forgotten",
+    "salesforce",
+    "audit-trail",
+    "compliance",
+    "data-privacy",
+    "crm",
+    "legal-hold",
+    "deletion-workflow"
+  ],
+  "notes": "Buyer signal strong: question comes from someone managing client Salesforce orgs (likely a consultant or admin at a company with legal obligations). Describes a real incident (billing dispute after erasure) with concrete legal and financial consequence. Willingness to pay implied by regulatory compliance stakes. Market: Salesforce ISV ecosystem or compliance SaaS.",
+  "status": "candidate"
+}

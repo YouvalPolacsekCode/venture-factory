@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M51TF9KD16C8VXTFVX6N10QY",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 6,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 6,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "GDPR/CCPA compliance tooling operates in a regulated legal context; erroneous audit trail generation or incomplete deletion workflows expose the operator and customers to legal liability."
+    }
+  ],
+  "total": 4.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and well-defined \u2014 Salesforce admins and compliance officers at SMB-to-mid-market B2C companies have budget authority, face regulatory deadlines, and demonstrably pay for compliance tooling (Salesforce AppExchange ISVs charge $15\u2013$50/user/month for adjacent solutions). However, building this correctly requires deep Salesforce platform integration (Apex, Metadata API, field history retention configs), GDPR/CCPA legal accuracy guarantees, and per-org configuration work that a Claude prompt + simple page cannot deliver reliably \u2014 buildability and operational autonomy both sit at 5, failing their build_gate floors. The regulated_industry penalty (\u22121.5) drops the total to 4.8, below the validate threshold, because getting the deletion-plus-retention logic wrong is a compliance incident, not just a bad UX. This is the right problem but the wrong build for a solo non-technical operator without a Salesforce ISV program and legal review.",
+  "solution_plan": "This micro-service would be a Salesforce-connected audit-trail generator: when a RTBF deletion fires, it auto-creates a pseudonymized record capturing what was deleted, when, who approved it, and any retained non-personal transaction data \u2014 all logged to an external store Claude can query later. Unfortunately, building this correctly is not feasible for a solo non-technical operator without a Salesforce developer partner: it requires Salesforce org-level API integration, Apex triggers or Flow configuration per customer, and legal sign-off on what 'pseudonymized' means under GDPR Article 17. The factory cannot ship a legally defensible compliance tool of this type using only Claude prompts and a simple page. If Youval has a Salesforce developer co-founder or a legal/compliance partner, revisit \u2014 the commercial opportunity is strong. Otherwise, drop.",
+  "notes": "Failing build_gates: buildability_with_ai (5, floor is 6) and operational_autonomy (5, floor is 7). Even without the regulated_industry penalty, the total (5.8) with both gates failing would cap stage at validate. With the penalty the total falls to 4.8, below min_total_to_validate (5.5), yielding drop. Strong commercial signal \u2014 worth revisiting if technical complexity can be abstracted via a Salesforce ISV partner.",
+  "scored_at": "2026-10-16T10:42:13+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

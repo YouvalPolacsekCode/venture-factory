@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M51TF9K89MA7SVK1AHY2A1MG",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [],
+  "total": 5.9,
+  "recommended_stage": "validate",
+  "rationale": "Knowledge workers and developers on paid AI subscriptions ($20\u2013$200/month) are the buyer \u2014 they demonstrably pay for AI tools, so willingness-to-pay is real, but this specific monitoring layer is an add-on purchase competing against free browser extensions and built-in platform dashboards. The service (a quota-aware session manager or usage alert) can be built as a Claude-backed dashboard + Stripe subscription and run largely hands-off, but the buyer clarity is only moderate \u2014 'developers on AI Pro plans' is a large, diffuse group without a tight ICP or a clear channel to reach them in bulk at low cost. The deciding factor is that no validated demand signal exists beyond a single HN complaint with 7 points; the idea needs a probe (e.g., a landing page with a waitlist or a Reddit/Twitter outreach batch) before committing build resources.",
+  "solution_plan": "The micro-service is a quota-monitoring dashboard that tracks AI platform usage in real time and fires alerts before a session burns out, with optional fallback-model routing. The factory builds it as a Claude prompt pipeline + a lightweight web dashboard (no-code tool or simple HTML page) + Stripe subscription link + email alert delivery \u2014 no operator coding required. Sell by posting a targeted thread or reply on r/LocalLLaMA, r/ChatGPTPro, and relevant HN threads, plus a cold-outreach batch to freelancers/devs identifiable on LinkedIn who list AI tools in their stack; all outreach batches require operator approval before sending. Delivery is fully automated: usage data is pulled via user-supplied API keys, alerts fire via email/webhook, billing runs through Stripe, and Claude handles support FAQs. The only recurring human touch is approving outreach sends and reviewing any edge-case support escalations flagged by Claude.",
+  "notes": "No build_gate failures \u2014 operational_autonomy (7), buildability_with_ai (7), buyer_clarity (6), willingness_to_pay (6) all meet floors. Stage capped at validate because total (5.9) is below min_total_to_build (6.5). Primary risk: market fragmentation \u2014 each AI platform (OpenAI, Anthropic, Google) has different quota APIs; building a unified monitor requires multiple integrations that raise build complexity.",
+  "scored_at": "2026-10-16T10:42:13+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,17 @@
+{
+  "opportunity_id": "01M4Z8MRMTAMN5PGWJT2ABPS52",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Data engineers at Salesforce Data Cloud shops face a real, recurring pain: invisible encoding artifacts (UTF-8 BOM, Windows-1252) silently corrupt SFTP CSV ingestions, burning hours of engineering time on a platform that costs $150k+/year. Multiple Stack Exchange threads, GitHub issues, and Trailblazer Community posts document the problem, and the existence of paid workarounds (Matillion, Talend, MuleSoft) proves willingness to pay for data pipeline reliability tooling at significant ACV.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439923/data-cloud-sftp-ingestion-fails-with-invalid-column-name-special-characters-a",
+    "https://trailhead.salesforce.com/trailblazer-community/feed/0D54V00007Kd8QZSAZ",
+    "https://github.com/forcedotcom/datacloud-jdbc/issues/42",
+    "https://stackoverflow.com/questions/17912307/u-ufeff-in-python-string",
+    "https://help.salesforce.com/s/articleView?id=sf.c360_a_data_ingestion_troubleshoot.htm",
+    "https://matillion.com/pricing/",
+    "https://www.talend.com/pricing/"
+  ],
+  "evaluated_at": "2026-10-16T10:41:23+03:00"
+}

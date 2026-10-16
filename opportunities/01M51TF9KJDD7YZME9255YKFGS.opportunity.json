@@ -1,0 +1,24 @@
+{
+  "id": "01M51TF9KJDD7YZME9255YKFGS",
+  "discovered_at": "2026-10-16T10:40:23+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50112258",
+    "snippet": "New Withings Users Must Pay $99/Year for Apple Health Syncing. '$8/mo to save me typing in a number into Apple health?' The author expresses skepticism but acknowledges Apple has leverage as the platform gatekeeper."
+  },
+  "problem_statement": "Consumer health device makers are increasingly paywalling basic data sync features (e.g., syncing to Apple Health), forcing users to pay recurring fees for functionality that was previously free, creating demand for alternative sync or aggregation tools.",
+  "target_segment": "Health-conscious consumers and quantified-self users who own multiple wearables/devices and want consolidated health data without per-device subscription fees.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "health-data-sync",
+    "wearables",
+    "apple-health",
+    "subscription-fatigue",
+    "quantified-self",
+    "data-portability",
+    "withings"
+  ],
+  "notes": "Buyer signal is moderate \u2014 the commenter is resistant to paying, but the underlying market (people with Withings, Garmin, etc. who want Apple Health sync) has shown willingness to pay for aggregator apps like Health Auto Export. Signal is a single complaint; not yet a strong repeated pattern in this batch. Deprioritized relative to the GDPR opportunity.",
+  "status": "candidate"
+}

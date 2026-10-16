@@ -1,0 +1,23 @@
+{
+  "id": "01M51TF9K89MA7SVK1AHY2A1MG",
+  "discovered_at": "2026-10-16T10:40:23+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50112559",
+    "snippet": "Tell HN: Google Argon on a Pro subscription is worthless. One prompt which took 5 minutes of clock time used 50% of the resources of a Pro account for the 5 hour window. [7 points, 6 comments]"
+  },
+  "problem_statement": "Paying users of AI Pro subscriptions burn through quota unpredictably in a single session, making the subscription feel worthless and blocking productive work for hours.",
+  "target_segment": "Knowledge workers, developers, and freelancers on paid AI platform subscriptions (e.g., $20\u2013$200/month plans) who rely on AI for billable or deadline-driven work.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-quota-management",
+    "llm-subscription",
+    "pro-plan",
+    "rate-limiting",
+    "productivity",
+    "ai-cost-monitoring"
+  ],
+  "notes": "User is a paying Pro subscriber \u2014 confirmed buyer. Pain is quota unpredictability causing multi-hour outages. Opportunity: a quota-aware AI session manager or usage dashboard that alerts before burnout and routes to fallback models. Adjacent to prior signals on AI API cost monitoring.",
+  "status": "candidate"
+}

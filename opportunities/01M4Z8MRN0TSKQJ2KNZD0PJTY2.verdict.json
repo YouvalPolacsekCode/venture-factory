@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M4Z8MRN0TSKQJ2KNZD0PJTY2",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "IP warming is a recurring operational event for any company migrating ESPs, acquiring new dedicated IPs, or expanding to new sending domains \u2014 not a one-time problem. Multiple forum threads, community discussions, and the existence of paid deliverability consultants all confirm the pain is real and that operators will pay to reduce the risk of inbox placement damage. A single operator managing 900k subscribers on a paid SFMC dedicated IP (typically $1k+/month license) demonstrates clear willingness to pay for tooling that reduces guesswork on a high-stakes decision.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439922/sfmc-ip-warming-can-we-start-with-5-000-recipients",
+    "https://www.emailgeeks.community/",
+    "https://www.validity.com/everest/",
+    "https://www.mailgun.com/blog/deliverability/ip-warming-guide/",
+    "https://postmarkapp.com/guides/ip-warming"
+  ],
+  "evaluated_at": "2026-10-17T10:19:32+03:00"
+}

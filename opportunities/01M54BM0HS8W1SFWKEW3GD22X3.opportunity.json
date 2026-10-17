@@ -1,0 +1,26 @@
+{
+  "id": "01M54BM0HS8W1SFWKEW3GD22X3",
+  "discovered_at": "2026-10-17T10:18:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/149002/how-do-i-improve-aeo-based-on-search-console-especially-for-mobile-answers",
+    "snippet": "I am seeking to improve my AEO strategies. I've added lots of JSON to my sites however I get the feeling I keep needing to re-train AI responses, which seems to put me in a redundant loop. Are there any errors in search console that can improve these? I feel like my mobile results are worse than desktop."
+  },
+  "problem_statement": "Website owners and SEO practitioners investing in Answer Engine Optimization (AEO) for AI-powered search results have no reliable feedback loop \u2014 Search Console does not surface AEO-specific errors, AI responses are opaque and shift unpredictably, and practitioners cannot tell whether their structured data changes are being picked up or ignored.",
+  "target_segment": "SEO professionals, content marketers, and agency practitioners managing websites that rely on organic search traffic, especially those already paying for SEO tooling",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "aeo",
+    "answer-engine-optimization",
+    "seo",
+    "ai-search",
+    "structured-data",
+    "schema-markup",
+    "search-console",
+    "llm-seo",
+    "content-optimization"
+  ],
+  "notes": "The question implies the person is actively investing time and money in AEO (adding JSON-LD schema, monitoring search console) \u2014 this is professional spend context, not curiosity. The 'redundant loop' frustration around re-training AI responses is a real emerging pain as AI-driven search surfaces grow. No established tooling exists yet for AEO auditing equivalent to what Ahrefs/SEMrush do for traditional SEO \u2014 gap for a paid monitoring/diagnostic product. Buyer willingness-to-pay is inferred from existing SEO tool spend patterns in this audience.",
+  "status": "candidate"
+}

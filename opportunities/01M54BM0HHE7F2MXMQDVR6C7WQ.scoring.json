@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M54BM0HHE7F2MXMQDVR6C7WQ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "Self-hosted mail server operators \u2014 typically solo developers, small agencies, or SMB sysadmins who have already invested significant time in DMARC/DKIM/SPF setup \u2014 feel real pain when their carefully-configured server still bounces into spam due to shared-range blocklists like UCEPROTECT L3. Willingness to pay is plausible but indirect: the segment chose self-hosting specifically to avoid paying SendGrid/Mailgun, so price sensitivity is high and the buyer more likely pays only if the alternative is switching away from self-hosting entirely. Operational autonomy scores 6 because the core monitoring loop (check blocklists, alert, generate remediation guidance) is automatable, but meaningful remediation often requires operator-specific context (ISP, IP range, hosting provider) that needs human follow-through \u2014 delivery of genuine resolution rather than just reporting is hard to automate fully. Build gates for operational_autonomy (6, needs 7) and willingness_to_pay (5, needs 5 \u2014 just meets threshold) mean the total qualifies for validate but the autonomy gate caps it there.",
+  "solution_plan": "The micro-service is an automated email deliverability monitor that tracks blocklist status, config health (DMARC/DKIM/SPF/rDNS), and generates a plain-English remediation report for self-hosted mail server operators. The factory builds it as a Claude prompt pipeline that accepts a domain/IP as input via a simple intake form, queries public blocklist APIs (MXToolbox, UCEPROTECT, Spamhaus) and DNS records, then produces a prioritized action report \u2014 wrapped in a Stripe payment link ($15-29 one-time or $9/mo for continuous monitoring). Outreach targets self-hosters on ServerFault, Hacker News 'Ask HN', r/selfhosted, and Postfix/Dovecot forums with a free instant scan offer to generate leads; all outreach batches go out only after Youval approves them. Ongoing delivery is automated: users submit their domain, Claude runs checks and generates the report, Stripe handles billing, and email delivers the PDF \u2014 the only recurring human touch is approving outreach batches and reviewing any edge-case support replies flagged by Claude. The key risk to validate first: will this audience pay even $9/mo, or do they expect free tools like MXToolbox? Run a landing page with a paid CTA before building the full pipeline.",
+  "notes": "operational_autonomy scored 6 (gate requires 7) \u2014 meaningful remediation guidance can be generated autonomously, but actual delisting from UCEPROTECT L3 (which charges $299 for 'express' removal or requires ISP-level action) is outside the tool's control, limiting the autonomy of delivering genuine resolution vs. just reporting. Validate whether users pay for diagnosis-only or expect the service to fix it.",
+  "scored_at": "2026-10-17T10:20:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

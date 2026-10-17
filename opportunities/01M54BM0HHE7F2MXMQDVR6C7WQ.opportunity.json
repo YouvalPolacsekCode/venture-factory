@@ -1,0 +1,26 @@
+{
+  "id": "01M54BM0HHE7F2MXMQDVR6C7WQ",
+  "discovered_at": "2026-10-17T10:18:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200039/self-hosted-mail-server-not-reaching-some-recipients",
+    "snippet": "I have been running a self-hosted mail server (Postfix + Dovecot on Debian) for several years. Over time I have fixed various delivery problems related to DMARC, DKIM, reverse DNS, etc., and almost all mail testing services that I query for spam score come up 90-100% clean. Still, some recipients are not getting my emails. These are always new contacts, and most of the times my email goes to spam. The only red flag I see from some mail testers is that my server is on a UCEPROTECT Level 3 blacklist."
+  },
+  "problem_statement": "Operators of self-hosted mail servers struggle with persistent deliverability failures caused by third-party blocklists (e.g. UCEPROTECT Level 3) that penalize entire IP ranges rather than individual senders, even after correctly configuring DMARC, DKIM, SPF, and reverse DNS. Getting removed or routing around these blocklists is opaque and time-consuming.",
+  "target_segment": "SMB operators, indie developers, and agencies self-hosting transactional or business email on VPS/dedicated servers",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-deliverability",
+    "self-hosted-email",
+    "postfix",
+    "blocklist",
+    "dmarc",
+    "dkim",
+    "smtp",
+    "transactional-email",
+    "reputation-monitoring"
+  ],
+  "notes": "Operator has run the server for several years \u2014 this is an established business context, not a hobby. Willingness-to-pay is implied by the ongoing time investment in fixing deliverability issues. UCEPROTECT Level 3 is a known recurring pain point across many server operators. Competing paid products (Mailgun, SendGrid, Postmark) exist, suggesting a market that pays for deliverability. A monitoring/remediation service specifically targeting shared-IP blocklist issues could find buyers among the self-hosting community that explicitly avoids those services for cost or privacy reasons.",
+  "status": "candidate"
+}

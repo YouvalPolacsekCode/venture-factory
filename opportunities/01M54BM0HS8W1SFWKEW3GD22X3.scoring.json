@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M54BM0HS8W1SFWKEW3GD22X3",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is an SEO professional or agency practitioner \u2014 a specific, named role that already has a software budget (Ahrefs at $99-399/mo, SEMrush at $129-499/mo) and is actively experimenting with AEO structured data; this is a credible B2B/prosumer ICP with real spending history. The pain is genuine and recurring: AI-driven search surfaces (ChatGPT, Perplexity, Google AI Overviews) are now significant traffic sources, practitioners can't tell if their schema changes are being picked up, and Search Console offers no AEO-specific diagnostics. Willingness to pay is well-supported by existing SEO tool spend patterns. However, operational_autonomy sits at 7 (just meeting the gate) because AEO signals are inherently noisy and shift frequently \u2014 the monitoring loop is automatable, but generating trustworthy, actionable recommendations requires Claude doing ongoing interpretation that could drift in quality. The total of 6.3 qualifies for validate but falls short of the 6.5 build threshold; validate should confirm reply rates and whether practitioners will pay before building out the full pipeline.",
+  "solution_plan": "The micro-service is an AEO audit and monitoring tool: submit a URL and target queries, and it returns a report showing whether the page's structured data is likely influencing AI search answers, what schema gaps exist, and concrete fix recommendations. The factory builds it as a Claude prompt pipeline \u2014 intake form collects URL + 3-5 target questions, Claude fetches the page (or accepts a paste), audits JSON-LD schema coverage and content structure against AEO best practices, and generates a prioritized fix list \u2014 delivered as a PDF/HTML report via a $29 one-time audit or $49/mo continuous monitoring subscription on Stripe. Outreach targets SEO agency owners and solo practitioners via LinkedIn (filtered by 'SEO' + 'structured data' in profile), Twitter/X SEO communities, and relevant Slack/Discord groups; a free sample audit of their own homepage is the lead magnet, and all outreach batches require Youval's approval before sending. Delivery is automated end-to-end: user submits URL, Claude runs the audit, report is emailed, Stripe handles billing, and Claude handles support FAQs flagged for review \u2014 the only recurring human touch is approving outreach batches and spot-checking a sample of reports monthly for quality drift. Validate first: post a landing page and offer 10 free audits to SEO Twitter/LinkedIn to see if practitioners engage and convert to paid before building the full monitoring tier.",
+  "notes": "All build gates are met at the validate stage (operational_autonomy=7, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=6). Total 6.3 falls just short of the 6.5 build threshold \u2014 promote to build if validation confirms >8% reply rate and at least 3 paid conversions from the free-audit campaign. The core defensibility risk: Ahrefs/SEMrush could add AEO features quickly; the window is narrow, so speed-to-validate matters.",
+  "scored_at": "2026-10-17T10:20:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

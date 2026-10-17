@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01M4Z8MRN0TSKQJ2KNZD0PJTY2",
+  "decided_at": "2026-10-17T10:20:28+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.3,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.3 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass their per-dimension floors, but the weighted total of 6.3 falls below the 6.5 min_total_to_build threshold, and recommended_stage is 'validate' \u2014 not 'build' or 'scale'. Per the hard rule, build_now is therefore not permitted. The cost-to-gain ratio of 3.058 (well above the 0.6 kill threshold in cost_gain_model) further signals that unit economics are unfavorable without validation evidence. However, killing is premature: the idea has strong autonomy and buildability scores, a clear B2B buyer, and all gate floors are met \u2014 a single responsiveness test with positive signal (even a few replies from email deliverability managers) would likely push the total past 6.5. Defer one week for validation outreach.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn outreach to 'email deliverability' and 'SFMC' job titles + Email Geeks Slack community"
+}

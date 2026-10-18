@@ -1,0 +1,25 @@
+{
+  "id": "01M56YT2HAFD4WBR5NS4TGVVM6",
+  "discovered_at": "2026-10-18T10:32:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50135854",
+    "snippet": "So, my boss goes on a rampage. You can clearly see the joy and at the same time the rage and impatience. AI is the tool he always wanted. We are too slow. Process is out of the window. No planning, just doing. All people downstream must somehow adapt. Whenever i see now his automated messages in slack, my natural reaction is: why do i even bother reading that? Thats for machines to read. He does not need me? Clearly i am not made for that. What is he expecting me to do? (6 points, 8 comments)"
+  },
+  "problem_statement": "Teams struggle to adapt when managers flood internal channels with AI-generated output \u2014 workers lose context on what requires human attention vs. machine processing, eroding collaboration and morale in AI-augmented workplaces.",
+  "target_segment": "Knowledge workers and team leads at SMBs and mid-market companies where AI adoption is outpacing communication norms",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-communication",
+    "workplace-ai",
+    "slack",
+    "team-collaboration",
+    "ai-output",
+    "manager-ai",
+    "async-work",
+    "signal-to-noise"
+  ],
+  "notes": "Emerging pain point as AI-generated messages proliferate in Slack/Teams. Buyer angle: HR tech or team productivity tool for companies rolling out AI to managers \u2014 pain is real but willingness-to-pay evidence is weak so far. Worth watching for volume growth.",
+  "status": "candidate"
+}

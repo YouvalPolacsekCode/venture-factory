@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M56YT2J184Q3V36YRPE713KM",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "One-time template/boilerplate sales and cohort courses require high volume of individual buyers (hundreds per launch) to generate meaningful recurring revenue; a single solo operator without an existing audience will struggle to reach critical mass."
+    }
+  ],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "Solo founders do pay for starter kits ($49-199 one-time) and there is a clear buyer, but the business model is a content/template product that needs ongoing audience-building and repeated launch cycles to sustain revenue \u2014 not the kind of always-on autonomous service this factory is optimised to run. One-time sales to individual indie hackers mean the operator must keep marketing continuously rather than building a recurring-revenue base. The penalty for b2c-at-scale brings total below validate threshold. Better suited to a creator with an existing audience; not a strong factory play.",
+  "solution_plan": "Not the strongest fit for this factory. The product \u2014 a paid Next.js + Claude API starter kit or a cohort-based course \u2014 is genuinely buildable (Claude can generate and document a boilerplate; a Gumroad or Lemon Squeezy page handles sales), but sustained revenue requires continuous content marketing, community presence, and launch-cycle management that a solo operator without an existing following cannot automate away. If Youval already has a developer audience or newsletter, this is worth a quick validate (ship a $79 Gumroad template, see if 10 people buy in the first week without paid ads). Without that audience, the customer-acquisition problem outweighs the build simplicity.",
+  "notes": "Total after penalty (4.7) is below min_total_to_validate (5.5). build_gates for operational_autonomy (6, at the floor but not above) and buyer_clarity (6, at floor) are borderline. Primary issue is the b2c-at-scale model and lack of existing audience to drive one-time sales.",
+  "scored_at": "2026-10-18T10:34:21+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

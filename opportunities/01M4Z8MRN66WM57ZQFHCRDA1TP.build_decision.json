@@ -1,0 +1,47 @@
+{
+  "opportunity_id": "01M4Z8MRN66WM57ZQFHCRDA1TP",
+  "decided_at": "2026-10-18T10:34:33+03:00",
+  "decision": "kill",
+  "confidence_pct": 88,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 4,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 4,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.5,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": "validate"
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.5 < min_total_to_build 6.5",
+    "operational_autonomy=4 < 7",
+    "buildability_with_ai=4 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "This opportunity fails three independent bars: total score 5.5 is below the 6.5 build threshold, operational_autonomy (4) is far below its floor of 7, and buildability_with_ai (4) is well below its floor of 6. The cost-to-gain ratio of 6.92 massively exceeds the kill threshold of 0.6, and the 90-day expected gain is negative (-$247). The core problem \u2014 per-customer AWS environment diagnosis requiring iterative Terraform remediation against bespoke CSPM rulesets \u2014 is fundamentally consulting work that cannot be autonomously delivered by Claude, making this structurally incompatible with the factory's operating model. Killing rather than deferring because the autonomy gap is architectural (not a matter of more evidence) and there is no plausible reframing that would raise operational_autonomy from 4 to 7 without changing the product into something entirely different.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 21,
+  "suggested_first_outreach_channel": "reddit-r/devops"
+}

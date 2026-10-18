@@ -1,0 +1,25 @@
+{
+  "id": "01M56YT2HTY68MFWNRRCM40HM2",
+  "discovered_at": "2026-10-18T10:32:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50135393",
+    "snippet": "I can't even use 1b tokens a month because I review everything LLMs write. I even used AI to code my own harness in C and my own VSCode-like IDE in C++ and I still used under 1b the months where it did most of the coding. Just wondering how/what these guys claiming to use a full Claude/Codex 20x subscription are burning it on. (4 points, 3 comments)"
+  },
+  "problem_statement": "Developers using AI coding assistants lack visibility into where their token/API spend actually goes, making it hard to justify large subscription tiers or optimize usage patterns for cost vs. output quality.",
+  "target_segment": "Freelance developers and small dev teams paying for Claude Pro, Copilot, or Codex subscriptions who want to optimize AI spend",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-cost-tracking",
+    "llm-token-usage",
+    "developer-tools",
+    "ai-coding",
+    "api-spend",
+    "cost-optimization",
+    "claude",
+    "codex"
+  ],
+  "notes": "Buyer signal: people are paying $20-200/month for AI coding subscriptions and questioning ROI. An analytics layer showing token spend by task/repo/session could command $10-30/month from power users. Adjacent to existing opportunity space but this item highlights the solo-dev segment specifically.",
+  "status": "candidate"
+}

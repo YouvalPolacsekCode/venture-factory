@@ -1,0 +1,23 @@
+{
+  "id": "01M56YT2HKQZ77DVQXX4NZYGNP",
+  "discovered_at": "2026-10-18T10:32:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50137490",
+    "snippet": "Every product seems to go through constant UI churn that has no benefit to users other than changing around whitespace or refreshing the look. If you have a full time UX person they _must_ change the UI of your product otherwise there is no way to get promoted. That is just an unavoidable fact of incentive structures. As a company how can you avoid that issue? (4 points)"
+  },
+  "problem_statement": "Companies with dedicated UX staff experience constant UI churn driven by promotion incentives rather than user need, wasting engineering resources and frustrating users with unnecessary changes.",
+  "target_segment": "Engineering managers and CPOs at product companies with 10-200 employees who pay for dedicated UX headcount",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ux-management",
+    "ui-churn",
+    "product-management",
+    "incentive-design",
+    "design-ops",
+    "product-ops"
+  ],
+  "notes": "Pain is real and recurring in SaaS/product companies. Potential buyer: product ops tooling or design governance platforms. Weak direct willingness-to-pay signal in this item, but the problem maps to costly engineering rework \u2014 companies do pay for solutions that reduce wasted sprint cycles.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M56YT2HKQZ77DVQXX4NZYGNP",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any governance or design-ops solution for this problem requires bespoke consulting or workshop work to diagnose incentive structures and implement process changes \u2014 per-company manual effort is unavoidable."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Selling to CPOs and engineering managers at product companies requires discovery calls and demos; no self-serve path is evident."
+    }
+  ],
+  "total": 1.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain \u2014 UX churn driven by promotion incentives \u2014 is real and costs real engineering time, and the buyer (CPO / VP Eng at 10-200 person product companies) is more identifiable than many consumer ideas. However, the solution is fundamentally an organisational design intervention, not a software product: it requires diagnosis calls, custom process rollout, and ongoing reinforcement, making autonomous delivery impossible. There is no self-serve software a Claude factory could ship and run hands-off here. Drop.",
+  "solution_plan": "Not recommended for build. The problem is structural (incentive design) rather than automatable (data processing or content generation), so a Claude factory cannot deliver value without per-company consulting work. Even a lightweight 'UI change governance' dashboard would require integration with each company's Jira/Linear and a change-management process a solo operator cannot run at scale. This is a consulting or coaching product, not a factory-compatible micro-service.",
+  "notes": "operational_autonomy (2) and buildability_with_ai (3) both fail build_gates; willingness_to_pay (3) and buyer_clarity (5) also fail. Total after penalties (1.1) is far below min_total_to_validate.",
+  "scored_at": "2026-10-18T10:34:21+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

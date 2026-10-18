@@ -1,0 +1,25 @@
+{
+  "id": "01M56YT2J184Q3V36YRPE713KM",
+  "discovered_at": "2026-10-18T10:32:22+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/infoinlet1/how-i-built-a-saas-in-a-weekend-with-claude-nextjs-the-honest-breakdown-2le6",
+    "snippet": "I built the first working version of my SaaS in a weekend with Claude and Next.js. (Score 17, 3 comments) \u2014 tagged: ai, webdev, startup, nextjs"
+  },
+  "problem_statement": "Solo founders and indie hackers need opinionated, end-to-end starter kits and guides specifically for shipping AI-augmented SaaS products rapidly, combining LLM API integration, auth, billing, and deployment in one validated stack.",
+  "target_segment": "Solo founders and freelance developers attempting to launch SaaS products with AI features using Next.js and Claude/OpenAI APIs",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "saas-starter",
+    "ai-saas",
+    "nextjs",
+    "claude-api",
+    "indie-hacker",
+    "rapid-prototyping",
+    "boilerplate",
+    "weekend-build"
+  ],
+  "notes": "Recurring pattern on dev.to and Indie Hackers: builders want the honest post-mortem and the reusable scaffold. Buyer signal is moderate \u2014 people pay for boilerplates/templates ($49-199 one-time) and courses. Score 17 suggests resonance but small sample. Hobbyist-leaning; strongest monetization if positioned as a paid template or cohort course.",
+  "status": "candidate"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M4Z8MRN66WM57ZQFHCRDA1TP",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "DevOps and cloud security teams at companies running AWS with CSPM tooling (PrismaCloud, Wiz, etc.) face continuous, recurring alert noise from necessary IAM admin access \u2014 this is a compliance audit headache that persists as long as the tooling is active. Willingness-to-pay is substantiated by confirmed spend on both AWS and PrismaCloud (neither cheap), plus documented competitor SaaS products (Sym, ConductorOne, Indent) charging $5\u201320k/year in this exact space. The primary constraint is operational autonomy: delivering meaningful remediation requires per-customer IAM context, limiting fully automated delivery.",
+  "sources": [
+    "https://serverfault.com/questions/1200030/how-to-resolve-prismacloud-alert-aws-iam-groups-with-administrator-access-permi"
+  ],
+  "evaluated_at": "2026-10-18T10:33:27+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M56YT2HAFD4WBR5NS4TGVVM6",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 4,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 AI-generated message overload erodes team focus \u2014 but the buyer is vague (\"knowledge workers at SMBs\") and there is no credible willingness-to-pay signal: no one is currently spending money on filtering AI-generated Slack noise, and the natural home for this would be an HR-tech or productivity add-on with a long enterprise sales cycle. Operationally, any meaningful solution requires per-company customisation of what counts as \"machine vs human\" content, keeping autonomy low. Drop until the segment sharpens and a paid substitute emerges.",
+  "solution_plan": "Not recommended for build. The core concept \u2014 a Slack/Teams filter that tags or summarises AI-generated messages \u2014 is technically buildable as a Claude prompt + webhook + a simple config form, but the go-to-market is the blocking problem: there is no identifiable buyer with budget authority and no established category they already spend on. A solo non-technical operator would struggle to find, close, and onboard companies without significant sales effort. Revisit if a paid competitor emerges or the volume of complaints grows into a named category.",
+  "notes": "buyer_clarity fails build_gate (score 4 < floor 6); willingness_to_pay fails build_gate (score 2 < floor 5); operational_autonomy fails build_gate (score 4 < floor 7). Total also below min_total_to_validate (3.8 < 5.5).",
+  "scored_at": "2026-10-18T10:34:21+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

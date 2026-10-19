@@ -1,0 +1,26 @@
+{
+  "id": "01M59KQB1D570DFSJ4E2NA149G",
+  "discovered_at": "2026-10-19T11:16:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50147076",
+    "snippet": "Playing around with Opus 5.5 + Blender has yielded some crazy results, but my $200 plan maxes almost instantly. Any open models that are somewhat comparable (maybe like 80% as good) right now?"
+  },
+  "problem_statement": "Developers using frontier AI models (Claude Opus-tier) for computer-use / creative automation tasks are hitting expensive API plan caps almost immediately, making the workflow commercially unviable at current pricing. They need either a cheaper hosted alternative or a self-hostable open model at roughly 80% capability.",
+  "target_segment": "Indie developers and small studios using AI-driven computer-use automation (e.g., Blender scripting, UI automation) who are paying for frontier model plans but burning through budget too fast.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-computer-use",
+    "llm-cost",
+    "open-models",
+    "blender-automation",
+    "claude-api",
+    "cost-ceiling",
+    "self-hosted-llm",
+    "creative-automation",
+    "api-pricing"
+  ],
+  "notes": "Paying buyer explicit: user is on a $200/month plan and hitting the cap 'almost instantly'. This points to either (a) a cost-optimisation proxy/routing layer that falls back to cheaper open models for computer-use tasks, or (b) a managed self-hosted open-model service tuned for computer-use. Single data point so signal_strength is low, but the buyer is real and the willingness-to-pay is demonstrated by the existing $200 spend.",
+  "status": "candidate"
+}

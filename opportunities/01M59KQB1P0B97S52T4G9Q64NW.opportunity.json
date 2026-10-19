@@ -1,0 +1,26 @@
+{
+  "id": "01M59KQB1P0B97S52T4G9Q64NW",
+  "discovered_at": "2026-10-19T11:16:22+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/blazer82/analytodon/issues/131",
+    "snippet": "When data collection for an account stops working, the user isn't told. Users find out themselves, often weeks later, or never. Recent example: two accounts on the same instance hadn't received new stats for 42 days before one user emailed us."
+  },
+  "problem_statement": "Small SaaS products lack a reliable mechanism to detect and proactively notify users when their background data-collection pipelines silently fail, leading to users discovering data gaps days or weeks later \u2014 eroding trust and triggering churn.",
+  "target_segment": "Solo operators and small teams running SaaS analytics or data-aggregation products where scheduled background jobs collect third-party data on behalf of users.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "saas-monitoring",
+    "data-pipeline",
+    "silent-failure",
+    "user-notification",
+    "background-jobs",
+    "analytics-saas",
+    "health-checks",
+    "churn-prevention",
+    "uptime-alerting"
+  ],
+  "notes": "Commercial context: this is a live SaaS product (Analytodon, a Mastodon analytics tool) with real paying or active users. The issue describes a 42-day silent failure that the operator only discovered when a user emailed in. The pain is real and recurring. A lightweight 'data freshness watchdog' service \u2014 one that monitors last-updated timestamps per user account and fires notifications when a threshold is exceeded \u2014 could be sold to small SaaS operators. Willingness-to-pay is implied by operators' need to retain subscribers and avoid support escalations. Single source but concrete operational failure with named consequences.",
+  "status": "candidate"
+}

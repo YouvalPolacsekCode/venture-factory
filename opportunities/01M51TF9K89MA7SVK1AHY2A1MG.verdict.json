@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M51TF9K89MA7SVK1AHY2A1MG",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain is real but the evidence base is thin: a single HN post with 7 points and 6 comments is the only primary signal, and willingness to pay for a separate monitoring layer on top of an existing subscription is unconfirmed. Competing free browser extensions and platform-native dashboards undercut the paid-product thesis, and no competitor pricing, forum discussion volume, or 'is there a tool for this' request pattern was found to meet the 5-distinct-quotes and 1-WTP-signal bar required for pass.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50112559"
+  ],
+  "evaluated_at": "2026-10-19T11:17:31+03:00"
+}

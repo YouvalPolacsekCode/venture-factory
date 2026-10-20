@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M5C59B3BQ4AASM9HNH0GV6E1",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a middleware or managed package that injects tracking parameters into SFMC distributed content blocks requires bespoke implementation work per client environment \u2014 SFMC org structure, sandbox access, and AMPscript/SSJS configuration vary significantly across enterprise accounts. Delivery is not a self-serve automated flow."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise SFMC customers expect scoped discovery calls, IT/security review, and guided onboarding before any middleware touches their production email sends. This is not a self-serve signup-and-go product."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and well-funded \u2014 marketing ops leads at enterprises already paying five-to-six figures annually for SFMC \u2014 and the pain is a documented platform limitation confirmed by Salesforce support, so willingness to pay is credible. However, the solution is a technical middleware or managed package that must be implemented inside each client's SFMC org, which requires per-customer hands-on work (AMPscript/SSJS, connector setup, security review) that Claude and a simple landing page cannot automate. Operational autonomy scores critically low (3), and buildability with AI scores low (3) because this is not a prompt-plus-Stripe product \u2014 it is a platform integration requiring enterprise-grade implementation. Both are hard build-gate failures, and penalties for human fulfillment and synchronous sales push the total to 2.3, well below the validate threshold.",
+  "solution_plan": "This idea is not viable for a solo non-technical operator running this Claude factory. The 'product' would need to reach inside each client's Salesforce Marketing Cloud org, modify AMPscript or SSJS content-block logic, and potentially require Salesforce ISV certification or a managed package \u2014 none of which can be built or delivered without deep SFMC technical expertise and per-customer implementation work. Even if a consultant could build a v1 tool, selling it would require enterprise sales cycles with security reviews and IT approvals. There is no realistic self-serve, automated, prompt-based version of this. The factory should drop this candidate and flag the underlying insight \u2014 SFMC distributed tracking gaps \u2014 only if a genuinely automatable wrapper (e.g. a UTM-appending pre-send webhook that requires no SFMC org access) becomes plausible with new SFMC API capabilities.",
+  "notes": "Failing build gates: operational_autonomy (scored 3, minimum 7) and buildability_with_ai (scored 3, minimum 6). The core constraint is architectural: any real fix lives inside the client's SFMC org and requires platform-level access and configuration that cannot be abstracted into a self-serve Claude-powered micro-service. Drop unless a lightweight, org-agnostic angle (e.g. a pre-send URL-wrapping API that teams paste into their blocks manually) can be validated as genuinely self-serve.",
+  "scored_at": "2026-10-20T11:03:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

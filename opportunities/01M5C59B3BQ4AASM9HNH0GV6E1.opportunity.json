@@ -1,0 +1,26 @@
+{
+  "id": "01M5C59B3BQ4AASM9HNH0GV6E1",
+  "discovered_at": "2026-10-20T11:01:46+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439927/clickthrough-tracking-on-distributed-image-blocks",
+    "snippet": "We have tried using distributed image blocks with distributed marketing in SFMC but have learned from SFMC support that clickthrough tracking is not applied out of the box on images that end users select from those distributed image blocks when using the Quick Send functionality. This makes the tool pretty ineffective for us as end users can't measure engagement on their (limited) customizations. We found in another question that there is a similar limitation on distributed rich text blocks."
+  },
+  "problem_statement": "Salesforce Marketing Cloud's Distributed Marketing feature does not apply clickthrough tracking to images or rich text blocks selected by end users via Quick Send, making it impossible for distributed teams to measure email engagement on their customized content.",
+  "target_segment": "Marketing operations teams and corporate marketing managers at mid-to-large enterprises running distributed marketing campaigns in Salesforce Marketing Cloud.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "email-tracking",
+    "distributed-marketing",
+    "engagement-analytics",
+    "sfmc",
+    "click-tracking",
+    "email-marketing",
+    "martech"
+  ],
+  "notes": "Buyer context is clear: teams paying for SFMC (enterprise SaaS) are hitting a documented platform limitation confirmed by SFMC support. A second linked question suggests this is a recurring known issue across multiple block types, not a one-off. Potential product angle: a middleware or managed package that wraps distributed content blocks with tracking parameters before send. Willingness-to-pay is implied by the enterprise SFMC subscription context. Signal strength kept at 2 because only one question thread is in this batch; would rise with more independent reports.",
+  "status": "candidate"
+}

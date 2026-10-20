@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M54BM0HHE7F2MXMQDVR6C7WQ",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real but narrowly scoped: operators self-host precisely to avoid paying for managed services, making willingness to pay for a monitoring/remediation tool structurally weak. Free alternatives (MXToolbox, mail-tester.com, UCEPROTECT's own lookup) already cover the diagnostic layer, and actual remediation of shared-range blocklist listings (especially UCEPROTECT L3, which requires ISP-level action or a $299 'express' fee paid to UCEPROTECT directly) is outside any third-party tool's control. The evidence base across public forums is thin \u2014 the source thread has low engagement and the signal strength was scored at 2 \u2014 falling short of the 5 distinct pain quotes required for a pass verdict.",
+  "sources": [
+    "https://serverfault.com/questions/1200039/self-hosted-mail-server-not-reaching-some-recipients"
+  ],
+  "evaluated_at": "2026-10-20T11:03:02+03:00"
+}

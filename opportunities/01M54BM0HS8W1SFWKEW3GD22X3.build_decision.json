@@ -1,0 +1,52 @@
+{
+  "opportunity_id": "01M54BM0HS8W1SFWKEW3GD22X3",
+  "decided_at": "2026-10-21T11:08:55+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.3,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.3 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass their per-dimension floors, but the weighted total of 6.3 falls below the 6.5 min_total_to_build threshold, and recommended_stage is 'validate' \u2014 not 'build' or 'scale'. Under the hard rule, build_now is therefore not permitted. The cost-to-gain ratio of 3.299 is extremely unfavorable (well above the 0.6 kill threshold), but that metric is designed for post-build weekly evaluation, not pre-build gating; the real issue is that responsiveness_signal sits at 2 (no outreach test data yet) and the total score needs validation evidence to cross 6.5. Deferring one week to allow a validation probe (free AEO audits offered to SEO practitioners) is the correct next step; if reply rates come back above 8% the responsiveness_signal lifts to ~5-6, pushing total above the build line.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn DM to SEO agency owners with 'structured data' in profile, offering a free AEO audit of their homepage"
+}

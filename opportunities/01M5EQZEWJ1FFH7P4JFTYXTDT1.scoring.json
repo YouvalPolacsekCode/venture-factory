@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M5EQZEWJ1FFH7P4JFTYXTDT1",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Solo founders and 1\u201310 person startups are largely consumers of free/cheap tools; hitting meaningful revenue requires hundreds to thousands of paying users, making this model volume-dependent."
+    }
+  ],
+  "total": 4.2,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuine and recurring \u2014 small teams do lose context and struggle with AI knowledge management \u2014 but the buyer is a solo founder or tiny startup team who overwhelmingly expect free or near-free tooling and churn quickly. Willingness to pay is weak: Notion, Obsidian, and open-source RAG tools compete here at $0\u2013$10/month, compressing price severely. The market also risks competing directly with well-funded players (Mem, Notion AI, Rewind). With only a 5-point dev.to post as signal and no responsiveness data, this is too speculative to pursue. Total drops to 4.2 after the b2c scale penalty; below validate threshold.",
+  "solution_plan": "This is not recommended for pursuit at this stage. The target buyer (solo founder, tiny startup) has very low willingness to pay for knowledge management tooling, the space is crowded with free alternatives, and acquiring enough paying users to generate meaningful revenue would require a consumer growth playbook incompatible with the factory model. If this is re-evaluated later, a sharper ICP \u2014 e.g. 'ops lead at a 5\u201315 person agency who bills clients and needs to preserve client context across projects' \u2014 would move buyer_clarity and WTP into viable territory and should be filed as a new opportunity.",
+  "notes": "Total (4.2) is below min_total_to_validate (5.5). Fails buyer_clarity_min (5 < 6) and willingness_to_pay_min (4 < 5). The b2c_at_scale_needed penalty reflects the volume requirement inherent in the solo-founder ICP. Drop unless ICP is sharpened to a paying business role.",
+  "scored_at": "2026-10-21T11:08:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

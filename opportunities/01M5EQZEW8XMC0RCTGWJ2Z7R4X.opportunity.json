@@ -1,0 +1,25 @@
+{
+  "id": "01M5EQZEW8XMC0RCTGWJ2Z7R4X",
+  "discovered_at": "2026-10-21T11:06:54+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50164771",
+    "snippet": "At off peak pricing, which is substantially lower than the standard API rate (50% off). So I assume it looks even better financially overall. Quick numbers: At $35/hour in net cash generation per card, a $30,000 GPU would pay for itself entirely in about 850 hours (roughly 35 days). With an assumed ~$3 operation cost per card and hour."
+  },
+  "problem_statement": "Operators running LLM inference commercially lack simple tools to model GPU ROI, optimal pricing tiers (peak vs. off-peak), and break-even timelines before committing to $30k+ hardware purchases.",
+  "target_segment": "Independent LLM inference operators and small AI hosting businesses considering on-premise GPU investment",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "gpu-roi",
+    "llm-inference",
+    "inference-hosting",
+    "ai-hardware",
+    "pricing-calculator",
+    "break-even",
+    "gpu-economics",
+    "on-premise-ai"
+  ],
+  "notes": "Buyer signal: commenter is calculating commercial returns at $35/hr net per card against a $30k hardware cost \u2014 clearly an operator or prospective operator, not a hobbyist. Willingness to invest at $30k+ hardware scale implies a paid-tooling budget. Only one data point so signal_strength capped at 2; worth watching for cluster growth.",
+  "status": "candidate"
+}

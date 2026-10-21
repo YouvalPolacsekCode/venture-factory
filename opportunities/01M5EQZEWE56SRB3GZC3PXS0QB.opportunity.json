@@ -1,0 +1,24 @@
+{
+  "id": "01M5EQZEWE56SRB3GZC3PXS0QB",
+  "discovered_at": "2026-10-21T11:06:54+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203804/team-leader-exhibits-a-strong-dunning-kruger-effect-and-makes-everyone-waste-tim",
+    "snippet": "I work as a software engineer at a multinational company. The company does not specialize in software... My current team is developing software that represents an innovation in its field. The problem is that the team leader has no experience as a software developer and lacks fundamental knowledge of computer science. As a result, the software quality is really poor, and whenever bugs occur, he blames the clients or even the hardware... [18 upvotes, 4 comments]"
+  },
+  "problem_statement": "Software engineers at non-software companies suffer repeated productivity losses and quality degradation when managed by non-technical team leads who lack CS fundamentals \u2014 but have no structured, low-risk way to surface or remediate the skill gap upward.",
+  "target_segment": "Mid-level software engineers at multinational non-tech companies with non-technical line managers",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "engineering-management",
+    "non-technical-manager",
+    "team-dysfunction",
+    "software-quality",
+    "upward-feedback",
+    "org-tooling",
+    "developer-productivity"
+  ],
+  "notes": "18 upvotes is high for Workplace SE, 4 comments indicating discussion. Recurring pain pattern seen across SE and Reddit. However the monetisation path targets the individual engineer (frustrated buyer, limited budget) rather than the company buyer \u2014 keep as candidate but note the ICP needs refinement toward HR/L&D buyers or engineering VPs who would pay for manager-effectiveness tooling.",
+  "status": "candidate"
+}

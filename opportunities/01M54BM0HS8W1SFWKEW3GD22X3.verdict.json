@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01M54BM0HS8W1SFWKEW3GD22X3",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "Multiple independent signals confirm that SEO professionals are actively spending money on AEO/AI-search optimization while lacking any reliable feedback mechanism. Existing paid tools (Ahrefs, SEMrush, Semji) are beginning to add AI-visibility features, confirming willingness to pay, but none yet offer a dedicated AEO audit loop. At least 5 distinct pain expressions found across Stack Exchange, Reddit, LinkedIn, and specialist SEO forums.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/149002/how-do-i-improve-aeo-based-on-search-console-especially-for-mobile-answers",
+    "https://www.reddit.com/r/SEO/comments/1c3x8ql/anyone_else_struggling_with_ai_overviews_and/",
+    "https://www.reddit.com/r/SEO/comments/1b9l2tz/how_are_you_all_approaching_aeo_answer_engine/",
+    "https://searchengineland.com/aeo-answer-engine-optimization-guide-437425",
+    "https://ahrefs.com/blog/aeo/",
+    "https://www.semrush.com/blog/answer-engine-optimization/"
+  ],
+  "evaluated_at": "2026-10-21T11:07:56+03:00"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M5EQZEWJ1FFH7P4JFTYXTDT1",
+  "discovered_at": "2026-10-21T11:06:54+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/101xanshu/i-built-a-company-brain-in-3-days-notes-on-memory-evidence-and-what-broke-6p",
+    "snippet": "Why am I even thinking about company memory? Whenever we talk about AI brain for... [5 score, 2 comments, tags: ai, llm, softwaredevelopment, startup]"
+  },
+  "problem_statement": "Small startups and solo operators lack a lightweight, persistent 'company memory' layer that lets AI assistants retain and reason over internal context \u2014 existing RAG and note tools require days of setup and break under real workloads.",
+  "target_segment": "Solo founders and early-stage startup teams (1-10 people) using LLM tools for internal knowledge management",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "company-memory",
+    "llm-context",
+    "rag",
+    "knowledge-management",
+    "ai-tooling",
+    "startup-ops",
+    "internal-knowledge",
+    "ai-assistant"
+  ],
+  "notes": "Author built a working prototype in 3 days and published notes on what broke \u2014 signals a real recurring pain the author personally paid (time) to solve. Startup tag + software development context suggests a business buyer, but with only 5 points and 2 comments this is a weak independent signal. Buyer willingness: implied (time investment + active building). Watch for corroborating signals in ProductHunt/IH before promoting.",
+  "status": "candidate"
+}

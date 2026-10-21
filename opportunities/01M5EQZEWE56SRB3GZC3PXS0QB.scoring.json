@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M5EQZEWE56SRB3GZC3PXS0QB",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.2,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Remediation paths for non-technical manager dysfunction typically involve HR conversations, upward feedback sessions, or coaching engagements \u2014 all synchronous human processes that can't be automated away."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Any tooling that surfaces sensitive upward feedback or interpersonal management issues requires human judgement for edge cases; automated support would be inadequate and potentially harmful."
+    }
+  ],
+  "total": 2.7,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and widespread \u2014 engineers suffering under non-technical managers is a perennial, high-frequency problem \u2014 but the monetisation path is broken. The sufferer is an individual engineer with no budget authority and strong reluctance to pay for workplace tooling that could be used against them. The actual buyer who would pay (HR, L&D, Engineering VPs) isn't the one experiencing the pain, creating a classic diffuse B2B problem that requires enterprise sales cycles. There is no evidence of willingness to pay at either level, and the feedback/remediation workflow is inherently human-in-the-loop \u2014 it cannot run autonomously. Total drops to 2.7 after penalties; drop.",
+  "solution_plan": "This is not a viable solo micro-service. The engineer buyer won't pay, the corporate buyer (HR/VP Eng) requires a sales cycle and procurement process that a solo operator cannot run autonomously, and the core workflow (upward feedback, manager coaching) requires human judgement that Claude cannot replace. Building here would produce either an unused tool or an enterprise sales effort incompatible with this factory's model. Do not build.",
+  "notes": "Fails buyer_clarity_min (3 < 6), willingness_to_pay_min (3 < 5), and operational_autonomy_min (4 < 7). Total (2.7) is well below min_total_to_validate (5.5). Drop.",
+  "scored_at": "2026-10-21T11:08:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

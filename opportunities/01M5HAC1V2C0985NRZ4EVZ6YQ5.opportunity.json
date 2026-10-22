@@ -1,0 +1,25 @@
+{
+  "id": "01M5HAC1V2C0985NRZ4EVZ6YQ5",
+  "discovered_at": "2026-10-22T11:06:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95711/php-based-faq-engine",
+    "snippet": "I am looking for a FAQ engine for a project. I have installed phpMyFaq. But it's too slow, I have already fixed 4 serious bugs in its code, it has more. It's too feature rich. I am looking for: Preferably PHP and MySQL, Free or low one-off cost, Need heading, body, keywords, categories and attachments, Login required for editing, SSO support will be a bonus, running on Windows server."
+  },
+  "problem_statement": "Businesses running PHP/MySQL stacks on Windows Server need a simple, fast, self-hosted FAQ/knowledge-base engine, but the available open-source options are either too bloated, buggy, or abandoned \u2014 leaving teams patching code themselves.",
+  "target_segment": "Web developers and IT managers at SMBs or internal IT departments running Windows Server with PHP/MySQL stacks.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "faq-engine",
+    "knowledge-base",
+    "php",
+    "mysql",
+    "self-hosted",
+    "internal-tools",
+    "windows-server",
+    "sso"
+  ],
+  "notes": "Buyer is a developer/IT role at a business, already spending time fixing bugs in existing software \u2014 classic willingness-to-pay scenario for a clean, maintained alternative. Low-one-off-cost signals price sensitivity but not zero budget. Niche but recurring.",
+  "status": "candidate"
+}

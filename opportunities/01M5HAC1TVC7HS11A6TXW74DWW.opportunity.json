@@ -1,0 +1,25 @@
+{
+  "id": "01M5HAC1TVC7HS11A6TXW74DWW",
+  "discovered_at": "2026-10-22T11:06:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439930/subject-query-studio-2-security-review-and-production-installation-confirmati",
+    "snippet": "We are planning to install Query Studio 2 in our Salesforce Marketing Cloud Engagement environment. During installation, we receive the following warning: 'Salesforce isn't the provider of this listing and hasn't reviewed it.' Before proceeding with installation in our Production environment, could you please confirm: Is Query Studio 2 safe and recommended for use in a Production SFMC environment?"
+  },
+  "problem_statement": "Salesforce Marketing Cloud admins routinely need to install third-party AppExchange packages but lack a reliable, independent security vetting service to assess unreviewed listings before production deployment, creating compliance and security risk.",
+  "target_segment": "Salesforce Marketing Cloud admins and IT security teams at mid-market and enterprise companies deploying third-party SFMC packages.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "apexchange",
+    "security-review",
+    "saas-security",
+    "third-party-risk",
+    "sfmc",
+    "compliance"
+  ],
+  "notes": "Business context: enterprise Salesforce admin asking before production deployment \u2014 classic compliance gate. A paid third-party AppExchange package security audit service could command meaningful per-assessment fees. Single signal but the pattern (unreviewed listing anxiety) is a well-known recurring SFMC pain.",
+  "status": "candidate"
+}

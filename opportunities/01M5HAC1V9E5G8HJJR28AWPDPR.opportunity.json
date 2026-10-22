@@ -1,0 +1,24 @@
+{
+  "id": "01M5HAC1V9E5G8HJJR28AWPDPR",
+  "discovered_at": "2026-10-22T11:06:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/170119/what-are-the-types-of-due-diligence",
+    "snippet": "I am a co-founder of a SaaS startup, our product is good, it's out in the market but our revenue is still not stable, we have an interested investor on our line and he has recently asked us for due diligence. I am hoping someone here can shed some light on this topic and what all he may expect us to provide him."
+  },
+  "problem_statement": "First-time SaaS founders facing investor due diligence lack a structured, affordable guide or tool to prepare required financial, legal, and product documentation packages, forcing them to improvise or hire expensive advisors.",
+  "target_segment": "Early-stage SaaS startup founders (pre-Series A) preparing for first institutional or angel investor due diligence.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "due-diligence",
+    "saas-startup",
+    "investor-relations",
+    "fundraising",
+    "founder-tools",
+    "startup-ops",
+    "documentation"
+  ],
+  "notes": "Founder in active fundraising process \u2014 willing to pay for expert guidance to not lose the deal. Market for DD prep tools/templates/services is real (Visible, Notion templates, law firm packages). Single signal but high-stakes commercial context.",
+  "status": "candidate"
+}

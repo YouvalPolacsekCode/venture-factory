@@ -1,0 +1,24 @@
+{
+  "id": "01M5HAC1TCNJRGC562BXFSFYX5",
+  "discovered_at": "2026-10-22T11:06:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://pm.stackexchange.com/questions/36004/how-can-a-small-business-track-team-hours-across-multiple-projects",
+    "snippet": "I run a small business and am looking for a reliable way to track my team's working hours across different projects. I want to manage timesheets, monitor project progress, and understand how employees spend their time without creating additional administrative work."
+  },
+  "problem_statement": "Small business owners need lightweight multi-project time tracking that integrates timesheets with project progress visibility, but existing tools either create too much admin overhead or bundle too many unused features.",
+  "target_segment": "Small business owners and team leads managing 2\u201320 person teams across multiple simultaneous client projects.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "time-tracking",
+    "timesheet",
+    "project-management",
+    "small-business",
+    "team-hours",
+    "admin-overhead",
+    "freelance-ops"
+  ],
+  "notes": "Business owner explicitly seeking a paid tool solution. Market is crowded (Toggl, Harvest, Clockify) but pain around 'additional administrative work' suggests a gap in low-friction UX. Moderate buyer intent.",
+  "status": "candidate"
+}

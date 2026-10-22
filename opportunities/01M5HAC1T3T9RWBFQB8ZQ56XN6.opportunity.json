@@ -1,0 +1,25 @@
+{
+  "id": "01M5HAC1T3T9RWBFQB8ZQ56XN6",
+  "discovered_at": "2026-10-22T11:06:50+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50174697",
+    "snippet": "I want to understand this more - are you saying 'would pay for itself' if you are offering chatbot commercially? Or using it yourself in lieu of ChatGPT etc..? [re: DeepInfer high-performance inference framework for DeepSeek models]"
+  },
+  "problem_statement": "Teams deploying open-source LLMs commercially need clarity on total cost of ownership vs. hosted API alternatives, but there is no straightforward tool or benchmark that compares self-hosted inference cost (hardware, ops, latency) against pay-per-token API pricing for a given workload.",
+  "target_segment": "Startup CTOs and ML engineers at companies running chatbots or AI features commercially, evaluating self-hosted vs. API inference spend.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "llm-inference",
+    "cost-comparison",
+    "self-hosted-ai",
+    "deepseek",
+    "ai-cost",
+    "inference-economics",
+    "open-source-llm",
+    "chatbot"
+  ],
+  "notes": "Buyer signal: commenter is explicitly evaluating whether commercial chatbot deployment justifies inference infrastructure cost. Willingness-to-pay implied by 'would pay for itself' framing. Single signal but in a commercial context.",
+  "status": "candidate"
+}

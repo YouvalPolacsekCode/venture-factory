@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M5HAC1TKFF7NTJWNF455RCBK",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A credible security audit (even automated scanning + remediation guidance) requires reviewing specific server configurations, running scans against real infrastructure, and validating patch application \u2014 this cannot be fully automated without either privileged server access or significant per-customer human interpretation of results."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Security remediation services carry implicit liability \u2014 if a client follows the guidance and still gets breached, there is legal exposure. This is not a licensed industry per se, but the liability profile makes it materially risky for a solo operator."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and urgent \u2014 a CVSS 9.2 exploit affecting 70% of websites creates genuine commercial demand, and sysadmins/agencies do pay for managed security services. However, a credible hardening audit requires hands-on server access or at minimum detailed configuration review per customer, which cannot be automated by Claude alone. The combination of per-customer human fulfillment and meaningful liability exposure (a bad audit leading to a breach) makes this unsuitable for a solo non-technical operator. The opportunity is better suited to an existing managed security provider extending their offering.",
+  "solution_plan": "Not recommended for build. While the factory could generate a generic PHP2Shell hardening checklist (a free lead-magnet), a paid audit service requires per-customer server access, scan execution, and validation that Claude cannot perform autonomously. The liability risk of providing security remediation advice \u2014 and being wrong \u2014 is significant for a solo operator without cybersecurity credentials. This one is better left to established security firms.",
+  "notes": "Fails operational_autonomy (5 < 7 min). Also carries regulated_industry liability risk. Drop.",
+  "scored_at": "2026-10-22T11:09:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M5HAC1TCNJRGC562BXFSFYX5",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Small-business time-tracking is a high-volume, low-ARPU market \u2014 unit economics only work at scale (Toggl, Harvest, Clockify all require tens of thousands of users). A solo operator cannot reach the subscriber base needed to generate meaningful revenue."
+    }
+  ],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "Small business owners are a real buyer with money, and they do pay for tools like Toggl ($10-20/user/month) \u2014 willingness to pay is confirmed by incumbents. However, the market is extremely crowded with well-funded, established competitors, and building a differentiated time-tracking product requires a full web app with database, authentication, real-time sync, and mobile \u2014 well beyond what Claude + prompts + a landing page can deliver in a week. Operational_autonomy and buildability_with_ai both fail build_gates, and the business model requires scale to be viable for a solo operator. Not the right fit.",
+  "solution_plan": "Not recommended for build. A solo non-technical operator using this factory cannot realistically build a competitive time-tracking web application \u2014 it requires a persistent database, user accounts, timers, reporting dashboards, and mobile access that go far beyond a Claude prompt + Stripe page. Even if built, the market is dominated by Toggl, Harvest, and Clockify at price points that require thousands of paying users to generate meaningful revenue. The factory's strengths (automated delivery of text/data/analysis outputs) don't apply here.",
+  "notes": "Fails buildability_with_ai (4 < 6 min) and operational_autonomy (4 < 7 min). Drop.",
+  "scored_at": "2026-10-22T11:09:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-10-21T08:09:00+00:00",
-    "idt": "2026-10-21T11:09:00+03:00"
+    "utc": "2026-10-22T08:09:27+00:00",
+    "idt": "2026-10-22T11:09:27+03:00"
   },
   "funnel": {
-    "candidates": 396,
-    "scored": 396,
+    "candidates": 402,
+    "scored": 402,
     "validated": 46,
     "build_decisions": {
       "defer_1_week": 41,
@@ -598,6 +598,35 @@
     },
     {
       "topics": [
+        "llm-inference",
+        "cost-comparison",
+        "self-hosted-ai"
+      ],
+      "id": "01M5HAC1T3T9RWBFQB8ZQ56XN6",
+      "problem_statement": "Teams deploying open-source LLMs commercially need clarity on total cost of ownership vs. hosted API alternatives, but there is no straightforward tool or benchmark that compares self-hosted inference cost (hardware, ops, latency) against pay-per-token API pricing for a given workload.",
+      "target_segment": "Startup CTOs and ML engineers at companies running chatbots or AI features commercially, evaluating self-hosted vs. API inference spend.",
+      "total": 6.5,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, named technical role (startup CTO / ML engineer) evaluating a real commercial decision with money on the line — solid buyer clarity and genuine pain. Willingness to pay is reasonable given adjacent tools (Infracost, CloudZero) already monetize infrastructure cost visibility for engineers. However, the build_gate for willingness_to_pay (min 5) is met, but responsiveness_signal is essentially zero (single HN comment, no probe), and this topic moves fast — model pricing ch…",
+      "solution_plan": "The micro-service is an LLM Inference Cost Calculator: a web form where a user inputs their model choice, expected token volume, and latency requirement, and gets back a side-by-side monthly cost estimate (self-hosted GPU vs. major API providers). The factory builds it as a Claude-powered calculation engine behind a simple static page with a Stripe payment link for a one-time report or a $29/month subscription tier — no coding by Youval. To sell, the factory drafts cold outreach to CTOs and ML engineers visible on LinkedIn or in AI startup communities (AngelList, YC forums) plus a Product Hunt launch post; all outreach batches go out only af…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 6,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=50174697",
+      "discovered_at": "2026-10-22T11:06:50+03:00"
+    },
+    {
+      "topics": [
         "ai-spend",
         "cost-optimization",
         "saas-management"
@@ -713,48 +742,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48942806",
       "discovered_at": "2026-07-17T08:33:10+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "pardot",
-        "marketing-automation"
-      ],
-      "id": "01KZD8S0T7Z3QC8ZK0A6V0RDKE",
-      "problem_statement": "Salesforce/Pardot admins managing GDPR compliance workflows cannot reliably predict how edited automation rules behave on existing prospect records, creating compliance risk and requiring expensive consultant time to validate.",
-      "target_segment": "Marketing operations managers and Salesforce admins at mid-size to enterprise B2B companies using Pardot/Account Engagement for GDPR compliance",
-      "total": 6.4,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is concrete and reachable: marketing ops managers and Salesforce admins at B2B companies paying $1,250–$15,000/month for Pardot — they demonstrably have budget and a compliance-driven reason to pay for clarity. Pain is real (GDPR compliance errors carry regulatory cost) and recurs whenever rule logic changes. Willingness to pay is plausible given the existing spend level, but no direct payment signal exists yet; validation is needed before building. Operational autonomy just meets the…",
-      "solution_plan": "The micro-service is a Pardot/Account Engagement GDPR automation advisory: operators paste their automation rule configuration and describe their GDPR scenario, and Claude returns a plain-English explanation of how the rule will behave on existing records, plus a compliance risk flag. Build: the factory creates a Claude prompt trained on Pardot documentation + GDPR rule logic, wires it to a simple intake form (Typeform or similar) and a Stripe link for pay-per-query or a $49/month subscription. Sell: the factory drafts cold outreach to Salesforce admins identifiable via LinkedIn (search 'Pardot admin' + 'GDPR') and via Salesforce Stack Excha…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 7,
-        "Will pay": 7,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "rejected",
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439730/account-engagement-pardot-automation-rules-behavior-on-repeat",
-      "discovered_at": "2026-08-07T07:47:49+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3678,
-    "last_7_days_usd": 2.0524,
-    "all_time_usd": 32.3175,
+    "today_usd": 0.2497,
+    "last_7_days_usd": 2.1144,
+    "all_time_usd": 32.5672,
     "by_day": [
-      {
-        "date": "2026-10-15",
-        "usd": 0.1877
-      },
       {
         "date": "2026-10-16",
         "usd": 0.3605
@@ -778,12 +774,16 @@
       {
         "date": "2026-10-21",
         "usd": 0.3678
+      },
+      {
+        "date": "2026-10-22",
+        "usd": 0.2497
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6247
+        "usd": 0.6262
       },
       {
         "agent": "build_decisions",
@@ -791,11 +791,11 @@
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4087
+        "usd": 0.4741
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3719
+        "usd": 0.3672
       },
       {
         "agent": "daily_summary",
@@ -804,41 +804,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-15",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "skipped": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-16",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-10-22",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-10-21.md",
-    "date": "2026-10-21",
-    "text": "# Daily Summary — 2026-10-21 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 396 |\n| Opportunities validated past threshold | 102 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently running. Factory is in discovery phase across all opportunity cohorts.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for new pain signals across target verticals.\n2. `pain_validation` validates top 102 scored opportunities against threshold criteria.\n3. `opportunity_scoring` processes newly surfaced candidates.\n4. `build_decisions` evaluates validated opportunities for experiment viability.\n5. `cost_gain` computes ROI signals on discovery-phase activities.\n\n## Operator action items\n\nNone — process is flowing cleanly. 396 candidates identified, 102 passed validation threshold. Monitor for when the first experiment enters build phase (expected within 3–5 days based on velocity).",
+    "file": "reports/daily/2026-10-22.md",
+    "date": "2026-10-22",
+    "text": "# Daily Summary — 2026-10-22 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 402 |\n| Opportunities validated past threshold | 102 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or live services currently running.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across B2B communities.\n2. `opportunity_scoring` processes new candidates from overnight market scans.\n3. `pain_validation` validates high-scoring opportunities via targeted probes.\n4. `lead_research` extracts contact info and enriches prospect profiles.\n5. `build_decisions` evaluates validated opportunities for experiment eligibility.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

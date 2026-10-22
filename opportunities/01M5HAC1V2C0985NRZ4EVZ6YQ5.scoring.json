@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M5HAC1V2C0985NRZ4EVZ6YQ5",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A self-hosted PHP/MySQL FAQ engine is a software product, not a service \u2014 it requires ongoing development, bug fixing, security patching, and feature work that cannot be automated by Claude prompts. Delivering and maintaining a software product is inherently human-touch."
+    }
+  ],
+  "total": 2.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer (IT manager / developer at an SMB) is identifiable but is explicitly seeking free or low one-off cost software \u2014 the willingness_to_pay signal is weak, and the market signal is from a single forum post about a niche self-hosted stack. Building and maintaining a PHP FAQ engine is a software product development effort that requires ongoing coding, bug fixes, and security patches \u2014 none of which Claude can do autonomously. This is the wrong shape of opportunity for this factory entirely.",
+  "solution_plan": "Not recommended for build. This would require building and maintaining a custom PHP/MySQL web application \u2014 a full software product with a codebase that needs ongoing development, security patching, and support. That is not something a solo non-technical operator using Claude prompts + a landing page + Stripe can deliver. The buyer also signals strong price sensitivity ('free or low one-off cost'), making the economics unattractive even if the build problem were solvable.",
+  "notes": "Fails buildability_with_ai (3 < 6 min) and operational_autonomy (3 < 7 min). Drop.",
+  "scored_at": "2026-10-22T11:09:01+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

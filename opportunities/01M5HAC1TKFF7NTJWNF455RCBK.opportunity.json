@@ -1,0 +1,26 @@
+{
+  "id": "01M5HAC1TKFF7NTJWNF455RCBK",
+  "discovered_at": "2026-10-22T11:06:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200069/how-to-protect-a-server-against-the-recently-revealed-php2shell-exploit-older",
+    "snippet": "Recently, a PHP exploit nicknamed PHP2Shell was revealed which combines the exploits in CVE-2026-109618 and CVE-2026-109619... PHP powers approximately 70% of websites, including platforms such as WordPress, Drupal and Wikipedia's MediaWiki. This severity reaching CVSS 9.2 can allow unauthenticated attackers to execute code or expose sensitive process memory."
+  },
+  "problem_statement": "Server administrators running PHP-based applications (WordPress, Drupal, etc.) urgently need clear, actionable hardening guidance and automated scanning for the PHP2Shell critical exploit (CVSS 9.2), but existing documentation is fragmented across CVE advisories and vendor patches.",
+  "target_segment": "Sysadmins and DevOps engineers at SMBs and agencies running PHP/WordPress/Drupal stacks on self-managed servers.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "php-security",
+    "exploit",
+    "vulnerability-patching",
+    "wordpress",
+    "drupal",
+    "server-hardening",
+    "cve",
+    "managed-security",
+    "devops"
+  ],
+  "notes": "Recurring commercial pain: agencies and hosters managing many PHP servers pay for managed security services. A paid 'PHP hardening audit + automated remediation' product or vulnerability scanner add-on has clear buyer. Signal is timely (CVSS 9.2 published recently per item). Multiple downstream businesses affected.",
+  "status": "candidate"
+}

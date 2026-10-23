@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5KWN81N98D6DMA951TBJT2P",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 9,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "build",
+  "rationale": "The buyer is crystal clear: a pre-seed or seed-stage B2B SaaS co-founder who is actively in a fundraising conversation right now \u2014 a time-pressured moment where they have strong incentive to pay to avoid losing a deal. Competitors (Visible, Docsend, Capshare) confirm that this segment pays for fundraising infrastructure, and a low-cost template kit undercuts them on price for the pre-revenue cohort. The deliverable \u2014 a structured, pre-filled data room template bundle with guided prompts \u2014 is a pure Claude-output product: no custom infra, no compliance moat needed, shippable as a PDF/Notion pack + Stripe link within days. Operational autonomy is high because delivery is instant (digital download or auto-shared Notion template) and support is FAQ-answerable by Claude; the only recurring human step is approving outreach batches. All four build gates pass.",
+  "solution_plan": "WHAT: A self-serve investor data room kit \u2014 a structured Notion workspace (or Google Drive pack) pre-populated with every standard due-diligence section, guided prompts for each document, and a plain-English explainer of what investors actually want. BUILD: The factory uses Claude to generate the full template content (cap table explainer, financial model scaffold, founder bios template, IP assignments checklist, etc.), packages it as a ready-to-duplicate Notion template, creates a Gumroad or Stripe payment page at ~$49\u2013$97 one-time, and writes an automated email delivery flow \u2014 zero coding by you. SELL: The factory finds actively fundraising founders via Twitter/X hashtags (#fundraising, #seedround), Indie Hackers, and relevant Slack/Discord communities, drafts short personal outreach messages ('saw you're raising \u2014 here's a tool that saved founders days of scramble'), and queues each batch for your approval before sending. MAINTAIN: After purchase, Stripe triggers an automated Notion invite or Google Drive share; Claude handles support questions via a short FAQ chatbot embedded on the page; no per-customer manual work is required. Your only recurring touch: approving outreach batches once or twice a week and reviewing any support escalations Claude can't resolve (expected: rare).",
+  "notes": "All build gates pass: operational_autonomy=8 (\u22657 \u2713), buildability_with_ai=9 (\u22656 \u2713), buyer_clarity=8 (\u22656 \u2713), willingness_to_pay=6 (\u22655 \u2713). Total 6.6 meets min_total_to_build (6.5). Defensibility is low (3) \u2014 this is a document product that competitors could copy \u2014 but low defensibility is acceptable at build stage for a one-time-purchase product where speed-to-market and distribution are the moat. Pain frequency is moderate (4) because fundraising is episodic, not daily, which caps repeat revenue; a follow-on upsell (monthly investor-update template service) could address this after initial traction.",
+  "scored_at": "2026-10-23T11:06:41+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

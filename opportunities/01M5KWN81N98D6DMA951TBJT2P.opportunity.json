@@ -1,0 +1,26 @@
+{
+  "id": "01M5KWN81N98D6DMA951TBJT2P",
+  "discovered_at": "2026-10-23T11:04:54+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/170119/what-standard-documents-should-an-early-stage-startup-must-prepare-for-investor",
+    "snippet": "I am a co-founder of a SaaS startup, our product is good, it's out in the market but our revenue is still not stable, we have an interested investor on our line and he has recently asked us for due diligence. since due diligence is based on what the investor specifically asks for, i want to proactively create a data room so we can fulfill their requests without any delays. For an early stage B2B startup, what are some standard documents and information that investors typically request during due diligence?"
+  },
+  "problem_statement": "Early-stage SaaS founders entering investor due diligence lack a structured, template-driven data room kit and checklist, causing delays and missed fundraising windows when investors ask for documents they haven't prepared.",
+  "target_segment": "Pre-seed and seed-stage B2B SaaS co-founders actively in fundraising conversations, typically solo or 2-person founding teams",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "fundraising",
+    "due-diligence",
+    "data-room",
+    "investor-docs",
+    "saas-startup",
+    "early-stage",
+    "startup-finance",
+    "investor-relations",
+    "b2b-saas"
+  ],
+  "notes": "Co-founder with active investor interest proactively seeking to avoid delays \u2014 clear business urgency and a person with money on the line. Single-source signal but the question type recurs frequently on finance/startup forums. Potential product: a self-serve data room template kit (Notion/Google Drive) or lightweight SaaS that auto-populates standard investor doc categories with prompts. Competitor space includes Visible.vc, Capshare, Docsend \u2014 but a low-cost template product aimed at pre-revenue founders has a gap. Buyer intent moderate: founder is actively fundraising, willing to pay to not lose a deal.",
+  "status": "candidate"
+}

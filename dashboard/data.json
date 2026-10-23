@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-10-22T08:09:27+00:00",
-    "idt": "2026-10-22T11:09:27+03:00"
+    "utc": "2026-10-23T08:06:46+00:00",
+    "idt": "2026-10-23T11:06:46+03:00"
   },
   "funnel": {
-    "candidates": 402,
-    "scored": 402,
+    "candidates": 404,
+    "scored": 404,
     "validated": 46,
     "build_decisions": {
       "defer_1_week": 41,
@@ -395,6 +395,35 @@
     },
     {
       "topics": [
+        "fundraising",
+        "due-diligence",
+        "data-room"
+      ],
+      "id": "01M5KWN81N98D6DMA951TBJT2P",
+      "problem_statement": "Early-stage SaaS founders entering investor due diligence lack a structured, template-driven data room kit and checklist, causing delays and missed fundraising windows when investors ask for documents they haven't prepared.",
+      "target_segment": "Pre-seed and seed-stage B2B SaaS co-founders actively in fundraising conversations, typically solo or 2-person founding teams",
+      "total": 6.6,
+      "recommended_stage": "build",
+      "rationale": "The buyer is crystal clear: a pre-seed or seed-stage B2B SaaS co-founder who is actively in a fundraising conversation right now — a time-pressured moment where they have strong incentive to pay to avoid losing a deal. Competitors (Visible, Docsend, Capshare) confirm that this segment pays for fundraising infrastructure, and a low-cost template kit undercuts them on price for the pre-revenue cohort. The deliverable — a structured, pre-filled data room template bundle with guided prompts — is a…",
+      "solution_plan": "WHAT: A self-serve investor data room kit — a structured Notion workspace (or Google Drive pack) pre-populated with every standard due-diligence section, guided prompts for each document, and a plain-English explainer of what investors actually want. BUILD: The factory uses Claude to generate the full template content (cap table explainer, financial model scaffold, founder bios template, IP assignments checklist, etc.), packages it as a ready-to-duplicate Notion template, creates a Gumroad or Stripe payment page at ~$49–$97 one-time, and writes an automated email delivery flow — zero coding by you. SELL: The factory finds actively fundraisin…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 8,
+        "Runs alone": 8,
+        "Will pay": 6,
+        "Buildable": 9,
+        "Pain": 8
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://money.stackexchange.com/questions/170119/what-standard-documents-should-an-early-stage-startup-must-prepare-for-investor",
+      "discovered_at": "2026-10-23T11:04:54+03:00"
+    },
+    {
+      "topics": [
         "llm-cost-monitoring",
         "api-spend",
         "openai-billing"
@@ -713,48 +742,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48637755",
       "discovered_at": "2026-06-23T09:39:58+03:00"
-    },
-    {
-      "topics": [
-        "help-desk",
-        "ticket-deduplication",
-        "multi-channel-support"
-      ],
-      "id": "01KXQ90YW4BEX83JXM6G0203GD",
-      "problem_statement": "Small dev teams managing support across Discord, GitHub issues, and email struggle with duplicate bug reports across channels, causing wasted dev time triaging the same issue multiple times and failing to connect reports to internal documentation.",
-      "target_segment": "Small-to-mid software companies and indie devs running community Discord servers alongside GitHub and email support, typically 2-20 person eng teams.",
-      "total": 6.4,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is identifiable — an eng lead or technical founder at a 2-20 person dev-community SaaS, who already uses paid help-desk tools and is explicitly evaluating AI automation, giving a real budget signal. The pain is real and daily: every duplicate bug report across Discord, GitHub, and email wastes developer time, which has a direct, measurable dollar cost. The deciding factor holding this to 'validate' is that no response signal exists yet and this is a crowded space (Linear, Plain, Unito…",
-      "solution_plan": "The micro-service is an AI-powered duplicate-report deduplicator and cross-channel aggregator for small dev teams — it listens to Discord, GitHub Issues, and email, clusters semantically similar reports, and posts a unified summary with a canonical issue link. The factory builds this as a Claude prompt pipeline connected via webhooks (Discord bot token, GitHub webhook, email forwarding alias) feeding into a lightweight web dashboard hosted on a static page; a Stripe subscription link handles billing at ~$49/mo per workspace, with a 14-day free trial captured via an intake form — Youval touches nothing except approving the outreach batch. To…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 6,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "validated",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48942806",
-      "discovered_at": "2026-07-17T08:33:10+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2497,
-    "last_7_days_usd": 2.1144,
-    "all_time_usd": 32.5672,
+    "today_usd": 0.2157,
+    "last_7_days_usd": 1.9696,
+    "all_time_usd": 32.7829,
     "by_day": [
-      {
-        "date": "2026-10-16",
-        "usd": 0.3605
-      },
       {
         "date": "2026-10-17",
         "usd": 0.3608
@@ -778,67 +774,36 @@
       {
         "date": "2026-10-22",
         "usd": 0.2497
+      },
+      {
+        "date": "2026-10-23",
+        "usd": 0.2157
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6262
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.6144
+        "usd": 0.6325
       },
       {
         "agent": "pain_validation",
-        "usd": 0.4741
+        "usd": 0.4813
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.4656
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3672
+        "usd": 0.3578
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0326
+        "usd": 0.0325
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-16",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-17",
       "agents": {
@@ -1048,12 +1013,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-10-23",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-10-22.md",
-    "date": "2026-10-22",
-    "text": "# Daily Summary — 2026-10-22 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 402 |\n| Opportunities validated past threshold | 102 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or live services currently running.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across B2B communities.\n2. `opportunity_scoring` processes new candidates from overnight market scans.\n3. `pain_validation` validates high-scoring opportunities via targeted probes.\n4. `lead_research` extracts contact info and enriches prospect profiles.\n5. `build_decisions` evaluates validated opportunities for experiment eligibility.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-10-23.md",
+    "date": "2026-10-23",
+    "text": "# Daily Summary — 2026-10-23 (Thu)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 404 |\n| Opportunities validated past threshold | 103 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently. Factory in discovery phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues pain signal sweeps across developer and SaaS communities.\n2. `opportunity_scoring` processes new candidate pool for threshold-pass verdicts.\n3. `pain_validation` validates high-scoring opportunities via outbound DM probes.\n4. `lead_research` enriches candidate contact data for future outreach campaigns.\n5. `build_decisions` prepares experiment designs for top-validated opportunities.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

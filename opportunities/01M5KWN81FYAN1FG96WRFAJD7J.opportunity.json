@@ -1,0 +1,26 @@
+{
+  "id": "01M5KWN81FYAN1FG96WRFAJD7J",
+  "discovered_at": "2026-10-23T11:04:54+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50204125",
+    "snippet": "The 'product graveyard' of SaaSHub has been tracking the status (and lifespan) of hundreds of thousands of products. It's been hovering around 4y for quite some time. However, there's a sharp decline in 2026 leading to about 1.5y these days. That's a huge drop. And, it matches my 'human' observations. A lot of products a[re dying faster]... (51 points, 24 comments)"
+  },
+  "problem_statement": "SaaS founders, operators, and investors have no systematic early-warning tool to detect when competing or complementary products are dying faster than historical norms, making build-vs-buy and vendor-risk decisions increasingly error-prone as median product lifespan collapses from ~4y to ~1.5y.",
+  "target_segment": "SaaS founders, product managers, and B2B buyers at companies with 5-200 employees evaluating or using third-party tools",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "saas",
+    "product-graveyard",
+    "vendor-risk",
+    "competitive-intelligence",
+    "build-vs-buy",
+    "product-lifecycle",
+    "churn-monitoring",
+    "startup-failure",
+    "market-intelligence"
+  ],
+  "notes": "51 points and 24 comments on HN indicates real resonance with the builder/operator audience. The pain is vendor-risk and build-vs-buy uncertainty, which has direct business cost. However, this is a single source and the signal is observational rather than a direct 'I need a tool and I'd pay for it.' Potential product: a vendor-health monitoring dashboard that alerts procurement/ops teams when tools they rely on show mortality signals. Buyer would be ops/procurement at SMBs or a solo operator building a market-intel newsletter. Willingness-to-pay not explicit but business context is clear.",
+  "status": "candidate"
+}

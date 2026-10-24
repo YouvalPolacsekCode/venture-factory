@@ -1,0 +1,24 @@
+{
+  "id": "01M5PDW85Y8344RAEXH2RMJTNE",
+  "discovered_at": "2026-10-24T10:44:19+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50216355",
+    "snippet": "Curious about what kind of router I should get to be safe with all the vulnerabilities being discovered. I'm thinking something running OpenWRT makes sense, since that's open source and likely to receive updates quickly going forward. Does anyone have any recommendations?"
+  },
+  "problem_statement": "SMB owners and technical home-office operators cannot easily identify which network hardware is actively maintained against newly discovered vulnerabilities, leaving them exposed as consumer router firmware update cadences lag behind the current rapid-exploitation environment.",
+  "target_segment": "Small business owners, remote-first teams, and technically aware home-office operators managing their own network hardware.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "router-security",
+    "firmware-updates",
+    "openwrt",
+    "network-security",
+    "vulnerability-tracking",
+    "smb-security",
+    "hardware-advisory"
+  ],
+  "notes": "5 points, 3 comments on HN. Framed in context of a 'vulnpocalypse' \u2014 rapid AI-assisted exploit discovery. Buyer intent is implicit (willingness to purchase hardware + invest time in configuration). A subscription advisory service ('is your router still safe?') or a managed hardware-as-a-service for SMBs could monetize this. Corroborates the AI-security signal above.",
+  "status": "candidate"
+}

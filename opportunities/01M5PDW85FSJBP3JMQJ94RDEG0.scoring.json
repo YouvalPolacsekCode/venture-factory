@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5PDW85FSJBP3JMQJ94RDEG0",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [],
+  "total": 5.9,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and well-documented \u2014 indie devs and solo operators running their own mail servers get silently blacklisted by Outlook/Gmail with no appeal path, and the poster explicitly states willingness to pay $5\u201330/month for a managed alternative. The buyer is a nameable technical persona (indie dev / small-biz sysadmin) with a clear software-buying history. However, the deciding factor holding this at validate is operational_autonomy: a deliverability health-check or warm-IP relay requires ongoing IP reputation management, ISP relationship handling, and potentially per-customer SMTP relay infrastructure \u2014 none of which is hands-off for a solo operator with Claude tooling. The build_gate for operational_autonomy (floor: 7) is unmet at 5, and buildability_with_ai is also below floor at 5.",
+  "solution_plan": "The micro-service is a self-hosted email deliverability audit and monitoring report \u2014 a weekly automated check of a customer's domain/IP against major blacklists (Spamhaus, Barracuda, Microsoft SNDS), SPF/DKIM/DMARC validity, and inbox placement test results, delivered as a clean PDF/HTML report by email. BUILD: the factory sets up a Claude-driven pipeline that calls public blacklist APIs and MX toolbox-style checks, formats results into a readable report, and emails it via an existing transactional provider (Postmark or Resend); a simple landing page with Stripe at $15\u201325/month handles signup \u2014 no operator coding needed. SELL: reach technical founders via HN 'Show HN', indie hacker communities (Indie Hackers, /r/selfhosted), and cold outreach to operators posting in self-hosting Discord/Reddit threads; outreach batches go out only after operator approval. MAINTAIN: billing via Stripe, report generation and delivery fully automated by Claude + cron; operator's only recurring touch is approving outreach batches and monitoring for API failures. CAVEAT: this is an audit/advisory service, NOT a managed relay \u2014 building an actual warm-IP relay would require physical infrastructure Youval cannot run hands-off, so scope must stay at monitoring/reporting only.",
+  "notes": "Build gates failing: operational_autonomy=5 (floor 7), buildability_with_ai=5 (floor 6). Stage capped at validate. If scoped strictly to audit/monitoring reports (not relay infrastructure), buildability improves to ~7 but autonomy remains borderline \u2014 recommend validating that buyers will pay for monitoring-only before committing to build.",
+  "scored_at": "2026-10-24T10:46:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

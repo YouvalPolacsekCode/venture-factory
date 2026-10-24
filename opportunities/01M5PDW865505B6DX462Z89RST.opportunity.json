@@ -1,0 +1,25 @@
+{
+  "id": "01M5PDW865505B6DX462Z89RST",
+  "discovered_at": "2026-10-24T10:44:19+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95722/feature-request-manager",
+    "snippet": "Looking for something to track feature requests. Able to upload docs, zips, images. Free or one time low cost. Run on Windows, browser accessible."
+  },
+  "problem_statement": "Small software teams and solo developers need a lightweight, self-hostable or one-time-purchase feature request tracker that supports file attachments, without committing to SaaS subscription pricing.",
+  "target_segment": "Solo developers, small ISVs, and Windows-centric software teams managing customer feature requests on limited budgets.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "feature-request-management",
+    "product-feedback",
+    "self-hosted",
+    "one-time-purchase",
+    "issue-tracker",
+    "windows",
+    "small-team",
+    "indie-software"
+  ],
+  "notes": "Explicit price sensitivity ('free or one time low cost') signals a buyer who has evaluated SaaS options and rejected them on cost grounds. One-time-purchase or self-hosted feedback tools are an underserved niche \u2014 most incumbents (Canny, UserVoice) are subscription SaaS at $50-500/month. A $49 lifetime deal product could convert well here.",
+  "status": "candidate"
+}

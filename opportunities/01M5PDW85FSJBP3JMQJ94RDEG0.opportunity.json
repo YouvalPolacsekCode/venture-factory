@@ -1,0 +1,27 @@
+{
+  "id": "01M5PDW85FSJBP3JMQJ94RDEG0",
+  "discovered_at": "2026-10-24T10:44:19+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50218062",
+    "snippet": "I wanted to self host my email and decided to rent a VPS. I made sure the ipv4 address was on no blacklist. My domain uses a good TLD with a long domain history. I set up SPF, DKIM, DMARC, reverse IP DNS, etc. I sent 3 emails to my personal outlook/hotmail accounts, all of which went to spam. 1 day later, my IP was banned. Outlook support said they cannot discuss the reason for the ban and will not unban it so I'm out of luck. I know I can just pay a provider $5/month and get..."
+  },
+  "problem_statement": "Self-hosting email is practically impossible for small operators: even properly configured servers (SPF, DKIM, DMARC, clean IPs) get silently blacklisted by major providers like Outlook with no recourse, forcing reliance on paid email infrastructure they'd prefer to avoid or at minimum want help navigating.",
+  "target_segment": "Indie developers, small business owners, and solo operators running their own infrastructure who want reliable email deliverability without opaque blacklisting.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "email-deliverability",
+    "self-hosted-email",
+    "smtp",
+    "blacklist-monitoring",
+    "dkim",
+    "spf",
+    "dmarc",
+    "email-infrastructure",
+    "devops",
+    "small-business"
+  ],
+  "notes": "Poster explicitly acknowledges willingness to pay $5/month for a managed alternative. Pain is acute and repeated \u2014 this is a classic recurring cost-of-failure scenario. A managed deliverability health-check service or a warm-IP relay with monitoring could command $10\u201330/month from technical founders and SMB operators. Multiple HN threads historically on this topic indicate pattern demand.",
+  "status": "candidate"
+}

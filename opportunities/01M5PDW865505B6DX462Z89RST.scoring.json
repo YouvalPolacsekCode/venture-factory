@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M5PDW865505B6DX462Z89RST",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "A $49 lifetime deal to individual developers/indie teams requires very high volume of one-time purchasers to generate meaningful recurring revenue; no subscription means no compounding MRR, and the segment is notoriously price-sensitive and high-churn for tools."
+    }
+  ],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real \u2014 small teams want a lightweight feature request tracker without SaaS subscription overhead \u2014 but the buyer is a price-sensitive individual developer or small ISV who explicitly rejects ongoing payment, making sustainable revenue generation very difficult. A $49 lifetime deal requires hundreds of sales to matter, and this segment (solo devs on Stack Exchange software-recs) has demonstrated strong resistance to any paid tools. Willingness to pay for subscriptions is low by design; willingness to pay for one-time purchases is higher but the economics don't support a solo operator building and maintaining a product at that price point. Total after penalty is 4.1, well below the validate threshold.",
+  "solution_plan": "Not recommended. The micro-service would be a simple web-based feature request board with file attachment support, sold as a $49 one-time purchase or self-hosted download. BUILD is feasible with Claude + a simple form/database + Stripe one-time payment, but SELL and MAINTAIN are the problems: the target buyer actively avoids paying for software, the market is crowded with free alternatives (GitHub Issues, Trello, Linear free tier), and a lifetime-deal model means zero recurring revenue \u2014 Youval would need hundreds of sales to generate meaningful income. Support requests from self-hosters are also likely to be high-touch. A solo non-technical operator cannot profitably build and maintain this at the price point the market will accept.",
+  "notes": "Total 4.1 < min_total_to_validate (5.5) after b2c_at_scale_needed penalty. Primary weaknesses: buyer_clarity=5 (individual devs, not business buyers with budgets), willingness_to_pay=5 (explicitly rejects subscription; lifetime deal economics are poor), responsiveness_signal=1 (single Stack Exchange post, no demand validation). Drop recommended.",
+  "scored_at": "2026-10-24T10:46:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

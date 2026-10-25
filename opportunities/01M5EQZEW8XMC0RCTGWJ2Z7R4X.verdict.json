@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5EQZEW8XMC0RCTGWJ2Z7R4X",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "The pain is real for a narrow class of operators making large GPU purchases, but the evidence base is a single HN comment with no corroborating threads, no competitor pricing data, and no direct 'I'd pay for a calculator' signal. The market is globally small (a few hundred serious operators at any moment), the decision is one-time, and free spreadsheets already satisfy most buyers. This does not meet the 5-distinct-pain-quotes floor or the willingness-to-pay signal requirement.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50164771"
+  ],
+  "evaluated_at": "2026-10-25T10:56:35+03:00"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M5VMGFDK024X8BMV17YJ26WX",
+  "discovered_at": "2026-10-26T11:16:25+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50237680",
+    "snippet": "I've been trying to enroll for Apple Developer for over a month and nothing works. The Apple Developer app won't accept my Canadian passport for identity verification. The enrollment is for a Delaware LLC, so my Apple account region is set to US. I can't switch the account region to Canada either, because I haven't lived there in years and don't have a Canadian bank card. If I enroll through the website, the enrollment gets approved, I accept the term and, when it..."
+  },
+  "problem_statement": "Developers and small companies cannot reliably complete Apple Developer Program enrollment due to identity verification failures with non-US passports and region mismatches for international founders with US LLCs, blocking them from shipping iOS/macOS apps.",
+  "target_segment": "Independent developers and small startup founders with US LLCs who live outside the US and are trying to enroll in the Apple Developer Program.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "apple-developer",
+    "app-store",
+    "enrollment",
+    "identity-verification",
+    "international-founders",
+    "ios",
+    "macos",
+    "llc",
+    "onboarding"
+  ],
+  "notes": "20 points and active comments suggest real pain. Buyers are paying developers (Apple Developer Program costs $99/yr) blocked from their primary distribution channel. Multiple users confirming same issue in thread. Willingness to pay for a concierge/guided enrollment service is implicit \u2014 every day blocked is lost revenue.",
+  "status": "candidate"
+}

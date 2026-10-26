@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5VMGFE0HSCCSD5HN7C1E6EN",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [],
+  "total": 5.9,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a named, reachable B2B persona \u2014 engineering managers at 5-50 person companies who currently hold JetBrains or similar subscriptions and are actively mid-churn decision. They already pay for tooling and are spending mental energy on consolidation right now, which is a real commercial signal. The service is automatable in principle (Claude can generate structured ROI analyses and tooling benchmarks), but operational_autonomy sits at 6 \u2014 just meeting the floor \u2014 because each report may need light customisation to a company's actual stack, and the update cadence (AI tooling landscape shifts fast) requires periodic operator input. Responsiveness is untested (scored 2); this is the deciding unknown: does an engineering manager pay $49-199 for a structured analysis, or do they just read a free blog post? That question must be answered before building.",
+  "solution_plan": "The micro-service is a 'Dev Tooling ROI Audit' \u2014 a structured, AI-generated report that tells an engineering manager exactly which subscriptions to cut, keep, or replace given their team's stated stack and AI assistant usage. BUILD: the factory builds a one-page intake form (team size, current tools, AI assistant in use, rough monthly spend) plus a Claude prompt that maps inputs to a structured output (keep/cut/replace table with cost savings and rationale); delivery is a PDF/Notion report emailed within 24 hours \u2014 no coding by Youval. SELL: reach engineering managers and CTOs at 5-50 person startups via LinkedIn Sales Navigator (filter: 'Engineering Manager', 'Head of Engineering' at companies using JetBrains \u2014 public via LinkedIn data); Youval approves each outreach batch before it sends; price the first report at $79-149. MAINTAIN: intake, Claude generation, and email delivery are automated; Youval's only recurring touch is approving outreach batches and optionally reviewing flagged reports; billing via Stripe one-time payment link. VALIDATE FIRST: before building, post a simple landing page with a Stripe link and run 50 cold LinkedIn messages \u2014 if 3+ people pay within 2 weeks, build the full pipeline.",
+  "notes": "build_gates status: operational_autonomy=6 (floor 7 \u2014 FAILS by 1 point), buildability_with_ai=7 (passes), buyer_clarity=7 (passes), willingness_to_pay=6 (passes). The operational_autonomy gate is the binding constraint capping this at 'validate': the service requires periodic human judgement to keep benchmark data current as the AI tooling landscape evolves rapidly, and light per-report customisation may be needed. If validation confirms paying customers, the operator should assess whether a more templated, fully automated delivery flow can push autonomy to 7+ before committing to build.",
+  "scored_at": "2026-10-26T11:18:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5HAC1T3T9RWBFQB8ZQ56XN6",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain of comparing self-hosted LLM inference costs against API pricing is real and commercially relevant for ML engineers, but evidence remains thin: a single HN comment provides the seed signal, adjacent tools (Infracost, CloudZero) confirm the cost-visibility category but don't prove willingness to pay specifically for LLM inference comparison. The market moves too fast\u2014model pricing changes weekly\u2014making any calculator stale quickly, and the five-distinct-pain-quote threshold is not met from available sources.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50174697"
+  ],
+  "evaluated_at": "2026-10-26T11:17:28+03:00"
+}

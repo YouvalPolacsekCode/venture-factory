@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M5VMGFDK024X8BMV17YJ26WX",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 6
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Concierge enrollment assistance requires a human to actually navigate Apple's identity verification process with each customer \u2014 this cannot be delegated to Claude or automated code. Per-customer manual work is unavoidable."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Guided enrollment inherently requires synchronous hand-holding (screen-sharing, live troubleshooting steps, back-and-forth with the customer) to diagnose their specific passport/region/account situation."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Edge cases multiply by nationality, passport type, LLC state, Apple account history \u2014 each customer's situation is unique, requiring ongoing human-judgement support."
+    }
+  ],
+  "total": 1.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and the pain is genuine \u2014 international founders with US LLCs are genuinely blocked from shipping iOS apps and losing money daily. However, the service cannot run autonomously: every single customer engagement requires a human to investigate their specific Apple account state, passport, and region configuration and walk them through a bespoke fix. The deciding factor is operational_autonomy (scored 3) combined with buildability_with_ai (scored 4) \u2014 Claude cannot interact with Apple's enrollment UI or identity-verification flow on a customer's behalf, so this is fundamentally a human-concierge business, not an automatable micro-service.",
+  "solution_plan": "There is no realistic autonomous version of this service. The Apple Developer enrollment issue is caused by opaque Apple-side identity matching that differs per passport, account region, and LLC structure \u2014 it cannot be resolved by a Claude-generated guide alone, and the factory cannot interact with Apple's systems on the customer's behalf. A human consultant could charge $150-300 per engagement, but that is a freelancing gig, not a scalable factory-built product. A static troubleshooting guide (a paid PDF or Gumroad page) is the closest automatable artifact, but willingness to pay for a guide vs. a live fix is low, and the problem is too situational for a generic guide to be reliable. Recommend drop.",
+  "notes": "Failing build_gates: operational_autonomy (3, floor is 7), buildability_with_ai (4, floor is 6). Even without the penalty deductions, total weighted score of 4.7 is below the validate threshold of 5.5. The pain is real but the delivery mechanism is irreducibly human. Not a factory candidate.",
+  "scored_at": "2026-10-26T11:18:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

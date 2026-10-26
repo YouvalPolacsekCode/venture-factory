@@ -1,0 +1,24 @@
+{
+  "id": "01M5VMGFE0HSCCSD5HN7C1E6EN",
+  "discovered_at": "2026-10-26T11:16:25+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50219736",
+    "snippet": "I feel somewhat bad for JetBrains. Their entire world was flipped upside down. My first intro to a coding harness was through their IDE. Not even a month later and I stopped using their platform altogether. After the year is up I won't be renewing any of my company's subscriptions. They have to try to push this stuff out to survive but none of it is innovative. Not sure why anyone would pay for this when it can be one-shot with a single good prompt."
+  },
+  "problem_statement": "Professional developers are cancelling legacy IDE and dev-tooling subscriptions (e.g. JetBrains) as AI coding assistants displace them, but they lack a clear, curated framework for evaluating which remaining paid tooling still delivers ROI versus what to drop.",
+  "target_segment": "Software developers and engineering managers at small-to-mid-size companies who manage dev tooling budgets and are actively reassessing subscriptions.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ide",
+    "developer-tools",
+    "ai-coding",
+    "subscription-management",
+    "jetbrains",
+    "tooling-roi",
+    "engineering-productivity"
+  ],
+  "notes": "Signal is a paying buyer (company subscriptions, explicitly mentions not renewing) mid-churn from legacy tooling. Opportunity: a tool or advisory service that benchmarks AI-era developer tooling ROI and recommends consolidation \u2014 could be a paid report, a SaaS comparison dashboard, or a consulting engagement. Buyer controls budget and is actively making spend decisions.",
+  "status": "candidate"
+}

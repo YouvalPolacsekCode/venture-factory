@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5HAC1V9E5G8HJJR28AWPDPR",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "Pain is real but structurally low-frequency: a founder goes through investor due diligence once or twice in a lifetime, capping LTV and making CAC recovery fragile. Only one source signal was found, and while adjacent competitor products (Visible.vc, Docsend, law firm DD packages) confirm the segment pays for fundraising infrastructure, no direct willingness-to-pay quote or competitor pricing evidence was available to meet the 5-quote minimum. The overlap with candidate 01M5KWN81N98D6DMA951TBJT2P (data room kit, scored higher at 6.6 and recommended for build) makes this a redundant and weaker duplicate.",
+  "sources": [
+    "https://money.stackexchange.com/questions/170119/what-are-the-types-of-due-diligence"
+  ],
+  "evaluated_at": "2026-10-27T11:30:58+03:00"
+}

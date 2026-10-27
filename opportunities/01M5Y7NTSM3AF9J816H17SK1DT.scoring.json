@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5Y7NTSM3AF9J816H17SK1DT",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "The pain is genuine, well-documented, and in a paid market \u2014 Redgate SQL Compare, Bytebase, and Liquibase Pro all charge meaningful fees, confirming developers and teams pay for schema-diff tooling. The buyer is a backend engineer or DevOps lead at a product team, which is a reasonable B2B-adjacent buyer, though budget authority is often with a manager rather than the individual filing GitHub issues. The critical constraint is buildability and autonomy: a robust schema-diff tool requires database connections, migration-system integration, and environment-aware config \u2014 this is non-trivial integration work, not a Claude-prompt-plus-landing-page. The factory could build a lightweight Claude-assisted report layer on top of raw schema dumps, but the core value (live environment comparison) needs real infrastructure, scoring it below the build_gate floors for both buildability_with_ai and operational_autonomy.",
+  "solution_plan": "WHAT: A lightweight schema-drift report service \u2014 engineers paste or upload two schema dumps (SQL DDL files), and Claude produces a structured diff report highlighting missing migrations, column changes, and drift risks. BUILD: Claude prompt that compares two pasted schema files and outputs a structured markdown/PDF report; a simple web form intake; Stripe link for $19/report or $39/month \u2014 assembled by the factory, no operator coding required. SELL: Reach backend engineers via GitHub issues on DB tools (like Tabularis), dev.to, and r/devops; Claude drafts targeted outreach; operator approves before sending. MAINTAIN: Fully automated \u2014 form submission triggers Claude, output delivered via email; Stripe handles billing. The operator only approves outreach. CAUTION: This is a simplified version of what the market actually wants (live DB connection diff); validate whether the paste-and-compare version provides enough value before investing in deeper integration. If users demand live environment access, this becomes a proper SaaS product requiring a developer, not this factory.",
+  "notes": "buildability_with_ai=5 fails build_gate buildability_with_ai_min:6; operational_autonomy=5 fails build_gate operational_autonomy_min:7. Both gates unmet \u2014 stage capped at validate. A paste-based MVP could be tested cheaply to validate WTP before deeper commitment.",
+  "scored_at": "2026-10-27T11:32:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

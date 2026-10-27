@@ -1,0 +1,25 @@
+{
+  "id": "01M5Y7NTSM3AF9J816H17SK1DT",
+  "discovered_at": "2026-10-27T11:29:52+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://github.com/TabularisDB/tabularis/issues/1292",
+    "snippet": "I'd like to have a way to compare two database environments directly within Tabularis. When working with multiple environments (development, staging, production), it's quite common for their schemas to drift apart. A migration might have been applied in one environment but not another, someone might have manually modified a column in production. There's currently no way inside Tabularis to quickly see what differs between two environments and understand what migrations are missing or what changes were made outside of the migration system."
+  },
+  "problem_statement": "Development teams using database GUI tools lack a built-in way to diff schemas across dev, staging, and production environments, forcing them to discover drift manually or after costly production incidents.",
+  "target_segment": "Backend engineers and DevOps practitioners at small-to-mid-size product teams managing multi-environment database deployments",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "database-schema-diff",
+    "schema-drift",
+    "database-devops",
+    "migration-management",
+    "dev-staging-prod",
+    "database-tooling",
+    "developer-tools",
+    "db-gui"
+  ],
+  "notes": "Feature request on an active open-source DB tool, reflecting a universal pain in multi-environment teams. Paid tools exist in this space (Redgate SQL Compare, Liquibase Pro, Bytebase) confirming buyer willingness. The request describes a concrete workflow failure with production risk \u2014 teams pay to avoid that. Signal strength 3: clear business context, known paid category, but single feature-request data point.",
+  "status": "candidate"
+}

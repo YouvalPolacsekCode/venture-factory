@@ -1,0 +1,24 @@
+{
+  "id": "01M5Y7NTSAY8PRR1K58E6H29N0",
+  "discovered_at": "2026-10-27T11:29:52+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50254751",
+    "snippet": "I spent two hours every day filling my resume data to freshly developed forms made specifically to the hiring process of one or two companies. I have a good resume, worked well for a few years before AI, and know it has got a lot harder to land a development gig. I've worked with modern stuff like AI-generated briefs for our meetings, for our bug logs, even for our Q.A. team email replies. Hell, there was an Agent dedicated to verifying how well our code was written at my last job, so I feel confident. But I still have to manually fill the same data into each company's form."
+  },
+  "problem_statement": "Experienced software engineers applying for jobs must manually re-enter the same resume data into each company's bespoke application form, wasting hours per week despite having structured CV data that could be mapped automatically.",
+  "target_segment": "Mid-to-senior software engineers actively job-hunting, especially those applying to 5+ companies per week",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "job-application",
+    "resume-autofill",
+    "hiring-workflow",
+    "data-entry",
+    "job-search",
+    "developer-tools",
+    "form-automation"
+  ],
+  "notes": "Two independent posts from the same author on the same day (HN items 50254751 and 50254873) reinforce the pain. Buyer signal is moderate: experienced devs do pay for productivity tools (e.g. Notion, Linear). However the 'should be free' risk is real \u2014 competing against browser autofill and free extensions. Willingness-to-pay evidence is implicit (time cost framed as hundreds of hours), not explicit dollar mention. Signal capped at 2.",
+  "status": "candidate"
+}

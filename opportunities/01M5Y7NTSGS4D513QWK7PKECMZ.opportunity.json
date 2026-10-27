@@ -1,0 +1,25 @@
+{
+  "id": "01M5Y7NTSGS4D513QWK7PKECMZ",
+  "discovered_at": "2026-10-27T11:29:52+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203825/how-do-i-ensure-job-safety-and-legal-liability-against-ai-related-damage-at-work",
+    "snippet": "I work as a freelance software engineer on a long-term contract for a small 20-30 people company. Company is pushing for AI everywhere. Recently I had a call with team lead / head of engineering / CTO. We were talking about how AI generated 1200 lines of code for a project I am working on. And how I am supposed to review it. She recommended me to do a high level code review and not go line-by-line. It's fine with me but what if there's a bug that causes damage? I need to protect myself legally."
+  },
+  "problem_statement": "Freelance software contractors are being asked to sign off on large volumes of AI-generated code without the time or tooling to review it properly, creating unresolved legal liability and job-security risk they currently have no structured way to document or mitigate.",
+  "target_segment": "Freelance and independent software contractors working on contracts with AI-forward SMB clients",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-code-review",
+    "contractor-liability",
+    "freelance-risk",
+    "ai-generated-code",
+    "legal-protection",
+    "independent-contractor",
+    "software-quality",
+    "compliance"
+  ],
+  "notes": "Clear paying-buyer context: a freelancer on a paid long-term contract facing a real professional risk. The gap is a product that helps contractors document their review scope, generate audit trails, and attach coverage disclaimers when accepting AI-assisted codebases. Adjacent to code-review tooling (paid market: Codacy, SonarQube). Willingness to pay is implied by the professional stakes (contract value, liability). Signal strength 3: concrete scenario, business context, but single data point.",
+  "status": "candidate"
+}

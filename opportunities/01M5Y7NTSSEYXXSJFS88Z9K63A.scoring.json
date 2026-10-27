@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5Y7NTSSEYXXSJFS88Z9K63A",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.3,
+  "penalties_applied": [],
+  "total": 6.3,
+  "recommended_stage": "validate",
+  "rationale": "The pain is severe and structurally real \u2014 AI-accelerated exploit timelines are compressing the window small teams have to respond, and this segment (CTO/lead engineer at a 2\u201350 person startup) demonstrably pays for security tooling (Snyk, Wiz, Semgrep all have SMB customers at $50\u2013500/month). However, the problem is deeply technical: effective vulnerability monitoring requires continuous scanning of codebases, dependency graphs, CVE feeds, and runtime signals \u2014 this is not a Claude-prompt-plus-form problem, it's a security infrastructure problem. Operational autonomy is 4 because meaningful delivery requires ongoing technical integration (scanning agents, authenticated repo access, alert routing), not just prompt generation. The build_gate failures on both buildability_with_ai and operational_autonomy reflect that the factory's standard tooling is genuinely insufficient for the core value proposition here.",
+  "solution_plan": "WHAT: A weekly AI-generated security briefing service \u2014 Claude ingests a startup's public GitHub repo, their stated tech stack, and the week's top CVE/threat feed, then produces a plain-English 'security risk digest' with prioritized actions tailored to their stack. BUILD: Claude prompt pipeline consuming a GitHub repo URL + tech stack form + CVE API feed; outputs a structured PDF/email digest; landing page with Stripe link at $49/month \u2014 factory builds this, no operator coding. SELL: Reach CTOs and lead engineers at funded startups via AngelList/Wellfound company lists, LinkedIn targeting 'CTO' + 'seed/series A', and dev.to security threads; Claude drafts outreach; operator approves batches. MAINTAIN: Weekly automated digest generation and delivery via Claude + email automation; Stripe handles billing; support answered by Claude. CAUTION: This is a watered-down version of the real need (continuous scanning vs. weekly digest). Validate whether the weekly report format creates enough value for payment before attempting deeper integration. Competing against free CVE newsletters and GitHub Dependabot is a real challenge \u2014 the differentiation must be the stack-specific prioritization.",
+  "notes": "buildability_with_ai=5 fails build_gate min:6; operational_autonomy=4 fails build_gate min:7. The core security-scanning product is beyond factory capabilities; only a digest/report variant is feasible here, and its value vs. free alternatives is unproven. Stage capped at validate on both gate failures.",
+  "scored_at": "2026-10-27T11:32:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

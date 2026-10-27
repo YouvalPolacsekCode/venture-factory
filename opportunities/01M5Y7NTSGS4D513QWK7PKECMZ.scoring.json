@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5Y7NTSGS4D513QWK7PKECMZ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "build",
+  "rationale": "The buyer is specific and named \u2014 a freelance or independent software contractor on a paid engagement, with real professional and financial stakes (contract liability, legal exposure) \u2014 and this type of professional demonstrably pays for tools that protect their business (E&O insurance, code-review tooling, legal templates). Willingness to pay is supported by adjacent paid markets: Codacy and SonarQube are paid products; legal document templates for contractors command $50\u2013200 one-time fees. The service \u2014 generate a timestamped, auditable AI-code-review scope report with a coverage disclaimer the contractor can attach to delivery emails \u2014 is entirely buildable as a Claude prompt pipeline with a simple web intake and PDF output, and once built it runs hands-off: the contractor submits a code diff or repo link, Claude produces the report, Stripe collects $15\u201330 per report or a $49/month subscription. The deciding factor is that the buyer has money, a clear reason to pay now (active liability exposure), and the product requires zero per-customer human work.",
+  "solution_plan": "WHAT: An AI-code-review liability shield \u2014 a web service that takes a repo diff or pasted code and generates a professional audit-scope report with timestamped coverage disclaimers a contractor can attach to client deliveries. BUILD: Claude prompt pipeline that analyzes submitted code, identifies AI-generated patterns, and outputs a structured PDF report (scope covered, limitations, disclaimer language); a one-page landing page with a Stripe payment link ($25/report or $49/month); an email/web intake form \u2014 all assembled by the factory, no operator coding. SELL: Reach freelance contractors via Toptal community forums, r/freelance, Indie Hackers, and LinkedIn posts targeting 'freelance software contractor' \u2014 Claude drafts outreach targeting people discussing AI code liability; operator approves each send batch. MAINTAIN: Report delivery is fully automated (Claude generates, PDF renderer outputs, email sends via automation); Stripe handles billing and receipts; support FAQs handled by Claude. Operator's only recurring task: approve outreach batches and review weekly revenue dashboard. A solo non-technical operator can build and run this entirely through the factory.",
+  "notes": "All build_gates met: operational_autonomy=8 (\u22657), buildability_with_ai=8 (\u22656), buyer_clarity=8 (\u22656), willingness_to_pay=6 (\u22655). Responsiveness_signal is 1 \u2014 untested; recommend a small outreach probe before full build commit.",
+  "scored_at": "2026-10-27T11:32:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

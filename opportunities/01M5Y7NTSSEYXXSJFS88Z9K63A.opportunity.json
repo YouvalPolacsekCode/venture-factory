@@ -1,0 +1,25 @@
+{
+  "id": "01M5Y7NTSSEYXXSJFS88Z9K63A",
+  "discovered_at": "2026-10-27T11:29:52+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/james_anderson_h/security-changed-with-ai-and-small-teams-are-falling-behind-5ebg",
+    "snippet": "The third week of October 2026 was a rough one for anyone who runs software on the internet. Two [incidents described]. Hours, Not Weeks: How AI Rewrote the Clock of Software Security \u2014 small teams are falling behind. Score 30, 36 comments, tagged: security, ai, startup, discuss."
+  },
+  "problem_statement": "Small engineering teams cannot keep pace with AI-accelerated vulnerability discovery and exploit development, leaving their production software exposed for days or weeks while attackers now operate on a timescale of hours.",
+  "target_segment": "CTOs and lead engineers at startups and SMBs (2\u201350 person eng teams) running internet-facing software without a dedicated security function",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-security",
+    "vulnerability-management",
+    "small-team-security",
+    "devsecops",
+    "exploit-detection",
+    "startup-security",
+    "threat-intelligence",
+    "security-automation"
+  ],
+  "notes": "Article scored 30 with 36 comments on dev.to \u2014 meaningful engagement signal for a practitioner audience. The pain is structural (speed asymmetry between attackers and defenders) and well-documented in paid markets: SMB security tooling is a large category (Snyk, Wiz, Semgrep all have paying customers at this segment). Buyer signal: startups do pay for security tooling, especially post-incident or under compliance pressure. Body text truncated but framing implies concrete recent incidents. Signal strength 3: editorial piece with engagement, known paid category, but no direct 'I'd pay for X' quote visible in snippet.",
+  "status": "candidate"
+}

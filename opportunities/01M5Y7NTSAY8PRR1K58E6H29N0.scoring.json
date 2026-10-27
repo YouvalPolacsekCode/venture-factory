@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M5Y7NTSAY8PRR1K58E6H29N0",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 2,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [],
+  "total": 5.1,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and frequent \u2014 engineers applying to multiple companies daily spend genuine hours on redundant data entry \u2014 but the willingness-to-pay signal is weak: browser autofill, free extensions (like Simplify Jobs), and LinkedIn Easy Apply already address this partially, and the 'should be free' expectation is strong among job-seekers who are already in cost-saving mode. The buyer is individual job-seeking developers, not companies with budget authority, which makes monetization structurally difficult and churn high once they land a job. The decisive issue is commercial: without clear evidence that this segment pays for form-fill tooling at even a modest price point, building ahead of validation would be premature.",
+  "solution_plan": "WHAT: A browser-extension-style or web service that ingests a developer's CV/LinkedIn export and auto-maps it to arbitrary company application forms using Claude. BUILD: The factory builds a Claude prompt that takes structured resume JSON + a form schema (extracted via a simple intake URL or pasted HTML) and outputs field-by-field fill instructions or a pre-filled JSON; a landing page with a Stripe link for a $9/month subscription; no coding by the operator. SELL: Reach job-seeking developers via HN 'Who's Hiring' threads, r/cscareerquestions, and dev.to job-search tags \u2014 outreach batch drafted by Claude, sent only after operator approves. MAINTAIN: Claude handles new form-mapping requests submitted via a web form; Stripe handles billing; support queries answered by Claude. The only recurring operator touch is approving outreach batches. CAUTION: the free-tool competitive pressure is severe; validate with a $1 trial or waitlist before investing build time.",
+  "notes": "buyer_clarity is 5 (individual job-seekers, not business buyers with budget); willingness_to_pay is 3 \u2014 fails build_gate willingness_to_pay_min:5 and buyer_clarity_min:6. Stage capped at validate.",
+  "scored_at": "2026-10-27T11:32:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M60W8CZVQ1KRHXWTZ9Z6BYG1",
+  "discovered_at": "2026-10-28T12:08:01+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439943/sfmc-journey-builder-dynamic-from-name-using-an-existing-scripted-sender-profil",
+    "snippet": "I need localized sender names across multiple journeys. My SQL populates a SenderName field in the journey entry DE from a translations DE. The journeys share a scripted sender profile. Its From Name appears empty in Email Studio, but Journey Builder shows: %%[ VAR @parameterSN ... ]%% When checking EMAIL_PARAMETER_LOOKUP... [0 score, 0 comments, SFMC tag]"
+  },
+  "problem_statement": "Salesforce Marketing Cloud administrators at multinational companies struggle to implement dynamic, localized email sender names across Journey Builder campaigns, spending hours debugging AMPscript/sender profile interactions with no reliable documentation or tooling to validate configurations before deployment.",
+  "target_segment": "SFMC admins and marketing operations managers at enterprise or mid-market companies running multilingual/multi-region email campaigns",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce-marketing-cloud",
+    "sfmc",
+    "email-automation",
+    "journey-builder",
+    "ampscript",
+    "marketing-ops",
+    "localization",
+    "enterprise-saas"
+  ],
+  "notes": "SFMC licensing starts at ~$400k/yr enterprise; even SMB tiers are $1,500+/mo. Pain is real and recurring across SFMC community (Stack Exchange, Salesforce Trailblazer forums, LinkedIn groups). A validation/debugging tool or managed service for SFMC AMPscript and sender configuration could command premium pricing from agencies and in-house ops teams. Buyer has clear budget \u2014 they're already deep in enterprise Salesforce spend.",
+  "status": "candidate"
+}

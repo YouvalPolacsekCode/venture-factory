@@ -1,0 +1,24 @@
+{
+  "id": "01M60W8CZRHHP55PZD0VJ3TTBK",
+  "discovered_at": "2026-10-28T12:08:01+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182677/google-search-and-google-alerts-and-other-api-based-services-return-vastly-dif",
+    "snippet": "I keep track of one of our competitors by every day performing a site search on them on Google: site:competitor.com (last month). Typically Google indexes 5-10 new URLs for their site every day. I have also tried using Google Alerts... this alert only triggers a couple of times a week. Maybe I find on average 50 new URLs per week via manual search vs. almost nothing via Alerts. [1 score, 1 comment]"
+  },
+  "problem_statement": "Marketing and competitive intelligence professionals who rely on Google Alerts for competitor content monitoring find it severely under-reports new indexed pages compared to manual site: searches, forcing expensive manual daily searches or expensive enterprise tools just to catch competitor content reliably.",
+  "target_segment": "Marketing managers and competitive intelligence analysts at SMBs and agencies tracking competitor content and SEO activity daily",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "competitive-intelligence",
+    "google-alerts",
+    "content-monitoring",
+    "seo-monitoring",
+    "competitor-tracking",
+    "marketing-ops",
+    "automation"
+  ],
+  "notes": "Clear professional/business buyer context \u2014 person is doing daily competitive monitoring as a work task. Existing paid tools (Ahrefs Alerts, SEMrush brand monitoring) cost $100-400/mo and are overkill for this narrow need. A focused, affordable competitor content tracker that polls site: searches and sends reliable daily digests could fit a $20-50/mo niche. Recurring pain, paid buyer intent implied by professional workflow.",
+  "status": "candidate"
+}

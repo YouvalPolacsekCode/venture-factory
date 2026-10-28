@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M60W8CZRHHP55PZD0VJ3TTBK",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 9,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 7.2,
+  "penalties_applied": [],
+  "total": 7.2,
+  "recommended_stage": "build",
+  "rationale": "The buyer is a marketing manager or competitive intelligence analyst at an SMB or agency \u2014 a specific named professional role at businesses that already pay $100\u2013400/month for SEMrush or Ahrefs, confirming real willingness to pay for this category. The pain recurs daily (they're doing manual Google site: searches every day), the gap between Google Alerts and actual indexing is documented and widely experienced, and a focused $20\u201340/mo tool positioned as 'reliable Google Alerts for competitors' is meaningfully cheaper than the full-suite alternatives. Buildability is strong: automated site: search polling, URL deduplication, and daily email digests are achievable with Claude + scheduled scripts + email delivery. Operational autonomy scores 8 because once configured, delivery is fully automated \u2014 the operator only approves outreach batches. All build gates are met.",
+  "solution_plan": "The micro-service is a competitor content tracker: it polls daily Google site: searches for domains you specify and emails you a digest of newly indexed URLs you haven't seen before, at a fraction of the cost of Ahrefs Alerts. The factory builds this as a Claude-powered scheduled job that runs daily site: queries (via a search API such as SerpAPI or ValueSERP), deduplicates against a stored URL history in SQLite, formats a clean email digest, and sends it via SendGrid \u2014 all wired together without Youval writing any code. To sell, the factory identifies marketing managers and growth/SEO leads at SMBs and agencies through LinkedIn (job title + company size filters) and drafts personalized outreach emails for Youval to approve before sending; the pitch is 'get reliable daily competitor content alerts for $29/mo instead of paying $400/mo for Ahrefs.' Once a customer signs up via a Stripe payment link, their monitored domains are added to the job queue automatically; Claude handles support queries by drafting replies for Youval to approve. The only recurring human step is approving outreach batches and reviewing flagged support tickets.",
+  "notes": "All build gates passed: operational_autonomy=8, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=7. Main risk is scraping/search API terms of service \u2014 ensure chosen search API (e.g. ValueSERP) explicitly permits this use case. Defensibility is low (easily cloned) so move fast on customer acquisition.",
+  "scored_at": "2026-10-28T12:10:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

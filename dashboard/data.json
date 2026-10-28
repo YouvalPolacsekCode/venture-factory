@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-10-27T08:32:11+00:00",
-    "idt": "2026-10-27T11:32:11+03:00"
+    "utc": "2026-10-28T09:10:25+00:00",
+    "idt": "2026-10-28T12:10:25+03:00"
   },
   "funnel": {
-    "candidates": 413,
-    "scored": 413,
+    "candidates": 418,
+    "scored": 418,
     "validated": 46,
     "build_decisions": {
       "defer_1_week": 41,
@@ -16,6 +16,35 @@
     "services_launched": 0
   },
   "top_opportunities": [
+    {
+      "topics": [
+        "competitive-intelligence",
+        "google-alerts",
+        "content-monitoring"
+      ],
+      "id": "01M60W8CZRHHP55PZD0VJ3TTBK",
+      "problem_statement": "Marketing and competitive intelligence professionals who rely on Google Alerts for competitor content monitoring find it severely under-reports new indexed pages compared to manual site: searches, forcing expensive manual daily searches or expensive enterprise tools just to catch competitor content reliably.",
+      "target_segment": "Marketing managers and competitive intelligence analysts at SMBs and agencies tracking competitor content and SEO activity daily",
+      "total": 7.2,
+      "recommended_stage": "build",
+      "rationale": "The buyer is a marketing manager or competitive intelligence analyst at an SMB or agency — a specific named professional role at businesses that already pay $100–400/month for SEMrush or Ahrefs, confirming real willingness to pay for this category. The pain recurs daily (they're doing manual Google site: searches every day), the gap between Google Alerts and actual indexing is documented and widely experienced, and a focused $20–40/mo tool positioned as 'reliable Google Alerts for competitors'…",
+      "solution_plan": "The micro-service is a competitor content tracker: it polls daily Google site: searches for domains you specify and emails you a digest of newly indexed URLs you haven't seen before, at a fraction of the cost of Ahrefs Alerts. The factory builds this as a Claude-powered scheduled job that runs daily site: queries (via a search API such as SerpAPI or ValueSERP), deduplicates against a stored URL history in SQLite, formats a clean email digest, and sends it via SendGrid — all wired together without Youval writing any code. To sell, the factory identifies marketing managers and growth/SEO leads at SMBs and agencies through LinkedIn (job title +…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webapps.stackexchange.com/questions/182677/google-search-and-google-alerts-and-other-api-based-services-return-vastly-dif",
+      "discovered_at": "2026-10-28T12:08:01+03:00"
+    },
     {
       "topics": [
         "ai-cost-attribution",
@@ -711,50 +740,15 @@
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=48455882",
       "discovered_at": "2026-06-09T09:41:16+03:00"
-    },
-    {
-      "topics": [
-        "llm",
-        "hallucination",
-        "uncertainty-detection"
-      ],
-      "id": "01KVMH63DRJ1E010D0X082SN9W",
-      "problem_statement": "Developers and technical users using LLMs in production cannot trust model outputs because models confidently assert uncertain or false claims. There is no reliable, affordable signal indicating when an LLM response should not be trusted, forcing manual verification or expensive downstream errors.",
-      "target_segment": "Developers and technical teams integrating LLMs into products or workflows, especially in domains where factual accuracy matters (legal, medical, finance, support).",
-      "total": 6.4,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is a specific, nameable type — developers integrating LLMs into production apps — who demonstrably pay for reliability tooling (Galileo, TruLens, LangSmith all have paid tiers), and the explicit HN 'I would pay' signal is unusually direct. Buildability is the constraint: a genuinely useful confidence/uncertainty layer requires either multi-sampling, cross-model consistency checks, or a calibrated classifier — none are trivially assembled in a week with just Claude + Stripe, and naive…",
-      "solution_plan": "WHAT: A per-call API wrapper that takes an LLM response and returns a confidence flag (high/medium/low/uncertain) by running lightweight consistency checks — e.g. asking Claude to self-assess, cross-checking key claims against a second sampling, and returning a structured verdict. BUILD: The factory sets up a Claude-powered prompt pipeline (consistency probe + structured output), wraps it behind a simple API endpoint (using a serverless host like Val.town or a minimal Railway deployment), and publishes a Stripe-linked pricing page with a free-tier trial — no operator coding required. SELL: Reach developers via HN Show HN post, targeted posts…",
-      "realistic": {
-        "verdict": "no",
-        "weak": [
-          "build it"
-        ]
-      },
-      "scores": {
-        "Who pays": 7,
-        "Runs alone": 7,
-        "Will pay": 6,
-        "Buildable": 5,
-        "Pain": 8
-      },
-      "verdict": "validated",
-      "source_type": "hn",
-      "source_url": "https://news.ycombinator.com/item?id=48608387",
-      "discovered_at": "2026-06-21T10:26:40+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2457,
-    "last_7_days_usd": 1.6982,
-    "all_time_usd": 33.6479,
+    "today_usd": 0.2581,
+    "last_7_days_usd": 1.5885,
+    "all_time_usd": 33.9059,
     "by_day": [
-      {
-        "date": "2026-10-21",
-        "usd": 0.3678
-      },
       {
         "date": "2026-10-22",
         "usd": 0.2497
@@ -778,67 +772,32 @@
       {
         "date": "2026-10-27",
         "usd": 0.2457
+      },
+      {
+        "date": "2026-10-28",
+        "usd": 0.2581
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6582
+        "usd": 0.6684
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5087
+        "usd": 0.5255
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3405
-      },
-      {
-        "agent": "build_decisions",
-        "usd": 0.1576
+        "usd": 0.3612
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0332
+        "usd": 0.0334
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-21",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-22",
       "agents": {
@@ -1048,12 +1007,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-10-28",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-10-27.md",
-    "date": "2026-10-27",
-    "text": "# Daily Summary — 2026-10-27 (Mon)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 413 |\n| Opportunities validated past threshold | 107 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain signal sweeps across B2B SaaS channels.\n2. `pain_validation` validates high-scoring opportunities from today's 413-candidate pool.\n3. `opportunity_scoring` processes any new surfaced candidates against the current rubric.\n4. `lead_research` moves validated opportunities toward outreach-ready state.\n5. `build_decisions` evaluates readiness of top-scoring opportunities for experiment build.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-10-28.md",
+    "date": "2026-10-28",
+    "text": "# Daily Summary — 2026-10-28 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 418 |\n| Opportunities validated past threshold | 108 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or live services currently tracked. Discovery phase ongoing; no experiments have advanced to validation or build stages.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across target communities.\n2. `opportunity_scoring` processes any new candidate opportunities.\n3. `pain_validation` targets high-scoring candidates for pain signal confirmation.\n4. `lead_research` builds contact lists for validated opportunities.\n5. `build_decisions` evaluates readiness of top-validated opportunities for experiment launch.\n\n## Operator action items\n\n1. **Review the 108 validated opportunities** — they are queued for build decision. Prioritize by pain signal strength and market size; recommend top 3 candidates for experiment launch.\n2. **Confirm discovery strategy** — 418 new candidates suggest strong market radar coverage. Validate that scoring thresholds are tight enough to avoid bloat in the validation queue.",
     "truncated": false
   },
   "analytics": null

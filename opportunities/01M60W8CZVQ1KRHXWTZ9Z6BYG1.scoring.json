@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M60W8CZVQ1KRHXWTZ9Z6BYG1",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "SFMC AMPscript debugging and sender profile validation requires hands-on review of each customer's specific configuration \u2014 this is expert consulting work, not automated delivery."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise SFMC buyers expect scoped discovery calls, demos, and onboarding support before purchasing any tooling or managed service."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is crystal clear \u2014 SFMC admins and marketing ops managers at companies spending $400k+/year on Salesforce, so willingness to pay is high and budget authority exists. The problem (AMPscript debugging, sender profile validation) is real and recurring. However, the delivery model is fundamentally a consulting/professional-services engagement: each customer's SFMC instance has unique configurations, custom data extensions, and specific Journey Builder setups that require expert hands-on review. This cannot be automated by Claude without deep SFMC API integration that goes well beyond this factory's tooling. Operational autonomy scores 4 because per-customer manual work is unavoidable, and after two heavy penalties the total drops to 3.7. This is a consulting opportunity, not a product opportunity.",
+  "solution_plan": "Not viable as a Claude factory product. Each SFMC customer has a unique configuration \u2014 different sender profiles, custom AMPscript logic, specific data extension schemas \u2014 that requires expert review and debugging. There is no generic 'validator' that works across all setups without deep API integration with Salesforce Marketing Cloud (which requires Salesforce partner certification and complex OAuth flows). This is a strong opportunity for an SFMC consultant charging $150\u2013300/hour, but it is not buildable as a self-serve automated tool by a solo non-technical operator using Claude and a Stripe link. Do not pursue as a product.",
+  "notes": "Fails operational_autonomy build gate (4 < 7). Total at 3.7 is well below validate threshold. The high buyer clarity and willingness-to-pay scores confirm market demand, but the delivery model is irreducibly human-in-the-loop consulting. Drop.",
+  "scored_at": "2026-10-28T12:10:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

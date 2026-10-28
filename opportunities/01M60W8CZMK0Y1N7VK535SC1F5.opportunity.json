@@ -1,0 +1,25 @@
+{
+  "id": "01M60W8CZMK0Y1N7VK535SC1F5",
+  "discovered_at": "2026-10-28T12:08:01+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150043/wordpress-website-increased-server-response-times-and-reduced-googlebot-crawlin",
+    "snippet": "I manage a WordPress-based gaming news website hosted on shared Linux hosting. Since September 2026, I've noticed a significant increase in the average response time reported by Google Search Console, along with a reduction in Googlebot's crawling activity. Late July: ~569ms. August: ~740ms. September: ~1,128ms. October: higher. [0 score, 1 comment]"
+  },
+  "problem_statement": "Small website operators on shared hosting see SEO-damaging server response time degradation after platform updates or increased load but lack actionable diagnostic tooling that correlates hosting performance metrics with Googlebot crawl rate changes and revenue impact.",
+  "target_segment": "Small-to-mid blog and media site operators (1\u20135 person teams) on shared or budget managed WordPress hosting monetizing via ads or affiliate",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "wordpress",
+    "seo",
+    "server-performance",
+    "googlebot",
+    "crawl-budget",
+    "web-hosting",
+    "site-health-monitoring",
+    "small-publisher"
+  ],
+  "notes": "Site owner is clearly losing crawl budget and likely ad revenue; they are already paying for hosting and likely paying for SEO tools (Ahrefs, SEMrush). A lightweight diagnostic-and-fix SaaS specifically bridging GSC data + hosting performance for non-technical WordPress operators could command $20-50/mo. Multiple similar questions appear repeatedly across webmaster forums.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M60W8CZBRDQWBJSR1K7EF6KS",
+  "discovered_at": "2026-10-28T12:08:01+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50268658",
+    "snippet": "LLM output, according to court rulings IIUC, cannot be copyrighted. This should worry both proprietary software companies and open source projects alike (because you can't put a license on something you don't hold the rights for). Yet, even Linux is accepting LLM-generated code. Do they (not just Linux) have a plan? [4 points, 2 comments]"
+  },
+  "problem_statement": "Software teams and open-source projects shipping LLM-generated code lack tooling to track, flag, or document which code segments are AI-generated, creating legal exposure around copyright ownership and license compliance that auditors and enterprise buyers increasingly demand proof of.",
+  "target_segment": "Engineering leads and legal/compliance teams at software companies (10\u20135000 employees) and open-source foundations shipping products with LLM-assisted code",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "llm-code-compliance",
+    "ai-copyright",
+    "code-provenance",
+    "license-risk",
+    "open-source-governance",
+    "developer-tools",
+    "compliance-saas"
+  ],
+  "notes": "Early signal \u2014 only 4 points but the question surfaces a real and growing legal gap as AI coding tools mainstream. Enterprise buyers (CTOs, GCs) already asking vendors for SBOM-equivalent AI provenance docs. No clear paid tool exists yet for 'AI content fraction' auditing in repos. Willingness-to-pay likely tied to enterprise legal review cycles.",
+  "status": "candidate"
+}

@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5KWN81FYAN1FG96WRFAJD7J",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain of vendor risk and product mortality is real and resonates with the HN builder audience (51 points, 24 comments), but fails the minimum evidence bar: only one primary source exists, no distinct pain quotes from 5+ individuals, and no willingness-to-pay signal beyond implied business cost. The problem is observational and macro-level rather than an acute, felt daily pain for which buyers are actively seeking a tool.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50204125"
+  ],
+  "evaluated_at": "2026-10-28T12:09:08+03:00"
+}

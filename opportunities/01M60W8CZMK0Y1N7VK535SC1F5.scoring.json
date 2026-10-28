@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M60W8CZMK0Y1N7VK535SC1F5",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Target segment is individual small-site operators monetizing via ads/affiliate at $20-50/mo price point \u2014 requires a large volume of paying consumers to build meaningful revenue, and this cohort is notoriously price-sensitive and churny."
+    }
+  ],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "Small WordPress site operators running ad-monetized blogs are a real and reachable audience with genuine SEO performance pain, and they do spend on tools like Ahrefs and SEMrush. However, the buyer clarity score is weak at 5 \u2014 these are individual consumers/hobbyists rather than businesses with budget authority, and $20\u201350/mo is a hard sell to a segment that often struggles to justify any SaaS expense. The b2c_at_scale penalty applies because meaningful revenue requires hundreds of paying subscribers. After the penalty, total drops to 4.6, below validate threshold.",
+  "solution_plan": "Not recommended for build at this stage. The product would be a lightweight SaaS that pulls Google Search Console data via API, correlates server response time trends with crawl rate changes, and sends weekly diagnostic reports with recommended fixes. This is technically buildable with Claude + GSC API + a simple dashboard. However, the monetization math is challenging: at $30/mo you need 100+ paying customers just to reach $3k MRR, and this audience is hard to convert and retain. If pursuing, start by validating whether this audience will pay at all before building anything.",
+  "notes": "buyer_clarity falls below build_gate floor (5 < 6). Total also below min_total_to_validate. Drop.",
+  "scored_at": "2026-10-28T12:10:20+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

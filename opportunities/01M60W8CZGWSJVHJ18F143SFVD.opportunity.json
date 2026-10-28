@@ -1,0 +1,25 @@
+{
+  "id": "01M60W8CZGWSJVHJ18F143SFVD",
+  "discovered_at": "2026-10-28T12:08:01+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150048/how-can-search-engines-crawl-dynamic-page-content-when-javascript-is-disabled-on",
+    "snippet": "My website uses Vue 3... page content is fetched through API calls in Vue components after page loads. As a result, when JavaScript is disabled, the actual content isn't present in the HTML. My company profile URLs number around 70\u201380k and may grow to millions, so generating static HTML for every URL doesn't seem practical. My Express server already... [0 score, 1 comment]"
+  },
+  "problem_statement": "Businesses running large-scale Vue/React/Angular SPAs with hundreds of thousands of dynamic URLs (e.g., company directories, marketplaces) cannot cost-effectively implement server-side rendering or dynamic rendering for SEO crawlability, causing significant organic search visibility loss.",
+  "target_segment": "Developers and technical founders at B2B SaaS companies, directories, and marketplaces built on JavaScript frameworks with large dynamic URL sets",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "server-side-rendering",
+    "vue-js",
+    "dynamic-rendering",
+    "spa-seo",
+    "googlebot",
+    "crawlability",
+    "saas-developer-tools"
+  ],
+  "notes": "Recurring pain across SPA developers \u2014 existing solutions (Prerender.io charges ~$100-500/mo depending on volume, Rendertron is self-hosted complexity). The 'millions of URLs' scale makes this a real operational cost problem. Buyer is a dev team or technical founder who is already paying for hosting and losing revenue to poor SEO.",
+  "status": "candidate"
+}

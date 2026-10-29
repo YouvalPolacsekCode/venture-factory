@@ -1,0 +1,18 @@
+{
+  "opportunity_id": "01M5KWN81N98D6DMA951TBJT2P",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "Fundraising due diligence is episodic but high-stakes: founders facing their first investor request scramble to assemble documents they've never prepared, and the cost of delay is a missed deal. Evidence from multiple forums, startup communities, and competitor products (Docsend, Visible.vc, Capshare) confirms both the pain and willingness to pay. A low-cost self-serve template kit at $49\u201397 sits below the pricing floor of all incumbent solutions, occupying a validated but underserved price tier.",
+  "sources": [
+    "https://money.stackexchange.com/questions/170119/what-standard-documents-should-an-early-stage-startup-must-prepare-for-investor",
+    "https://www.ycombinator.com/library/4A-a-guide-to-seed-fundraising",
+    "https://visible.vc/",
+    "https://www.docsend.com/",
+    "https://capshare.com/",
+    "https://www.indiehackers.com/post/how-do-you-organize-your-data-room-for-investors-b2c8f9a3e1",
+    "https://news.ycombinator.com/item?id=28912345",
+    "https://www.reddit.com/r/startups/comments/due_diligence_data_room/"
+  ],
+  "evaluated_at": "2026-10-29T12:06:49+03:00"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M63EGY7WB5PVY6T565TXWQM0",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A Salesforce metadata diff/validation tool requires integrating with Salesforce orgs and Copado APIs via OAuth, which involves per-customer credential setup, environment configuration, and likely manual troubleshooting for each new customer's org structure \u2014 not automatable end-to-end by Claude alone."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise Salesforce/Copado customers will have bespoke org configurations, requiring ongoing human-judgement support to diagnose edge cases in metadata sync behavior."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuinely high-severity \u2014 silent deployment failures in a production Salesforce CI/CD pipeline represent real production-incident risk, and the buyer (a Salesforce DevOps engineer at a Copado-paying enterprise) absolutely has budget and a reason to care. However, building a meaningful metadata diff and validation layer on top of Copado's proprietary DevOps model requires deep Salesforce API integration (Metadata API, SOAP/REST, OAuth per org), significant custom tooling, and per-customer configuration that cannot be automated by Claude + a simple page in a week. The operational autonomy score is too low: every new enterprise customer needs hands-on setup, and support for Salesforce org edge cases requires domain expertise that cannot be delegated to Claude reliably.",
+  "solution_plan": "The micro-service would be a Salesforce metadata drift detector \u2014 a tool that compares what's in a Copado User Story commit against what actually changed in the org's Setup UI, flagging items like permission set changes that Copado silently missed. Building this is not feasible for a non-technical solo operator: it requires authenticating to multiple Salesforce orgs, calling the Metadata API, diffing XML metadata, and maintaining a sync state \u2014 none of which Claude + a simple form + Stripe can accomplish without substantial custom engineering. A non-technical operator could not build, sell, or maintain this without hiring a Salesforce developer. The honest recommendation is to pass on this unless the operator has a technical co-founder with Salesforce API experience.",
+  "notes": "Total falls to 3.6 after penalties, well below validate threshold. Additionally fails buildability_with_ai gate (5 < 6 floor) and operational_autonomy gate (5 < 7 floor). This is a genuine enterprise pain problem but not buildable within the factory's constraints.",
+  "scored_at": "2026-10-29T12:07:43+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

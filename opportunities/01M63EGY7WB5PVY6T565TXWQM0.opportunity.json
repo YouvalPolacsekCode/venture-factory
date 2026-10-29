@@ -1,0 +1,25 @@
+{
+  "id": "01M63EGY7WB5PVY6T565TXWQM0",
+  "discovered_at": "2026-10-29T12:05:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439940/copado-permission-set-commit-ignores-new-apex-class-access-change",
+    "snippet": "I'm on Copado's DevOps platform (User Stories / Environments / Org Credentials model, not Copado Essentials) managing Salesforce metadata in Metadata API format (not SFDX source format). Scenario: I added Apex Class Access for a custom Apex class to an existing Permission Set directly via Setup UI in our dev sandbox. The User Story for this change is currently in the Dev stage of the pipeline... [Copado] commit ignores [the] new Apex Class Access change."
+  },
+  "problem_statement": "Salesforce DevOps teams using Copado encounter silent metadata sync failures where permission set changes (e.g., Apex Class Access) made via the Setup UI are not picked up by Copado commits, causing deployment gaps and potential production incidents.",
+  "target_segment": "Salesforce DevOps engineers and release managers at companies using Copado for Salesforce CI/CD pipelines",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "copado",
+    "devops",
+    "metadata",
+    "permission-sets",
+    "apex",
+    "cicd",
+    "release-management"
+  ],
+  "notes": "Buyer is a Salesforce DevOps engineer at a company paying for Copado (enterprise-tier product). Pain is production-risk-level: silent failures in deployment pipelines. A validation/diff tool or monitoring layer for Copado metadata sync gaps could command a paid subscription. Single post keeps signal at 2.",
+  "status": "candidate"
+}

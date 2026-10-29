@@ -1,0 +1,24 @@
+{
+  "id": "01M63EGY7C42M4X0B9EPT5KDAZ",
+  "discovered_at": "2026-10-29T12:05:44+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50285795",
+    "snippet": "Like so many other SWEs right now, I am trying to find ways to enhance my development experience without taking away from the quality of my work or the things I find enjoyable about software engineering... I have found (what I think at least) is a maximum of productivity and enjoyment by primarily using Opencode as a pair programmer and wrangling out the general structure of the solution..."
+  },
+  "problem_statement": "Software engineers want to integrate AI coding assistants into their workflow in a way that preserves code quality and personal craftsmanship, but lack structured guidance, workflows, or tooling to do so effectively without feeling like they are losing ownership of their work.",
+  "target_segment": "Professional software engineers at companies of all sizes who use AI pair-programming tools (Opencode, Copilot, Cursor, etc.) and want structured productivity workflows",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-coding",
+    "developer-productivity",
+    "pair-programming",
+    "workflow",
+    "software-engineering",
+    "ai-tools",
+    "code-quality"
+  ],
+  "notes": "Post has 4 points and replies \u2014 real engagement. Buyer context: professional SWE likely at a company paying for AI tooling subscriptions. Pain is workflow/methodology, not missing a free feature. A paid course, tool, or workflow product could address this. Signal is single post so strength kept at 2.",
+  "status": "candidate"
+}

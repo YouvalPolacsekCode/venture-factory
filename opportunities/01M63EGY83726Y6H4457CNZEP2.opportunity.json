@@ -1,0 +1,23 @@
+{
+  "id": "01M63EGY83726Y6H4457CNZEP2",
+  "discovered_at": "2026-10-29T12:05:44+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150038/page-known-to-google-for-several-months-discovered-not-indexed",
+    "snippet": "I am trying to understand a strange indexing issue affecting one specific page on my website... What seems unusual in my case is that other pages on the same small website are crawled normally, while this specific URL has remained reported as: Discovered \u2013 currently not indexed with: Last crawl: N/A for more than four months."
+  },
+  "problem_statement": "Small business website owners and freelancers face persistent, unexplained Google indexing failures for specific pages (stuck in 'Discovered \u2013 currently not indexed' for months) with no actionable diagnosis available in Google Search Console.",
+  "target_segment": "Small business owners, freelancers, and indie website operators who manage their own SEO and rely on Google organic traffic",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "google-indexing",
+    "search-console",
+    "technical-seo",
+    "website-visibility",
+    "crawling"
+  ],
+  "notes": "Business context: the poster runs a commercial services website (mavitrineduweb.fr/services.html). Lost indexing = lost revenue. A paid SEO diagnostic tool that specifically triages 'Discovered not indexed' issues with actionable remediation steps would fit. Signal is weak (single post) but pain is common and monetizable. Strength 2.",
+  "status": "candidate"
+}

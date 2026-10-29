@@ -1,0 +1,49 @@
+{
+  "opportunity_id": "01M5KWN81N98D6DMA951TBJT2P",
+  "decided_at": "2026-10-29T12:07:57+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 78,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 9,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "pass": true
+    },
+    "total": {
+      "score": 6.6,
+      "min_total_to_build": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": [
+        "build",
+        "scale"
+      ],
+      "pass": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the scoring total (6.6) clears the 6.5 threshold, so build_now is technically eligible. However, the cost-to-gain ratio of 2.943 is nearly 5\u00d7 the kill threshold (0.6) defined in cost_gain_model.yaml, meaning projected 4-week costs vastly exceed projected 4-week gains. Even the optimistic sensitivity scenario (1.471) is still above the kill line. With a responsiveness_signal of only 2 (no outreach test data), zero current portfolio pressure, and a one-time-purchase product with low defensibility and episodic demand, committing a build slot now is premature. A one-week defer to run a lightweight responsiveness test \u2014 posting in 2-3 founder communities and measuring click/reply rates \u2014 would either validate demand or confirm this should be killed, at near-zero cost.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Indie Hackers + Twitter/X #fundraising hashtag DMs"
+}

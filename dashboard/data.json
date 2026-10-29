@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-10-28T09:10:25+00:00",
-    "idt": "2026-10-28T12:10:25+03:00"
+    "utc": "2026-10-29T09:08:02+00:00",
+    "idt": "2026-10-29T12:08:02+03:00"
   },
   "funnel": {
-    "candidates": 418,
-    "scored": 418,
-    "validated": 46,
+    "candidates": 421,
+    "scored": 421,
+    "validated": 47,
     "build_decisions": {
-      "defer_1_week": 41,
+      "defer_1_week": 42,
       "kill": 5
     },
     "build_now": 0,
@@ -446,7 +446,7 @@
         "Buildable": 9,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://money.stackexchange.com/questions/170119/what-standard-documents-should-an-early-stage-startup-must-prepare-for-investor",
       "discovered_at": "2026-10-23T11:04:54+03:00"
@@ -745,14 +745,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2581,
-    "last_7_days_usd": 1.5885,
-    "all_time_usd": 33.9059,
+    "today_usd": 0.3889,
+    "last_7_days_usd": 1.7277,
+    "all_time_usd": 34.2949,
     "by_day": [
-      {
-        "date": "2026-10-22",
-        "usd": 0.2497
-      },
       {
         "date": "2026-10-23",
         "usd": 0.2157
@@ -776,63 +772,36 @@
       {
         "date": "2026-10-28",
         "usd": 0.2581
+      },
+      {
+        "date": "2026-10-29",
+        "usd": 0.3889
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6684
+        "usd": 0.6614
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5255
+        "usd": 0.543
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3612
+        "usd": 0.3333
+      },
+      {
+        "agent": "build_decisions",
+        "usd": 0.1565
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0334
+        "usd": 0.0335
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-22",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-23",
       "agents": {
@@ -1042,12 +1011,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-10-29",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-10-28.md",
-    "date": "2026-10-28",
-    "text": "# Daily Summary — 2026-10-28 (Tue)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 418 |\n| Opportunities validated past threshold | 108 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or live services currently tracked. Discovery phase ongoing; no experiments have advanced to validation or build stages.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues daily pain-signal sweeps across target communities.\n2. `opportunity_scoring` processes any new candidate opportunities.\n3. `pain_validation` targets high-scoring candidates for pain signal confirmation.\n4. `lead_research` builds contact lists for validated opportunities.\n5. `build_decisions` evaluates readiness of top-validated opportunities for experiment launch.\n\n## Operator action items\n\n1. **Review the 108 validated opportunities** — they are queued for build decision. Prioritize by pain signal strength and market size; recommend top 3 candidates for experiment launch.\n2. **Confirm discovery strategy** — 418 new candidates suggest strong market radar coverage. Validate that scoring thresholds are tight enough to avoid bloat in the validation queue.",
+    "file": "reports/daily/2026-10-29.md",
+    "date": "2026-10-29",
+    "text": "# Daily Summary — 2026-10-29 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 421 |\n| Opportunities validated past threshold | 109 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\nNo active experiments currently tracked.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error during run; recovered and completed |\n\n## Tomorrow's auto-scheduled actions\n\n1. `build_decisions` evaluates validated opportunities and stages builds.\n2. `cost_gain` computes daily ROI metrics for opportunity cohorts.\n3. `opportunity_scoring` re-scores candidate pool against latest signals.\n4. `pain_validation` probes top 50 unvalidated opportunities.\n5. `market_radar` sweeps sources for new pain signals.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

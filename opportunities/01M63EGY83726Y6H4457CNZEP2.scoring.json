@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M63EGY83726Y6H4457CNZEP2",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "Lost indexing for a commercial page is a genuine revenue pain for small business owners \u2014 four months of zero organic traffic on a services page is a real cost, and Google Search Console gives no actionable diagnosis. The buyer (a small business owner or freelancer managing their own SEO) is nameable and reachable, and there is some willingness to pay: the SEO tools market has clear paid incumbents (Ahrefs, Screaming Frog, SEMrush), though price sensitivity is real for this segment. The service is buildable \u2014 Claude can analyze a URL, fetch crawl signals, check technical SEO factors, and output a structured remediation report \u2014 and delivery can be largely automated. The key validation question is whether this segment will pay $15\u201349 for a specialist 'Discovered not indexed' triage report vs. assuming the big SEO tools already cover it.",
+  "solution_plan": "The micro-service is a one-click SEO indexing diagnostic: the user submits a URL and gets back a Claude-generated report identifying why Google has refused to index the page and what to fix, specifically covering 'Discovered \u2013 currently not indexed' failures. The factory builds this as a simple intake form (URL + optional Google Search Console export paste) feeding a Claude analysis prompt, a Stripe payment link ($19\u201339 one-time), and an automated email delivery of the PDF report \u2014 no coding by the operator. To sell, the operator targets small business owners and freelancers in SEO communities (Reddit r/SEO, r/juststart, Facebook groups, indie hacker forums) with a direct offer: 'Stuck on Discovered not indexed for months? Get a diagnosis report for $29' \u2014 outreach batches go out only after operator approves each campaign. Ongoing delivery is automated: Stripe payment triggers Claude analysis and emails the report; support is mainly answering 'what does X mean' questions which Claude can handle via a simple reply-with-context flow. The only recurring human touch is approving outreach batches and monitoring for edge cases where Claude's analysis needs correction. The main risk: price sensitivity in the small business SEO segment and competition from free resources means conversion may be low \u2014 validate with 20 outreach messages before investing further.",
+  "notes": "Passes validate threshold (5.6 \u2265 5.5). Does not yet reach build threshold (5.6 < 6.5). All build gates are borderline met (operational_autonomy=7 meets floor; buildability_with_ai=8 meets floor; buyer_clarity=6 meets floor; willingness_to_pay=5 meets floor) but total score does not qualify for build stage. Validate first by testing whether this segment converts at any price point.",
+  "scored_at": "2026-10-29T12:07:43+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

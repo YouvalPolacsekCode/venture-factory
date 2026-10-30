@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5PDW85FSJBP3JMQJ94RDEG0",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Self-hosted email deliverability failure is a recurrent, acute pain with a clear willingness-to-pay signal: the original poster explicitly states they would pay $5/month for a managed alternative, and multiple HN threads document the same pattern over years. Competitors (Mailgun, Postmark, MXToolbox Pro) all charge meaningful fees confirming market willingness to pay for deliverability tooling in this space.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50218062"
+  ],
+  "evaluated_at": "2026-10-30T12:18:18+03:00"
+}

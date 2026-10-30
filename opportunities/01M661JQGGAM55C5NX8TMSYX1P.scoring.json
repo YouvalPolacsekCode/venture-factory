@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M661JQGGAM55C5NX8TMSYX1P",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Each MBOX-to-IMAP migration is a per-client technical job: validating the source archive, running the migration tool, verifying integrity, and troubleshooting failures \u2014 a human or at minimum a managed server process per customer."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is reasonably clear \u2014 MSPs and IT managers at SMBs who repeatedly handle email migrations and do pay for tools \u2014 and willingness to pay is moderate (existing paid tools like Aid4Mail exist). However, the actual migration work cannot be automated by Claude: it requires ingesting potentially gigabytes of MBOX files, running server-side tooling (imapsync etc.), and validating the output \u2014 per-customer technical fulfillment that a solo non-technical operator cannot deliver autonomously. The penalty for human fulfillment, combined with low operational autonomy, drops this below the validate threshold.",
+  "solution_plan": "This is not a viable autonomous micro-service for this factory. Each migration requires the customer to upload large files to a server, run migration tooling, and verify results \u2014 none of which Claude can do in a hands-off way without significant infrastructure and per-job human oversight. A written guide product (paid PDF/course) is possible but would earn very little. The honest assessment is that a managed migration service is a technical services business requiring infrastructure and hands-on work per client \u2014 not a Claude-automated product. Dropping this candidate is correct.",
+  "notes": "Fails operational_autonomy_min (4 < 7) and buildability_with_ai_min (5 < 6). The product that could exist here (a polished MBOX migration SaaS) would require real infrastructure engineering, not a prompt + Stripe link.",
+  "scored_at": "2026-10-30T12:19:16+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

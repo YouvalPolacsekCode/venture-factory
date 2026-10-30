@@ -1,0 +1,25 @@
+{
+  "id": "01M661JQGGAM55C5NX8TMSYX1P",
+  "discovered_at": "2026-10-30T12:17:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200161/how-can-i-migrate-archived-mbox-emails-to-a-business-imap-server",
+    "snippet": "I manage email archives stored in MBOX format and need to migrate them to a business IMAP server. The goal is to make the archived messages accessible through multiple devices while preserving email content, attachments, and folder organization."
+  },
+  "problem_statement": "IT managers and sysadmins need a reliable, affordable tool to migrate large MBOX email archives to business IMAP servers while preserving folder structure, attachments, and metadata \u2014 a recurring pain point as companies switch email providers.",
+  "target_segment": "Small business IT managers, sysadmins, and MSPs handling email migrations for SMB clients.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "email-migration",
+    "mbox",
+    "imap",
+    "sysadmin",
+    "email-archive",
+    "msps",
+    "business-email",
+    "data-migration"
+  ],
+  "notes": "Single signal but represents a recurring professional workflow \u2014 MSPs and IT consultants handle these migrations repeatedly and pay for tools that reduce hours spent. Existing tools (imapsync, Aid4Mail) are clunky; a polished managed migration service could command per-migration fees.",
+  "status": "candidate"
+}

@@ -1,0 +1,50 @@
+{
+  "opportunity_id": "01M5PDW85FSJBP3JMQJ94RDEG0",
+  "decided_at": "2026-10-30T12:19:27+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 5,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 5,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.9,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "eligible_for_build": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.9 < min_total_to_build 6.5",
+    "operational_autonomy=5 < 7",
+    "buildability_with_ai=5 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Three independent gates block build_now: operational_autonomy (5 vs floor 7), buildability_with_ai (5 vs floor 6), and total score (5.9 vs 6.5 threshold). The recommended_stage is 'validate', not 'build' or 'scale'. The pain is genuine and the buyer persona is clear, but as currently scoped, running email deliverability infrastructure requires ongoing IP reputation management and SMTP relay work that cannot be autonomously operated by Claude. The scoring notes suggest that narrowing scope strictly to audit/monitoring reports could lift buildability to ~7, but autonomy remains borderline \u2014 this reframing should be validated before any build commitment.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 10,
+  "suggested_first_outreach_channel": "r/selfhosted and HN Show HN post"
+}

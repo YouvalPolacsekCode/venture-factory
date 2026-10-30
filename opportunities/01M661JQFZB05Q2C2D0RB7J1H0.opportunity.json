@@ -1,0 +1,26 @@
+{
+  "id": "01M661JQFZB05Q2C2D0RB7J1H0",
+  "discovered_at": "2026-10-30T12:17:15+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50296367",
+    "snippet": "Is it just me, or has Opus suddenly turned dumb as rocks with 0 attention span over the last half day or so? Noticeably worse output across multiple agents on very different projects. (26 points, 22 comments)"
+  },
+  "problem_statement": "Developers running production AI agent pipelines have no reliable way to detect or be alerted when an LLM provider silently degrades model quality, causing costly downstream failures before they notice.",
+  "target_segment": "Software developers and AI engineers running multi-agent or agentic workflows on top of third-party LLM APIs (Anthropic, OpenAI, etc.) at small-to-mid-size companies.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm-monitoring",
+    "ai-ops",
+    "model-quality",
+    "agent-reliability",
+    "api-observability",
+    "llm-api",
+    "production-ai",
+    "alerting",
+    "regression-detection"
+  ],
+  "notes": "26 upvotes and 22 comments suggest broad resonance. Teams paying for LLM API usage (direct cost) suffer silent quality regressions with no notification from providers. A monitoring/canary service that continuously probes model quality and alerts paying customers would have clear willingness-to-pay \u2014 these are engineering teams already spending on API credits.",
+  "status": "candidate"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M661JQG87VFK1MY9W31V2KEW",
+  "discovered_at": "2026-10-30T12:17:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439944/keeping-saudi-customer-data-in-saudi-arabia-with-our-existing-org",
+    "snippet": "We are already use Salesforce (CRM + Marketing Cloud). Our org is hosted outside Saudi Arabia. We are opening a new satellite office in Saudi Arabia. Local law (PDPL) may require Saudi customer data to stay in the country... Is Hyperforce the answer? From what I read, it moves the whole org to one country, which won't work for us."
+  },
+  "problem_statement": "Companies expanding into Saudi Arabia that already use Salesforce orgs hosted elsewhere face complex, unclear, and expensive data residency compliance requirements under PDPL, with no straightforward path to partial in-country data storage.",
+  "target_segment": "IT architects and compliance officers at multinational companies opening Gulf/Saudi offices that use existing Salesforce CRM deployments.",
+  "geo": "SA",
+  "signal_strength": 3,
+  "keywords": [
+    "data-residency",
+    "salesforce",
+    "pdpl",
+    "compliance",
+    "saudi-arabia",
+    "crm",
+    "hyperforce",
+    "data-sovereignty",
+    "enterprise-saas"
+  ],
+  "notes": "Asker is an enterprise Salesforce customer (CRM + Marketing Cloud) facing a real legal compliance deadline. This is a paid professional context \u2014 companies in this situation typically pay consultants or vendors significant sums. A consultancy or SaaS tool that maps PDPL requirements to specific Salesforce configuration paths and monitors compliance would find willing buyers.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M661JQFZB05Q2C2D0RB7J1H0",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "build",
+  "rationale": "The buyer is a specific, named role \u2014 AI/ML engineers and platform leads at companies actively spending on LLM APIs \u2014 who already budget for observability tooling (Datadog, PagerDuty, etc.), giving strong willingness-to-pay signals. A canary-probing service can run largely automated: Claude runs scheduled eval prompts against provider APIs, detects quality regressions via scoring, and fires alerts with no per-customer human work. The deciding factor is that the pain is real (silent model degradation costs real money in broken pipelines) and the build is within reach \u2014 the core is a scheduler + eval harness + alert webhook, well within this factory's capabilities.",
+  "solution_plan": "The micro-service is an LLM quality canary: it continuously sends standardized test prompts to Anthropic/OpenAI APIs and scores the responses, alerting customers when quality drops below their threshold. The factory builds it as a Claude-powered eval engine (scoring response quality on predefined rubrics), a simple signup page, a Stripe subscription link ($49\u2013$99/mo), and a webhook/email alert system \u2014 no operator coding required. Customers are reached via direct outreach to AI engineers on HN, LinkedIn, and communities like the Anthropic Discord and Latent Space Slack; outreach batches go out only after operator approval. Once a customer connects their API keys via a form, delivery (running canary probes, scoring, alerting) runs fully via Claude + cron + email \u2014 the operator's only recurring touch is approving new outreach sends. The main risk is that larger teams may already use internal evals; positioning is for the long tail of teams with no dedicated MLOps.",
+  "notes": "All build_gates met: operational_autonomy=7, buildability_with_ai=6, buyer_clarity=8, willingness_to_pay=7. Defensibility is moderate \u2014 first-mover distribution advantage matters here.",
+  "scored_at": "2026-10-30T12:19:16+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

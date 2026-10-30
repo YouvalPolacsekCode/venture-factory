@@ -1,0 +1,27 @@
+{
+  "id": "01M661JQGRHWNCEQ39DTG6GNZF",
+  "discovered_at": "2026-10-30T12:17:15+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://lobste.rs/s/76otqu",
+    "snippet": "VictoriaLogs vs Loki, Elasticsearch, OpenSearch, SigNoz and ClickStack on structured log ingestion (tags: databases, devops, performance)"
+  },
+  "problem_statement": "DevOps and platform engineering teams struggle to choose and justify the right log ingestion backend as the landscape fragments across VictoriaLogs, Loki, Elasticsearch, ClickHouse-based stacks, and others \u2014 each with different cost and performance tradeoffs at scale.",
+  "target_segment": "Platform engineers and DevOps leads at startups and scale-ups managing self-hosted or cloud observability stacks.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "log-management",
+    "observability",
+    "devops",
+    "victorialogs",
+    "loki",
+    "elasticsearch",
+    "clickhouse",
+    "platform-engineering",
+    "cost-optimization",
+    "benchmarking"
+  ],
+  "notes": "Benchmark comparison content draws sustained traffic from engineering teams actively evaluating stacks \u2014 these teams have budget (cloud infra spend is a real cost center). A managed benchmarking or migration advisory service, or a cost-modelling SaaS that helps teams pick the cheapest stack for their log volume, would find paying buyers among engineering leads with $10k+/month infra bills.",
+  "status": "candidate"
+}

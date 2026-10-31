@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M68K7JJSK2ESAQ4VXWKBEJ25",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "Salesforce ISV partners and AppExchange developers are named business buyers with real engineering budgets \u2014 they pay for developer tools, and CI/CD pipeline reliability is a business-critical concern with real opportunity cost per blocked build. Willingness to pay is supported by the existing ecosystem of Salesforce-specific tooling (Gearset, Copado, etc.) at $200-$800/user/month ranges. The pain (opaque API errors blocking automated org provisioning) is concrete and well-documented in the Salesforce partner community, though current signal is a single post. Buildability is strong \u2014 a Claude-powered diagnostic and explainer tool is squarely in the factory's wheelhouse \u2014 and operational autonomy is achievable for a self-serve documentation/diagnostic product. Validate by reaching 20-30 Salesforce ISV partner engineers to confirm they'd pay before investing in a full product.",
+  "solution_plan": "A self-serve diagnostic and cookbook service for Salesforce org provisioning API errors \u2014 users paste their SignupRequest payload or error code, and the service returns a plain-English diagnosis, the likely root cause, and the corrected configuration. The factory builds this as a Claude prompt trained on Salesforce ISV documentation and known error patterns, behind a simple web form with a Stripe subscription ($29-$79/month); the operator approves the first outreach batch to Salesforce partner Slack communities and AppExchange partner forums. Reach buyers through the Salesforce Partner Community, Partner Developer forums, and LinkedIn targeting job titles like 'Salesforce ISV Engineer' or 'AppExchange Developer' \u2014 these are findable and active communities. Delivery is fully automated: user submits error, gets diagnosis within seconds, billed monthly via Stripe. The only recurring human touch is approving outreach batches and monitoring for Salesforce API changes that require prompt updates (quarterly). A solo non-technical operator can build and run this with the factory \u2014 the only manual work is keeping the knowledge base current as Salesforce releases API changes.",
+  "notes": "responsiveness_signal is 1 (no tests run yet) \u2014 validate this before building. The Salesforce ecosystem is large but the specific ISV/AppExchange segment is narrow enough to target efficiently. No build gates failing at current scores, but the total of 5.8 is in validate territory; test demand before committing.",
+  "scored_at": "2026-10-31T12:06:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

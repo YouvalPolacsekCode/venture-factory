@@ -1,0 +1,25 @@
+{
+  "id": "01M68K7JK09C1RSRPPK0DVRZ51",
+  "discovered_at": "2026-10-31T12:04:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200165/what-does-free-for-up-to-100-000-requests-when-created-as-an-ai-gateway-in-azur",
+    "snippet": "I'm considering enabling AI Gateway on a Microsoft Foundry resource, mainly to enforce monthly token quotas on model deployments. Creating it this way provisions a new Azure API Management Basic v2 instance. The API Management pricing page attaches footnote 8... 'Free for up to 100,000 requests when created as an AI Gateway in Azure AI Foundry.' What does this mean for billing?"
+  },
+  "problem_statement": "Teams deploying AI gateways on Azure struggle to understand opaque, footnote-buried pricing rules for API Management tiers, making it hard to budget accurately for AI infrastructure costs before they commit.",
+  "target_segment": "Cloud architects, platform engineers, and AI teams at mid-market and enterprise companies deploying LLM workloads on Azure.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "azure",
+    "ai-gateway",
+    "cloud-pricing",
+    "llm-ops",
+    "api-management",
+    "cost-management",
+    "azure-ai",
+    "token-quota"
+  ],
+  "notes": "Business context: user is setting up production AI infrastructure with quota enforcement \u2014 this is a paying Azure customer. Pain: pricing opacity creates budgeting risk. Opportunity: a cloud AI cost calculator or explainer tool that demystifies Azure/AWS/GCP AI gateway and LLM API pricing into plain-language estimates. Existing tools (Infracost, etc.) don't cover managed AI gateway tiers well. Low signal count but recurring class of pain.",
+  "status": "candidate"
+}

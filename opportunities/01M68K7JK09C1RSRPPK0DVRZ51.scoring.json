@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M68K7JK09C1RSRPPK0DVRZ51",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "Cloud architects and platform engineers at mid-market companies deploying LLMs on Azure are real business buyers with infrastructure budgets, and pricing confusion around AI gateway tiers is a concrete decision-blocker that costs real money if misjudged. Adjacent tools (Infracost, CloudHealth) confirm this segment pays for cost clarity tooling. Buildability and autonomy are strong \u2014 a Claude-powered pricing explainer and cost calculator is highly automatable and deliverable as a self-serve web tool. However, the market is somewhat narrow (Azure-specific AI Gateway buyers), lead reachability requires finding engineers actively in the Azure AI evaluation phase (harder than a directory), and no responsiveness data exists. Sits exactly at the validate floor \u2014 worth a lightweight test but not enough signal to invest in building without buyer confirmation.",
+  "solution_plan": "A plain-language Azure AI pricing explainer and cost estimator \u2014 users input their expected request volume, token usage, and gateway configuration, and the tool returns a clear monthly cost estimate with footnotes decoded into plain English, plus a comparison of tier options. The factory builds this as a Claude prompt that ingests Azure pricing page data and user inputs via a simple web form, with a Stripe payment link for a one-time report or low-price subscription ($9-$19/month). Sell by reaching cloud architects and platform engineers through Azure-specific communities (Microsoft Tech Community, LinkedIn targeting 'Azure AI' + 'platform engineer'), and via content targeting people searching for 'Azure AI Gateway pricing' \u2014 these are high-intent search queries. Delivery is fully automated: user submits config, gets estimate instantly, billed via Stripe. The only recurring human touch is updating pricing data when Azure changes its fee structure (roughly quarterly) and approving outreach. A solo non-technical operator can build and run this with the factory \u2014 but validate that engineers will pay rather than bookmark the Azure pricing page before investing.",
+  "notes": "Total is exactly 5.5, just at the validate threshold. Lead reachability (4) is the weakest dimension \u2014 finding engineers actively evaluating Azure AI Gateway before they've committed is timing-sensitive. Defensibility is low (easily copyable) so speed to market matters if validated.",
+  "scored_at": "2026-10-31T12:06:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

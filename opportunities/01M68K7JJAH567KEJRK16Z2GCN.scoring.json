@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M68K7JJAH567KEJRK16Z2GCN",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A checkpointing middleware or proxy layer for AI agent platforms requires per-platform custom integration and debugging work that cannot be automated away \u2014 maintaining compatibility with Anthropic, OpenAI, Cursor APIs as they change requires ongoing manual engineering effort."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "The buyers are individual paid subscribers to AI platforms \u2014 mostly freelancers and developers paying personal subscription fees, not business budget lines \u2014 which makes monetization as an additional paid tool unlikely at meaningful price points. The core technical challenge (checkpointing agent state across opaque third-party APIs) is deeply non-trivial: each platform (Anthropic, OpenAI, Cursor) exposes different internals, and maintaining a working proxy layer would require constant engineering re-work as those APIs evolve, far exceeding what a solo non-technical operator can sustain. Willingness to pay for a workaround tool when the real fix is the upstream platform's responsibility is also questionable. Drop and monitor in case a platform opens state-checkpointing APIs.",
+  "solution_plan": "Not recommended for build. The problem is real but the solution requires low-level integration with multiple closed AI platform APIs that change frequently, making it impossible for a solo non-technical operator to build and maintain without a dedicated engineering team. The buyer (individual platform subscriber) is also unlikely to pay a meaningful monthly fee for a workaround that the underlying platform should fix for free. A simpler adjacent product \u2014 a quota-burn monitoring dashboard that shows token usage vs. task completion \u2014 is more buildable but still faces a weak buyer-clarity problem. Recommend dropping and revisiting if any major AI platform publishes agent-state APIs.",
+  "notes": "operational_autonomy (3) and buildability_with_ai (4) both fail build gates. Buyer clarity (5) also fails the build gate floor of 6. Total of 3.2 is below the validate threshold of 5.5.",
+  "scored_at": "2026-10-31T12:06:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

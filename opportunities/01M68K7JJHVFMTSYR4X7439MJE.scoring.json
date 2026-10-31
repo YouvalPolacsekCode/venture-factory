@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M68K7JJHVFMTSYR4X7439MJE",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Sysadmin automation for heterogeneous self-hosted stacks requires per-environment customization and debugging \u2014 each user's Linux setup, distro, and service combination differs enough that automated delivery would require significant human-in-the-loop troubleshooting to be genuinely useful."
+    }
+  ],
+  "total": 3.2,
+  "recommended_stage": "drop",
+  "rationale": "Self-hosters are technically capable, highly cost-sensitive individuals who build or find free alternatives before paying for yet another tool \u2014 willingness to pay for an ops assistant layer is unproven and structurally weak for this audience. The buyer is not a named business role with a budget; it's a diffuse population of indie devs who have already invested in DIY to avoid exactly these costs. Even if built well, the heterogeneity of self-hosted environments (different distros, service configs, edge cases) means delivery cannot be fully automated without high support load. Signal is minimal (single comment, 0 points). Drop.",
+  "solution_plan": "Not recommended for build. The target user is inherently resistant to paying for automation they believe they can (or already do) handle themselves with AI tools. The market is large but diffuse and price-sensitive, and delivering reliable sysadmin automation across the variety of self-hosted setups a solo factory cannot maintain. If revisited, narrow the scope dramatically \u2014 e.g., a single-purpose tool for one specific self-hosting stack (like Coolify or Dokku) with a concrete recurring task \u2014 and re-evaluate buyer clarity and autonomy.",
+  "notes": "buyer_clarity (4), willingness_to_pay (4), and operational_autonomy (5) all fail build gates. Total 3.2 is below validate threshold.",
+  "scored_at": "2026-10-31T12:06:31+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

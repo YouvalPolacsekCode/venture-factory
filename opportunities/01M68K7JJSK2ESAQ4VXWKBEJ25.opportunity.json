@@ -1,0 +1,26 @@
+{
+  "id": "01M68K7JJSK2ESAQ4VXWKBEJ25",
+  "discovered_at": "2026-10-31T12:04:12+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439960/signuprequest-with-connectedappconsumerkey-always-ends-in-status-error-errorcod",
+    "snippet": "I am building a GitHub Actions workflow that creates a trial org (Partner Developer / Sales Enterprise) on demand from an Environment Hub with the SignupRequest object and then installs packages into it. To get headless access to the new org I use Proxy Signup: I pass ConnectedAppConsumerKey and ConnectedAppCallbackUrl on the request and plan to exchange the returned AuthCode for a refresh token. [Error C-1016 encountered]"
+  },
+  "problem_statement": "Salesforce ISV partners and developers building automated org-provisioning CI/CD pipelines hit opaque, undocumented errors (e.g. C-1016) in the SignupRequest/Trialforce API, causing significant debugging time with no actionable Salesforce documentation.",
+  "target_segment": "Salesforce ISV partners, AppExchange developers, and Salesforce consulting shops automating org provisioning and QA environments.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "isv",
+    "trialforce",
+    "ci-cd",
+    "org-provisioning",
+    "appexchange",
+    "automation",
+    "api-debugging",
+    "github-actions"
+  ],
+  "notes": "Clear business/developer context \u2014 building a production CI/CD pipeline for a Salesforce partner org. These teams pay for dev tools and automation. Potential: a diagnostic/wrapper tool for Salesforce org provisioning APIs, or a documented cookbook/service. Weak signal (1 post) but the pain class (Salesforce API opacity for ISVs) is well-documented historically. Worth monitoring.",
+  "status": "candidate"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M68K7JJ1J9QM8PDBVHEBYY8J",
+  "discovered_at": "2026-10-31T12:04:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50314132",
+    "snippet": "In our ongoing investigation into a recent security incident we detected that agent traces from your account may have had secret keys in them. We have no knowledge of what these keys are or if they are truly sensitive. Regardless, out of an abundance of caution, we believe it's worth considering rotating them. At this time, we have no evidence of misuse or abuse but we are sharing these initial findings as quickly as possible so you can consider the appropriate course of action."
+  },
+  "problem_statement": "AI coding and agent tools (like Warp) inadvertently capture and expose secret keys/credentials in agent traces, creating serious security risks for developer teams that use these tools in production workflows.",
+  "target_segment": "Software engineering teams and DevOps engineers at companies using AI-powered terminal or agent tools in production environments.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "secret-scanning",
+    "credential-leak",
+    "ai-agent-security",
+    "developer-tools",
+    "secrets-management",
+    "devops",
+    "security-incident",
+    "agent-traces"
+  ],
+  "notes": "Warp.dev notified users of a breach where agent traces contained secrets. This is a recurring class of problem as AI agents become more embedded in dev workflows. Buyer signal: engineering teams at companies already paying for Warp Pro or similar AI dev tools. A secrets-scrubbing layer or audit tool for AI agent outputs could command a per-seat SaaS price. Potential adjacent to existing secret-scanning tools (GitGuardian, Trufflesecurity) but specific to agent/LLM trace outputs.",
+  "status": "candidate"
+}

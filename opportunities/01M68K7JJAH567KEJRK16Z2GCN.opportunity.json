@@ -1,0 +1,25 @@
+{
+  "id": "01M68K7JJAH567KEJRK16Z2GCN",
+  "discovered_at": "2026-10-31T12:04:12+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50313539",
+    "snippet": "I am using Claude design, and a lot of times its agent is failing mid-task, with connection errors (not sure if this is connection between me and agent, or between agent in Claude infra and relevant LLM model). When these errors happen: 1. My limits have been consumed already. 2. There is no resume button, there is only retry, which starts again. 3. Even retry fails, then consumes my tokens. I had some chats where I lost 80% my limits by retrying the task, with no luck of completing it."
+  },
+  "problem_statement": "AI agent platforms consume user quota/tokens on failed or mid-task aborted runs with no resume mechanism, forcing users to restart from scratch and burn through paid limits with no recourse.",
+  "target_segment": "Paid subscribers of AI agent platforms (Claude, GPT, Cursor, etc.) using agents for complex multi-step tasks \u2014 freelancers, developers, and knowledge workers.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agent",
+    "token-waste",
+    "llm-reliability",
+    "resume-task",
+    "agentic-workflow",
+    "developer-tools",
+    "ai-billing",
+    "fault-tolerance"
+  ],
+  "notes": "User explicitly on a paid plan losing 80% of quota to failed retries. 4 points, 5 comments \u2014 some resonance. Buyer signal: paid AI platform subscribers who run long-horizon agent tasks. Opportunity: a middleware or proxy layer that checkpoints agent state, detects failures before quota is consumed, and enables resume \u2014 or a monitoring dashboard that surfaces quota burn vs. work completed. Could be sold as a browser extension or API wrapper.",
+  "status": "candidate"
+}

@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M6B8F4ZBTYVCHEFEKK6NAHA6",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Legacy server patching, EOL OS migration, and Plesk remediation are hands-on technical tasks requiring per-customer manual work by a skilled sysadmin \u2014 cannot be automated by Claude + this tooling."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Scoping a migration or retainer engagement for a client's live production server requires discovery calls and client sign-off at each step."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Managing live infrastructure for paying clients involves incident response and human judgement under time pressure \u2014 not async-automatable."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the buyer (freelance sysadmin or agency owner managing client servers) is identifiable and willing to pay, but this is fundamentally a done-for-you technical services play requiring a skilled human sysadmin to actually do the work. Claude cannot SSH into a Plesk server, patch PHP on an EOL Ubuntu instance, or coordinate a live migration \u2014 this is not buildable as an autonomous micro-service with this factory's tooling. The operational_autonomy score of 2 reflects that every customer engagement requires deep per-customer manual work.",
+  "solution_plan": "Not recommended to build with this factory. The underlying service is managed server work \u2014 it requires a human sysadmin with root access, not an AI content or data pipeline. A non-technical solo operator cannot fulfill this without subcontracting technical labor, which changes the unit economics entirely. If Youval has sysadmin expertise, this is a viable freelance service, but it is out of scope for an autonomous Claude factory. Possible adjacent angle worth validating separately: a Claude-generated 'legacy server migration checklist + risk report' sold as a $49 PDF to agencies \u2014 low touch, fully automatable, tests willingness to pay before committing to anything operational.",
+  "notes": "Fails operational_autonomy gate (score 2, minimum 7). Fails buildability_with_ai gate (score 4, minimum 6). Total 2.2 far below min_total_to_validate. Drop.",
+  "scored_at": "2026-11-01T12:55:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

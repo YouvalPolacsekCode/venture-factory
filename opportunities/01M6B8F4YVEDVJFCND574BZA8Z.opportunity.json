@@ -1,0 +1,25 @@
+{
+  "id": "01M6B8F4YVEDVJFCND574BZA8Z",
+  "discovered_at": "2026-11-01T12:53:50+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50321622",
+    "snippet": "Tell HN: ChatGPT and Codex usage will be combined. Email text: 'In the coming weeks, you'll be able to delegate work directly to ChatGPT \u2014 from building sites and presentations to taking action on the web \u2014 without switching to the Work tab... A shared allowance for ChatGPT and Codex. As part of this unified experience, your use of ChatGPT and Codex will draw from [a shared pool].' Comments thread active with 3 replies, 6 points."
+  },
+  "problem_statement": "Professional teams using both ChatGPT and Codex face unexpected usage consolidation that collapses separate budgets/allowances into a shared pool, disrupting workflows and spend planning without warning or granular controls.",
+  "target_segment": "Engineering managers and CTOs at SMBs and agencies paying for ChatGPT Plus/Team and Codex API access who need predictable per-product budget allocation.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-budget-management",
+    "llm-cost-control",
+    "openai",
+    "codex",
+    "chatgpt",
+    "api-spend",
+    "team-ai-tools",
+    "usage-monitoring"
+  ],
+  "notes": "Buyer signal: paying subscribers to ChatGPT Team/Enterprise and Codex API. The forced merge of allowances is a recurring cost-management pain point. Opportunity: a spend-tracking and alerting layer that sits atop OpenAI usage APIs and gives teams per-product budget visibility, warnings, and caps before overages hit. Low signal count but commercial context is strong.",
+  "status": "candidate"
+}

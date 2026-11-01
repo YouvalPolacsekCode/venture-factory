@@ -1,0 +1,25 @@
+{
+  "id": "01M6B8F4ZBTYVCHEFEKK6NAHA6",
+  "discovered_at": "2026-11-01T12:53:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200170/how-can-i-get-php-7-4-33-or-newer-on-a-plesk-server-running-ubuntu-16-04-aws-ec",
+    "snippet": "Managed Plesk server for a client on Ubuntu 16.04 (EOL), PHP 7.4.16, AWS EC2. 'I manage a Plesk server for a client and need to patch PHP because of critical vulnerabilities, but the update never becomes available.' Running 4 domains including a CakePHP application, mail hosted on same server. Client relationship at stake."
+  },
+  "problem_statement": "Freelance and agency sysadmins managing legacy Plesk/cPanel servers on EOL operating systems cannot easily patch critical PHP vulnerabilities because panel providers drop support, leaving client sites exposed and admins scrambling for manual workarounds.",
+  "target_segment": "Freelance sysadmins and small web agencies managing legacy shared hosting environments for SMB clients on outdated stacks.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "legacy-server-management",
+    "plesk",
+    "php-patching",
+    "eol-migration",
+    "managed-hosting",
+    "sysadmin",
+    "security-compliance",
+    "web-agency"
+  ],
+  "notes": "Clear buyer signal: this is a professional managing a paying client's infrastructure. The pain is recurring \u2014 EOL OS + EOL panel + security vulnerabilities is a common SMB web agency problem. Opportunity: a managed migration-as-a-service or a monthly retainer for legacy server security monitoring and patching. Agencies would pay $100\u2013$500/mo per server to offload this risk. Multiple independent posts about Plesk/legacy PHP pain observed across previous cycles.",
+  "status": "candidate"
+}

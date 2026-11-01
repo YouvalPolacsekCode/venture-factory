@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M6B8F4YVEDVJFCND574BZA8Z",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.8,
+  "penalties_applied": [],
+  "total": 6.8,
+  "recommended_stage": "build",
+  "rationale": "The buyer is specific and named \u2014 engineering managers and CTOs at SMBs already paying for ChatGPT Team/Enterprise and Codex API, meaning they have budget authority and an active pain triggered by OpenAI's forced allowance consolidation. Willingness to pay is credible because these teams already pay $30\u2013100+/seat and spend-visibility tools (e.g., CloudHealth, Datadog cost modules) are established paid categories. Delivery is fully automatable: a Claude-orchestrated dashboard that polls the OpenAI usage API, applies per-product budget rules, and fires alerts requires no per-customer human work after onboarding.",
+  "solution_plan": "WHAT: A lightweight OpenAI spend-monitoring micro-service that splits usage by product (ChatGPT vs Codex vs other), sets per-product budget caps, and fires alerts before overages hit. BUILD: The factory scaffolds a simple intake form (API key + budget thresholds), a Claude-generated daily digest email, and a Stripe subscription link \u2014 no custom infra; the OpenAI usage API is public. SELL: Target engineering managers and CTOs via LinkedIn (filter: title 'Engineering Manager' OR 'CTO', company size 10\u2013200, tech/agency sector) and relevant Slack communities (e.g., AI Tinkerers, agency ops groups); outreach batches go out only after Youval approves. MAINTAIN: Usage polling runs on a cron, Claude drafts and sends alert emails, Stripe handles billing \u2014 operator touch is approving outreach batches and reviewing the weekly anomaly log. ONLY recurring human step: approving outreach sends and any disputed charges.",
+  "notes": "All build_gates pass: operational_autonomy=8 (\u22657), buildability_with_ai=7 (\u22656), buyer_clarity=8 (\u22656), willingness_to_pay=7 (\u22655). Defensibility is low (trivially copyable once OpenAI ships native controls), so the window is 6\u201312 months \u2014 validate pricing fast.",
+  "scored_at": "2026-11-01T12:55:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M6B8F4ZK64FH194C7DMFVS8F",
+  "discovered_at": "2026-11-01T12:53:50+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150031/how-can-i-compare-different-saas-tools-to-find-the-best-fit-for-a-business",
+    "snippet": "Question: 'When choosing a SaaS tool, I want to compare more than just pricing. Features, integrations, usability, and long-term scalability can all affect whether a tool is right for a business. What is the most reliable process for comparing similar SaaS products? Are there any useful ways to organize feature comparisons and evaluate user reviews before making a decision? I've also come across software review platforms and would like to understand how much weight businesses should give to comparison articles.'"
+  },
+  "problem_statement": "Operations managers and business owners lack a reliable, structured process for evaluating and comparing SaaS tools across dimensions beyond pricing \u2014 including integration depth, real scalability, and unbiased user evidence \u2014 leading to costly wrong-fit purchases.",
+  "target_segment": "Operations leads and founders at SMBs (10\u2013200 employees) evaluating SaaS tools for business-critical workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "saas-evaluation",
+    "software-comparison",
+    "vendor-selection",
+    "procurement",
+    "b2b-tools",
+    "feature-matrix",
+    "due-diligence"
+  ],
+  "notes": "Buyer signal: business context, evaluating tools for company use \u2014 implies budget authority. Opportunity: a paid SaaS comparison and evaluation service (structured scorecards, expert shortlisting, or a tool that ingests requirements and outputs ranked shortlist). G2/Capterra exist but are ad-driven; an independent evaluation service or AI-powered fit-scoring tool could command $200\u2013$2k per evaluation engagement. Signal is a single post; moderate confidence.",
+  "status": "candidate"
+}

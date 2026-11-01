@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6B8F4Z49H3ZY0E6Z4Q18R2G",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Meaningful career coaching or curriculum delivery typically requires live sessions, cohort calls, or at minimum synchronous check-ins to be credible and retain customers \u2014 hard to fully automate."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Career-transition customers have high anxiety and expect ongoing responsiveness; async-only support risks churn and refund demands."
+    }
+  ],
+  "total": 3.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a mid-to-senior software engineer \u2014 an individual consumer, not a business with a budget line \u2014 and while career-transition services can command high prices, willingness to pay in this cohort is unproven and highly variable (many expect free content from YouTube/blogs). Operational autonomy is the fatal flaw: credible career coaching requires synchronous human involvement (calls, feedback, cohort energy), and an async Claude curriculum alone is unlikely to convert or retain paying customers at $500+. The signal source is a single reflective HN post, not a buying signal.",
+  "solution_plan": "Not recommended to build. A solo non-technical operator cannot credibly deliver career coaching at a price point that justifies the effort without significant synchronous human involvement (calls, cohort management, personalized feedback). The async-only version (a PDF guide or Claude chatbot) competes with free resources and would not retain paying customers. If revisiting, validate first: post a $49 async 'AI career audit' offer in a developer Slack and see if anyone buys without a sales call.",
+  "notes": "Fails operational_autonomy gate (score 3, minimum 7). Fails buyer_clarity gate (score 5, minimum 6). Total 3.1 is below min_total_to_validate (5.5). Drop.",
+  "scored_at": "2026-11-01T12:55:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

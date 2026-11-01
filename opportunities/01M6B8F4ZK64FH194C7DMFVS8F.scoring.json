@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M6B8F4ZK64FH194C7DMFVS8F",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "A credible SaaS evaluation engagement typically requires a discovery call to understand the business's specific requirements before producing a meaningful shortlist \u2014 the 'requirements ingestion' step is hard to make fully self-serve at a price point above $50."
+    }
+  ],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is an ops lead or founder at an SMB \u2014 a real business buyer with budget authority \u2014 but willingness to pay for a structured SaaS comparison service is genuinely uncertain: G2, Capterra, and vendor trial periods are free, and paying $200\u20132k for a comparison report is a hard sell without a high-stakes, time-pressured procurement context. The pain occurs infrequently (once per tool evaluation cycle, not daily) and the signal is a single generic forum post, not evidence of a buying cohort. Buildability is strong but the commercial case is weak.",
+  "solution_plan": "Not recommended to build at this stage. The core problem \u2014 'how do I pick the right SaaS tool' \u2014 is genuinely solved well enough by free resources that a paid service faces a steep conversion challenge. Before building, validate with a $29\u201399 'AI SaaS shortlist report' landing page (Claude generates a structured comparison from a 5-question intake form, delivered as a PDF in 24h) and run 50 targeted LinkedIn outreach messages to ops managers. If 3+ people pay without a sales call, revisit. Currently below the validate threshold.",
+  "notes": "Fails willingness_to_pay gate (score 4, minimum 5). Total 4.1 below min_total_to_validate (5.5). Drop. Primary risks: low purchase frequency, strong free alternatives, and unproven willingness to pay at any meaningful price point.",
+  "scored_at": "2026-11-01T12:55:52+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

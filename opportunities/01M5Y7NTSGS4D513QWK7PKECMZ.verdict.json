@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5Y7NTSGS4D513QWK7PKECMZ",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The single source post documents a real professional concern, but evidence gathering found insufficient distinct pain quotes (1 primary source), no documented willingness-to-pay for a dedicated liability-documentation product specifically, and the adjacent paid markets (Codacy, SonarQube, legal templates) address different needs. The niche is plausible but unproven at the 5-quote / 1-WTP threshold required for pass.",
+  "sources": [
+    "https://workplace.stackexchange.com/questions/203825/how-do-i-ensure-job-safety-and-legal-liability-against-ai-related-damage-at-work"
+  ],
+  "evaluated_at": "2026-11-01T12:54:53+03:00"
+}

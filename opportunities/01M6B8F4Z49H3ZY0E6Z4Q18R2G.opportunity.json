@@ -1,0 +1,24 @@
+{
+  "id": "01M6B8F4Z49H3ZY0E6Z4Q18R2G",
+  "discovered_at": "2026-11-01T12:53:50+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50322477",
+    "snippet": "Ask HN: 'I'm curious if anyone here still actually writes code, in any meaningful amount, because they actually still need to. Excluding reasons like fun / learning. I loved coding in the past, but no matter what I do at this point, I can't find a reason to anymore that's actually necessary.' 6 points, 9 comments."
+  },
+  "problem_statement": "Experienced software developers find their coding skills becoming redundant as AI handles implementation, leaving them without a clear professional identity or a structured path to higher-value roles that leverage their technical background.",
+  "target_segment": "Mid-to-senior software engineers at tech companies and agencies facing AI-driven role displacement who need career repositioning support.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "developer-career-transition",
+    "ai-displacement",
+    "software-engineer",
+    "career-coaching",
+    "upskilling",
+    "role-evolution",
+    "technical-leadership"
+  ],
+  "notes": "Buyer signal is moderate \u2014 the poster is employed (implied), technically experienced, and the 9-comment thread suggests resonance. Opportunity: a paid coaching or structured curriculum service helping senior devs pivot to AI-adjacent roles (prompt engineering lead, AI product manager, technical architect). Willingness to pay not explicit but career-transition services command $500\u2013$5k+ per customer. De-prioritized slightly vs. stronger buyer signals.",
+  "status": "candidate"
+}

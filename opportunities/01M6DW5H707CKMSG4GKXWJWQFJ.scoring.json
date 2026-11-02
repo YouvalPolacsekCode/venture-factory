@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M6DW5H707CKMSG4GKXWJWQFJ",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.6,
+  "penalties_applied": [],
+  "total": 6.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, reachable business persona \u2014 a small business owner or in-house marketing manager running a multi-page service site, who has real money at stake (lost leads from unindexed pages) and who already pays for tools like Ahrefs or Screaming Frog but finds them too complex. Willingness to pay is supported by the paid SEO audit category at $50\u2013200/mo. The service is highly buildable (Claude reads Search Console exports, sitemaps, robots.txt, and canonical tags via a form upload, then produces a prioritised fix list) and nearly fully autonomous once the intake form is live. Responsiveness is untested so stage is validate, not build \u2014 but all build_gates are met, meaning a successful validation round should promote this quickly.",
+  "solution_plan": "The micro-service is a guided SEO indexing-audit tool: the business owner pastes their domain and uploads a Search Console crawl report (or connects via API), and Claude produces a plain-English ranked list of exactly why pages are not indexed and what to fix first. The factory builds it as a Typeform-style intake form + a Claude prompt chain that analyses the inputs + a PDF/email report delivery + a Stripe payment link ($29 one-time audit or $49/mo for monthly monitoring). To sell, the factory queries Apollo or LinkedIn for 'marketing manager' or 'website owner' at service businesses with 10\u201350 employees, and queues personalised cold-email outreach for operator approval before sending. Delivery is automated (form submit \u2192 Claude analysis \u2192 report emailed within minutes); support questions are handled by Claude email responder; billing is Stripe. The only recurring operator touch is approving outreach batches and monitoring for edge-case reports. This is realistic for a solo non-technical operator.",
+  "notes": "All build_gates pass: operational_autonomy 8 \u2265 7, buildability_with_ai 8 \u2265 6, buyer_clarity 7 \u2265 6, willingness_to_pay 7 \u2265 5. Stage is validate (not build) solely because responsiveness_signal is untested (score 2) \u2014 validate with 10\u201320 cold emails before building.",
+  "scored_at": "2026-11-02T13:18:33+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

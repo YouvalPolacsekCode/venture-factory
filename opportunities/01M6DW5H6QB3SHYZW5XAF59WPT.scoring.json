@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M6DW5H6QB3SHYZW5XAF59WPT",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, identifiable developer or agency building a commercial CRM for Canadian SMBs \u2014 they have a budget and a concrete integration gap to fill. Willingness to pay is credible because they are already spending on Twilio and WhatsApp Business API seats. However, the market is narrow (Canadian WhatsApp calling restriction is a niche within a niche), responsiveness is untested, and the solution \u2014 a thin routing middleware that falls back from WhatsApp calling to Twilio Voice when geography blocks it \u2014 while buildable, sits at the moderate end of complexity (API key management, multi-tenant config, webhook routing). Operational autonomy reaches 6 because once deployed it runs self-serve, but onboarding a developer customer still requires documentation and some integration support. Validate before committing.",
+  "solution_plan": "The micro-service is a hosted API middleware that detects when a WhatsApp Business outbound call is blocked by geography and automatically routes it through Twilio Voice (or another carrier) instead \u2014 a single API endpoint the CRM developer calls instead of WhatsApp's API directly. The factory builds it as: a Claude-generated API spec + a lightweight serverless function (deployable via a template) + a Stripe payment link for a monthly subscription ($49\u201399/mo per tenant) + a documentation page. To sell, the factory searches GitHub, Laravel forums, and Stack Overflow for developers asking this exact question and queues personalised cold-email outreach for operator approval before sending. Delivery is fully automated (API key provisioning via Stripe webhook \u2192 Claude-managed config); support questions are handled by a Claude-powered email responder; billing is Stripe recurring. The only recurring operator touch is approving outreach batches. Caveat: the addressable market is small (Canadian CRM builders) \u2014 validate demand with 10 outreach replies before building.",
+  "notes": "Both build_gates for operational_autonomy (6, just at boundary \u2014 not above min 7) and buildability_with_ai (6, meets min) are borderline. operational_autonomy scores 6, which is exactly the floor but not above it \u2014 stage correctly capped at validate. Total 5.6 qualifies for validate tier.",
+  "scored_at": "2026-11-02T13:18:33+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

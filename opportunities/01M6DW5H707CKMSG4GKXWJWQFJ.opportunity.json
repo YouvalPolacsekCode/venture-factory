@@ -1,0 +1,26 @@
+{
+  "id": "01M6DW5H707CKMSG4GKXWJWQFJ",
+  "discovered_at": "2026-11-02T13:16:35+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150028/how-can-i-troubleshoot-website-pages-that-are-not-being-indexed-by-google",
+    "snippet": "I am investigating an indexing issue on a business website with multiple service pages. Some pages may not be appearing in Google Search as expected. I want to understand how to identify the cause and determine which technical fixes are needed. I am checking the following areas: Google Search Console URL Inspection results, XML sitemap configuration, internal links to service pages, robots.txt rules and meta robots directives, canonical URLs and HTTP response codes."
+  },
+  "problem_statement": "Business website owners struggle to diagnose why specific service pages are not indexed by Google, having to manually cross-reference Search Console, sitemaps, robots.txt, canonical tags, and internal links with no unified diagnostic workflow.",
+  "target_segment": "Small business owners and in-house marketing managers running multi-page service websites who lack dedicated SEO engineer support.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "google-indexing",
+    "search-console",
+    "technical-seo",
+    "site-audit",
+    "sitemap",
+    "robots-txt",
+    "canonical",
+    "small-business"
+  ],
+  "notes": "Poster is explicitly troubleshooting a business website \u2014 commercial context. The pain maps to an existing paid category (SEO audit tools like Screaming Frog, Ahrefs, Semrush) but the question reveals those tools are either too expensive or too complex for the target user. Opportunity: a simplified, guided indexing-audit tool priced for SMBs. Weak single-post signal but a well-documented recurring pain.",
+  "status": "candidate"
+}

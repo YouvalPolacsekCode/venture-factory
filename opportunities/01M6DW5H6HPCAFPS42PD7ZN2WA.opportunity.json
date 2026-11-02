@@ -1,0 +1,25 @@
+{
+  "id": "01M6DW5H6HPCAFPS42PD7ZN2WA",
+  "discovered_at": "2026-11-02T13:16:35+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50334467",
+    "snippet": "Ran into this while swapping external drives between Windows and Mac -- it seems the only reliable way to keep the benefits of NTFS (journaling) and allow writes from MacOS is to use third-party $ commercial drivers. I am not knowledgeble about what makes a driver so I asked (Gemini) -- and I am told this involves a fairly complex low level OS hooks and bypassing OS protections etc with a lot of edge cases -- so today's frontier models are unlikely to produce a reliable driver implementation"
+  },
+  "problem_statement": "macOS users who regularly swap external drives with Windows machines must pay for third-party commercial NTFS drivers to get write access; no free or built-in solution is reliable, creating a recurring paid-software purchase for a basic interoperability need.",
+  "target_segment": "Mac users who share NTFS-formatted external drives with Windows machines \u2014 prosumers, freelancers, small studios, IT staff at mixed-OS offices.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ntfs",
+    "macos",
+    "cross-platform",
+    "driver",
+    "file-system",
+    "disk-utility",
+    "windows-interop",
+    "prosumer-tools"
+  ],
+  "notes": "Poster explicitly notes the only reliable path requires spending money on commercial drivers (e.g., Paragon, Tuxera). Paying buyer signal is clear: this is already a paid category with established competitors. Opportunity is either a cheaper/simpler alternative or a SaaS sync bridge. Weak signal volume (single post, 3 pts) but confirms an existing paid market.",
+  "status": "candidate"
+}

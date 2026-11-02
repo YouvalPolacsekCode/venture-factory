@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5Y7NTSM3AF9J816H17SK1DT",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "The pain (schema drift across environments) is real and well-documented in the paid tooling market, but the single-source GitHub feature request does not meet the 5-distinct-pain-quotes threshold, and the buildability constraints (operational_autonomy=5, buildability_with_ai=5, both below gate floors) mean the factory cannot deliver the core value proposition without developer resources. A paste-based MVP is a significantly watered-down proxy for the actual need.",
+  "sources": [
+    "https://github.com/TabularisDB/tabularis/issues/1292"
+  ],
+  "evaluated_at": "2026-11-02T13:17:35+03:00"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M6DW5H6QB3SHYZW5XAF59WPT",
+  "discovered_at": "2026-11-02T13:16:35+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95755/can-the-whatsapp-business-calling-api-initiate-calls-using-a-canadian-business-p",
+    "snippet": "I am developing a CRM in Laravel and researching the WhatsApp Business Platform APIs for integrating messaging and voice communication. My intended users are Canadian businesses, and I need to understand the calling capabilities before designing the integration. While reviewing the WhatsApp Business Calling API documentation, I found that business-initiated calls may have country-specific restrictions. In particular, Twilio's documentation indicates that outbound WhatsApp calls are not supported."
+  },
+  "problem_statement": "Developers building CRMs and business communication tools for Canadian (and other non-supported) markets cannot use WhatsApp Business Calling API for outbound calls due to geographic restrictions, leaving a gap in omnichannel voice integrations for those regions.",
+  "target_segment": "CRM developers and SaaS builders serving Canadian SMBs that need WhatsApp voice integration; also agencies building customer-communication stacks.",
+  "geo": "CA",
+  "signal_strength": 2,
+  "keywords": [
+    "whatsapp-business",
+    "calling-api",
+    "crm",
+    "canada",
+    "voip",
+    "omnichannel",
+    "laravel",
+    "sms-voice",
+    "business-communication"
+  ],
+  "notes": "Poster is actively building a commercial CRM and is hitting a real API gap. This is a developer-buyer signal: they are building a paid product and need a workaround or middleware layer. Opportunity could be a thin abstraction/routing layer that falls back to Twilio Voice or another carrier when WhatsApp calling is unavailable in a region. Low volume but concrete technical/commercial context.",
+  "status": "candidate"
+}

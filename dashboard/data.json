@@ -1,11 +1,11 @@
 {
   "generated_at": {
-    "utc": "2026-11-01T09:55:57+00:00",
-    "idt": "2026-11-01T12:55:57+03:00"
+    "utc": "2026-11-02T10:18:38+00:00",
+    "idt": "2026-11-02T13:18:38+03:00"
   },
   "funnel": {
-    "candidates": 434,
-    "scored": 434,
+    "candidates": 438,
+    "scored": 438,
     "validated": 48,
     "build_decisions": {
       "defer_1_week": 43,
@@ -540,6 +540,35 @@
     },
     {
       "topics": [
+        "seo",
+        "google-indexing",
+        "search-console"
+      ],
+      "id": "01M6DW5H707CKMSG4GKXWJWQFJ",
+      "problem_statement": "Business website owners struggle to diagnose why specific service pages are not indexed by Google, having to manually cross-reference Search Console, sitemaps, robots.txt, canonical tags, and internal links with no unified diagnostic workflow.",
+      "target_segment": "Small business owners and in-house marketing managers running multi-page service websites who lack dedicated SEO engineer support.",
+      "total": 6.6,
+      "recommended_stage": "validate",
+      "rationale": "The buyer is a specific, reachable business persona — a small business owner or in-house marketing manager running a multi-page service site, who has real money at stake (lost leads from unindexed pages) and who already pays for tools like Ahrefs or Screaming Frog but finds them too complex. Willingness to pay is supported by the paid SEO audit category at $50–200/mo. The service is highly buildable (Claude reads Search Console exports, sitemaps, robots.txt, and canonical tags via a form upload…",
+      "solution_plan": "The micro-service is a guided SEO indexing-audit tool: the business owner pastes their domain and uploads a Search Console crawl report (or connects via API), and Claude produces a plain-English ranked list of exactly why pages are not indexed and what to fix first. The factory builds it as a Typeform-style intake form + a Claude prompt chain that analyses the inputs + a PDF/email report delivery + a Stripe payment link ($29 one-time audit or $49/mo for monthly monitoring). To sell, the factory queries Apollo or LinkedIn for 'marketing manager' or 'website owner' at service businesses with 10–50 employees, and queues personalised cold-email…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "forum",
+      "source_url": "https://webmasters.stackexchange.com/questions/150028/how-can-i-troubleshoot-website-pages-that-are-not-being-indexed-by-google",
+      "discovered_at": "2026-11-02T13:16:35+03:00"
+    },
+    {
+      "topics": [
         "llm-cost-monitoring",
         "api-spend",
         "openai-billing"
@@ -711,48 +740,15 @@
       "source_type": "forum",
       "source_url": "https://serverfault.com/questions/1199774/why-are-so-many-domains-still-using-p-none-for-dmarc-despite-having-spf-and-dkim",
       "discovered_at": "2026-09-06T10:25:34+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "platform-events",
-        "external-credentials"
-      ],
-      "id": "01M3P765JW96XG9HSHFM40GYST",
-      "problem_statement": "Salesforce developers repeatedly hit undocumented permission walls when configuring automated integrations (Platform Events + External Credentials), wasting hours on trial-and-error with no clear official guidance.",
-      "target_segment": "Salesforce developers and admins at SMB and enterprise companies building automated integrations on the Salesforce platform",
-      "total": 6.5,
-      "recommended_stage": "validate",
-      "rationale": "Salesforce developers and admins at companies paying $150-300/user/month in Salesforce licenses are a high-budget B2B buyer: their time is billed at $100-200/hour and they routinely pay for tooling (AppExchange apps, integration middleware, developer tools). The pain — undocumented permission walls wasting hours on Platform Events + External Credentials — is specific, recurs across the Salesforce ecosystem, and the buyer has clear budget authority. All four build gates pass (operational_autonom…",
-      "solution_plan": "The micro-service is a Salesforce integration diagnostic assistant: a Claude-powered tool where a Salesforce dev describes their integration problem (e.g. 'Platform Event trigger can't access External Credentials') and gets back a step-by-step permission checklist, the correct config sequence, and the known gotchas — in plain English, not Salesforce documentation maze. The factory builds a clean web form (problem description input), a Claude prompt trained on Salesforce permission patterns and common integration edge cases, and a Stripe link ($9 per diagnostic or $49/month for unlimited team access); no coding by Youval. Sell by posting targ…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 7,
-        "Will pay": 7,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "validated",
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439883/whats-the-correct-way-to-give-automated-user-external-credentials-access",
-      "discovered_at": "2026-09-29T12:16:00+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2498,
-    "last_7_days_usd": 2.0059,
-    "all_time_usd": 35.1917,
+    "today_usd": 0.2481,
+    "last_7_days_usd": 2.0376,
+    "all_time_usd": 35.4398,
     "by_day": [
-      {
-        "date": "2026-10-26",
-        "usd": 0.2164
-      },
       {
         "date": "2026-10-27",
         "usd": 0.2457
@@ -776,20 +772,24 @@
       {
         "date": "2026-11-01",
         "usd": 0.2498
+      },
+      {
+        "date": "2026-11-02",
+        "usd": 0.2481
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6636
+        "usd": 0.6645
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5669
+        "usd": 0.581
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4328
+        "usd": 0.4497
       },
       {
         "agent": "build_decisions",
@@ -797,46 +797,11 @@
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0331
+        "usd": 0.0328
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-26",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-27",
       "agents": {
@@ -1046,12 +1011,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-11-02",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-11-01.md",
-    "date": "2026-11-01",
-    "text": "# Daily Summary — 2026-11-01 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 434 |\n| Opportunities validated past threshold | 112 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments staged for deployment or validation today.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues surface-level pain signal collection across monitored channels.\n2. `opportunity_scoring` processes new candidate opportunities from today's radar sweep.\n3. `pain_validation` targets highest-scored candidates with validation probes.\n4. `build_decisions` evaluates readiness of validated opportunities for prototype or service build.\n5. `cost_gain` computes weekly efficiency metrics for portfolio review.\n\n## Operator action items\n\nNone — process the approval queue (empty) and move on.",
+    "file": "reports/daily/2026-11-02.md",
+    "date": "2026-11-02",
+    "text": "# Daily Summary — 2026-11-02 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 438 |\n| Opportunities validated past threshold | 113 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues surface-level pain signal sweeps across B2B communities.\n2. `opportunity_scoring` processes the 438 candidate opportunities accumulated over the weekend.\n3. `pain_validation` validates top-ranked candidates from scoring run.\n4. `lead_research` collects contact details for validated opportunities.\n5. `build_decisions` evaluates readiness for new experiment launches.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

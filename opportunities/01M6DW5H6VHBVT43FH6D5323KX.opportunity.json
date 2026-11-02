@@ -1,0 +1,24 @@
+{
+  "id": "01M6DW5H6VHBVT43FH6D5323KX",
+  "discovered_at": "2026-11-02T13:16:35+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182697/how-can-i-remove-duplicate-files-from-my-onedrive-account",
+    "snippet": "I have many files stored in my personal OneDrive account, and I suspect that several files are duplicated. I want to remove unnecessary copies without accidentally deleting important data. I am looking for a safe and reliable method to identify duplicate files. Is there any built-in OneDrive option or recommended approach for this? I would appreciate simple steps, as I am new to managing cloud storage."
+  },
+  "problem_statement": "OneDrive users accumulate duplicate files with no native deduplication tool, leading to wasted storage and confusion; existing third-party tools are either too technical or not OneDrive-specific.",
+  "target_segment": "Non-technical individual and SMB OneDrive users who manage large file repositories and pay for Microsoft 365 storage tiers.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "onedrive",
+    "deduplication",
+    "cloud-storage",
+    "microsoft-365",
+    "file-management",
+    "storage-cleanup",
+    "saas-tool"
+  ],
+  "notes": "Recurrent question type across cloud storage platforms. Buyer signal is moderate: users paying for OneDrive storage upgrades have direct financial motivation to clean up. A simple web app or Office Add-in that scans and previews duplicates before deletion could command a one-time or subscription fee. Signal is a single post but represents a highly repeated class of complaint.",
+  "status": "candidate"
+}

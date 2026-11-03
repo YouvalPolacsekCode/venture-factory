@@ -1,0 +1,24 @@
+{
+  "id": "01M6GEKYJW8CV3C8XMND9CVK6E",
+  "discovered_at": "2026-11-03T13:17:30+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50338786",
+    "snippet": "I think at this point if someone charges 50% upfront of what hypothetically they could make from all the bloat people would pay for it. If a smart TV costs 500$ and each TV makes them 400$ in 10 years then charging 700$ sans smart features would sell if they advertised it that way."
+  },
+  "problem_statement": "Privacy-conscious consumers cannot easily buy a high-quality display without embedded smart TV surveillance software and ad-delivery systems; they are forced to choose between picture quality and data privacy.",
+  "target_segment": "Privacy-conscious consumers and households willing to pay a premium for surveillance-free home entertainment hardware",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "privacy",
+    "smart-tv",
+    "display",
+    "consumer-hardware",
+    "surveillance",
+    "ad-free",
+    "premium-hardware"
+  ],
+  "notes": "Single HN comment but the logic is sound and recurring \u2014 commenter explicitly models the willingness-to-pay ('charging 700$ sans smart features would sell'). Weak buyer signal (single point, no business context) but the consumer has money and articulates a price. Potential product: a curated reseller or hardware mod service that ships de-bloated displays with a privacy guarantee, sold at a transparent premium. Signal strength kept low (2) due to single data point and hobbyist/consumer framing.",
+  "status": "candidate"
+}

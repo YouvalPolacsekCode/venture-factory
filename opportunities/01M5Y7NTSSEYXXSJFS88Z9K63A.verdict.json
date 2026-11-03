@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M5Y7NTSSEYXXSJFS88Z9K63A",
+  "status": "rejected",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "The pain is structurally real and well-documented: AI-accelerated exploit timelines genuinely compress the response window for small teams. However, the proposed factory-buildable solution (a weekly AI-generated security digest) fails to clear the pain validation bar. It does not produce 5 distinct pain quotes from discoverable sources, the willingness-to-pay signal is indirect (incumbents like Snyk/Wiz serve this segment, but at a product depth far beyond what this factory can deliver), and the core differentiation\u2014stack-specific CVE prioritization over free tools like Dependabot and free CVE newsletters\u2014is unproven. The scoring system itself flags build-gate failures on buildability_with_ai and operational_autonomy. Advancing would risk a wasted build cycle on a watered-down product in a crowded category.",
+  "sources": [
+    "https://dev.to/james_anderson_h/security-changed-with-ai-and-small-teams-are-falling-behind-5ebg"
+  ],
+  "evaluated_at": "2026-11-03T13:18:36+03:00"
+}

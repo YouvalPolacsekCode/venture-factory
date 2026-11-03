@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6GEKYJCJ3JQJJGV0SBG3TYR",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 1,
+    "operational_autonomy": 1,
+    "defensibility": 6,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Operating a real-device farm requires physical hardware procurement, maintenance, and on-site management \u2014 per-customer delivery is inherently hardware-bound and cannot be automated by Claude."
+    },
+    {
+      "name": "requires_physical_logistics",
+      "deduction": 1.0,
+      "reason": "The core value proposition (real physical devices) requires procuring, racking, maintaining, and retiring physical mobile devices \u2014 logistics Claude cannot handle."
+    }
+  ],
+  "total": 1.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is clear and the willingness-to-pay signal is genuine \u2014 dev/QA leads at startups already pay for CI/CD and testing tooling, and one commenter explicitly stated they'd pay for managed real-device testing. However, the product's entire value proposition rests on physical device infrastructure: buying, provisioning, maintaining, and replacing real iOS/Android handsets. That is irreducibly hardware-bound logistics that a solo non-technical operator running a Claude factory cannot automate or delegate away. Buildability and operational autonomy both score 1 because no amount of AI prompting replaces a device lab.",
+  "solution_plan": "A solo non-technical operator could NOT realistically build and maintain this. The competitive advantage \u2014 real device access \u2014 requires physical hardware management (sourcing, racking, replacing broken devices, managing iOS/Android OS updates on physical units). This is infrastructure-company territory (AWS Device Farm, BrowserStack, Sauce Labs all have significant hardware ops teams). Attempting this as a one-person factory-backed micro-service would result in a hardware ops nightmare before the first paying customer. Recommend dropping entirely and redirecting to software-only testing tooling if the QA space is appealing.",
+  "notes": "Fails operational_autonomy_min (scored 1, floor is 7) and buildability_with_ai_min (scored 1, floor is 6). Physical device farm is not buildable with Claude + prompts + Stripe. Drop is correct regardless of total.",
+  "scored_at": "2026-11-03T13:19:40+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

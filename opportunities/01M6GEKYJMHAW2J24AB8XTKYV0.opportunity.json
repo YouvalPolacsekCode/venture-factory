@@ -1,0 +1,25 @@
+{
+  "id": "01M6GEKYJMHAW2J24AB8XTKYV0",
+  "discovered_at": "2026-11-03T13:17:30+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50345712",
+    "snippet": "We are writing to notify you of a data security incident that we detected on October 30, 2026 and are continuing to investigate... Our investigation identified evidence the attack w[as successful]... It's not on their website or Trust center yet, but we received the following breach notification from WorkOS."
+  },
+  "problem_statement": "B2B SaaS companies that delegate auth/identity infrastructure to third-party providers (e.g., WorkOS) have no independent real-time monitoring layer to detect when their identity provider is breached; customers learn of incidents only via email, often days after the fact.",
+  "target_segment": "Security engineers and CTOs at B2B SaaS companies that use third-party auth/SSO providers as critical infrastructure",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "security-breach",
+    "auth-provider",
+    "identity-infrastructure",
+    "third-party-risk",
+    "sso",
+    "breach-monitoring",
+    "vendor-risk",
+    "b2b-saas"
+  ],
+  "notes": "WorkOS breach (Oct 30, 2026) disclosed by email before appearing on their Trust Center \u2014 69 points, 9 comments on HN indicates real concern. Pain: companies relying on auth providers for SSO/enterprise features had no independent signal their vendor was compromised. Opportunity: a continuous third-party identity-provider health and breach-signal monitoring service that alerts customers faster than vendor self-disclosure. Buyers are security teams already paying for vendor risk management tools.",
+  "status": "candidate"
+}

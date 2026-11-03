@@ -1,0 +1,25 @@
+{
+  "id": "01M6GEKYJCJ3JQJJGV0SBG3TYR",
+  "discovered_at": "2026-11-03T13:17:30+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50343384",
+    "snippet": "The real edge here would be supporting mobile development builds on real devices, is this on your roadmap and if so what's your plan to support it? In that case I would pay for this if you handled the real device on your end."
+  },
+  "problem_statement": "AI-powered automated testing agents for mobile apps on real physical devices are unavailable as a managed service; developers must self-host complex device farms or skip mobile testing entirely, leading to undetected bugs in production.",
+  "target_segment": "Mobile app developers and QA engineers at startups and mid-size software companies shipping iOS/Android apps",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "mobile-testing",
+    "real-device-testing",
+    "automated-qa",
+    "ai-testing",
+    "device-farm",
+    "mobile-development",
+    "bug-detection",
+    "saas"
+  ],
+  "notes": "Commenter explicitly stated 'I would pay for this if you handled the real device on your end' \u2014 clear willingness-to-pay signal. The gap is managed real-device testing infra bundled with AI agents. Momentic (YC W24) covers web but commenter sees mobile as the defensible differentiator. Buyer profile: dev/QA lead at a startup, likely already paying for CI/CD and some testing tooling.",
+  "status": "candidate"
+}

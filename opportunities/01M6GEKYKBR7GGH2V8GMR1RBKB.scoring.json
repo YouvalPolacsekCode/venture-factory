@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6GEKYKBR7GGH2V8GMR1RBKB",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "The core service \u2014 navigating OTA connectivity APIs, setting up booking system integrations, submitting content that meets platform standards \u2014 requires per-client human judgement work that varies significantly by platform and operator context."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Onboarding a new tour operator onto GetYourGuide/TripAdvisor requires back-and-forth communication to gather photos, pricing, availability, descriptions \u2014 effectively an onboarding call or async consulting engagement per client."
+    }
+  ],
+  "total": 2.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a real, named business type \u2014 small tour operators in MENA seeking OTA distribution \u2014 and they likely do have budget for a done-for-you service given the revenue upside. However, each OTA integration is effectively a consulting project: gathering operator-specific content, navigating platform-specific API or connectivity requirements, and managing back-and-forth with platforms that have human review steps. That per-client manual work is not automatable by Claude at today's state, and operational autonomy scores 4 as a result. The combination of heavy human-touch penalties and a low responsiveness signal (single negatively-scored forum post) pushes this well below the validate threshold.",
+  "solution_plan": "A solo non-technical operator could partially build this, but it would not run autonomously. The factory could draft listing content (descriptions, SEO copy, photo guidelines) for tour operators using Claude, and even produce a step-by-step OTA application guide as a paid PDF/template product. However, the actual integration work \u2014 connecting a booking system, meeting GetYourGuide connectivity API specs, submitting and iterating on platform review processes \u2014 requires per-client human involvement that cannot be fully automated. A productised template/guide (one-time $49 purchase) could be built and sold autonomously, but the high-value recurring retainer model requires human consulting work. If the guide route is explored, the factory builds it as a Claude-written document, sells via Gumroad/Stripe, and reaches buyers via travel operator forums and LinkedIn \u2014 but revenue ceiling is low for a template product.",
+  "notes": "Fails operational_autonomy_min (scored 4, floor 7). The done-for-you framing is inherently consulting-shaped. A pure-info-product pivot could clear the gate but changes the business model significantly.",
+  "scored_at": "2026-11-03T13:19:40+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

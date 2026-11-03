@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M6GEKYJW8CV3C8XMND9CVK6E",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 3,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.1,
+  "penalties_applied": [
+    {
+      "name": "requires_physical_logistics",
+      "deduction": 1.0,
+      "reason": "Sourcing, de-bloating, and shipping physical display hardware requires procurement, warehousing, and fulfilment \u2014 cannot be automated by Claude."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Hardware modification or curation (flashing displays, vetting suppliers, quality-checking units) requires physical hands-on work per order."
+    },
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Selling premium hardware to privacy-conscious consumers is a volume consumer play \u2014 unit economics only work at scale (hundreds of units), which a solo factory cannot reach."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a vague consumer segment ('privacy-conscious households') with no demonstrated willingness to actually transact \u2014 one HN commenter theorizing a price point is not a paying customer. The product requires physical hardware sourcing, de-bloating/flashing displays, and fulfilment logistics that are entirely outside what a Claude factory can automate. Even setting aside the hardware problem, b2c consumer electronics is a capital-intensive, margin-thin, high-return-rate business that a solo non-technical operator cannot run sustainably.",
+  "solution_plan": "A solo non-technical operator could NOT build this. The business requires a supply chain: sourcing displays from manufacturers or wholesalers, physically modifying or vetting them, warehousing inventory, and shipping to consumers. None of those steps are automatable by Claude. Even the 'software' adjacent version \u2014 a curated buying guide or affiliate referral site pointing to existing dumb displays \u2014 would earn trivial affiliate revenue and requires consumer SEO at scale. This is the wrong shape for this factory.",
+  "notes": "Fails operational_autonomy_min (scored 2, floor 7), buildability_with_ai_min (scored 2, floor 6), buyer_clarity_min (scored 3, floor 6), and willingness_to_pay_min (scored 4, floor 5). Multiple hard gate failures plus physical logistics penalties.",
+  "scored_at": "2026-11-03T13:19:40+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

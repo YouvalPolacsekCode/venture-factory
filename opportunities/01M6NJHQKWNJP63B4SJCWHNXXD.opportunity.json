@@ -1,0 +1,24 @@
+{
+  "id": "01M6NJHQKWNJP63B4SJCWHNXXD",
+  "discovered_at": "2026-11-05T13:02:24+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50355278",
+    "snippet": "I looked at our GitHub Actions monthly expenses, then at the price of a M4 Mac mini (just when they were released, and still cheap), and decided to buy one as it would pay for itself in less than a year. There are definitely still cases when buying hardware still makes sense, over renting in the cloud."
+  },
+  "problem_statement": "Engineering teams paying high monthly GitHub Actions CI/CD costs for macOS builds lack a straightforward way to evaluate when self-hosted Mac hardware becomes cheaper than cloud runners, leading to ongoing over-spend on cloud CI.",
+  "target_segment": "DevOps engineers and engineering managers at software companies running macOS CI/CD pipelines on GitHub Actions or similar cloud CI providers.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ci-cd",
+    "github-actions",
+    "self-hosted-runners",
+    "macos",
+    "cost-optimization",
+    "devops",
+    "cloud-spend"
+  ],
+  "notes": "Buyer signal: commenter explicitly compared monthly cloud CI spend against hardware cost and bought hardware. Suggests willingness to pay for a tool that models break-even analysis for self-hosted vs cloud CI runners. Single signal but touches a recurring pain point (monthly AWS/GitHub Actions bill) in a business context.",
+  "status": "candidate"
+}

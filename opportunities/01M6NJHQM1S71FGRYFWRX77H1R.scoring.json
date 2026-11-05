@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6NJHQM1S71FGRYFWRX77H1R",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A meaningful curriculum or playbook requires human curation, expert review, and updates as the agentic coding landscape shifts \u2014 Claude can draft but a human must validate and maintain quality, especially for a paid product."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Learners and teams adopting a curriculum will have questions, want customization, and need support that requires human judgment."
+    }
+  ],
+  "total": 3.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is diffuse \u2014 'developers and engineering leads' spans individuals who rarely pay for learning resources to companies that might, but there is no specific named role with a budget line and a clear reason to buy now. While companies do invest in training, structured agentic coding curricula are nascent and mostly free (blog posts, YouTube, vendor docs), making willingness to pay uncertain. Critically, delivering a credible curriculum requires ongoing human curation and subject-matter validation that cannot be fully automated, pulling operational_autonomy to 5 and triggering meaningful penalties.",
+  "solution_plan": "Not recommended for build at this stage. If revisited: the micro-service would be a weekly 'Agentic Coding Digest' newsletter with curated frameworks and patterns, delivered via Claude-summarized sources on a subscription basis ($9/mo via Stripe). However, the content quality problem \u2014 Claude hallucinating best practices in a fast-moving field \u2014 makes this risky without human editorial oversight. A solo non-technical operator cannot credibly maintain subject-matter authority here without significant ongoing involvement, which defeats the autonomy goal.",
+  "notes": "Dropped below validate threshold after penalties. Buyer_clarity=5 also fails the build_gate floor of 6. Core issue: content business requires ongoing human expertise + the market is flooded with free alternatives.",
+  "scored_at": "2026-11-05T13:04:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

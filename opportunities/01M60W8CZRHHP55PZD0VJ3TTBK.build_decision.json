@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01M60W8CZRHHP55PZD0VJ3TTBK",
+  "decided_at": "2026-11-05T13:04:41+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min": {
+      "total": 7.2,
+      "min_total_to_build": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the scoring total (7.2) clears the 6.5 threshold with recommended_stage 'build'. However, the cost-to-gain ratio of 3.058 dramatically exceeds the kill threshold of 0.6 defined in cost_gain_model.yaml, meaning the projected 4-week cost ($608) dwarfs the projected 4-week gross gain ($199). Even the optimistic sensitivity scenario (1.529) still far exceeds the kill threshold. With a responsiveness_signal of only 3 (no real outreach test data yet) and zero current portfolio commitments, the prudent move is to defer one week to run a quick responsiveness probe \u2014 cold outreach to 50-100 marketing managers \u2014 before committing build resources to an idea whose unit economics are currently underwater.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "LinkedIn DM to marketing managers with 'competitive intelligence' or 'SEO' in title at agencies/SMBs"
+}

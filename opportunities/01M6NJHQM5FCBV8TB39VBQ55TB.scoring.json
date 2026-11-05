@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6NJHQM5FCBV8TB39VBQ55TB",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A genuine DPoP compliance fix for Salesforce desktop apps requires bespoke per-client OAuth architecture work \u2014 this is consulting / professional services, not a product that can be delivered automatically."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Diagnosing and resolving a client's specific Salesforce connected app compliance issue requires scoping calls, review of their OAuth flow, and back-and-forth \u2014 no way to deliver this async and automated."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and severe \u2014 a Salesforce compliance flag threatening a commercial app's customer relationships is a genuine blocker \u2014 and the buyer (a commercial ISV) clearly has money. However, the problem is narrowly technical and deeply contextual: each affected vendor has a different app architecture, and the DPoP gap in Salesforce's SOAP/Metadata APIs means there is no clean automated fix to package and sell. Resolving this requires bespoke consulting work per client, making operational autonomy essentially zero and triggering two heavy penalties. The addressable market is also very small (a niche of Salesforce desktop app ISVs hitting this specific edge case).",
+  "solution_plan": "Not recommended for build. The only plausible product angle \u2014 a detailed written guide or documentation package on navigating the DPoP/SOAP compliance catch-22 \u2014 has weak monetisation (ISVs would want a fix, not a document) and would require ongoing updates as Salesforce's APIs evolve. A solo non-technical operator cannot build or maintain the technical depth required, and each engagement would need hands-on consulting work. If Youval has direct Salesforce OAuth expertise this might be a one-off consulting engagement, but it is not a scalable autonomous micro-service.",
+  "notes": "Failed build_gates: operational_autonomy=3 (floor: 7), buildability_with_ai=4 (floor: 6). Market too narrow and solution inherently requires per-client human work.",
+  "scored_at": "2026-11-05T13:04:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M6NJHQM5FCBV8TB39VBQ55TB",
+  "discovered_at": "2026-11-05T13:02:24+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439970/app-insights-flags-our-desktop-app-but-dpop-bound-tokens-are-rejected-by-the-so",
+    "snippet": "We make a cross-platform (Mac and Windows) desktop application for Salesforce org management. It installs on customer machines and uses the Partner SOAP API and the Metadata API heavily. Customers authorize our connected app with the OAuth web server flow and PKCE. Customer admins are now seeing our app flagged on the App Insights page. As I read that page, an app passes only if it has refresh token rotation, PKCE, and refresh token..."
+  },
+  "problem_statement": "ISV and indie developers building Salesforce-connected desktop applications face a compliance roadblock: Salesforce App Insights now flags apps that lack DPoP-bound tokens, but DPoP is not supported on the SOAP and Metadata APIs, creating an impossible compliance requirement with no documented workaround.",
+  "target_segment": "Independent software vendors and freelance Salesforce developers building cross-platform desktop apps that integrate with Salesforce SOAP and Metadata APIs.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "oauth2",
+    "dpop",
+    "soap-api",
+    "metadata-api",
+    "isv",
+    "desktop-app",
+    "compliance",
+    "security"
+  ],
+  "notes": "Buyer signal: poster is a commercial desktop app vendor ('We make a cross-platform desktop application') with paying customers whose admins are seeing security flags. This is a revenue-threatening compliance issue. Opportunity: a consulting service, documentation package, or middleware library that bridges the DPoP gap for Salesforce desktop apps. Single post but describes a concrete, blockers-class problem for a paying business.",
+  "status": "candidate"
+}

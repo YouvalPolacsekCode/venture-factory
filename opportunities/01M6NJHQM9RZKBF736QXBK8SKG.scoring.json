@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M6NJHQM9RZKBF736QXBK8SKG",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.3,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Diagnosing and fixing Riva/Salesforce/Exchange sync failures requires access to the customer's environment, SOQL query results, Riva logs, and Exchange configuration \u2014 inherently per-client manual work."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Debugging enterprise calendar sync issues across three vendors (Riva, Salesforce, Microsoft Exchange) requires live access and iterative troubleshooting \u2014 cannot be delivered asynchronously via an automated service."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise sync issues are ongoing \u2014 new edge cases arise with every Salesforce or Exchange update, requiring continuous human-in-the-loop support."
+    }
+  ],
+  "total": 2.3,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce admins and RevOps teams at mid-market B2B companies are well-defined buyers with real budget (they already pay for Salesforce + Riva), and broken calendar sync is a high-frequency, high-severity pain. However, the fix requires hands-on access to three vendor environments and iterative debugging \u2014 there is no automatable product to build here, only consulting. Even a monitoring/alerting tool would require deep API integrations with Riva's proprietary sync engine, Salesforce Events, and Exchange, far beyond Claude + a simple page. Operational autonomy is near zero and the build complexity is high.",
+  "solution_plan": "Not recommended for build. The pain is real but the solution space requires either (a) direct API partnerships with Riva (not accessible to a solo operator) or (b) bespoke per-client debugging engagements that are fundamentally consulting work. A solo non-technical operator cannot build or maintain the required technical integrations, and each customer engagement would demand significant manual involvement. This is better suited to a Salesforce consulting firm than an autonomous micro-service factory.",
+  "notes": "Failed build_gates: operational_autonomy=3 (floor: 7), buildability_with_ai=4 (floor: 6). Problem is real but solution is irreducibly consulting-shaped \u2014 no autonomous product path exists.",
+  "scored_at": "2026-11-05T13:04:28+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

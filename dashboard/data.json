@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-11-03T10:19:45+00:00",
-    "idt": "2026-11-03T13:19:45+03:00"
+    "utc": "2026-11-05T10:04:45+00:00",
+    "idt": "2026-11-05T13:04:45+03:00"
   },
   "funnel": {
-    "candidates": 442,
-    "scored": 442,
-    "validated": 48,
+    "candidates": 446,
+    "scored": 446,
+    "validated": 49,
     "build_decisions": {
-      "defer_1_week": 43,
+      "defer_1_week": 44,
       "kill": 5
     },
     "build_now": 0,
@@ -40,7 +40,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webapps.stackexchange.com/questions/182677/google-search-and-google-alerts-and-other-api-based-services-return-vastly-dif",
       "discovered_at": "2026-10-28T12:08:01+03:00"
@@ -569,6 +569,35 @@
     },
     {
       "topics": [
+        "ci-cd",
+        "github-actions",
+        "self-hosted-runners"
+      ],
+      "id": "01M6NJHQKWNJP63B4SJCWHNXXD",
+      "problem_statement": "Engineering teams paying high monthly GitHub Actions CI/CD costs for macOS builds lack a straightforward way to evaluate when self-hosted Mac hardware becomes cheaper than cloud runners, leading to ongoing over-spend on cloud CI.",
+      "target_segment": "DevOps engineers and engineering managers at software companies running macOS CI/CD pipelines on GitHub Actions or similar cloud CI providers.",
+      "total": 6.6,
+      "recommended_stage": "build",
+      "rationale": "DevOps engineers and engineering managers at software companies running macOS CI/CD — a named role with real budget authority — are genuinely losing money each month on cloud CI costs, and at least some are already doing this math manually (concrete buyer signal). The tool is a pure-math calculator wrapped in a simple form: fully buildable as a Claude prompt + landing page + optional Stripe, and fully autonomous to operate once live. The main risk is willingness to pay for a calculator (vs. jus…",
+      "solution_plan": "The micro-service is a CI Cost Break-Even Calculator: users enter their monthly GitHub Actions minutes, macOS runner price per minute, and hardware cost, and get a payback timeline plus a recommendation. The factory builds it as a Claude-powered form (inputs → structured calculation → formatted report) hosted on a simple landing page with a Stripe payment link for a one-time $19–29 'detailed report + CSV export' upsell; no coding by the operator. Outreach targets DevOps/platform engineering communities: a post in r/devops, GitHub Discussions, and a cold-email sequence to engineering managers scraped from LinkedIn (operator approves each send…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 9,
+        "Will pay": 5,
+        "Buildable": 9,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=50355278",
+      "discovered_at": "2026-11-05T13:02:24+03:00"
+    },
+    {
+      "topics": [
         "llm-cost-monitoring",
         "api-spend",
         "openai-billing"
@@ -711,48 +740,15 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439727/do-apex-triggers-always-run-in-system-mode-at-api-v67-or-do-trigger-body-dml-op",
       "discovered_at": "2026-08-07T07:47:49+03:00"
-    },
-    {
-      "topics": [
-        "dmarc",
-        "email-security",
-        "spf"
-      ],
-      "id": "01M1TSQDGNTZ2QDBBBKKXF0EF1",
-      "problem_statement": "The vast majority of businesses that have set up SPF and DKIM still leave DMARC at p=none, meaning their domains remain spoofable despite partial setup — likely due to fear of breaking legitimate email flows when moving to enforcement.",
-      "target_segment": "IT and email administrators at SMBs and mid-market companies managing their own email infrastructure",
-      "total": 6.5,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is an IT or email admin at an SMB or mid-market company — a specific, named role with clear budget authority for email security tooling. Willingness to pay is strongly confirmed: Dmarcian ($199+/mo), Valimail, and EasyDMARC all charge real money for exactly this problem, so there is zero doubt the market pays. The total hits the build threshold (6.5) and all build gates pass: operational_autonomy is 7 (a monitoring + guided-enforcement tool can run automated), buildability is 7 (DMARC…",
-      "solution_plan": "This is a DMARC enforcement migration assistant: connect your domain, the tool reads your current DMARC/SPF/DKIM DNS records and your DMARC aggregate reports (via email forwarding or RUA parsing), then Claude generates a plain-English risk assessment and a step-by-step enforcement plan (p=none → p=quarantine → p=reject) with a weekly email digest showing progress. The factory builds it as a Claude pipeline + a lightweight form/dashboard (Youval approves the initial build spec, no coding required by Youval directly). Sell by targeting IT admins on LinkedIn (search by title + 'email security' or 'M365 admin'), posting in r/sysadmin and r/msp,…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 7,
-        "Will pay": 8,
-        "Buildable": 7,
-        "Pain": 7
-      },
-      "verdict": "validated",
-      "source_type": "forum",
-      "source_url": "https://serverfault.com/questions/1199774/why-are-so-many-domains-still-using-p-none-for-dmarc-despite-having-spf-and-dkim",
-      "discovered_at": "2026-09-06T10:25:34+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2633,
-    "last_7_days_usd": 2.0552,
-    "all_time_usd": 35.7031,
+    "today_usd": 0.4049,
+    "last_7_days_usd": 2.202,
+    "all_time_usd": 36.108,
     "by_day": [
-      {
-        "date": "2026-10-28",
-        "usd": 0.2581
-      },
       {
         "date": "2026-10-29",
         "usd": 0.3889
@@ -776,102 +772,36 @@
       {
         "date": "2026-11-03",
         "usd": 0.2633
+      },
+      {
+        "date": "2026-11-05",
+        "usd": 0.4049
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6639
+        "usd": 0.6596
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5982
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.4506
+        "usd": 0.6073
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3095
+        "usd": 0.4612
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.4412
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0331
+        "usd": 0.0328
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-28",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
-    {
-      "date": "2026-10-29",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-10-30",
       "agents": {
@@ -1046,13 +976,52 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-11-04",
+      "agents": {}
+    },
+    {
+      "date": "2026-11-05",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-11-03.md",
-    "date": "2026-11-03",
-    "text": "# Daily Summary — 2026-11-03 (Sun)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 442 |\n| Opportunities validated past threshold | 114 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 1 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| No active experiments | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\n| Agent | Status | Notes |\n|---|---|---|\n| market_radar | degraded | 1 error in last run; investigation recommended |\n\n## Tomorrow's auto-scheduled actions\n\n1. `cost_gain` analyzes last week's experiment performance and prepares weekly metrics.\n2. `build_decisions` reviews validated opportunities for next phase candidates.\n3. `lead_research` resumes outreach sequencing on highest-scoring validation verdicts.\n4. `pain_validation` runs second-pass checks on marginal-score opportunities.\n5. `opportunity_scoring` continues sourcing from market signals.\n\n## Operator action items\n",
-    "truncated": true
+    "file": "reports/daily/2026-11-05.md",
+    "date": "2026-11-05",
+    "text": "# Daily Summary — 2026-11-05 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 446 |\n| Opportunities validated past threshold | 115 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` sweeps for emerging pain signals in vertical communities.\n2. `pain_validation` probes top 20 scored opportunities for buyer intent.\n3. `opportunity_scoring` re-ranks candidates against live experiment thresholds.\n4. `cost_gain` updates unit economics for any new verdicts.\n5. `build_decisions` surfaces candidates ready for validation.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "truncated": false
   },
   "analytics": null
 }

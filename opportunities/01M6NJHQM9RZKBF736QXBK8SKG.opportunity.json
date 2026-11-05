@@ -1,0 +1,25 @@
+{
+  "id": "01M6NJHQM9RZKBF736QXBK8SKG",
+  "discovered_at": "2026-11-05T13:02:24+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439972/salesforce-riva-sync-outlook-events-marked-deleted-by-crm-after-invite-acce",
+    "snippet": "We use Riva Cloud Sync between Microsoft Exchange/Outlook and Salesforce Lightning. When users accept a calendar invite in Outlook (whether from shared mailboxes or external organizers), Riva marks the item in their Outlook calendar as 'Deleted by CRM' shortly afterward. The Event is NOT hard-deleted. Running SOQL queries confirms IsDeleted = false and the parent Event record remains active in Salesforce."
+  },
+  "problem_statement": "Sales and ops teams using Riva Cloud Sync to sync Outlook calendars with Salesforce lose accepted meeting events \u2014 they appear 'Deleted by CRM' in Outlook even though the Salesforce record is intact \u2014 causing missed meetings and unreliable CRM data.",
+  "target_segment": "Salesforce admins and RevOps teams at mid-market B2B companies using Riva Cloud Sync with Microsoft Exchange and Salesforce Lightning.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "calendar-sync",
+    "riva",
+    "outlook",
+    "exchange",
+    "crm",
+    "revops",
+    "data-integrity"
+  ],
+  "notes": "Buyer signal: organization is paying for both Salesforce and Riva Cloud Sync (two paid enterprise products). Broken calendar sync is a workflow-killing issue for sales teams. Opportunity: diagnostic/monitoring tool or managed sync audit service. Single post but describes a reproducible, business-critical pain in an enterprise paid context.",
+  "status": "candidate"
+}

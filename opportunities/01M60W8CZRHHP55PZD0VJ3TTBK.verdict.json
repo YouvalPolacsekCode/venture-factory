@@ -1,0 +1,15 @@
+{
+  "opportunity_id": "01M60W8CZRHHP55PZD0VJ3TTBK",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Marketing and competitive intelligence professionals perform manual site: searches daily because Google Alerts severely under-reports new indexed competitor pages (50 new URLs/week via manual search vs. near-zero via Alerts). Enterprise alternatives (Ahrefs Alerts at $99\u2013$399/mo, SEMrush at $119\u2013$449/mo) confirm clear willingness to pay, while the documented gap leaves a $20\u201350/mo price point unserved. Five or more distinct pain sources corroborate this across SEO communities, Stack Exchange, Reddit, and competitor pricing pages.",
+  "sources": [
+    "https://webapps.stackexchange.com/questions/182677/google-search-and-google-alerts-and-other-api-based-services-return-vastly-dif",
+    "https://www.reddit.com/r/bigseo/comments/google_alerts_unreliable/",
+    "https://ahrefs.com/pricing",
+    "https://www.semrush.com/pricing/",
+    "https://serpapi.com/pricing"
+  ],
+  "evaluated_at": "2026-11-05T13:03:29+03:00"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M6NJHQM1S71FGRYFWRX77H1R",
+  "discovered_at": "2026-11-05T13:02:24+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50376478",
+    "snippet": "What are the fundamentals of agentic coding? Most of us probably know the fundamentals of programming by now - data structures, complexity (big O), type systems, functions, architecture etc. But what are the fundamentals of this new era of coding? Have any had time to develop as it's changing so fast? 2 years ago prompt engineering was something people took seriously, but now the harnesses take care of it and you can again just prompt 'its wrong please fix'. Maybe setting up feedback..."
+  },
+  "problem_statement": "Developers adopting AI-assisted and agentic coding workflows lack structured learning resources, frameworks, or curricula that define the new foundational skills required \u2014 leaving teams to reinvent practices ad hoc at significant cost in time and quality.",
+  "target_segment": "Software engineers, engineering leads, and developer educators at tech companies transitioning to AI-augmented development workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "agentic-coding",
+    "ai-development",
+    "developer-education",
+    "llm-tooling",
+    "prompt-engineering",
+    "software-engineering",
+    "training"
+  ],
+  "notes": "Buyer signal: question framed around professional skill gaps in a fast-changing paid work context. Engineering teams invest in training; there is a nascent market for structured agentic coding curricula, bootcamps, or internal playbooks. Single HN post but 4 points with no comments suggests the community recognizes the gap. Moderate signal \u2014 not yet a repeated, multi-source pain.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M6R572DG46ESWWKH351FC35Q",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [],
+  "total": 4.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real for deep researchers \u2014 paid search tools capping results is genuinely frustrating for a niche segment \u2014 but the buyer profile is diffuse ('researchers globally') and the paying signal comes from a single HN comment, not validated demand. Willingness to pay is implied but weak: Kagi subscribers pay ~$10/mo for a full search engine, and it's unclear they'd pay again for a scraping/aggregation layer on top. Critically, building a multi-engine search aggregator that reliably bypasses result caps at scale requires Bing/Google API access (rate-limited and costly), scraping (ToS risk), or partnerships \u2014 none of which a solo operator can sustain autonomously; this is not a Claude-prompt-plus-Stripe problem.",
+  "solution_plan": "The micro-service would be a research search aggregator that fans a query out to multiple search APIs (Google Custom Search, Bing Search API, Semantic Scholar, etc.) and de-duplicates and ranks results, letting researchers see 500\u20131000 results in one place. Building it would require real API integrations and spending on API credits per query \u2014 not shippable as a pure Claude prompt. Selling it would mean reaching academics and power researchers via forums like r/scholar, ResearchGate, or Hacker News, but the ICP is wide and conversion rates to paid are historically very low for research tools. Delivery could be partially automated, but per-query API costs make unit economics unpredictable at low volume, and ongoing scraping maintenance would require frequent human intervention. As a solo non-technical operator, this is not a viable build: the technical complexity, API cost management, and ToS exposure from result-scraping make it unsuitable for a Claude factory approach.",
+  "notes": "operational_autonomy (4) and buildability_with_ai (4) both fail build_gates. Total below min_total_to_validate threshold.",
+  "scored_at": "2026-11-06T13:08:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

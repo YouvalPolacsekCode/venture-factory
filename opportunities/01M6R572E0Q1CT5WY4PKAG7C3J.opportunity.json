@@ -1,0 +1,26 @@
+{
+  "id": "01M6R572E0Q1CT5WY4PKAG7C3J",
+  "discovered_at": "2026-11-06T13:07:07+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439966/workbench-not-working",
+    "snippet": "I have tried querying numerous objects and limited my query to just one record and workbench is not responding. I have waited 5+ minutes for a query result with no luck. I've cleared my cookies/cache, logged out, and tried both versions 67 and 68. Other users on my team are observing the same behavior."
+  },
+  "problem_statement": "Salesforce admins and developers rely on Workbench as a critical query and data-management tool, but it suffers from unpredictable outages or hangs that block entire teams with no reliable alternative or status visibility.",
+  "target_segment": "Salesforce administrators and developers at businesses of all sizes who use Workbench for SOQL queries, data loads, and metadata operations.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "admin-tools",
+    "soql",
+    "workbench",
+    "developer-tools",
+    "crm",
+    "data-management",
+    "salesforce-admin",
+    "reliability"
+  ],
+  "notes": "Team-wide Workbench failure blocking multiple paid Salesforce org users simultaneously. Salesforce environments are enterprise paid contexts \u2014 these are professional users whose work is blocked. The underlying opportunity is a more reliable, self-hosted or SaaS alternative to Workbench with status monitoring. Existing tools (DataLoader, VS Code extension) don't replicate Workbench's browser-based convenience. Buyer: Salesforce admins/developers at companies paying for Salesforce licenses. Willingness to pay for a stable tool is implied by the business context.",
+  "status": "candidate"
+}

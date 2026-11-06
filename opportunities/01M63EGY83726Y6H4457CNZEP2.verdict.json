@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M63EGY83726Y6H4457CNZEP2",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "While Google indexing failures are a real and recurring pain for small business owners, the available evidence falls well short of the 5-distinct-pain-quote threshold required for a pass verdict. The source signal is a single forum post, and the broader SEO tool landscape (Ahrefs, Semrush, Screaming Frog) already addresses this problem\u2014making willingness to pay for a niche 'Discovered not indexed' diagnostic uncertain. The overlap with candidate 01M6DW5H707CKMSG4GKXWJWQFJ (a broader, better-scored SEO indexing audit tool) makes this the weaker of the two; advancing both would split validation effort on near-identical problems.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/150038/page-known-to-google-for-several-months-discovered-not-indexed"
+  ],
+  "evaluated_at": "2026-11-06T13:08:11+03:00"
+}

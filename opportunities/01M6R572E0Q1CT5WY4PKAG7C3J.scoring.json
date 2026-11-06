@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M6R572E0Q1CT5WY4PKAG7C3J",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 7,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "Salesforce admins and developers are a crisp, well-paid B2B buyer whose work is actively blocked by Workbench outages \u2014 this is a real, recurring, team-level pain in contexts where downtime has direct business cost. Willingness to pay is strong: these users already pay for Salesforce licenses at $150\u2013$300/user/month, and tools like Dataloader.io and Validity DemandTools charge $50\u2013$200/month for comparable admin tooling. However, the total hits exactly the build threshold, and while operational_autonomy just clears the gate at 7, buildability is at the minimum floor \u2014 a reliable browser-based SOQL/data tool requires Salesforce Connected App setup, OAuth flows, and robust API handling that is achievable but not trivially a one-week Claude-plus-Stripe project. Validate first by offering a waitlist/early access page to Salesforce admin communities and gauging signup rate before committing to build.",
+  "solution_plan": "The micro-service would be a hosted, browser-based Salesforce query and data tool \u2014 a reliable alternative to Workbench \u2014 with status monitoring and self-healing reconnection logic. Building it would involve a Claude-assisted backend that handles Salesforce OAuth, proxies SOQL queries, and surfaces results in a clean UI; the factory can generate the prompt logic, landing page, and Stripe payment link, but someone (a freelancer, not Youval directly) would need to wire the Salesforce Connected App authentication flow \u2014 this is a one-time setup, not ongoing coding. Selling it means posting to the Salesforce Trailblazer Community, r/salesforce, and LinkedIn groups for Salesforce admins \u2014 a natural high-intent channel with 500k+ active members; outreach goes out only after Youval approves it. Once live, delivery is automated: users self-serve OAuth connect their org, queries run via the API, and billing runs via Stripe; support via Claude-handled FAQ with escalation routing. The only recurring human touch is approving new outreach batches and reviewing any escalated support tickets weekly.",
+  "notes": "operational_autonomy (7) and buildability_with_ai (6) meet build_gate minimums, but total of 6.5 is at the minimum build threshold. Recommended validate stage given zero responsiveness signal and non-trivial OAuth/Salesforce integration complexity. No build_gate failures, but responsiveness_signal=1 warrants validation before committing build resources.",
+  "scored_at": "2026-11-06T13:08:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

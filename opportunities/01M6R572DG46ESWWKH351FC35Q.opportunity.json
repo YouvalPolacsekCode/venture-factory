@@ -1,0 +1,25 @@
+{
+  "id": "01M6R572DG46ESWWKH351FC35Q",
+  "discovered_at": "2026-11-06T13:07:07+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50385353",
+    "snippet": "I know Kagi is supposed to be a curated experience but I really, really wish they'd have a setting I could toggle to see more than 200 search results per query. 200 is just 2 pages and for more obscure search topics (like, 'pyroelectric particle acceleration') I found that Kagi could never 'curate' and actually deliver the links to the research paper PDFs that other search engines could find. Even google with its 400 maximum search results and Bing with 900 are more useful for deep research."
+  },
+  "problem_statement": "Paid search engines (e.g. Kagi) artificially cap results per query (200), making deep or obscure research impossible for professionals who pay for premium search and need to surface long-tail documents like academic PDFs.",
+  "target_segment": "Research professionals, academics, and knowledge workers who pay for premium search tools and need exhaustive result sets for niche queries.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "search",
+    "paid-search",
+    "research-tools",
+    "deep-research",
+    "academic-search",
+    "search-results-limit",
+    "kagi",
+    "knowledge-work"
+  ],
+  "notes": "Poster is a paying Kagi subscriber frustrated by the 200-result cap. Explicitly compares to free alternatives (Google 400, Bing 900) that outperform the paid product for depth. Buyer is confirmed (pays for Kagi). Single signal but the underlying need \u2014 exhaustive search for researchers \u2014 is a known recurring pain. Opportunity: a research-focused search aggregator or proxy layer that removes per-engine result caps and de-dupes across sources, targeting paying researchers. Willingness to pay is implied (already paying for Kagi).",
+  "status": "candidate"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "01M6R572DSG8GKSTC9E0YFGTF3",
+  "discovered_at": "2026-11-06T13:07:07+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/veolms/veolms/issues/361",
+    "snippet": "We need an automatic refund feature. Students should be able to request a refund themselves, and the system should process it automatically when the purchase is eligible. A purchase is eligible for an automatic refund only if both of these are true: 1. The student has watched no more than 10% of the course or 10 hours of it, whichever is less. For long courses, 10% can be 20 hours or more, so the 10-hour cap applies..."
+  },
+  "problem_statement": "Online course platform operators lack automated, policy-based refund processing for digital course purchases \u2014 currently refunds require manual admin intervention, creating friction for students and operational overhead for course sellers.",
+  "target_segment": "Online course platform operators, indie course creators, and e-learning SaaS companies (SMB to mid-market) who sell digital courses and need automated refund workflows with eligibility rules.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "lms",
+    "online-courses",
+    "refund-automation",
+    "e-learning",
+    "course-platform",
+    "payment-ops",
+    "digital-products",
+    "edtech",
+    "self-serve-refunds",
+    "policy-enforcement"
+  ],
+  "notes": "Feature request on an open-source LMS (veolms) for self-serve, rule-based automatic refunds. The eligibility logic described (10% watched or 10 hours cap) mirrors what paid platforms like Teachable/Thinkific implement. This is a recurring operational pain for any course seller: manual refund handling wastes admin time and creates poor student UX. Opportunity: a Stripe-integrated refund automation layer or plugin for LMS platforms that enforces configurable eligibility rules and processes refunds without admin touch. Buyers are course platform operators who currently spend time on manual refund adjudication.",
+  "status": "candidate"
+}

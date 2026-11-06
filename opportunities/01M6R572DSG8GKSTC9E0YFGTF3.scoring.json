@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M6R572DSG8GKSTC9E0YFGTF3",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 7,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [],
+  "total": 5.4,
+  "recommended_stage": "drop",
+  "rationale": "Course platform operators are a real, nameable B2B buyer with genuine operational overhead from manual refund handling, and platforms like Teachable already charge for this functionality \u2014 confirming willingness to pay exists in the segment. However, the actual build requires deep integration with each LMS platform (veolms, Teachable, Thinkific, Podia, custom setups) plus Stripe's refund API, plus a rules engine \u2014 this is a meaningful integration project, not a week-one Claude prompt. Operational autonomy is limited: the core product IS the automation, but setup per customer and edge-case handling (disputed eligibility, partial consumption, payment processor differences) will require ongoing human judgment calls. Total falls just below the validate threshold.",
+  "solution_plan": "The micro-service would be a configurable, Stripe-integrated refund automation layer for online course sellers \u2014 operators set their eligibility rules (% watched, hours cap, time since purchase) and the system auto-processes or auto-rejects refund requests without admin touch. Building it would require a Stripe integration, a consumption-data webhook (from the LMS), and a rules engine \u2014 feasible with Claude for logic, but the LMS-side integration varies wildly per platform, requiring custom work per customer. Selling it would mean reaching course creators via IndieHackers, Podia/Teachable communities, and Twitter/X creator circles. Delivery is theoretically automatable once integrated, but the per-customer integration setup is a manual human project each time. As a solo non-technical operator, the per-customer integration requirement makes this more of a consultancy than a product at this stage.",
+  "notes": "operational_autonomy (5) and buildability_with_ai (5) both fail build_gates. Total at 5.4, just below min_total_to_validate (5.5).",
+  "scored_at": "2026-11-06T13:08:57+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

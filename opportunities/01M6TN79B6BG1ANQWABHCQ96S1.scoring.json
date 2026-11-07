@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6TN79B6BG1ANQWABHCQ96S1",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Provisioning sandboxed GitHub agent accounts and gating PRs requires per-customer configuration, OAuth setup, and security review \u2014 not automatable by Claude prompts alone."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Security/DevOps tooling sales to engineering teams typically requires a demo or onboarding call to establish trust before purchase."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real \u2014 DevOps leads and platform engineers at AI-adopting companies have genuine need for sandboxed agent accounts \u2014 and they do pay for security tooling. However, the product is fundamentally infrastructure: provisioning GitHub org structures, managing OAuth apps, and enforcing PR gates requires deep GitHub API integration, per-customer setup, and ongoing security judgment that cannot be delivered by Claude prompts and a landing page. Operational autonomy is very low, and buildability with this factory's tooling is near-zero. With penalties the total drops to 2.4.",
+  "solution_plan": "This is not viable for a solo non-technical operator using this factory. Building a managed GitHub agent-account provisioning service would require custom OAuth integrations, GitHub App registration per customer, and security-sensitive configuration that the factory cannot safely automate. Even if a landing page and intake form could capture leads, actual delivery would require Youval to manually provision each customer's GitHub org structure \u2014 turning this into a consulting service, not a product. Recommend dropping unless a no-code GitHub automation platform (e.g. a GitHub App marketplace product) emerges that removes the per-customer build burden.",
+  "notes": "Failing build gates: operational_autonomy (3 < 7 required), buildability_with_ai (3 < 6 required). The core delivery loop is infrastructure work that cannot be delegated to Claude.",
+  "scored_at": "2026-11-07T12:27:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

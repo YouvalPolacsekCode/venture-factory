@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6TN79BHEKZMR0MM5V5F5EFE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Meaningful Salesforce permission auditing requires authenticated access to each customer's Salesforce org via Connected App setup, which involves per-customer OAuth provisioning and configuration that cannot be fully automated by Claude alone."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Salesforce environments are highly customized; edge-case support questions about org-specific permission structures will require human judgment to resolve reliably."
+    }
+  ],
+  "total": 3.4,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce admins and RevOps professionals are real, identifiable buyers with demonstrated willingness to pay for tooling (Salesforce AppExchange apps routinely charge $50\u2013200/month per org), and permission debugging is a known recurring time sink. However, actually auditing effective permissions requires Salesforce Connected App authentication per customer org \u2014 meaning per-customer OAuth setup and org-specific configuration that sits outside what Claude prompts and a simple landing page can deliver autonomously. The weighted total of 5.4 is borderline, but penalties drop it to 3.4 and multiple build gates are unmet.",
+  "solution_plan": "The closest viable version for this factory would be a Claude-powered Salesforce Permission Troubleshooting Guide \u2014 a structured intake form where an admin describes their user's symptoms, and Claude produces a step-by-step checklist of likely permission issues and fixes, delivered as a PDF or email. This avoids the per-org API integration problem entirely. It could be sold as a one-time $29 'diagnostic report' via a Stripe payment link and a Typeform intake. However, the value would be modest (this is essentially a smart checklist), repeat purchase rates would be low, and it competes with free Salesforce community answers. If the operator wants to pursue this, it should be validated first by offering 5 manual reports to Salesforce admin communities (Salesforce Trailblazer, RevOps co-ops) before building automation.",
+  "notes": "Failing build gates: operational_autonomy (5 < 7 required), buildability_with_ai (5 < 6 required \u2014 borderline, the Connected App OAuth integration is the blocking dependency). A Claude-only advisory product without org API access is buildable but of limited value.",
+  "scored_at": "2026-11-07T12:27:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

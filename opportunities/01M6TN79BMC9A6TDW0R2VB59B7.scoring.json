@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6TN79BMC9A6TDW0R2VB59B7",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 6,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Running actual regression tests against a Salesforce org requires authenticated access and org-specific configuration per customer, which involves a non-trivial per-customer setup step beyond what Claude prompts alone can handle."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Salesforce orgs are heavily customized; customers hitting edge cases in release-impact analysis will expect expert human responses, not just automated outputs."
+    }
+  ],
+  "total": 3.7,
+  "recommended_stage": "drop",
+  "rationale": "Salesforce developers and architects at mid-market companies are concrete, budget-holding buyers \u2014 their companies already pay SI partners and consultants thousands per release cycle to manage upgrade regressions, confirming willingness to pay. The pain of undocumented breaking changes (like the Winter '27 LWC/Flow issue) is real and recurring with every Salesforce seasonal release. However, delivering a meaningful regression scanner or change-impact analysis requires org-authenticated API access per customer, which creates per-customer provisioning work that breaks operational autonomy. A Claude-only approach without org access would only produce generic checklists, not actionable org-specific analysis buyers would pay for.",
+  "solution_plan": "The closest factory-viable version is a Salesforce Release Change Digest \u2014 a Claude-powered service that reads each Salesforce seasonal release notes PDF (publicly available), extracts breaking changes relevant to common LWC/Flow/Apex patterns, and delivers a structured 'what to check before you upgrade' email report. Buyers (Salesforce developers, architects, Salesforce-focused consultants) could subscribe for $19\u201339/month per org via Stripe. The factory builds this as: a Claude prompt that processes each release notes document and produces a prioritized risk checklist; a simple landing page with a Stripe subscription link and org-profile intake form (stack questions: do you use LWC? Flows? Apex triggers?); automated email delivery of the tailored digest before each seasonal release. The ONLY recurring human touch is Youval approving the outreach batch and reviewing the digest before it sends. However, the value proposition without org-specific data is weaker than a full scanner \u2014 this should be validated with a free Winter '27 sample report posted to Salesforce Trailblazer Community and r/salesforce before building the subscription infrastructure.",
+  "notes": "Failing build gates: operational_autonomy (6 = minimum threshold but requires per-customer setup step that pushes effective score lower in practice). A release-notes digest variant (no org API access needed) could score higher on autonomy and buildability \u2014 that reframing should be evaluated as a separate opportunity. As scoped (regression test suite / change-impact scanner), org API dependency is disqualifying.",
+  "scored_at": "2026-11-07T12:27:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M6TN79BHEKZMR0MM5V5F5EFE",
+  "discovered_at": "2026-11-07T12:25:20+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439968/import-leads-from-file-0-fields-found-and-0-fields-matched",
+    "snippet": "User is trying to import leads from a file, using the Salesforce Import Leads wizard. The tool shows a message '0 fields found and 0 fields matched' to the user, while to an Admin it shows a list of field mappings. The user has all the documented permissions assigned to them: Import Leads user permission, Lead: Read, Create, Edit, Edit access on the Lead fields being imported, Marketing User checkbox on the user record."
+  },
+  "problem_statement": "Non-admin Salesforce users with correct permissions still hit silent failures when importing leads, wasting hours debugging permission mismatches that admins cannot easily reproduce or diagnose.",
+  "target_segment": "Salesforce admins and RevOps professionals at SMB-to-mid-market companies managing non-admin sales or marketing users.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "crm",
+    "lead-import",
+    "permissions",
+    "revops",
+    "admin-tools",
+    "data-import",
+    "troubleshooting"
+  ],
+  "notes": "Recurring pain category \u2014 Salesforce permission debugging is a well-known time sink. Admins and RevOps consultants (billable hourly) would pay for a tool that audits effective user permissions and simulates what a non-admin would see. Willingness to pay inferred from consulting context; not explicit in this post. Single source, strength 2.",
+  "status": "candidate"
+}

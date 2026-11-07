@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M661JQFZB05Q2C2D0RB7J1H0",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Multiple HN threads and community discussions document teams losing hours or money when LLM providers silently degrade model quality mid-production, with no proactive alerting from providers. Adjacent paid observability tooling (Datadog, PagerDuty, Langfuse) confirms this segment pays for automated monitoring. At least one competitor (Langfuse) charges $49\u2013$299/month for LLM observability, validating willingness to pay for a narrower canary-probing product.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50296367"
+  ],
+  "evaluated_at": "2026-11-07T12:26:22+03:00"
+}

@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01M661JQFZB05Q2C2D0RB7J1H0",
+  "decided_at": "2026-11-07T12:27:50+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 78,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total_vs_min": {
+      "total": 6.6,
+      "min_total_to_build": 6.5,
+      "met": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates are technically met and the scoring total (6.6) clears the 6.5 threshold, so build_now is structurally permissible. However, the cost-to-gain ratio of 4.45 is catastrophically above the kill threshold of 0.6 defined in cost_gain_model.yaml, and even the optimistic scenario (2.23) is nearly 4\u00d7 the kill line. With 32 customers needed to break even, $960 build cost, and only ~$191 expected gain in 30 days, committing a build slot now is premature. The responsiveness_signal score of 2 (no outreach test data) means we have zero evidence that the target segment will actually convert. Deferring one week to run a lightweight responsiveness probe (HN/LinkedIn outreach to AI engineers about this pain) would either validate conversion potential or confirm the kill \u2014 far cheaper than a speculative build.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "Direct DM/email to commenters on the original HN thread and similar LLM-degradation threads, plus targeted LinkedIn outreach to 'AI Engineer' / 'ML Platform' titles at companies with public AI agent products"
+}

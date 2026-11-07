@@ -1,0 +1,24 @@
+{
+  "id": "01M6TN79BD7Z5T95CE2QTJHX1S",
+  "discovered_at": "2026-11-07T12:25:20+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95706/frictionless-vivaldi-browser-extension-to-quickly-save-viewport-screenshots",
+    "snippet": "In the Vivaldi web browser (which is based on Chromium), I want to capture screenshots of just the current viewport (not the entire page). I want to perform this action instantly via a keyboard shortcut. Surprisingly, Vivaldi does not seem to include a quick and frictionless way to accomplish this basic task without having to manually select the region to capture."
+  },
+  "problem_statement": "Knowledge workers and researchers using Chromium-based browsers (especially Vivaldi) have no fast, keyboard-shortcut-driven viewport screenshot tool \u2014 forcing slow manual region selection every time.",
+  "target_segment": "Power users, researchers, and UX/product professionals who use Chromium-based browsers and need frequent screenshot capture as part of their workflow.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "screenshot",
+    "browser-extension",
+    "chromium",
+    "keyboard-shortcut",
+    "productivity",
+    "vivaldi",
+    "screen-capture"
+  ],
+  "notes": "Narrow but concrete pain. Comparable pain appeared in an HN thread (macOS screenshot tricks item in the batch, mentioning Skitch gaps on Linux). Screenshot tooling is a small but real paid category \u2014 Cleanshot X charges ~$30 one-time and has strong reviews. A cross-platform browser extension with one-key viewport capture could charge $5\u201315 one-time. Signal is single-source; strength kept at 2.",
+  "status": "candidate"
+}

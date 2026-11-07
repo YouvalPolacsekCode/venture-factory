@@ -1,0 +1,25 @@
+{
+  "id": "01M6TN79B6BG1ANQWABHCQ96S1",
+  "discovered_at": "2026-11-07T12:25:20+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50400475",
+    "snippet": "You can have a separate GitHub account for your agent (GitHub ToS actually allows that since April) and that account can fork your repo and open PRs. This way it cannot do any real damage but can still push. See this user for example: https://github.com/filippo-agent"
+  },
+  "problem_statement": "Software teams using AI coding agents on GitHub lack safe, sandboxed account structures to let agents push code without risking destructive access to production repos or secrets.",
+  "target_segment": "Software engineering teams and DevOps engineers at companies adopting AI coding agents (5\u2013500 person orgs).",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-agent",
+    "github",
+    "sandboxing",
+    "devops",
+    "code-review",
+    "agentic-coding",
+    "ci-cd",
+    "access-control"
+  ],
+  "notes": "Signal is early-stage but timely \u2014 GitHub ToS change enabling agent accounts is recent (April 2026). Pain is real: teams want agents to contribute code without admin-level blast radius. Potential product: a managed agent-account provisioning + PR-gating service. Buyer would be an engineering team lead or platform/DevOps team paying for security/compliance tooling. Willingness to pay not explicit yet; signal_strength kept at 2.",
+  "status": "candidate"
+}

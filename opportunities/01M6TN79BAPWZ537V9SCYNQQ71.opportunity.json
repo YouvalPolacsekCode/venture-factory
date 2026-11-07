@@ -1,0 +1,24 @@
+{
+  "id": "01M6TN79BAPWZ537V9SCYNQQ71",
+  "discovered_at": "2026-11-07T12:25:20+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50391815",
+    "snippet": "Initial thoughts: this is a bit ridiculous, I can just build that myself. And in fact, I have done already. Thoughts after about 3 minutes of browsing: OK, this actually makes sense and I see why people would pay for this. The value proposition is definitely there [for feature flag server getunleash.io]"
+  },
+  "problem_statement": "Engineering teams self-host feature flag infrastructure but eventually recognise the operational overhead is not worth it compared to a managed service, yet switching costs and pricing uncertainty delay purchasing decisions.",
+  "target_segment": "Backend/full-stack engineers and engineering managers at growth-stage startups who currently DIY their feature flag setup.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "feature-flags",
+    "devtools",
+    "saas",
+    "developer-tools",
+    "infrastructure",
+    "build-vs-buy",
+    "open-source-monetisation"
+  ],
+  "notes": "Commenter explicitly says 'I see why people would pay for this \u2014 the value proposition is definitely there.' Classic build-vs-buy inflection signal. Competitor (Unleash) exists and is validated; opportunity may be a simpler/cheaper alternative or a migration-assist tool for teams switching from DIY. Buyer: engineering manager or CTO at 10\u2013200 person company.",
+  "status": "candidate"
+}

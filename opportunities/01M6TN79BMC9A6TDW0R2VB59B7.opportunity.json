@@ -1,0 +1,24 @@
+{
+  "id": "01M6TN79BMC9A6TDW0R2VB59B7",
+  "discovered_at": "2026-11-07T12:25:20+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439963/starts-from-winter-27-mixed-passing-recordid-and-records-cause-flow-collection",
+    "snippet": "We had business logic to call a Screen Flow from LWC containing a <lightning-flow>. Starts from Winter '27, mixed passing recordId and Records cause Flow collection variable to lose their field values. The Flow has two input-enabled Record variables."
+  },
+  "problem_statement": "Salesforce developers are hitting undocumented breaking changes in Winter '27 that silently corrupt Flow variable data when mixing recordId and Record inputs in LWC, causing production regressions with no clear fix.",
+  "target_segment": "Salesforce developers and architects at mid-market and enterprise companies running LWC + Flow automation stacks.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "lightning-web-components",
+    "flow",
+    "breaking-change",
+    "developer-tools",
+    "regression-testing",
+    "winter27"
+  ],
+  "notes": "Salesforce release-cycle breaking changes are a persistent pain \u2014 companies pay SI partners and consultants to manage upgrades. Opportunity: a lightweight regression-test suite or change-impact scanner for Salesforce orgs before seasonal releases. Potential buyer: Salesforce admin/architect or ISV partner. Single source, early signal.",
+  "status": "candidate"
+}

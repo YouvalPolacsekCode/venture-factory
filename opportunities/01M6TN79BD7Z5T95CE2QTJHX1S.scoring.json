@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6TN79BD7Z5T95CE2QTJHX1S",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 5,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "A $5\u201315 one-time browser extension requires hundreds to thousands of paying individual consumers to generate meaningful revenue; the model fundamentally needs B2C scale."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building, publishing, and maintaining a browser extension requires real software development (JavaScript, Chrome/Firefox manifest, store submissions, security reviews) that the factory cannot deliver via Claude prompts alone."
+    }
+  ],
+  "total": 1.3,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent for a narrow set of power users, and CleanShot X's success shows willingness to pay exists in the broader screenshot category. However, the buyer is an individual consumer (not a business buyer), the product requires actual browser extension development that this factory cannot build, distribution via browser extension stores is competitive and slow, and the $5\u201315 one-time price point demands consumer scale. Total after penalties is 1.3 \u2014 well below threshold.",
+  "solution_plan": "This is not viable for a solo non-technical operator using this factory. A browser extension requires JavaScript development, Chrome Web Store/Firefox Add-ons submission and review (which involves human identity verification, policy compliance, and iterative rejection cycles), and ongoing maintenance for each browser version update. Claude cannot write and ship a browser extension end-to-end without a developer. Additionally, the revenue model ($5\u201315 one-time, B2C) would require thousands of customers for meaningful income. Recommend dropping entirely.",
+  "notes": "Failing build gates: buildability_with_ai (2 < 6 required), buyer_clarity (4 < 6 required), operational_autonomy (5 < 7 required). Browser extension development is outside the factory's tooling scope.",
+  "scored_at": "2026-11-07T12:27:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

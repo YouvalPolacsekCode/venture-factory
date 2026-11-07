@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-11-06T10:09:05+00:00",
-    "idt": "2026-11-06T13:09:05+03:00"
+    "utc": "2026-11-07T09:27:54+00:00",
+    "idt": "2026-11-07T12:27:54+03:00"
   },
   "funnel": {
-    "candidates": 449,
-    "scored": 449,
-    "validated": 49,
+    "candidates": 454,
+    "scored": 454,
+    "validated": 50,
     "build_decisions": {
-      "defer_1_week": 44,
+      "defer_1_week": 45,
       "kill": 5
     },
     "build_now": 0,
@@ -533,7 +533,7 @@
         "Buildable": 6,
         "Pain": 8
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "hn",
       "source_url": "https://news.ycombinator.com/item?id=50296367",
       "discovered_at": "2026-10-30T12:17:15+03:00"
@@ -745,14 +745,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.2585,
-    "last_7_days_usd": 2.0716,
-    "all_time_usd": 36.3666,
+    "today_usd": 0.4235,
+    "last_7_days_usd": 2.107,
+    "all_time_usd": 36.7901,
     "by_day": [
-      {
-        "date": "2026-10-30",
-        "usd": 0.3881
-      },
       {
         "date": "2026-10-31",
         "usd": 0.2589
@@ -776,67 +772,36 @@
       {
         "date": "2026-11-06",
         "usd": 0.2585
+      },
+      {
+        "date": "2026-11-07",
+        "usd": 0.4235
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6791
+        "usd": 0.6888
       },
       {
         "agent": "pain_validation",
-        "usd": 0.6159
+        "usd": 0.6254
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.4382
+        "usd": 0.4543
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3047
+        "usd": 0.3049
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0339
+        "usd": 0.0338
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-10-31",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-11-01",
       "agents": {
@@ -1015,13 +980,48 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-11-07",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-11-06.md",
-    "date": "2026-11-06",
-    "text": "# Daily Summary — 2026-11-06 (Wed)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 449 |\n| Opportunities validated past threshold | 116 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently running. Factory in discovery and validation phase.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 core agents nominal.\n\n- `market_radar` completed sweep; 449 candidate opportunities identified.\n- `opportunity_scoring` processed 449 candidates; 116 passed validation threshold.\n- `pain_validation` confirmed signals on 116 opportunities.\n- 6 agents (build_decisions, cost_gain, lead_research, product_design, responsiveness_test, service_builder) skipped — awaiting operator direction on which validated opportunities to advance.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` monitors new pain signals across tracked subreddits and forums.\n2. `opportunity_scoring` stands ready to re-score if new cohorts are added.\n3. `pain_validation` can run targeted probes on highest-scoring subset if operator selects.\n4. Factory waits for operator to choose experiment(s) to build and launch.\n\n## Operator action items\n",
-    "truncated": true
+    "file": "reports/daily/2026-11-07.md",
+    "date": "2026-11-07",
+    "text": "# Daily Summary — 2026-11-07 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 454 |\n| Opportunities validated past threshold | 117 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently tracked in factory state.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for new pain signals across tracked channels.\n2. `opportunity_scoring` processes new candidate opportunities through ranking model.\n3. `pain_validation` validates top-scored opportunities against known pain thresholds.\n4. `build_decisions` analyzes validated opportunities for service/product fit.\n5. `cost_gain` computes daily ROI metrics across all active tracks.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "truncated": false
   },
   "analytics": null
 }

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M6TN79BAPWZ537V9SCYNQQ71",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 3,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Migration from DIY feature flags to Unleash or a competing service requires per-customer codebase analysis, schema migration, and integration work \u2014 not deliverable as a fully automated Claude service."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Engineering managers at growth-stage startups expect a technical evaluation, trial setup, or at minimum an async Q&A before committing to infrastructure tooling."
+    }
+  ],
+  "total": 2.2,
+  "recommended_stage": "drop",
+  "rationale": "The underlying market signal is solid \u2014 the HN commenter explicitly validates willingness to pay for managed feature flag infrastructure, and competitors like Unleash confirm category demand among engineering managers at 10\u2013200 person companies. However, the specific opportunity as framed (simpler/cheaper alternative or migration-assist tool) requires either building real infrastructure (a feature flag server) or doing per-customer migration work \u2014 neither is feasible with Claude prompts and a landing page alone. Operational autonomy is critically low. The total after penalties falls to 2.2.",
+  "solution_plan": "This is not viable for a solo non-technical operator using this factory in its current framing. A feature flag SaaS requires real backend infrastructure (a flag evaluation service, SDKs, a dashboard), and a migration-assist tool requires per-customer codebase access and custom integration work. The factory could potentially build a narrow adjacent product \u2014 for example, a Claude-powered 'Should I self-host or buy?' decision guide with a lead capture that routes to Unleash's affiliate program \u2014 but that is a marketing play, not a product. Recommend dropping the core idea; a narrow content/advisory angle could be validated separately.",
+  "notes": "Failing build gates: operational_autonomy (3 < 7 required), buildability_with_ai (4 < 6 required). The product requires real infrastructure this factory cannot build or host.",
+  "scored_at": "2026-11-07T12:27:35+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

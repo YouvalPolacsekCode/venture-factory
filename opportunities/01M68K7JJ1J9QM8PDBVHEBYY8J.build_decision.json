@@ -1,0 +1,54 @@
+{
+  "opportunity_id": "01M68K7JJ1J9QM8PDBVHEBYY8J",
+  "decided_at": "2026-11-08T12:45:43+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 6,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 5,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 6.0,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "required_for_build": [
+        "build",
+        "scale"
+      ],
+      "met": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 6.0 < min_total_to_build 6.5",
+    "operational_autonomy=6 < 7",
+    "buildability_with_ai=5 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Three independent blockers prevent build_now: operational_autonomy (6 vs floor 7), buildability_with_ai (5 vs floor 6), and total score (6.0 vs 6.5 threshold). The recommended_stage is 'validate', not 'build' or 'scale'. The cost-to-gain ratio of 5.95 is nearly 10\u00d7 the kill threshold of 0.6, and expected 90-day gain is negative at -$54.65, signaling poor unit economics at current assumptions. The pain is real and timely given the Warp incident, but the product requires non-trivial integration work (hooking into diverse agent trace pipelines) that strains solo-builder capacity and autonomy. Defer to allow validation of a tightly scoped self-serve MVP before committing build resources.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 14,
+  "suggested_first_outreach_channel": "DevSecOps Slack communities and targeted LinkedIn outreach to engineering managers at companies using Warp/Cursor"
+}

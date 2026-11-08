@@ -1,0 +1,26 @@
+{
+  "id": "01M6X8NHKSDHT2KJP7DEE9QVQF",
+  "discovered_at": "2026-11-08T12:43:39+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50409244",
+    "snippet": "There have been previous outages that last 1-2 days, but I haven't been able to get RSS feeds from YouTube for the last 4 days now. This goes for new channels and previous channels in a feed reader; Google displays a 404 page no matter what."
+  },
+  "problem_statement": "YouTube RSS feed endpoints periodically return 404 errors for days at a time, breaking automated content pipelines, newsletter curation workflows, and feed-reader setups that depend on reliable YouTube channel monitoring.",
+  "target_segment": "Newsletter operators, content curators, podcast producers, and developers who build automations on top of YouTube RSS feeds for content monitoring and aggregation.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "youtube",
+    "rss",
+    "feed-reader",
+    "content-curation",
+    "newsletter",
+    "automation",
+    "api-reliability",
+    "content-monitoring",
+    "podcast"
+  ],
+  "notes": "Recurring platform instability (commenter notes 'previous outages' lasting 1-2 days, now 4 days). Newsletter operators and content aggregators have demonstrated WTP for reliable data pipelines (e.g., Feedly Pro, Inoreader paid plans). A paid YouTube channel monitoring / RSS proxy service would address this. Signal is moderate \u2014 one HN comment, but describes repeated outages suggesting chronic pain.",
+  "status": "candidate"
+}

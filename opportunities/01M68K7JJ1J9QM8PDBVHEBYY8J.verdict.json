@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M68K7JJ1J9QM8PDBVHEBYY8J",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "The Warp.dev breach notification is a concrete, public incident where AI agent traces captured live secrets \u2014 affecting paying production users. Adjacent paid tools (GitGuardian, Trufflesecurity) confirm this segment buys secret-scanning, and the growing adoption of AI coding agents means the attack surface is expanding weekly. The pain is burning because credential exposure triggers mandatory incident response, rotation cycles, and potential regulatory liability.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50314132"
+  ],
+  "evaluated_at": "2026-11-08T12:44:42+03:00"
+}

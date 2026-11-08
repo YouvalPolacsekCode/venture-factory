@@ -1,0 +1,25 @@
+{
+  "id": "01M6X8NHKJ6CREETZPA1PMYRN4",
+  "discovered_at": "2026-11-08T12:43:39+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95708/firefox-add-on-to-block-the-new-credentials-fill-in-behavior",
+    "snippet": "Recently, browsers including Firefox made a habit of allowing sites to block the user name/password filling in functionality. I deem this trespassing as they are my own user ID and my password... On some sites it is not working at all, and on others only the user name is not working."
+  },
+  "problem_statement": "Websites can now override browser and password manager autofill, breaking workflows for users of password managers and causing friction for security-conscious professionals who rely on autofill for speed and consistency.",
+  "target_segment": "Security-conscious professionals, IT administrators, and power users who rely on password managers (1Password, Bitwarden, etc.) and are blocked by sites disabling autofill.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "password-manager",
+    "browser-extension",
+    "autofill",
+    "security",
+    "firefox",
+    "credential-management",
+    "privacy",
+    "power-user"
+  ],
+  "notes": "Single post but describes a broadly reported cross-browser behavior change. Password manager users (1Password ~$3/mo, Bitwarden ~$10/yr) are established paying buyers. A browser extension that force-enables autofill regardless of site autocomplete=off attributes could monetize as a one-time purchase or subscription. No explicit WTP in this post, but the paying buyer cohort is well-established.",
+  "status": "candidate"
+}

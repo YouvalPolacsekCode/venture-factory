@@ -1,0 +1,25 @@
+{
+  "id": "01M6X8NHK93T47CF4RYJMD4X2H",
+  "discovered_at": "2026-11-08T12:43:39+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95772/what-software-provides-a-markup-language-for-wireframing",
+    "snippet": "I am searching for something to make wireframing convenient. Consider the difference in speed between creating a diagram in Inkscape or HTML, versus MermaidJS. [Cross-posted references to multiple reddit threads seeking same solution, score 2, active search across platforms]"
+  },
+  "problem_statement": "Developers and designers want a text/markup-based wireframing tool analogous to MermaidJS for diagrams \u2014 current GUI tools like Figma or Inkscape are too slow for rapid ideation and developers prefer code-first workflows.",
+  "target_segment": "Software developers, UX designers, and technical product managers who prefer code-driven workflows and need fast, version-controllable wireframing.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "wireframing",
+    "markup-language",
+    "developer-tools",
+    "code-first",
+    "diagramming",
+    "ux-tools",
+    "text-based-ui",
+    "rapid-prototyping"
+  ],
+  "notes": "User cross-posted to multiple reddit threads and SE, indicating active unsatisfied search. Existing tools: Wireframe.cc, Excalidraw, Penpot \u2014 but none offer a MermaidJS-style DSL. Developer segment pays for tools (e.g., Figma at $12-45/mo). Weak on explicit WTP evidence but cross-platform active search raises confidence slightly.",
+  "status": "candidate"
+}

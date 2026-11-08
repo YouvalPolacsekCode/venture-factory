@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-11-07T09:27:54+00:00",
-    "idt": "2026-11-07T12:27:54+03:00"
+    "utc": "2026-11-08T09:45:47+00:00",
+    "idt": "2026-11-08T12:45:47+03:00"
   },
   "funnel": {
-    "candidates": 454,
-    "scored": 454,
-    "validated": 50,
+    "candidates": 457,
+    "scored": 457,
+    "validated": 51,
     "build_decisions": {
-      "defer_1_week": 45,
+      "defer_1_week": 46,
       "kill": 5
     },
     "build_now": 0,
@@ -598,6 +598,35 @@
     },
     {
       "topics": [
+        "youtube",
+        "rss",
+        "feed-reader"
+      ],
+      "id": "01M6X8NHKSDHT2KJP7DEE9QVQF",
+      "problem_statement": "YouTube RSS feed endpoints periodically return 404 errors for days at a time, breaking automated content pipelines, newsletter curation workflows, and feed-reader setups that depend on reliable YouTube channel monitoring.",
+      "target_segment": "Newsletter operators, content curators, podcast producers, and developers who build automations on top of YouTube RSS feeds for content monitoring and aggregation.",
+      "total": 6.6,
+      "recommended_stage": "build",
+      "rationale": "Newsletter operators and content curators are a well-defined B2B/prosumer buyer with a clear budget: they already pay for Feedly Pro ($8/mo), Inoreader ($10/mo), and similar data-pipeline tools, confirming willingness to pay at the target price point. The pain is real and recurring — YouTube RSS outages are a chronic, documented problem that breaks automated workflows these users depend on daily. The service (a reliable YouTube channel monitoring proxy with email/webhook alerts) is fully builda…",
+      "solution_plan": "WHAT: A paid YouTube channel monitoring service — subscribers enter channel URLs, and the service checks for new videos on a schedule and delivers alerts via email or webhook, bypassing unreliable RSS. BUILD: The factory builds a Claude-orchestrated backend that polls YouTube channels (via the Data API v3 or HTML scraping as fallback when RSS fails), a simple sign-up form/landing page, and a Stripe subscription link ($9–19/mo) — no coding by the operator; the factory handles the cron logic and alert emails. SELL: Outreach targets newsletter operators (Substack, Ghost communities), podcast producers (r/podcasting), and developer automation fo…",
+      "realistic": {
+        "verdict": "yes",
+        "weak": []
+      },
+      "scores": {
+        "Who pays": 7,
+        "Runs alone": 8,
+        "Will pay": 7,
+        "Buildable": 8,
+        "Pain": 7
+      },
+      "verdict": null,
+      "source_type": "hn",
+      "source_url": "https://news.ycombinator.com/item?id=50409244",
+      "discovered_at": "2026-11-08T12:43:39+03:00"
+    },
+    {
+      "topics": [
         "llm-cost-monitoring",
         "api-spend",
         "openai-billing"
@@ -711,48 +740,15 @@
       "source_type": "forum",
       "source_url": "https://salesforce.stackexchange.com/questions/439723/creating-a-pde-with-an-orgs-metadata",
       "discovered_at": "2026-08-05T08:37:47+03:00"
-    },
-    {
-      "topics": [
-        "salesforce",
-        "apex",
-        "api-version"
-      ],
-      "id": "01KZD8S0TDVAQE1Z1269GQ7QNY",
-      "problem_statement": "Salesforce developers and architects cannot quickly determine the security implications of the Summer '26 API v67 Apex user-mode change for their existing trigger code, risking data exposure or broken automation in production orgs.",
-      "target_segment": "Salesforce developers and technical architects at companies running custom Apex on API v67+",
-      "total": 6.5,
-      "recommended_stage": "validate",
-      "rationale": "The buyer is well-defined — Salesforce developers and architects at companies running custom Apex, who already pay enterprise Salesforce licenses and routinely spend on consultant engagements for exactly this kind of breaking-change audit. Pain severity is high: a misunderstood security mode change in production Apex triggers can expose data or break automations, and the Summer '26 API v67 change creates an immediate, time-bounded reason to buy. Buildability is plausible (Claude can read Apex c…",
-      "solution_plan": "The micro-service is an Apex API v67 security-mode audit: a Salesforce developer pastes their trigger code into an intake form, and Claude analyzes it against the Summer '26 system-mode vs. user-mode change, returning a flagged report of affected triggers with plain-English risk descriptions and recommended fixes. Build: the factory creates a Claude prompt loaded with the v67 release notes + Apex security model docs, connects it to a simple form and Stripe ($99–$299 per org audit, or $49/month for ongoing monitoring), and emails the report automatically. Sell: the factory drafts outreach to Salesforce developers identifiable on Stack Exchang…",
-      "realistic": {
-        "verdict": "yes",
-        "weak": []
-      },
-      "scores": {
-        "Who pays": 8,
-        "Runs alone": 7,
-        "Will pay": 7,
-        "Buildable": 6,
-        "Pain": 8
-      },
-      "verdict": "validated",
-      "source_type": "forum",
-      "source_url": "https://salesforce.stackexchange.com/questions/439727/do-apex-triggers-always-run-in-system-mode-at-api-v67-or-do-trigger-body-dml-op",
-      "discovered_at": "2026-08-07T07:47:49+03:00"
     }
   ],
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.4235,
-    "last_7_days_usd": 2.107,
-    "all_time_usd": 36.7901,
+    "today_usd": 0.3994,
+    "last_7_days_usd": 2.2475,
+    "all_time_usd": 37.1895,
     "by_day": [
-      {
-        "date": "2026-10-31",
-        "usd": 0.2589
-      },
       {
         "date": "2026-11-01",
         "usd": 0.2498
@@ -776,67 +772,36 @@
       {
         "date": "2026-11-07",
         "usd": 0.4235
+      },
+      {
+        "date": "2026-11-08",
+        "usd": 0.3994
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.6888
+        "usd": 0.6943
       },
       {
         "agent": "pain_validation",
-        "usd": 0.6254
-      },
-      {
-        "agent": "opportunity_scoring",
-        "usd": 0.4543
+        "usd": 0.6321
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3049
+        "usd": 0.4554
+      },
+      {
+        "agent": "opportunity_scoring",
+        "usd": 0.4321
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0338
+        "usd": 0.0337
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-11-01",
-      "agents": {
-        "build_decisions": {
-          "skipped": 1
-        },
-        "cost_gain": {
-          "skipped": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-11-02",
       "agents": {
@@ -1015,12 +980,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-11-08",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-11-07.md",
-    "date": "2026-11-07",
-    "text": "# Daily Summary — 2026-11-07 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 454 |\n| Opportunities validated past threshold | 117 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently tracked in factory state.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues sweeping for new pain signals across tracked channels.\n2. `opportunity_scoring` processes new candidate opportunities through ranking model.\n3. `pain_validation` validates top-scored opportunities against known pain thresholds.\n4. `build_decisions` analyzes validated opportunities for service/product fit.\n5. `cost_gain` computes daily ROI metrics across all active tracks.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-11-08.md",
+    "date": "2026-11-08",
+    "text": "# Daily Summary — 2026-11-08 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 457 |\n| Opportunities validated past threshold | 118 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments currently tracked.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues scanning for new B2B pain signals across monitored sources.\n2. `opportunity_scoring` re-ranks yesterday's 457 candidates against updated thresholds.\n3. `pain_validation` probes highest-scoring cohort (top 40) with targeted DM tests.\n4. `build_decisions` assesses which of the 118 validated opportunities merit experiment build.\n5. `cost_gain` computes marginal ROI for any new experiments launched this week.\n\n## Operator action items\n\nNone — process the approval queue and move on.",
     "truncated": false
   },
   "analytics": null

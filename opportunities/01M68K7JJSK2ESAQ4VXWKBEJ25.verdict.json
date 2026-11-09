@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M68K7JJSK2ESAQ4VXWKBEJ25",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "rare",
+  "rationale": "While Salesforce ISV API opacity is a real and historically documented pain, the evidence base for this specific sub-problem (SignupRequest/Trialforce C-1016 errors in CI/CD pipelines) is a single forum post. The addressable segment\u2014ISV partners automating org provisioning via headless CI\u2014is a narrow slice within an already narrow ISV ecosystem, and no willingness-to-pay signal (competitor pricing, 'is there a tool that\u2026' requests, job postings) could be identified beyond inference from the broader Salesforce tooling market. Insufficient distinct pain quotes and no WTP evidence to meet the pass bar; marking rejected rather than inconclusive because the niche is too narrow to expect evidence accumulation in a re-queue cycle.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439960/signuprequest-with-connectedappconsumerkey-always-ends-in-status-error-errorcod"
+  ],
+  "evaluated_at": "2026-11-09T13:37:16+03:00"
+}

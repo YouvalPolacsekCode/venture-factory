@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M72GHPDC72FZKBGK7W13HCJH",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": -1.0,
+      "reason": "Solo founders and 1-5 person startup teams paying $20\u201350/month for an agent-output auditing tool would require hundreds to thousands of paying customers to generate meaningful revenue; the target segment is too small and cost-sensitive to sustain a SaaS business without significant volume."
+    }
+  ],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is primarily solo founders and tiny startup teams \u2014 a segment that is reachable but notoriously resistant to paying for tooling (they already resent their API bills), and the pain, while real, is better described as frustration than a money-losing emergency that justifies a recurring subscription. Willingness-to-pay is weak: there is no clear paid substitute for agent-output verification, and the natural response from this segment is to build a quick script rather than subscribe to a SaaS. The b2c_at_scale penalty correctly applies because the economics only work with large volume from a price-sensitive, high-churn segment. Buildability and autonomy are genuinely good \u2014 a Claude-powered task-completion auditor is straightforward to build \u2014 but the commercial fundamentals are too weak to justify building something for a market that probably won't pay. Drop unless a reframing toward a larger B2B buyer (e.g., AI platform vendors selling agent infrastructure to enterprises) materialises.",
+  "solution_plan": "This opportunity should not be pursued in its current framing. The pain is real but the buyer (solo founders with 1-5 person teams) is the hardest possible customer to convert and retain for a paid SaaS: they have high sensitivity to recurring costs, low lifetime value, and the technical inclination to build their own solution. While the factory could technically build a lightweight agent-output auditing dashboard in a week (Claude prompt evaluating task completion vs. announced work, simple web UI, Stripe), there is no evidence anyone in this segment would pay $20\u201350/month for it rather than writing a 50-line script. If this insight were reframed as a feature sold to AI agent platform vendors (Lindy, Make, Zapier AI) or as an enterprise add-on for teams already paying for orchestration infrastructure, the buyer clarity and willingness-to-pay could improve. As currently scoped \u2014 solo founders \u2014 it is a drop.",
+  "notes": "Failing build_gates: buyer_clarity scored 4, floor is 6 (buyer is vague solo founders, not a named business role with budget authority); willingness_to_pay scored 4, floor is 5. Total after penalty (4.0) is also below the min_total_to_validate threshold of 5.5.",
+  "scored_at": "2026-11-10T13:40:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

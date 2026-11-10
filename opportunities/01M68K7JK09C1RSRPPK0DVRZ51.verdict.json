@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M68K7JK09C1RSRPPK0DVRZ51",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "rare",
+  "rationale": "The pain is real but extremely narrow: a single forum post from a user puzzling over a specific Azure AI Foundry billing footnote. No adjacent threads, no competitor tools targeting this niche, and no willingness-to-pay signal beyond the implicit fact the user is an Azure customer. The addressable population of engineers simultaneously evaluating Azure AI Gateway pricing and in market for a third-party explainer tool is too small and too transient to clear the evidence bar; the moment Azure clarifies its docs, the opportunity evaporates.",
+  "sources": [
+    "https://serverfault.com/questions/1200165/what-does-free-for-up-to-100-000-requests-when-created-as-an-ai-gateway-in-azur"
+  ],
+  "evaluated_at": "2026-11-10T13:38:42+03:00"
+}

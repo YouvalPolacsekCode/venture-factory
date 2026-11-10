@@ -1,0 +1,27 @@
+{
+  "id": "01M72GHPCRZHKAF29GQCQ1WDHK",
+  "discovered_at": "2026-11-10T13:37:33+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50437119",
+    "snippet": "When generating new features using agents, we must then update the unit tests. This is counter to the purpose of unit tests. Allowing the system to update its unit tests is introducing risk and uncertainty, even with scoped PRs. Not allowing the system to update unit tests will negatively impact velocity... How are folks in the field handling this? Have a real rube-Goldberg situation going on here."
+  },
+  "problem_statement": "Engineering teams using AI coding agents face a dilemma: letting agents modify unit tests undermines test integrity and introduces uncontrolled risk, but blocking agents from touching tests kills velocity and creates friction in CI pipelines.",
+  "target_segment": "Software engineering teams (5\u2013200 engineers) adopting agentic coding tools such as Claude Code, Cursor, or Devin for feature development.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "agentic-coding",
+    "unit-testing",
+    "ci-cd",
+    "developer-tooling",
+    "ai-agents",
+    "software-quality",
+    "test-governance",
+    "velocity",
+    "code-review",
+    "llm-dev-tools"
+  ],
+  "notes": "Active practitioner question with 4 upvotes and community engagement on HN (2026-11-10). Pain is structural and recurring: every agentic code-generation cycle hits this. Buyer is an engineering team already paying for AI coding subscriptions (Claude Max, Cursor Pro, etc.). A tool or policy layer that mediates agent access to test files \u2014 reviewing, scoping, or gating test mutations \u2014 could command a per-seat or per-repo SaaS fee. No existing product clearly owns this niche.",
+  "status": "candidate"
+}

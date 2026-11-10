@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M72GHPCY6Z7WA3EFHNQN6XMP",
+  "per_dimension": {
+    "pain_severity": 9,
+    "pain_frequency": 7,
+    "willingness_to_pay": 8,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 6,
+    "founder_fit": 3
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": -1.5,
+      "reason": "Financial services (banks, trading desks, hedge funds) are heavily regulated; any AI tooling sold to them must navigate FINRA, SEC, MiFID II, and internal compliance review cycles that require enterprise legal/sales resources far beyond a solo operator."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": -1.0,
+      "reason": "Enterprise financial institution sales require live demos, security reviews, procurement cycles of 6\u201318 months, and executive sign-off \u2014 this cannot be async or self-serve."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": -1.5,
+      "reason": "Deploying a compliant on-prem or VPC-deployed AI layer for a financial institution requires bespoke infrastructure scoping, security questionnaire responses, penetration testing coordination, and ongoing customer success \u2014 all human-intensive."
+    }
+  ],
+  "total": 1.4,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and the willingness-to-pay is exceptionally strong \u2014 Goldman-tier institutions would genuinely pay large sums for a compliant AI layer \u2014 but this is not a solo non-technical operator opportunity at any realistic near-term horizon. Buyers are enterprise compliance and IT leadership at major financial institutions, and the sales cycle alone (security review, legal sign-off, procurement) takes 6\u201318 months and requires a dedicated enterprise sales team plus deep compliance expertise. Buildability is very low: a VPC-deployed, audit-logged AI system with data-residency guarantees and financial-grade security controls is a multi-engineer infrastructure product, not a Claude prompt plus a landing page. The penalties for regulated industry, synchronous human sales, and human-intensive fulfillment correctly collapse the score to drop territory. This opportunity is real for a well-funded team; it is the wrong opportunity for this factory.",
+  "solution_plan": "This opportunity should not be pursued by this factory. The buyer (enterprise financial institution compliance/IT leadership) requires in-person relationship-building, responds only to vendors with established compliance credentials, and the product itself (on-prem/VPC AI with audit trails, data-residency, SOC 2 Type II, potentially FedRAMP) is a multi-year infrastructure build requiring a full engineering team. A solo non-technical operator using Claude and a Stripe link cannot build, sell, or maintain this \u2014 attempting it would produce no revenue and significant wasted effort. If Youval has a direct relationship with a compliance officer at a mid-market financial firm who would co-design and champion this internally, that changes the calculus, but as a cold-start opportunity it is a drop.",
+  "notes": "Failing build_gates: buildability_with_ai (scored 2, floor 6), operational_autonomy (scored 2, floor 7), willingness_to_pay passes (8) but the other structural problems override. Regulated industry penalty applied. Total collapses to 1.4 \u2014 well below the validate threshold of 5.5.",
+  "scored_at": "2026-11-10T13:40:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

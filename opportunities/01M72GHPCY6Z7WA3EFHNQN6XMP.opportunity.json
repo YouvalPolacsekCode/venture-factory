@@ -1,0 +1,27 @@
+{
+  "id": "01M72GHPCY6Z7WA3EFHNQN6XMP",
+  "discovered_at": "2026-11-10T13:37:33+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50419354",
+    "snippet": "Having sat in a trading seat at a GS competitor, I can second this. If a Claude Max subscription led to one better trade over the course of a year, there's an almost 100% chance that it would pay for itself. And consider that a trader at GS would be doing dozens if not thousands of trades per day... Cost isn't the issue here."
+  },
+  "problem_statement": "Financial institutions (banks, trading desks) are pulling AI coding and analysis tools from professional employees not due to cost but due to unresolved compliance, data-leakage, and audit-trail concerns \u2014 leaving high-value users without productivity tools they'd willingly pay for.",
+  "target_segment": "Compliance and IT leadership at mid-to-large financial institutions (banks, hedge funds, trading desks) deploying or evaluating AI productivity tools for regulated staff.",
+  "geo": "US",
+  "signal_strength": 4,
+  "keywords": [
+    "enterprise-ai",
+    "compliance",
+    "financial-services",
+    "data-governance",
+    "ai-policy",
+    "trading-desk",
+    "audit-trail",
+    "regulated-industries",
+    "llm-deployment",
+    "risk-management"
+  ],
+  "notes": "HN thread discusses Goldman Sachs pulling Claude Code from bankers and traders (2026-11-09, 11 points on related thread). Commenter with direct trading-seat experience frames the ROI clearly: even one better trade per year justifies the cost. The barrier is compliance/data risk, not price. This is a classic enterprise wedge: institutions want the tool but cannot clear legal/compliance review. A compliant, on-prem or VPC-deployed AI coding/analysis layer with audit logs, data-residency guarantees, and policy controls could command significant enterprise contract value. Explicit willingness-to-pay signal from the finance domain.",
+  "status": "candidate"
+}

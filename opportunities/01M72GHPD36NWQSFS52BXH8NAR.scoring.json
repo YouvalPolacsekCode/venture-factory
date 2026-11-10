@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M72GHPD36NWQSFS52BXH8NAR",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.9,
+  "penalties_applied": [],
+  "total": 5.9,
+  "recommended_stage": "validate",
+  "rationale": "Security, compliance, and IT procurement leads at SMB-to-mid-market companies are a credible named B2B buyer with existing security-tool budgets (they already pay for Vanta, Drata, SecurityScorecard, etc.); willingness-to-pay is real but competitive. The pain is concrete and freshly triggered by the Fireworks AI / Notion breach \u2014 compliance officers at affected companies are actively looking for answers right now, making this a timely opportunity. Buildability is achievable: a Claude-powered AI sub-processor risk tracker that ingests vendor disclosure feeds, maps data flows, and generates compliance summaries is within the factory's capability. Operational autonomy scores at the floor: once a customer's vendor list is onboarded, weekly monitoring and report generation can be fully automated, with Youval only approving outreach batches and new customer onboarding. Validate by reaching five compliance leads at Notion-affected companies and three at comparable SaaS-heavy mid-market firms with a one-page problem statement and a pricing question before building.",
+  "solution_plan": "WHAT: A subscription monitoring service ('SubProcessor Watch') that tracks the security posture, breach disclosures, and compliance certifications of AI sub-processors used by popular SaaS tools, delivering a weekly risk digest to compliance officers. BUILD: The factory builds a Claude pipeline that ingests public vendor security disclosures (HN, vendor status pages, CVE feeds, SEC filings), maps them to a customer's known SaaS stack via an intake form, and generates a structured weekly risk report delivered by email; a simple intake form + Stripe subscription link serves as the front door, all built by the factory with no coding by Youval. SELL: Initial outreach targets compliance managers and IT procurement leads at companies known to use Notion AI, Slack AI, or similar products, reached via LinkedIn (title filter: 'compliance manager', 'security lead', 'IT procurement') and directly in relevant Slack/Discord communities (Vanta users, ComplianceCaf\u00e9); the factory queues outreach messages and Youval approves each batch before sending. MAINTAIN: Weekly Claude pipeline runs automatically, pulling feeds, generating reports, and emailing subscribers; Stripe handles billing; new customer onboarding is a self-serve form; Youval's only regular touch is approving new outreach batches and reviewing the monthly churn summary. HONEST CAVEAT: The core risk data sourcing (reliably catching all sub-processor breaches across a broad vendor universe) requires careful prompt engineering and may miss incidents not publicly disclosed \u2014 set accurate expectations with early customers about coverage scope.",
+  "notes": "operational_autonomy scored exactly at the build_gate floor of 7; validate first to confirm the data-sourcing reliability and whether compliance buyers will pay $X/month for coverage that may have gaps. No build_gates failing at this score, but total (5.9) is below the min_total_to_build threshold of 6.5, so validate stage is correct on thresholds alone.",
+  "scored_at": "2026-11-10T13:40:06+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

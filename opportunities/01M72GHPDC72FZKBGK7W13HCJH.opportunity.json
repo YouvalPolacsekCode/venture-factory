@@ -1,0 +1,27 @@
+{
+  "id": "01M72GHPDC72FZKBGK7W13HCJH",
+  "discovered_at": "2026-11-10T13:37:33+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://dev.to/elliot_brenya/i-gave-my-startup-6-ai-employees-they-talked-more-than-they-worked-480p",
+    "snippet": "330 chat messages, 75 finished tasks, and one analyst who announced work she never did. [Title and summary of dev.to post, 12 points, 9 comments, 2026-11-09]"
+  },
+  "problem_statement": "Startup operators deploying multi-agent AI systems find that agents generate high volumes of communication and status announcements without proportional task completion, making it hard to measure real output and trust agent-reported progress.",
+  "target_segment": "Solo founders and small startup teams (1\u20135 people) using multi-agent AI frameworks to automate business operations or software development workflows.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "multi-agent",
+    "ai-agents",
+    "productivity",
+    "task-completion",
+    "agent-observability",
+    "startup-tooling",
+    "agentic-workflows",
+    "llm-orchestration",
+    "output-verification",
+    "ai-reliability"
+  ],
+  "notes": "Dev.to post (2026-11-09, 12 points, 9 comments) with concrete ratio: 330 messages \u2192 75 real tasks. Signals a monitoring/verification gap for multi-agent systems. Overlaps with the unit-test governance opportunity but from an operator rather than engineering-team angle. Buyer is a founder already spending money on AI agent infrastructure (API costs, orchestration tools). A lightweight agent-output auditing or task-verification layer could be sold as a SaaS add-on. Signal is moderate \u2014 single post but engagement suggests resonance.",
+  "status": "candidate"
+}

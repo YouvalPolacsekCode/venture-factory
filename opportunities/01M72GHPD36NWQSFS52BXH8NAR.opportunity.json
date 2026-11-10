@@ -1,0 +1,27 @@
+{
+  "id": "01M72GHPD36NWQSFS52BXH8NAR",
+  "discovered_at": "2026-11-10T13:37:33+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50436636",
+    "snippet": "We are writing to inform you of a security incident at one of our vendors, Fireworks AI, that may impact you. Following an investigation by the Notion security team, we have determined that your workspace was among the <1% of Notion workspaces that may have been affected by the Fireworks AI security incident. [Notion email to users, quoted by poster on HN, 2026-11-10, 11 points]"
+  },
+  "problem_statement": "Businesses using AI-enhanced SaaS products (e.g., Notion AI) have no visibility into the security posture of the sub-processors (AI inference vendors like Fireworks AI) handling their data, and learn of breaches only after the fact via email.",
+  "target_segment": "Security, compliance, and IT procurement teams at SMB-to-mid-market companies using AI-augmented SaaS tools and subject to data-protection obligations (SOC 2, GDPR, HIPAA).",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-security",
+    "third-party-risk",
+    "vendor-risk-management",
+    "data-breach",
+    "compliance",
+    "saas-security",
+    "ai-subprocessor",
+    "gdpr",
+    "soc2",
+    "enterprise-security"
+  ],
+  "notes": "Active HN thread (2026-11-10, 11 points). Real breach event (Fireworks AI \u2192 Notion AI \u2192 end-user workspaces) surfaces a structural gap: AI SaaS products chain to inference vendors whose security posture is opaque to end-business buyers. A monitoring or due-diligence product that tracks AI sub-processor risk, breach disclosures, and data-flow mapping for enterprise procurement/compliance teams addresses a pain that just became very concrete. Buyers are compliance officers and IT procurement leads with existing security tool budgets.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M750TP4WHJXCP0EBD5DC62HB8",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 4,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.3,
+  "penalties_applied": [],
+  "total": 4.3,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is an individual developer who wants a free, open-source CLI tool \u2014 this segment almost never pays for documentation tooling and explicitly signals preference for self-hosted FOSS solutions. Willingness to pay is very weak: the problem is a one-time setup friction, not an ongoing cost centre, and no paid substitutes exist at this price point. Even if the tool were built, distribution to this audience is hard (they build their own rather than pay), and the market is too shallow to sustain a micro-SaaS.",
+  "solution_plan": "This opportunity is not viable as a paid micro-service for a solo non-technical operator. The target users are developers who want open-source tools and are likely to build their own solution rather than pay; there is no realistic path to recurring revenue. Drop this candidate.",
+  "notes": "Fails willingness_to_pay build gate (score 3, floor 5) and buyer_clarity build gate (score 4, floor 6). Dropped on total score (4.3 < 5.5 validate threshold).",
+  "scored_at": "2026-11-11T13:02:19+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

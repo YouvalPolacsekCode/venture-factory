@@ -1,0 +1,27 @@
+{
+  "id": "01M750TP52P3VSXHWYVCV62HB8",
+  "discovered_at": "2026-11-11T13:00:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95777/does-any-software-provide-a-graphical-interface-to-sign-text-with-an-ssh-key",
+    "snippet": "KGPG (and, I believe, Kleopatra) provide an interface that allows me to conveniently sign arbitrary text with an enumerated PGP key. Does anything provide this for ssh-keygen -Y sign? I ask due to what community.bitwarden.com describes: Bitwarden supports storing and providing SSH keys. I store my SSH keys inside Bitwarden. Bitwarden does not support PGP."
+  },
+  "problem_statement": "Security-conscious professionals who store SSH keys in Bitwarden (instead of PGP keys) have no graphical tool to sign arbitrary text with their SSH keys, leaving a usability gap for identity verification and signing workflows that KGPG/Kleopatra fill for PGP.",
+  "target_segment": "Security engineers, developers, and IT professionals using Bitwarden for SSH key management who need GUI-based SSH signing",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ssh-signing",
+    "bitwarden",
+    "pgp-alternative",
+    "security-tools",
+    "gui",
+    "ssh-key",
+    "developer-tools",
+    "identity-signing",
+    "password-manager",
+    "cryptography"
+  ],
+  "notes": "Single post but describes a genuine tooling gap created by the intersection of two growing trends: Bitwarden's SSH key support (new) and the shift away from PGP toward SSH for signing. The user is clearly a professional (using Bitwarden for key management, referencing GitLab API key endpoints). A paid GUI utility or Bitwarden-integrated signing tool could find buyers among this segment. Niche but well-defined.",
+  "status": "candidate"
+}

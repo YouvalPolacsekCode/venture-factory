@@ -1,0 +1,27 @@
+{
+  "id": "01M750TP4WHJXCP0EBD5DC86S5",
+  "discovered_at": "2026-11-11T13:00:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95778/one-static-docs-site-from-openapi-mcp-and-doxygen-specs",
+    "snippet": "I need to build a self-hosted documentation site for a small API project. My specs are a mix: an OpenAPI file, an MCP server, some C code with Doxygen comments, and plain Markdown. I want one static HTML site generated from all of it, hosted on my own server. It should be open source and run from the command line. What tools can do this in 2026?"
+  },
+  "problem_statement": "Developers building API projects with mixed spec formats (OpenAPI, MCP, Doxygen, Markdown) have no single tool that generates a unified, self-hosted static documentation site from all these sources without manual stitching.",
+  "target_segment": "Indie developers, small engineering teams, and API authors who self-host documentation and work across heterogeneous spec formats",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "documentation",
+    "static-site-generator",
+    "openapi",
+    "doxygen",
+    "mcp",
+    "developer-tools",
+    "self-hosted",
+    "api-docs",
+    "multi-format",
+    "devtools"
+  ],
+  "notes": "Single post but represents a genuinely underserved toolchain gap: MCP is new enough (2025\u20132026) that no existing static doc tool handles it alongside Doxygen and OpenAPI together. Buyer context is a professional developer deploying to their own server \u2014 not a hobbyist. Tool fragmentation is a real recurring complaint in developer forums. Willingness to pay implied by professional self-hosting context and time cost of manual stitching.",
+  "status": "candidate"
+}

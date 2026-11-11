@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M750TP52P3VSXHWYVCV62HB8",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 3,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [],
+  "total": 4.0,
+  "recommended_stage": "drop",
+  "rationale": "Security engineers and developers who need SSH-based text signing are a very small, technically sophisticated niche that skews strongly toward building their own open-source solution rather than paying for a GUI utility. Willingness to pay is low \u2014 KGPG and Kleopatra, the reference tools mentioned, are free; there is no demonstrated market for paid SSH signing GUIs. The problem is also infrequent (signing arbitrary text is not a daily workflow for most), and reaching enough buyers to generate meaningful revenue is structurally difficult. Additionally, the solution has non-trivial security surface area (handling SSH keys requires careful implementation), which raises build complexity and liability risk for a solo operator.",
+  "solution_plan": "This opportunity is not viable as a paid micro-service. The niche is too small, users expect free tools, and the security-sensitive nature of SSH key handling adds complexity and risk that is inappropriate for a lightweight Claude-powered service operated solo. Drop this candidate.",
+  "notes": "Fails willingness_to_pay build gate (score 3, floor 5), buyer_clarity build gate (score 5, floor 6), and buildability_with_ai build gate (score 4, floor 6). Dropped on total score (4.0 < 5.5 validate threshold).",
+  "scored_at": "2026-11-11T13:02:19+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

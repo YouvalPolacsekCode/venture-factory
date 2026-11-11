@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M750TP4PNE3EXQDMZ2CZ7YD2",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.7,
+  "penalties_applied": [],
+  "total": 6.7,
+  "recommended_stage": "build",
+  "rationale": "Engineering leads at small AI-heavy dev teams (2\u201320 people) are demonstrably paying $500\u2013$1,000+/month in cloud AI subscriptions and actively looking for cost relief \u2014 willingness to pay is real and evidenced by current spend, not speculation. The service (a cloud-vs-local LLM cost analysis report + threshold monitor delivered as a recurring automated report) can be built as a Claude-powered intake form + calculation engine + Stripe subscription with near-zero per-customer manual work. The main risk is that this niche is small enough that lead volume may be limited, and no responsiveness data exists yet \u2014 validate the channel (LinkedIn/HN outreach to eng leads) before scaling.",
+  "solution_plan": "The micro-service is an AI Cost Routing Advisor: a monthly automated report that tells a dev team exactly which of their Claude/OpenAI workloads would be cheaper on local models (Apple Silicon, etc.) and what hardware ROI looks like at their spend level. The factory builds it as a Claude prompt pipeline that ingests a team's spend data (via a simple intake form), runs cost/ROI math, and emails a plain-English PDF report \u2014 no coding by Youval. To sell it, the factory drafts LinkedIn and HN outreach messages targeting engineering leads and CTOs at software shops who post about AI costs; Youval approves each outreach batch before it goes out. After signup via Stripe ($49\u2013$99/month), delivery is fully automated: monthly spend form reminder \u2192 Claude analysis \u2192 PDF report \u2192 email delivery, all handled by the factory. The only recurring human touch is approving the monthly outreach batch and reviewing any edge-case support tickets flagged by Claude.",
+  "notes": "",
+  "scored_at": "2026-11-11T13:02:19+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

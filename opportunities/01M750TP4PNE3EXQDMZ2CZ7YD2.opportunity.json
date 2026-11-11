@@ -1,0 +1,27 @@
+{
+  "id": "01M750TP4PNE3EXQDMZ2CZ7YD2",
+  "discovered_at": "2026-11-11T13:00:34+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50450531",
+    "snippet": "If you ask who would pay for Apple local models, I would. A Mac Studio high end 512GB costs ~$1000/month for 3 years versus my current run rate of ~$1000/month for five devs for Claude Ultra (or ~$10k/week for Claude Sonnet if I paid API rates rather than Ultra). If/when Anthropic changes to pure API pricing, or for API-heavy projects, that's when I'd switch to more local models."
+  },
+  "problem_statement": "Development teams paying $1,000+/month for cloud AI subscriptions lack a reliable, low-friction way to evaluate when switching specific workloads to local models would be cost-effective, and have no tooling to manage or monitor that hybrid threshold in practice.",
+  "target_segment": "Engineering leads and CTOs at small software teams (2\u201320 devs) with active cloud AI spend above $500/month",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "local-llm",
+    "ai-cost-optimization",
+    "cloud-ai-spend",
+    "hybrid-inference",
+    "developer-tools",
+    "llm-ops",
+    "cost-management",
+    "model-switching",
+    "anthropic",
+    "apple-silicon"
+  ],
+  "notes": "Single but highly credible HN commenter with explicit spend figures: $1k/mo for 5-dev team on Claude Ultra, noting $10k/week equivalent at API rates. Buyer is clearly price-sensitive and actively considering alternatives. Opportunity: a cost-tracking + local-vs-cloud routing advisor tool for dev teams. Willingness to pay implied by current subscription spend.",
+  "status": "candidate"
+}

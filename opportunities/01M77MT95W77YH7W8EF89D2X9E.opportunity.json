@@ -1,0 +1,25 @@
+{
+  "id": "01M77MT95W77YH7W8EF89D2X9E",
+  "discovered_at": "2026-11-12T13:28:21+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50461943",
+    "snippet": "United Airlines bans AI agents from booking flights on behalf of travelers. Comment: 'In their defense, the $50 fares aren't profitable on its own. It costs $140 to fly this two-seater plane... Charging one of them $100 (that their company would pay for anyway) makes it possible for both to fly.' \u2014 Discussion thread on airlines actively blocking AI booking agents, surfacing a gap between enterprise travel automation and airline policy enforcement."
+  },
+  "problem_statement": "Enterprises and business travelers using AI agents for travel booking face active blocking by airlines, leaving corporate travel managers without a compliant automated booking workflow and forcing manual fallbacks.",
+  "target_segment": "Corporate travel managers and finance ops teams at mid-to-large companies spending on managed travel programs.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "ai-agents",
+    "travel-booking",
+    "corporate-travel",
+    "automation",
+    "compliance",
+    "enterprise-workflow",
+    "flight-booking",
+    "policy-enforcement"
+  ],
+  "notes": "Company travel budgets are explicit (commenter notes company paying $100 fares). Airlines blocking AI agents creates a compliance and workflow gap \u2014 opportunity for a middleware or policy-aware travel agent layer that remains compliant while automating booking. Buyer is the corporate travel manager or CFO-adjacent ops role with real budget.",
+  "status": "candidate"
+}

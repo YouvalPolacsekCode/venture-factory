@@ -1,0 +1,25 @@
+{
+  "id": "01M77MT96EH69BNTRJRE3DYB4S",
+  "discovered_at": "2026-11-12T13:28:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200237/how-to-allow-external-guests-to-join-a-self-hosted-video-conferencing-server-wit",
+    "snippet": "ServerFault question (Nov 2026): 'We're looking into deploying a self-hosted video conferencing server on our internal network, but we also need external customers to join meetings through a browser without installing a VPN client. The main challenge is keeping the server and internal network protected while allowing guests to connect using a meeting link. I'm considering a setup with a reverse proxy, firewall rules, and a public domain name, but I'm not sure how to handle WebRTC traffic and NAT traversal correctly.'"
+  },
+  "problem_statement": "IT teams at companies wanting self-hosted video conferencing struggle to securely expose meetings to external guests without requiring VPN, with WebRTC NAT traversal and firewall configuration being a recurring technical barrier.",
+  "target_segment": "IT administrators and infrastructure engineers at privacy-sensitive or compliance-driven SMBs (legal, healthcare, finance) self-hosting collaboration tools.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "self-hosted",
+    "video-conferencing",
+    "webrtc",
+    "nat-traversal",
+    "enterprise-privacy",
+    "infrastructure",
+    "firewall",
+    "reverse-proxy"
+  ],
+  "notes": "Business context clear \u2014 company deploying for internal + external customer meetings. Organizations in regulated industries pay for self-hosted solutions precisely to avoid cloud vendors. Opportunity: managed TURN/STUN relay service or a configuration-as-a-service product for self-hosted video stacks. Single signal; moderate confidence.",
+  "status": "candidate"
+}

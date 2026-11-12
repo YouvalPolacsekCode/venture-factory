@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M77MT95W77YH7W8EF89D2X9E",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 2,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Compliant travel booking requires real-time negotiation with airline systems, policy enforcement across GDS/NDC APIs, and ongoing exception handling \u2014 substantial per-booking human or deeply integrated automation work."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Corporate travel programs typically involve approval workflows, exception escalations, and traveler support interactions that require synchronous human involvement."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer \u2014 corporate travel managers at mid-to-large companies \u2014 is real, identifiable, and has budget; companies already pay for managed travel programs (Concur, TravelPerk, Egencia). However, the solution space requires deep GDS/NDC API integrations, airline policy compliance layers, and legal agreements that are entirely outside what a Claude prompt plus a landing page can deliver; buildability scores 3. More critically, operational autonomy is 2 \u2014 every booking exception, cancellation, and policy conflict requires human judgment, making this a consulting/agency play, not an autonomous micro-service. Total after penalties drops to 2.4.",
+  "solution_plan": "Not recommended for build. The core problem \u2014 airlines actively blocking AI agents from their booking flows \u2014 requires either direct GDS partnerships or screen-scraping workarounds that violate airline ToS, neither of which a solo non-technical operator can build or maintain. This is a venture-scale infrastructure play (think a startup with airline commercial agreements), not a Claude-factory micro-service. A solo operator cannot realistically build, sell, or maintain this.",
+  "notes": "Fails build gates: operational_autonomy=2 (min 7), buildability_with_ai=3 (min 6). Total 2.4 is below drop threshold.",
+  "scored_at": "2026-11-12T13:30:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

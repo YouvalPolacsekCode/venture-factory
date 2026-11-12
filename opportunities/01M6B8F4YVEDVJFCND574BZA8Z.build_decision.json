@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01M6B8F4YVEDVJFCND574BZA8Z",
+  "decided_at": "2026-11-12T13:31:08+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 8,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_to_build": {
+      "total": 6.8,
+      "min": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the total (6.8) clears the 6.5 floor, so the opportunity is technically eligible for build_now. However, the cost-to-gain ratio of 3.588 massively exceeds the kill threshold of 0.6 from cost_gain_model.yaml, and even the optimistic scenario (1.794) is nearly 3\u00d7 the kill line. The responsiveness_signal is only 2 (no outreach test run yet), meaning there is zero validated demand. With defensibility at 4 and an explicit note that OpenAI could ship native controls within 6\u201312 months, committing a build slot on unvalidated demand with terrible unit economics is premature. Defer one week to run a lightweight responsiveness probe (LinkedIn outreach to 50 engineering managers) and re-evaluate with actual signal data before committing operator time.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 5,
+  "suggested_first_outreach_channel": "linkedin-dm-engineering-managers"
+}

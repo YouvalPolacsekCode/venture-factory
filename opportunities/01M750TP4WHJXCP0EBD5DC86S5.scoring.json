@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M750TP4WHJXCP0EBD5DC86S5",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.1,
+  "penalties_applied": [],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a solo indie developer or small team \u2014 a segment that strongly prefers open-source, free tooling and rarely pays for a documentation generator; there is no clear willingness-to-pay signal (the original post explicitly asks for open-source CLI tools, not a paid service). The build itself is non-trivial: generating correct, unified output across OpenAPI, MCP, Doxygen, and Markdown requires deep format-specific parsing that goes well beyond what a Claude prompt plus a simple page can deliver in a week. With a total of 4.1, this falls below the 5.5 validate threshold.",
+  "solution_plan": "Not recommended for build. If pursued: the micro-service would be a hosted documentation generator \u2014 users upload their spec files and receive a zipped static HTML site. The factory would build a Claude pipeline that transforms each format into a normalized intermediate and merges them into a single HTML output, plus a simple upload form and Stripe payment link. Outreach would target API-focused developer forums and GitHub Discussions where self-hosters congregate. However, the core problem here is that the target user is explicitly looking for a free, open-source, self-hosted CLI tool \u2014 not a paid hosted service. A solo non-technical operator cannot realistically compete with mature open-source doc generators (Redoc, Sphinx, Docusaurus) on features, and the addressable paying segment is too small to sustain a micro-SaaS.",
+  "notes": "Does not reach validate threshold (4.1 < 5.5). Buyer clarity is weak: the stated buyer wants open-source/free tooling, not a paid service. Buildability is below the build gate minimum (4 < 6). willingness_to_pay is below minimum (3 < 5).",
+  "scored_at": "2026-11-12T13:30:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M77MT96EH69BNTRJRE3DYB4S",
+  "per_dimension": {
+    "pain_severity": 4,
+    "pain_frequency": 3,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Configuring WebRTC NAT traversal, TURN/STUN relays, and firewall rules for a specific customer's self-hosted setup requires per-customer technical assessment and implementation work \u2014 not a one-size automated delivery."
+    }
+  ],
+  "total": 2.5,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real but infrequent \u2014 IT admins configure their video infrastructure once, not repeatedly \u2014 meaning this is a one-time setup problem, not a recurring subscription opportunity. The buyer (IT admin at a privacy-sensitive SMB) is identifiable but rarely pays for managed relay services when they can follow a tutorial; willingness to pay is weak. Delivering a working TURN/STUN relay configuration for a customer's specific network topology requires hands-on technical assessment per client, which the human-fulfillment penalty captures; total drops to 2.5 after penalties.",
+  "solution_plan": "Not recommended for build. If the idea were repositioned as a self-serve managed TURN/STUN relay (customer points their Jitsi/BigBlueButton instance at our relay server, paying monthly), the fulfillment penalty might not apply \u2014 but that becomes a commodity infrastructure product competing with Twilio TURN, Cloudflare Calls, and open-source coturn, with no defensible edge for a solo operator. A solo non-technical operator cannot realistically compete in infrastructure relay services or provide credible configuration consulting to regulated-industry IT teams.",
+  "notes": "Total 2.5 is well below the 5.5 validate threshold. Fails on willingness_to_pay (3 < 5), operational_autonomy (5 < 7), and buyer_clarity (5 < 6) build gates \u2014 but the score doesn't reach validate regardless.",
+  "scored_at": "2026-11-12T13:30:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

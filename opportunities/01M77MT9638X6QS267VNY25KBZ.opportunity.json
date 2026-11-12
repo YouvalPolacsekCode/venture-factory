@@ -1,0 +1,24 @@
+{
+  "id": "01M77MT9638X6QS267VNY25KBZ",
+  "discovered_at": "2026-11-12T13:28:21+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50461853",
+    "snippet": "Ask HN: What do your technical interviews look like today? (Nov 2026) \u2014 'We may be past the point of leetcode challenges, but now different companies have different levels of acceptance for AI assistance. One data point talked about technical interviews where a candidate was interrupted and asked to lean on the LLM more. Some companies have shied away from AI and any indication or disclosure of AI...' Points: 6, Comments: 3."
+  },
+  "problem_statement": "Engineering hiring managers lack standardized, defensible technical interview formats for the AI-augmented era \u2014 existing formats either ignore AI or inconsistently accept it, creating candidate confusion and unreliable signal.",
+  "target_segment": "Engineering hiring managers and technical recruiters at software companies of 20\u2013500 employees conducting regular SWE hiring.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "technical-interviews",
+    "hiring",
+    "ai-assisted-coding",
+    "engineering-recruiting",
+    "interview-tooling",
+    "swe-hiring",
+    "assessment"
+  ],
+  "notes": "Active discussion with 6 points and 3 comments on a Nov 2026 thread shows current, live pain. Companies pay for interview platforms (HackerRank, CoderPad, Karat) \u2014 a service that provides AI-era interview kits, rubrics, and tooling would have clear paying buyers in recruiting budgets. Signal is moderate \u2014 single thread but highly current.",
+  "status": "candidate"
+}

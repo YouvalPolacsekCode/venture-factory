@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M77MT96MARABRENW44JNF048",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a named, reachable professional \u2014 SEO managers and web agency ops leads who already pay for tools like Screaming Frog, Ahrefs, or Sitebulb \u2014 which gives real commercial plausibility. However, willingness to pay for this specific workflow (bulk de-indexing acceleration) is only moderate: adjacent paid tools exist but none directly solve this exact problem, and the core mechanism (submitting 410s + a temporary sitemap) is documented free knowledge, so price sensitivity could be high. Operational autonomy is achievable in principle \u2014 a user uploads a CSV of junk URLs, Claude generates the sitemap XML and a GSC-compatible submission script, Stripe handles payment \u2014 but the total score lands just above the validate threshold, and with a single weak signal and zero responsiveness data, promotion to build is premature.",
+  "solution_plan": "The micro-service is a Bulk De-Index Accelerator: a user pastes or uploads a list of junk URLs and receives a ready-to-deploy temporary 410 sitemap XML plus step-by-step GSC submission instructions, generated automatically by Claude. The factory builds this as a Claude prompt pipeline behind a simple HTML form (hosted on Vercel), a Stripe payment link ($29\u2013$49 one-time per cleanup job), and a file-download delivery step \u2014 no coding by Youval. To sell, the factory drafts cold outreach to SEO agency ops contacts sourced from LinkedIn or agency directories (targeting 'technical SEO lead' or 'site migration specialist' roles), plus posts in Webmasters SE, r/TechSEO, and relevant Slack communities \u2014 all outreach batches go to Youval for one-click approval before sending. Once live, delivery is fully automated: form submission triggers Claude, generates output files, emails them to the buyer, Stripe handles billing; Youval's only recurring task is approving outreach batches. The key validation question before building: will SEO pros pay $30\u2013$50 for this, or just follow a free tutorial? Run a 20-person outreach probe first.",
+  "notes": "No build_gate failures \u2014 all four required gates (operational_autonomy \u2265 7, buildability_with_ai \u2265 6, buyer_clarity \u2265 6, willingness_to_pay \u2265 5) are met. Stage is 'validate' because total (5.6) is below min_total_to_build (6.5), driven by weak responsiveness signal (single forum post, zero probes run) and low defensibility (the core technique is public knowledge). Recommend a 20-lead cold outreach test before any build investment.",
+  "scored_at": "2026-11-12T13:30:55+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

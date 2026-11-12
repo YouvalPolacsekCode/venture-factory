@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M77MT9638X6QS267VNY25KBZ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.1,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Interview kits, rubrics, and assessment frameworks require domain-expert authorship and iterative customization per company's engineering culture \u2014 this is content consulting work, not automated delivery."
+    }
+  ],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "Engineering hiring managers at 20\u2013500 person companies are a sharp, nameable buyer with real budget (HackerRank charges $25k+/yr, Karat charges per interview). The pain is current and well-articulated \u2014 the AI-era interview format gap is a live problem in Nov 2026. However, delivering genuinely useful, company-specific interview kits requires expert customization that cannot be fully automated: each company has different engineering culture, tech stack, and AI-use norms. The requires_human_fulfillment penalty reflects that the actual deliverable (a defensible, calibrated interview rubric) needs expert human input per client, pushing the total to 4.6 \u2014 below validate.",
+  "solution_plan": "Not recommended as currently conceived. If repositioned as a self-serve document generator (buyer inputs their stack/role/AI policy and gets a template kit instantly, no customization), the human-fulfillment penalty would not apply. That version: (1) A Claude-powered interview kit generator \u2014 input your role, stack, and AI stance; get a structured interview guide with questions, rubric, and scoring sheet. (2) Build: a simple intake form + Claude prompt chain + PDF/Markdown output + Stripe payment link ($49\u2013$99 per kit). (3) Sell: outreach to engineering managers on LinkedIn, referencing the HN thread directly \u2014 Youval approves each batch. (4) Maintain: fully automated once a buyer pays. The repositioned version would score meaningfully higher on operational_autonomy; operator should re-submit as a revised opportunity if they want that scored.",
+  "notes": "Total 4.6 drops below validate threshold primarily due to human-fulfillment penalty. Repositioning as self-serve template generator (not customized consulting) would change the score significantly.",
+  "scored_at": "2026-11-12T13:30:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "01M77MT9694Z8W7D9D1V43D565",
+  "discovered_at": "2026-11-12T13:28:21+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50458980",
+    "snippet": "Thread 'Opus 5.5 is definitely nerfed' \u2014 'Last week I had it grinding for hours with the same prompts. Now it barely goes 30 minutes before it gets stuck on something it should have figured out on its own.' Points: 5, Comments: 5."
+  },
+  "problem_statement": "Professional developers and AI power users experience unpredictable performance degradation in LLM API services over time, breaking agentic workflows they depend on and costing hours of re-prompting and debugging.",
+  "target_segment": "Developers and solo operators running agentic or long-horizon LLM workflows in production, paying for API access.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "llm-reliability",
+    "ai-api",
+    "agentic-workflows",
+    "model-monitoring",
+    "llm-benchmarking",
+    "developer-tools",
+    "api-quality"
+  ],
+  "notes": "5 points, 5 comments, active Nov 2026 thread. Users are paying API customers noting concrete productivity loss ('hours' of work lost). Opportunity: a monitoring or alerting service that benchmarks model performance over time and notifies subscribers of regressions \u2014 clear SaaS billing model targeting paying API users.",
+  "status": "candidate"
+}

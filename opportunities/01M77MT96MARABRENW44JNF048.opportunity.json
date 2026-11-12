@@ -1,0 +1,25 @@
+{
+  "id": "01M77MT96MARABRENW44JNF048",
+  "discovered_at": "2026-11-12T13:28:21+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150079/is-a-temporary-sitemap-of-410-urls-a-legitimate-way-to-get-googlebot-to-recrawl",
+    "snippet": "Webmasters SE (Nov 2026): 'I manage a site, React on Vercel. Years ago, the same domain ran an older PHP install, and a spam injection on it left Googlebot with several thousand junk URLs... In late October, a rule was deployed that serves 410 Gone for these patterns... I want to accelerate removal from Google's index without manual intervention on thousands of URLs.'"
+  },
+  "problem_statement": "Website owners and SEO managers inheriting domains with legacy spam-injected URLs struggle to efficiently purge thousands of junk paths from Google's index, with no clear automated tooling beyond manual Search Console submissions.",
+  "target_segment": "SEO specialists and web agencies managing site migrations or legacy domain cleanups for clients.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "seo",
+    "index-cleanup",
+    "google-search-console",
+    "site-migration",
+    "spam-removal",
+    "googlebot",
+    "technical-seo",
+    "agency-tools"
+  ],
+  "notes": "Professional SEO context ('I manage a site') \u2014 agencies pay for SEO tooling. Problem is concrete and recurring across any domain migration or legacy cleanup project. Opportunity: automated bulk URL de-indexing workflow tool. Single signal but highly specific and actionable.",
+  "status": "candidate"
+}

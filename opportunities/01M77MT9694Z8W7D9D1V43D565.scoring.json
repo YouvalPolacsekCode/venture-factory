@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M77MT9694Z8W7D9D1V43D565",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.5,
+  "penalties_applied": [],
+  "total": 6.5,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a paying LLM API user \u2014 developer or solo operator running agentic workflows \u2014 who already has a budget (Anthropic/OpenAI API spend) and experiences concrete productivity losses when model performance degrades; this is a real, recurring pain with daily/near-daily frequency. A model performance monitoring and alerting service is genuinely buildable: Claude can run standardized benchmark prompts on a schedule, store results, detect regressions, and email/webhook alerts \u2014 no custom ML, no compliance moat needed. Operational autonomy scores 8 because once configured, the service runs and alerts hands-off. The validation gate to clear is confirming developers will pay ($10\u2013$30/mo) rather than self-build \u2014 that's the key unknown.",
+  "solution_plan": "(1) WHAT: A subscription alert service that runs standardized benchmark tasks against one or more LLM APIs on a fixed schedule (e.g., every 6 hours) and notifies the subscriber when performance regresses beyond a threshold. (2) BUILD: The factory builds a Claude-orchestrated benchmark runner \u2014 a set of canonical prompt tasks scored automatically, results stored in a simple DB, regression detection logic, and email/webhook alert delivery \u2014 plus a landing page and Stripe subscription link ($19/mo); no coding by Youval. (3) SELL: Outreach to developers in LLM-focused communities (HN, r/LocalLLaMA, Anthropic Discord, OpenAI forums) who are already complaining about model degradation \u2014 Youval approves each outreach batch before it goes out. (4) MAINTAIN: Benchmark runs, scoring, alerting, and billing all run autonomously via Claude + this codebase; Youval's only recurring touch is approving new outreach batches and reviewing the weekly summary. The key validation question: will developers pay $19/mo or self-build a cron job? Run a 2-week pre-sell to 50 targets before building.",
+  "notes": "All build gates met at current scores (operational_autonomy=8\u22657, buildability_with_ai=7\u22656, buyer_clarity=7\u22656, willingness_to_pay=6\u22655). Stage is validate rather than build because responsiveness_signal=2 (no test data yet) and the total sits exactly at the build threshold \u2014 confirm payment intent before committing build resources.",
+  "scored_at": "2026-11-12T13:30:34+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

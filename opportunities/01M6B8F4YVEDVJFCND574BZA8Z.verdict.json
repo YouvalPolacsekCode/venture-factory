@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M6B8F4YVEDVJFCND574BZA8Z",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Engineering managers at OpenAI-paying teams face a concrete, recurring cost-management disruption triggered by OpenAI's forced consolidation of ChatGPT and Codex allowances into a shared pool. The pain maps directly into an established paid category (cloud cost monitoring), and willingness-to-pay is supported by competitor pricing evidence from CloudHealth, Datadog cost modules, and Vantage. The signal count is thin (one HN thread, low engagement) but the commercial context is strong and the buyer is precisely named.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50321622"
+  ],
+  "evaluated_at": "2026-11-12T13:29:23+03:00"
+}

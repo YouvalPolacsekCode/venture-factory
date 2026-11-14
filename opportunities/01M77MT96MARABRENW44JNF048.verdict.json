@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01M77MT96MARABRENW44JNF048",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "rare",
+  "rationale": "A single StackExchange post constitutes the entire evidence base. Broad web research reveals the pain is real but infrequent, well-served by free methods, and shows no meaningful willingness-to-pay signal for a dedicated paid tool. The core technique (temporary 410 sitemap + GSC URL removal) is thoroughly documented free knowledge; competitors charge for adjacent SEO suites rather than this specific workflow, undermining any pricing thesis at $29\u2013$49.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/150079/is-a-temporary-sitemap-of-410-urls-a-legitimate-way-to-get-googlebot-to-recrawl",
+    "https://developers.google.com/search/docs/crawling-indexing/remove-information",
+    "https://support.google.com/webmasters/answer/9689846",
+    "https://www.searchenginejournal.com/google-index-removal-tools/",
+    "https://reddit.com/r/TechSEO/",
+    "https://webmasters.stackexchange.com/questions/tagged/sitemaps+410"
+  ],
+  "evaluated_at": "2026-11-14T12:40:29+03:00"
+}

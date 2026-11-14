@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7CPRHKCE80Q26BHNWW2VTZ5",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.8,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Rural broadband comparison and switching guidance targets individual remote workers and home-office users \u2014 a consumer segment where conversion rates are low and revenue per user is small, requiring high volume to be viable as a business."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The pain is genuine and the cost comparison is explicit (poster pays more for ADSL than Starlink), but the buyer is primarily individual consumers and remote workers \u2014 not businesses with procurement budgets. 'Rural SMB owners' in the target segment is a stretch; the HN post is a personal cost complaint, not a business purchasing signal. A Starlink comparison or switching advisory tool would be competing with Starlink's own onboarding, comparison sites, and ISP resellers who have affiliate economics the factory cannot match. Operational autonomy is moderate but the b2c penalty and weak buyer clarity drag the total below viability. Founder fit is also low given the UK/rural-EU geography focus versus Youval's Israel-based context.",
+  "solution_plan": "Not recommended for build. The comparison-tool angle is too close to existing free resources (Starlink's coverage checker, MoneySavingExpert forums) to command payment from individual consumers. A narrower B2B angle \u2014 such as a managed Starlink procurement and onboarding service for rural UK businesses \u2014 might have a viable buyer, but would require requires_synchronous_human sales calls and logistics support that make it unsuitable for the factory.",
+  "notes": "Fails buyer_clarity gate (score 4 < floor 6) and operational_autonomy gate (score 5 < floor 7). b2c_at_scale_needed penalty applied. Total of 3.8 is well below validate threshold.",
+  "scored_at": "2026-11-14T12:41:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

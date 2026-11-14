@@ -1,0 +1,25 @@
+{
+  "id": "01M7CPRHJQPVMWPRQMZB1MNJ52",
+  "discovered_at": "2026-11-14T12:38:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95787/what-software-can-help-manage-large-volumes-of-data-for-long-term-archiving",
+    "snippet": "I'm researching ways to manage large volumes of historical business data while keeping storage organized, secure, and accessible when needed. Requirements: Scalability, configurable retention policies, security, tiered storage (not all data on expensive high-performance storage)."
+  },
+  "problem_statement": "Businesses accumulate large volumes of historical records but lack affordable, opinionated software to manage tiered long-term archiving with configurable retention policies and secure retrieval.",
+  "target_segment": "IT managers and compliance officers at SMBs with growing data retention obligations",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "data-archiving",
+    "long-term-retention",
+    "tiered-storage",
+    "compliance",
+    "records-management",
+    "cloud-storage",
+    "smb",
+    "data-governance"
+  ],
+  "notes": "Business context clear \u2014 this is a compliance/IT purchasing decision. Existing tools (Veritas, Commvault) are enterprise-priced; gap exists for SMB-priced SaaS with simple retention policy UI. Buyer has budget: they reference 'expensive high-performance storage' implying they're already spending on storage.",
+  "status": "candidate"
+}

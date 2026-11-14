@@ -1,0 +1,25 @@
+{
+  "id": "01M7CPRHJY9C470DNV8Z62WQWZ",
+  "discovered_at": "2026-11-14T12:38:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/Dolibarr/dolibarr/issues/43023",
+    "snippet": "Feature Request: Let administrators define a default home page per user group: which widgets are shown, which workboard tiles are visible, and optionally the landing page after login. Use case: teams need different home pages \u2014 sales team sees pipeline tiles, warehouse team sees stock alerts, accountants see invoices due."
+  },
+  "problem_statement": "Open-source ERP admins cannot configure role-based dashboard layouts, forcing all user groups to share the same home page and reducing operational efficiency for multi-department businesses.",
+  "target_segment": "SMB operations managers and IT admins using open-source ERP systems (e.g., Dolibarr) with multi-department teams",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "erp",
+    "dashboard-customization",
+    "role-based-ui",
+    "dolibarr",
+    "open-source",
+    "smb",
+    "admin-tools",
+    "workflow"
+  ],
+  "notes": "Business buyer: ERP admins at companies with distinct departmental workflows. The gap between global and per-user config (no group-level middle tier) is a real operational pain. A paid plugin or hosted ERP layer solving this could command $29-99/mo. Prior related issue closed as stale signals repeated unmet demand.",
+  "status": "candidate"
+}

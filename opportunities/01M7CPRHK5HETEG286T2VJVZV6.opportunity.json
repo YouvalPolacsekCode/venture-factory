@@ -1,0 +1,26 @@
+{
+  "id": "01M7CPRHK5HETEG286T2VJVZV6",
+  "discovered_at": "2026-11-14T12:38:34+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webmasters.stackexchange.com/questions/150082/cloudflare-pages-how-do-i-guarantee-byte-range-206-responses-for-mp4-files-fo",
+    "snippet": "I run a website on Cloudflare Pages. The site is mostly used as an installed PWA on iPhones/iPads, and it plays plain static MP4 files. One video wedges in the iOS app context: frames render and audio plays, but the timeline never establishes, the native controls do nothing, and the audio continues after the app is closed. The same file plays perfectly in mobile Safari on the same devices."
+  },
+  "problem_statement": "Developers hosting video-heavy PWAs on static CDNs (Cloudflare Pages) cannot reliably guarantee HTTP 206 byte-range responses for MP4s, causing broken video playback in iOS PWA/app contexts with no clear diagnostic tooling.",
+  "target_segment": "Indie developers and small agencies building video-enabled PWAs or native wrappers deployed on Cloudflare Pages or similar static CDNs",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "pwa",
+    "ios",
+    "video-playback",
+    "cloudflare",
+    "byte-range",
+    "mp4",
+    "static-hosting",
+    "safari",
+    "debugging"
+  ],
+  "notes": "Developer/agency buyer context \u2014 they have a production app. Pain is specific and recurring (affects a class of files). A diagnostic/testing SaaS or a middleware proxy ensuring correct byte-range headers could be productized. Limited signal volume but technically specific, suggesting real production pain.",
+  "status": "candidate"
+}

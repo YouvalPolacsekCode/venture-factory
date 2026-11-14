@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7CPRHJGS00TVD6B2RMCC8N8",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 4,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "AI upskilling curricula target individual learners; at $99-499/seat, the model needs hundreds to thousands of paying consumers to generate meaningful revenue, pushing this firmly into b2c-at-scale territory."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Educational content generates questions, curriculum feedback requests, and progress-tracking needs that Claude can partly handle but will require ongoing curation and human judgment for quality maintenance."
+    }
+  ],
+  "total": 3.6,
+  "recommended_stage": "drop",
+  "rationale": "The buyers here are individual freelancers and career-switchers \u2014 a broad, heterogeneous consumer audience who already have free alternatives (YouTube, free Coursera audits, HN itself) and whose willingness to pay is real but price-sensitive and fragmented. The HN thread has 13 points and 15 comments, which is a weak signal; this is not a specific business buyer with a budget line. Operational autonomy is the core problem: a living AI-skills curriculum requires frequent content updates as the LLM landscape shifts weekly, meaning Youval would be doing ongoing editorial work per customer cohort \u2014 not autonomous delivery. The b2c-at-scale penalty reflects that this only works as a business at volume the solo factory cannot reach without heavy marketing spend.",
+  "solution_plan": "Not recommended for build at this stage. If revisited: the micro-service would be a drip-email AI skills curriculum (Claude-generated, weekly lessons) sold via a Stripe subscription page. The factory would auto-generate and schedule lesson emails through Claude prompts. Sales channel would be HN 'Show HN' posts and Twitter/X outreach \u2014 but reaching enough paying customers as a solo operator without an audience is the real blocker. Support and billing could be mostly automated, but curriculum quality drift would require recurring operator involvement. A solo non-technical operator could technically launch this, but sustaining meaningful revenue without an existing audience or marketing budget makes this a poor fit for the factory's model.",
+  "notes": "Fails buyer_clarity gate (score 4 < floor 6) and operational_autonomy gate (score 4 < floor 7). Even if total were higher, both build gates would cap stage at validate. b2c_at_scale_needed penalty reflects the volume dependency.",
+  "scored_at": "2026-11-14T12:41:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

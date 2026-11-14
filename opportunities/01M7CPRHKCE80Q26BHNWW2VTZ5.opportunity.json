@@ -1,0 +1,25 @@
+{
+  "id": "01M7CPRHKCE80Q26BHNWW2VTZ5",
+  "discovered_at": "2026-11-14T12:38:34+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50454935",
+    "snippet": "I'm currently paying more in rural UK for a base ADSL (10Mbps down, 1Mbps up) than I would pay for the 100Mbps Starlink option. There's no sign of fibre arriving here, but if it did, it'd probably be even more expensive. It makes a lot of sense to switch to Starlink."
+  },
+  "problem_statement": "Rural and remote businesses and remote workers in underserved broadband areas overpay for slow legacy internet connections with no clear migration guidance or tooling to evaluate and switch to satellite alternatives like Starlink.",
+  "target_segment": "Remote workers, rural SMB owners, and home-office professionals in broadband-underserved regions (UK, EU, AU, rural US)",
+  "geo": "GB",
+  "signal_strength": 2,
+  "keywords": [
+    "starlink",
+    "rural-internet",
+    "broadband",
+    "satellite-internet",
+    "remote-work",
+    "connectivity",
+    "isp-comparison",
+    "smb"
+  ],
+  "notes": "Explicit cost comparison: poster pays more for slower ADSL than Starlink. Buyer intent clear \u2014 they are actively evaluating a switch. Opportunity: a comparison/switching advisory tool or managed Starlink onboarding service for rural businesses. Reseller market already validated (mentioned in related item: validated market of resellers).",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7CPRHK5HETEG286T2VJVZV6",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 4,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 5,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 6,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.6,
+  "penalties_applied": [],
+  "total": 4.6,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and technically specific \u2014 iOS PWA byte-range video failures are a genuine production problem \u2014 but it affects a narrow slice of developers who hit a very particular configuration, and willingness to pay for a diagnostic/middleware tool at this specificity is uncertain. The buyer (indie devs and small agencies) is a nameable group but skews toward individual developers who default to free tools and self-research; there's no business buyer with a budget line here. The market is too thin and the buyer too price-resistant for this to generate meaningful solo-operator revenue. Signal volume (one forum post) is too low to validate demand.",
+  "solution_plan": "Not recommended for build. The technical problem could theoretically be wrapped as a paid diagnostic tool (a URL you submit, it tests byte-range response headers and gives a fix report), but the addressable market is so narrow that it would not sustain recurring revenue. If pivoted to a broader 'video hosting compatibility checker for PWAs and mobile apps' it might have more audience, but that would need separate validation.",
+  "notes": "Fails buyer_clarity gate (score 5 < floor 6) and willingness_to_pay gate (score 4 < floor 5). Total of 4.6 is below validate threshold regardless.",
+  "scored_at": "2026-11-14T12:41:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

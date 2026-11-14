@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7CPRHJY9C470DNV8Z62WQWZ",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "A Dolibarr plugin requires actual PHP/module development against a specific ERP codebase \u2014 this is real software engineering, not a Claude-prompt-plus-page deliverable. Each customer's setup (ERP version, server config) would need hands-on deployment support."
+    }
+  ],
+  "total": 3.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 ERP admins at multi-department SMBs have clear operational pain and the ability to purchase plugins or SaaS add-ons. However, solving the Dolibarr role-based dashboard problem requires building an actual ERP plugin in PHP, which is beyond what this factory can ship autonomously. Even if the plugin were built externally, support and deployment would involve per-customer manual work (ERP version compatibility, server configs, database migrations). Buildability with AI scores poorly because this is a specific software integration, not a prompt-driven service.",
+  "solution_plan": "Not recommended for build in this form. If the angle were pivoted to an adjacent automation \u2014 for example, a Claude-powered workflow documentation service for ERP-using SMBs \u2014 that might be factory-viable. The current framing (a Dolibarr UI plugin) requires a software developer, not a Claude factory.",
+  "notes": "Fails buildability_with_ai gate (score 4 < floor 6) and operational_autonomy gate (score 4 < floor 7). Both gates would cap stage at validate; total of 3.5 means drop regardless.",
+  "scored_at": "2026-11-14T12:41:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

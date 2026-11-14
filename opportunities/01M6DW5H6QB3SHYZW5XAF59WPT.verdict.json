@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M6DW5H6QB3SHYZW5XAF59WPT",
+  "status": "rejected",
+  "severity": "mild",
+  "frequency": "rare",
+  "rationale": "The pain is real but hyper-niche: a single developer hitting a WhatsApp Business Calling API geographic restriction in Canada. No corroborating evidence of multiple builders encountering this, no competitor products charging for a workaround, and no community discussion beyond the source thread. The addressable market (CRM developers specifically building WhatsApp voice for Canadian SMBs) is too small to clear the evidence threshold for pass.",
+  "sources": [
+    "https://softwarerecs.stackexchange.com/questions/95755/can-the-whatsapp-business-calling-api-initiate-calls-using-a-canadian-business-p"
+  ],
+  "evaluated_at": "2026-11-14T12:39:39+03:00"
+}

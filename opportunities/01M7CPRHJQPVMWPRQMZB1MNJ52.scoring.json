@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7CPRHJQPVMWPRQMZB1MNJ52",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Data archiving with configurable retention policies for SMBs is directly entangled with GDPR, HIPAA, SOX, and sector-specific compliance mandates \u2014 the entire value proposition is regulatory, requiring verifiable compliance guarantees the factory cannot credibly provide."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building a real tiered-storage archiving SaaS requires infrastructure integrations (S3 Glacier, Azure Cool, on-prem connectors), customer-specific retention policy configuration, and onboarding that cannot be delivered by Claude prompts and a landing page."
+    }
+  ],
+  "total": 2.0,
+  "recommended_stage": "drop",
+  "rationale": "IT managers and compliance officers at SMBs are genuinely good buyers \u2014 they have budgets, procurement authority, and demonstrable pain (they're already paying for expensive storage). However, the product itself is fundamentally an infrastructure SaaS requiring real storage integrations, security certifications, and compliance guarantees that a Claude-prompt-plus-Stripe-link factory cannot build or credibly sell. Buildability is the fatal flaw: a solo non-technical operator cannot ship a data archiving platform that IT buyers would trust with their compliance obligations. The regulated_industry penalty captures the liability exposure and the requires_human_fulfillment penalty captures the per-customer configuration reality.",
+  "solution_plan": "Not recommended for build. The buyer is right but the product is wrong for this factory. A narrower adjacent angle \u2014 such as an AI-assisted data-retention-policy document generator (not actual storage software) \u2014 could be revisited, but that would need to be scoped as a separate opportunity. The current framing requires real storage infrastructure engineering beyond the factory's autonomous build capability.",
+  "notes": "Fails buildability_with_ai gate (score 3 < floor 6) and operational_autonomy gate (score 3 < floor 7). Would be capped at validate regardless of total. Drop is appropriate given the 2.0 total.",
+  "scored_at": "2026-11-14T12:41:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

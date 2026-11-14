@@ -1,0 +1,26 @@
+{
+  "id": "01M7CPRHJGS00TVD6B2RMCC8N8",
+  "discovered_at": "2026-11-14T12:38:34+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50494696",
+    "snippet": "What are the most useful, concrete skills to learn as an individual to take economic advantage of the advances in LLMs, agents and associated new technological capabilities? What is accessible to learn just from the internet and experimentation, without a degree program, assuming a preexisting moderately technical background? The clearer and more specific (eg. 'Learn how-to x with y') the better. [13 points, 15 comments]"
+  },
+  "problem_statement": "Moderately technical professionals want concrete, structured curricula for monetizable AI/LLM skills but cannot find opinionated, practitioner-grade guides \u2014 only shallow overviews or expensive degree programs.",
+  "target_segment": "Freelancers, indie developers, and career-switchers with some technical background seeking paid AI skills without formal education",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-skills",
+    "llm",
+    "self-learning",
+    "curriculum",
+    "upskilling",
+    "freelance",
+    "agents",
+    "career-transition",
+    "online-education"
+  ],
+  "notes": "13 points and 15 comments on HN indicates real demand. Buyer angle: people seeking economic advantage implies willingness to pay for structured content or tooling. Competing products (Coursera, DeepLearning.AI courses) exist but comments suggest they feel generic. A productized structured roadmap/cohort or drip course could charge $99-499.",
+  "status": "candidate"
+}

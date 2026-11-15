@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7FAWPXAR34A29WNZ7TVR8ZF",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Bridging Salesforce field logic to Adobe Sign text tags requires scoping each client's specific Salesforce org configuration, record types, and document templates \u2014 Claude can assist but cannot autonomously deliver a working integration without per-customer human configuration work."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Enterprise Salesforce admins encountering integration failures will escalate support issues requiring human investigation of their specific org setup."
+    }
+  ],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a specific, named professional (Salesforce admin at a mid-market company) working in a paid enterprise stack worth thousands per year, confirming commercial context and budget authority. However, the actual deliverable \u2014 making Salesforce field transformations work inside Adobe Sign text tags \u2014 is inherently per-customer and org-specific; there is no universal template that works across all Salesforce configurations. Operational autonomy is therefore structurally low, and the penalty stack drops the total below the validate threshold. A documentation or tutorial product could avoid the fulfillment problem, but buyers in this space expect working solutions, not guides.",
+  "solution_plan": "This opportunity is not viable as a scalable autonomous service. Each Salesforce org has unique record types, field names, and document templates \u2014 Claude cannot deliver a working Adobe Sign integration without per-customer configuration that requires human involvement. A tutorial library or 'Adobe Sign text tag cookbook' for common Salesforce use cases is buildable autonomously (Claude writes guides, a landing page sells access via Stripe at $49\u2013$99 one-time), but it's unclear whether admins would pay for guides when free Stack Exchange answers already exist. Only pursue if reframed as a pure content/template product \u2014 and validate payment intent with a landing page before building.",
+  "notes": "Failing build_gate: operational_autonomy (5 < 7 required). The per-customer configuration requirement is structural unless the product is reframed as documentation rather than a working integration.",
+  "scored_at": "2026-11-15T13:10:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

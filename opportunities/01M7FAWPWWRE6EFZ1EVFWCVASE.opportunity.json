@@ -1,0 +1,26 @@
+{
+  "id": "01M7FAWPWWRE6EFZ1EVFWCVASE",
+  "discovered_at": "2026-11-15T13:08:51+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50459926",
+    "snippet": "A just a single day of labor would pay for a fuel pump and line so nobody has to carry fuel drums up a staircase. If they expect 100% uptime they should be ready for something as common as a storm flood without risking injuries hauling fuel drums by hand. (Jane Street datacenter incident, 2026-11-11)"
+  },
+  "problem_statement": "Small and mid-sized datacenter operators and colocation tenants lack affordable, automated disaster-readiness auditing tools that surface single points of failure in physical infrastructure (fuel supply chains, cooling redundancy, flood mitigation) before an incident exposes them.",
+  "target_segment": "Datacenter operations managers and IT infrastructure leads at SMB colos or on-premise server rooms managing 99.9%+ uptime SLAs.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "datacenter",
+    "uptime",
+    "disaster-recovery",
+    "infrastructure-audit",
+    "physical-redundancy",
+    "colocation",
+    "sla",
+    "flood-resilience",
+    "ops"
+  ],
+  "notes": "The Jane Street anecdote illustrates that even sophisticated operators overlook cheap physical redundancy fixes. A paid checklist-and-audit SaaS (or one-time professional assessment service) targeting colo operators who pay for uptime insurance could find buyers. Willingness-to-pay evidence: commenter explicitly notes 'a single day of labor' cost justification, implying budget exists but process/tooling is absent.",
+  "status": "candidate"
+}

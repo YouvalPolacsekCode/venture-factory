@@ -1,0 +1,26 @@
+{
+  "id": "01M7FAWPWPEJXTWQE04AHFF9AK",
+  "discovered_at": "2026-11-15T13:08:51+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50504514",
+    "snippet": "Just received a Privacy Policy update from Dropbox. Noted the following line with concern: \"We've further explained our collection and use of your data to better identify what data is being used for which purposes.\" Anyone have insight into what this entails? (6 points, recently captured 2026-11-15)"
+  },
+  "problem_statement": "Business users storing sensitive files in cloud storage services like Dropbox are anxious about opaque privacy policy changes and cannot easily assess whether their data is being used for AI training or shared with third parties, creating compliance and trust risk.",
+  "target_segment": "SMB owners, freelancers, and compliance-conscious teams using cloud file storage who pay for Dropbox Business or similar tiers.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cloud-storage",
+    "privacy-policy",
+    "data-compliance",
+    "dropbox-alternative",
+    "file-privacy",
+    "gdpr",
+    "smb",
+    "saas-trust",
+    "data-governance"
+  ],
+  "notes": "Signal is early-stage but recurrent: each time a major cloud storage provider updates its privacy policy, paying business users scramble for clarity. Buyer context is clear \u2014 Dropbox Business subscribers pay $15\u2013$24/user/month. A monitoring or audit service that flags material privacy policy changes and translates legalese into plain-language risk assessments could command recurring SaaS fees. Watch for volume of similar complaints across r/privacy and r/sysadmin.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7FAWPWWRE6EFZ1EVFWCVASE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 4,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Physical infrastructure audits require on-site or at minimum deeply contextual human judgment to validate \u2014 a checklist SaaS alone is insufficient for the actual audit deliverable buyers expect."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Datacenter ops managers will require explanations and customization of audit findings, creating ongoing support load per customer."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real (datacenter ops managers at SMB colos) and the pain is genuine, but the core deliverable \u2014 a meaningful physical infrastructure audit \u2014 requires human expertise and on-site judgment that Claude cannot replace; a pure checklist SaaS would not satisfy buyers with active SLA obligations. Operational autonomy is low (each engagement requires human-in-the-loop fulfillment), and the signal is a single anecdote from a Jane Street incident, with no tested responsiveness. The penalties pull the total below the validate threshold.",
+  "solution_plan": "This opportunity is not viable as a solo non-technical factory-run service. A credible physical infrastructure audit requires domain experts who can evaluate fuel supply chains, cooling layouts, and flood mitigation \u2014 Claude can generate a checklist, but buyers with 99.9%+ SLA obligations will not pay for an unvalidated AI-generated checklist alone. The operator (Youval) would need to hire or partner with datacenter engineers to deliver actual value, which exceeds the solo+Claude model. Drop and monitor for a narrower, software-only angle (e.g., SLA documentation review or vendor contract analysis) where Claude can deliver autonomously.",
+  "notes": "Failing build_gates: operational_autonomy (4 < 7 required). The human fulfillment penalty is structural, not incidental.",
+  "scored_at": "2026-11-15T13:10:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

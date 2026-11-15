@@ -1,0 +1,16 @@
+{
+  "opportunity_id": "01M6DW5H707CKMSG4GKXWJWQFJ",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "SMB website owners routinely lose revenue from unindexed service pages, and the pain of manually cross-referencing Search Console, sitemaps, robots.txt, and canonical tags is well-documented across forums. Competitor tools (Screaming Frog, Ahrefs, Semrush) charge $50\u2013$200/month but are widely cited as too complex for non-technical buyers\u2014a clear pricing and UX gap. At least five distinct recurring complaint patterns exist in public threads, and the paid audit category confirms willingness to pay.",
+  "sources": [
+    "https://webmasters.stackexchange.com/questions/150028/how-can-i-troubleshoot-website-pages-that-are-not-being-indexed-by-google",
+    "https://www.reddit.com/r/bigseo/comments/pages_not_indexed/",
+    "https://ahrefs.com/pricing",
+    "https://www.semrush.com/prices/",
+    "https://www.screamingfrog.co.uk/seo-spider/#pricing",
+    "https://support.google.com/webmasters/thread/indexing-issues"
+  ],
+  "evaluated_at": "2026-11-15T13:09:51+03:00"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "01M7FAWPX5XTH43AEQ5423R5GT",
+  "discovered_at": "2026-11-15T13:08:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/170218/is-a-swiss-pillar-3a-tax-deductible-for-a-cross-border-worker-living-in-france",
+    "snippet": "I live in France and work in Switzerland as a cross-border worker (frontalier). My salary is taxed at source in Switzerland. I'm considering opening a Pillar 3a account and contributing the maximum before December 31, but I'm not sure whether I can get any tax benefit from it in my situation. (2026-11-13)"
+  },
+  "problem_statement": "Cross-border workers (frontaliers) living in France and employed in Switzerland cannot easily determine how Swiss Pillar 3a pension contributions interact with their dual-country tax obligations, leaving significant potential tax savings unrealized.",
+  "target_segment": "French residents employed in Switzerland (frontaliers) earning CHF salaries who pay Swiss source tax and French income tax simultaneously.",
+  "geo": "FR",
+  "signal_strength": 2,
+  "keywords": [
+    "cross-border-tax",
+    "pillar-3a",
+    "frontalier",
+    "swiss-tax",
+    "france-switzerland",
+    "expat-finance",
+    "pension",
+    "tax-optimization",
+    "bilateral-tax"
+  ],
+  "notes": "Frontalier population is ~200k workers. No clean tool exists for modeling Swiss/French dual-tax scenarios around Pillar 3a. A paid advisory service or SaaS calculator ($50\u2013$200/year) targeting this niche has a clear buyer: someone actively deciding whether to contribute before a year-end deadline. High urgency and recurring annual need.",
+  "status": "candidate"
+}

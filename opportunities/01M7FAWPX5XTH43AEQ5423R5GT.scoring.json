@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7FAWPX5XTH43AEQ5423R5GT",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 4,
+    "founder_fit": 5
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Cross-border Swiss/French tax advice touches two regulated tax jurisdictions simultaneously. Specific tax guidance without a licensed Swiss/French tax advisor creates legal exposure."
+    }
+  ],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is a nameable persona \u2014 a French-resident frontalier with a CHF salary making a year-end pension contribution decision \u2014 and the annual urgency cycle is real. A calculator or modeling tool is technically buildable by Claude. However, Swiss and French tax law both require licensure for specific advice, and the population (~200k workers) is concentrated in a niche that expects accurate, jurisdiction-specific guidance; a Claude-generated estimate that leads to incorrect tax filing creates serious liability. The regulated_industry penalty is structural and drops the total below the validate threshold.",
+  "solution_plan": "This opportunity is not viable as a fully autonomous service without a licensed cross-border tax advisor co-signing outputs. Claude could build an educational 'Pillar 3a calculator' that estimates potential tax impact with clear disclaimers, but buyers in this niche are making real financial decisions and will expect accuracy that requires professional oversight. If Youval has access to a licensed French or Swiss tax advisor willing to review outputs, a hybrid model (calculator + 30-min advisor call) becomes viable \u2014 but that requires a human partner and changes the operational model significantly. Drop in its current form.",
+  "notes": "Failing build_gate: regulated_industry penalty makes this unviable. If reframed as pure educational content (not personalized advice), regulatory risk decreases \u2014 but willingness_to_pay would also drop significantly as buyers want actionable answers.",
+  "scored_at": "2026-11-15T13:10:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

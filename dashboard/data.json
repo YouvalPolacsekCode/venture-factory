@@ -1,14 +1,14 @@
 {
   "generated_at": {
-    "utc": "2026-11-14T09:41:40+00:00",
-    "idt": "2026-11-14T12:41:40+03:00"
+    "utc": "2026-11-15T10:11:16+00:00",
+    "idt": "2026-11-15T13:11:16+03:00"
   },
   "funnel": {
-    "candidates": 474,
-    "scored": 474,
-    "validated": 52,
+    "candidates": 479,
+    "scored": 479,
+    "validated": 53,
     "build_decisions": {
-      "defer_1_week": 47,
+      "defer_1_week": 48,
       "kill": 5
     },
     "build_now": 0,
@@ -591,7 +591,7 @@
         "Buildable": 8,
         "Pain": 7
       },
-      "verdict": null,
+      "verdict": "validated",
       "source_type": "forum",
       "source_url": "https://webmasters.stackexchange.com/questions/150028/how-can-i-troubleshoot-website-pages-that-are-not-being-indexed-by-google",
       "discovered_at": "2026-11-02T13:16:35+03:00"
@@ -745,14 +745,10 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.3059,
-    "last_7_days_usd": 1.8316,
-    "all_time_usd": 38.6216,
+    "today_usd": 0.4199,
+    "last_7_days_usd": 1.8521,
+    "all_time_usd": 39.0415,
     "by_day": [
-      {
-        "date": "2026-11-08",
-        "usd": 0.3994
-      },
       {
         "date": "2026-11-09",
         "usd": 0.1723
@@ -776,67 +772,36 @@
       {
         "date": "2026-11-14",
         "usd": 0.3059
+      },
+      {
+        "date": "2026-11-15",
+        "usd": 0.4199
       }
     ],
     "by_agent": [
       {
         "agent": "market_radar",
-        "usd": 0.5933
+        "usd": 0.591
       },
       {
         "agent": "pain_validation",
-        "usd": 0.5773
+        "usd": 0.5783
       },
       {
         "agent": "opportunity_scoring",
-        "usd": 0.3271
+        "usd": 0.348
       },
       {
         "agent": "build_decisions",
-        "usd": 0.3009
+        "usd": 0.3015
       },
       {
         "agent": "daily_summary",
-        "usd": 0.0329
+        "usd": 0.033
       }
     ]
   },
   "activity": [
-    {
-      "date": "2026-11-08",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-11-09",
       "agents": {
@@ -1046,12 +1011,47 @@
           "skipped": 1
         }
       }
+    },
+    {
+      "date": "2026-11-15",
+      "agents": {
+        "build_decisions": {
+          "succeeded": 1
+        },
+        "cost_gain": {
+          "succeeded": 1
+        },
+        "daily_summary": {
+          "succeeded": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "succeeded": 1
+        },
+        "opportunity_scoring": {
+          "succeeded": 1
+        },
+        "pain_validation": {
+          "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
     }
   ],
   "latest_report_excerpt": {
-    "file": "reports/daily/2026-11-14.md",
-    "date": "2026-11-14",
-    "text": "# Daily Summary — 2026-11-14 (Fri)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 474 |\n| Opportunities validated past threshold | 123 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\nNo active experiments or services currently tracked in factory state.\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `market_radar` continues surface-level pain signal discovery across B2B channels.\n2. `opportunity_scoring` processes candidate pool for next validation cycle.\n3. `pain_validation` validates high-scoring opportunities against threshold.\n4. `build_decisions` evaluates validated opportunities for feasibility and ROI.\n5. `cost_gain` computes metrics on any live experiments (pending).\n\n## Operator action items\n\nNone — process the approval queue and move on.",
+    "file": "reports/daily/2026-11-15.md",
+    "date": "2026-11-15",
+    "text": "# Daily Summary — 2026-11-15 (Sat)\n\n## Top-line (last 24h)\n\n| Metric | Value |\n|---|---|\n| New opportunities surfaced | 479 |\n| Opportunities validated past threshold | 124 |\n| Leads collected | 0 |\n| Outreach messages sent | 0 |\n| Replies received | 0 |\n| Approvals pending in queue | 0 |\n| Blockers (agent failures, policy hits) | 0 |\n\n## Per-experiment status\n\n| Slug | Stage | Last-7d signal | Recommendation |\n|---|---|---|---|\n| (no active experiments) | — | — | — |\n\n## Approval queue digest\n\nEmpty.\n\n## Agent health\n\nAll 9 agents nominal.\n\n## Tomorrow's auto-scheduled actions\n\n1. `lead_research` resumes full operation (was skipped today; Saturday reduced schedule).\n2. `market_radar` continues daily SaaS pain-signal sweeps.\n3. `pain_validation` runs targeted validation probes on highest-scored candidates.\n4. `opportunity_scoring` processes new candidate pipeline.\n5. `cost_gain` computes weekly aggregate metrics for Sunday report.\n\n## Operator action items\n\nNone — process is running clean. Monitor the candidate backlog (479 waiting validation) and review scoring quality in Monday's weekly ritual.",
     "truncated": false
   },
   "analytics": null

@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M7FAWPX180D4JZPQ7NGAA793",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 3,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.4,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "US tax filing and amendment advice is a regulated activity (IRS Circular 230). Providing specific tax guidance without a CPA or enrolled agent creates legal/compliance risk."
+    },
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Actual tax amendment preparation for nonresident filers requires case-by-case human review of immigration status, treaty positions, and IRS correspondence \u2014 Claude cannot autonomously fulfill this correctly and safely."
+    },
+    {
+      "name": "high_touch_support",
+      "deduction": 0.5,
+      "reason": "Anxious filers facing IRS penalties will generate high support volume requiring human judgment."
+    }
+  ],
+  "total": 1.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real (J-1/F-1 visa holders who already paid for tax software and got it wrong, demonstrating willingness to pay $99\u2013$299 for a correct outcome), and the pain is severe. However, US tax amendment services for nonresidents sit squarely in regulated territory \u2014 giving specific tax advice without an enrolled agent or CPA is an IRS Circular 230 violation, and incorrect filings cause real financial harm. Per-case fulfillment is unavoidably human-intensive, and operational autonomy is fundamentally incompatible with the actual value proposition. The penalty stack drops this below viability.",
+  "solution_plan": "This opportunity is not viable as a solo non-technical factory-run service without a licensed tax professional as a partner. Claude can generate educational content about 1040-NR amendment workflows, but cannot autonomously prepare and certify an individual's tax return \u2014 doing so without licensure is legally problematic and would expose Youval to IRS enforcement. Drop unless a licensed enrolled agent or CPA is available to review every output, which changes the economics entirely.",
+  "notes": "Failing build_gates: operational_autonomy (3 < 7 required), buildability_with_ai (5 < 6 required at margin). regulated_industry penalty is structural.",
+  "scored_at": "2026-11-15T13:10:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

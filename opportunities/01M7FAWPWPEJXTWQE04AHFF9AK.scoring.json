@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7FAWPWPEJXTWQE04AHFF9AK",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.2,
+  "penalties_applied": [],
+  "total": 6.2,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a named SMB/team on a paid Dropbox Business plan ($15\u2013$24/user/month), so commercial intent exists, and willingness to pay for SaaS tooling is established. The service \u2014 automated privacy-policy change monitoring with plain-language risk summaries \u2014 is fully buildable and deliverable by Claude with no per-customer human touch. However, the signal is a single low-upvote HN comment, responsiveness is untested, and the pain recurs only when a provider updates its policy (every 1\u20133 years per vendor), making urgency episodic. Validate by reaching 50\u2013100 Dropbox Business admins (via r/sysadmin, LinkedIn, Hacker News) with a one-question cold message before building.",
+  "solution_plan": "The micro-service is a SaaS privacy-policy monitor that tracks changes across major cloud storage providers and emails a plain-language risk summary to subscribers whenever a material change is detected. The factory builds it as a Claude-powered diff analyzer (privacy policy text in \u2192 structured risk assessment out) paired with a simple landing page, a Stripe subscription link ($9\u2013$19/month), and an automated weekly email digest; no coding required from the operator. To sell, the factory drafts a cold outreach message targeting Dropbox Business admins on LinkedIn and r/sysadmin, which Youval approves before it goes out. Once a subscriber signs up, Claude monitors the policy feeds on a schedule and sends digests automatically; billing runs via Stripe; the operator's only recurring action is approving outreach batches. The honest constraint: policy changes are infrequent, so subscribers may churn if months pass without an alert \u2014 validate retention intent before building.",
+  "notes": "No build_gate failures. Consider bundling multi-provider coverage (Dropbox, Google Drive, OneDrive, Box) to increase perceived value and reduce churn from infrequent alerts.",
+  "scored_at": "2026-11-15T13:10:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

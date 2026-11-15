@@ -1,0 +1,27 @@
+{
+  "id": "01M7FAWPX180D4JZPQ7NGAA793",
+  "discovered_at": "2026-11-15T13:08:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://money.stackexchange.com/questions/170220/sprintax-amended-return-1040-to-1040-nr-no-head-of-household-option-for-my",
+    "snippet": "I'm amending my 2023 federal return in Sprintax. I'm a J-1 research scholar who mistakenly filed my original 2023 return on Form 1040 as a resident alien. I should have filed Form 1040-NR as a nonresident alien, so I'm amending with Form 1040-X plus a corrected 1040-NR. Sprintax asks me to select the filing status from my original return, but Head of Household is not available. (2026-11-14)"
+  },
+  "problem_statement": "International students and visa holders (J-1, F-1, H-1B) on nonresident tax status routinely file incorrect US federal tax returns and face confusing, error-prone amendment workflows in existing tools like Sprintax, leading to IRS penalties and stress.",
+  "target_segment": "International researchers, students, and skilled workers on US nonimmigrant visas who must file or amend nonresident alien tax returns (Form 1040-NR).",
+  "geo": "US",
+  "signal_strength": 3,
+  "keywords": [
+    "nonresident-tax",
+    "1040-nr",
+    "international-student",
+    "tax-filing",
+    "visa-holder",
+    "tax-amendment",
+    "j1-visa",
+    "f1-visa",
+    "sprintax",
+    "tax-compliance"
+  ],
+  "notes": "Sprintax charges $50\u2013$200/filing. The repeated confusion around amended returns for nonresidents is a known gap \u2014 existing tools handle the simple case but break on edge cases (wrong filing status, amendment workflows). A focused amendment-only or audit-protection service for nonresident filers could charge $99\u2013$299 per case. Buyer is clear: someone who already paid for tax software and still got it wrong has demonstrated willingness to pay for a correct outcome.",
+  "status": "candidate"
+}

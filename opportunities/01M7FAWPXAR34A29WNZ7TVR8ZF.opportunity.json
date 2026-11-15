@@ -1,0 +1,26 @@
+{
+  "id": "01M7FAWPXAR34A29WNZ7TVR8ZF",
+  "discovered_at": "2026-11-15T13:08:51+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439990/creating-a-calculated-field-formula-in-adobe-sign-text-tag-using-a-salesforce-fi",
+    "snippet": "I am unable to figure out how to use Adobe Sign Text Tags to use a calculated field formula based on a field in Salesforce. I've got the regular text tags figured out, but rather than creating a new custom field in Salesforce, would love to just use Adobe Sign calculations. I am trying to transform the Record Type Name into more user friendly text. (2026-11-14)"
+  },
+  "problem_statement": "Salesforce admins and developers integrating Adobe Sign struggle with the gap between Salesforce field data and Adobe Sign's document calculation/transformation capabilities, requiring workarounds that create technical debt and slow contract automation workflows.",
+  "target_segment": "Salesforce administrators and developers at mid-market companies using Adobe Sign (Acrobat Sign) for contract automation.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "adobe-sign",
+    "contract-automation",
+    "document-generation",
+    "salesforce-integration",
+    "esignature",
+    "admin-tools",
+    "no-code",
+    "workflow-automation"
+  ],
+  "notes": "Adobe Sign + Salesforce is a paid enterprise stack (licenses cost thousands/year). Admins hitting this wall represent a recurring consulting or tooling opportunity. A lightweight middleware or template library that bridges Salesforce field logic into Adobe Sign text tags could sell as a managed package or professional service. Buyer willingness-to-pay is implicit in the enterprise stack they already maintain.",
+  "status": "candidate"
+}

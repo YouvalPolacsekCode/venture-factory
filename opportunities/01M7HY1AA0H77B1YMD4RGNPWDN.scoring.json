@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7HY1AA0H77B1YMD4RGNPWDN",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 5,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 4,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.4,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Any compensating-control wrapper for Entra ID AU scoping requires hands-on configuration of each customer's Azure tenant, app registrations, and permission boundaries \u2014 per-customer manual work is unavoidable."
+    },
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Enterprise identity and directory automation touches compliance frameworks (SOC 2, ISO 27001, GDPR) and Microsoft's licensing/certification requirements, adding legal and contractual risk for a solo operator."
+    }
+  ],
+  "total": 1.4,
+  "recommended_stage": "drop",
+  "rationale": "The underlying problem is a genuine Microsoft platform limitation \u2014 there is no native way to scope app-only credentials to a specific Administrative Unit \u2014 and enterprise IT architects do have real compliance pain here. However, the 'solution' is compensating controls around Microsoft Graph permissions, which requires deep Azure AD expertise, per-tenant manual configuration, and ongoing maintenance as Microsoft's platform evolves; none of this can be automated by Claude. The buyer is identifiable (enterprise IT architects with Azure budgets) but reaching them is hard without LinkedIn Sales Navigator or similar paid tools, and a single low-signal ServerFault question suggests the audience is small or simply lives with the limitation. After penalties, total is 1.4 \u2014 firmly in drop territory.",
+  "solution_plan": "This would be a consulting engagement or a wrapper service that implements compensating controls (e.g. a privileged service account with custom Graph API filtering logic) to approximate AU-scoped permissions. Building it requires Azure AD expertise, configuring app registrations and conditional access policies per customer, and writing custom Graph API middleware \u2014 none of which is achievable with Claude + a landing page + Stripe. Selling would require targeting enterprise IT architects via LinkedIn or Microsoft community forums, a population that moves slowly and requires lengthy security review cycles before any purchase. Delivery is entirely manual and tenant-specific; there is no self-serve path. This is a consulting play requiring deep Microsoft identity expertise and cannot realistically be built, sold, or maintained by a solo non-technical operator using this factory.",
+  "notes": "Failing build gates: buildability_with_ai (3 < 6), operational_autonomy (3 < 7), willingness_to_pay borderline (5 meets floor but penalties pull total to 1.4). Score well below min_total_to_validate (5.5) \u2014 drop stage.",
+  "scored_at": "2026-11-16T13:23:29+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7HY1A9SCDXJPGM0V11CY2XM",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.0,
+  "penalties_applied": [],
+  "total": 5.0,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and security-relevant \u2014 DevOps engineers at SMBs running multi-workspace LLM platforms do face a genuine access-control gap \u2014 and there's a plausible buyer (IT/DevOps with infrastructure budgets). However, the solution is essentially a middleware layer or managed proxy for MCP server routing, which requires non-trivial integration work (custom proxy logic, workspace identity propagation, possibly patching AnythingLLM itself) well beyond a Claude prompt + landing page + Stripe link. Operational autonomy is low because onboarding each customer requires inspecting their specific LLM/MCP stack setup, making per-customer manual work unavoidable. The total of 5.0 falls below the 5.5 validate threshold, and multiple build gates (buildability_with_ai at 4, operational_autonomy at 4) are unmet.",
+  "solution_plan": "This would be a managed MCP-access-control proxy layer \u2014 a service that sits between workspace agents and MCP servers, enforcing per-workspace allow/deny lists. Building it requires writing a custom routing proxy (not achievable with Claude + a form + Stripe alone), integrating with AnythingLLM's or other platforms' internal workspace identity system, and debugging each customer's unique self-hosted setup. Selling would mean cold outreach to DevOps engineers on GitHub issues, Hacker News, and AnythingLLM's Discord \u2014 reachable in theory but a small, technically sophisticated audience that would evaluate deeply before paying. Delivery cannot be automated: each deployment is a custom integration into a customer's self-hosted infrastructure. This is fundamentally a consulting/professional-services play, not a hands-off micro-SaaS. A solo non-technical operator cannot realistically build, sell, or maintain this without significant engineering involvement.",
+  "notes": "Failing build gates: buildability_with_ai (4 < 6), operational_autonomy (4 < 7). Score of 5.0 also below min_total_to_validate (5.5) \u2014 drop stage.",
+  "scored_at": "2026-11-16T13:23:29+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

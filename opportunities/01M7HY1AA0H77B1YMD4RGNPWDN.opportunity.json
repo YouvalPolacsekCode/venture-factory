@@ -1,0 +1,27 @@
+{
+  "id": "01M7HY1AA0H77B1YMD4RGNPWDN",
+  "discovered_at": "2026-11-16T13:21:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200246/is-it-possible-to-create-an-app-only-credential-which-has-scoped-administrative",
+    "snippet": "I am working on an application which handles some directory operations for a particular group of users. For this application, I need to create a least-privilege credential which can invite guest users, add these guest users to a specific AU, delete guest users, create groups inside the same AU, add guest users to the created groups. But as far as I can [tell], AdministrativeUnit.ReadWrite.All is a tenant-wide permission with no way to scope it to a specific AU at the app credential level."
+  },
+  "problem_statement": "Enterprise developers building apps on Microsoft Entra ID (Azure AD) cannot create app-only credentials scoped to a specific Administrative Unit; the only available permission is tenant-wide, violating least-privilege principles and blocking compliant multi-tenant directory automation.",
+  "target_segment": "Enterprise software developers and IT architects at mid-to-large companies building internal directory automation tools on Microsoft Entra ID / Azure AD.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "entra-id",
+    "azure-ad",
+    "least-privilege",
+    "administrative-units",
+    "app-permissions",
+    "directory-automation",
+    "enterprise-identity",
+    "microsoft-graph",
+    "compliance",
+    "access-control"
+  ],
+  "notes": "Buyer context: enterprise IT teams paying for Azure/M365 subscriptions who need compliant automation. The gap is a Microsoft platform limitation \u2014 opportunity is in tooling, consulting, or a wrapper service that achieves functional scoping through compensating controls. Single ServerFault question with 0 score, so signal is weak; warrants monitoring for recurrence before heavy investment.",
+  "status": "candidate"
+}

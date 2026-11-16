@@ -1,0 +1,27 @@
+{
+  "id": "01M7HY1A9SCDXJPGM0V11CY2XM",
+  "discovered_at": "2026-11-16T13:21:53+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://github.com/Mintplex-Labs/anything-llm/issues/7192",
+    "snippet": "Currently, MCP servers are configured globally and exposed to every workspace's agent. There's no way to restrict a server to specific workspaces or exclude one from workspaces where it doesn't belong. This request proposes a two-tier model: global MCP servers (current behavior, available everywhere) and workspace-scoped servers (available only in the workspaces that enable them). The global-only model creates two friction points: Security and scope \u2014 tools with broad permissions leak into workspaces that should not have access to them."
+  },
+  "problem_statement": "Teams running multi-workspace LLM platforms (e.g. AnythingLLM) cannot restrict which MCP tool-servers are available per workspace, so sensitive integrations are exposed across all agents with no access control, creating security and compliance risk.",
+  "target_segment": "DevOps engineers and IT admins at SMBs/mid-market companies deploying self-hosted or cloud LLM platforms with multiple teams or clients.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "mcp",
+    "llm-workspace",
+    "access-control",
+    "ai-agents",
+    "multi-tenant",
+    "anything-llm",
+    "tool-permissions",
+    "enterprise-ai",
+    "security",
+    "self-hosted-llm"
+  ],
+  "notes": "Buyer context: companies paying for LLM infrastructure/hosting who need compliance-grade workspace isolation. Feature request filed against an open-source product \u2014 indicates unmet need that a managed/commercial layer could address. Single GitHub issue but touches a structural gap in the entire MCP ecosystem. Willingness to pay implied by enterprise security requirements.",
+  "status": "candidate"
+}

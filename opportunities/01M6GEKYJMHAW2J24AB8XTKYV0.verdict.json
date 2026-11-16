@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M6GEKYJMHAW2J24AB8XTKYV0",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "monthly",
+  "rationale": "The WorkOS breach (Oct 30, 2026) disclosed via email before appearing on the Trust Center is a concrete, documented instance of the exact pain \u2014 B2B SaaS teams dependent on third-party auth providers learned of a critical security incident days late, with no independent detection layer. Buyers (security engineers, CTOs) already pay for vendor risk management tools (SecurityScorecard, UpGuard, Vanta), confirming willingness-to-pay in this category. The pain is severe when it occurs (potential customer data exposure, compliance failures) and structurally recurring given the growing adoption of auth-as-a-service.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50345712"
+  ],
+  "evaluated_at": "2026-11-16T13:22:58+03:00"
+}

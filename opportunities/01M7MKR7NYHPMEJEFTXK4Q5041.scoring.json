@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7MKR7NYHPMEJEFTXK4Q5041",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 5,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 6,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.2,
+  "penalties_applied": [],
+  "total": 5.2,
+  "recommended_stage": "drop",
+  "rationale": "Engineering managers at mid-to-large software companies are identifiable buyers who do pay for developer-productivity and CI/CD tooling (e.g., Datadog, LinearB, Swarmia), and test-bypass tracking is a real recurring pain. However, the total score falls just below the validate threshold, primarily because willingness to pay for a narrow test-bypass audit tool is uncertain (companies expect this in their existing CI platform), operational autonomy is limited (the product would need deep CI/CD integrations that require ongoing maintenance per platform), and the signal is a single forum post with no demand cluster. The idea needs stronger market evidence before warranting even a validate stage.",
+  "solution_plan": "If validated later: WHAT: A CI/CD Test-Bypass Audit SaaS \u2014 a lightweight integration that monitors pipeline runs and flags when mandatory tests are skipped, producing a weekly report for engineering managers. BUILD: Claude + a webhook listener + a simple dashboard (or even just a weekly Slack/email digest) + Stripe; buildable with moderate integration work (GitHub Actions / GitLab CI webhooks). SELL: Engineering managers and platform leads at 50\u2013500-person software companies via LinkedIn outreach and dev-productivity communities. MAINTAIN: Webhook ingestion and report generation run automatically; billing is Stripe self-serve. Human touch: approving outreach. However, do not invest in this until a demand cluster (3+ independent signals) is confirmed.",
+  "notes": "Total 5.2 is below min_total_to_validate (5.5); staged drop. Failing gates if re-evaluated at build: operational_autonomy=5 < 7, willingness_to_pay=5 meets floor exactly.",
+  "scored_at": "2026-11-17T14:21:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01M7MKR7NYHPMEJEFTXK4Q5041",
+  "discovered_at": "2026-11-17T14:19:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203896/how-to-handle-learning-about-deployment-process-unchecking-mandatory-end-to-end",
+    "snippet": "When onboarding on to a new team and debugging broken end to end tests I didn't expect to break based on my changes, I was surprised when my onboarding buddy explained to me to manually deselect the default selected mandatory end to end tests (explicitly labeled as such on top of the default behavior)... The tests are owned by another team and they do not work on the non-production environment, they typically fail for reasons unrelated to the changes being deployed."
+  },
+  "problem_statement": "Engineering teams at companies maintain mandatory end-to-end tests that are routinely bypassed in deployment pipelines because they don't work in non-production environments, creating technical debt, compliance risk, and onboarding confusion that wastes developer time.",
+  "target_segment": "Engineering managers and DevOps/platform engineers at mid-to-large software companies with multi-team CI/CD pipelines.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ci-cd",
+    "end-to-end-testing",
+    "devops",
+    "deployment-pipeline",
+    "test-flakiness",
+    "engineering-productivity",
+    "platform-engineering",
+    "compliance"
+  ],
+  "notes": "Buyer signal is implicit via business context (software company, deployment process, multiple teams). Pain is real and recurring \u2014 bypassing mandatory tests is a recognized compliance and quality risk. Opportunity: tooling that tracks and surfaces test-bypass events across CI/CD pipelines for engineering managers. Single signal.",
+  "status": "candidate"
+}

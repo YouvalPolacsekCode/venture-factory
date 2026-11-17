@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7MKR7P5TJKD7R41V9QY3Q1F",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 2,
+    "buyer_clarity": 3,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 3
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "New freelancers are individual consumers with minimal budgets; the business model only works at large volume (1000+ paying users)."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The target buyers are new individual freelancers \u2014 a consumer segment notorious for not paying for tools, especially when they have no income yet; willingness to pay is very low (the source post itself has a negative score, reflecting the community's low regard for the question). Buyer clarity is weak (vague 'new freelancers' rather than a specific business role with budget), and there is no evidence of willingness to spend. The cold-start problem on Upwork is real and perennial, but solving it requires either platform relationships (gated) or a portfolio/credentialing service that needs social proof to be valuable \u2014 a catch-22. The opportunity does not reach the validate threshold.",
+  "solution_plan": "No viable solution plan recommended at this time. Any service targeting broke new freelancers faces a structural willingness-to-pay problem: the people who need help most have the least money and are least likely to pay for tools. If revisited, the pivot would be to target the demand side (companies seeking vetted junior freelancers) rather than the supply side, which is a different and more commercially viable ICP.",
+  "notes": "willingness_to_pay=2 and buyer_clarity=3 both fail build_gates; total well below validate threshold.",
+  "scored_at": "2026-11-17T14:21:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

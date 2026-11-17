@@ -1,0 +1,25 @@
+{
+  "id": "01M7MKR7P5TJKD7R41V9QY3Q1F",
+  "discovered_at": "2026-11-17T14:19:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://freelancing.stackexchange.com/questions/11028/challenges-to-new-freelancers-on-upwork",
+    "snippet": "Please I need some insight on how new freelancers on upwork can overcome the challenges of easily get client to work with mostly in web development. (3 comments, score -1)"
+  },
+  "problem_statement": "New freelancers on platforms like Upwork cannot land their first clients due to the cold-start problem: no reviews means no jobs, and no jobs means no reviews, trapping them in a cycle that prevents them from monetizing their skills.",
+  "target_segment": "New freelance web developers and technical freelancers attempting to establish themselves on major gig platforms.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "freelancing",
+    "upwork",
+    "cold-start",
+    "client-acquisition",
+    "web-development",
+    "gig-economy",
+    "portfolio",
+    "new-freelancer"
+  ],
+  "notes": "Weak buyer signal \u2014 poster is a freelancer seeking revenue, not an established business. However, the problem is perennial and large at scale. Opportunity is in tools or services that help new freelancers bootstrap credibility (e.g., portfolio-as-a-service, guaranteed first-project matching). Score kept low due to single weak signal and 'should be free' orientation of the question.",
+  "status": "candidate"
+}

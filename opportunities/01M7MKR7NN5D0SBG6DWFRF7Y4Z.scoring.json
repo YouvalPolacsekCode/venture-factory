@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7MKR7NN5D0SBG6DWFRF7Y4Z",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyers are Salesforce admins and developers at mid-market and enterprise companies \u2014 a specific, budget-holding professional audience that already pays significant Salesforce license fees and routinely buys third-party tooling (AppExchange ecosystem). The pain is genuine: silent data-sync failures in Data Cloud waste hours of debugging with no native diagnostics. A Claude-powered diagnostic assistant (a guided troubleshooting workflow + document analysis tool) is buildable within this factory's standard tooling. The limiting factor is signal strength: this is a single forum post, not a validated demand cluster, so validate before committing to build.",
+  "solution_plan": "WHAT: A Salesforce Data Cloud Diagnostic Assistant \u2014 a web-based guided troubleshooting tool that walks admins through Data Cloud configuration issues (DLO sync, Data Transform, data stream health) and surfaces the most likely root cause. BUILD: The factory builds a Claude prompt that ingests a user's configuration description or error log and returns a structured diagnostic report with ranked hypotheses and next steps; this is wrapped in a simple intake form + landing page, with a one-time payment via Stripe ($49\u2013$99 per diagnostic session or $29/mo for unlimited). SELL: Reach Salesforce admins via LinkedIn (search 'Salesforce Data Cloud' + 'Admin' or 'Architect'), Salesforce Trailblazer Community posts, and targeted replies on Salesforce Stack Exchange threads \u2014 outreach batches go out only after operator approval. MAINTAIN: Users submit their config details via the intake form; Claude generates the diagnostic report automatically and emails it; billing is Stripe self-serve; support is a Claude-powered FAQ reply bot. The only recurring human touch is approving outreach batches. Caveat: validate demand with 10\u201315 direct cold messages before building the full page.",
+  "notes": "Passes all build_gates on scores alone (operational_autonomy=6 meets floor of 7? No \u2014 operational_autonomy=6 is below the floor of 7, so build_gate fails). Correctly staged at validate.",
+  "scored_at": "2026-11-17T14:21:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

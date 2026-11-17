@@ -1,0 +1,25 @@
+{
+  "id": "01M7MKR7NDSNBFZCC6TDWH7AE8",
+  "discovered_at": "2026-11-17T14:19:53+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50445475",
+    "snippet": "Starlink 'Business' and 'Enterprise' plans are fundamentally different. 1M/yr spend to qualify. A lot of features you expect are not included in normal business plans (or are exclusive to certain units). The segmentation is strange as offering this as 'up-sell' is 100% businesses would pay for. You don't have to take my word on it, as there is a validated market of 'resellers' where you functionally join the reseller's enterprise plan."
+  },
+  "problem_statement": "Small and mid-sized businesses need Starlink enterprise-tier features (reliability, priority bandwidth, advanced routing) but cannot qualify for the $1M/yr enterprise tier, leaving them stuck on inadequate business plans or forced to use informal reseller workarounds.",
+  "target_segment": "SMBs, remote-site operators, and maritime/construction/event businesses needing reliable satellite internet above consumer tier but below enterprise spend thresholds.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "starlink",
+    "satellite-internet",
+    "smb-connectivity",
+    "reseller",
+    "enterprise-plan",
+    "remote-connectivity",
+    "bandwidth",
+    "isp-arbitrage"
+  ],
+  "notes": "Strong buyer signal: commenter explicitly states '100% businesses would pay for' the upsell features, and validates demand by pointing to an existing reseller market. Opportunity: managed Starlink reseller/aggregator service that bundles enterprise-tier access for SMBs at accessible price points. Comparable to how managed AWS resellers operate.",
+  "status": "candidate"
+}

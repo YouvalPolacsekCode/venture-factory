@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M6NJHQKWNJP63B4SJCWHNXXD",
+  "status": "rejected",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "The pain is real but shallow: a single HN commenter made a manual spreadsheet calculation and bought hardware. The underlying problem (should I self-host CI runners?) is a one-time decision, not a recurring workflow blocker, and free calculators and blog posts already exist that walk through the same math. With only one direct pain quote, no competitor charging money for this calculation, and no evidence of teams paying for a tool to do it, the evidence falls well below the 5-distinct-pain-quote and 1-WTP-signal thresholds required for a pass verdict.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50355278"
+  ],
+  "evaluated_at": "2026-11-17T14:20:57+03:00"
+}

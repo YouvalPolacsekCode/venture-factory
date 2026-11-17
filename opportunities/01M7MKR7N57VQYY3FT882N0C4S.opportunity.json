@@ -1,0 +1,25 @@
+{
+  "id": "01M7MKR7N57VQYY3FT882N0C4S",
+  "discovered_at": "2026-11-17T14:19:53+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50527395",
+    "snippet": "So much for buying another OVH based VPS in Singapore/Asia for some of my friends to use when they are 100% out of stock and/or other good hosting providers have doubled their pricing in the last few months.... God, I love AI.... and hate it.... Yet growing my web projects and everything is too pricey right now. My small 4 vCPU, 8GB RAM, and 75GB NVME VPS at $10 is the best I am gonna do unless something changes... (10 points, 9 comments)"
+  },
+  "problem_statement": "AI infrastructure demand is driving up VPS prices and causing stock shortages, making affordable cloud hosting unavailable for small web developers and indie builders who previously relied on sub-$15/mo VPS plans in Asia-Pacific regions.",
+  "target_segment": "Solo developers, indie hackers, and small-team web project operators who rely on budget VPS hosting (~$5\u2013$20/mo range) for personal and commercial projects.",
+  "geo": "GLOBAL",
+  "signal_strength": 3,
+  "keywords": [
+    "vps-hosting",
+    "cloud-pricing",
+    "affordable-hosting",
+    "indie-dev",
+    "infrastructure-cost",
+    "asia-pacific-hosting",
+    "ovh",
+    "budget-cloud"
+  ],
+  "notes": "Buyer signal present: commenter is actively spending on VPS ($10/mo current plan, wants more capacity). The broader thread (9 comments, 10 points) suggests shared frustration. Market gap: a service that aggregates or arbitrages remaining affordable VPS inventory, or a coop/reseller model, could capture this segment. Willingness to pay is established (already paying, wants to pay more for more capacity).",
+  "status": "candidate"
+}

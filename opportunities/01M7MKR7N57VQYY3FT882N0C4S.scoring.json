@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7MKR7N57VQYY3FT882N0C4S",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 2,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.8,
+  "penalties_applied": [],
+  "total": 3.8,
+  "recommended_stage": "drop",
+  "rationale": "The buyers are individual indie developers and solo builders who already pay $10\u2013$20/mo for VPS \u2014 willingness to pay is real but the price point is very low, requiring enormous volume to matter commercially. The core problem (VPS stock shortages and price increases) is a supply-side infrastructure issue: a Claude-based factory cannot build a VPS reseller, negotiate wholesale contracts with hosting providers, or manage physical data-centre capacity \u2014 this is a capital-intensive logistics and telecom business, not a software product. Operational autonomy and buildability are both near-zero because the fulfillment layer is entirely physical and contractual.",
+  "solution_plan": "No viable solution plan exists for this factory. Building a VPS reseller or hosting aggregator requires wholesale contracts with data-centre operators, payment processing for recurring infrastructure billing, NOC-level support, and physical capacity management \u2014 none of which can be automated by Claude prompts and a Stripe link. A solo non-technical operator cannot build or sustain this. The opportunity is better suited to an established hosting reseller or a well-funded infrastructure startup.",
+  "notes": "buildability_with_ai=2 and operational_autonomy=2 both fail build_gates; total also below min_total_to_validate.",
+  "scored_at": "2026-11-17T14:21:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

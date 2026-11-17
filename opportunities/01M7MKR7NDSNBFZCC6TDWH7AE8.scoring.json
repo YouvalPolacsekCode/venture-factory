@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7MKR7NDSNBFZCC6TDWH7AE8",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 6,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 2,
+    "operational_autonomy": 1,
+    "defensibility": 3,
+    "founder_fit": 3
+  },
+  "weighted_total": 4.0,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Becoming a Starlink reseller requires negotiating and maintaining an enterprise reseller agreement, managing hardware provisioning, and handling connectivity SLAs \u2014 all per-customer manual work."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "SMB sales for connectivity services at this price point require live discovery calls and account management to close and retain."
+    }
+  ],
+  "total": 1.5,
+  "recommended_stage": "drop",
+  "rationale": "The buyers are SMBs (maritime, construction, remote-site operators) with real connectivity pain and demonstrated willingness to pay \u2014 the buyer profile is legitimate. However, operating as a Starlink reseller requires a formal enterprise reseller agreement with SpaceX (gated, non-trivial to obtain), hardware logistics, SLA management, and ongoing account management that cannot be automated. This is a telco/ISP business requiring legal agreements, physical equipment handling, and human sales cycles \u2014 entirely outside what a Claude-based factory can build or run. Buildability and autonomy are both near-zero.",
+  "solution_plan": "No viable solution plan exists for this factory. A Starlink reseller business requires a SpaceX enterprise reseller contract, physical hardware provisioning per site, network SLA management, and B2B sales cycles with live calls and ongoing account management. A solo non-technical operator using Claude cannot build or maintain this. The opportunity is real but belongs to a telco integrator or managed-connectivity provider, not an AI-first micro-services factory.",
+  "notes": "operational_autonomy=1 and buildability_with_ai=2 both fail build_gates; total after penalties is effectively disqualifying.",
+  "scored_at": "2026-11-17T14:21:59+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

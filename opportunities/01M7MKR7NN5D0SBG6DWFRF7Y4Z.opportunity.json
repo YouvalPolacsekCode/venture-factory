@@ -1,0 +1,25 @@
+{
+  "id": "01M7MKR7NN5D0SBG6DWFRF7Y4Z",
+  "discovered_at": "2026-11-17T14:19:53+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/439993/salesforce-data-cloud-records-from-a-custom-salesforce-object-not-appearing-in",
+    "snippet": "I'm working with Salesforce Data Cloud and trying to create a Batch Data Transform using data ingested from a custom Salesforce CRM object called Booking. The Booking object contains records in my Salesforce org. I've created a Data Stream using this object, and the stream was successfully created. Data Cloud also generated the corresponding Booking Data Lake Object (DLO)... when I select the Booking DLO as the source in Batch Data Transform, the input preview shows no records."
+  },
+  "problem_statement": "Salesforce Data Cloud's Batch Data Transform feature silently shows no records when using custom CRM objects as sources, with no clear diagnostic tooling or documentation to identify whether the issue is in the data stream, DLO sync, or transform configuration.",
+  "target_segment": "Salesforce admins and developers at mid-market and enterprise companies implementing Data Cloud for CRM analytics and CDP use cases.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "data-cloud",
+    "salesforce-admin",
+    "cdp",
+    "data-transform",
+    "crm-integration",
+    "enterprise-saas",
+    "debugging-tools"
+  ],
+  "notes": "Buyer signal is implicit: Salesforce Data Cloud customers are enterprise/mid-market paying significant Salesforce license fees. Pain is real (broken feature, no diagnostics). Opportunity: a diagnostic/monitoring layer or consulting accelerator for Salesforce Data Cloud implementations. Single signal, low score for now.",
+  "status": "candidate"
+}

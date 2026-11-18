@@ -1,0 +1,27 @@
+{
+  "id": "01M7Q4MC8ZPRMHMCDHF46BBYQE",
+  "discovered_at": "2026-11-18T13:53:22+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://webapps.stackexchange.com/questions/182735/cognito-forms-no-entries",
+    "snippet": "I made a form for people to fill out and pay. Two people have signed up and paid. Neither entry is showing when i go to entries. I tried it myself. I collected the money, but does not show up on the entries list."
+  },
+  "problem_statement": "Small business owners using form-and-payment tools like Cognito Forms lose visibility into paid signups when payment is captured but the corresponding entry fails to appear, creating reconciliation gaps and potential fulfillment failures.",
+  "target_segment": "Small business owners and solopreneurs using no-code form tools with integrated payments for signups or registrations",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "form-builder",
+    "payment-reconciliation",
+    "cognito-forms",
+    "no-code",
+    "small-business",
+    "payment-entry-sync",
+    "data-reliability",
+    "solopreneur",
+    "event-registration",
+    "form-payments"
+  ],
+  "notes": "Explicit money-on-the-line context: payments collected but entries missing. Business operator, not a hobbyist. Points to a broader gap: no lightweight payment-to-entry reconciliation monitoring for no-code form stacks. Opportunity: a monitoring/alerting layer that cross-checks payment processor records against form entry records and flags mismatches. Single signal; would need more instances to validate prevalence.",
+  "status": "candidate"
+}

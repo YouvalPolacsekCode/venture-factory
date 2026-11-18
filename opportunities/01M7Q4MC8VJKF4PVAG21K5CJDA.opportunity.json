@@ -1,0 +1,27 @@
+{
+  "id": "01M7Q4MC8VJKF4PVAG21K5CJDA",
+  "discovered_at": "2026-11-18T13:53:22+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://serverfault.com/questions/1200275/attempting-to-restore-a-mailbox-from-an-on-premises-exchange-server-to-an-exchan",
+    "snippet": "I work in a hybrid 365 environment where we are doing some cleanup of mailboxes in preparation to eventually move to a purely cloud 365 tenancy. We've got some mailboxes that appear to have not been migrated correctly when the original hybrid environment was setup, and have ended up with duplicate mailboxes both on-premises and in 365/Exchange Online. I have attempted to follow Microsoft's instructions to recover from this, [but hit EWS errors]."
+  },
+  "problem_statement": "IT administrators managing hybrid Exchange-to-Exchange Online migrations encounter duplicate mailbox states and EWS errors that Microsoft's official documentation does not resolve, forcing costly manual remediation or consultant engagement.",
+  "target_segment": "IT administrators and sysadmins at SMB-to-mid-market companies running hybrid Microsoft 365 environments",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "exchange-migration",
+    "microsoft-365",
+    "hybrid-exchange",
+    "email-migration",
+    "ews",
+    "it-admin",
+    "office-365",
+    "mailbox-management",
+    "migration-tooling",
+    "sysadmin"
+  ],
+  "notes": "Company is an active Microsoft 365 paying customer mid-migration. Pain is well-defined: duplicate mailboxes + EWS errors blocking cutover. This class of migration failure is well-documented across community forums, suggesting recurring problem. Opportunity: a lightweight diagnostic/remediation tool or guided runbook service for hybrid Exchange migration edge cases. Single post but representative of a known category of M365 migration pain.",
+  "status": "candidate"
+}

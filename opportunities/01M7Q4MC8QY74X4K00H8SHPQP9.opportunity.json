@@ -1,0 +1,27 @@
+{
+  "id": "01M7Q4MC8QY74X4K00H8SHPQP9",
+  "discovered_at": "2026-11-18T13:53:22+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://freelancing.stackexchange.com/questions/11068/is-gemini-ai-good-enough-for-freelance-and-agency-automation",
+    "snippet": "I've been exploring tools like n8n and Make to automate tasks such as outreach, finding leads, and managing spreadsheets. The problem is that most of these tools require monthly subscriptions. I also came across other AI automation tools, but their pricing is a bit high for me right now. Since I already have access to Gemini Pro and its task features for free, I'm wondering if I can use it for similar work."
+  },
+  "problem_statement": "Freelancers and small agency operators need affordable AI-powered automation for outreach, lead generation, and spreadsheet management, but existing tools like n8n and Make carry monthly subscription costs that feel prohibitive at their revenue scale.",
+  "target_segment": "Solo freelancers and small agency operators (1-5 person shops) doing client outreach and lead gen",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "ai-automation",
+    "freelance",
+    "lead-generation",
+    "outreach-automation",
+    "n8n",
+    "make",
+    "small-agency",
+    "workflow-automation",
+    "cost-sensitive",
+    "solopreneur"
+  ],
+  "notes": "Poster is actively paying for or evaluating n8n/Make (competing paid products), confirming budget awareness. Pain is subscription cost relative to revenue, not lack of willingness to pay. Opportunity: a usage-based or one-time-fee AI automation layer targeting freelancers who already know what they want to automate but can't justify per-seat SaaS pricing. Single signal; needs corroboration.",
+  "status": "candidate"
+}

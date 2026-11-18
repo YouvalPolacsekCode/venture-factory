@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7Q4MC8ZPRMHMCDHF46BBYQE",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 5,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 8,
+    "operational_autonomy": 8,
+    "defensibility": 3,
+    "founder_fit": 5
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a small business owner or solopreneur running paid registrations or signups through no-code form tools \u2014 a specific, named role with real money at stake (payments are already flowing) and demonstrated willingness to pay for tools in this stack (Cognito Forms, Typeform, Jotform all have paid tiers). The service \u2014 a monitoring layer that cross-checks Stripe/PayPal records against form entries and alerts on mismatches \u2014 is fully buildable as a Claude + webhook + email alert system with no per-customer human work. The total clears the validate threshold and all build gates are met, but responsiveness is untested and the problem frequency is moderate (not daily), so a quick outreach probe to 20-30 Cognito/Typeform users is the right next step before committing to build.",
+  "solution_plan": "WHAT: A lightweight payment-reconciliation monitoring service that checks whether every payment captured by Stripe or PayPal has a matching form entry, and sends an email alert within minutes if one is missing. BUILD: The factory sets up a Claude-orchestrated workflow \u2014 a small webhook listener (or scheduled polling script in this repo) that calls the Stripe API and the form tool's API, compares records, and fires an alert email via SendGrid when a mismatch is found; a simple landing page explains the offer and a Stripe payment link ($19-29/mo) handles billing; an intake form collects the buyer's API keys; no coding by the operator. SELL: Target active Cognito Forms, Jotform, and Typeform users who run paid events or registrations \u2014 reachable via their community forums, Facebook groups, and ProductHunt; the factory drafts outreach messages and queues them for the operator's one-click approval before any send. MAINTAIN: Once a customer connects their API keys, monitoring runs fully on autopilot \u2014 alerts fire automatically, billing renews via Stripe, and Claude handles common support questions via a canned-response system; the only recurring operator task is approving new outreach batches (weekly, ~5 minutes). CAVEAT: Each supported form tool requires a one-time API integration build; starting with Stripe + Cognito Forms only is the fastest path to a testable v1.",
+  "notes": "All build gates met: operational_autonomy=8, buildability_with_ai=8, buyer_clarity=7, willingness_to_pay=6. Capped at validate (not build) because responsiveness_signal is untested (score 1) and total 6.0 is below the min_total_to_build threshold of 6.5. Run a 20-lead outreach probe first.",
+  "scored_at": "2026-11-18T13:55:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7Q4MC8QY74X4K00H8SHPQP9",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 7,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 6,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 5
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "Solo freelancers paying $20-40/mo means you need hundreds of customers to reach meaningful revenue; the model only works at consumer scale."
+    }
+  ],
+  "total": 3.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is a cost-sensitive solo freelancer who wants to avoid monthly subscriptions \u2014 this is structurally the worst buyer for a subscription product, and their WTP ceiling is the very thing they're complaining about. Even if buildable as a Claude-powered automation layer, the buyer clarity is too weak: 'freelancers' is a large, fragmented audience with no specific budget line, and the core objection is that existing tools already charge too little. The b2c_at_scale penalty pushes the total below the validate threshold, confirming this is not viable at solo-operator scale.",
+  "solution_plan": "Not recommended to pursue. The target buyer's defining trait is resistance to subscription costs, so any recurring-fee product faces immediate churn. A one-time tool would need a very large install base to generate meaningful revenue, requiring marketing scale a solo non-technical operator cannot achieve without significant paid acquisition spend. If the idea were to be validated anyway, the factory could build a simple Claude-powered outreach workflow template sold as a one-time Gumroad product, but the economics are unlikely to work.",
+  "notes": "Fails buyer_clarity_min (4 < 6) and willingness_to_pay_min (4 < 5) build gates. Total also below validate threshold after penalty.",
+  "scored_at": "2026-11-18T13:55:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

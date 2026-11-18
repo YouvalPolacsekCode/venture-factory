@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7Q4MC8VJKF4PVAG21K5CJDA",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 4,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 4,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Hybrid Exchange migration remediation requires reading environment-specific PowerShell outputs, AAD states, and EWS error logs that vary per tenant \u2014 each case needs a human (or at minimum a deeply interactive Claude session) to diagnose and advise. Pure automation is not feasible without direct environment access."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Sysadmins hitting live migration errors need real-time back-and-forth diagnosis, not an async document delivery \u2014 this naturally pulls toward live support or synchronous consulting."
+    }
+  ],
+  "total": 3.0,
+  "recommended_stage": "drop",
+  "rationale": "IT admins in mid-migration crises are a named, funded buyer (companies already paying Microsoft E3/E5 licensing) and the pain is genuine and expensive \u2014 consultants charge $150-300/hr for this exact work. However, the service cannot run autonomously: each hybrid Exchange failure is tenant-specific, requires live diagnostic access or at minimum a detailed interactive session, and demands real-time remediation guidance. The two penalties for human fulfillment and synchronous interaction correctly disqualify this for a hands-off Claude factory; it is a consulting engagement, not a scalable product.",
+  "solution_plan": "Not recommended to pursue as an automated micro-service. A solo non-technical operator cannot build tooling that connects to customer Azure/Exchange tenants, runs PowerShell diagnostics, and delivers safe remediation steps without deep IT infrastructure access and real-time loops. The factory could produce a Claude-powered diagnostic runbook document sold one-time, but that underserves the pain (sysadmins need interactive diagnosis, not a static guide) and would generate low recurring revenue. Better left to specialist IT MSPs.",
+  "notes": "Fails operational_autonomy_min (4 < 7) and buildability_with_ai_min (5 < 6) build gates. Total after penalties also well below validate threshold.",
+  "scored_at": "2026-11-18T13:55:07+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

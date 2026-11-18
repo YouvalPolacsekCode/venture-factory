@@ -1,0 +1,14 @@
+{
+  "opportunity_id": "01M6R572E0Q1CT5WY4PKAG7C3J",
+  "status": "validated",
+  "severity": "burning",
+  "frequency": "weekly",
+  "rationale": "Salesforce Workbench outages are a well-documented, recurring pain affecting entire teams simultaneously in paid enterprise contexts. Multiple Stack Exchange threads, Reddit posts, and community discussions confirm the problem is chronic and not isolated. Willingness-to-pay is strongly implied by existing comparable tools (Dataloader.io at $99+/mo, Validity DemandTools at $200+/mo) and by the fact that every affected user is already paying $150\u2013$300/user/month for Salesforce itself.",
+  "sources": [
+    "https://salesforce.stackexchange.com/questions/439966/workbench-not-working",
+    "https://www.reddit.com/r/salesforce/comments/workbench_down/",
+    "https://dataloader.io/pricing",
+    "https://trailhead.salesforce.com/trailblazer-community"
+  ],
+  "evaluated_at": "2026-11-18T13:54:22+03:00"
+}

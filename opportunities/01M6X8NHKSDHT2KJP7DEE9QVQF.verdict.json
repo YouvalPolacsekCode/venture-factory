@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M6X8NHKSDHT2KJP7DEE9QVQF",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "weekly",
+  "rationale": "YouTube RSS endpoints have a documented history of multi-day outages that break automated content pipelines; multiple HN threads and community reports confirm this is a recurring, not one-off, disruption. Newsletter operators and content curators already pay for comparable feed-reliability tools (Feedly Pro, Inoreader), establishing willingness-to-pay for a monitoring proxy service priced at $9\u201319/month.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50409244"
+  ],
+  "evaluated_at": "2026-11-19T13:56:12+03:00"
+}

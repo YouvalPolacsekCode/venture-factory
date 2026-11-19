@@ -1,0 +1,25 @@
+{
+  "id": "01M7SQ4BY1GN5V298J60YT7FSF",
+  "discovered_at": "2026-11-19T13:55:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://freelancing.stackexchange.com/questions/11015/how-do-i-make-a-fair-bid-for-my-freelance-lawncare-and-landscaping-work",
+    "snippet": "Is there some secret place I can search for that will help a new freelance lawncare guy with bidding new lawns? I'm told that my prices are way low, which I concur, as I find myself still stuck in the nineties, when I had this same business before. Simply put, how do some of you go about bidding new yards complete (including weed eating and blowing off). And now that the season is upon us, how do you bid leaf control jobs? I don't want to screw my customers or myself. I just need help making fair bids."
+  },
+  "problem_statement": "Solo lawn care and landscaping operators lack a reliable, up-to-date reference for pricing and bidding jobs; they undercharge because they cannot easily find current local market rates for mowing, edging, leaf removal, and similar services.",
+  "target_segment": "Solo and small-team lawn care / landscaping freelancers and micro-businesses in the US",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "lawncare",
+    "landscaping",
+    "pricing-tool",
+    "job-bidding",
+    "field-service",
+    "small-business",
+    "freelance",
+    "local-services"
+  ],
+  "notes": "Small business operator buyer: someone running a lawn care business who loses revenue from underpricing. Willingness to pay is implied (losing money directly). Opportunity is a local-market pricing reference or bidding calculator tool (subscription or one-time). Single signal; needs corroboration from additional sources (e.g. r/lawncare, Thumbtack forums) before validation.",
+  "status": "candidate"
+}

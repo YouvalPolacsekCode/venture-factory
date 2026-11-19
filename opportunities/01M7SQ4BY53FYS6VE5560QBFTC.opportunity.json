@@ -1,0 +1,25 @@
+{
+  "id": "01M7SQ4BY53FYS6VE5560QBFTC",
+  "discovered_at": "2026-11-19T13:55:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://softwarerecs.stackexchange.com/questions/95804/what-software-can-help-me-organize-and-manage-personal-files-stored-across-multi",
+    "snippet": "I'm looking for software that can help me manage personal files stored across multiple cloud storage services from one place. My main requirements are: Unified file management: Browse and organize files from different cloud storage accounts. Easy file access: Access documents, photos, and other personal files without repeatedly switching between services. File synchronization: Keep selected folders synchronized across devices. Security: Support secure account access and protect personal files."
+  },
+  "problem_statement": "Users and small teams with files scattered across multiple cloud storage services (Google Drive, Dropbox, OneDrive, etc.) lack a unified interface to browse, organize, and sync files without constantly switching between apps and re-authenticating.",
+  "target_segment": "Knowledge workers, freelancers, and small teams using 2+ cloud storage services simultaneously",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "cloud-storage",
+    "file-management",
+    "multi-cloud",
+    "sync",
+    "productivity",
+    "unified-dashboard",
+    "freelancer",
+    "knowledge-worker"
+  ],
+  "notes": "Moderate buyer potential: freelancers and small teams pay for cloud storage subscriptions already, indicating willingness to pay for tooling. The question does not explicitly state a budget but the problem recurs frequently (Rclone, Mountain Duck, and Cyberduck exist but have UX gaps). Signal is a single question with no upvotes; the opportunity is well-trodden but the niche remains underserved at the SMB/prosumer layer. Worth watching for corroborating signals before full validation.",
+  "status": "candidate"
+}

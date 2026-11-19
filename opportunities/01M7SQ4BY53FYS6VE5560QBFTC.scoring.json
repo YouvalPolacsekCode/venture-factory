@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7SQ4BY53FYS6VE5560QBFTC",
+  "per_dimension": {
+    "pain_severity": 6,
+    "pain_frequency": 8,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 5,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 5,
+    "defensibility": 3,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.1,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "The primary buyer segment is individual knowledge workers and freelancers, not businesses with procurement budgets; sustainable revenue requires a large consumer user base."
+    }
+  ],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "The pain is real and frequent \u2014 people genuinely juggle multiple cloud storage services \u2014 but the buyer is too broad (\"knowledge workers and freelancers\" is not a specific, budget-holding ICP) and willingness to pay is moderate at best given mature free alternatives like Rclone. More critically, the actual solution requires building and maintaining OAuth integrations with Google Drive, Dropbox, OneDrive, and others, which is significant infrastructure work beyond Claude + a simple page, and the competitive field is crowded with well-funded incumbents (MultCloud, Cyberduck, Mountain Duck). Operational autonomy is limited because cloud API changes require ongoing maintenance. Total falls below validate threshold after penalties.",
+  "solution_plan": "This opportunity is not recommended for the factory in its current form. The build requires maintaining live OAuth integrations with at least three major cloud providers \u2014 Google, Microsoft, Dropbox \u2014 each with their own API versioning, rate limits, and terms of service, which is real infrastructure engineering that Claude alone cannot handle. The market is also well-served: MultCloud, Rclone, and Mountain Duck already exist at various price points, making differentiation hard without proprietary data or a sharper ICP. If a narrower angle emerged \u2014 for example, a Claude-powered file-naming and tagging assistant that works on top of a single cloud provider \u2014 that could be re-evaluated with a tighter buyer definition and simpler build.",
+  "notes": "Failing build_gates: buildability_with_ai (4 < 6 minimum), operational_autonomy (5 < 7 minimum), buyer_clarity (5 < 6 minimum). Total also falls below min_total_to_validate after b2c_at_scale_needed penalty.",
+  "scored_at": "2026-11-19T13:56:58+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

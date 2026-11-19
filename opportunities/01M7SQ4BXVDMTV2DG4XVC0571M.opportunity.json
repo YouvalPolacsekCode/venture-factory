@@ -1,0 +1,25 @@
+{
+  "id": "01M7SQ4BXVDMTV2DG4XVC0571M",
+  "discovered_at": "2026-11-19T13:55:09+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://github.com/MicrosoftEdge/WebView2Feedback/issues/5817",
+    "snippet": "[Feature]: API to set several spell check languages (ICoreWebView2Profile). An API that lets an app set the list of spell check languages, so that WebView2 checks more than one language at the same time. Today WebView2 spell checks only in one language: the environment Language (by default the Windows display language). The HTML lang attribute is ignored (#5294), and there is no way to add a second language (#2040, open since 2022). Tested on WebView2 Runtime 157.0.4341.60, Windows 11, x64 app: - With German added in Windows display language settings..."
+  },
+  "problem_statement": "Windows desktop apps built on WebView2 can only spell-check in a single OS-level language; developers shipping multilingual apps (e.g. German + English) have no API to add a second spell-check language, and a related issue has been open since 2022 with no resolution.",
+  "target_segment": "ISVs and enterprise Windows app developers shipping multilingual WebView2-based desktop applications",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "webview2",
+    "spell-check",
+    "multilingual",
+    "windows-desktop",
+    "developer-tooling",
+    "localization",
+    "isv",
+    "enterprise-software"
+  ],
+  "notes": "Business buyer context: companies building commercial Windows desktop apps (e.g. document editors, CRMs, ERPs) that ship to multilingual markets are blocked by a platform limitation open since 2022. Workaround does not exist. A third-party spell-check overlay or a wrapper library that injects multi-language spell-check into WebView2 could be a paid SDK or service. Single GitHub signal but references two prior open issues showing repeated demand.",
+  "status": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "opportunity_id": "01M7SQ4BXVDMTV2DG4XVC0571M",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 3,
+    "defensibility": 6,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.9,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Building and maintaining a native Windows SDK/overlay that injects multi-language spell-check into WebView2 requires deep C++/Win32/COM engineering work per integration; each customer integration is a bespoke engagement, not an automated delivery."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Enterprise ISV/SDK sales almost always involve a technical evaluation, procurement conversation, and integration support \u2014 not self-serve checkout."
+    }
+  ],
+  "total": 2.4,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is real and identifiable \u2014 Windows ISV engineering teams shipping multilingual desktop apps \u2014 and they clearly have budget for SDK tooling. However, the actual solution (a spell-check overlay or wrapper library for WebView2) requires deep native Windows/C++ development that is fundamentally outside what Claude + standard factory tooling can build or deliver; it is not a prompt + landing page + Stripe problem. Operational autonomy is near zero: each ISV integration needs hands-on technical support. The combination of a hard build requirement and a per-customer human touch makes this wrong for a solo non-technical factory.",
+  "solution_plan": "This opportunity is not viable for the factory as described. Building a production-quality WebView2 spell-check SDK requires a native Windows C++/COM developer, not a Claude-based prompt pipeline. Even if the library could be built externally, selling and supporting it to enterprise ISVs involves technical evaluations, licensing negotiations, and per-customer integration help \u2014 all requiring a human engineer. A solo non-technical operator using this factory cannot realistically build, sell, or maintain this. Recommend dropping and watching for a future signal if Microsoft closes the API gap.",
+  "notes": "Failing build_gates: buildability_with_ai (3 < 6 minimum), operational_autonomy (3 < 7 minimum). Total also falls below min_total_to_validate after penalties.",
+  "scored_at": "2026-11-19T13:56:58+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

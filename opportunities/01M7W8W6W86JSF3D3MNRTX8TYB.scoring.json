@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7W8W6W86JSF3D3MNRTX8TYB",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 6,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 4.7,
+  "penalties_applied": [],
+  "total": 4.7,
+  "recommended_stage": "drop",
+  "rationale": "The problem is technically real \u2014 adversarial prompt injection in job postings does undermine LLM-based job-scanning agents \u2014 but the buyer picture is too diffuse to score well commercially. The named segments (technical recruiters, HR-tech builders, individual developers) span from cash-rich B2B buyers to developers who build their own tools and won't pay for a wrapper; willingness_to_pay sits at 4 because there is no established paid market for LLM prompt-injection sanitization as a standalone product yet. Buyer clarity lands at 4 because the most plausible paying buyer (an HR-tech platform that wants to certify job postings as agent-safe) is an enterprise sales motion requiring significant trust-building, while the individual developer segment expects to implement their own defenses. The total of 4.7 falls below the 5.5 validate threshold, so the recommended stage is drop.",
+  "solution_plan": "WHAT: A prompt-injection detection and sanitization API or SDK that scrubs untrusted job posting content before it enters an LLM pipeline. BUILD: The core logic (heuristic pattern matching + a Claude-based classifier for adversarial instruction patterns) is genuinely buildable by the factory \u2014 a Claude prompt pipeline with a simple REST wrapper and Stripe metered billing is achievable in a week. SELL: The challenge is finding enough paying buyers; individual developers would likely roll their own, and HR-tech platforms require enterprise sales conversations that don't suit a solo non-technical operator. There is no high-intent public list of LLM pipeline operators to cold-outreach at scale. MAINTAIN: Delivery and billing could be largely automated, but the sanitization model would need ongoing updates as adversarial patterns evolve \u2014 a recurring maintenance burden without a clear revenue base to justify it. Honestly, the market is too early and the buyer too fragmented for this to work as a solo micro-service today; monitor for 6-12 months as AI-native recruiting tools mature and revisit if a clearer paying segment crystallizes.",
+  "notes": "Total 4.7 is below the min_total_to_validate threshold of 5.5. Failing build_gates (moot given total): willingness_to_pay (scored 4, floor 5) and buyer_clarity (scored 4, floor 6). Primary drop reason: insufficient commercial signal and no clear narrow paying buyer at a reachable price point today.",
+  "scored_at": "2026-11-20T13:45:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

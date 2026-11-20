@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M72GHPCRZHKAF29GQCQ1WDHK",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "daily",
+  "rationale": "Engineering teams using AI coding agents hit this problem on every agentic code-generation cycle \u2014 it is structurally embedded in the CI/CD workflow, not an edge case. Multiple HN threads and practitioner discussions confirm the dilemma between test integrity and velocity, and the existing spend on Claude Code/Cursor Pro subscriptions ($10\u2013$40/seat/month) demonstrates clear willingness to pay for developer tooling in this category. No dedicated test-governance product currently owns this niche, making the competitive gap real.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50437119"
+  ],
+  "evaluated_at": "2026-11-20T13:44:50+03:00"
+}

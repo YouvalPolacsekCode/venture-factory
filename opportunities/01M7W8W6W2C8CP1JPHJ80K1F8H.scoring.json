@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7W8W6W2C8CP1JPHJ80K1F8H",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [],
+  "total": 5.6,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and costly \u2014 silently dropped customer replies in a production Salesforce Marketing Cloud deployment represent tangible lost revenue and broken CRM workflows for the marketing ops or CRM admin at a mid-to-large business (the named buyer). These roles do buy software and have budget authority for Salesforce add-ons. However, buildability is a constraint: a production-side RMM monitoring tool requires either a Salesforce-connected app integration or middleware that hooks into their email infrastructure, which is non-trivial with Claude + simple tooling alone \u2014 scoring it honestly at 5. Operational autonomy also lands at 5 because diagnosing environment-specific SFMC delivery failures likely requires per-customer configuration and potentially human investigation, pulling it below the build_gate floor of 7. The deciding factors are the operational_autonomy and buildability_with_ai gates: both are unmet (5 each vs. floors of 7 and 6), so despite a reasonable commercial signal, the stage is capped at validate.",
+  "solution_plan": "WHAT: A monitoring and alerting micro-service that probes Salesforce Marketing Cloud Reply Mail Management in production and surfaces delivery failures before they silently accumulate. BUILD: The factory would be difficult to fully automate here \u2014 it would need a Salesforce Connected App integration (OAuth, SFMC APIs) to send synthetic probe emails and verify round-trip delivery, plus a webhook or polling layer for inbound reply detection; this is beyond a Claude prompt + Stripe link in a week and would realistically require an integration developer. SELL: Target Salesforce Marketing Cloud admins and marketing ops leads via the Salesforce AppExchange community, SFMC-focused Slack groups, and LinkedIn outreach to 'Salesforce Marketing Cloud Administrator' titles at companies with 200+ employees; outreach batches go out only after Youval approves them. MAINTAIN: Automated synthetic probes could run on a schedule, with Claude summarising anomaly reports and routing alerts by email, but initial customer onboarding (connecting SFMC credentials, configuring forwarding addresses) would require per-customer manual setup work \u2014 that human touch is unavoidable here. As a solo non-technical operator, Youval could NOT fully build and maintain this without developer help; the SFMC API integration is too complex for the current factory tooling. Validate first by posting a detailed problem-solution writeup in the SFMC community and measuring inbound interest before committing to build.",
+  "notes": "Failing build_gates: operational_autonomy (scored 5, floor 7) and buildability_with_ai (scored 5, floor 6). The Salesforce connected-app integration requirement makes this a development project, not a Claude-prompt-and-landing-page project. Recommend validating demand before investing in a build partner.",
+  "scored_at": "2026-11-20T13:45:25+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

@@ -1,0 +1,50 @@
+{
+  "opportunity_id": "01M72GHPCRZHKAF29GQCQ1WDHK",
+  "decided_at": "2026-11-20T13:45:41+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 6,
+      "floor": 7,
+      "met": false
+    },
+    "buildability_with_ai": {
+      "score": 5,
+      "floor": 6,
+      "met": false
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "met": true
+    },
+    "total": {
+      "score": 5.8,
+      "threshold": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "eligible_for_build": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.8 < min_total_to_build 6.5",
+    "operational_autonomy=6 < 7",
+    "buildability_with_ai=5 < 6"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "Three independent blockers prevent build_now: the total score of 5.8 falls below the 6.5 build threshold, operational_autonomy (6) misses its floor of 7 due to per-repo onboarding complexity, and buildability_with_ai (5) misses its floor of 6 because shipping requires non-trivial CI/CD integration (GitHub App, webhook auth, repo permissions) that the factory cannot accomplish with standard prompt-plus-landing-page tooling alone. The cost_to_gain_ratio of 6.42 also far exceeds the 0.6 kill threshold, and expected_gain_90d is negative (-$142), signaling that even optimistic unit economics do not justify commitment today. However, the pain is real, frequent, and structurally tied to a growing trend (agentic coding adoption), and the buyer segment (engineering teams already paying for AI coding tools) is credible \u2014 so an outright kill is premature. The right next step is a validation probe: confirm whether a simpler product form (e.g., a standalone CLI or pre-commit hook rather than a full SaaS GitHub App) could raise buildability and autonomy scores above their floors, and run a lightweight responsiveness test against 50 engineering leads to see if anyone would pay for test-governance tooling specifically.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "linkedin-dm-engineering-leads-at-ai-adopting-startups"
+}

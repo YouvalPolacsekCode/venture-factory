@@ -1,0 +1,25 @@
+{
+  "id": "01M7W8W6W86JSF3D3MNRTX8TYB",
+  "discovered_at": "2026-11-20T13:43:45+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50568364",
+    "snippet": "I run claude opportunistically looking at positions. It's finding forms of prompt injection on some job postings. Is this a generic thing now?"
+  },
+  "problem_statement": "AI agents scanning job postings on behalf of job seekers or recruiters are encountering adversarial prompt injection embedded in job listings, undermining the reliability of AI-assisted job search and recruitment automation.",
+  "target_segment": "Technical recruiters, HR-tech builders, and individual developers/operators using LLM agents to screen or apply to job postings at scale.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "prompt-injection",
+    "llm-agents",
+    "job-search-automation",
+    "recruitment-automation",
+    "ai-safety",
+    "llm-security",
+    "job-postings",
+    "llmo"
+  ],
+  "notes": "Poster is paying for Claude API to run job-scanning agents ('I run claude opportunistically'), signaling willingness to pay for tooling. Prompt injection in job postings is an emerging adversarial surface as AI-driven job applications proliferate. Opportunity: a sanitization/detection layer or auditing service for LLM pipelines that process untrusted job board content. Also potential B2B angle for HR-tech platforms wanting to certify their postings as agent-safe. Weak signal (2 comments, 4 points) but technically specific and timely.",
+  "status": "candidate"
+}

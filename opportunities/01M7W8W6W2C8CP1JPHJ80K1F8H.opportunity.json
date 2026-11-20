@@ -1,0 +1,25 @@
+{
+  "id": "01M7W8W6W2C8CP1JPHJ80K1F8H",
+  "discovered_at": "2026-11-20T13:43:45+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/440013/rmm-works-in-testing-but-genuine-recipient-replies-arent-reaching-inbox-sales",
+    "snippet": "We use Reply Mail Management in Salesforce Marketing Cloud Advanced to forward replies to a central inbox. We have identified instances where clients replied to Marketing Cloud emails but their responses never reached the forwarding inbox. However, when we test the same process ourselves by sending an email through Marketing Cloud and replying to it, the response comes through successfully. We've already investigated our receiving infrastructure. Greylisting was identified..."
+  },
+  "problem_statement": "Salesforce Marketing Cloud Reply Mail Management silently drops real customer replies in production while test replies succeed, leaving marketing and CRM teams blind to customer responses with no native alerting or diagnostic tooling.",
+  "target_segment": "Marketing operations and CRM teams at mid-to-large businesses running Salesforce Marketing Cloud Advanced email campaigns.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "marketing-cloud",
+    "email-deliverability",
+    "reply-mail-management",
+    "crm",
+    "email-operations",
+    "silent-failure",
+    "monitoring"
+  ],
+  "notes": "Business context clear: missed client replies represent lost revenue and broken CRM workflows. Team has already exhausted basic investigation (greylisting, infrastructure). Gap is monitoring/alerting for RMM delivery failures between test and production environments. Single signal but pain is concrete and recurring. A paid monitoring/diagnostic add-on or middleware that validates RMM delivery in production could appeal to Salesforce MC admins at companies where customer replies drive sales.",
+  "status": "candidate"
+}

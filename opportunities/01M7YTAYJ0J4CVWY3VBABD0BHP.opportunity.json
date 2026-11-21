@@ -1,0 +1,27 @@
+{
+  "id": "01M7YTAYJ0J4CVWY3VBABD0BHP",
+  "discovered_at": "2026-11-21T13:27:22+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://workplace.stackexchange.com/questions/203909/how-to-find-exact-copies-of-files-on-windows",
+    "snippet": "User: 'I have a Windows computer with a lot of files, including documents, photos, videos, and backups. Over time, I have copied the same files into different folders, and now I am running out of storage space. I want to find exact copies of files on Windows, even if they have different file names or are saved in different locations... I have tried checking folders manually, but it is [too slow/difficult].'"
+  },
+  "problem_statement": "Windows users \u2014 including small business operators and home office workers \u2014 accumulate duplicate files across folders over time, wasting storage and making file management chaotic, but existing deduplication tools are hard to discover, trust, or use safely without risk of accidental data loss.",
+  "target_segment": "Small business owners, freelancers, and home office workers on Windows who manage large file libraries (documents, photos, backups) and are running low on local or cloud storage.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "duplicate-files",
+    "file-management",
+    "windows",
+    "storage-cleanup",
+    "deduplication",
+    "smb-tools",
+    "productivity",
+    "backup",
+    "disk-space",
+    "file-organizer"
+  ],
+  "notes": "Recurring question class \u2014 duplicate file management appears frequently across SE, Reddit, and support forums. Weak buyer signal in this individual post (no explicit price mention), but the problem ties to storage costs: users paying for extra cloud storage or external drives to compensate for duplicates represent a latent willingness to pay for a clean solution. Strongest commercial angle is a trusted, simple Windows app with a clear undo/safety mechanism \u2014 existing tools (Duplicate Cleaner, dupeGuru) have mixed reviews and UI friction. Single post; signal strength capped at 2.",
+  "status": "candidate"
+}

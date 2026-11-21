@@ -1,0 +1,27 @@
+{
+  "id": "01M7YTAYH9631FDKYRQAE8FR76",
+  "discovered_at": "2026-11-21T13:27:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50585962",
+    "snippet": "OpenRouter notified users: 'A security researcher placed unique test URLs in prompts sent to MiniMax models from July to October 2026. A third party accessed those URLs 40 to 130 hours after the requests were sent, whether MiniMax served a request directly or another provider forwarded it to MiniMax.' \u2014 21 points, confirmed exfiltration of prompt contents routed through an LLM aggregator to an underlying model provider."
+  },
+  "problem_statement": "Enterprises and developers routing sensitive LLM prompts through multi-provider aggregators (e.g. OpenRouter) have no reliable way to verify that underlying model providers are not reading or exfiltrating prompt contents, creating compliance and data-security risk for any business sending confidential data to AI APIs.",
+  "target_segment": "Security-conscious engineering teams and compliance officers at mid-market and enterprise companies using third-party LLM API aggregators for production workloads.",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "llm-security",
+    "prompt-privacy",
+    "ai-api",
+    "data-exfiltration",
+    "compliance",
+    "enterprise-ai",
+    "openrouter",
+    "model-provider-trust",
+    "api-gateway",
+    "ai-governance"
+  ],
+  "notes": "Confirmed real security incident with 21 HN points. Clear enterprise buyer: companies already paying for LLM API access (OpenRouter charges per token) would pay for an auditing/proxy layer that detects or prevents prompt exfiltration. Willingness-to-pay evidence: they are already spending on LLM APIs; compliance risk creates budget justification. Opportunity: a prompt-inspection proxy or audit service that sits between the client and the aggregator, flagging or redacting sensitive data and logging third-party model access patterns.",
+  "status": "candidate"
+}

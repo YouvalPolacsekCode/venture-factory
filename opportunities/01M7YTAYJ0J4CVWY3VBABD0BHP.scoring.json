@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M7YTAYJ0J4CVWY3VBABD0BHP",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 5,
+    "willingness_to_pay": 3,
+    "buyer_clarity": 4,
+    "lead_reachability": 4,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 3,
+    "operational_autonomy": 6,
+    "defensibility": 2,
+    "founder_fit": 4
+  },
+  "weighted_total": 3.9,
+  "penalties_applied": [
+    {
+      "name": "b2c_at_scale_needed",
+      "deduction": 1.0,
+      "reason": "This is a consumer utility app targeting individual Windows users; meaningful revenue requires thousands of paying users given typical $10\u201330 one-time price points for desktop utilities."
+    }
+  ],
+  "total": 2.9,
+  "recommended_stage": "drop",
+  "rationale": "The buyer is an individual Windows consumer or small home-office user \u2014 a segment with very low willingness to pay for desktop utilities (most expect free tools, and free alternatives like dupeGuru already exist). There is no specific business role with a budget line, making `buyer_clarity` weak (4). The core product would need to be a downloadable Windows application with safe file-deletion logic, which requires native OS integration beyond what Claude prompts and a simple web page can deliver \u2014 `buildability_with_ai` scores just 3. Even if built, reaching enough paying consumers to generate meaningful revenue demands scale that is expensive and competitive to acquire.",
+  "solution_plan": "This would be a Windows desktop app that scans folders for duplicate files by hash, shows a safe preview, and lets users delete duplicates with one click. Building it properly requires a compiled native or Electron app with filesystem access \u2014 not something the factory can ship as Claude prompts and a landing page; a real developer would be needed. Selling it means driving consumer traffic via SEO, app stores, or Reddit \u2014 high-volume, low-conversion channels that require sustained marketing spend. Even if live, support load from users accidentally deleting files they needed would create ongoing human-judgement issues. The free alternatives (dupeGuru, Duplicate Cleaner free tier) make paid conversion very hard. Drop.",
+  "notes": "Failing build_gates: buildability_with_ai (3 < 6), buyer_clarity (4 < 6), willingness_to_pay (3 < 5). Saturated consumer utility category with strong free alternatives; not a fit for this factory's autonomous digital-service model.",
+  "scored_at": "2026-11-21T13:29:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

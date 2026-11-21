@@ -1,0 +1,48 @@
+{
+  "opportunity_id": "01M72GHPD36NWQSFS52BXH8NAR",
+  "decided_at": "2026-11-21T13:29:27+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 82,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "met": true
+    },
+    "buildability_with_ai": {
+      "score": 6,
+      "floor": 6,
+      "met": true
+    },
+    "buyer_clarity": {
+      "score": 7,
+      "floor": 6,
+      "met": true
+    },
+    "willingness_to_pay": {
+      "score": 6,
+      "floor": 5,
+      "met": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 5.9,
+      "min": 6.5,
+      "met": false
+    },
+    "recommended_stage": {
+      "value": "validate",
+      "build_or_scale": false
+    }
+  },
+  "gate_pass": false,
+  "gate_failures": [
+    "recommended_stage=validate",
+    "total 5.9 < min_total_to_build 6.5"
+  ],
+  "enforcement_applied": [],
+  "reasoning_summary": "All four required build gates pass their per-dimension floors, but the weighted total of 5.9 falls below the min_total_to_build threshold of 6.5, and recommended_stage is 'validate' \u2014 not 'build' or 'scale'. The cost-to-gain ratio of 5.383 is far above the kill threshold of 0.6, and 90-day expected gain ($50) is anemic relative to the ~$960 build cost. However, the pain is real and timely (live breach event), buyer clarity is decent (named B2B compliance roles with budgets), and the portfolio is empty, so killing outright would be premature before a validation probe confirms whether compliance leads will actually pay for a narrow AI sub-processor monitoring product versus their existing broader TPRM tools.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn direct outreach to compliance managers at companies disclosed as affected by the Fireworks AI / Notion breach"
+}

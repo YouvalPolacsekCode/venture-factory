@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M7YTAYH9631FDKYRQAE8FR76",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 5,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.5,
+  "penalties_applied": [],
+  "total": 5.5,
+  "recommended_stage": "validate",
+  "rationale": "The pain is real and confirmed \u2014 a documented exfiltration incident gives enterprise compliance officers a concrete justification to act, and companies already paying per-token for LLM APIs have an obvious budget line. However, the buyer is a security/engineering team at a mid-market or enterprise company, meaning the sales cycle is long and requires trust-building; a solo non-technical operator would struggle to close deals without synchronous sales effort. Critically, buildability is the ceiling here: a credible prompt-inspection proxy requires networking infrastructure, cryptographic guarantees, and deep integration with API layers that go well beyond Claude prompts and a Stripe link \u2014 build_gates for both `buildability_with_ai` (4 < 6) and `operational_autonomy` (4 < 7) are unmet.",
+  "solution_plan": "This micro-service would be an LLM audit layer: a hosted proxy endpoint that sits between a customer's app and their LLM aggregator, scanning outbound prompts for PII/sensitive patterns and logging provider-access fingerprints. Building it requires a real API proxy server with TLS termination and low-latency forwarding \u2014 not something the factory can ship as a Claude prompt plus a landing page. Selling it means reaching CISOs or security engineers at companies already using OpenRouter/LLM APIs; LinkedIn outreach and direct posts in AI-security Slack communities are the channel, but those buyers need demos and security reviews before paying. Even if built, every new enterprise customer would require custom integration support and trust audits that demand human involvement. This is not a solo non-technical founder build: it requires engineering infrastructure and enterprise sales cycles that exceed what this factory can autonomously deliver.",
+  "notes": "Failing build_gates: buildability_with_ai (4 < 6), operational_autonomy (4 < 7). Genuinely valuable problem worth watching \u2014 if a lightweight 'canary token in every prompt' SaaS could be designed, revisit with a simpler scoped version.",
+  "scored_at": "2026-11-21T13:29:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

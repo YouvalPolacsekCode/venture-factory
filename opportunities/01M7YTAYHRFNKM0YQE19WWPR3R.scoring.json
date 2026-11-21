@@ -1,0 +1,40 @@
+{
+  "opportunity_id": "01M7YTAYHRFNKM0YQE19WWPR3R",
+  "per_dimension": {
+    "pain_severity": 5,
+    "pain_frequency": 3,
+    "willingness_to_pay": 4,
+    "buyer_clarity": 4,
+    "lead_reachability": 3,
+    "responsiveness_signal": 1,
+    "buildability_with_ai": 1,
+    "operational_autonomy": 1,
+    "defensibility": 3,
+    "founder_fit": 2
+  },
+  "weighted_total": 2.8,
+  "penalties_applied": [
+    {
+      "name": "requires_human_fulfillment",
+      "deduction": 1.5,
+      "reason": "Every installation requires a physical technician to visit the home and replace/modify hardware \u2014 this is irreducibly per-customer manual work."
+    },
+    {
+      "name": "requires_physical_logistics",
+      "deduction": 1.0,
+      "reason": "Service requires sourcing hardware (replacement modules, local-control boards), coordinating on-site visits, and physical installation \u2014 cannot be delivered digitally."
+    },
+    {
+      "name": "requires_synchronous_human",
+      "deduction": 1.0,
+      "reason": "Scheduling installation appointments and diagnosing specific garage door models requires synchronous coordination with each homeowner."
+    }
+  ],
+  "total": 0.0,
+  "recommended_stage": "drop",
+  "rationale": "The buyer here is an individual homeowner \u2014 a consumer segment that is hard to reach at scale, price-sensitive, and faces this problem infrequently (garage door openers last years). The service is fundamentally a physical installation business: a technician must visit each home to replace or modify hardware, making it impossible to build or run autonomously with Claude and this factory's digital tooling. Even if a niche audience of privacy-conscious homeowners would pay, the unit economics of one-off hardware service calls do not support a scalable, hands-off digital business.",
+  "solution_plan": "This would be a local smart-home retrofit service \u2014 someone physically visits a home, removes the cloud-dependent garage module, and installs a local-control replacement (e.g. Ratgdo or similar open hardware). The factory cannot build this: it requires physical hardware sourcing, hands-on installation at each property, and local technician networks. Selling it would mean reaching homeowners via NextDoor, local Facebook groups, or property manager forums \u2014 reachable but very manually. Every job is a synchronous, in-person appointment. There is no path to autonomous digital delivery here, and a solo non-technical operator in Israel has no geographic or logistical advantage for a US home-services play. Drop.",
+  "notes": "Fails all build_gates: operational_autonomy (1), buildability_with_ai (1), buyer_clarity (4), willingness_to_pay (4). Intrinsically a physical service business; incompatible with this factory's model.",
+  "scored_at": "2026-11-21T13:29:14+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

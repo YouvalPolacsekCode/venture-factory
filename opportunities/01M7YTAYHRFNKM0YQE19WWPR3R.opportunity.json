@@ -1,0 +1,27 @@
+{
+  "id": "01M7YTAYHRFNKM0YQE19WWPR3R",
+  "discovered_at": "2026-11-21T13:27:22+03:00",
+  "source": {
+    "type": "hn",
+    "url": "https://news.ycombinator.com/item?id=50565383",
+    "snippet": "HN commenter: 'When we rented our house the garage door opener was broken. The landlord sent a guy who was completely incompetent... I knew that a new one would come with this MyQ scam and also not work with Homelink (car integration) which would be a huge downgrade. So I fixed it myself rather than get a free new one. Someone should start a business ripping this crap out of garage door openers and replacing it with something that works locally and doesn't require a subscription.'"
+  },
+  "problem_statement": "Homeowners and landlords are forced into cloud-dependent, subscription-based garage door opener ecosystems (e.g. MyQ) that break car Homelink integration and require ongoing fees, with no straightforward local-control replacement service available.",
+  "target_segment": "Homeowners, landlords, and property managers who own or manage smart garage door openers and want local/offline control without vendor lock-in or subscriptions.",
+  "geo": "US",
+  "signal_strength": 2,
+  "keywords": [
+    "smart-home",
+    "garage-door",
+    "local-control",
+    "home-automation",
+    "vendor-lock-in",
+    "subscription-fatigue",
+    "homelink",
+    "iot",
+    "hardware-service",
+    "property-management"
+  ],
+  "notes": "Explicit 'someone should start a business' call-out from an HN commenter. Buyer willing-to-pay evidence: user declined a free new opener specifically to avoid the MyQ ecosystem cost and lock-in \u2014 implying they'd pay for a quality local-control retrofit. Landlords and property managers with multiple units represent a recurring revenue angle (installation + support per unit). Signal is a single comment; needs validation across more sources before high confidence.",
+  "status": "candidate"
+}

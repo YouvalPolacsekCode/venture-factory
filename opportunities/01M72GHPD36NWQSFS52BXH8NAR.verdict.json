@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M72GHPD36NWQSFS52BXH8NAR",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "A real, documented breach event (Fireworks AI \u2192 Notion AI \u2192 end-user workspaces, November 2026) concretely surfaces the structural gap: enterprises using AI-augmented SaaS have no visibility into sub-processor security posture until breach notification arrives by email. The buyer (compliance/security officers at SOC 2/GDPR-obligated companies) already pays for tools like Vanta, Drata, and SecurityScorecard, confirming budget and willingness-to-pay for exactly this category of continuous monitoring. Pain frequency is monthly in the sense that AI sub-processor relationships are being created continuously across the SaaS ecosystem, creating recurring exposure; acute incidents like this one recur several times per year across the broader vendor landscape.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50436636"
+  ],
+  "evaluated_at": "2026-11-21T13:28:27+03:00"
+}

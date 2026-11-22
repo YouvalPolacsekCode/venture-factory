@@ -1,0 +1,26 @@
+{
+  "id": "01M81CXECV9GXZ6JZ1KNBBHD1T",
+  "discovered_at": "2026-11-22T13:30:32+03:00",
+  "source": {
+    "type": "forum",
+    "url": "https://salesforce.stackexchange.com/questions/440016/why-does-a-retrieved-product2-page-layout-fail-to-deploy-with-invalid-field-pr",
+    "snippet": "I retrieved a Product2 page layout through the Metadata API and tried to deploy it to another org. The deploy fails with: Invalid field: Product2 in related list: ProductItems. The layout has the Product Items related list (Field Service) on it. The retrieved XML contains this [...] I did not write Product2 there by hand. It came straight out of the retrieval. (2026-11-20, 2 comments)"
+  },
+  "problem_statement": "Salesforce admins and consultants routinely encounter silent data corruption and undocumented edge-case failures when using the Metadata API to migrate or deploy configurations between orgs, consuming hours of debugging time per incident with no reliable tooling to detect or prevent these issues before deployment.",
+  "target_segment": "Salesforce administrators, developers, and consulting firms managing multi-org Salesforce environments, particularly those using Field Service Lightning or complex page layouts.",
+  "geo": "GLOBAL",
+  "signal_strength": 2,
+  "keywords": [
+    "salesforce",
+    "metadata-api",
+    "deployment",
+    "salesforce-admin",
+    "salesforce-consulting",
+    "devops",
+    "org-migration",
+    "field-service-lightning",
+    "configuration-drift"
+  ],
+  "notes": "Buyer signal: Salesforce consultants bill hourly and lose money on unbillable debugging time; in-house admins face production deployment risk. The Metadata API corruption pattern (retrieve then re-deploy produces invalid XML) is a known recurring issue in the Salesforce ecosystem \u2014 multiple threads exist across SFSE, Salesforce Trailblazer community, and GitHub. Potential product: pre-deployment Metadata API validation and diff tool that catches known corruption patterns. Signal is single instance here but corroborated by known ecosystem pattern; signal_strength set conservatively at 2 pending corroboration.",
+  "status": "candidate"
+}

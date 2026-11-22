@@ -1,0 +1,30 @@
+{
+  "opportunity_id": "01M81CXECMAS23824J0RFWF7VQ",
+  "per_dimension": {
+    "pain_severity": 8,
+    "pain_frequency": 7,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 4,
+    "operational_autonomy": 4,
+    "defensibility": 6,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.6,
+  "penalties_applied": [
+    {
+      "name": "regulated_industry",
+      "deduction": 1.5,
+      "reason": "Primary buyers are healthcare tech and fintech \u2014 both regulated under HIPAA/GDPR/SOC2 frameworks, meaning the product itself must meet compliance standards and customers will require BAAs, security reviews, and audit documentation before purchasing, adding significant sales friction and legal overhead."
+    }
+  ],
+  "total": 4.1,
+  "recommended_stage": "drop",
+  "rationale": "Security and compliance teams at SaaS/healthtech/fintech companies are real buyers who do pay for audit tooling \u2014 the Ars Technica coverage and Lobste.rs score validate the problem's legitimacy and severity. However, the actual product (canary-token injection, AI dependency scanning, data-flow compliance auditing) requires deep technical integration into customer AI pipelines, significant security expertise to deliver credibly, and per-customer manual audit work \u2014 none of which can run autonomously. The regulated-industry penalty compounds this: selling a security/compliance tool to healthcare or fintech means the tool itself must be HIPAA/SOC2-compliant, triggering lengthy vendor security reviews before any sale closes. This is not a solo non-technical factory opportunity; it is a funded security startup problem.",
+  "solution_plan": "This opportunity is not realistically buildable by a solo non-technical operator using this factory. The core deliverable \u2014 detecting AI supply-chain data leaks via canary tokens and dependency scanning \u2014 requires writing agents that instrument customer codebases, intercept data flows, and generate audit-grade reports, which demands security engineering expertise, secure infrastructure, and regulatory compliance of the tool itself. Even the lightest version (a managed audit report) would require Youval to manually review AI pipeline configurations per client, which is high-touch consulting. A solo factory cannot build, sell, or maintain this credibly without a technical co-founder and legal/compliance infrastructure. Recommend dropping this candidate and monitoring the space until a genuinely automatable slice (e.g., a lightweight public AI dependency scanner for open-source repos) emerges.",
+  "notes": "Recommended stage is drop due to total=4.1 falling below min_total_to_validate=5.5 after regulated_industry penalty. Additional build gate failures: buildability_with_ai=4 (below 6 floor), operational_autonomy=4 (below 7 floor). Problem is real but wrong fit for this factory's capabilities.",
+  "scored_at": "2026-11-22T13:32:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

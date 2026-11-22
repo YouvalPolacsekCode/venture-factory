@@ -1,0 +1,45 @@
+{
+  "opportunity_id": "01M750TP4PNE3EXQDMZ2CZ7YD2",
+  "decided_at": "2026-11-22T13:32:48+03:00",
+  "decision": "defer_1_week",
+  "confidence_pct": 72,
+  "model_used": "claude-opus-4-6",
+  "gates_checked": {
+    "operational_autonomy": {
+      "score": 7,
+      "floor": 7,
+      "pass": true
+    },
+    "buildability_with_ai": {
+      "score": 7,
+      "floor": 6,
+      "pass": true
+    },
+    "buyer_clarity": {
+      "score": 8,
+      "floor": 6,
+      "pass": true
+    },
+    "willingness_to_pay": {
+      "score": 7,
+      "floor": 5,
+      "pass": true
+    },
+    "total_vs_min_total_to_build": {
+      "total": 6.7,
+      "min": 6.5,
+      "pass": true
+    },
+    "recommended_stage": {
+      "value": "build",
+      "acceptable_for_build_now": true
+    }
+  },
+  "gate_pass": true,
+  "gate_failures": [],
+  "enforcement_applied": [],
+  "reasoning_summary": "All build gates pass and the total (6.7) clears the 6.5 threshold, so build_now is technically permitted. However, the cost-to-gain ratio of 3.588 is nearly 6\u00d7 the kill threshold (0.6) defined in cost_gain_model.yaml, meaning projected 4-week costs vastly exceed projected 4-week gains. The responsiveness_signal is 2 (essentially untested), and the opportunity is based on a single HN comment. Before committing a build week, a lightweight responsiveness probe (LinkedIn/HN outreach to 50\u2013100 eng leads about AI cost optimization) should be run to validate that this segment responds and converts at rates justifying the build investment.",
+  "proposed_slug": null,
+  "estimated_first_signal_days": 7,
+  "suggested_first_outreach_channel": "LinkedIn DMs to engineering leads posting about AI/LLM costs"
+}

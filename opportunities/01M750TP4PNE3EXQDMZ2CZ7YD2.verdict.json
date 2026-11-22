@@ -1,0 +1,11 @@
+{
+  "opportunity_id": "01M750TP4PNE3EXQDMZ2CZ7YD2",
+  "status": "validated",
+  "severity": "moderate",
+  "frequency": "monthly",
+  "rationale": "Engineering leads at small AI-heavy teams are demonstrably paying $500\u2013$1,000+/month in cloud AI subscriptions and actively evaluating local-model alternatives, with the source commenter citing explicit figures ($1k/mo for 5 devs on Claude Ultra, ~$10k/week at API rates). Adjacent HN threads and community discussions consistently surface the same cost-vs-capability tradeoff, and the existence of competing tools (Ollama, LM Studio, llm-cost calculators) confirms willingness to invest time and money in solving this. The pain is recurring (monthly billing cycle drives re-evaluation) and the buyer is clearly identified, making this a solid candidate for a cost-routing advisor product.",
+  "sources": [
+    "https://news.ycombinator.com/item?id=50450531"
+  ],
+  "evaluated_at": "2026-11-22T13:31:40+03:00"
+}

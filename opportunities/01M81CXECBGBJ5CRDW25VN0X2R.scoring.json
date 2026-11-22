@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M81CXECBGBJ5CRDW25VN0X2R",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 7,
+    "buyer_clarity": 8,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 5,
+    "operational_autonomy": 5,
+    "defensibility": 4,
+    "founder_fit": 4
+  },
+  "weighted_total": 5.8,
+  "penalties_applied": [],
+  "total": 5.8,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is real and nameable \u2014 CTOs and ML platform leads at companies with $500+/mo AI API spend, a segment that demonstrably pays for observability and cost tooling (Datadog, CloudHealth, etc.). Willingness to pay is reasonably evidenced by analogous spend on cloud cost tools. However, the core product (multi-model routing layer or spend dashboard) requires meaningful integration work (API wrappers, ingestion pipelines, usage normalization across providers) that pushes buildability below the 'shippable in a week' threshold, and ongoing delivery inherently needs some per-customer configuration or webhook setup \u2014 capping operational autonomy at 5. The HN thread has only 3 comments and 5 points, so the signal is weak and needs direct buyer validation before building.",
+  "solution_plan": "The micro-service is an AI API spend monitor and alert system: customers connect their Anthropic/OpenAI/Vertex API keys and receive weekly cost digests, anomaly alerts, and a simple multi-provider fallback recommendation. The factory builds it as a Claude-powered ingestion prompt that normalizes usage JSON from provider dashboards, a lightweight intake form + Stripe subscription page, and a scheduled Claude job that emails the weekly digest \u2014 no custom infra, no coding by Youval. To sell, the factory drafts cold outreach to CTOs/engineering leads at known AI-heavy startups (Product Hunt launches, YC companies, public GitHub projects using the Anthropic SDK) \u2014 Youval approves each batch before it goes out. Delivery runs automatically: once a customer connects their keys, weekly digests and alerts are generated and sent by Claude on a cron schedule, with Stripe handling billing renewals. The only recurring human touch is approving the weekly outreach batch and reviewing any support escalations flagged by Claude. Realistic caveat: getting customers to share API keys requires real trust \u2014 positioning as a read-only audit tool (not write-access) and offering a free trial first is essential to converting.",
+  "notes": "Build gates unmet: operational_autonomy=5 (below 7 floor) and buildability_with_ai=5 (below 6 floor). Stage capped at validate. Validate by posting a 'would you pay $29/mo for this?' message in AI engineering Slack communities and measuring reply intent.",
+  "scored_at": "2026-11-22T13:32:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

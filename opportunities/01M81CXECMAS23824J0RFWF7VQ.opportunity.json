@@ -1,0 +1,27 @@
+{
+  "id": "01M81CXECMAS23824J0RFWF7VQ",
+  "discovered_at": "2026-11-22T13:30:32+03:00",
+  "source": {
+    "type": "other",
+    "url": "https://lobste.rs/s/v3m2uj",
+    "snippet": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced. (Ars Technica link: arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/) Score: 26, 3 comments, 2026-11-21."
+  },
+  "problem_statement": "Companies integrating third-party AI components (models, embeddings, fine-tuning pipelines) into their products are inadvertently leaking sensitive user data through the AI supply chain, creating compliance, legal, and reputational risk they cannot currently detect or audit.",
+  "target_segment": "Security and compliance teams at SaaS companies, healthcare tech firms, and fintech companies using third-party AI APIs or open-source AI libraries in customer-facing products.",
+  "geo": "GLOBAL",
+  "signal_strength": 4,
+  "keywords": [
+    "ai-supply-chain",
+    "data-privacy",
+    "ai-security",
+    "llm-data-leak",
+    "compliance",
+    "gdpr",
+    "ai-audit",
+    "user-data",
+    "canary-tokens",
+    "supply-chain-security"
+  ],
+  "notes": "Strong buyer signal: score 26 on Lobste.rs (high for security community), linked to Ars Technica investigation (editorial coverage = validated concern). Regulated industries (healthcare, fintech, legal) already pay for security auditing tools and would pay for AI-specific supply-chain audit/monitoring. Product angles: (1) canary-token injection service to detect AI data leakage in real time, (2) AI dependency scanner for data-flow compliance, (3) managed AI privacy audit reports. Comparable to existing SCA (software composition analysis) tools but for AI pipelines \u2014 a gap no major vendor has filled.",
+  "status": "candidate"
+}

@@ -1,0 +1,24 @@
+{
+  "opportunity_id": "01M81CXECV9GXZ6JZ1KNBBHD1T",
+  "per_dimension": {
+    "pain_severity": 7,
+    "pain_frequency": 6,
+    "willingness_to_pay": 6,
+    "buyer_clarity": 7,
+    "lead_reachability": 6,
+    "responsiveness_signal": 2,
+    "buildability_with_ai": 7,
+    "operational_autonomy": 7,
+    "defensibility": 5,
+    "founder_fit": 4
+  },
+  "weighted_total": 6.0,
+  "penalties_applied": [],
+  "total": 6.0,
+  "recommended_stage": "validate",
+  "rationale": "The buyer is a specific, nameable professional \u2014 Salesforce admins and consultants who bill hourly and lose real money on unbillable debugging time, a group that demonstrably pays for DevOps and deployment tooling (Gearset, Copado, AutoRABIT are all $100-500+/mo SaaS tools in this exact space). Buildability is genuine: Claude can parse Salesforce XML metadata, run pattern-matching against a library of known corruption signatures, and generate a pre-deployment diff report \u2014 all automatable. Operational autonomy is achievable at 7 because the core loop (upload XML \u2192 Claude analyzes \u2192 report delivered) is fully hands-off. The build gates for operational_autonomy and buildability_with_ai are marginally met, but buyer_clarity and willingness_to_pay both pass. Stage stays at validate because signal_strength is 2 (single instance, low corroboration) and no responsiveness data exists yet \u2014 the idea needs one week of outreach to Salesforce admin communities before committing to build.",
+  "solution_plan": "The micro-service is a Salesforce Metadata API pre-deployment validator: admins upload their retrieved XML package and get back a report flagging known corruption patterns (like the Product2/ProductItems bug) and risky field references before they attempt deployment. The factory builds it as a Claude prompt trained on a curated library of known Metadata API failure patterns, a simple file-upload form (no login needed for MVP), and an email delivery of the validation report \u2014 shippable in under a week with no coding by Youval. To sell, the factory drafts targeted posts and cold DMs to Salesforce admin communities on Trailblazer Community, Salesforce Stack Exchange, and LinkedIn (searching 'Salesforce admin', 'SFDC consultant') \u2014 Youval approves each outreach batch before it goes out. Delivery is fully automated: file uploaded \u2192 Claude runs validation \u2192 report emailed within minutes, with Stripe handling a pay-per-report ($9) or monthly subscription ($29/mo) model. The only recurring human touch is approving weekly outreach batches and reviewing any anomaly reports Claude flags as needing a human look. Pricing signals exist: Gearset charges $175+/mo, so even $29/mo for a targeted validator is an easy sell to consultants who lose hours on a single bad deploy.",
+  "notes": "Build gates checked: operational_autonomy=7 (meets 7 floor), buildability_with_ai=7 (meets 6 floor), buyer_clarity=7 (meets 6 floor), willingness_to_pay=6 (meets 5 floor). All gates pass, but total=6.0 is below min_total_to_build=6.5, so stage is validate \u2014 not capped by gates but by total score. Priority validation action: post a problem-description thread in Salesforce Trailblazer Community asking if admins would use a free XML validator tool and gauge reply volume within 72 hours.",
+  "scored_at": "2026-11-22T13:32:36+03:00",
+  "model_version": "claude-sonnet-4-6"
+}

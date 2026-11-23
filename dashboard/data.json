@@ -1,7 +1,7 @@
 {
   "generated_at": {
-    "utc": "2026-11-22T10:32:53+00:00",
-    "idt": "2026-11-22T13:32:53+03:00"
+    "utc": "2026-11-23T11:29:18+00:00",
+    "idt": "2026-11-23T14:29:18+03:00"
   },
   "funnel": {
     "candidates": 500,
@@ -745,7 +745,7 @@
   "approvals": [],
   "services": [],
   "spend": {
-    "today_usd": 0.4008,
+    "today_usd": 0.0,
     "last_7_days_usd": 2.6557,
     "all_time_usd": 41.6973,
     "by_day": [
@@ -802,41 +802,6 @@
     ]
   },
   "activity": [
-    {
-      "date": "2026-11-16",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
     {
       "date": "2026-11-17",
       "agents": {
@@ -1035,6 +1000,41 @@
         },
         "pain_validation": {
           "succeeded": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "failed": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "failed": 1
+        },
+        "opportunity_scoring": {
+          "skipped": 1
+        },
+        "pain_validation": {
+          "failed": 1
         },
         "product_design": {
           "skipped": 1

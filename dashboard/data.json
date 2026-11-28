@@ -1,7 +1,7 @@
 {
   "generated_at": {
-    "utc": "2026-11-27T11:34:34+00:00",
-    "idt": "2026-11-27T14:34:34+03:00"
+    "utc": "2026-11-28T11:05:31+00:00",
+    "idt": "2026-11-28T14:05:31+03:00"
   },
   "funnel": {
     "candidates": 500,
@@ -803,41 +803,6 @@
   },
   "activity": [
     {
-      "date": "2026-11-21",
-      "agents": {
-        "build_decisions": {
-          "succeeded": 1
-        },
-        "cost_gain": {
-          "succeeded": 1
-        },
-        "daily_summary": {
-          "succeeded": 1
-        },
-        "lead_research": {
-          "skipped": 1
-        },
-        "market_radar": {
-          "succeeded": 1
-        },
-        "opportunity_scoring": {
-          "succeeded": 1
-        },
-        "pain_validation": {
-          "succeeded": 1
-        },
-        "product_design": {
-          "skipped": 1
-        },
-        "responsiveness_test": {
-          "skipped": 1
-        },
-        "service_builder": {
-          "skipped": 1
-        }
-      }
-    },
-    {
       "date": "2026-11-22",
       "agents": {
         "build_decisions": {
@@ -1014,6 +979,41 @@
     },
     {
       "date": "2026-11-27",
+      "agents": {
+        "build_decisions": {
+          "skipped": 1
+        },
+        "cost_gain": {
+          "skipped": 1
+        },
+        "daily_summary": {
+          "failed": 1
+        },
+        "lead_research": {
+          "skipped": 1
+        },
+        "market_radar": {
+          "failed": 1
+        },
+        "opportunity_scoring": {
+          "skipped": 1
+        },
+        "pain_validation": {
+          "failed": 1
+        },
+        "product_design": {
+          "skipped": 1
+        },
+        "responsiveness_test": {
+          "skipped": 1
+        },
+        "service_builder": {
+          "skipped": 1
+        }
+      }
+    },
+    {
+      "date": "2026-11-28",
       "agents": {
         "build_decisions": {
           "skipped": 1
